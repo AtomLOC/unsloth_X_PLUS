@@ -35,6 +35,16 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   navigated `/login` → screen and counted the auth-shell → app-shell swap. Cold `/chat` is CLS 0.0019;
   the in-app numbers are library 0.007, hub 0.0694, train 0.0342. All are under the 0.1 "good" line, and
   the earlier "d-hub 0.064" was the harness. Do not re-open the hub-skeleton fix on that number.
+- 2026-11-17 — **The 2.2 req/s status storm is found and fixed.** CDP `initiator.stack` (not an injected
+  stack string, which came back `undefined`) traced every poll to `waitForServerModel`
+  (`features/chat/hooks/use-chat-model-runtime.ts:391`): a 500 ms loop capped at 60 s idle / 600 s total,
+  entered on mount whenever no checkpoint is selected. A page view with nothing loading therefore cost
+  ~120 status reads. The cadence now backs off while nothing is loading and returns to 500 ms the moment
+  a load appears, so the CLI-load catch behaviour is preserved. Measured 22 → 4 per 10 s.
+- 2026-11-17 — **Headless Edge and the council server are shut down on request (twice asked).** Kill
+  every `msedge.exe` whose command line contains `edge-council`; the user's own `msedge.exe` windows must
+  never be touched (they are the ones without `headless`/`remote-debugging-port`). Ports 5100 and 9222
+  must be free at the end of any UI turn. Relaunch when needed; never assume either is up.
 - 2026-11-17 — **The two red tests in `test_chat_load_during_training.py` are environmental, not logic.**
   `test_extra_args_drafter_is_charged_once_when_it_is_the_local_sidecar` and
   `test_native_drafter_accept_applies_the_lease_before_the_scan_reads` both die on
@@ -47,7 +57,7 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   `msedge.exe` whose command line contains `edge-council` (0 left; the 9 surviving `msedge.exe` are the
   user's own windows and were not touched) and the `run.py --port 5099/5100` tree (PID 11792). Ports
   5100 and 9222 are free. Any later UI round must relaunch both; do not assume a server is up.
-- 2026-11-17 — **Radii migration deferred again**: 10 px is the dominant value (57 uses) and tests pin
+2026-11-17 — **Radii migration deferred again**: 10 px is the dominant value (57 uses) and tests pin
   `rounded-[10px]` literally, so collapsing onto the token scale is a product-wide visual decision, not a
   cleanup. Recorded as deferred with the counts.
 - 2026-11-17 — **Desktop-secret memo is bound to the stored hash**, not a TTL: rotation and clearing
@@ -71,6 +81,9 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
 | Cold boot `/chat`: LCP / CLS | `1f4fcc4` | **292–336 / 0.0019** | ms / — | `.council/round-2/timings.json`, direct load with the token already stored |
 | In-app route change: CLS | `1f4fcc4` | library 0.007 · hub 0.0694 · train 0.0342 | — | same file, CLS reset immediately before a sidebar click |
 | Hub requests on arrival | `1f4fcc4` | 217 total: **119 js**, `/api/inference/status` ×17 per 10 s | — | `.council/requests.mjs`, `.council/poll_rate.mjs` |
+| Idle `/api/inference/status` polling on /hub, 10 s window | `57f2073` | **22 → 4 requests**, median gap **524 → 4047 ms** | requests | `.council/round-2/pollers.mjs` (CDP `initiator.stack`), before/after on the served build. Idle backend cost 2.2×39 → 0.4×23 ≈ **86 → 9 ms/s** |
+| Unnamed focusables / visible focus rings on /chat | `57f2073` | **7 → 0** unnamed; focus rings **3 → 10** of 14 tab stops | count | `.council/round-2/a11y.json` (`.json` before/after), real Tab key events, computed styles |
+| Post-fix cold desktop load | `57f2073` | LCP chat 404 / settings 320, CLS 0.0019 | ms | `.council/round-2/timings-postfix.json`; the hub row in that file is auth-swap contaminated and not quotable |
 
 ## Security ledger
 
