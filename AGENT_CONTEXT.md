@@ -75,11 +75,11 @@ measured by computed styles + real Tab events; contrast sampled on 30 text eleme
 | reviewer | model | C | Load | Hier | States | A11y | Total |
 |---|---|---|---|---|---|---|---|
 | 2 | `deepseek-v4.1-flash` | 6 | 7 | 7 | 7 | 5 | **32/50** |
-| 1 | `mimo-2.6-flash` | — | — | — | — | — | **not obtained** (provider `fetch failed` ×2) |
-| 3 | `glm-5.3-flash` | — | — | — | — | — | **not obtained** (2-subagent cap, 3 attempts) |
+| 3 | `glm-5.3-flash` | 6 | 7 | 7 | 7 | 7 | **34/50** |
+| 1 | `mimo-2.6-flash` | — | — | — | — | — | **not obtained** (provider `fetch failed` ×2, still running on the 3rd attempt at the time of writing) |
 
-**Provisional median = 32/50 — not a valid council median (1 of 3).** Do not record it as the round
-score. Minimum dimension 5 (A11y).
+**Median of the two that returned = 33/50.** Still not a council median (2 of 3) — record it as provisional
+until reviewer 1 lands. Minimum dimension 5 (A11y, reviewer 2).
 
 Citations I verified myself (council step 5):
 - ✅ `.sidebar-nav-btn` had `outline: none` and no shadow on focus (CDP, 12 rows) → **fixed, re-measured**.
@@ -96,17 +96,26 @@ Citations I verified myself (council step 5):
 
 | # | Fix | Status | Evidence |
 |---|---|---|---|
-| 1 | Sidebar nav rows get the one keyboard ring (`--x-focus-ring`) + pointer-modality exemption | **shipped `d46130a`** | CDP: computed shadow `none` → `color(srgb 0.3458…) 0 0 0 1px, oklab(…)…`; 3 new tests fail without the rule; 60-file set 823/30 vs 821/32 stashed |
-| 2 | Lazy-load `DownloadApprovalDialog` so the 2.45 MB browser chunk leaves the boot graph | queued | `__root.tsx:26`, `dist/index.html` 98 preloads |
-| 3 | Give the Compute-backend select a placeholder instead of an empty box | queued | `features/settings/components/llama-backend-section.tsx:917`, `05-settings-dark.png` |
+| 1 | Sidebar nav rows get a keyboard ring matching the rows beside them | **shipped `d46130a`, corrected `b98b6d3`** | First version used `--x-focus-ring`; reviewer 3 cited `app-sidebar.tsx:797` (`focus-visible:ring-2 ring-ring`) on the nav's own submenu rows, so the first version created a second look. Now `0 0 0 2px var(--ring)`; CDP on the served build: `rgb(223,223,223) 0 0 0 2px`. 3 tests fail without the rule; 60-file CSS set 823/30 (29 pre-existing). |
+| 2 | Lazy-load the browser feature off the boot graph (2.57 MB, 98 preloads) | **rejected as scoped** — see below | `__root.tsx:26` is 1 of **12** eager importers of `@/features/browser` (app-sidebar, chat-page, markdown-text, shared-composer, artifact-card, rag/*, settings tabs); lazying the dialog alone left `dist/index.html` at **98 preloads** with `browser-*.js` still referenced 3×. Reverted. The real fix is deep imports at those call sites, tracked below. |
+| 3 | Give the Compute-backend select a placeholder instead of an empty box | **shipped `9c53572`** | `llama-backend-section.tsx:920`: the trigger had an item for `unknown` only when the stored marker was explicitly null, so `value = "unknown"` rendered nothing. Now renders the value we hold, labelled **Unknown** and disabled. Verified in `.council/round-2/screenshots/05-settings-dark.png` (read back: row reads "Unknown", not an empty box). |
+| 4 | Give every slider thumb an accessible name | **shipped `5e82bf9`** | The thumb *is* the `role="slider"` element; the visible row label beside it is not a name. Fixed `chat-settings-sheet.tsx` (2, beside an input that already had `ariaLabel={label}`), `params-section-controls.tsx`, `params-section.tsx`, `markdown-note-dialog.tsx`. Verified: the unnamed-focusable probe on /chat returns **`[]`**, was 7. |
 | 4 | Collapse arbitrary radii onto the declared scale (56×10px, 37×14px, …) | queued | `consistency.md`, `index.css:242-247` |
 | 5 | One selected-pill treatment for Train's sub-nav (white pill vs Hub's accent) | queued | `studio-navigation.tsx:44`, `index.css:6862-6892` |
 
 ## Open threads
 
-- [ ] **Council round 1 is incomplete**: reviewers 1 and 3 never returned. Re-dispatch both when a
-  subagent slot frees, then aggregate the median properly.
+- [ ] **Council round 1 is incomplete**: reviewer 1 (`mimo-2.6-flash`) is on its third attempt and still
+  running. When it lands, aggregate the median of three and close the round.
+- [ ] Reviewer 3's chunk-dedupe fix is **not a boot cost**: measured `grep -cE 'cpp-|wasm-' dist/index.html`
+  = 0, so those grammars are on-demand chunks. Do not spend time on it for LOAD_SPEED; it only shrinks
+  the install.
 - [ ] Fixes 2–5 above (fix 2 is +1 load point and is cheap: one `lazy()` + Suspense).
+- [ ] **Boot chunk, the real fix**: `@/features/browser` is imported eagerly by 12 modules. To split the
+  2.57 MB chunk, those call sites must import narrow modules (`browser/downloads`, `browser/file-kind`,
+  `browser/panel-availability`, `browser/prefs-store`, `browser/agent/*`) instead of the barrel, then the
+  barrel's dialog/panel exports fall out of the eager graph. Measure by `grep -c rel="modulepreload"
+  dist/index.html` (98 now) and the `browser-` reference count (3 now).
 - [ ] SEC-3 warning text ("any local user").
 - [ ] `--x-space-*` / `--x-icon-*` are dead tokens: adopt at call sites or delete. The panel named it;
   a dead token layer is worse than none because UI_AUDIT claims it exists.
@@ -132,4 +141,26 @@ Citations I verified myself (council step 5):
   Shipped its top fix (nav focus ring) and verified it by CDP rather than trusting the score.
 - Incident: wrote `CONTEXT.md` over the tracked `Context.md` (case-insensitive filesystem). Restored
   from `HEAD` before committing; ledger moved to this file.
-- Commits: `a44b8f2` (SEC-4 + tests), `d46130a` (focus ring + tests).
+- Fix #2 did not survive contact: `@/features/browser` has 12 eager importers, so the one `lazy()` the
+  reviewer proposed left the preload count at 98 and the chunk still referenced. Reverted the edit
+  rather than keeping a comment that claims a win it did not produce; the real fix (deep imports at
+  the call sites) is tracked as an open thread.
+- Fix #3 shipped and verified visually: the Compute-backend select now reads "Unknown" instead of an
+  empty box (round-2 screenshot read back).
+- Round-2 evidence captured (`.council/round-2/`, 10 screens + a11y + timings). **Caveat: captured while
+  two reviewers were running**, so its LCP numbers are contaminated (d-chat 528 vs 392, d-hub 1672 vs
+  1128). The a11y comparison is unaffected: `focus_ring_seen` 3 → 7 of 14 tab stops. Re-measure timings
+  on an idle host before quoting round 2.
+- Reviewer 3 (34/50) mis-attributed my fix to `app-sidebar.tsx:797`, but the citation was useful: it
+  showed the sidebar already had a 2px `ring-ring` convention, so I corrected my own rule to match it
+  (`b98b6d3`). That is the loop working — the score was not trusted, the citation was checked.
+- Reviewer 3's own top fix (dedupe cpp/wasm chunks) **rejected on measurement**: neither is referenced
+  by `dist/index.html` (`grep -cE 'cpp-|wasm-'` = 0), so both are on-demand grammar chunks and fixing
+  the duplication buys 0 boot time. Recorded instead of done.
+- Cleared the 7 unnamed focusables reviewer 3 kept A11y at 7 for: every one traced to a slider thumb
+  (`data-slot="slider-thumb"`, the `role="slider"` element) whose visible row label was never passed
+  as a name. The chat panel's number input already did it correctly beside the slider that did not.
+  Probe on the served build: 7 → **0**.
+- Commits: `a44b8f2` (SEC-4 + tests), `d46130a` (focus ring + tests), `b1422c8` (round-1 ledger),
+  `9c53572` (backend select label), `b98b6d3` (ring matches the sidebar's own convention), `5e82bf9`
+  (slider accessible names).
