@@ -7629,7 +7629,7 @@ const ComposerRightControls: FC<{
             aria-label="Dictate"
             type="button"
             variant="ghost"
-            className="size-9 rounded-full text-foreground"
+            className="size-9 rounded-full text-foreground focus-visible:ring-2 focus-visible:ring-ring"
             disabled={dictationDisabled}
             onClick={onDictateClick}
           >

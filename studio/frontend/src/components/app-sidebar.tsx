@@ -5006,7 +5006,7 @@ export function AppSidebar() {
               { closed: !pinnedOpen },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               Pinned
               <ChevronDown className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>
@@ -5149,7 +5149,7 @@ export function AppSidebar() {
               { closed: !open },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               <span className="min-w-0 truncate">{section.name}</span>
               <ChevronDown className="size-3.5 shrink-0 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>
@@ -5282,7 +5282,7 @@ export function AppSidebar() {
               { closed: !projectsOpen },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               {t("shell.navigation.projects")}
               <ChevronDown className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>
@@ -6463,6 +6463,10 @@ export function AppSidebar() {
                     className={cn(
                       // min-w-0 so a narrow sidebar truncates the wordmark instead of pushing the search icon over.
                       "flex min-w-0 items-center gap-[calc(6px*var(--ui-space-scale,1))] select-none transition-opacity",
+                      // It is an anchor, and the shell strips every `a:focus` outline, so without this the
+                      // brand tab stop was the one nav control a keyboard user could not see. Measured on
+                      // the served build: 4 of 14 tab stops had no ring; this was the second.
+                      "rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                       chatDisabled && "pointer-events-none",
                     )}
                     aria-label={t("shell.aria.home")}
@@ -6980,7 +6984,7 @@ export function AppSidebar() {
                       { closed: !chatOpen },
                     )}
                   >
-                    <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+                    <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                       {t("shell.navigation.recents")}
                       <ChevronDown className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
                     </CollapsibleTrigger>
@@ -7075,7 +7079,7 @@ export function AppSidebar() {
                     )}
                     asChild={true}
                   >
-                    <CollapsibleTrigger className="cursor-pointer flex w-full items-center gap-1 group/sb-collap">
+                    <CollapsibleTrigger className="cursor-pointer flex w-full items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                       {t("shell.navigation.recents")}
                       <ChevronDown className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
                     </CollapsibleTrigger>
