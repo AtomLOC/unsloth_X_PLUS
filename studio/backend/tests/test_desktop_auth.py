@@ -857,6 +857,10 @@ def test_health_response_reports_desktop_capability_fields(monkeypatch):
     systemone_module.MCP_PATH = "/mcp/decisions"
     systemone_module.RequireStudioAuth = lambda app: app
     systemone_module.decisions_mcp = FastMCP("Unsloth Decisions")
+    # The opt-in telemetry collector's routes, imported by name (not via `routes.__all__`), so the
+    # guard below needs this stub the same way it needs `browser`: without it the real module loads.
+    telemetry_module = ModuleType("routes.telemetry")
+    telemetry_module.router = APIRouter()
 
     # Derived from main.py's import block, not hand-listed: the old hardcoded dict went stale
     # twice (#8511's openai_codex_auth_router, #8648's youtube_router), each time killing every
@@ -887,6 +891,7 @@ def test_health_response_reports_desktop_capability_fields(monkeypatch):
     monkeypatch.setitem(sys.modules, "routes.library", library_module)
     monkeypatch.setitem(sys.modules, "routes.sandbox_capability", sandbox_capability_module)
     monkeypatch.setitem(sys.modules, "routes.systemone", systemone_module)
+    monkeypatch.setitem(sys.modules, "routes.telemetry", telemetry_module)
 
     import studio.backend.main as backend_main
 
