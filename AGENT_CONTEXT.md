@@ -12,7 +12,7 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
 ## State — what is true right now
 
 - **Goal:** Argon loop on UnslothX- (backend hardening/perf + frontend Council). No terminal state.
-- **Active item:** Council round 1 — **2 of 3 reviewer slots still blocked** (see Council). Fix #1 shipped.
+- **Active item:** Council round 1 **closed at 33/50** (3 reviewers). Round 2 next: six fixes shipped, re-score pending.
 - **Working:** backend imports and serves; `studio/frontend` builds (`vite` 13–17 s, typecheck green);
   the served build is reachable at `http://127.0.0.1:5100` from `run.py` + `studio/frontend/dist`.
 - **Broken / unknown:** the desktop-secret health poll still costs ~3 ms of SQLite on the memo path
@@ -113,10 +113,19 @@ measured by computed styles + real Tab events; contrast sampled on 30 text eleme
 |---|---|---|---|---|---|---|---|
 | 2 | `deepseek-v4.1-flash` | 6 | 7 | 7 | 7 | 5 | **32/50** |
 | 3 | `glm-5.3-flash` | 6 | 7 | 7 | 7 | 7 | **34/50** |
-| 1 | `mimo-2.6-flash` | — | — | — | — | — | **not obtained** (provider `fetch failed` ×2, still running on the 3rd attempt at the time of writing) |
+| 1 | `mimo-2.6-flash` | 6 | 6 | 7 | 7 | 7 | **33/50** |
 
-**Median of the two that returned = 33/50.** Still not a council median (2 of 3) — record it as provisional
-until reviewer 1 lands. Minimum dimension 5 (A11y, reviewer 2).
+**Round 1 closed: median of three = 33/50** (32 / 33 / 34). Per-dimension medians are C6 · L7 · H7 ·
+S7 · A7 — note those sum to 34 while the median *total* is 33, so quote the total, not the sum of
+medians. Minimum single dimension: 5 (A11y, reviewer 2); its round-1 finding is now measured away
+(rings 3 → 10 → **14 of 14**, unnamed focusables 7 → **0**). Reviewer 1's full scorecard is
+`.council/round-2/reviewer-1-mimo.md`.
+
+Two of reviewer 1's three load-bearing load claims do **not** survive measurement, so L=6 is
+recorded but not acted on: (a) the "2.45 MB eager `browser-*.js`" is the **shared vendor chunk** —
+45 chunks import it and it contains `react-dom` and `radix`, so it is not a lazy-loadable feature
+(checked: `grep -l 'Gdb9V1jr' dist/assets/*.js | wc -l` = 45); (b) its `d-hub 1672 ms / CLS 0.0122`
+comes from the **contaminated** `timings.json`, captured while two reviewers were running.
 
 Citations I verified myself (council step 5):
 - ✅ `.sidebar-nav-btn` had `outline: none` and no shadow on focus (CDP, 12 rows) → **fixed, re-measured**.
@@ -137,13 +146,21 @@ Citations I verified myself (council step 5):
 | 2 | Lazy-load the browser feature off the boot graph (2.57 MB, 98 preloads) | **rejected as scoped** — see below | `__root.tsx:26` is 1 of **12** eager importers of `@/features/browser` (app-sidebar, chat-page, markdown-text, shared-composer, artifact-card, rag/*, settings tabs); lazying the dialog alone left `dist/index.html` at **98 preloads** with `browser-*.js` still referenced 3×. Reverted. The real fix is deep imports at those call sites, tracked below. |
 | 3 | Give the Compute-backend select a placeholder instead of an empty box | **shipped `9c53572`** | `llama-backend-section.tsx:920`: the trigger had an item for `unknown` only when the stored marker was explicitly null, so `value = "unknown"` rendered nothing. Now renders the value we hold, labelled **Unknown** and disabled. Verified in `.council/round-2/screenshots/05-settings-dark.png` (read back: row reads "Unknown", not an empty box). |
 | 4 | Give every slider thumb an accessible name | **shipped `5e82bf9`** | The thumb *is* the `role="slider"` element; the visible row label beside it is not a name. Fixed `chat-settings-sheet.tsx` (2, beside an input that already had `ariaLabel={label}`), `params-section-controls.tsx`, `params-section.tsx`, `markdown-note-dialog.tsx`. Verified: the unnamed-focusable probe on /chat returns **`[]`**, was 7. |
-| 4 | Collapse arbitrary radii onto the declared scale (56×10px, 37×14px, …) | queued | `consistency.md`, `index.css:242-247` |
-| 5 | One selected-pill treatment for Train's sub-nav (white pill vs Hub's accent) | queued | `studio-navigation.tsx:44`, `index.css:6862-6892` |
+| 6 | Give the last four ringless tab stops a focus indicator | **shipped `205b19a`** | Reviewer 1 named the home anchor as its cheapest fix; a real 14-Tab walk showed **four**: Dictate, the brand anchor, "Show workflows", the section triggers. The shell strips every focus outline, `.sidebar-row-action` added its own `outline-none` and stayed at opacity 0 until hovered. Fixed in `index.css` (row actions) + `app-sidebar.tsx` (anchor, 4 triggers) + `thread.tsx` (Dictate); a fifth trigger with different classes was caught by the new test, not by the walk. Measured **14 of 14** ring-visible, unnamed 0, contrast 0/30. 5 tests. |
+| 5 | Collapse arbitrary radii onto the declared scale (56×10px, 37×14px, …) | deferred, with reason | `consistency.md`, `index.css:242-247`. 10 px is dominant (57 uses) and tests pin `rounded-[10px]` literally, so this is a product-wide visual decision, not a cleanup. |
+| 7 | One selected-pill treatment for Train's sub-nav (white pill vs Hub's accent) | queued | `studio-navigation.tsx:44`, `index.css` `.train-segment-active` — `background: var(--foreground)` with `text-background` ink. The comment in `index.css` defends the *track*, not the white fill. |
 
 ## Open threads
 
-- [ ] **Council round 1 is incomplete**: reviewer 1 (`mimo-2.6-flash`) is on its third attempt and still
-  running. When it lands, aggregate the median of three and close the round.
+- [ ] **Unverified reviewer-1 claim worth one measurement**: the sidebar panel runs to y=899 while the
+  content panel stops at y=887, i.e. the 12 px inset is on one floating panel only (claimed for
+  screenshots 01/02/04/05). Check with a DOM `getBoundingClientRect` on the sidebar `<aside>` vs the
+  content container before touching CSS: if both bottom out at the same inset it is a screenshot artifact.
+- [ ] **States stay unproven visually** (both panels: "no loading or error screen appears in any
+  screenshot"). The states probe (`.council/round-2/states.mjs`) shows skeletons on /library (10) and
+  /hub (36) mid-load, and blocking `/api/hub/unsloth-models` produces **no** error state — but that
+  block also leaves the list populated from another endpoint, so the failure path is still untested.
+  Fix the probe (find which request really feeds the Unsloth shelf) before claiming a defect.
 - [ ] Reviewer 3's chunk-dedupe fix is **not a boot cost**: measured `grep -cE 'cpp-|wasm-' dist/index.html`
   = 0, so those grammars are on-demand chunks. Do not spend time on it for LOAD_SPEED; it only shrinks
   the install.
@@ -164,13 +181,14 @@ Citations I verified myself (council step 5):
 
 ## Next best action
 
-1. **Finish the panel**: reviewer 1 (`mimo-2.6-flash`, task `council-r1-mimo-5`) is still running; when
-   it lands, aggregate the median of three and close round 1. Post-fix evidence it should score from:
-   `.council/round-2/a11y.json` (nameless 7 → 0, rings 3 → 10 of 14), `.council/round-2/timings.json`
-   (corrected method) and `timings-postfix.json` (LCP only; its hub row is auth-swap contaminated).
-2. Then the boot-chunk deep-import pass (12 call sites) — the one remaining measured-but-unfixed item.
-3. The **full frontend suite does not finish inside 30 min** (timed out); use the documented subsets
-   (`index.css` set, the poll/chat-runtime files) as the gate and say which was run.
+1. **Re-convene round 2** on the current build with five fixes shipped (ring 14/14, slider names, select
+   label, poll backoff, PATH memo). Dispatch reviewers **one at a time**: the account caps concurrent
+   children at 2 and a third dispatch fails with `orchestration_error`. Reviewer 1 is the flaky one
+   (mimo needed 5 dispatches) — start it first, and pass `target` explicitly, since omitting it inherits
+   the parent model and silently duplicates another reviewer.
+2. Then the queued Train sub-nav pill (fix 7) and the sidebar-inset measurement above.
+3. **Full frontend suite does not finish in 30 min** (timed out); use the documented subsets as the gate
+   and say which was run: `node --experimental-strip-types --test tests/<file>...`.
 
 ## Log — append only, newest last
 
