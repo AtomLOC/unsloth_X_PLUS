@@ -174,9 +174,10 @@ the sidebar inset (912 -> 888), loading announcements, the profile-row subtitle 
 repairs. Consistency moved 7 -> 9 at best and Load held at 9, so the remaining distance to 47 is spread
 thinly across H/S/A rather than concentrated anywhere.
 
-Reviewer 3's one open criticism is fair and actionable: **no round-3 screenshot shows the corrected
-profile row** (the round-2 captures still read "X-"/"X-"), so that fix is source-and-test proven but not
-visually proven. Next round must capture it.
+Reviewer 3's one open criticism — "no round-3 screenshot shows the corrected profile row" — is now
+answered: `.council/round-3/screenshots/profile-row-fixed.png` shows the avatar plus a single title and
+the cog, and the DOM reads back `lines: ["X", "X-"]` with `duplicate label: false` (was "X-" bold over
+"X-" faint). The row is 243x44 at (19, 835) in a 1440x900 viewport.
 
 Reviewer claims from round 3 and what happened:
 - ✅ "footer identity renders `x-` over a faint `x-`" — **real**: the subtitle was a hard-coded "X-"
