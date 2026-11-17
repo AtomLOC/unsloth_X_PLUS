@@ -173,11 +173,17 @@ Claims checked, and what happened to them:
   finished. Corrected method → `.council/round-2/rings-and-insets.json`, **13 of 13** with the shadow
   value recorded per stop.
 - ✅ Reviewer 2's and reviewer 1's **sidebar inset** claim was right and is fixed (912 → 888).
-- ❌ Reviewer 1's "0.0272 of 0.0342 CLS is that pill row" is **invented**: `timings.json` has no
-  attribution field at all. Do not act on CLS attribution claims from that file.
-- ⚠️ Reviewer 3's "hub detail table clips its last column": the markdown table scroller already has
-  `overflow-x: auto` (`.aui-md-table-scroll`), so a static screenshot cannot distinguish clipped from
-  scrollable. Verify in the DOM before changing CSS.
+- ❌ Reviewer 1's "0.0272 of 0.0342 CLS is the pill nav row" is **misattributed**, though the number is
+  right. `timings.json` has no attribution at all, so it was re-measured with a `layout-shift` observer
+  (`.council/round-3/cls-and-overflow.json`): the 0.02723 shift is `div.flex.w-full`, the page content
+  container growing 85 -> 711 px and pushing down 61 px, i.e. content arriving. The `nav.flex.flex-wrap`
+  the reviewer named is a **sidebar-header** nav that slides 8 px sideways at the same instant, not the
+  Train tab row. A `min-h-10` reservation on the tab list was tried and **reverted**: CLS stayed 0.0342
+  and the two source nodes were unchanged. In-app 0.0342 is inside the "good" band (<0.1): no fix.
+- ❌ Reviewer 3's "hub detail table clips its last column" does **not** reproduce in the DOM: the
+  6-column table measures 606 px wide, right edge 1390 on a 1440 viewport, `scrollWidth == clientWidth`
+  (606) with no clipping ancestor within 8 levels. The screenshot's "peak VR..." cut is the panel edge
+  with the table fitting inside it. No CSS change made.
 - ✅ Reviewer 3's "skeleton loads announce nothing" was right and is fixed (`ee02c79`): each loading
   container has a sibling `role="status"` line with `common.loading`, and the decorative rows stay
   `aria-hidden`. Measured on the served build: +600 ms on /hub → 39 skeletons with
