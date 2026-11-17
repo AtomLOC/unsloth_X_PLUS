@@ -74,6 +74,9 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   `audio-sidebar-workflows.test.ts` (its `MediaMoreSubmenu` source regex no longer matches
   `app-sidebar.tsx`), and they fail identically with `app-sidebar.tsx` restored from before this
   session's edit, so they are pre-existing drift, not a regression.
+- 2026-11-17 — **Frontend gate: 356 of 356 pass** across the index.css-touching set plus the focus-ring,
+  inset and loading-announcement suites (the two stale audio-sidebar assertions were repaired, so the
+  earlier 351/353 is historical).
 - 2026-11-17 — Council evidence lives in `.council/round-<n>/` and is **gitignored**.
 
 ## Perf ledger
@@ -175,8 +178,11 @@ Claims checked, and what happened to them:
 - ⚠️ Reviewer 3's "hub detail table clips its last column": the markdown table scroller already has
   `overflow-x: auto` (`.aui-md-table-scroll`), so a static screenshot cannot distinguish clipped from
   scrollable. Verify in the DOM before changing CSS.
-- ⚠️ Reviewer 3's "skeleton loads announce nothing": plausible and unfixed; needs an `aria-live`/`role="status"`
-  on the loading region, and a test that pins it.
+- ✅ Reviewer 3's "skeleton loads announce nothing" was right and is fixed (`ee02c79`): each loading
+  container has a sibling `role="status"` line with `common.loading`, and the decorative rows stay
+  `aria-hidden`. Measured on the served build: +600 ms on /hub → 39 skeletons with
+  `status: "Loading..."` announced (`.council/round-2/loading-announcements.json`). /library loads faster
+  than the 500 ms sample interval, so its path is pinned by source only (`tests/loading-announcements.test.ts`).
 
 ### Round 1 fixes### Round 1 fixes
 
