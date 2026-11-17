@@ -164,12 +164,13 @@ Citations I verified myself (council step 5):
 
 ## Next best action
 
-1. **Finish the panel**: reviewer 1 (`mimo-2.6-flash`) is still running; when it lands, aggregate the
-   median of three and close round 1.
-2. Re-convene round 2 on the corrected evidence (`.council/round-2/timings.json`, method recorded) with
-   three fixes shipped, and see whether A11y moves off 5–7. That needs the server and headless Edge
-   relaunched (both are down; see the critical note above) and killed again afterwards.
-3. Then the boot-chunk deep-import pass (12 call sites) and the `/api/inference/status` poll driver.
+1. **Finish the panel**: reviewer 1 (`mimo-2.6-flash`, task `council-r1-mimo-5`) is still running; when
+   it lands, aggregate the median of three and close round 1. Post-fix evidence it should score from:
+   `.council/round-2/a11y.json` (nameless 7 → 0, rings 3 → 10 of 14), `.council/round-2/timings.json`
+   (corrected method) and `timings-postfix.json` (LCP only; its hub row is auth-swap contaminated).
+2. Then the boot-chunk deep-import pass (12 call sites) — the one remaining measured-but-unfixed item.
+3. The **full frontend suite does not finish inside 30 min** (timed out); use the documented subsets
+   (`index.css` set, the poll/chat-runtime files) as the gate and say which was run.
 
 ## Log — append only, newest last
 
