@@ -3774,10 +3774,12 @@ html[data-chat-font] .aui-root {
 	   ring of their own: the generic rule below only *removes* the browser outline, it never adds
 	   one, and these rows carry no focus-visible ring utility. Measured before this rule: every
 	   sidebar stop reported `outline: none` and no visible shadow, so tabbing the sidebar was
-	   invisible. Same ring as the composer pills, so the shell has exactly one keyboard ring. */
+	   invisible. 2px in --ring is what the sibling nav submenu rows already draw
+	   (app-sidebar.tsx `focus-visible:ring-2 focus-visible:ring-ring`), so the whole sidebar has
+	   one keyboard ring rather than two looks. */
 	.sidebar-nav-btn:focus-visible {
 		outline: none;
-		box-shadow: var(--x-focus-ring);
+		box-shadow: 0 0 0 2px var(--ring);
 	}
 	/* Pointer focus (a click, or a menu handing focus back) is not keyboard focus. */
 	html[data-input-modality="pointer"] .sidebar-nav-btn:focus-visible {
