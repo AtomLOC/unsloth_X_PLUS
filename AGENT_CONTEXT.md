@@ -31,6 +31,13 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   file and append one short section to the index.
 - 2026-11-17 — **Route promotion rejected** as a perf fix: no signal (median 5.57 → 5.53 ms, p95
   24.72 → 24.82, interleaved 3 rounds); FastAPI 0.141 keeps hot routes behind lazy `_IncludedRouter`.
+- 2026-11-17 — **Council CLS evidence was wrong and is now measured on the user's path.** The capture
+  navigated `/login` → screen and counted the auth-shell → app-shell swap. Cold `/chat` is CLS 0.0019;
+  the in-app numbers are library 0.007, hub 0.0694, train 0.0342. All are under the 0.1 "good" line, and
+  the earlier "d-hub 0.064" was the harness. Do not re-open the hub-skeleton fix on that number.
+- 2026-11-17 — **Radii migration deferred again**: 10 px is the dominant value (57 uses) and tests pin
+  `rounded-[10px]` literally, so collapsing onto the token scale is a product-wide visual decision, not a
+  cleanup. Recorded as deferred with the counts.
 - 2026-11-17 — **Desktop-secret memo is bound to the stored hash**, not a TTL: rotation and clearing
   invalidate by construction; rejections are never cached so a guesser still pays the KDF.
 - 2026-11-17 — Council evidence lives in `.council/round-<n>/` and is **gitignored**.
@@ -47,6 +54,11 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
 | Boot: LCP + CLS, hub desktop | `d46130a` | 1128 ms / 0.064 | — | CDP `timings.json` — the one screen with a shift |
 | Boot: requests / transferred | `d46130a` | 144–182 / 1.18–1.30 | req / MB | CDP `timings.json` |
 | Bundle | `d46130a` | 45 MB dist, 98 modulepreloads, 2.57 MB `browser-*.js` | — | `.council/round-1/bundle.txt` |
+| `/api/inference/status` steady state, in-process A/B | `1f4fcc4` | **56.06 / 49.16 → 23.53 / 21.82** | ms | two arms, alternating order, 25 requests each: `_path_binary` forced to `shutil.which` vs memoised |
+| `/api/inference/status` before vs after (same run) | `1f4fcc4` | 39.13 → 22.7 (floor 5.86 / 8.59) | ms | 30 requests, warm; the floor moved with host load, the A/B above is the evidence |
+| Cold boot `/chat`: LCP / CLS | `1f4fcc4` | **292–336 / 0.0019** | ms / — | `.council/round-2/timings.json`, direct load with the token already stored |
+| In-app route change: CLS | `1f4fcc4` | library 0.007 · hub 0.0694 · train 0.0342 | — | same file, CLS reset immediately before a sidebar click |
+| Hub requests on arrival | `1f4fcc4` | 217 total: **119 js**, `/api/inference/status` ×17 per 10 s | — | `.council/requests.mjs`, `.council/poll_rate.mjs` |
 
 ## Security ledger
 
@@ -116,15 +128,22 @@ Citations I verified myself (council step 5):
   `browser/panel-availability`, `browser/prefs-store`, `browser/agent/*`) instead of the barrel, then the
   barrel's dialog/panel exports fall out of the eager graph. Measure by `grep -c rel="modulepreload"
   dist/index.html` (98 now) and the `browser-` reference count (3 now).
+- [ ] **219 requests / 119 JS chunks on the Hub** — chunk fragmentation, measured. A manual chunking pass
+  (shared vendor chunk) would cut requests; unmeasured benefit, so not started.
+- [ ] **Why `/api/inference/status` is polled 17× per 10 s** on the Hub is still unknown: the endpoint is
+  now cheap (23 ms), but 1.7 req/s is more than a status read needs. Find the poll driver before changing
+  an interval that may be intentional.
 - [ ] SEC-3 warning text ("any local user").
 - [ ] `--x-space-*` / `--x-icon-*` are dead tokens: adopt at call sites or delete. The panel named it;
   a dead token layer is worse than none because UI_AUDIT claims it exists.
 
 ## Next best action
 
-1. Re-dispatch reviewers 1 and 3 (`mimo-2.6-flash`, `glm-5.3-flash`) and complete the round-1 median.
-2. Ship fix #2 (lazy browser chunk) and re-measure LCP / modulepreload count.
-3. Re-capture evidence into `.council/round-2/` and re-convene.
+1. **Finish the panel**: reviewer 1 (`mimo-2.6-flash`) is still running; when it lands, aggregate the
+   median of three and close round 1.
+2. Re-convene round 2 on the corrected evidence (`.council/round-2/timings.json`, method recorded) with
+   three fixes shipped, and see whether A11y moves off 5–7.
+3. Then the boot-chunk deep-import pass (12 call sites) and the `/api/inference/status` poll driver.
 
 ## Log — append only, newest last
 
@@ -161,6 +180,16 @@ Citations I verified myself (council step 5):
   (`data-slot="slider-thumb"`, the `role="slider"` element) whose visible row label was never passed
   as a name. The chat panel's number input already did it correctly beside the slider that did not.
   Probe on the served build: 7 → **0**.
+- Found and fixed the measurement pipeline: the CLS/LCP evidence navigated `/login` → screen, so it
+  counted the auth-shell swap. Rebuilt the harness around the user's two real paths (cold load with a
+  stored token; in-app sidebar click with CLS reset before it). Cold `/chat` is LCP 292–336 ms / CLS
+  0.0019; in-app CLS is library 0.007, hub 0.0694, train 0.0342. That kills the "fix d-hub CLS 0.064"
+  item that both reviewers ranked: the 0.064 was the harness.
+- Hub arrival makes **219 requests, 119 of them JS**, and polls `/api/inference/status` **17× per 10 s**.
+  Profiled that endpoint: `shutil.which("llama-server")` walked the whole PATH twice per request, 28.6 ms
+  of 39.1 ms. Memoised the PATH fallback for 5 s with misses cached: in-process A/B 56.06/49.16 →
+  23.53/21.82 ms (alternating order), 5 new tests, 412 related tests pass (2 failures reproduce on
+  `HEAD` with the change stashed).
 - Commits: `a44b8f2` (SEC-4 + tests), `d46130a` (focus ring + tests), `b1422c8` (round-1 ledger),
   `9c53572` (backend select label), `b98b6d3` (ring matches the sidebar's own convention), `5e82bf9`
-  (slider accessible names).
+  (slider accessible names), `1f4fcc4` (PATH memo).
