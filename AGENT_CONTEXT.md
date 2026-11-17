@@ -91,13 +91,15 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
 |---|---|---|---|---|---|
 | SEC-1 | `Host` header | DNS rebinding, middleware off by default | medium | fixed | `test_trusted_hosts.py` |
 | SEC-2 | canvas `?link=` | capability carried no account binding | medium | fixed | `test_canvas_link_auth.py` |
-| SEC-3 | keyless `full` scope | per-host, not per-user | medium | **open** (warning text) | `test_keyless_api_access.py` |
+| SEC-3 | keyless `full` scope | per-host, not per-user | medium | **fixed this turn**: the setting now states the per-machine boundary in the confirmation *and* the always-visible row (the boundary itself is unchanged and stays host-wide) | `keyless-full-scope-warning.test.ts` (3) |
 | SEC-4 | `X-Desktop-Secret` on `/api/health`, `POST /api/desktop/shutdown` | unauth 100k PBKDF2 per request | low | **fixed this turn**: budget before KDF + validated-once memo | `test_main_middleware_and_desktop_secret.py`, `test_desktop_secret_validation_cache.py` |
-| SEC-5 | two middlewares | `scope["path"]` without `root_path` | low | fixed | `test_remote_access_settings.py`, `test_main_middleware_and_desktop_secret.py` |
+| SEC-5 | two middlewares | `scope["path"]` without `root_path` | low | fixed; regression-pinned this turn (raw ASGI scope, `TestClient` cannot express it) | `test_security_header_root_path_and_error_redaction.py` |
 | SEC-6 | sandbox `reveal` | directory form skipped owner check | low | fixed | `test_sandbox_files_and_storage_roots.py` |
-| SEC-7 | HTTP error details | host paths in 503/422 | low | fixed | `test_rag_extract_text.py` |
+| SEC-7 | HTTP error details | host paths in 503/422 | low | fixed; redaction pinned this turn (POSIX + Windows reasons) | `test_security_header_root_path_and_error_redaction.py` |
 | SEC-8 | library upload name | `.`/`..`/control chars in label | low | fixed | `test_library_routes.py` |
 | SEC-9 | canvas routes | `?link=` never minted in production | low | open by design | `test_canvas_link_auth.py` |
+
+All nine entries were re-verified against `HEAD` on 2026-11-17; seven were already fixed in code. Corrected the stale `SECURITY_AUDIT.md` in place (the document had SEC-1, 2, 5, 6, 7, 8 written as open). SEC-9 stays open by decision: the mint is dead code and exposing it would widen the surface SEC-2 is about.
 
 Residual, recorded not fixed: `client_ip` honours `CF-Connecting-IP` on a loopback peer, so a *local*
 process can rotate the desktop-secret throttle key. Impact is a self-DoS on the user's own machine.
