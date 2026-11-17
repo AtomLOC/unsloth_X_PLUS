@@ -31,6 +31,14 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   file and append one short section to the index.
 - 2026-11-17 — **Route promotion rejected** as a perf fix: no signal (median 5.57 → 5.53 ms, p95
   24.72 → 24.82, interleaved 3 rounds); FastAPI 0.141 keeps hot routes behind lazy `_IncludedRouter`.
+- 2026-11-17 — **Focus-ring measurement was wrong twice, and the method is now pinned.** The first probe
+  counted *any* `box-shadow` as a ring (decorative shadows → false 14/14). A stricter rewrite checked the
+  third length as spread, but `0 0 0 2px` is x, y, blur **0** and spread **2** → false 6/13. It also read
+  computed style on the same tick as the Tab key, and the ring is `transition`ed, so rows that do draw a
+  ring read as ringless. Correct method: four-length layer with zero offset and **spread (index 3) ≥ 1px**,
+  non-transparent colour, read **140 ms after** the key event. Result, auditable per stop in
+  `.council/round-2/rings-and-insets.json`: **13 of 13** tab stops draw a real ring
+  (`rgb(223,223,223) 0 0 0 2px` for nav rows, `color(srgb …) 0 0 0 2px` for utility rings).
 - 2026-11-17 — **Council CLS evidence was wrong and is now measured on the user's path.** The capture
   navigated `/login` → screen and counted the auth-shell → app-shell swap. Cold `/chat` is CLS 0.0019;
   the in-app numbers are library 0.007, hub 0.0694, train 0.0342. All are under the 0.1 "good" line, and
@@ -140,6 +148,20 @@ Citations I verified myself (council step 5):
 - ⚠️ The reviewer's "11 of 14 tab stops show no ring" is partly a probe artifact: composer buttons do
   get a 1 px `--ring` shadow. The real, narrower defect is the nav rows + the missing outline fallback.
 
+### Round 2 (evidence `.council/round-1/` screenshots + `.council/round-2/` measurements)
+
+| reviewer | model | C | Load | Hier | States | A11y | Total |
+|---|---|---|---|---|---|---|---|
+| 2 | `deepseek-v4.1-flash` | 7 | 7 | 8 | 7 | 7 | **36/50** |
+| 1 | `mimo-2.6-flash` | — | — | — | — | — | running |
+| 3 | `glm-5.3-flash` | — | — | — | — | — | running |
+
+Reviewer 2 moved 32 → 36 and verified all six fixes in source. Its method challenge ("14/14 is not
+evidence: the probe counts transparent zero-width shadows") was **correct** and is what produced the
+corrected ring method above; its conclusion (rings invisible) was not — the recorded shadow values show a
+real 2px ring on every stop. Five of six fixes it checked are shipped; the sixth (sidebar inset) it also
+flagged and is now fixed.
+
 ### Round 1 fixes
 
 | # | Fix | Status | Evidence |
@@ -154,24 +176,20 @@ Citations I verified myself (council step 5):
 
 ## Open threads
 
-- [ ] **Unverified reviewer-1 claim worth one measurement**: the sidebar panel runs to y=899 while the
-  content panel stops at y=887, i.e. the 12 px inset is on one floating panel only (claimed for
-  screenshots 01/02/04/05). Check with a DOM `getBoundingClientRect` on the sidebar `<aside>` vs the
-  content container before touching CSS: if both bottom out at the same inset it is a screenshot artifact.
-- [ ] **States stay unproven visually** (both panels: "no loading or error screen appears in any
-  screenshot"). The states probe (`.council/round-2/states.mjs`) shows skeletons on /library (10) and
-  /hub (36) mid-load, and blocking `/api/hub/unsloth-models` produces **no** error state — but that
-  block also leaves the list populated from another endpoint, so the failure path is still untested.
-  Fix the probe (find which request really feeds the Unsloth shelf) before claiming a defect.
-- [ ] Reviewer 3's chunk-dedupe fix is **not a boot cost**: measured `grep -cE 'cpp-|wasm-' dist/index.html`
-  = 0, so those grammars are on-demand chunks. Do not spend time on it for LOAD_SPEED; it only shrinks
-  the install.
-- [ ] Fixes 2–5 above (fix 2 is +1 load point and is cheap: one `lazy()` + Suspense).
-- [ ] **Boot chunk, the real fix**: `@/features/browser` is imported eagerly by 12 modules. To split the
-  2.57 MB chunk, those call sites must import narrow modules (`browser/downloads`, `browser/file-kind`,
-  `browser/panel-availability`, `browser/prefs-store`, `browser/agent/*`) instead of the barrel, then the
-  barrel's dialog/panel exports fall out of the eager graph. Measure by `grep -c rel="modulepreload"
-  dist/index.html` (98 now) and the `browser-` reference count (3 now).
+- [x] **Sidebar inset claim was real, and is fixed.** Both review panels said the sidebar runs past the
+  content panel's bottom inset. Measured: `[data-sidebar="sidebar"]` bottom **912** on a 900 viewport vs the
+  content panel's **888** — the sidebar carried shadcn's `size-full`, and a utilities-layer utility outranks
+  the components-layer `height: calc(100% - 24px)`, so it was full height PLUS a 12px top margin. `!important`
+  on the two length declarations makes it 888/888. Committed `6d98260`, pinned by
+  `tests/sidebar-panel-inset.test.ts`.
+
+- [x] **The Hub's failure path cannot be observed by blocking requests: its catalogue is bundled.**
+  With every `/api/hub/*` call blocked on a cache-cleared, storage-cleared load, the Hub still renders the
+  full model list plus "Unsloth isn't running -- please relaunch it." and a "0 Cache 0 Local" chip
+  (`.council/round-2/screenshots/hub-all-hub-api-blocked.png`, `states-failure.json`). So the earlier
+  "silent failure" reading was a probe artifact, not a defect, and `states.mjs` blocking
+  `/api/hub/unsloth-models` proved nothing. Loading skeletons are real: 10 on /library, 36 on /hub mid-load.
+
 - [ ] **219 requests / 119 JS chunks on the Hub** — chunk fragmentation, measured. A manual chunking pass
   (shared vendor chunk) would cut requests; unmeasured benefit, so not started.
 - [ ] **Why `/api/inference/status` is polled 17× per 10 s** on the Hub is still unknown: the endpoint is
