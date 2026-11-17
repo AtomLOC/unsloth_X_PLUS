@@ -205,7 +205,7 @@ import {
   useImageWorkflowStore,
 } from "@/features/images/stores/image-workflow-store";
 import { WORKFLOW_TABS, type WorkflowId } from "@/features/images/workflows";
-import { UserAvatar, useEffectiveProfile } from "@/features/profile";
+import { UserAvatar, loginDisplayName, useEffectiveProfile } from "@/features/profile";
 import {
   Shortcut,
   type ShortcutId,
@@ -1646,7 +1646,11 @@ export function AppSidebar() {
   } = useTrainingHistorySidebarItems(!chatOnly && trainingRecentsRoute);
   const showTrainingRecents =
     !chatOnly && trainingRecentsRoute && runItems.length > 0;
-  const { displayTitle, avatarDataUrl } = useEffectiveProfile();
+  const { displayTitle, avatarDataUrl, sessionSub } = useEffectiveProfile();
+  // The profile row's second line used to be the literal "X-", so for the owner -- whose display
+  // title is also "X-" -- the row read "X-" twice, once bold and once faint. Show the login id
+  // only when it says something the title does not.
+  const accountSubtitle = loginDisplayName(sessionSub);
 
   const { projects, hasLoaded: projectsLoaded } = useChatProjects();
   const activeProjectId = isChatRoute
@@ -7326,9 +7330,11 @@ export function AppSidebar() {
                         <span className="truncate font-heading text-ui-13p5 tracking-[0.025em] dark:tracking-[0.04em] font-semibold text-nav-fg">
                           {displayTitle}
                         </span>
-                        <span className="truncate text-ui-11p5 tracking-nav text-muted-foreground">
-                          X-
-                        </span>
+                        {accountSubtitle && accountSubtitle !== displayTitle && (
+                          <span className="truncate text-ui-11p5 tracking-nav text-muted-foreground">
+                            {accountSubtitle}
+                          </span>
+                        )}
                       </div>
                     </SidebarMenuButton>
                   )}
