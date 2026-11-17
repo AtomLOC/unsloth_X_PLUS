@@ -77,6 +77,11 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
 - 2026-11-17 — **Frontend gate: 356 of 356 pass** across the index.css-touching set plus the focus-ring,
   inset and loading-announcement suites (the two stale audio-sidebar assertions were repaired, so the
   earlier 351/353 is historical).
+- 2026-11-17 — **A delegated child wrote council notes into the tracked `Context.md`.** It appended a
+  round-3 summary to the product document (16 lines), which is exactly the case-collision file this
+  project must never write. Restored byte-for-byte (`git restore Context.md`, hash `b7f648c5` == `HEAD`).
+  Every reviewer brief from now on must say, in the brief itself: write only the one named file under
+  `.council/round-<n>/`; never touch `Context.md`, `CONTEXT.md` or `AGENT_CONTEXT.md`.
 - 2026-11-17 — Council evidence lives in `.council/round-<n>/` and is **gitignored**.
 
 ## Perf ledger
@@ -156,16 +161,22 @@ Citations I verified myself (council step 5):
 - ⚠️ The reviewer's "11 of 14 tab stops show no ring" is partly a probe artifact: composer buttons do
   get a 1 px `--ring` shadow. The real, narrower defect is the nav rows + the missing outline fallback.
 
-### Round 3 (in progress) — 39 and 38 so far
+### Round 3 — closed at median **39/50** (round 2 was 37)
 
 | reviewer | model | C | Load | Hier | States | A11y | Total |
 |---|---|---|---|---|---|---|---|
 | 1 | `mimo-2.6-flash` | 8 | 7 | 8 | 8 | 8 | **39/50** |
 | 2 | `deepseek-v4.1-flash` | 7 | 9 | 8 | 7 | 7 | **38/50** |
-| 3 | `glm-5.3-flash` | — | — | — | — | — | running |
+| 3 | `glm-5.3-flash` | 9 | 9 | 8 | 8 | 9 | **43/50** |
 
-Round 2 closed at median **37** (37 / 36 / 42). Round 3 changes scored so far: the sidebar inset
-(912 -> 888), loading announcements, the profile-row subtitle fix, plus two non-visual test repairs.
+Median total **39**; per-dimension medians C8 · L9 · H8 · S8 · A8. Best-of-panel 43. Scored changes:
+the sidebar inset (912 -> 888), loading announcements, the profile-row subtitle fix, two non-visual test
+repairs. Consistency moved 7 -> 9 at best and Load held at 9, so the remaining distance to 47 is spread
+thinly across H/S/A rather than concentrated anywhere.
+
+Reviewer 3's one open criticism is fair and actionable: **no round-3 screenshot shows the corrected
+profile row** (the round-2 captures still read "X-"/"X-"), so that fix is source-and-test proven but not
+visually proven. Next round must capture it.
 
 Reviewer claims from round 3 and what happened:
 - ✅ "footer identity renders `x-` over a faint `x-`" — **real**: the subtitle was a hard-coded "X-"
