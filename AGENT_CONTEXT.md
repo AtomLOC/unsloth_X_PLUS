@@ -178,6 +178,11 @@ Reviewer claims from round 3 and what happened:
   either way. The inline "Unsloth isn't running — please relaunch it." message IS present.
 - ⚠️ "responsive unproven, all measurements 1440x900" — the round-1 mobile captures (390x844) exist at
   `.council/round-1/screenshots/06-08_*`; the reviewer was handed an evidence list that omitted them.
+- ❌ Reviewer 1's Hub `min-height` suggestion targets the wrong node. Attributed with a layout-shift
+  observer over two in-app visits (`.council/round-3/hub-cls.json`): run 1 CLS 0.0647, of which 0.0487
+  is `div.page-title-halo` / the page title collapsing 70 -> 32 px, plus 0.0211 from a fixed overlay;
+  run 2 CLS 0.0289, 0.0278 of it the content container's own reflow. The route root
+  `div.relative.flex` is **not** the source, and both runs are inside the "good" band (<0.1).
 
 ### Round 2 (closed) — median 37/50
 
