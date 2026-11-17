@@ -156,7 +156,30 @@ Citations I verified myself (council step 5):
 - ⚠️ The reviewer's "11 of 14 tab stops show no ring" is partly a probe artifact: composer buttons do
   get a 1 px `--ring` shadow. The real, narrower defect is the nav rows + the missing outline fallback.
 
-### Round 2 — closed at median **37/50** (was 33)
+### Round 3 (in progress) — 39 and 38 so far
+
+| reviewer | model | C | Load | Hier | States | A11y | Total |
+|---|---|---|---|---|---|---|---|
+| 1 | `mimo-2.6-flash` | 8 | 7 | 8 | 8 | 8 | **39/50** |
+| 2 | `deepseek-v4.1-flash` | 7 | 9 | 8 | 7 | 7 | **38/50** |
+| 3 | `glm-5.3-flash` | — | — | — | — | — | running |
+
+Round 2 closed at median **37** (37 / 36 / 42). Round 3 changes scored so far: the sidebar inset
+(912 -> 888), loading announcements, the profile-row subtitle fix, plus two non-visual test repairs.
+
+Reviewer claims from round 3 and what happened:
+- ✅ "footer identity renders `x-` over a faint `x-`" — **real**: the subtitle was a hard-coded "X-"
+  while the owner's title is also "X-". Fixed (`23a2d43`), 3 tests.
+- ❌ "drop the `.dark` prefix so light mode gets the inset too" — rejected: the glass shell is
+  documented `.dark`-only on purpose ("Light mode and every palette keep exactly what they had",
+  `index.css:6624-6630`). Not a defect.
+- ⚠️ "a hard failure is silent (`states-failure.json` alerts [])" — that file came from a **void**
+  probe (the Hub renders a bundled catalogue with every `/api/hub/*` blocked), so it proves nothing
+  either way. The inline "Unsloth isn't running — please relaunch it." message IS present.
+- ⚠️ "responsive unproven, all measurements 1440x900" — the round-1 mobile captures (390x844) exist at
+  `.council/round-1/screenshots/06-08_*`; the reviewer was handed an evidence list that omitted them.
+
+### Round 2 (closed) — median 37/50
 
 | reviewer | model | C | Load | Hier | States | A11y | Total |
 |---|---|---|---|---|---|---|---|
@@ -164,34 +187,7 @@ Citations I verified myself (council step 5):
 | 2 | `deepseek-v4.1-flash` | 7 | 7 | 8 | 7 | 7 | **36/50** |
 | 3 | `glm-5.3-flash` | 8 | 9 | 8 | 8 | 9 | **42/50** |
 
-Median total **37**; per-dimension medians C7 · L7 · H8 · S8 · A8 (sum 38 — quote the median total, not
-the sum). Every reviewer verified the six fixes in source. A11y is the big mover (round-1 range 5-7 →
-7-9), Consistency 6 → 8 at best. Threshold is 47 with no dimension below 8, so the round is **not met**.
-
-Claims checked, and what happened to them:
-- ✅ Reviewer 2's **method challenge** was right: the first ring probe counted decorative shadows, the
-  second checked blur instead of spread, and both read computed style before the ring's transition
-  finished. Corrected method → `.council/round-2/rings-and-insets.json`, **13 of 13** with the shadow
-  value recorded per stop.
-- ✅ Reviewer 2's and reviewer 1's **sidebar inset** claim was right and is fixed (912 → 888).
-- ❌ Reviewer 1's "0.0272 of 0.0342 CLS is the pill nav row" is **misattributed**, though the number is
-  right. `timings.json` has no attribution at all, so it was re-measured with a `layout-shift` observer
-  (`.council/round-3/cls-and-overflow.json`): the 0.02723 shift is `div.flex.w-full`, the page content
-  container growing 85 -> 711 px and pushing down 61 px, i.e. content arriving. The `nav.flex.flex-wrap`
-  the reviewer named is a **sidebar-header** nav that slides 8 px sideways at the same instant, not the
-  Train tab row. A `min-h-10` reservation on the tab list was tried and **reverted**: CLS stayed 0.0342
-  and the two source nodes were unchanged. In-app 0.0342 is inside the "good" band (<0.1): no fix.
-- ❌ Reviewer 3's "hub detail table clips its last column" does **not** reproduce in the DOM: the
-  6-column table measures 606 px wide, right edge 1390 on a 1440 viewport, `scrollWidth == clientWidth`
-  (606) with no clipping ancestor within 8 levels. The screenshot's "peak VR..." cut is the panel edge
-  with the table fitting inside it. No CSS change made.
-- ✅ Reviewer 3's "skeleton loads announce nothing" was right and is fixed (`ee02c79`): each loading
-  container has a sibling `role="status"` line with `common.loading`, and the decorative rows stay
-  `aria-hidden`. Measured on the served build: +600 ms on /hub → 39 skeletons with
-  `status: "Loading..."` announced (`.council/round-2/loading-announcements.json`). /library loads faster
-  than the 500 ms sample interval, so its path is pinned by source only (`tests/loading-announcements.test.ts`).
-
-### Round 1 fixes### Round 1 fixes
+### Round 1 fixes### Round 1 fixes### Round 1 fixes
 
 | # | Fix | Status | Evidence |
 |---|---|---|---|
