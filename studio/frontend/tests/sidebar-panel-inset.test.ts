@@ -22,7 +22,10 @@ const CSS = readSrc("index.css");
 
 function sidebarRule(): string {
   const start = CSS.indexOf('.dark [data-sidebar="sidebar"] {');
-  assert.ok(start > 0, "the glass sidebar rule moved: re-anchor this test rather than deleting it");
+  assert.ok(
+    start > 0,
+    "the glass sidebar rule moved: re-anchor this test rather than deleting it",
+  );
   const end = CSS.indexOf("}", start);
   return CSS.slice(start, end);
 }

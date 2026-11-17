@@ -5,8 +5,8 @@
 // tests pin the replacement cadence, and pin that the window itself did not shrink: a CLI load must
 // still be picked up as fast as before whenever it starts.
 
-import { test } from "node:test";
 import assert from "node:assert/strict";
+import { test } from "node:test";
 
 import {
   IDLE_POLL_DELAYS_MS,
@@ -15,10 +15,19 @@ import {
 } from "../src/features/chat/lib/server-model-poll-backoff.ts";
 
 test("an idle wait backs off instead of asking twice a second", () => {
-  const delays = Array.from({ length: 12 }, (_, i) => serverModelPollDelayMs(i, false));
+  const delays = Array.from({ length: 12 }, (_, i) =>
+    serverModelPollDelayMs(i, false),
+  );
 
-  assert.deepEqual(delays.slice(0, 3), [500, 500, 1000], "the first seconds stay responsive");
-  assert.ok(delays.every((d, i) => i === 0 || d >= delays[i - 1]), `delays must not speed up: ${delays}`);
+  assert.deepEqual(
+    delays.slice(0, 3),
+    [500, 500, 1000],
+    "the first seconds stay responsive",
+  );
+  assert.ok(
+    delays.every((d, i) => i === 0 || d >= delays[i - 1]),
+    `delays must not speed up: ${delays}`,
+  );
   assert.equal(delays.at(-1), 4000, "and settle at the slowest step");
 });
 
@@ -31,8 +40,14 @@ test("the whole idle window costs a fraction of the old 500 ms grid", () => {
     polls += 1;
   }
 
-  assert.ok(polls <= 25, `60 s idle should cost at most 25 requests, cost ${polls}`);
-  assert.ok(polls >= 15, `but it must still re-check periodically, cost only ${polls}`);
+  assert.ok(
+    polls <= 25,
+    `60 s idle should cost at most 25 requests, cost ${polls}`,
+  );
+  assert.ok(
+    polls >= 15,
+    `but it must still re-check periodically, cost only ${polls}`,
+  );
 });
 
 test("a load in flight keeps the fast cadence", () => {
@@ -44,7 +59,9 @@ test("a load in flight keeps the fast cadence", () => {
 
 test("a load is still noticed within four seconds of it starting", () => {
   // Worst case: the load begins right after a poll at the slowest step.
-  assert.ok(serverModelPollDelayMs(IDLE_POLL_DELAYS_MS.length - 1, false) <= 4000);
+  assert.ok(
+    serverModelPollDelayMs(IDLE_POLL_DELAYS_MS.length - 1, false) <= 4000,
+  );
 });
 
 test("poll counts outside the table clamp instead of returning undefined", () => {

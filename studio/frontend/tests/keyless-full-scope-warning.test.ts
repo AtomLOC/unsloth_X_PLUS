@@ -18,11 +18,16 @@ import test from "node:test";
 
 import { readSrc } from "./helpers/kit.ts";
 
-const SECTION = readSrc("features/settings/components/keyless-api-access-section.tsx");
+const SECTION = readSrc(
+  "features/settings/components/keyless-api-access-section.tsx",
+);
 
 function fullGrantBody(): string {
   const start = SECTION.indexOf("  full: {");
-  assert.ok(start > 0, "the `full` grant copy moved: re-anchor this test rather than deleting it");
+  assert.ok(
+    start > 0,
+    "the `full` grant copy moved: re-anchor this test rather than deleting it",
+  );
   return SECTION.slice(start, SECTION.indexOf("  tools: {", start));
 }
 

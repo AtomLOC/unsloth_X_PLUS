@@ -8,7 +8,9 @@
 // load appears. The window itself is unchanged: a CLI load is still picked up within 4 s at worst.
 
 /** Delays used while nothing has been seen loading, indexed by how many polls have already run. */
-export const IDLE_POLL_DELAYS_MS = [500, 500, 1000, 1000, 2000, 2000, 4000] as const;
+export const IDLE_POLL_DELAYS_MS = [
+  500, 500, 1000, 1000, 2000, 2000, 4000,
+] as const;
 
 /** Delays used while a load is in flight: a progress-bearing status read, so keep it responsive. */
 export const LOADING_POLL_DELAY_MS = 500;
@@ -19,8 +21,14 @@ export const LOADING_POLL_DELAY_MS = 500;
  * @param pollsTaken polls already completed in this wait (0 before the first)
  * @param sawLoad whether any poll has reported a load in flight
  */
-export function serverModelPollDelayMs(pollsTaken: number, sawLoad: boolean): number {
+export function serverModelPollDelayMs(
+  pollsTaken: number,
+  sawLoad: boolean,
+): number {
   if (sawLoad) return LOADING_POLL_DELAY_MS;
-  const index = Math.min(Math.max(0, Math.trunc(pollsTaken)), IDLE_POLL_DELAYS_MS.length - 1);
+  const index = Math.min(
+    Math.max(0, Math.trunc(pollsTaken)),
+    IDLE_POLL_DELAYS_MS.length - 1,
+  );
   return IDLE_POLL_DELAYS_MS[index];
 }

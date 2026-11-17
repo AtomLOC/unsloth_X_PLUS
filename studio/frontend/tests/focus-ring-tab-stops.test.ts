@@ -25,37 +25,83 @@ const SIDEBAR = readSrc("components/app-sidebar.tsx");
 const THREAD = readSrc("components/assistant-ui/thread.tsx");
 
 test("the global outline strip is still there, so a ring is genuinely required", () => {
-  const rule = /button:focus,\s*a:focus,\s*summary:focus,\s*\[role="button"\]:focus\s*\{([^}]*)\}/.exec(CSS);
-  assert.ok(rule, "the focus-outline reset moved: re-anchor this test rather than deleting it");
+  const rule =
+    /button:focus,\s*a:focus,\s*summary:focus,\s*\[role="button"\]:focus\s*\{([^}]*)\}/.exec(
+      CSS,
+    );
+  assert.ok(
+    rule,
+    "the focus-outline reset moved: re-anchor this test rather than deleting it",
+  );
   assert.match(rule[1], /outline:\s*none\s*!important/);
 });
 
 test("a sidebar row action reveals itself and draws the ring on keyboard focus", () => {
   const rule = /\.sidebar-row-action:focus-visible\s*\{([^}]*)\}/.exec(CSS);
-  assert.ok(rule, "`.sidebar-row-action:focus-visible` is gone: Show workflows is invisible again");
-  assert.match(rule[1], /box-shadow:\s*0 0 0 2px var\(--ring\)/, "same 2px ring the nav rows draw");
-  assert.match(rule[1], /opacity:\s*1/, "the action is opacity-0 until its row is hovered");
+  assert.ok(
+    rule,
+    "`.sidebar-row-action:focus-visible` is gone: Show workflows is invisible again",
+  );
+  assert.match(
+    rule[1],
+    /box-shadow:\s*0 0 0 2px var\(--ring\)/,
+    "same 2px ring the nav rows draw",
+  );
+  assert.match(
+    rule[1],
+    /opacity:\s*1/,
+    "the action is opacity-0 until its row is hovered",
+  );
   assert.match(rule[1], /pointer-events:\s*auto/);
 });
 
 test("the brand anchor draws a ring", () => {
-  const start = SIDEBAR.indexOf('<Link');
-  const anchor = SIDEBAR.slice(SIDEBAR.indexOf('to="/chat"'), SIDEBAR.indexOf('aria-label={t("shell.aria.home")}'));
-  assert.ok(start > 0 && anchor.length > 0, "the home Link moved: re-anchor this test rather than deleting it");
+  const start = SIDEBAR.indexOf("<Link");
+  const anchor = SIDEBAR.slice(
+    SIDEBAR.indexOf('to="/chat"'),
+    SIDEBAR.indexOf('aria-label={t("shell.aria.home")}'),
+  );
+  assert.ok(
+    start > 0 && anchor.length > 0,
+    "the home Link moved: re-anchor this test rather than deleting it",
+  );
   assert.match(anchor, /focus-visible:ring-2 focus-visible:ring-ring/);
-  assert.match(anchor, /rounded-md/, "a ring around an unrounded wordmark clips oddly");
+  assert.match(
+    anchor,
+    /rounded-md/,
+    "a ring around an unrounded wordmark clips oddly",
+  );
 });
 
 test("every collapsible sidebar section trigger draws a ring", () => {
-  const triggers = SIDEBAR.match(/<CollapsibleTrigger className="[^"]*"/g) ?? [];
-  assert.ok(triggers.length >= 4, `expected the section triggers, found ${triggers.length}`);
+  const triggers =
+    SIDEBAR.match(/<CollapsibleTrigger className="[^"]*"/g) ?? [];
+  assert.ok(
+    triggers.length >= 4,
+    `expected the section triggers, found ${triggers.length}`,
+  );
 
-  const ringless = triggers.filter((t) => !/focus-visible:ring-2 focus-visible:ring-ring/.test(t));
-  assert.deepEqual(ringless, [], "a section trigger would be a ringless tab stop again");
+  const ringless = triggers.filter(
+    (t) => !/focus-visible:ring-2 focus-visible:ring-ring/.test(t),
+  );
+  assert.deepEqual(
+    ringless,
+    [],
+    "a section trigger would be a ringless tab stop again",
+  );
 });
 
 test("the Dictate composer button draws a ring", () => {
-  const dictate = /tooltip="Dictate"[\s\S]{0,400}?className="([^"]+)"/.exec(THREAD);
-  assert.ok(dictate, "the Dictate button moved: re-anchor this test rather than deleting it");
-  assert.match(dictate[1], /focus-visible:ring-2/, "a ghost icon button only changes its border, which is not an indicator");
+  const dictate = /tooltip="Dictate"[\s\S]{0,400}?className="([^"]+)"/.exec(
+    THREAD,
+  );
+  assert.ok(
+    dictate,
+    "the Dictate button moved: re-anchor this test rather than deleting it",
+  );
+  assert.match(
+    dictate[1],
+    /focus-visible:ring-2/,
+    "a ghost icon button only changes its border, which is not an indicator",
+  );
 });
