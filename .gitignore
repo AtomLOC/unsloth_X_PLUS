@@ -291,3 +291,6 @@ telemetry/*.sqlite3-shm
 # The directory stays tracked so local Tauri builds have the resource path.
 /release-backend/*.whl
 /.build-venv/
+
+# Council evidence (screenshots, timings, panel scores) - see skills/council
+.council/

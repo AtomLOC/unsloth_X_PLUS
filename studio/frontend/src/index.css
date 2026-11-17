@@ -3770,6 +3770,20 @@ html[data-chat-font] .aui-root {
 		box-shadow: none;
 	}
 
+	/* Nav rows are the most-tabbed controls in the shell and were the one set with no keyboard
+	   ring of their own: the generic rule below only *removes* the browser outline, it never adds
+	   one, and these rows carry no focus-visible ring utility. Measured before this rule: every
+	   sidebar stop reported `outline: none` and no visible shadow, so tabbing the sidebar was
+	   invisible. Same ring as the composer pills, so the shell has exactly one keyboard ring. */
+	.sidebar-nav-btn:focus-visible {
+		outline: none;
+		box-shadow: var(--x-focus-ring);
+	}
+	/* Pointer focus (a click, or a menu handing focus back) is not keyboard focus. */
+	html[data-input-modality="pointer"] .sidebar-nav-btn:focus-visible {
+		box-shadow: none;
+	}
+
 	/* Clickable controls never show the browser's blue outline (Radix re-focuses
 	   triggers on menu close, which lights them up). Mouse focus also drops the
 	   Tailwind ring; keyboard focus (:focus-visible) keeps custom rings so the
