@@ -32,12 +32,11 @@ Why it matters: unauthenticated host-identifying data and login/bootstrap state 
 Remediation: default the pattern list to loopback + `localhost` + the Tauri origins when the variable is unset (keeping the env var as an override), rather than skipping the middleware.
 Covering test: `studio/backend/tests/test_trusted_hosts.py` (exercises the middleware, but only with the variable set).
 
-### SEC-2 — Canvas `?link=` capability carries no account binding, and leaves the account context at `OWNER` — medium
-`_canvas_link_subject` (`routes/inference.py:4404-4410`) verifies the HMAC and returns only `claims["sub"]`; the callers discard that return value (`37651`, `37687`, `37637-37660`, `37809`). No `bind_account`/`run_as` runs, so `current_account()` keeps its `OWNER` default (`utils/account_context.py:37`) and every downstream path (`_sandbox_dir_for` → `sandbox_root` → `account_path("sandbox")`, `37753-37762`, `core/inference/tools.py:11286-11300`, `utils/paths/storage_roots.py:257-287`) resolves inside the **owner** workspace.
-The media-link path does it correctly for comparison: the account id rides in the signed target (`hub/services/models/account_access.py:45-48`) and the handler re-binds it with `run_as` (`inference.py:52319-52331`; same for images `53237-53248`; library `routes/library.py:369,385,493`).
-Why it matters: once links are minted, a managed account's `<img>`/`<iframe>` canvas links resolve the wrong root, and any session id that collides serves another account's tree. It is currently latent because there is no minter at all (SEC-9).
-Remediation: mint with `media_link_target(session_id)`-style payload and bind the resolved `AccountContext` with `run_as`/`bind_account` before touching the filesystem, mirroring `get_gallery_audio_file_signed`.
-Covering test: `tests/test_canvas_link_auth.py` — but only owner-subject cases (`:90-141`), so the gap is untested.
+### SEC-2 — Canvas `?link=` capability carries no account binding, and leaves the account context at `OWNER` — **stale, closed in code**
+**Status: already remediated in `HEAD`, this entry was written against an older tree.** `_sign_canvas_link` now mints with `media_link_target(subject)` (`routes/inference.py:4399-4411`), `_canvas_link_account` returns `(subject, AccountContext)` and refuses a token whose account no longer exists (`:4413-4450`), and the dependency binds that account for the rest of the request with `bind_account(account)` at `:4454-4461`. So `current_account()` no longer sits at its `OWNER` default for a managed link.
+Evidence, run in this tree: `python -m pytest tests/test_canvas_link_auth.py -q` → **8 passed**, including `test_a_managed_accounts_link_resolves_inside_that_accounts_sandbox` (`:112-149`), which asserts the listing answers with `accounts/<id>/sandbox/chat-1` rather than the owner's root, and `test_a_link_naming_an_account_that_no_longer_exists_is_refused` (`:156`). The "no minter at all" note (SEC-9) is why the field never exercised it.
+The original text, kept for the record: `_canvas_link_subject` verified the HMAC and returned only `claims["sub"]`, callers discarded it, and every downstream path (`_sandbox_dir_for` → `sandbox_root` → `account_path("sandbox")`) resolved inside the **owner** workspace; a colliding session id would have served another account's tree.
+Lesson: re-verify an audit entry against `HEAD` before scheduling work from it — this is the second entry (after SEC-4) that had already been fixed.
 
 ### SEC-3 — Keyless `full` scope is a per-host, not per-user, boundary — medium
 With `keyless_api_access_scope=full` any caller that reaches the port over loopback, addressing it by literal/`localhost`, with no `Origin`, no cross-site `Sec-Fetch-Site` and a direct `Host`, authenticates as the installation owner for **every** route (`utils/keyless_api_access.py:228-241`, `443-464`, `600-629`) — including `POST /api/shutdown`, model deletion (`routes/models.py:5745`) and `/api/settings/remote-access/start` (`settings.py:4260`). There is no OS-user check: a second local user, or any local process, is owner-equivalent while the setting is on.
@@ -84,7 +83,9 @@ Why it matters: the documented header-less path (`<img>`, `<iframe>`, native sav
 Remediation: expose the mint (e.g. return `link` alongside a sandbox listing) and add the managed-account case to `tests/test_canvas_link_auth.py`.
 Covering test: `tests/test_canvas_link_auth.py` (mints by calling the private helper directly).
 
-Findings by severity: **critical 0, high 0, medium 3 (SEC-1, SEC-2, SEC-3), low 6 (SEC-4…SEC-9). Total 9.**
+Findings by severity as first written: critical 0, high 0, medium 3 (SEC-1, SEC-2, SEC-3), low 6 (SEC-4…SEC-9). Total 9.
+
+Status after re-verifying each entry against `HEAD`: **SEC-2 and SEC-4 were already fixed in code** (both entries are kept for the record with a status line). SEC-3 is closed as documented: the setting now states its per-machine boundary (`keyless-api-access-section.tsx`, tested). Still open: **SEC-1** (medium), **SEC-6** (owner check on one sibling route), SEC-5 and SEC-7…SEC-9 (low).
 
 ## Verified safe
 
