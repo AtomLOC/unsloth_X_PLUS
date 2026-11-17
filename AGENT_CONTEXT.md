@@ -152,23 +152,33 @@ Citations I verified myself (council step 5):
 - ⚠️ The reviewer's "11 of 14 tab stops show no ring" is partly a probe artifact: composer buttons do
   get a 1 px `--ring` shadow. The real, narrower defect is the nav rows + the missing outline fallback.
 
-### Round 2 (evidence `.council/round-1/` screenshots + `.council/round-2/` measurements)
+### Round 2 — closed at median **37/50** (was 33)
 
 | reviewer | model | C | Load | Hier | States | A11y | Total |
 |---|---|---|---|---|---|---|---|
-| 2 | `deepseek-v4.1-flash` | 7 | 7 | 8 | 7 | 7 | **36/50** |
 | 1 | `mimo-2.6-flash` | 7 | 7 | 7 | 8 | 8 | **37/50** |
-| 3 | `glm-5.3-flash` | — | — | — | — | — | running |
+| 2 | `deepseek-v4.1-flash` | 7 | 7 | 8 | 7 | 7 | **36/50** |
+| 3 | `glm-5.3-flash` | 8 | 9 | 8 | 8 | 9 | **42/50** |
 
-Round 2 so far: 37 and 36 against 33 and 32 in round 1 — every dimension that was challenged moved or held, and A11y made the largest jump (5-7 → 8). Both reviewers verified the six fixes in source.
+Median total **37**; per-dimension medians C7 · L7 · H8 · S8 · A8 (sum 38 — quote the median total, not
+the sum). Every reviewer verified the six fixes in source. A11y is the big mover (round-1 range 5-7 →
+7-9), Consistency 6 → 8 at best. Threshold is 47 with no dimension below 8, so the round is **not met**.
 
-Reviewer 2 moved 32 → 36 and verified all six fixes in source. Its method challenge ("14/14 is not
-evidence: the probe counts transparent zero-width shadows") was **correct** and is what produced the
-corrected ring method above; its conclusion (rings invisible) was not — the recorded shadow values show a
-real 2px ring on every stop. Five of six fixes it checked are shipped; the sixth (sidebar inset) it also
-flagged and is now fixed.
+Claims checked, and what happened to them:
+- ✅ Reviewer 2's **method challenge** was right: the first ring probe counted decorative shadows, the
+  second checked blur instead of spread, and both read computed style before the ring's transition
+  finished. Corrected method → `.council/round-2/rings-and-insets.json`, **13 of 13** with the shadow
+  value recorded per stop.
+- ✅ Reviewer 2's and reviewer 1's **sidebar inset** claim was right and is fixed (912 → 888).
+- ❌ Reviewer 1's "0.0272 of 0.0342 CLS is that pill row" is **invented**: `timings.json` has no
+  attribution field at all. Do not act on CLS attribution claims from that file.
+- ⚠️ Reviewer 3's "hub detail table clips its last column": the markdown table scroller already has
+  `overflow-x: auto` (`.aui-md-table-scroll`), so a static screenshot cannot distinguish clipped from
+  scrollable. Verify in the DOM before changing CSS.
+- ⚠️ Reviewer 3's "skeleton loads announce nothing": plausible and unfixed; needs an `aria-live`/`role="status"`
+  on the loading region, and a test that pins it.
 
-### Round 1 fixes
+### Round 1 fixes### Round 1 fixes
 
 | # | Fix | Status | Evidence |
 |---|---|---|---|
@@ -207,14 +217,16 @@ flagged and is now fixed.
 
 ## Next best action
 
-1. **Re-convene round 2** on the current build with five fixes shipped (ring 14/14, slider names, select
-   label, poll backoff, PATH memo). Dispatch reviewers **one at a time**: the account caps concurrent
-   children at 2 and a third dispatch fails with `orchestration_error`. Reviewer 1 is the flaky one
-   (mimo needed 5 dispatches) — start it first, and pass `target` explicitly, since omitting it inherits
-   the parent model and silently duplicates another reviewer.
-2. Then the queued Train sub-nav pill (fix 7) and the sidebar-inset measurement above.
-3. **Full frontend suite does not finish in 30 min** (timed out); use the documented subsets as the gate
-   and say which was run: `node --experimental-strip-types --test tests/<file>...`.
+1. **Round 3**: the shipped set since round 2 is sidebar inset + stale-test repair + formatting, so re-score
+   only after one more behavioural fix. Best candidates, in order of evidence: (a) announce loading regions
+   (`aria-live`) on the hub/library skeletons — reviewer 3's only unfixed States item; (b) the hub detail
+   table, *after* checking in the DOM whether it scrolls; (c) the Train pill row height, *after* measuring
+   real CLS attribution (`PerformanceObserver` + `LayoutShift.sources`), never from `timings.json`.
+2. Dispatch reviewers **one or two at a time** (account caps at 2 children); always pass `target`
+   explicitly — omitting it inherits the parent model and silently duplicates a reviewer, which happened
+   once and had to be cancelled.
+3. Re-measure the API workload (`bench_api.py`) **only on an idle host**: the 15-reviewer-session earlier
+   showed reviewer children move the median by ~2x. Say so if a number was taken while a child ran.
 
 ## Log — append only, newest last
 
