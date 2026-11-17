@@ -35,6 +35,18 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   navigated `/login` → screen and counted the auth-shell → app-shell swap. Cold `/chat` is CLS 0.0019;
   the in-app numbers are library 0.007, hub 0.0694, train 0.0342. All are under the 0.1 "good" line, and
   the earlier "d-hub 0.064" was the harness. Do not re-open the hub-skeleton fix on that number.
+- 2026-11-17 — **The two red tests in `test_chat_load_during_training.py` are environmental, not logic.**
+  `test_extra_args_drafter_is_charged_once_when_it_is_the_local_sidecar` and
+  `test_native_drafter_accept_applies_the_lease_before_the_scan_reads` both die on
+  `OSError: [WinError 1314] A required privilege is not held by the client` when they `symlink` a GGUF
+  into a temp dir — the same class as the documented `test_account_lifecycle` failure. They fail on
+  `HEAD` with the fix stashed, so they are not a product defect and not a gate regression: on Windows
+  without Developer Mode / SeCreateSymbolicLinkPrivilege, `.symlink_to` cannot work. Do not "fix" them
+  by rewriting the copy step; enable the privilege or mark them skipif-not-privileged if they should go green.
+- 2026-11-17 — **Headless Edge and the council server are shut down on request.** Killed every
+  `msedge.exe` whose command line contains `edge-council` (0 left; the 9 surviving `msedge.exe` are the
+  user's own windows and were not touched) and the `run.py --port 5099/5100` tree (PID 11792). Ports
+  5100 and 9222 are free. Any later UI round must relaunch both; do not assume a server is up.
 - 2026-11-17 — **Radii migration deferred again**: 10 px is the dominant value (57 uses) and tests pin
   `rounded-[10px]` literally, so collapsing onto the token scale is a product-wide visual decision, not a
   cleanup. Recorded as deferred with the counts.
@@ -142,7 +154,8 @@ Citations I verified myself (council step 5):
 1. **Finish the panel**: reviewer 1 (`mimo-2.6-flash`) is still running; when it lands, aggregate the
    median of three and close round 1.
 2. Re-convene round 2 on the corrected evidence (`.council/round-2/timings.json`, method recorded) with
-   three fixes shipped, and see whether A11y moves off 5–7.
+   three fixes shipped, and see whether A11y moves off 5–7. That needs the server and headless Edge
+   relaunched (both are down; see the critical note above) and killed again afterwards.
 3. Then the boot-chunk deep-import pass (12 call sites) and the `/api/inference/status` poll driver.
 
 ## Log — append only, newest last
