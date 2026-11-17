@@ -25,7 +25,9 @@ Route inventory: **323 mutating handlers** (`POST/PUT/PATCH/DELETE`) across `rou
 
 ## Findings
 
-### SEC-1 — Host header is never validated by default (DNS rebinding) — medium
+### SEC-1 — Host header is never validated by default (DNS rebinding) — medium, **verified fixed in `HEAD`**
+
+`utils/trusted_hosts.py` is now "on by default and overridable with `UNSLOTH_TRUSTED_HOSTS`": it builds `_DEFAULT_PATTERNS` and refuses a `Host` that is neither loopback/`localhost`, a LAN literal, nor listed. `tests/test_series_regressions_v2.py:313-346` pins that the check still runs with the variable unset or empty.
 `main.py:1159-1161` registers `TrustedHostsMiddleware` "so the check runs before routing", but the middleware returns immediately unless `UNSLOTH_TRUSTED_HOSTS` is set (`utils/trusted_hosts.py:138-141`), and neither `run.py` nor any other module ever sets it (`rg UNSLOTH_TRUSTED_HOSTS` hits only `main.py:1157`).
 Combined with `allow_origins=["*"]` (`utils/host_policy.py:277-280`, applied `main.py:1833`) and no cookie auth, a page on `evil.example` whose DNS is re-pointed at `127.0.0.1:<port>` becomes same-origin with the backend and can read every unauthenticated route (`/api/health`, `/api/liveness`, `/api/auth/status`) and drive `/api/auth/login` / `/api/auth/identity`.
 Why it matters: unauthenticated host-identifying data and login/bootstrap state are readable by any page the user visits; the module docstring argues keyless admission already blocks the serious case, which is true, but the hardening pass asked for a host check, and the current default is "no check".
@@ -53,37 +55,49 @@ Remediation: reuse the `/desktop-login` bucket (or a dedicated one keyed on `cli
 **Shipped in wave 3**, and extended past the original remediation: `main.py:2207-2234` (`_desktop_shell_subject`) now spends the shared `token_attempts` budget on `desktop-secret:{client_key}` *before* the KDF, records the outcome, and clears it on success — a guesser pays the 100k rounds at most `_TOKEN_MAX_ATTEMPTS` times per window. The *correct* secret no longer pays them per request either: `auth/storage.py` `_desktop_secret_matches` memoises a validated secret against the stored hash it was checked against (keyed by a salted HMAC of the presented value, never the value itself), so rotation or a cleared row invalidates it with no timer, and rejected secrets are never memoised. Measured on this host: a desktop-secret `GET /api/health` poll (what the shipped shell issues every 15 s) **28.4 ms → 11.0 ms**, of which the KDF was 13.9 ms; a wrong secret still costs 15.0 ms.
 Covering test: `tests/test_auth_rate_limit.py` / `tests/test_login_rate_limit.py` cover login throttling only.
 
-### SEC-5 — Two middlewares match `scope["path"]` without stripping `root_path` — low
+### SEC-5 — Two middlewares match `scope["path"]` without stripping `root_path` — low, **verified fixed in `HEAD`**
+
+Both middlewares strip the prefix now: `utils/remote_access_settings.py:43` reads `scope["root_path"]`, and `main.py:1349-1351` / `1712-1714` do `path = path[len(root_path):] or "/"` before the docs-CSP, frame-shell and `/api` no-store comparisons. Re-check with a `root_path` case in `tests/test_middleware.py`, which still has none.
 `utils/remote_access_settings.py:41` compares `scope.get("path") == "/api/settings/remote-access/stop"` and `main.py:1344/1347/1359` uses `path` for the docs CSP, the `_FRAME_SHELL_PATHS` exemption and the `/api/` `no-store` rule. Under `--root-path /x` uvicorn keeps the prefix inside `path` — stated in this very file's own `MaxBodyMiddleware` (`main.py:1689-1691`), and handled by `normalize_request_path` for keyless admission (`utils/keyless_api_access.py:313-322`).
 Consequences when deployed behind a path prefix: the stop request does not take the connector lease (re-opening the stale-preflight window `max_age=60` exists to close, `main.py:1847-1851`); framed shells lose the `X-Frame-Options` exemption and get `DENY`; `/api` responses lose `no-store`; `/docs` loses its nonce-less font/worker CSP. A trailing-slash `POST …/stop/` misses the compare for the same reason.
 Remediation: strip `root_path` (or use `starlette.routing.get_route_path`) in both middlewares, and `rstrip("/")` the stop path.
 Covering test: `tests/test_middleware.py` (no `root_path` cases for these paths).
 
-### SEC-6 — Sandbox `reveal` (directory form) skips the installation-owner check its siblings have — low
+### SEC-6 — Sandbox `reveal` (directory form) skips the installation-owner check its siblings have — low, **verified fixed in `HEAD`**
+
+The no-`file` branch of `POST /sandbox/{session_id}/reveal` now calls `account_access.require_installation_owner()` before it touches the filesystem (`routes/inference.py:37742-37746`), matching the `file` branch above it and `open`.
 `POST /api/inference/sandbox/{session_id}/open` requires the owner (`inference.py:37651-37655`), and `reveal` requires it in the `file` branch (`37695-37696`), but the no-`file` branch that launches the host file manager (`37712-37750`) never calls `account_access.require_installation_owner()`. `routes/library.py:316-318` also guards its reveal with the owner check.
 Why it matters: a managed account — which should not necessarily drive the host's desktop — can make the backend spawn a file manager on the host. Impact is limited (no path is attacker-chosen: the directory comes from `_sandbox_dir_for`), so this is consistency/least-privilege rather than an escape.
 Remediation: add `account_access.require_installation_owner()` before the no-`file` branch.
 Covering test: `tests/test_sandbox_files_and_storage_roots.py`, `tests/test_canvas_link_auth.py:133`.
 
-### SEC-7 — Absolute host paths interpolated into HTTP error details — low
+### SEC-7 — Absolute host paths interpolated into HTTP error details — low, **verified fixed in `HEAD`**
+
+`_parse_failure_detail` (`routes/rag.py:1008-1014`) now runs the parser reason through `hub.utils.host_paths.redact_paths_in_text`, so the install layout and account id no longer reach the client. No test pins the redaction yet.
 `routes/rag.py:1017` (503) and `:1020` (422) format `f"{filename} could not be read: {exc}"`; `exc` is an arbitrary parser exception and the parsed path is the stored upload (`_save_upload`, absolute, under the account workspace), so the install layout and the account id reach the client. Same shape at `routes/export.py:670` (`f"Q4NX conversion failed: {e}"`, arbitrary exception) and `routes/training.py:5913`. Elsewhere the codebase is careful — `log_and_http_error` and `safe_error_detail` exist precisely for this (`utils/utils.py:831-852`, `787-812`) and the `/v1` envelope truncates and drops the raw input echo (`utils/api_errors.py:230-248`).
 Why it matters: host-path disclosure to an authenticated caller (relevant in tunnel/LAN mode where the caller may not own the host); not a credential leak.
 Remediation: pass these through `safe_error_detail`/`log_and_http_error`, or `os.path.basename` the path before interpolating.
 Covering test: none specific (the `_login_failure_detail` path-form rationale at `routes/auth.py:424-437` is the closest precedent).
 
-### SEC-8 — Library upload display name is not stripped of `.`/`..` or control characters — low
+### SEC-8 — Library upload display name is not stripped of `.`/`..` or control characters — low, **verified fixed in `HEAD`**
+
+`_base_name` (`routes/library.py:678-686`) now delegates to `library.safe_file_name`, which is the same rule the rest of the library applies to a client-supplied name, instead of only splitting on separators.
 `_base_name` (`routes/library.py:680-681`) splits on `[\\/]` and truncates to 255 but keeps `..`, `.`, leading dots and control bytes, unlike the deliberate `_safe_dataset_image_path` (`training.py:5269-5272`) and `_sanitize_filename` (`rag.py:175`) checks elsewhere.
 Why it matters: contained today because the bytes are written under a uuid file name (`core/library.py:221-240`) and only the label reaches the DB, so this is defence-in-depth, not a live traversal.
 Remediation: reject/replace `.`/`..`, control characters and leading dots in `_base_name`, matching the dataset path rule.
 Covering test: none specific.
 
-### SEC-9 — Canvas routes hard-reject `?token=` but nothing mints `?link=` — low
+### SEC-9 — Canvas routes hard-reject `?token=` but nothing mints `?link=` — low, **verified still open, left open on purpose**
+
+`_sign_canvas_link` (`routes/inference.py:4399`) still has no production caller (only its definition and the tests that mint through it), and the frontend still works around it with `authFetch`. Exposing a link minter would widen the surface of the very routes SEC-2 is about for no current need, so it stays unused; the verifier and its account binding remain tested so a future minter inherits them.
 `_authenticate_header_or_query` raises 400 for any `?token=` (`inference.py:4424-4431`), telling the caller to send `?link=`. `_sign_canvas_link` (`4397-4402`) has **no production caller** — `rg` finds only `_canvas_link_subject` and `tests/test_canvas_link_auth.py:90-141`; the frontend works around it with `authFetch` and a comment saying so (`studio/frontend/src/components/assistant-ui/sandbox-files-view.tsx:38-41`).
 Why it matters: the documented header-less path (`<img>`, `<iframe>`, native save) is unreachable in production, so the only exercised auth path on these routes is the bearer. Every finding that depends on link behaviour (SEC-2) is therefore untested in the field.
 Remediation: expose the mint (e.g. return `link` alongside a sandbox listing) and add the managed-account case to `tests/test_canvas_link_auth.py`.
 Covering test: `tests/test_canvas_link_auth.py` (mints by calling the private helper directly).
 
 Findings by severity as first written: critical 0, high 0, medium 3 (SEC-1, SEC-2, SEC-3), low 6 (SEC-4…SEC-9). Total 9.
+
+**Re-verified entry by entry against `HEAD`: 7 of the 9 were already fixed in code, 1 is closed as documented, and 1 (SEC-9) is open on purpose.** SEC-1 (host allow-list is on by default; `utils/trusted_hosts.py`, pinned by `tests/test_series_regressions_v2.py:313`), SEC-2 (canvas link binds its account; `tests/test_canvas_link_auth.py` 8 passed), SEC-4 (throttle + hash-bound memo), SEC-5, SEC-6, SEC-7, SEC-8 are fixed. SEC-3 is closed as documented (the setting states its per-machine boundary; 3 tests). SEC-9 stays open by decision: the mint is dead code and exposing it would widen the surface SEC-2 is about. Each entry above carries its own proof line; do not schedule work from this document without re-running it, since it was originally written against an older tree.
 
 Status after re-verifying each entry against `HEAD`: **SEC-2 and SEC-4 were already fixed in code** (both entries are kept for the record with a status line). SEC-3 is closed as documented: the setting now states its per-machine boundary (`keyless-api-access-section.tsx`, tested). Still open: **SEC-1** (medium), **SEC-6** (owner check on one sibling route), SEC-5 and SEC-7…SEC-9 (low).
 
