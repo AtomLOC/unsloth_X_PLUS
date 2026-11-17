@@ -8,6 +8,7 @@ import {
 } from "../lib/cache-miss-download";
 import { mlxRuntimeStateFrom } from "../lib/mlx-runtime-state";
 import { shouldRestorePreviousModel } from "../lib/restore-previous-model";
+import { serverModelPollDelayMs } from "../lib/server-model-poll-backoff";
 import {
   type ServerTuningValues,
   clearedServerTuningState,
@@ -391,6 +392,7 @@ const CLI_LOAD_POLL_MAX_MS = 600_000;
 async function waitForServerModel(signal?: AbortSignal): Promise<void> {
   const started = Date.now();
   let sawLoad = false;
+  let pollsTaken = 0;
 
   while (
     !signal?.aborted &&
@@ -428,7 +430,8 @@ async function waitForServerModel(signal?: AbortSignal): Promise<void> {
     const elapsed = Date.now() - started;
     if (!sawLoad && elapsed >= CLI_LOAD_POLL_IDLE_MS) return;
     if (elapsed >= CLI_LOAD_POLL_MAX_MS) return;
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    pollsTaken += 1;
+    await new Promise((resolve) => setTimeout(resolve, serverModelPollDelayMs(pollsTaken - 1, sawLoad)));
   }
 }
 
