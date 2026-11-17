@@ -70,6 +70,10 @@ The authoritative Argon ledger for `UnslothX-`. Two Argon loops run under `C:/Pr
   cleanup. Recorded as deferred with the counts.
 - 2026-11-17 — **Desktop-secret memo is bound to the stored hash**, not a TTL: rotation and clearing
   invalidate by construction; rejections are never cached so a guesser still pays the KDF.
+- 2026-11-17 — **Frontend gate after the CSS work: 351 of 353 pass.** The 2 failures are
+  `audio-sidebar-workflows.test.ts` (its `MediaMoreSubmenu` source regex no longer matches
+  `app-sidebar.tsx`), and they fail identically with `app-sidebar.tsx` restored from before this
+  session's edit, so they are pre-existing drift, not a regression.
 - 2026-11-17 — Council evidence lives in `.council/round-<n>/` and is **gitignored**.
 
 ## Perf ledger
@@ -153,8 +157,10 @@ Citations I verified myself (council step 5):
 | reviewer | model | C | Load | Hier | States | A11y | Total |
 |---|---|---|---|---|---|---|---|
 | 2 | `deepseek-v4.1-flash` | 7 | 7 | 8 | 7 | 7 | **36/50** |
-| 1 | `mimo-2.6-flash` | — | — | — | — | — | running |
+| 1 | `mimo-2.6-flash` | 7 | 7 | 7 | 8 | 8 | **37/50** |
 | 3 | `glm-5.3-flash` | — | — | — | — | — | running |
+
+Round 2 so far: 37 and 36 against 33 and 32 in round 1 — every dimension that was challenged moved or held, and A11y made the largest jump (5-7 → 8). Both reviewers verified the six fixes in source.
 
 Reviewer 2 moved 32 → 36 and verified all six fixes in source. Its method challenge ("14/14 is not
 evidence: the probe counts transparent zero-width shadows") was **correct** and is what produced the
