@@ -6652,8 +6652,13 @@ html[data-find-bar-open] [data-sonner-toaster][data-y-position="top"] {
 	   inside the width the provider reserved, instead of overhanging it. */
 	.dark [data-sidebar="sidebar"] {
 		margin: 12px;
-		width: calc(100% - 24px);
-		height: calc(100% - 24px);
+		/* The sidebar's own `size-full` utility sets width/height to 100%, and utilities outrank this
+		   components layer, so the panel was 100% tall PLUS a 12px top margin: measured bottom 820 on
+		   an 808 viewport, i.e. 12px past the window edge, while the content panel stopped at 796.
+		   !important is what makes the inset actually apply; it is already the convention in this
+		   file (the nav hover colours above). */
+		width: calc(100% - 24px) !important;
+		height: calc(100% - 24px) !important;
 		border-radius: 20px;
 		border: 1px solid var(--x-glass-line);
 		background: var(--x-glass-raised);
