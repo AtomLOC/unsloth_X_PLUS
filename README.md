@@ -1,18 +1,51 @@
-# <img src="images/logo-x-plus-icon.svg" width="46" align="middle" alt="" /> Unsloth X+
+# Unsloth X+
 
-A fork of [Unsloth](https://github.com/unslothai/unsloth) that keeps the Studio exactly as upstream
-ships it and pushes on what runs **under** it: a run can train on a CPU, an integrated GPU or an NPU
-as well as a discrete card, and the extra engines (adapter merge/surgery, arch swap, automated
-training, lineage) are working code with tests rather than a preview.
+<img src="images/logo-x-plus-icon.svg" width="90" align="right" alt="" />
 
-> **Branch:** `x+-main`, where this fork is developed. `main` mirrors the imported upstream tree.
-> **Synced to:** upstream `main` at `8c5ca83271` (19 Nov 2026).
-> **Releases:** [v1.0.0 … v1.5.0](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb)
+[![Kaggle](https://img.shields.io/badge/Kaggle-free_T4_%C3%97_2-20BEFF?logo=kaggle&logoColor=white)](review/kaggle/README.md)
+[![Release](https://img.shields.io/github/v/release/AtomLOC/unsloth_X_PLUS?label=release)](https://github.com/AtomLOC/unsloth_X_PLUS/releases)
+[![Upstream](https://img.shields.io/badge/upstream-8c5ca8327-brightgreen)](https://github.com/unslothai/unsloth/commit/8c5ca8327)
+[![License](https://img.shields.io/badge/license-Apache--2.0_%2B_AGPL--3.0_%2B_NRC--3-blue)](LICENSE-NRC-3.md)
 
-The Studio front end in `studio/frontend` is **upstream's, unmodified**. The X+ work is backend:
-device selection, the training worker, the Labs engines and the installers. If you are looking for
-the blue / glass reskin of earlier fork releases, it is gone on purpose — this fork now looks and
-behaves like Unsloth.
+**A fork of [Unsloth](https://github.com/unslothai/unsloth) that runs the Studio exactly as upstream ships it, and does its own work underneath:** a training run can use a CPU, an integrated GPU or an NPU instead of only a discrete card, export works with no accelerator at all, and the extra engines — adapter merge, model surgery, architecture swap, automated training, lineage — are modules with tests, not a preview.
+
+The front end in `studio/frontend` is upstream's tree, byte for byte. There is no reskin, no fork-only page, no renamed icon. If you want Unsloth's interface, this is it; what differs is what happens when you press Train.
+
+| | |
+| --- | --- |
+| **Branch** | `x+-main` (default). `main` mirrors the imported upstream tree. |
+| **Synced to** | upstream `main` at [`8c5ca8327`](https://github.com/unslothai/unsloth/commit/8c5ca8327) — 19 Nov 2026 |
+| **Repository** | [`AtomLOC/unsloth_X_PLUS`](https://github.com/AtomLOC/unsloth_X_PLUS) |
+| **Latest release** | [`v1.0.0`](https://github.com/AtomLOC/unsloth_X_PLUS/releases/tag/v1.0.0) — source only, see [Releases](#releases) |
+
+---
+
+## Run it without installing anything
+
+Both of these start the real Studio on a free cloud GPU. Nothing is pre-built or mocked; the notebook clones this branch, installs it from source and serves the app.
+
+### Google Colab — free T4
+
+| Notebook | What it does | Open |
+| --- | --- | --- |
+| **Studio on Colab** (recommended) | Clones `x+-main`, runs `studio/setup.sh --local`, starts the backend on port 8888, prints a shareable `https://` Cloudflare link you can open on your phone | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb) |
+| **Minimal notebook** | One clone cell, one `start()` cell — the shortest path to a running Studio | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_Colab.ipynb) |
+
+Before you run it: **Runtime → Change runtime type → T4 GPU**. The free tier is enough for the Studio, a 1B QLoRA run and merges. The first cell checks the GPU; the install cell builds the frontend and takes a few minutes; the start cell prints the link and the admin password. Log in as `unsloth`.
+
+What is verified about the Colab path, and what is not: the notebooks clone `x+-main` from this repository over plain HTTPS (public, no token needed, `git ls-remote` returns `6a4a09e9e`), every code cell parses, `colab.start(port=8888, cloudflare=True)` matches the signature in `studio/backend/colab.py`, `studio/setup.sh --local` exists and honours the `UNSLOTH_SKIP_WHISPER_INSTALL` / `UNSLOTH_SKIP_AUDIO_CPP_INSTALL` flags the notebook sets, and the Hub probe cell calls `core.advanced.merge.hf_repo_id` / `probe_model_spec`, which exist. The full install and the tunnel were **not** executed here — this fork's sync was verified on a local Windows host, so treat a first Colab run as the real test. If the link card stays empty, the cell prints why (almost always the `cloudflared` binary failing to download).
+
+### Kaggle — ~30 GPU hours a week
+
+Colab's free quota is unpublished and is not topped up when it runs out. Kaggle Notebooks give roughly **30 GPU hours a week** on T4 × 2 or P100 with 12-hour sessions, phone verification required, internet toggled on.
+
+| Script | What it proves | Where |
+| --- | --- | --- |
+| `review/kaggle/run.py` | Clones `x+-main`, installs it with the repo's own installer, runs the backend tests for the X+ features, then does a real 4-bit QLoRA fine-tune of Llama-3.2-1B (20 steps, separate eval split, adapter saved and reloaded) and walks a streaming dataset through `.map()` | [`review/kaggle/run.py`](review/kaggle/run.py) |
+| Instructions | Copy-paste route, `kaggle kernels push` route, and what each line means | [`review/kaggle/README.md`](review/kaggle/README.md) |
+
+There is no published Kaggle kernel URL yet — publishing one is a Kaggle account action, not a repository one — so the workflow is: **Create → Notebook → File → Import Notebook → upload or paste `run.py`**, set *Accelerator = GPU T4 × 2* and *Internet = On*, then **Run all**. Expect ~15–25 minutes for the install and ~5 for the training; the verdict is written to `/kaggle/working/result.txt` so it survives the log view.
 
 ---
 
@@ -20,48 +53,47 @@ behaves like Unsloth.
 
 | Area | What this fork adds |
 | --- | --- |
-| **Device selection** | `UNSLOTH_TRAINING_DEVICE` (`cpu`, `igpu`, `npu`, `cuda`, `xpu`, `hip`, `mps`), a device registry with per-device capabilities (`core.training.device_targets`), and a compute-target contract carried into the worker (`core.training.compute_target_env`) |
-| **CPU training** | A CPU recipe (CoRA/QLoRA) that runs stock transformers + PEFT, with fp32/bf16 selection from the RAM actually left on the host |
-| **Integrated GPUs** | Intel XPU and AMD iGPU paths, an iGPU-safe optimizer, and 4-bit refused (not silently slow) where bitsandbytes has no kernel |
-| **NPUs** | Vendor detection for AMD XDNA 2 / Intel / Qualcomm / Apple, FLM runtime readiness, an NPU assist path and a Q4NX export for FastFlowLM |
-| **CPU export** | Merged model / adapter / GGUF export through the same code with no accelerator present (`core.export.cpu_export`) |
+| **Device selection** | `UNSLOTH_TRAINING_DEVICE` (`cpu`, `igpu`, `npu`, `cuda`, `xpu`, `hip`, `mps`), a capability registry in `core/training/device_targets.py`, and a compute-target contract carried into the worker by `compute_target_env.py` |
+| **CPU training** | A CPU recipe (LoRA / QLoRA) on stock transformers + PEFT, fp32 or bf16 chosen from the RAM actually left on the host |
+| **Integrated GPUs** | Intel XPU and AMD iGPU paths, an iGPU-safe optimizer, and 4-bit refused outright where bitsandbytes has no kernel rather than silently slow |
+| **NPUs** | Vendor detection for AMD XDNA 2, Intel, Qualcomm and Apple, FastFlowLM readiness, an NPU-assist path, and Q4NX export for FastFlowLM |
+| **CPU export** | Merged model, PEFT adapter and GGUF export with no accelerator present (`core/export/cpu_export.py`); only the accelerator-only formats (4-bit bnb merges, compressed tensors, torchao) stay unavailable |
 | **Labs** | Working engines: adapter merge, model surgery, architecture swap, automated training, lineage, run diff, benchmarks |
-| **Runs** | Parent-loss early-stop guard, dataset/tokenizer fingerprints that a resume is checked against, disk preflight, run manifests |
-| **Telemetry** | An opt-in collector and operator console in `telemetry/` (off unless enabled in Settings) |
-| **Installers** | Per-flavour desktop builds (`cpu`, `cpu-npu`, `gpu`, `cpu-gpu`) that pin the runtime they were built as |
+| **Runs** | Parent-loss early-stop guard, dataset and tokenizer fingerprints a resume is checked against, disk preflight, run manifests |
+| **Telemetry** | An opt-in collector with an operator console under `telemetry/` — off until enabled in Settings |
+| **Installers** | Per-flavour desktop builds (`cpu`, `cpu-gpu`, `gpu`, `cpu-npu`) that pin the runtime they were built as |
 
-The training fork's backend wheel carries a PEP 440 local segment (`unsloth==2026.11.7+xplus.1`) so an
-index can never satisfy it with the upstream package of the same base version. `GET /api/health`
-reports `backend_build_kind` (`xplus` / `upstream` / `dev`) so a mixed install is visible instead of
-guessed at.
+The backend wheel carries a PEP 440 local segment — `unsloth==2026.11.7+xplus.1` — so no index can satisfy a fork install with the upstream package of the same base version. `GET /api/health` reports `backend_build_kind` (`xplus`, `upstream`, `dev`), so a mixed install is visible rather than guessed at.
 
 ---
 
-## Install this fork
+## Install
+
+### From this repository
 
 ```bash
-# macOS, Linux, WSL
-curl -fsSL https://raw.githubusercontent.com/Goldodemon-Automation/unsloth_X_PLUS/x+-main/install.sh | sh
-
-# Windows (PowerShell)
-irm https://raw.githubusercontent.com/Goldodemon-Automation/unsloth_X_PLUS/x+-main/install.ps1 | iex
-```
-
-The desktop installers are built and signed by
-[`.github/workflows/release-x-plus.yml`](.github/workflows/release-x-plus.yml); release notes are in
-[docs/releases/](docs/releases/).
-
-To run the Studio from a checkout:
-
-```bash
-git clone -b x+-main https://github.com/Goldodemon-Automation/unsloth_X_PLUS.git
+git clone -b x+-main https://github.com/AtomLOC/unsloth_X_PLUS.git
 cd unsloth_X_PLUS
-./studio/setup.sh --local        # Windows: .\studio\setup.ps1 -Local
+./studio/setup.sh --local          # Windows: .\studio\setup.ps1 -Local
 ```
 
-Everything else — what the Studio does, the model catalogue, the API, remote access, the notebooks,
-the desktop downloads upstream ships — is upstream's product and is documented below exactly as
-upstream documents it.
+`--local` installs `unsloth` editable from the checkout instead of the PyPI wheel, which is what makes the fork's engines reachable. `studio/setup.sh` also fetches llama.cpp and the prebuilt helpers unless you skip them with `UNSLOTH_SKIP_WHISPER_INSTALL=1` / `UNSLOTH_SKIP_AUDIO_CPP_INSTALL=1`.
+
+### With the installer
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/x+-main/install.sh | sh
+```
+
+```powershell
+irm https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/x+-main/install.ps1 | iex
+```
+
+The desktop installers are produced by [`.github/workflows/release-x-plus.yml`](.github/workflows/release-x-plus.yml), which is `workflow_dispatch`-only and needs this fork's updater signing key on a Windows runner. No desktop build has been published from this repository yet, so the installers above are the script route only.
+
+### Upstream's downloads
+
+Upstream's own desktop app, Homebrew cask, winget package and Docker image install **stock Unsloth**, without any of the X+ work. They are listed at [unsloth.ai/download](https://unsloth.ai/download) — use them if you want upstream, and this repository if you want the fork.
 
 ---
 
@@ -69,21 +101,28 @@ upstream documents it.
 
 ```bash
 cd studio/frontend
-npm run typecheck    # tsc over src and tests
-npm test             # node --test over tests/**/*.test.ts
-npm run i18n:check   # locale overlay parity
+npm run typecheck      # tsc over src and tests
+npm test               # node --test over tests/**/*.test.ts
+npm run i18n:check     # locale overlay parity
 
 cd studio/backend
 python -m pytest tests -q
 ```
 
-From the repository root, `pre-commit run --all-files` runs Ruff and the repo's lint scripts. The
-fork's own suites are named where they live: `test_device_targets.py`, `test_compute_target_env.py`,
-`test_compute_route.py`, `test_npu_assist.py`, `test_cpu_tuning.py`, `test_labs_*.py`,
-`test_advanced_*.py`, and `test_backend_build_identity.py`.
+Last verified on the synced tree (Windows, no torch installed):
 
-A suite that looks mysteriously red on Windows is usually line endings: `.gitattributes` asks for LF
-under `studio/frontend/`, `core.autocrlf=true` checks out CRLF, and several tests pin exact source text.
+| Check | Result |
+| --- | --- |
+| `npm run typecheck` | clean, 2,494 + 4,184 files |
+| `npm test` | 16,803 tests — 16,792 pass, 0 fail, 11 skipped |
+| `pytest` on the touched backend suites | 180 passed, 1 skipped |
+| Python compile over every changed file | 4,858 files, 0 broken |
+
+The torch-dependent backend suites cannot be collected without torch (158 modules), so they are unverified here, as are `cargo check` for `src-tauri` and the desktop installers.
+
+The fork's own suites are named where they live: `test_device_targets.py`, `test_compute_target_env.py`, `test_compute_route.py`, `test_npu_assist.py`, `test_cpu_tuning.py`, `test_labs_*.py`, `test_advanced_*.py`, `test_backend_build_identity.py`.
+
+A suite that looks mysteriously red on Windows is usually line endings: `.gitattributes` asks for LF under `studio/frontend/`, `core.autocrlf=true` checks out CRLF, and several tests pin exact source text.
 
 ---
 
@@ -97,28 +136,20 @@ under `studio/frontend/`, `core.autocrlf=true` checks out CRLF, and several test
 | [docs/igpu.md](docs/igpu.md) | Intel iGPUs: the XPU wheel, pinning one GPU, symptom-first fixes |
 | [docs/llama-architectures.md](docs/llama-architectures.md) | The architecture picker and installer: what is verified and what a row's status means |
 | [docs/security.md](docs/security.md) | Threat model and the controls that exist |
+| [review/kaggle/README.md](review/kaggle/README.md) | Running the training stack on Kaggle, and why it exists |
 | [docs/README.md](docs/README.md) | Repository map and the local CRLF trap |
 
 ---
 
 ## Releases
 
-Tags are on `x+-main` and independent of the wheel version in `unsloth/_version.py`, which tracks
-upstream. Notes for each are in [docs/releases/](docs/releases/).
+Tags are on `x+-main` and independent of the wheel version in `unsloth/_version.py`, which tracks upstream. Notes are in [docs/releases/](docs/releases/).
 
 | Tag | Theme |
 | --- | --- |
-| [`v1.0.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.0.0) | CPU and integrated-GPU training |
-| [`v1.1.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.1.0) | NPU detection and NPU-assisted training |
-| [`v1.2.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.2.0) | Capability card and the perf layer |
-| [`v1.2.1`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.2.1) | Windowed run history |
-| [`v1.2.2`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.2.2) | The review fixes |
-| [`v1.2.3`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.2.3) | Vendor-correct NPU refusals |
-| [`v1.3.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.3.0) | Tuned CPU runs, tested device decisions |
-| [`v1.4.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.4.0) | Branding, security hardening, installers |
-| [`v1.4.1`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.4.1) | Intel detection, matching backend, opt-in telemetry |
-| [`v1.5.0`](https://github.com/Goldodemon-Automation/unsloth_X_PLUS/releases/tag/v1.5.0) | The Labs wave, disk preflight, per-flavour installers |
-| `v1.6.0` | Synced to upstream `main` at `8c5ca83271`; Studio UI is upstream's again |
+| [`v1.0.0`](https://github.com/AtomLOC/unsloth_X_PLUS/releases/tag/v1.0.0) | Synced to upstream `8c5ca8327`; stock Studio UI; `X8`/`X-` renamed to `X+`. Source only — no installer assets. |
+
+`v1.0.0` is the first release cut from this repository. The earlier fork releases (v1.0.0 through v1.5.0) belong to a sibling repository that shares this code's history before the sync; their notes are kept here for the record but their assets are not on this repository.
 
 ---
 
@@ -128,39 +159,25 @@ Three sets of terms, no overlap:
 
 - **`unsloth/`** — Apache-2.0, inherited from upstream.
 - **`studio/`** — AGPL-3.0, see [studio/LICENSE.AGPL-3.0](studio/LICENSE.AGPL-3.0).
-- **Original additions** — the Labs engines, the device/compute-target layer, the run records —
-  [NRC-3](LICENSE-NRC-3.md). Files carrying the NRC-3 header are covered; shared files keep
-  upstream's terms.
+- **Original additions** — the Labs engines, the device/compute-target layer, the run records — [NRC-3](LICENSE-NRC-3.md). Files carrying the NRC-3 header are covered; shared files keep upstream's terms.
 
-NRC-3 allows private, internal and commercial use, modification and sharing with attribution, and
-reserves five things that need written permission: relaunching the work as a rebranded product (a
-different name, logo or interface, a near-miss name, an "official" claim), running it as a hosted
-service for other people, public distribution of packaged builds at scale, folding it into something
-you sell, and stripping its notices or relicensing it. Publishing your changed source on a code host
-stays allowed. Model weights, tokenizers and datasets keep whatever license came with them.
+NRC-3 allows private, internal and commercial use, modification and sharing with attribution, and reserves five things that need written permission: relaunching the work as a rebranded product (a different name, logo or interface, a near-miss name, an "official" claim), running it as a hosted service for other people, public distribution of packaged builds at scale, folding it into something you sell, and stripping its notices or relicensing it. Publishing your changed source on a code host stays allowed. Model weights, tokenizers and datasets keep whatever license came with them.
 
-Produced checkpoints carry `LICENSE-NRC-3.txt` beside `run_manifest.json`, so a folder keeps those
-terms wherever it is copied.
+Produced checkpoints carry `LICENSE-NRC-3.txt` beside `run_manifest.json`, so a folder keeps those terms wherever it is copied.
 
 ---
 
 ## Contributing
 
-Issues and pull requests are welcome. Small fixes can go straight to a PR; for anything larger, open
-an issue with the shape you have in mind first.
+Issues and pull requests are welcome. Small fixes can go straight to a PR; for anything larger, open an issue with the shape you have in mind first.
 
-The most self-contained places to start: `studio/backend/core/labs/` (each engine is a module with its
-own tests), `studio/backend/core/advanced/` (custom eval tasks, the repair preset, adapter merging),
-and `studio/backend/core/training/device_targets.py` with `compute_target_env.py` (the device contract).
+The most self-contained places to start: `studio/backend/core/labs/` (each engine is a module with its own tests), `studio/backend/core/advanced/` (custom eval tasks, the repair preset, adapter merging), and `studio/backend/core/training/device_targets.py` with `compute_target_env.py` (the device contract).
 
 ---
 
-Everything below is upstream's README, unchanged apart from headings, and it is the reference for
-what the Studio itself does.
+## Upstream Unsloth
 
----
-
-# Unsloth — the Studio
+Everything below is upstream's own documentation of the Studio, kept intact: what it does, the model catalogue, the API, remote access, the notebooks it ships, and its advanced installation options. It describes upstream's product; the X+ differences are the tables above.
 
 ## ⚡ Get started
 Download the native Unsloth Desktop app for your operating system:
@@ -266,12 +283,6 @@ unsloth start claude --model unsloth/Qwen3.8-27B-GGUF:UD-Q4_K_XL
 | OpenCode | `unsloth start opencode` |
 | Hermes Agent | `unsloth start hermes` |
 | Pi | `unsloth start pi` |
-
-## 📒 Free Notebooks
-| Notebook | Description |
-| --- | --- |
-| [Unsloth Studio on Colab](studio/Unsloth_Studio_X_Plus_Colab.ipynb) | This fork's Studio on a free Colab T4 |
-| [Unsloth Start on Kaggle](review/kaggle/README.md) | Verify the training stack on a free Kaggle GPU |
 
 ## 📥 Advanced Installation
 

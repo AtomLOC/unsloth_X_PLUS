@@ -22,7 +22,7 @@ import subprocess
 import sys
 import time
 
-REPO_URL = "https://github.com/Goldodemon-Automation/unsloth_X_PLUS.git"
+REPO_URL = "https://github.com/AtomLOC/unsloth_X_PLUS.git"
 BRANCH = "x+-main"
 REPO = "/kaggle/working/unsloth_X"
 BACKEND = os.path.join(REPO, "studio/backend")
