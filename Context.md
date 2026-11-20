@@ -296,7 +296,7 @@ on a run that takes hours, which does not pay for either risk.
 
 The NRC-2 → NRC-3 licence rename is not part of the webhook work described here,
 but it is no longer sitting uncommitted: this session committed it as `ee59feed3`
-on `x+-main` (the Studio tree — `LICENSE-NRC-3.md`, `core/advanced/nrc_license.py`,
+on `xplus-main` (the Studio tree — `LICENSE-NRC-3.md`, `core/advanced/nrc_license.py`,
 `README.md`, `scripts/release_x_plus_local.py`, and the header-only edits across the
 labs and advanced modules, `core/training/fit.py` and the frontend labs files,
 51 files) and as `e835b40cb` on `XE-Main` (the features tree, 13 files), both
@@ -311,7 +311,7 @@ Delivered. The six paths that belong to this thread — `Context.md`,
 `studio/backend/tests/test_labs_artifacts.py` and
 `studio/backend/tests/test_advanced_resources.py` — are committed as `56ffc47cf`
 on branch `x-plus-growth-policy`, pushed to the `x8` remote, and open as PR #20
-against `x+-main` with no auto-merge:
+against `xplus-main` with no auto-merge:
 https://github.com/GoldodemonINC/unsloth_8X/pull/20
 
 Two further commits ride the same branch: `eaa37fbeb` records the `observe_progress`
@@ -441,7 +441,7 @@ rather than hidden.
 
 ## Published
 
-The series is cut and public. Tags `v1.0.0`, `v1.1.0`, `v1.2.0`, `v1.2.1` on `x+-main`, each with a
+The series is cut and public. Tags `v1.0.0`, `v1.1.0`, `v1.2.0`, `v1.2.1` on `xplus-main`, each with a
 release whose body is the matching `docs/releases/` file:
 
 - `v1.0.0` (`9dbca5622`) — compute-target registry, integrated-GPU budget, target environment,

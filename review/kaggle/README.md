@@ -13,7 +13,7 @@ time is not published.
 
 [`run.py`](run.py) is the whole test in one script:
 
-1. clones `x+-main` from `AtomLOC/unsloth_X_PLUS` (shallow) and prints the SHA,
+1. clones `xplus-main` from `AtomLOC/unsloth_X_PLUS` (shallow) and prints the SHA,
 2. installs it with the repo's own installer, `studio/setup.sh --local`, minus the
    frontend build, llama.cpp prebuilt, whisper and audio.cpp, so it is the same
    Python stack Studio uses,

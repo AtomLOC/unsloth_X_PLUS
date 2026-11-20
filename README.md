@@ -2,7 +2,7 @@
 
 <img src="images/logo-x-plus-icon.svg" width="90" align="right" alt="" />
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/xplus-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb)
 [![Kaggle](https://img.shields.io/badge/Kaggle-free_T4_%C3%97_2-20BEFF?logo=kaggle&logoColor=white)](review/kaggle/README.md)
 [![Release](https://img.shields.io/github/v/release/AtomLOC/unsloth_X_PLUS?label=release)](https://github.com/AtomLOC/unsloth_X_PLUS/releases)
 [![Upstream](https://img.shields.io/badge/upstream-8c5ca8327-brightgreen)](https://github.com/unslothai/unsloth/commit/8c5ca8327)
@@ -14,7 +14,7 @@ The front end in `studio/frontend` is upstream's tree, byte for byte. There is n
 
 | | |
 | --- | --- |
-| **Branch** | `x+-main` (default). `main` mirrors the imported upstream tree. |
+| **Branch** | `xplus-main` (default). `main` mirrors the imported upstream tree. |
 | **Synced to** | upstream `main` at [`8c5ca8327`](https://github.com/unslothai/unsloth/commit/8c5ca8327) — 19 Nov 2026 |
 | **Repository** | [`AtomLOC/unsloth_X_PLUS`](https://github.com/AtomLOC/unsloth_X_PLUS) |
 | **Latest release** | [`v1.0.0`](https://github.com/AtomLOC/unsloth_X_PLUS/releases/tag/v1.0.0) — source only, see [Releases](#releases) |
@@ -29,12 +29,12 @@ Both of these start the real Studio on a free cloud GPU. Nothing is pre-built or
 
 | Notebook | What it does | Open |
 | --- | --- | --- |
-| **Studio on Colab** (recommended) | Clones `x+-main`, runs `studio/setup.sh --local`, starts the backend on port 8888, prints a shareable `https://` Cloudflare link you can open on your phone | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb) |
-| **Minimal notebook** | One clone cell, one `start()` cell — the shortest path to a running Studio | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/x+-main/studio/Unsloth_Studio_Colab.ipynb) |
+| **Studio on Colab** (recommended) | Clones `xplus-main`, runs `studio/setup.sh --local`, starts the backend on port 8888, prints a shareable `https://` Cloudflare link you can open on your phone | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/xplus-main/studio/Unsloth_Studio_X_Plus_Colab.ipynb) |
+| **Minimal notebook** | One clone cell, one `start()` cell — the shortest path to a running Studio | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AtomLOC/unsloth_X_PLUS/blob/xplus-main/studio/Unsloth_Studio_Colab.ipynb) |
 
 Before you run it: **Runtime → Change runtime type → T4 GPU**. The free tier is enough for the Studio, a 1B QLoRA run and merges. The first cell checks the GPU; the install cell builds the frontend and takes a few minutes; the start cell prints the link and the admin password. Log in as `unsloth`.
 
-What is verified about the Colab path, and what is not: the notebooks clone `x+-main` from this repository over plain HTTPS (public, no token needed, `git ls-remote` returns `6a4a09e9e`), every code cell parses, `colab.start(port=8888, cloudflare=True)` matches the signature in `studio/backend/colab.py`, `studio/setup.sh --local` exists and honours the `UNSLOTH_SKIP_WHISPER_INSTALL` / `UNSLOTH_SKIP_AUDIO_CPP_INSTALL` flags the notebook sets, and the Hub probe cell calls `core.advanced.merge.hf_repo_id` / `probe_model_spec`, which exist. The full install and the tunnel were **not** executed here — this fork's sync was verified on a local Windows host, so treat a first Colab run as the real test. If the link card stays empty, the cell prints why (almost always the `cloudflared` binary failing to download).
+What is verified about the Colab path, and what is not: the notebooks clone `xplus-main` from this repository over plain HTTPS (public, no token needed, `git ls-remote` returns `6a4a09e9e`), every code cell parses, `colab.start(port=8888, cloudflare=True)` matches the signature in `studio/backend/colab.py`, `studio/setup.sh --local` exists and honours the `UNSLOTH_SKIP_WHISPER_INSTALL` / `UNSLOTH_SKIP_AUDIO_CPP_INSTALL` flags the notebook sets, and the Hub probe cell calls `core.advanced.merge.hf_repo_id` / `probe_model_spec`, which exist. The full install and the tunnel were **not** executed here — this fork's sync was verified on a local Windows host, so treat a first Colab run as the real test. If the link card stays empty, the cell prints why (almost always the `cloudflared` binary failing to download).
 
 ### Kaggle — ~30 GPU hours a week
 
@@ -42,7 +42,7 @@ Colab's free quota is unpublished and is not topped up when it runs out. Kaggle 
 
 | Script | What it proves | Where |
 | --- | --- | --- |
-| `review/kaggle/run.py` | Clones `x+-main`, installs it with the repo's own installer, runs the backend tests for the X+ features, then does a real 4-bit QLoRA fine-tune of Llama-3.2-1B (20 steps, separate eval split, adapter saved and reloaded) and walks a streaming dataset through `.map()` | [`review/kaggle/run.py`](review/kaggle/run.py) |
+| `review/kaggle/run.py` | Clones `xplus-main`, installs it with the repo's own installer, runs the backend tests for the X+ features, then does a real 4-bit QLoRA fine-tune of Llama-3.2-1B (20 steps, separate eval split, adapter saved and reloaded) and walks a streaming dataset through `.map()` | [`review/kaggle/run.py`](review/kaggle/run.py) |
 | Instructions | Copy-paste route, `kaggle kernels push` route, and what each line means | [`review/kaggle/README.md`](review/kaggle/README.md) |
 
 There is no published Kaggle kernel URL yet — publishing one is a Kaggle account action, not a repository one — so the workflow is: **Create → Notebook → File → Import Notebook → upload or paste `run.py`**, set *Accelerator = GPU T4 × 2* and *Internet = On*, then **Run all**. Expect ~15–25 minutes for the install and ~5 for the training; the verdict is written to `/kaggle/working/result.txt` so it survives the log view.
@@ -72,7 +72,7 @@ The backend wheel carries a PEP 440 local segment — `unsloth==2026.11.7+xplus.
 ### From this repository
 
 ```bash
-git clone -b x+-main https://github.com/AtomLOC/unsloth_X_PLUS.git
+git clone -b xplus-main https://github.com/AtomLOC/unsloth_X_PLUS.git
 cd unsloth_X_PLUS
 ./studio/setup.sh --local          # Windows: .\studio\setup.ps1 -Local
 ```
@@ -82,11 +82,11 @@ cd unsloth_X_PLUS
 ### With the installer
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/x+-main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/xplus-main/install.sh | sh
 ```
 
 ```powershell
-irm https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/x+-main/install.ps1 | iex
+irm https://raw.githubusercontent.com/AtomLOC/unsloth_X_PLUS/xplus-main/install.ps1 | iex
 ```
 
 The desktop installers are produced by [`.github/workflows/release-x-plus.yml`](.github/workflows/release-x-plus.yml), which is `workflow_dispatch`-only and needs this fork's updater signing key on a Windows runner. No desktop build has been published from this repository yet, so the installers above are the script route only.
@@ -143,7 +143,7 @@ A suite that looks mysteriously red on Windows is usually line endings: `.gitatt
 
 ## Releases
 
-Tags are on `x+-main` and independent of the wheel version in `unsloth/_version.py`, which tracks upstream. Notes are in [docs/releases/](docs/releases/).
+Tags are on `xplus-main` and independent of the wheel version in `unsloth/_version.py`, which tracks upstream. Notes are in [docs/releases/](docs/releases/).
 
 | Tag | Theme |
 | --- | --- |

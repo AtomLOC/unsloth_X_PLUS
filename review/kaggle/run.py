@@ -2,7 +2,7 @@
 
 Kaggle's free tier gives ~30 GPU hours a week (T4 x2 or P100, 12-hour sessions,
 internet allowed), which is the practical replacement when a Colab quota runs out.
-This kernel is the whole test: clone `x+-main`, install it the same way the Studio
+This kernel is the whole test: clone `xplus-main`, install it the same way the Studio
 installer does, run the backend tests for the features that are new here, then run
 a real QLoRA fine-tune on a 1B model and prove the adapter loads back.
 
@@ -23,7 +23,7 @@ import sys
 import time
 
 REPO_URL = "https://github.com/AtomLOC/unsloth_X_PLUS.git"
-BRANCH = "x+-main"
+BRANCH = "xplus-main"
 REPO = "/kaggle/working/unsloth_X"
 BACKEND = os.path.join(REPO, "studio/backend")
 RESULT = "/kaggle/working/result.txt"
