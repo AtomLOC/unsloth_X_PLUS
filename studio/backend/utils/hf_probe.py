@@ -17,6 +17,9 @@ The asymmetry is deliberate: an unreachable verdict is remembered for a short wi
 verdict never is. A stale "reachable" is the failure mode that matters, because it is what sends
 the next download at an endpoint that has stopped answering; a stale "unreachable" only costs a
 short delay before the endpoint is tried again.
+
+Optional files are still probed through metadata (``hf_hub_download`` can leave a dangling ref after
+a 404), so a missing file never enters the cache index.
 """
 
 from __future__ import annotations
@@ -40,11 +43,8 @@ def hf_file_definitely_absent(
     revision: Optional[str] = None,
     token: Optional[str] = None,
 ) -> bool:
-    """Return True only when the Hub confirms that *filename* is absent.
-
-    Offline, authentication, rate-limit, and resolution failures return False so callers preserve
-    their existing download and error handling.
-    """
+    """True only when the Hub confirms absence; any other failure returns False so existing handling
+    runs."""
     try:
         from huggingface_hub import get_hf_file_metadata, hf_hub_url
         from huggingface_hub.errors import EntryNotFoundError, LocalEntryNotFoundError
@@ -383,3 +383,35 @@ def _default_endpoint_probe(url: str, timeout: float) -> ProbeVerdict:
         # Hung past the deadline: it did not answer in time.
         return ProbeVerdict(reachable = False, timed_out = True)
     return ProbeVerdict(reachable = outcome["reachable"], timed_out = outcome["timed_out"])
+def is_repo_not_found(exc: BaseException) -> bool:
+    """A gated repo subclasses this error but exists."""
+    from huggingface_hub.errors import GatedRepoError, RepositoryNotFoundError
+    return isinstance(exc, RepositoryNotFoundError) and not isinstance(exc, GatedRepoError)
+
+
+def hub_repo_not_found(repo_id: str, token: Optional[str] = None) -> bool:
+    """True only when the active source answers that it has no such repo for this caller; any
+    other failure is no answer."""
+    try:
+        from huggingface_hub import HfApi
+
+        from hub.utils.hf_tokens import call_with_anonymous_retry
+        call_with_anonymous_retry(
+            lambda sent: HfApi().model_info(repo_id, token = sent, timeout = 10.0), token
+        )
+    except Exception as exc:  # noqa: BLE001 - no answer is not an answer of "absent"
+        return is_repo_not_found(exc)
+    return False
+
+
+def repo_not_found_message(repo_id: str) -> str:
+    from utils.hub_settings import MODELSCOPE, active_source
+    if active_source() == MODELSCOPE:
+        return (
+            f"{repo_id} is not on ModelScope. "
+            "Switch the model source to Hugging Face in Settings to use it."
+        )
+    return (
+        f"{repo_id} was not found on Hugging Face. "
+        "Check the name, or set a token with access if the repository is private."
+    )

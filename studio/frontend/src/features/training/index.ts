@@ -12,8 +12,6 @@ export {
   useTrainingRuntimeStore,
 } from "./stores/training-runtime-store";
 export { useTrainingActions } from "./hooks/use-training-actions";
-export { useTrainingQueueDriver } from "./hooks/use-training-queue-driver";
-export { useTrainingQueueStore } from "./stores/training-queue-store";
 
 export {
   getTrainingRunDisplayTitle,
@@ -24,7 +22,6 @@ export {
   getTrainingMethodLabel,
   isRawTextDatasetFormat,
   isTrainingLoraVariantSupportedOnDevice,
-  isTrainingMethodSupportedOnDevice,
   isTrainingModelTypeSupportedOnDevice,
   parseBackendTrainingMethod,
 } from "./lib/training-methods";
@@ -78,21 +75,13 @@ export type {
   TrainingRunMetrics,
   TrainingRunDetailResponse,
   TrainingRunDeleteResponse,
-  ResumeSafetyReport,
-  DatasetFingerprint,
 } from "./types/history";
 export {
   listTrainingRuns,
   getTrainingRun,
-  checkTrainingRunResume,
   deleteTrainingRun,
   renameTrainingRun,
-  updateTrainingRun,
   HistoryRequestError,
-} from "./api/history-api";
-export type {
-  TrainingRunFilters,
-  TrainingRunPatch,
 } from "./api/history-api";
 export {
   onTrainingRunUpdated,
@@ -102,7 +91,7 @@ export {
   emitTrainingRunDeleted,
   emitTrainingRunsChanged,
 } from "./events";
-export { parseYamlConfig, serializeConfigToYaml } from "./lib/yaml-config";
+// lib/yaml-config is imported directly: re-exporting it here would make js-yaml eager.
 export {
   type StartValidationResult,
   validateTrainingConfig,
@@ -158,7 +147,6 @@ export {
 export {
   TRAINING_METHOD_META,
   TRAINING_METHOD_ORDER,
-  visibleTrainingMethods,
 } from "./lib/training-method-meta";
 export {
   LEGACY_TRAINING_PARAM_MODE_STORAGE_KEY,

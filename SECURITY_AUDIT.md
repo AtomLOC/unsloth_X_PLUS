@@ -1,6 +1,6 @@
 # Security Audit — Unsloth Studio hardening pass
 
-Scope: `C:/Projectas/UnslothX-` (fork of Unsloth Studio). Backend `studio/backend` (FastAPI, `routes/`, `auth/`, `utils/`, `main.py`), frontend `studio/frontend/src` where relevant.
+Scope: `C:/Projectas/unsloth_X_PLUS` (fork of Unsloth Studio). Backend `studio/backend` (FastAPI, `routes/`, `auth/`, `utils/`, `main.py`), frontend `studio/frontend/src` where relevant.
 Method: read-only inspection (`rg`/`grep`/`sed`/`read`). Every claim below carries a `file:line`. Nothing was modified except this file; no servers started; no state-changing git commands.
 
 Route inventory: **323 mutating handlers** (`POST/PUT/PATCH/DELETE`) across `routes/**/*.py` + `main.py`, enumerated mechanically and each one checked for an auth dependency (router-level `APIRouter(dependencies=...)`, per-route `Depends(get_current_subject)`/owner dependency, or an in-handler credential check).

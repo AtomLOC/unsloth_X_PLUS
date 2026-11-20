@@ -168,13 +168,13 @@ _result=$(run_constraint_snippet false macos arm64 11 "$TMPDIR_BASE/v4")
 assert_eq "arm64+macos+py311 -> default" "torch>=2.4,<2.12.0" "$_result"
 
 _result=$(run_constraint_snippet false linux x86_64 13 "$TMPDIR_BASE/v5")
-assert_eq "linux+x86_64+py313 -> default" "torch>=2.4,<2.12.0" "$_result"
+assert_eq "linux+xplus6_64+py313 -> default" "torch>=2.4,<2.12.0" "$_result"
 
 _result=$(run_constraint_snippet false linux aarch64 13 "$TMPDIR_BASE/v6")
 assert_eq "linux+aarch64+py313 -> default" "torch>=2.4,<2.12.0" "$_result"
 
 _result=$(run_constraint_snippet false macos x86_64 12 "$TMPDIR_BASE/v7")
-assert_eq "macos+x86_64+py312 -> default" "torch>=2.4,<2.12.0" "$_result"
+assert_eq "macos+xplus6_64+py312 -> default" "torch>=2.4,<2.12.0" "$_result"
 
 _result=$(run_constraint_snippet true macos arm64 13 "$TMPDIR_BASE/v8")
 assert_eq "SKIP_TORCH=true -> default" "torch>=2.4,<2.12.0" "$_result"
@@ -193,7 +193,7 @@ _result=$(run_constraint_snippet false macos arm64 13 "$TMPDIR_BASE/v12")
 assert_eq "boundary py_minor=13 -> tightened" "torch>=2.6,<2.12.0" "$_result"
 
 _result=$(run_constraint_snippet false macos x86_64 13 "$TMPDIR_BASE/v13")
-assert_eq "macos+x86_64+py313 -> default" "torch>=2.4,<2.12.0" "$_result"
+assert_eq "macos+xplus6_64+py313 -> default" "torch>=2.4,<2.12.0" "$_result"
 
 echo ""
 echo "=== Mock uv: verify constraint passed to uv ==="

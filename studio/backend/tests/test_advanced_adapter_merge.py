@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. See /LICENSE-NRC-3.md
 
 """Tests for merging LoRA adapters.
 
@@ -120,7 +120,7 @@ def test_the_written_config_does_not_double_apply_scaling(tmp_path):
     config = json.loads((tmp_path / "out" / "adapter_config.json").read_text(encoding = "utf-8"))
     assert config["r"] == config["lora_alpha"]
     assert config["use_rslora"] is False
-    assert (tmp_path / "out" / "x8_adapter_merge.json").is_file()
+    assert (tmp_path / "out" / "x_plus_adapter_merge.json").is_file()
 
 
 def test_adapters_for_different_bases_are_refused(tmp_path):

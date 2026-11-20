@@ -7,15 +7,11 @@ import {
   useTrainingRuntimeStore,
 } from "@/features/training";
 import type { TrainingViewData } from "@/features/training";
-import { detectLossAnomaly } from "@/features/training/lib/loss-anomaly";
 import { cn } from "@/lib/utils";
 import type { ReactElement } from "react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { ChartsSection } from "./sections/charts-section";
-import { buildLossChartEvents } from "./sections/charts/loss-chart-events";
-import { FailurePostmortem } from "./sections/failure-postmortem";
-import { type AppliedLayerLr, LayerLrPanel } from "./sections/layer-lr-panel";
 import { OffloadPanel } from "./sections/offload-panel";
 import { ProgressSection } from "./sections/progress-section";
 import {
@@ -24,13 +20,11 @@ import {
 } from "./sections/run-config-override";
 import { TrainingStartOverlay } from "./training-start-overlay";
 
-/** Retry budget for the run-config lookup. The row is inserted at start_training(), but a
- * lookup issued in the same instant can still miss it; a few short retries cover that. */
+/** A lookup issued as the run starts can briefly miss the row. */
 const RUN_CONFIG_FETCH_RETRIES = 5;
 const RUN_CONFIG_FETCH_RETRY_MS = 1000;
 
-/** The fetched run config only applies while it belongs to the active job;
- * a stale record from a previous run falls back to the form store. */
+/** A stale record from a previous run falls back to the form store. */
 function activeRunOverride(
   fetched: { jobId: string; override: RunConfigOverride | undefined } | null,
   jobId: string | null,
@@ -83,20 +77,11 @@ export function LiveTrainingView(): ReactElement {
     })),
   );
 
-  // Show the ACTIVE run's saved config, not the editable form store the user may have changed
-  // since starting (#6853). start_training() commits the run row before the pump, so the job id
-  // alone gates the fetch; the bounded retry below covers the uncommitted window, and until it
-  // loads ProgressSection falls back to the form store.
+  // Show the active run's saved config, not the editable form store.
   const [fetchedRunConfig, setFetchedRunConfig] = useState<{
     jobId: string;
     override: RunConfigOverride | undefined;
   } | null>(null);
-  // The saved run config itself, so the Layer LR panel reads what the run was
-  // started with rather than the form the user may have edited since.
-  const [runConfig, setRunConfig] = useState<Record<string, unknown> | null>(
-    null,
-  );
-  // Retry budget for the transient 404 below, keyed by job so a new run starts fresh.
   const [fetchAttempt, setFetchAttempt] = useState<{
     jobId: string;
     count: number;
@@ -107,22 +92,20 @@ export function LiveTrainingView(): ReactElement {
     }
     const jobId = runtime.jobId;
     if (fetchedRunConfig !== null && fetchedRunConfig.jobId === jobId) {
-      return; // already resolved for this job
+      return;
     }
     const attempts = fetchAttempt?.jobId === jobId ? fetchAttempt.count : 0;
     const controller = new AbortController();
     let retryTimer: ReturnType<typeof setTimeout> | undefined;
     getTrainingRun(jobId, controller.signal)
       .then((detail) => {
-        setRunConfig(detail.config);
         setFetchedRunConfig({
           jobId,
           override: mapRunConfigToOverride(detail.config),
         });
       })
       .catch(() => {
-        // A lookup racing the row commit can miss transiently, and nothing else in the deps changes on
-        // failure, so retry explicitly. Bounded so a genuinely absent row falls back to the form store.
+        // Nothing in the deps changes on failure, so retry explicitly; bounded for a truly absent row.
         if (controller.signal.aborted || attempts >= RUN_CONFIG_FETCH_RETRIES) {
           return;
         }
@@ -138,22 +121,6 @@ export function LiveTrainingView(): ReactElement {
     };
   }, [runtime.jobId, fetchedRunConfig, fetchAttempt]);
   const runConfigOverride = activeRunOverride(fetchedRunConfig, runtime.jobId);
-
-  const savedLayerLr = (
-    runConfig?.advanced as { layer_lr?: AppliedLayerLr } | undefined
-  )?.layer_lr;
-  const baseLearningRate = Number(
-    runConfig?.learning_rate ?? runConfigOverride?.learningRate ?? 0,
-  );
-  // The planner reads tensor names off disk, so a Hub model is only useful once
-  // the run recorded where it was cached; otherwise it shows the zone table.
-  const planModel =
-    typeof runConfig?.model_local_path === "string" &&
-    runConfig.model_local_path.length > 0
-      ? runConfig.model_local_path
-      : typeof runConfig?.model_name === "string"
-        ? runConfig.model_name
-        : (runtime.startModelName ?? null);
 
   const activeProjectName =
     runtime.startProjectName !== null
@@ -181,8 +148,7 @@ export function LiveTrainingView(): ReactElement {
     isTrainingRunning: runtime.isTrainingRunning,
     modelName: runtime.startModelName ?? config.selectedModel ?? "",
     projectName: activeProjectName,
-    // Prefer the saved run's method: the form may have been edited (e.g. LoRA -> Full) after the
-    // run started, which would relabel the run and hide its saved LoRA rows in the popover.
+    // The form may have been edited since start (e.g. LoRA -> Full).
     trainingMethod:
       runConfigOverride?.trainingMethod ?? config.trainingMethod ?? "",
     isDecision:
@@ -191,22 +157,6 @@ export function LiveTrainingView(): ReactElement {
     lrHistory: runtime.lrHistory,
     gradNormHistory: runtime.gradNormHistory,
     evalLossHistory: runtime.evalLossHistory,
-  };
-
-  const chartEvents = useMemo(
-    () =>
-      buildLossChartEvents({
-        lrHistory: runtime.lrHistory,
-        anomalyStep: detectLossAnomaly(runtime.lossHistory)?.step ?? null,
-        resumeStep:
-          runtime.sessionStartStep > 0 ? runtime.sessionStartStep : null,
-      }),
-    [runtime.lossHistory, runtime.lrHistory, runtime.sessionStartStep],
-  );
-  const openInWizard = () => {
-    useTrainingRuntimeStore.setState((state) => ({
-      configureRequest: state.configureRequest + 1,
-    }));
   };
 
   const isPreparingPhase =
@@ -230,12 +180,6 @@ export function LiveTrainingView(): ReactElement {
           showOverlay && "blur",
         )}
       >
-        {runtime.error && (
-          <FailurePostmortem
-            message={runtime.error}
-            onOpenWizard={openInWizard}
-          />
-        )}
         <div data-tour="studio-training-progress">
           <ProgressSection
             runId={runtime.jobId}
@@ -244,14 +188,6 @@ export function LiveTrainingView(): ReactElement {
             configOverride={runConfigOverride}
           />
         </div>
-        <LayerLrPanel
-          baseLearningRate={
-            Number.isFinite(baseLearningRate) ? baseLearningRate : 0
-          }
-          layerLr={savedLayerLr}
-          model={planModel}
-          liveLearningRate={runtime.currentLearningRate}
-        />
         <OffloadPanel isTrainingRunning={viewData.isTrainingRunning} />
         <ChartsSection
           currentStep={viewData.currentStep}
@@ -262,7 +198,6 @@ export function LiveTrainingView(): ReactElement {
           lrHistory={viewData.lrHistory}
           gradNormHistory={viewData.gradNormHistory}
           evalLossHistory={viewData.evalLossHistory}
-          events={chartEvents}
         />
       </div>
       {showOverlay ? (

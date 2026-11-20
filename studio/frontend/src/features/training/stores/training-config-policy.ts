@@ -2,11 +2,6 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 import { DEFAULT_HYPERPARAMS } from "@/config/training";
-import {
-  DEFAULT_ADVANCED_TRAINING,
-  DEFAULT_LAYER_KIND_MULTIPLIERS,
-  DEFAULT_LAYER_ZONE_MULTIPLIERS,
-} from "@/features/advanced/types";
 import { getLocale, translate } from "@/i18n";
 import type { DatasetFormat } from "@/types/training";
 import { isRawTextDatasetFormat } from "../lib/training-methods";
@@ -17,26 +12,6 @@ import type {
 } from "../types/config";
 export function emptyManualMapping(): TrainingConfigState["datasetManualMapping"] {
   return {};
-}
-
-/** The MoE fields a model config settles, and the scope it invalidates.
- *
- * A scope chosen for the previous model names experts this one may not have, so it is
- * dropped rather than posted: the backend refuses a scope on a dense model, and the
- * failure would arrive after the model load.
- */
-export function moeModelPatch(details: {
-  is_moe?: boolean;
-  num_experts?: number | null;
-  num_experts_per_tok?: number | null;
-}): Partial<TrainingConfigState> {
-  const isMoe = details.is_moe === true;
-  return {
-    isMoeModel: isMoe,
-    numExperts: isMoe ? (details.num_experts ?? null) : null,
-    numExpertsPerToken: isMoe ? (details.num_experts_per_tok ?? null) : null,
-    ...(isMoe ? {} : { moeExpertScope: null }),
-  };
 }
 
 export function createHfBrowseDatasetSelection(
@@ -120,9 +95,6 @@ export const initialTrainingConfigState: TrainingConfigState = {
   datasetSliceEnd: null,
   uploadedFile: null,
   uploadedEvalFile: null,
-  evalDataset: null,
-  evalDatasetSubset: null,
-  evalDatasetSplit: null,
   isCheckingVision: false,
   isVisionModel: false,
   isEmbeddingModel: false,
@@ -133,40 +105,22 @@ export const initialTrainingConfigState: TrainingConfigState = {
   modelDefaultsAppliedFor: null,
   advancedSettingsBaseline: null,
   trainOnCompletionsDefaultPendingFor: null,
+  trainingToggleChoices: {},
   isCheckingDataset: false,
   isDatasetImage: null,
   isDatasetAudio: false,
   datasetCheckFailed: false,
   maxPositionEmbeddings: null,
-  moeExpertScope: null,
-  isMoeModel: false,
-  numExperts: null,
-  numExpertsPerToken: null,
   drafterCapability: null,
-  advanced: {
-    ...DEFAULT_ADVANCED_TRAINING,
-    layerLrZones: { ...DEFAULT_LAYER_ZONE_MULTIPLIERS },
-    layerLrKinds: { ...DEFAULT_LAYER_KIND_MULTIPLIERS },
-    blendSlots: [],
-    autoEvalSuites: [...DEFAULT_ADVANCED_TRAINING.autoEvalSuites],
-  },
   ...DEFAULT_HYPERPARAMS,
-  earlyStopParentRunId: null,
-  earlyStopPatienceSteps: 0,
-  earlyStopMinDelta: 0,
 };
 export function hasSeparateStreamingEvalSplit(
   state: Pick<
     TrainingConfigState,
-    "evalSteps" | "datasetSplit" | "datasetEvalSplit" | "evalDataset"
+    "evalSteps" | "datasetSplit" | "datasetEvalSplit"
   >,
 ): boolean {
   if (state.evalSteps <= 0) {
-    return true;
-  }
-  // A second dataset carries its own split namespace, so its "train" split is
-  // not the training set's and streaming needs nothing else from the user.
-  if (state.evalDataset) {
     return true;
   }
   const trainSplit = state.datasetSplit || "train";
@@ -244,4 +198,33 @@ export function formatStreamingDisabledOptions(
     style: "long",
     type: "conjunction",
   }).format(options);
+}
+
+
+/** Capabilities and training objectives decide these defaults, never a model-family whitelist. */
+export function trainingToggleDefaults(state: Pick<TrainingConfigState,
+  "isVisionModel" | "isAudioModel" | "isEmbeddingModel" | "isDatasetImage" |
+  "isDatasetAudio" | "modelType" | "datasetStreaming" | "datasetFormat" | "trainingMethod"
+>): { packing: boolean; trainOnCompletions: boolean } {
+  const decisionOrEmbedding = state.isEmbeddingModel || state.modelType === "decision";
+  const standaloneAudio = state.isAudioModel && !state.isVisionModel;
+  return {
+    // The image/audio collators consume examples directly; they do not use text sequence packing.
+    packing: !decisionOrEmbedding && !standaloneAudio &&
+      !(state.isVisionModel && (state.isDatasetImage === true || state.isDatasetAudio)),
+    trainOnCompletions: !decisionOrEmbedding && !standaloneAudio &&
+      !state.datasetStreaming && state.trainingMethod !== "cpt" &&
+      !isRawTextDatasetFormat(state.datasetFormat),
+  };
+}
+
+export function resolveTrainingToggleDefaults(state: Parameters<typeof trainingToggleDefaults>[0] &
+  Pick<TrainingConfigState, "trainingToggleChoices">
+): { packing: boolean; trainOnCompletions: boolean } {
+  const defaults = trainingToggleDefaults(state);
+  return {
+    packing: defaults.packing && (state.trainingToggleChoices?.packing ?? true),
+    trainOnCompletions: defaults.trainOnCompletions &&
+      (state.trainingToggleChoices?.trainOnCompletions ?? true),
+  };
 }

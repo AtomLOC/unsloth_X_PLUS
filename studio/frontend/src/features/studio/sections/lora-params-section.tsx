@@ -13,7 +13,6 @@ import {
   isCptTargetModuleActive,
   toggleCptTargetModule,
 } from "@/config/training";
-import { useDebugTrainingSimulation } from "@/features/settings";
 import {
   isTrainingLoraVariantSupportedOnDevice,
   useTrainingConfigStore,
@@ -30,9 +29,6 @@ import { selectableOptionStateClassName } from "./params-section-styles";
 export function LoraParamsSection(): ReactElement | null {
   const t = useT();
   const deviceType = usePlatformStore((state) => state.deviceType);
-  const cpuOnly = usePlatformStore((state) => state.isCpuTrainingHost());
-  // Settings -> Debugging: LoftQ never runs, so its bitsandbytes requirement is not a limit.
-  const simulated = useDebugTrainingSimulation();
   const store = useTrainingConfigStore(
     useShallow((state) => ({
       trainingMethod: state.trainingMethod,
@@ -59,12 +55,11 @@ export function LoraParamsSection(): ReactElement | null {
       setTargetModules: state.setTargetModules,
     })),
   );
-  // Only mounted in advanced mode, so start expanded when the user switches to it.
+  // Only mounted in advanced mode, so start expanded.
   const [open, setOpen] = useState(true);
   const isCpt = store.trainingMethod === "cpt";
   const showVisionLora = store.isVisionModel && store.isDatasetImage === true;
-  // `isVisionModel` can go stale, so this blocks only a NEW selection;
-  // the backend settles an existing one.
+  // `isVisionModel` can go stale, so this blocks only a NEW selection.
   const doraNeedsVisionOff =
     deviceType === "mac" && showVisionLora && store.finetuneVisionLayers;
 
@@ -83,18 +78,6 @@ export function LoraParamsSection(): ReactElement | null {
       </CollapsibleTrigger>
       <CollapsibleContent className="mt-3 data-[state=open]:overflow-visible">
         <div className="pt-1.5 flex flex-col gap-4">
-          {store.trainingMethod === "cora" ? (
-            <p
-              data-testid="cora-lora-note"
-              className="text-ui-10p5 leading-ui-14 text-muted-foreground/70"
-            >
-              {cpuOnly
-                ? "CoRA runs r=8, alpha=24 as a plain LoRA on this CPU host; LoftQ needs bitsandbytes."
-                : "CoRA runs r=8, alpha=24 with LoftQ initialisation."}
-            </p>
-          ) : null}
-          {store.trainingMethod !== "cora" && (
-          <>
           <ParamsSliderRow
             label={t("studio.params.rank")}
             tooltip={
@@ -137,8 +120,6 @@ export function LoraParamsSection(): ReactElement | null {
             max={256}
             step={4}
           />
-          </>
-          )}
           <ParamsSliderRow
             label={t("studio.params.dropout")}
             tooltip={
@@ -242,7 +223,7 @@ export function LoraParamsSection(): ReactElement | null {
             </div>
           )}
 
-          {!store.isDecision && store.trainingMethod !== "cora" && (
+          {!store.isDecision && (
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {(
                 [
@@ -273,8 +254,6 @@ export function LoraParamsSection(): ReactElement | null {
                     option.value,
                     store.trainingMethod,
                     deviceType,
-                    cpuOnly,
-                    simulated,
                   );
                 const needsVisionOff =
                   option.value === "dora" && doraNeedsVisionOff;
@@ -285,16 +264,12 @@ export function LoraParamsSection(): ReactElement | null {
                     disabled={unsupportedOnMlx || needsVisionOff}
                     aria-pressed={store.loraVariant === option.value}
                     onClick={() => store.setLoraVariant(option.value)}
-                    className={`flex-1 corner-squircle rounded-[14px] border px-3 py-2 text-left transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 ${selectableOptionStateClassName(store.loraVariant === option.value)}`}
+                    className={`flex-1 corner-squircle rounded-md border px-3 py-2 text-left transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-60 ${selectableOptionStateClassName(store.loraVariant === option.value)}`}
                   >
                     <p className="text-xs font-medium">{option.label}</p>
                     <p className="text-ui-10 text-muted-foreground">
                       {unsupportedOnMlx
-                        ? t(
-                            cpuOnly
-                              ? "studio.params.notSupportedCpu"
-                              : "studio.params.notSupportedAppleSilicon",
-                          )
+                        ? t("studio.params.notSupportedAppleSilicon")
                         : needsVisionOff
                           ? t("studio.params.doraNeedsVisionLayersOff")
                           : option.desc}

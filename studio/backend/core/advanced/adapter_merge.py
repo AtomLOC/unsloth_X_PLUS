@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. See /LICENSE-NRC-3.md
 
 """Merge LoRA / PEFT adapters into one adapter.
 
@@ -40,7 +40,7 @@ ADAPTER_METHODS = ("linear", "ties", "dare")
 _ADAPTER_WEIGHTS = ("adapter_model.safetensors", "adapter_model.bin")
 _LORA_A = re.compile(r"^(?P<module>.+)\.lora_A(?:\.[^.]+)?\.weight$")
 _LORA_B = re.compile(r"^(?P<module>.+)\.lora_B(?:\.[^.]+)?\.weight$")
-_REPORT_NAME = "x8_adapter_merge.json"
+_REPORT_NAME = "x_plus_adapter_merge.json"
 
 
 class AdapterMergeError(ValueError):

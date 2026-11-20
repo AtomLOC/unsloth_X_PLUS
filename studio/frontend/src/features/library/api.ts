@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import { authFetch, getAuthSessionEpoch } from "@/features/auth";
+import { authFetch, getAuthSessionEpoch, getAuthToken } from "@/features/auth";
 import { type TranslationKey, translate } from "@/i18n";
 import { apiUrl } from "@/lib/api-base";
 import { readFastApiError } from "@/lib/format-fastapi-error";
@@ -31,7 +31,6 @@ export interface LibraryItem {
   favorite: boolean;
   folderId: string | null;
   openedAt: number | null;
-  /** Set for fine-tuned models, which are directories: opened in chat, never downloaded. */
   model: LibraryModel | null;
   audio?: LibraryAudio | null;
   archived?: boolean;
@@ -112,18 +111,14 @@ function sameSession(epoch: number, message: TranslationKey): () => void {
   };
 }
 
-/** A write: a retry never goes out under an account other than the one that sent it. */
+/** A retry never goes out under a different account than the original. */
 function sendWrite(input: string, init: RequestInit): Promise<Response> {
   return authFetch(input, init, {
     beforeRetry: sameSession(getAuthSessionEpoch(), "library.toast.signedOutBeforeSave"),
   });
 }
 
-/**
- * Sends one write for `target` after the ones before it, so a quick second change never lands
- * first. Per session too: another account can have an item or folder of this id, and must not
- * wait on a write of the account that left, which a sign-out does not cut short.
- */
+/** Serializes writes per target and per session, so a quick second change never lands first. */
 function inOrder(target: string, send: (check: () => void) => Promise<Response>): Promise<void> {
   const epoch = getAuthSessionEpoch();
   const key = `${epoch}:${target}`;
@@ -147,9 +142,7 @@ export function updateLibraryItem(
   patch: { name?: string; favorite?: boolean; folderId?: string | null },
 ): Promise<void> {
   return inOrder(`item:${id}`, (check) =>
-    authFetch("/api/library/items", jsonInit("PATCH", { id, ...patch }), {
-      beforeRetry: check,
-    }),
+    authFetch("/api/library/items", jsonInit("PATCH", { id, ...patch }), { beforeRetry: check }),
   );
 }
 
@@ -214,9 +207,9 @@ export interface LibraryUploadBatch {
 }
 
 export const MAX_LIBRARY_UPLOAD_BYTES = 512 * 1024 * 1024;
-// Starlette's form parser refuses more than 1000 files in one request (Request.form max_files).
+// Starlette's form parser caps files per request (Request.form max_files).
 const MAX_LIBRARY_UPLOAD_FILES = 1000;
-// And more than 1000 other fields (max_fields): the leases, with room for folderId.
+// And caps other fields (max_fields): the leases, with room for folderId.
 const MAX_LEASES_PER_REQUEST = 999;
 
 function uploadGroups(files: File[]): File[][] {
@@ -266,11 +259,7 @@ export async function uploadLibraryFiles(
     check();
     if (folderId) form.append("folderId", folderId);
     const response = await ensureOk(
-      await authFetch(
-        "/api/library/uploads",
-        { method: "POST", body: form },
-        { beforeRetry: check },
-      ),
+      await authFetch("/api/library/uploads", { method: "POST", body: form }, { beforeRetry: check }),
     );
     ids.push(...((await response.json()) as { ids: string[] }).ids);
   }
@@ -314,13 +303,9 @@ export function updateLibraryFolder(
 
 export function deleteLibraryFolder(id: string): Promise<void> {
   return inOrder(`folder:${id}`, (check) =>
-    authFetch(
-      `/api/library/folders/${encodeURIComponent(id)}`,
-      { method: "DELETE" },
-      {
-        beforeRetry: check,
-      },
-    ),
+    authFetch(`/api/library/folders/${encodeURIComponent(id)}`, { method: "DELETE" }, {
+      beforeRetry: check,
+    }),
   );
 }
 
@@ -371,7 +356,6 @@ export async function fetchLibraryThumbnail(item: LibraryItem): Promise<Blob> {
   return response.blob();
 }
 
-/** Up to `maxBytes` of the item, decoded as its BOM (or UTF-8) says; the rest is never read. */
 export async function fetchLibraryText(
   item: LibraryItem,
   maxBytes: number,
@@ -402,34 +386,15 @@ export async function fetchLibraryText(
   return { ...decodeNote(bytes, truncated), truncated };
 }
 
-/**
- * `/api/library/items/download?id=…`, plus `link=…` when the server minted one.
- *
- * The route takes a bearer in `Authorization` or a short-lived `link=` capability, and refuses a
- * session bearer in the query string: a bearer in a URL outlives the click in history, in a proxy's
- * access log and in the `Referer` of whatever the file links to. Nothing here can mint the link --
- * `routes/library.py`'s `_sign_download_link` has no route behind it yet -- so a caller that can
- * send no header (the native save takes a URL only) has nothing to pass yet, and the header path
- * below is the one that authorizes today.
- */
-export function libraryDownloadPath(item: LibraryItem, link: string | null = null): string {
-  const query = new URLSearchParams({ id: item.id });
-  if (link) query.set("link", link);
-  return `/api/library/items/download?${query}`;
-}
-
 export async function libraryDownloadUrl(item: LibraryItem): Promise<string> {
-  const path = libraryDownloadPath(item);
-  // A HEAD with the bearer settles both that the item is there and that this session may read it,
-  // before the caller hands the URL to something that cannot send the header back.
+  const path = `/api/library/items/download?${new URLSearchParams({ id: item.id })}`;
   await ensureOk(await authFetch(path, { method: "HEAD" }));
-  return apiUrl(path);
+  const token = getAuthToken();
+  return apiUrl(token ? `${path}&token=${encodeURIComponent(token)}` : path);
 }
 
 export async function libraryItemFile(item: LibraryItem, maxBytes = Infinity): Promise<File> {
   const name = libraryFileName(item);
   const type = libraryFileType(name, item.textOnly ? "text/plain" : item.contentType);
-  return new File([await fetchLibraryBlob(item, type, maxBytes)], name, {
-    type,
-  });
+  return new File([await fetchLibraryBlob(item, type, maxBytes)], name, { type });
 }

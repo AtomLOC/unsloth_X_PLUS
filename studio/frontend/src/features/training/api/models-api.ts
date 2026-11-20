@@ -2,7 +2,7 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 import { authFetch } from "@/features/auth";
-import { hubTokenHeader } from "@/features/hub";
+import { hubTokenHeader } from "@/features/hub/lib/hub-token-header";
 
 interface VisionCheckResponse {
   model_name: string;
@@ -90,18 +90,13 @@ export interface ModelConfigResponse {
   decision_checkpoints?: DecisionCheckpoint[] | null;
   decision_layout?: DecisionLayout | null;
   is_audio: boolean;
-  // False when the repo's tokenizer_config.json was unreadable (gated, offline,
-  // upstream error), so is_audio false means unknown rather than "not audio".
+  // False when tokenizer_config.json was unreadable, so is_audio false means unknown.
   audio_type_known?: boolean;
   is_lora: boolean;
   base_model?: string | null;
   model_type?: "text" | "vision" | "audio" | "embeddings" | "decision" | null;
   max_position_embeddings?: number | null;
   model_size_bytes?: number | null;
-  /** True only when the model's config publishes a routed-expert count. */
-  is_moe?: boolean;
-  num_experts?: number | null;
-  num_experts_per_tok?: number | null;
 }
 
 // laya: a Laya checkpoint. clef: Cloudflare Clef. llm: a text or vision LLM trained with a Clef decision head.
@@ -137,23 +132,7 @@ interface LocalModelListResponse {
   models: LocalModelInfo[];
 }
 
-/**
- * The rows of a `{ models: [...] }` listing, tolerating a bare array.
- *
- * A proxy, a stub server or a backend that rejected the response can answer a listing
- * endpoint with something other than the documented envelope. Returning `undefined` put
- * that shape into page state, where `localModels.filter(...)` crashed the whole export page
- * ("Cannot read properties of undefined (reading 'filter')"). Normalise once, here, so every
- * caller can rely on an array.
- */
-function modelRows<T>(
-  data: Partial<LocalModelListResponse> | T[] | null | undefined,
-): T[] {
-  const rows = Array.isArray(data) ? data : data?.models;
-  return Array.isArray(rows) ? (rows as T[]) : [];
-}
-
-/** GET /api/models/check-vision; pass the token so a gated/private VLM is not misread as non-vision. */
+/** Pass the token so a gated/private VLM is not misread as non-vision. */
 export async function checkVisionModel(
   modelName: string,
   hfToken?: string | null,
@@ -171,7 +150,6 @@ export async function checkVisionModel(
   return data.is_vision;
 }
 
-/** GET /api/models/check-embedding; pass the token for gated/private repos. */
 export async function checkEmbeddingModel(
   modelName: string,
   hfToken?: string | null,
@@ -181,7 +159,6 @@ export async function checkEmbeddingModel(
     headers: hubTokenHeader(hfToken?.trim() || null),
   });
   if (!response.ok) {
-    // Check failure (e.g. network error): default to non-embedding.
     return false;
   }
   const data = (await response.json()) as EmbeddingCheckResponse;
@@ -226,5 +203,6 @@ export async function listLocalModels(
   if (!response.ok) {
     throw new Error(`Failed to fetch local models (${response.status})`);
   }
-  return modelRows<LocalModelInfo>(await response.json());
+  const data = (await response.json()) as LocalModelListResponse;
+  return data.models;
 }

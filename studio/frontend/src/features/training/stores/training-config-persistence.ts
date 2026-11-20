@@ -19,7 +19,6 @@ import type {
   TrainingConfigStore,
   TrainingMethodProvenance,
 } from "../types/config";
-import { DEFAULT_ADVANCED_TRAINING } from "@/features/advanced/types";
 import { drafterStateFrom } from "../lib/drafter-config";
 import {
   createHfBrowseDatasetSelection,
@@ -28,7 +27,7 @@ import {
 } from "./training-config-policy";
 
 export const TRAINING_CONFIG_PERSISTENCE_NAME = "unsloth_training_config_v1";
-export const TRAINING_CONFIG_PERSISTENCE_VERSION = 23;
+export const TRAINING_CONFIG_PERSISTENCE_VERSION = 24;
 
 const NON_PERSISTED_STATE_KEYS: ReadonlySet<keyof TrainingConfigState> =
   new Set([
@@ -43,9 +42,6 @@ const NON_PERSISTED_STATE_KEYS: ReadonlySet<keyof TrainingConfigState> =
     "manualDatasetOptionsValid",
     "trainOnCompletionsDefaultPendingFor",
     "maxPositionEmbeddings",
-    "isMoeModel",
-    "numExperts",
-    "numExpertsPerToken",
     "decisionCheckpoints",
     "decisionLayout",
     "s3Config",
@@ -142,7 +138,7 @@ function migrateThroughVersion12(
     if (legacyToken) {
       stageLegacyHfTokenForMigration(legacyToken);
     }
-    // Keep the legacy value persisted until authenticated migration confirms the backend write.
+    // Keep the legacy value until authenticated migration confirms the backend write.
   }
 }
 
@@ -246,8 +242,7 @@ function migrateThroughVersion21(
   version: number,
 ): void {
   if (version < 21) {
-    // currentStep belonged to the onboarding wizard and was persisted, so without
-    // this it survives every rehydrate and partialize writes it straight back.
+    // currentStep belonged to the removed onboarding wizard and would otherwise persist forever.
     Reflect.deleteProperty(state, "currentStep");
   }
 }
@@ -455,33 +450,22 @@ export function mergeTrainingConfig(
     baselineTrainOnCompletions === undefined
       ? modelDefaultsAppliedFor
       : null;
-  // A persisted blob can predate fields added to advanced training (module
-  // kinds, blend slots, eval suites). Rebuilding it over the defaults keeps a
-  // stale localStorage entry from leaving a nested record missing.
-  const persistedAdvanced = (persistedState.advanced ??
-    {}) as Partial<TrainingConfigState["advanced"]>;
-  const advanced: TrainingConfigState["advanced"] = {
-    ...DEFAULT_ADVANCED_TRAINING,
-    ...persistedAdvanced,
-    layerLrZones: {
-      ...DEFAULT_ADVANCED_TRAINING.layerLrZones,
-      ...(persistedAdvanced.layerLrZones ?? {}),
-    },
-    layerLrKinds: {
-      ...DEFAULT_ADVANCED_TRAINING.layerLrKinds,
-      ...(persistedAdvanced.layerLrKinds ?? {}),
-    },
-    blendSlots: persistedAdvanced.blendSlots ?? [],
-    autoEvalSuites: persistedAdvanced.autoEvalSuites ?? [
-      ...DEFAULT_ADVANCED_TRAINING.autoEvalSuites,
-    ],
-  };
+  const choices = persistedState.trainingToggleChoices;
+  const trainingToggleChoices: TrainingConfigState["trainingToggleChoices"] = {};
+  for (const key of ["packing", "trainOnCompletions"] as const) {
+    const explicit = choices?.[key];
+    if (typeof explicit === "boolean") trainingToggleChoices[key] = explicit;
+    // Older drafts did not record provenance. Preserve saved booleans instead of guessing away an opt-out.
+    else if (choices === undefined && typeof persistedState[key] === "boolean") {
+      trainingToggleChoices[key] = persistedState[key];
+    }
+  }
   const merged: TrainingConfigStore = {
     ...current,
     ...persistedState,
-    advanced,
     wandbToken: current.wandbToken,
     trainOnCompletions,
+    trainingToggleChoices,
     modelDefaultsAppliedFor,
     advancedSettingsBaseline,
     trainOnCompletionsDefaultPendingFor,
@@ -496,23 +480,6 @@ export function mergeTrainingConfig(
       persistedState.settingsBeforeDecision,
     ),
     trainAsDecision: persistedState.trainAsDecision === true,
-    earlyStopParentRunId:
-      typeof persistedState.earlyStopParentRunId === "string" &&
-      persistedState.earlyStopParentRunId.trim()
-        ? persistedState.earlyStopParentRunId.trim()
-        : null,
-    earlyStopPatienceSteps:
-      typeof persistedState.earlyStopPatienceSteps === "number" &&
-      Number.isFinite(persistedState.earlyStopPatienceSteps) &&
-      persistedState.earlyStopPatienceSteps > 0
-        ? Math.min(Math.floor(persistedState.earlyStopPatienceSteps), 100000)
-        : 0,
-    earlyStopMinDelta:
-      typeof persistedState.earlyStopMinDelta === "number" &&
-      Number.isFinite(persistedState.earlyStopMinDelta) &&
-      persistedState.earlyStopMinDelta > 0
-        ? persistedState.earlyStopMinDelta
-        : 0,
   };
   return {
     ...merged,

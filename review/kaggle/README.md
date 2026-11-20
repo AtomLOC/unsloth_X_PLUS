@@ -1,4 +1,4 @@
-# Testing X8 training on a free GPU
+# Testing X+ training on a free GPU
 
 Colab's free GPU quota is not a published number and Google does not top it up
 when it runs out, so when a Colab run dies with the quota banner the options are
@@ -13,7 +13,7 @@ time is not published.
 
 [`run.py`](run.py) is the whole test in one script:
 
-1. clones `x8-main` from `Goldodemon-Automation/unsloth_X-` (shallow) and prints the SHA,
+1. clones `x+-main` from `Goldodemon-Automation/unsloth_X_PLUS` (shallow) and prints the SHA,
 2. installs it with the repo's own installer, `studio/setup.sh --local`, minus the
    frontend build, llama.cpp prebuilt, whisper and audio.cpp, so it is the same
    Python stack Studio uses,
@@ -47,8 +47,8 @@ With a Kaggle API token at `~/.kaggle/kaggle.json`:
 pip install kaggle
 cd review/kaggle
 kaggle kernels push                 # uploads run.py using kernel-metadata.json
-kaggle kernels status goldodemon/unsloth-x8-training-smoke
-kaggle kernels output goldodemon/unsloth-x8-training-smoke -p out
+kaggle kernels status goldodemon/unsloth-x-plus-training-smoke
+kaggle kernels output goldodemon/unsloth-x-plus-training-smoke -p out
 ```
 
 The metadata file already sets `enable_gpu` and `enable_internet`. Change `id`

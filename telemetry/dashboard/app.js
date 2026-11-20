@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-// Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+// Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 /* Operator console. Vanilla on purpose: the collector must run with no build step,
    no CDN and no asset pipeline, including on a host that only has Python. */
@@ -130,7 +130,7 @@ function showLogin(session) {
   const submit = login.querySelector("button[type=submit]");
   if (!session.tokenRequired) {
     note.textContent =
-      "This collector has no admin token, so it only answers requests from the machine it runs on. Open it there, or set X8_TELEMETRY_ADMIN_TOKEN.";
+      "This collector has no admin token, so it only answers requests from the machine it runs on. Open it there, or set X+_TELEMETRY_ADMIN_TOKEN.";
     input.disabled = true;
     submit.disabled = true;
     submit.textContent = "Unavailable";

@@ -75,7 +75,6 @@ export function ParamsSection({
   useMlxTrainingConfigPolicy();
 
   const isCpt = store.trainingMethod === "cpt";
-  const isCora = store.trainingMethod === "cora";
   const showAdvanced = mode === "advanced";
   const [contextDraft, setContextDraft] = useState(() => ({
     contextLength: store.contextLength,
@@ -146,15 +145,6 @@ export function ParamsSection({
   return (
     <div className="min-w-0">
       <div className="flex flex-col gap-5">
-        {isCora ? (
-          <p
-            data-testid="cora-params-note"
-            className="rounded-lg border border-blue-500/30 bg-blue-500/5 px-3 py-2 text-ui-11 leading-ui-15 text-muted-foreground"
-          >
-            CoRA runs with its own fixed context length, optimizer, schedule, batch and
-            adapter size, so only the settings it leaves open are shown here.
-          </p>
-        ) : null}
         <div className="grid grid-cols-1 items-start gap-4 @xl/train-section:grid-cols-2 @xl/train-section:gap-x-6 @xl/train-section:gap-y-5">
           <div className="flex flex-col gap-2">
             <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
@@ -185,7 +175,7 @@ export function ParamsSection({
                   {useEpochs
                     ? t("studio.params.epochs")
                     : t("studio.params.maxSteps")}
-                  <Tooltip>
+                  <Tooltip disableHoverableContent={false}>
                     <TooltipTrigger asChild={true}>
                       <button
                         type="button"
@@ -265,7 +255,7 @@ export function ParamsSection({
                     max={useEpochs ? epochsSliderMax : maxStepsSliderMax}
                     step={1}
                     // Same floor: a step count needs more room at 16px.
-                    className="w-14 pointer-coarse:w-20 shrink-0 text-right font-mono text-xs font-medium bg-muted/50 border border-border rounded-lg px-1.5 py-0.5 focus:outline-none focus:ring-1 focus:ring-ring [&::-webkit-inner-spin-button]:appearance-none"
+                    className="w-14 pointer-coarse:w-20 shrink-0 text-right font-mono text-xs font-medium bg-muted/50 border border-border rounded-full px-1.5 py-0.5 focus:outline-none focus:ring-1 focus:ring-ring [&::-webkit-inner-spin-button]:appearance-none"
                   />
                 </div>
               </div>
@@ -285,11 +275,11 @@ export function ParamsSection({
             </div>
           </div>
 
-          {!store.isDecision && !isCora && (
+          {!store.isDecision && (
             <div className="flex flex-col gap-2">
               <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
                 {t("studio.params.contextLength")}
-                <Tooltip>
+                <Tooltip disableHoverableContent={false}>
                   <TooltipTrigger asChild={true}>
                     <button
                       type="button"
@@ -368,11 +358,10 @@ export function ParamsSection({
             </div>
           )}
 
-          {!isCora && (
           <div className="flex flex-col gap-2">
             <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
               {t("studio.params.learningRate")}
-              <Tooltip>
+              <Tooltip disableHoverableContent={false}>
                 <TooltipTrigger asChild={true}>
                   <button
                     type="button"
@@ -426,7 +415,6 @@ export function ParamsSection({
               className="w-full font-mono"
             />
           </div>
-          )}
 
           {isCpt && (
             <div className="flex flex-col gap-2">

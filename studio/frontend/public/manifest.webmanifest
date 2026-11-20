@@ -1,12 +1,12 @@
 {
-  "name": "X-",
-  "short_name": "X-",
+  "name": "Unsloth",
+  "short_name": "Unsloth",
   "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#0b0c0f",
-  "theme_color": "#0b0c0f",
+  "background_color": "#fefefd",
+  "theme_color": "#fefefd",
   "icons": [
     {
       "src": "/pwa-192.png",

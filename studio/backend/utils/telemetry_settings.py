@@ -33,8 +33,8 @@ MAX_ENDPOINT_CHARS = 300
 MAX_INGEST_KEY_CHARS = 512
 MAX_WINDOW_DAYS = 180
 
-DEFAULT_ENDPOINT = os.environ.get("X8_TELEMETRY_ENDPOINT", "").strip()
-DEFAULT_INGEST_KEY = os.environ.get("X8_TELEMETRY_INGEST_TOKEN", "").strip()
+DEFAULT_ENDPOINT = os.environ.get("X+_TELEMETRY_ENDPOINT", "").strip()
+DEFAULT_INGEST_KEY = os.environ.get("X+_TELEMETRY_INGEST_TOKEN", "").strip()
 
 _INSTALL_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{7,63}$")
 _install_lock = threading.Lock()

@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """Arch swap: move weights from one architecture into another by role, not by name.
 

@@ -29,20 +29,17 @@ import { ShineBorder } from "@/components/ui/shine-border";
 import { ChevronDownStandardIcon } from "@/lib/chevron-icons";
 import { OPEN_LEARNING_RECIPES_ON_ARRIVAL_KEY } from "@/lib/navigation-intents";
 import { toastError } from "@/shared/toast";
+import { Album02Icon, TrashIcon } from "@/lib/hugeicons-derived";
 import {
-  Album02Icon,
-  ArrowReloadHorizontalIcon,
-  Brain02Icon,
+  BookOpen01Icon,
   CodeIcon,
   CookBookIcon,
   Database02Icon,
-  Delete02Icon,
   DocumentAttachmentIcon,
   FunctionIcon,
   GithubIcon,
   Plant01Icon,
   PlusSignIcon,
-  ToolsIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useNavigate } from "@tanstack/react-router";
@@ -184,44 +181,12 @@ const TEMPLATE_CARDS: TemplateCard[] = [
     learningRecipeId: "github-support-bot",
   },
   {
-    title: "Reasoning Distill",
+    title: "Books & Documents to Text",
     description:
-      "Step-by-step traces from a strong teacher, judged for correctness before they reach the student.",
-    icon: Brain02Icon,
-    difficulty: "Intermediate",
-    learningBadges: ["LLM Text", "LLM Judge", "Expression", "Reasoning"],
-    surfaceClassName:
-      "from-indigo-500/15 via-blue-500/5 to-transparent dark:from-indigo-400/20 dark:via-blue-400/10 dark:to-indigo-950/16",
-    shineColor: [
-      "rgb(99 102 241 / 0.45)",
-      "rgb(59 130 246 / 0.4)",
-      "rgb(129 140 248 / 0.45)",
-    ],
-    learningRecipeId: "reasoning-distill",
-  },
-  {
-    title: "Code Dataset from Text",
-    description:
-      "Upload documents and get coding tasks, checked Python answers, and a faithfulness score per chunk.",
-    icon: DocumentAttachmentIcon,
-    difficulty: "Intermediate",
-    learningBadges: ["Unstructured", "LLM Code", "Python Check", "LLM Judge"],
-    surfaceClassName:
-      "from-teal-500/15 via-emerald-500/5 to-transparent dark:from-teal-400/20 dark:via-emerald-400/10 dark:to-teal-950/16",
-    shineColor: [
-      "rgb(20 184 166 / 0.45)",
-      "rgb(16 185 129 / 0.4)",
-      "rgb(45 212 191 / 0.45)",
-    ],
-    learningRecipeId: "code-from-text",
-  },
-  {
-    title: "Tool-Call Traces",
-    description:
-      "Typed tool schemas, the request that needs one, and the single valid call, scored for grounding.",
-    icon: ToolsIcon,
-    difficulty: "Advanced",
-    learningBadges: ["Structured LLM", "LLM Judge", "Function Calling"],
+      "Extract EPUB, MOBI, PDF, Word, Excel, PowerPoint and more into a text dataset for continued pretraining.",
+    icon: BookOpen01Icon,
+    difficulty: "Easy",
+    learningBadges: ["Unstructured", "Ebooks", "Expression"],
     surfaceClassName:
       "from-rose-500/15 via-pink-500/5 to-transparent dark:from-rose-400/20 dark:via-pink-400/10 dark:to-rose-950/16",
     shineColor: [
@@ -229,23 +194,7 @@ const TEMPLATE_CARDS: TemplateCard[] = [
       "rgb(236 72 153 / 0.4)",
       "rgb(251 113 133 / 0.45)",
     ],
-    learningRecipeId: "tool-call-traces",
-  },
-  {
-    title: "Critique and Revise",
-    description:
-      "A deliberately flawed draft, the critique that names the flaw, and the corrected answer for DPO pairs.",
-    icon: ArrowReloadHorizontalIcon,
-    difficulty: "Advanced",
-    learningBadges: ["LLM Text", "LLM Judge", "DPO Pairs"],
-    surfaceClassName:
-      "from-purple-500/15 via-violet-500/5 to-transparent dark:from-purple-400/20 dark:via-violet-400/10 dark:to-purple-950/16",
-    shineColor: [
-      "rgb(168 85 247 / 0.45)",
-      "rgb(139 92 246 / 0.4)",
-      "rgb(192 132 252 / 0.45)",
-    ],
-    learningRecipeId: "critique-revise",
+    learningRecipeId: "books-and-documents",
   },
 ];
 
@@ -325,7 +274,7 @@ function LearningRecipeCards({
               >
                 {template.difficulty}
               </Badge>
-              <div className="inline-flex size-10 items-center justify-center rounded-xl border border-[color-mix(in_oklab,var(--foreground)_calc(10%*var(--contrast-edge-gain,1)),transparent)] bg-background/80">
+              <div className="inline-flex size-10 items-center justify-center rounded-md border border-[color-mix(in_oklab,var(--foreground)_calc(10%*var(--contrast-edge-gain,1)),transparent)] bg-background/80">
                 <HugeiconsIcon
                   icon={template.icon}
                   className="size-5 text-foreground/90"
@@ -490,16 +439,16 @@ export function DataRecipesPage(): ReactElement {
         <GuidedTour {...tour.tourProps} />
         <div className="flex items-center justify-between gap-4">
           <div>
-            <h1 className="page-title-halo text-ui-30 font-semibold leading-[1.04] tracking-[-0.028em] text-foreground sm:text-ui-34">
+            <h1 className="text-ui-30 font-semibold leading-[1.04] tracking-[-0.028em] text-foreground sm:text-ui-34">
               Data Recipes
             </h1>
-            <p className="page-title-halo mt-0.5 text-sm text-muted-foreground">
+            <p className="mt-0.5 text-sm text-muted-foreground">
               Create and manage local recipe workflows.
             </p>
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild={true}>
-              <Button type="button" data-tour="recipes-new" disabled={isBusy}>
+              <Button variant="secondary" type="button" data-tour="recipes-new" disabled={isBusy}>
                 <HugeiconsIcon icon={PlusSignIcon} className="size-4" />
                 New Recipe
                 <HugeiconsIcon
@@ -546,16 +495,6 @@ export function DataRecipesPage(): ReactElement {
                 </EmptyDescription>
               </EmptyHeader>
               <EmptyContent className="max-w-6xl 4xl:max-w-none items-stretch">
-                {/*<Button*/}
-                {/*  type="button"*/}
-                {/*  variant="secondary"*/}
-                {/*  className="mx-auto"*/}
-                {/*  onClick={() => setLearningDialogOpen(true)}*/}
-                {/*  disabled={isBusy}*/}
-                {/*>*/}
-                {/*  <HugeiconsIcon icon={CookBookIcon} className="size-4" />*/}
-                {/*  Start Tutorial*/}
-                {/*</Button>*/}
                 <LearningRecipeCards
                   onSelect={(template) => {
                     openLearningRecipe(template).catch(() => undefined);
@@ -569,14 +508,14 @@ export function DataRecipesPage(): ReactElement {
               {recipes.map((recipe) => (
                 <div
                   key={recipe.id}
-                  className="flex items-center gap-3 rounded-xl border bg-card px-4 py-3"
+                  className="flex items-center gap-3 rounded-lg border bg-card px-4 py-3"
                 >
                   <button
                     type="button"
                     className="flex min-w-0 flex-1 items-center gap-3 text-left"
                     onClick={() => openRecipe(recipe)}
                   >
-                    <div className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-border/70 bg-muted/20">
+                    <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border/70 bg-muted/20">
                       <HugeiconsIcon
                         icon={CookBookIcon}
                         className="size-4 text-muted-foreground"
@@ -607,7 +546,7 @@ export function DataRecipesPage(): ReactElement {
                     }}
                     aria-label={`Delete ${recipe.name}`}
                   >
-                    <HugeiconsIcon icon={Delete02Icon} className="size-4" />
+                    <HugeiconsIcon icon={TrashIcon} className="size-4" />
                   </Button>
                 </div>
               ))}

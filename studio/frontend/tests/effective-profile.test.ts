@@ -31,12 +31,9 @@ test("account identity supplies the sidebar name and avatar unless a display nam
     },
   );
 
-  // A managed account shows the username its owner chose, verbatim. The owner's own
-  // id is the reserved literal "unsloth", which is the old product name in lower case,
-  // so that ONE id displays as the current wordmark "X-" rather than spelling the old
-  // brand on every default install. sessionSub keeps the real subject either way.
+  // The owner's reserved id "unsloth" displays as "Unsloth"; other usernames show verbatim.
   for (const [username, shown] of [
-    ["unsloth", "X-"],
+    ["unsloth", "Unsloth"],
     ["alice", "alice"],
     ["bob", "bob"],
   ]) {
@@ -45,11 +42,9 @@ test("account identity supplies the sidebar name and avatar unless a display nam
     assert.equal(effective.displayTitle, shown);
     assert.equal(effective.addressName, shown);
     assert.equal(effective.sessionSub, username);
-    // The avatar initials follow what is DISPLAYED, not the stored subject: the owner's
-    // id is "unsloth" but the wordmark it maps to is "X-", so those initials are "X".
     assert.equal(
       initialsFromName(effective.displayTitle),
-      shown[0].toUpperCase(),
+      username[0].toUpperCase(),
     );
   }
 
@@ -62,6 +57,6 @@ test("account identity supplies the sidebar name and avatar unless a display nam
   assert.equal(renderProfile().displayTitle, "bob");
   for (const invalidToken of [null, "invalid-token"]) {
     token = invalidToken;
-    assert.equal(renderProfile().displayTitle, "X-");
+    assert.equal(renderProfile().displayTitle, "Unsloth");
   }
 });

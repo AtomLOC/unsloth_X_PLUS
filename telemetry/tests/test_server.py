@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """API tests: auth, ingest validation, the admin payloads and the static console."""
 
@@ -19,9 +19,9 @@ from telemetry.tests.test_store import make_report  # noqa: E402
 
 @pytest.fixture()
 def client(tmp_path, monkeypatch):
-    monkeypatch.setenv("X8_TELEMETRY_DB", str(tmp_path / "telemetry.sqlite3"))
-    monkeypatch.delenv("X8_TELEMETRY_ADMIN_TOKEN", raising = False)
-    monkeypatch.delenv("X8_TELEMETRY_INGEST_TOKEN", raising = False)
+    monkeypatch.setenv("X+_TELEMETRY_DB", str(tmp_path / "telemetry.sqlite3"))
+    monkeypatch.delenv("X+_TELEMETRY_ADMIN_TOKEN", raising = False)
+    monkeypatch.delenv("X+_TELEMETRY_INGEST_TOKEN", raising = False)
     with TestClient(server.app) as test_client:
         yield test_client
 
@@ -88,7 +88,7 @@ def test_loopback_admin_is_refused_through_a_public_host_header(client):
 
 
 def test_admin_token_is_required_when_configured(client, monkeypatch):
-    monkeypatch.setenv("X8_TELEMETRY_ADMIN_TOKEN", "s3cret")
+    monkeypatch.setenv("X+_TELEMETRY_ADMIN_TOKEN", "s3cret")
     assert client.get("/api/admin/overview").status_code == 401
     assert client.get("/api/admin/session").json() == {
         "authenticated": False,
@@ -103,7 +103,7 @@ def test_admin_token_is_required_when_configured(client, monkeypatch):
 
 
 def test_bearer_token_also_authorizes_admin(client, monkeypatch):
-    monkeypatch.setenv("X8_TELEMETRY_ADMIN_TOKEN", "s3cret")
+    monkeypatch.setenv("X+_TELEMETRY_ADMIN_TOKEN", "s3cret")
     response = client.get(
         "/api/admin/overview",
         headers = {"Authorization": "Bearer s3cret"},
@@ -112,7 +112,7 @@ def test_bearer_token_also_authorizes_admin(client, monkeypatch):
 
 
 def test_ingest_token_is_required_when_configured(client, monkeypatch):
-    monkeypatch.setenv("X8_TELEMETRY_INGEST_TOKEN", "ingest-me")
+    monkeypatch.setenv("X+_TELEMETRY_INGEST_TOKEN", "ingest-me")
     assert client.post("/api/v1/report", json = make_report()).status_code == 401
     response = client.post(
         "/api/v1/report",

@@ -28,7 +28,7 @@ _MODULE_ROOT = Path("/sys/module")
 # PCI class for a processing accelerator. This is the generic fallback: a vendor's NPU whose id we
 # have never seen still identifies itself here, which beats guessing an id that may not exist.
 _ACCELERATOR_CLASS = "118000"
-# Off by default: the NPU section, NPU loads and the CLI's NPU ids all wait on this.
+# On unless set to a false value: the NPU section, NPU loads and the CLI's NPU ids all wait on this.
 ENABLE_ENV = "UNSLOTH_STUDIO_ENABLE_NPU"
 
 VENDORS: tuple[str, ...] = ("amd", "intel", "qualcomm", "apple", "microsoft")
@@ -72,7 +72,7 @@ _DEVICE_KEYS = (
 
 
 def npu_enabled() -> bool:
-    return os.environ.get(ENABLE_ENV, "").strip().lower() in ("1", "true", "yes", "on")
+    return os.environ.get(ENABLE_ENV, "").strip().lower() not in ("0", "false", "no", "off")
 
 
 def _read(path: Path) -> Optional[str]:

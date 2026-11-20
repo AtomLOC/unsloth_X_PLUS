@@ -24,7 +24,7 @@ from utils import telemetry_settings
 
 logger = get_logger(__name__)
 
-USER_AGENT = "UnslothX8-Telemetry/1"
+USER_AGENT = "UnslothX+-Telemetry/1"
 REQUEST_TIMEOUT_S = 20.0
 MAX_RESPONSE_BYTES = 4096
 IDLE_SECONDS = 15 * 60
@@ -129,7 +129,7 @@ def start_reporter() -> None:
         _stop.clear()
         _thread = threading.Thread(
             target = _loop,
-            name = "x8-telemetry-reporter",
+            name = "x-plus-telemetry-reporter",
             daemon = True,
         )
         _thread.start()

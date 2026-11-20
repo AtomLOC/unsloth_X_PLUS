@@ -13,17 +13,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Spinner } from "@/components/ui/spinner";
-import { Textarea } from "@/components/ui/textarea";
 import { fetchDeviceType, usePlatformStore } from "@/config/env";
 import { bumpInventoryVersion } from "@/features/hub";
 import type { TrainingRunSummary } from "@/features/training";
@@ -31,7 +21,6 @@ import {
   HistoryRequestError,
   deleteTrainingRun,
   emitTrainingRunDeleted,
-  emitTrainingRunUpdated,
   getTrainingRunDisplayTitle,
   getTrainingRunModelSubtitle,
   listTrainingRuns,
@@ -39,7 +28,6 @@ import {
   onTrainingRunUpdated,
   onTrainingRunsChanged,
   shouldShowTrainingArtifactsDeleted,
-  updateTrainingRun,
   useTrainingActions,
 } from "@/features/training";
 import {
@@ -51,25 +39,12 @@ import {
   useT,
 } from "@/i18n";
 import { copyToClipboard } from "@/lib/copy-to-clipboard";
-import {
-  contentVisibilityStyle,
-  historyCardKey,
-  initialWindow,
-  nextWindow,
-  shouldRenderRow,
-} from "@/lib/render-budget";
 import { toast } from "@/lib/toast";
 import { cn } from "@/lib/utils";
-import {
-  Delete02Icon,
-  Search01Icon,
-  Tag01Icon,
-} from "@hugeicons/core-free-icons";
+import { TrashIcon } from "@/lib/hugeicons-derived";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  type CSSProperties,
   type ReactElement,
-  memo,
   useCallback,
   useEffect,
   useRef,
@@ -81,20 +56,6 @@ type StudioT = ReturnType<typeof useT>;
 
 const PAGE_SIZE = 12;
 const RUNNING_POLL_INTERVAL_MS = 5000;
-// Rows mounted before any scrolling: one fetch page. The first fetch brings exactly one page, so
-// the common path mounts everything it has and the window only starts withholding at two pages --
-// which is also where the poll cost shows, since every poll re-walks every mounted card. At the
-// widest 4-column layout 12 cards are three rows, so a tall first screen can see one row of white
-// below the grid before the growth observer closes it on the same commit the rows arrive in (see
-// the sentinel below); against that stands mounting every card of a long history up front.
-const FIRST_SCREEN = PAGE_SIZE;
-// Rows each growth step adds: one page per step, the unit the server already pages in, so a growth
-// and a "Load more" land on the same amount of new work.
-const WINDOW_STEP = PAGE_SIZE;
-// How far before the frontier the growth observer fires. At the card height (11.5rem) this is the
-// last three rows before the end of the mounted band, so the next chunk is in the DOM before the
-// reader is over the gap rather than after they have scrolled into it.
-const WINDOW_GROW_LEAD_PX = 600;
 
 const statusBadge: Record<string, { className: string }> = {
   completed: {
@@ -202,7 +163,6 @@ function Sparkline({
   const w = 120;
   const gradientId = `sparkFill-${id}`;
 
-  // Vertical padding so the stroke isn't clipped.
   const pts = values.map((v, i) => ({
     x: (i / (values.length - 1)) * w,
     y: pad + (1 - (v - min) / range) * (h - pad * 2),
@@ -271,337 +231,6 @@ function hasTextSelectionWithin(element: HTMLElement): boolean {
   );
 }
 
-interface HistoryCardProps {
-  run: TrainingRunSummary;
-  /** `run.resumed_later` or a visible sibling sharing its output dir. Computed over the whole
-   * fetched list, not just the windowed rows, so withholding rows cannot change the verdict. */
-  wasContinued: boolean;
-  isResuming: boolean;
-  startBlocked: boolean;
-  stopRequested: boolean;
-  style: CSSProperties;
-  t: StudioT;
-  locale: Locale;
-  onSelectRun: (runId: string) => void;
-  onResume: (runId: string) => void;
-  onEditAnnotations: (run: TrainingRunSummary) => void;
-  onDeleteRun: (runId: string) => void;
-}
-
-function sameStrings(
-  left: string[] | undefined,
-  right: string[] | undefined,
-): boolean {
-  if (left === right) return true;
-  if (!left || !right || left.length !== right.length) return false;
-  return left.every((value, index) => value === right[index]);
-}
-
-function sameNumbers(
-  left: number[] | null | undefined,
-  right: number[] | null | undefined,
-): boolean {
-  if (left === right) return true;
-  if (!left || !right || left.length !== right.length) return false;
-  return left.every((value, index) => value === right[index]);
-}
-
-/** Field-by-field identity for the run values a card actually reads. A poll replaces every run
- * OBJECT in the array, so comparing runs by identity would re-render every card every five seconds
- * and defeat the memo completely; a shallow field compare is not enough either, because `tags` and
- * `loss_sparkline` come back as fresh arrays per fetch. `notes` is not printed by the card but seeds
- * the annotation dialog through onEditAnnotations(run), so it counts as printed: skipping it would
- * open the dialog with notes from before the user's last edit elsewhere. */
-function sameRunCardInput(
-  left: TrainingRunSummary,
-  right: TrainingRunSummary,
-): boolean {
-  return (
-    left.id === right.id &&
-    left.status === right.status &&
-    left.model_name === right.model_name &&
-    left.project_name === right.project_name &&
-    left.dataset_name === right.dataset_name &&
-    left.display_name === right.display_name &&
-    left.started_at === right.started_at &&
-    left.final_loss === right.final_loss &&
-    left.final_step === right.final_step &&
-    left.total_steps === right.total_steps &&
-    left.duration_seconds === right.duration_seconds &&
-    left.output_dir === right.output_dir &&
-    left.can_resume === right.can_resume &&
-    left.resumed_later === right.resumed_later &&
-    left.artifacts_available === right.artifacts_available &&
-    left.preview_ref === right.preview_ref &&
-    left.preview_sig === right.preview_sig &&
-    left.notes === right.notes &&
-    sameStrings(left.tags, right.tags) &&
-    sameNumbers(left.loss_sparkline, right.loss_sparkline)
-  );
-}
-
-/** The memo comparison: the run fields the card prints (above), by value at the small state flags
- * that change what it prints -- leaving isResuming/startBlocked/stopRequested out would freeze the
- * resume button's label at whatever it was when the card last rendered -- and by identity at t,
- * locale and the handlers. t is useCallback'd on the locale (i18n/index.ts), so its identity moves
- * exactly when the copy could change. The style object is fresh per render from a pure helper, so
- * its fields are compared rather than its identity. Everything else is useCallback'd in the grid,
- * so a poll that only replaces runs leaves every argument identical and the card bails out. */
-function sameHistoryCardProps(
-  prev: HistoryCardProps,
-  next: HistoryCardProps,
-): boolean {
-  return (
-    prev.t === next.t &&
-    prev.locale === next.locale &&
-    prev.wasContinued === next.wasContinued &&
-    prev.isResuming === next.isResuming &&
-    prev.startBlocked === next.startBlocked &&
-    prev.stopRequested === next.stopRequested &&
-    prev.onSelectRun === next.onSelectRun &&
-    prev.onResume === next.onResume &&
-    prev.onEditAnnotations === next.onEditAnnotations &&
-    prev.onDeleteRun === next.onDeleteRun &&
-    prev.style.contentVisibility === next.style.contentVisibility &&
-    prev.style.containIntrinsicSize === next.style.containIntrinsicSize &&
-    sameRunCardInput(prev.run, next.run)
-  );
-}
-
-// Memoized so the 5s poll's fresh run objects cannot re-render unchanged cards. Not a virtualizer:
-// @tanstack/react-virtual would unmount rows that scroll away, and this grid's rows are addressed by
-// find-in-page, text selection and the anchored dialogs below -- the same reasons
-// progressive-mount-controller.ts widens instead of recycling. The window withholds mounting, the
-// memo withholds re-rendering; together they bound both costs while the DOM converges to exactly
-// what the unwindowed grid rendered.
-const HistoryCard = memo(function HistoryCard({
-  run,
-  wasContinued,
-  isResuming,
-  startBlocked,
-  stopRequested,
-  style,
-  t,
-  locale,
-  onSelectRun,
-  onResume,
-  onEditAnnotations,
-  onDeleteRun,
-}: HistoryCardProps): ReactElement {
-  const badge = wasContinued
-    ? statusBadge.resumed_later
-    : (statusBadge[run.status] ?? statusBadge.error);
-  const isRunning = run.status === "running";
-  const artifactsMissing = shouldShowTrainingArtifactsDeleted(run);
-  const canResume = run.can_resume && !wasContinued && !artifactsMissing;
-
-  const title = getTrainingRunDisplayTitle(run);
-  const modelSubtitle = getTrainingRunModelSubtitle(run);
-  const cardId = `training-run-${encodeURIComponent(run.id)}`;
-
-  const projectSubtitle =
-    run.project_name && title !== run.project_name ? run.project_name : null;
-  // Backend /p ref + its capability token. Both are required: the link 404s without the signature.
-  const canCopyPreview = !!run.preview_ref && !!run.preview_sig;
-  return (
-    <div
-      style={style}
-      className={cn(
-        "elevated-card group relative h-[calc(11.5rem*var(--ui-space-scale,1))] cursor-pointer bg-card transition-colors hover:bg-accent/30",
-        isRunning && "!border-blue-400/50 dark:!border-blue-500/30",
-      )}
-    >
-      <button
-        type="button"
-        aria-labelledby={`${cardId}-title`}
-        aria-describedby={`${cardId}-status ${cardId}-details ${cardId}-metrics`}
-        className={cn(
-          "relative z-0 flex h-full w-full cursor-pointer select-text flex-col gap-3 rounded-[inherit] border-0 bg-transparent p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-          (canResume || canCopyPreview) && "gap-2",
-        )}
-        onClick={(event) => {
-          if (event.detail > 0 && hasTextSelectionWithin(event.currentTarget)) {
-            return;
-          }
-          onSelectRun(run.id);
-        }}
-      >
-        <span
-          id={`${cardId}-status`}
-          className="flex items-center justify-between gap-2 pr-6"
-        >
-          <span className="flex min-w-0 items-center gap-1.5">
-            <span
-              className={cn(
-                "inline-flex shrink-0 items-center gap-1.5 rounded-full px-2 py-0.5 text-ui-10 font-semibold",
-                badge.className,
-              )}
-            >
-              {isRunning && <Spinner className="size-2.5" />}
-              {formatStatusLabel(
-                wasContinued ? "resumed_later" : run.status,
-                t,
-              )}
-            </span>
-            {(run.tags ?? []).length > 0 && (
-              <span className="max-w-24 truncate rounded-full bg-[color-mix(in_oklab,var(--foreground)_calc(6%*var(--contrast-wash-gain,1)),transparent)] px-1.5 py-0.5 text-ui-10 font-medium text-muted-foreground">
-                #{run.tags[0]}
-                {(run.tags ?? []).length > 1
-                  ? ` +${(run.tags ?? []).length - 1}`
-                  : ""}
-              </span>
-            )}
-          </span>
-          {artifactsMissing && (
-            <span className="inline-flex items-center rounded-full bg-[color-mix(in_oklab,var(--foreground)_calc(5%*var(--contrast-wash-gain,1)),transparent)] px-2 py-0.5 text-ui-10 font-medium text-muted-foreground dark:bg-[rgb(255_255_255_/_calc(0.06*var(--contrast-wash-gain,1)))]">
-              {t("studio.history.filesDeleted")}
-            </span>
-          )}
-          <span className="text-ui-10 text-muted-foreground">
-            {formatRunRelativeTime(run.started_at, t, locale)}
-          </span>
-        </span>
-        <span className="block min-w-0 cursor-text">
-          <span
-            id={`${cardId}-title`}
-            className="block truncate text-sm font-medium"
-            title={title}
-          >
-            {title}
-          </span>
-          <span id={`${cardId}-details`} className="block">
-            {modelSubtitle && (
-              <span
-                className="block truncate text-xs text-muted-foreground"
-                title={modelSubtitle}
-              >
-                {modelSubtitle}
-              </span>
-            )}
-            <span
-              className="block truncate text-xs text-muted-foreground"
-              title={run.dataset_name}
-            >
-              {run.dataset_name}
-            </span>
-            {projectSubtitle && (
-              <span
-                className="block truncate text-xs text-muted-foreground/80"
-                title={projectSubtitle}
-              >
-                {projectSubtitle}
-              </span>
-            )}
-          </span>
-        </span>
-        {run.loss_sparkline && run.loss_sparkline.length >= 2 && (
-          <span
-            className={cn(
-              "block",
-              (canResume || canCopyPreview) && "h-7 overflow-hidden",
-            )}
-          >
-            <Sparkline
-              values={run.loss_sparkline}
-              id={run.id}
-              ariaLabel={t("studio.history.lossTrendSparkline")}
-            />
-          </span>
-        )}
-        <span
-          id={`${cardId}-metrics`}
-          className="flex flex-wrap gap-x-4 gap-y-1 text-ui-11 text-muted-foreground"
-        >
-          <span>
-            {t("studio.history.loss")}:{" "}
-            {run.final_loss != null ? run.final_loss.toFixed(4) : "--"}
-          </span>
-          <span>
-            {t("studio.history.steps")}: {run.final_step ?? 0}/
-            {run.total_steps ?? "--"}
-          </span>
-          <span>{formatDuration(run.duration_seconds)}</span>
-        </span>
-      </button>
-      {canResume && (
-        <Button
-          type="button"
-          size="xs"
-          variant="outline"
-          className="absolute bottom-3 left-4 z-10 h-6 rounded-full px-2.5 text-ui-11 leading-none shadow-sm"
-          disabled={startBlocked || isResuming}
-          onClick={() => void onResume(run.id)}
-        >
-          {stopRequested
-            ? t("studio.training.stopping")
-            : isResuming
-              ? t("studio.history.resuming")
-              : t("studio.history.resumeTraining")}
-        </Button>
-      )}
-      {canCopyPreview && (
-        <Button
-          type="button"
-          size="xs"
-          variant="outline"
-          className="absolute bottom-3 right-4 z-10 h-6 rounded-full px-2.5 text-ui-11 leading-none shadow-sm"
-          onClick={async (e) => {
-            e.stopPropagation();
-            try {
-              await fetchDeviceType({ force: true });
-            } catch {
-              // Fall back to the last known server URL or this origin.
-            }
-            // Encode each segment but keep "/" so the /p route matches.
-            const ref = (run.preview_ref ?? "")
-              .split("/")
-              .map(encodeURIComponent)
-              .join("/");
-            const { cloudflareUrl, serverUrl } = usePlatformStore.getState();
-            const base = (
-              cloudflareUrl ??
-              serverUrl ??
-              window.location.origin
-            ).replace(/\/+$/, "");
-            const url = `${base}/p/${ref}?k=${encodeURIComponent(run.preview_sig ?? "")}`;
-            const ok = await copyToClipboard(url);
-            toast[ok ? "success" : "error"](
-              t(
-                ok
-                  ? "studio.history.previewLinkCopied"
-                  : "studio.history.previewLinkCopyFailed",
-              ),
-            );
-          }}
-        >
-          {t("studio.history.copyPreviewLink")}
-        </Button>
-      )}
-      {!isRunning && (
-        <button
-          type="button"
-          className="absolute right-9 top-3 z-10 rounded-md p-1 text-muted-foreground/50 opacity-0 transition-opacity hover:bg-accent hover:text-foreground group-hover:opacity-100 focus-visible:opacity-100 pointer-coarse:opacity-100"
-          aria-label={t("studio.history.editAnnotations")}
-          title={t("studio.history.editAnnotations")}
-          onClick={() => onEditAnnotations(run)}
-        >
-          <HugeiconsIcon icon={Tag01Icon} className="size-3.5" />
-        </button>
-      )}
-      {!isRunning && (
-        <button
-          type="button"
-          className="absolute right-3 top-3 z-10 rounded-md p-1 text-muted-foreground/50 opacity-0 transition-opacity hover:bg-destructive/10 hover:text-destructive group-hover:opacity-100 focus-visible:opacity-100 pointer-coarse:opacity-100"
-          aria-label={t("studio.history.deleteRun")}
-          onClick={() => onDeleteRun(run.id)}
-        >
-          <HugeiconsIcon icon={Delete02Icon} className="size-3.5" />
-        </button>
-      )}
-    </div>
-  );
-}, sameHistoryCardProps);
-
 interface HistoryCardGridProps {
   onSelectRun: (runId: string) => void;
   onResumeStarted?: () => void;
@@ -621,19 +250,9 @@ export function HistoryCardGrid({
   const [deleteArtifacts, setDeleteArtifacts] = useState(false);
   const [resumeTarget, setResumeTarget] = useState<string | null>(null);
   const [manualFetchInFlight, setManualFetchInFlight] = useState(false);
-  const [query, setQuery] = useState("");
-  const [activeTag, setActiveTag] = useState<string | null>(null);
-  const [knownTags, setKnownTags] = useState<string[]>([]);
-  const [annotationTarget, setAnnotationTarget] =
-    useState<TrainingRunSummary | null>(null);
-  const [annotationTags, setAnnotationTags] = useState("");
-  const [annotationNotes, setAnnotationNotes] = useState("");
-  const [savingAnnotations, setSavingAnnotations] = useState(false);
-  const filtersRef = useRef<{ query?: string; tag?: string }>({});
   const { resumeTrainingRunFromHistory, startBlocked, stopRequested } =
     useTrainingActions();
-  // Copy-link base: Cloudflare tunnel > LAN host:port > origin. The tunnel can now
-  // start and stop at any time, so refresh on click instead of polling at mount.
+  // The tunnel can start or stop any time, so resolve the copy-link base on click.
 
   const userControllerRef = useRef<AbortController | null>(null);
   const pollControllerRef = useRef<AbortController | null>(null);
@@ -657,22 +276,10 @@ export function HistoryCardGrid({
       setLoading(true);
       setError(null);
       try {
-        const result = await listTrainingRuns(
-          limit,
-          offset,
-          controller.signal,
-          filtersRef.current,
-        );
+        const result = await listTrainingRuns(limit, offset, controller.signal);
         if (fetchIdRef.current !== id) return;
         setRuns((prev) => (append ? [...prev, ...result.runs] : result.runs));
         setTotal(result.total);
-        setKnownTags((prev) => {
-          const next = new Set(prev);
-          for (const run of result.runs) {
-            for (const tag of run.tags ?? []) next.add(tag);
-          }
-          return [...next].sort((left, right) => left.localeCompare(right));
-        });
       } catch (err) {
         if (err instanceof DOMException && err.name === "AbortError") return;
         if (fetchIdRef.current !== id) return;
@@ -689,17 +296,13 @@ export function HistoryCardGrid({
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
-      filtersRef.current = {
-        query: query.trim() || undefined,
-        tag: activeTag ?? undefined,
-      };
       void fetchRuns(0);
-    }, 250);
+    }, 0);
     return () => {
       window.clearTimeout(timer);
       userControllerRef.current?.abort();
     };
-  }, [fetchRuns, query, activeTag]);
+  }, [fetchRuns]);
 
   useEffect(() => {
     const offUpdated = onTrainingRunUpdated((updated) => {
@@ -722,71 +325,46 @@ export function HistoryCardGrid({
     };
   }, [fetchRuns]);
 
-  // Poll while any run is "running" so cards show live progress.
   const hasRunningRun = runs.some((r) => r.status === "running");
   const visibleCount = runs.length;
   useEffect(() => {
     if (!hasRunningRun) return;
-    const timer = setInterval(async () => {
+    let lastPollAt = 0;
+    const poll = async () => {
       if (manualFetchInFlight) return;
+      lastPollAt = Date.now();
       pollControllerRef.current?.abort();
       const controller = new AbortController();
       pollControllerRef.current = controller;
       const pid = ++pollIdRef.current;
       try {
         const limit = Math.max(PAGE_SIZE, visibleCount);
-        const result = await listTrainingRuns(
-          limit,
-          0,
-          controller.signal,
-          filtersRef.current,
-        );
-        if (pollIdRef.current !== pid) return; // stale poll
+        const result = await listTrainingRuns(limit, 0, controller.signal);
+        if (pollIdRef.current !== pid) return;
         setRuns(result.runs);
         setTotal(result.total);
       } catch {
         // ignore; poll will retry
       }
+    };
+    const timer = setInterval(() => {
+      if (!document.hidden) void poll();
     }, RUNNING_POLL_INTERVAL_MS);
+    const onVisibilityChange = () => {
+      if (
+        !document.hidden &&
+        Date.now() - lastPollAt >= RUNNING_POLL_INTERVAL_MS
+      ) {
+        void poll();
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
     return () => {
       clearInterval(timer);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
       pollControllerRef.current?.abort();
     };
   }, [hasRunningRun, visibleCount, manualFetchInFlight]);
-
-  const [grownRows, setGrownRows] = useState(0);
-  const sentinelRef = useRef<HTMLDivElement | null>(null);
-
-  // The window is derived rather than seeded into state: initialWindow is the floor (a fresh or
-  // replaced list always keeps its first screen mounted), grownRows is every widening the user has
-  // scrolled through, and the clamp to runs.length follows a list that shrank (delete, narrowed
-  // filter) without an effect to keep in sync. Widening-only while the list holds still, so a poll
-  // can never take a card out from under a reader.
-  const windowRows = Math.min(
-    runs.length,
-    Math.max(initialWindow(runs.length, FIRST_SCREEN), grownRows),
-  );
-
-  // Grow when the frontier -- the end of the mounted rows -- is about to be reached. A passive
-  // scroll listener on "the grid's own scroll container" is not available: the grid renders through
-  // a display:contents wrapper and the scrolling ancestor belongs to the page, so a listener would
-  // have to locate that ancestor across layouts and run on every scroll frame. An IntersectionObserver
-  // on the sentinel below the grid measures against whatever happens to scroll, fires only near the
-  // frontier, and the lead margin mounts the next chunk before the reader reaches the gap.
-  useEffect(() => {
-    const sentinel = sentinelRef.current;
-    if (!sentinel || windowRows >= runs.length) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setGrownRows(nextWindow(windowRows, runs.length, WINDOW_STEP));
-        }
-      },
-      { rootMargin: `0px 0px ${WINDOW_GROW_LEAD_PX}px` },
-    );
-    observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, [windowRows, runs.length]);
 
   const handleDelete = async () => {
     if (!deleteTarget) return;
@@ -804,7 +382,7 @@ export function HistoryCardGrid({
         }
       }
       emitTrainingRunDeleted(deleteTarget);
-      // Re-fetch preserving visible count so "Load more" offsets stay consistent.
+      // Preserve the visible count so "Load more" offsets stay consistent.
       const currentCount = runs.length - 1;
       const limit = Math.max(PAGE_SIZE, currentCount);
       fetchRuns(0, false, limit).catch(() => {
@@ -831,138 +409,42 @@ export function HistoryCardGrid({
     setDeleteArtifacts(false);
   };
 
-  // Handlers the cards call are useCallback'd: the memo comparator below treats a new function
-  // identity as "this card must re-render", so an inline arrow here would silently undo the whole
-  // memo on every poll. resumeTrainingRunFromHistory is itself useCallback'd with empty deps and
-  // the state setters are stable, so these change identity only when the props they read do.
-  const handleResume = useCallback(
-    async (runId: string) => {
-      setResumeTarget(runId);
-      try {
-        const ok = await resumeTrainingRunFromHistory(runId);
-        if (ok) {
-          onResumeStarted?.();
-        }
-      } finally {
-        setResumeTarget(null);
-      }
-    },
-    [resumeTrainingRunFromHistory, onResumeStarted],
-  );
-
-  const openAnnotations = useCallback((run: TrainingRunSummary) => {
-    setAnnotationTags((run.tags ?? []).join(", "));
-    setAnnotationNotes(run.notes ?? "");
-    setAnnotationTarget(run);
-  }, []);
-
-  const requestDelete = useCallback(
-    (runId: string) => setDeleteTarget(runId),
-    [],
-  );
-
-  const saveAnnotations = async () => {
-    const target = annotationTarget;
-    if (!target) return;
-    setSavingAnnotations(true);
+  const handleResume = async (runId: string) => {
+    setResumeTarget(runId);
     try {
-      const updated = await updateTrainingRun(target.id, {
-        tags: annotationTags
-          .split(",")
-          .map((tag) => tag.trim())
-          .filter(Boolean),
-        notes: annotationNotes.trim() ? annotationNotes.trim() : null,
-      });
-      emitTrainingRunUpdated(updated);
-      setAnnotationTarget(null);
-      toast.success(t("studio.history.annotationsSaved"));
-    } catch (err) {
-      toast.error(t("studio.history.annotationsError"), {
-        description: err instanceof Error ? err.message : undefined,
-      });
+      const ok = await resumeTrainingRunFromHistory(runId);
+      if (ok) {
+        onResumeStarted?.();
+      }
     } finally {
-      setSavingAnnotations(false);
+      setResumeTarget(null);
     }
   };
 
-  const hasFilters = query.trim().length > 0 || activeTag !== null;
-  const toolbar = (
-    <div className="flex flex-col gap-2">
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="relative min-w-0 flex-1 sm:max-w-sm">
-          <HugeiconsIcon
-            icon={Search01Icon}
-            className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
-          />
-          <Input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder={t("studio.history.searchPlaceholder")}
-            aria-label={t("studio.history.searchPlaceholder")}
-            className="pl-9"
-          />
-        </div>
-        <div
-          className="flex flex-wrap items-center gap-1.5"
-          role="group"
-          aria-label={t("studio.history.filterByTag")}
-        >
-          <Button
-            size="xs"
-            variant={activeTag === null ? "default" : "outline"}
-            className="h-7 px-2.5 text-ui-11"
-            aria-pressed={activeTag === null}
-            onClick={() => setActiveTag(null)}
-          >
-            {t("studio.history.allRuns")}
-          </Button>
-          {knownTags.map((tag) => (
-            <Button
-              key={tag}
-              size="xs"
-              variant={activeTag === tag ? "default" : "outline"}
-              className="h-7 px-2.5 text-ui-11"
-              aria-pressed={activeTag === tag}
-              onClick={() => setActiveTag(activeTag === tag ? null : tag)}
-            >
-              #{tag}
-            </Button>
-          ))}
-        </div>
+  if (!loading && error && runs.length === 0) {
+    return (
+      <div
+        className="flex flex-col items-center gap-2 py-16 text-center"
+        aria-label={t("studio.history.title")}
+      >
+        <p className="text-sm text-destructive">{error}</p>
+        <Button variant="outline" size="sm" onClick={() => void fetchRuns(0)}>
+          {t("studio.history.retry")}
+        </Button>
       </div>
-    </div>
-  );
+    );
+  }
 
   if (!loading && runs.length === 0) {
     return (
-      <>
-        {toolbar}
-        <div
-          className="flex flex-col items-center gap-2 py-16 text-center"
-          aria-label={t("studio.history.title")}
-        >
-          <p
-            className={cn(
-              "text-sm",
-              error ? "text-destructive" : "text-muted-foreground",
-            )}
-          >
-            {error ??
-              (hasFilters
-                ? t("studio.history.noMatches")
-                : t("studio.history.emptyDescription"))}
-          </p>
-          {error && (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => void fetchRuns(0)}
-            >
-              {t("studio.history.retry")}
-            </Button>
-          )}
-        </div>
-      </>
+      <div
+        className="flex flex-col items-center gap-2 py-16 text-center"
+        aria-label={t("studio.history.title")}
+      >
+        <p className="text-sm text-muted-foreground">
+          {t("studio.history.emptyDescription")}
+        </p>
+      </div>
     );
   }
 
@@ -974,37 +456,211 @@ export function HistoryCardGrid({
 
   return (
     <div className="contents" aria-label={t("studio.history.title")}>
-      {toolbar}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 4xl:grid-cols-4">
-        {runs.map((run, index) =>
-          shouldRenderRow(index, windowRows) ? (
-            <HistoryCard
-              key={historyCardKey(run)}
-              run={run}
-              wasContinued={
-                run.resumed_later || wasContinuedInVisibleRuns(run, runs)
-              }
-              isResuming={resumeTarget === run.id}
-              startBlocked={startBlocked}
-              stopRequested={stopRequested}
-              style={contentVisibilityStyle(windowRows, index)}
-              t={t}
-              locale={locale}
-              onSelectRun={onSelectRun}
-              onResume={handleResume}
-              onEditAnnotations={openAnnotations}
-              onDeleteRun={requestDelete}
-            />
-          ) : null,
-        )}
+        {runs.map((run) => {
+          const wasContinued =
+            run.resumed_later || wasContinuedInVisibleRuns(run, runs);
+          const badge = wasContinued
+            ? statusBadge.resumed_later
+            : (statusBadge[run.status] ?? statusBadge.error);
+          const isRunning = run.status === "running";
+          const artifactsMissing = shouldShowTrainingArtifactsDeleted(run);
+          const canResume =
+            run.can_resume && !wasContinued && !artifactsMissing;
+          const isResuming = resumeTarget === run.id;
+
+          const title = getTrainingRunDisplayTitle(run);
+          const modelSubtitle = getTrainingRunModelSubtitle(run);
+          const cardId = `training-run-${encodeURIComponent(run.id)}`;
+
+          const projectSubtitle =
+            run.project_name && title !== run.project_name
+              ? run.project_name
+              : null;
+          // The /p link 404s without the signature.
+          const canCopyPreview = !!run.preview_ref && !!run.preview_sig;
+          return (
+            <div
+              key={run.id}
+              className={cn(
+                "elevated-card group relative h-[calc(11.5rem*var(--ui-space-scale,1))] cursor-pointer bg-card transition-colors hover:bg-accent/30",
+                isRunning && "!border-blue-400/50 dark:!border-blue-500/30",
+              )}
+            >
+              <button
+                type="button"
+                aria-labelledby={`${cardId}-title`}
+                aria-describedby={`${cardId}-status ${cardId}-details ${cardId}-metrics`}
+                className={cn(
+                  "relative z-0 flex h-full w-full cursor-pointer select-text flex-col gap-3 rounded-[inherit] border-0 bg-transparent p-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                  (canResume || canCopyPreview) && "gap-2",
+                )}
+                onClick={(event) => {
+                  if (
+                    event.detail > 0 &&
+                    hasTextSelectionWithin(event.currentTarget)
+                  ) {
+                    return;
+                  }
+                  onSelectRun(run.id);
+                }}
+              >
+                <span
+                  id={`${cardId}-status`}
+                  className="flex items-center justify-between pr-6"
+                >
+                  <span
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-ui-10 font-semibold",
+                      badge.className,
+                    )}
+                  >
+                    {isRunning && <Spinner className="size-2.5" />}
+                    {formatStatusLabel(
+                      wasContinued ? "resumed_later" : run.status,
+                      t,
+                    )}
+                  </span>
+                  {artifactsMissing && (
+                    <span className="inline-flex items-center rounded-full bg-[color-mix(in_oklab,var(--foreground)_calc(5%*var(--contrast-wash-gain,1)),transparent)] px-2 py-0.5 text-ui-10 font-medium text-muted-foreground dark:bg-[rgb(255_255_255_/_calc(0.06*var(--contrast-wash-gain,1)))]">
+                      {t("studio.history.filesDeleted")}
+                    </span>
+                  )}
+                  <span className="text-ui-10 text-muted-foreground">
+                    {formatRunRelativeTime(run.started_at, t, locale)}
+                  </span>
+                </span>
+                <span className="block min-w-0 cursor-text">
+                  <span
+                    id={`${cardId}-title`}
+                    className="block truncate text-sm font-medium"
+                    title={title}
+                  >
+                    {title}
+                  </span>
+                  <span id={`${cardId}-details`} className="block">
+                    {modelSubtitle && (
+                      <span
+                        className="block truncate text-xs text-muted-foreground"
+                        title={modelSubtitle}
+                      >
+                        {modelSubtitle}
+                      </span>
+                    )}
+                    <span
+                      className="block truncate text-xs text-muted-foreground"
+                      title={run.dataset_name}
+                    >
+                      {run.dataset_name}
+                    </span>
+                    {projectSubtitle && (
+                      <span
+                        className="block truncate text-xs text-muted-foreground/80"
+                        title={projectSubtitle}
+                      >
+                        {projectSubtitle}
+                      </span>
+                    )}
+                  </span>
+                </span>
+                {run.loss_sparkline && run.loss_sparkline.length >= 2 && (
+                  <span
+                    className={cn(
+                      "block",
+                      (canResume || canCopyPreview) && "h-7 overflow-hidden",
+                    )}
+                  >
+                    <Sparkline
+                      values={run.loss_sparkline}
+                      id={run.id}
+                      ariaLabel={t("studio.history.lossTrendSparkline")}
+                    />
+                  </span>
+                )}
+                <span
+                  id={`${cardId}-metrics`}
+                  className="flex flex-wrap gap-x-4 gap-y-1 text-ui-11 text-muted-foreground"
+                >
+                  <span>
+                    {t("studio.history.loss")}:{" "}
+                    {run.final_loss != null ? run.final_loss.toFixed(4) : "--"}
+                  </span>
+                  <span>
+                    {t("studio.history.steps")}: {run.final_step ?? 0}/
+                    {run.total_steps ?? "--"}
+                  </span>
+                  <span>{formatDuration(run.duration_seconds)}</span>
+                </span>
+              </button>
+              {canResume && (
+                <Button
+                  type="button"
+                  size="xs"
+                  variant="outline"
+                  className="absolute bottom-3 left-4 z-10 h-6 rounded-full px-2.5 text-ui-11 leading-none shadow-sm"
+                  disabled={startBlocked || isResuming}
+                  onClick={() => void handleResume(run.id)}
+                >
+                  {stopRequested
+                    ? t("studio.training.stopping")
+                    : isResuming
+                      ? t("studio.history.resuming")
+                      : t("studio.history.resumeTraining")}
+                </Button>
+              )}
+              {canCopyPreview && (
+                <Button
+                  type="button"
+                  size="xs"
+                  variant="outline"
+                  className="absolute bottom-3 right-4 z-10 h-6 rounded-full px-2.5 text-ui-11 leading-none shadow-sm"
+                  onClick={async (e) => {
+                    e.stopPropagation();
+                    try {
+                      await fetchDeviceType({ force: true });
+                    } catch {
+                      // Fall back to the last known server URL or this origin.
+                    }
+                    // Keep "/" so the /p route matches.
+                    const ref = (run.preview_ref ?? "")
+                      .split("/")
+                      .map(encodeURIComponent)
+                      .join("/");
+                    const { cloudflareUrl, serverUrl } =
+                      usePlatformStore.getState();
+                    const base = (
+                      cloudflareUrl ??
+                      serverUrl ??
+                      window.location.origin
+                    ).replace(/\/+$/, "");
+                    const url = `${base}/p/${ref}?k=${encodeURIComponent(run.preview_sig ?? "")}`;
+                    const ok = await copyToClipboard(url);
+                    toast[ok ? "success" : "error"](
+                      t(
+                        ok
+                          ? "studio.history.previewLinkCopied"
+                          : "studio.history.previewLinkCopyFailed",
+                      ),
+                    );
+                  }}
+                >
+                  {t("studio.history.copyPreviewLink")}
+                </Button>
+              )}
+              {!isRunning && (
+                <button
+                  type="button"
+                  className="absolute right-3 top-3 z-10 rounded-full p-1 text-muted-foreground/50 opacity-0 transition-opacity hover:bg-destructive/10 hover:text-destructive group-hover:opacity-100 focus-visible:opacity-100 pointer-coarse:opacity-100"
+                  aria-label={t("studio.history.deleteRun")}
+                  onClick={() => setDeleteTarget(run.id)}
+                >
+                  <HugeiconsIcon icon={TrashIcon} className="size-3.5" />
+                </button>
+              )}
+            </div>
+          );
+        })}
       </div>
-      {windowRows < runs.length && (
-        <div
-          ref={sentinelRef}
-          aria-hidden="true"
-          className="pointer-events-none h-px w-full"
-        />
-      )}
       {runs.length < total && (
         <div className="mt-4 flex justify-center">
           <Button
@@ -1024,7 +680,7 @@ export function HistoryCardGrid({
           {["first", "second", "third"].map((skeletonId) => (
             <div
               key={`skeleton-${skeletonId}`}
-              className="h-40 animate-pulse rounded-xl border bg-muted/30"
+              className="h-40 animate-pulse rounded-2xl border bg-muted/30"
             />
           ))}
         </div>
@@ -1089,62 +745,6 @@ export function HistoryCardGrid({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-      <Dialog
-        open={annotationTarget !== null}
-        onOpenChange={(open) => {
-          if (!open) setAnnotationTarget(null);
-        }}
-      >
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle>{t("studio.history.annotationsTitle")}</DialogTitle>
-            <DialogDescription>
-              {t("studio.history.annotationsDescription")}
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col gap-4">
-            <label className="flex flex-col gap-1.5">
-              <span className="text-sm font-medium">
-                {t("studio.history.tagsLabel")}
-              </span>
-              <Input
-                value={annotationTags}
-                onChange={(event) => setAnnotationTags(event.target.value)}
-                placeholder={t("studio.history.tagsPlaceholder")}
-                maxLength={400}
-              />
-              <span className="text-xs text-muted-foreground">
-                {t("studio.history.tagsHint")}
-              </span>
-            </label>
-            <label className="flex flex-col gap-1.5">
-              <span className="text-sm font-medium">
-                {t("studio.history.notesLabel")}
-              </span>
-              <Textarea
-                value={annotationNotes}
-                onChange={(event) => setAnnotationNotes(event.target.value)}
-                placeholder={t("studio.history.notesPlaceholder")}
-                maxLength={2000}
-                className="min-h-24 rounded-xl"
-              />
-            </label>
-          </div>
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setAnnotationTarget(null)}>
-              {t("common.cancel")}
-            </Button>
-            <Button
-              onClick={() => void saveAnnotations()}
-              disabled={savingAnnotations}
-            >
-              {savingAnnotations
-                ? t("studio.history.loading")
-                : t("common.save")}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }

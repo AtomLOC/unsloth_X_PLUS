@@ -18,7 +18,7 @@ import { useT } from "@/i18n";
 import { isEngineGpuDevice, useGpuDevices } from "@/hooks/use-gpu-info";
 import { formatGiB } from "@/lib/memory/format";
 import { cn } from "@/lib/utils";
-import { useEffect, useRef, useState } from "react";
+import { type Ref, useEffect, useRef, useState } from "react";
 import {
   type EngineStatus,
   type InferenceEngine,
@@ -171,7 +171,7 @@ export function EngineInstall({
           {management && isOwner && engine.installed && (
             <Button
               size="sm"
-              variant="ghost"
+              variant="destructive"
               disabled={busy || engine.in_use}
               onClick={() => void action("remove")}
             >
@@ -220,6 +220,7 @@ export function EngineInstall({
           <p>{t("managedEngines.background")}</p>
           <div className={cn("flex gap-2", centered && "justify-center pt-3")}>
             <Button
+              variant="dark"
               size={centered ? "default" : "sm"}
               disabled={busy}
               onClick={() => void action("install")}
@@ -259,7 +260,9 @@ export function EngineInstall({
   );
 }
 
-export function InferenceEnginesSection() {
+export function InferenceEnginesSection({
+  ref,
+}: { ref?: Ref<HTMLElement> } = {}) {
   const t = useT();
   const isOwner = useIsAccountOwner();
   const { engines, error } = useEngines();
@@ -267,11 +270,8 @@ export function InferenceEnginesSection() {
   const engineNote = (engine: EngineStatus) =>
     engine.unsupported_reason ||
     (isOwner || engine.installed ? undefined : t("managedEngines.ownerRequired"));
-  return (
-    <SettingsSection
-      title={t("managedEngines.title")}
-      description={t("managedEngines.description")}
-    >
+  const rows = (
+    <>
       {error && <p role="alert">{error}</p>}
       {engines.map((engine) => (
         <SettingsRow
@@ -282,6 +282,15 @@ export function InferenceEnginesSection() {
           <EngineInstall engine={engine} management={true} />
         </SettingsRow>
       ))}
+    </>
+  );
+  return (
+    <SettingsSection
+      ref={ref}
+      title={t("managedEngines.title")}
+      description={t("managedEngines.description")}
+    >
+      {rows}
     </SettingsSection>
   );
 }
@@ -422,7 +431,7 @@ export function InferenceEnginePicker({
                       {device.index}: {device.name}
                     </span>
                     <Switch
-                      className="panel-switch shrink-0"
+                      className="shrink-0"
                       aria-label={`GPU ${device.index}: ${device.name}`}
                       checked={checked}
                       disabled={checked && selectedGpuIds.length === 1}

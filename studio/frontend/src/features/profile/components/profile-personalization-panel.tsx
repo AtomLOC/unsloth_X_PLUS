@@ -15,15 +15,15 @@ import { getAuthToken } from "@/features/auth";
 import { cn } from "@/lib/utils";
 import { useT } from "@/i18n";
 import { toastError, toastSuccess } from "@/shared/toast";
+import { TrashIcon } from "@/lib/hugeicons-derived";
 import {
-  Delete02Icon,
   Edit03Icon,
-  Image01Icon,
+  ImageIcon,
   Upload01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useId, useRef, useState } from "react";
-import { PROFILE_AVATARS } from "../sloth-avatars";
+import { SLOTH_AVATARS } from "../sloth-avatars";
 import { loginDisplayName } from "../hooks/use-effective-profile";
 import { decodeJwtSubject } from "../utils/jwt-subject";
 import { resizeImageFileToDataUrl } from "../utils/resize-image-file";
@@ -34,9 +34,7 @@ import {
 import { UserAvatar } from "./user-avatar";
 
 const PROFILE_STORAGE_KEY = "unsloth_user_profile";
-// Avatar tiles ship as SVG; the PNG suffix stays stripped because a user-chosen upload can
-// still arrive with either extension.
-const SVG_SUFFIX = /\.svg$/i;
+const SLOTH_NAME = /^large\s+/i;
 const PNG_SUFFIX = /\.png$/i;
 
 function readPersistedProfile(): {
@@ -50,7 +48,6 @@ function readPersistedProfile(): {
     const parsed = JSON.parse(raw) as unknown;
     if (!parsed || typeof parsed !== "object") return null;
 
-    // Zustand persist shape: { state: {...}, version }
     const maybeState =
       "state" in parsed ? (parsed as { state?: unknown }).state : parsed;
     if (!maybeState || typeof maybeState !== "object") return null;
@@ -93,9 +90,8 @@ export function ProfilePersonalizationPanel() {
   const lastNicknameRef = useRef(nickname);
 
   const sessionSub = decodeJwtSubject(getAuthToken()) ?? "";
-  // Fallback only: the draft being typed still wins over this.
   const loginName = loginDisplayName(sessionSub);
-  const previewName = draftName.trim() || loginName || "X-";
+  const previewName = draftName.trim() || loginName || "Unsloth";
 
   useEffect(() => {
     const previous = lastDisplayNameRef.current;
@@ -109,8 +105,6 @@ export function ProfilePersonalizationPanel() {
     setDraftNickname((draft) => (draft === previous ? nickname : draft));
   }, [nickname]);
 
-  // Committed on blur and on Enter rather than behind a Save button, so each
-  // field is a single row like the rest of Settings.
   const saveName = () => {
     const trimmed = draftName.trim();
     if (trimmed !== draftName) setDraftName(trimmed);
@@ -145,9 +139,7 @@ export function ProfilePersonalizationPanel() {
     }
   };
 
-  // Escape, or any programmatic close, unmounts the tab without dispatching a
-  // blur, which would drop whatever was typed. Commit the drafts on the way
-  // out; both saves no-op on an unchanged value, so a double commit is safe.
+  // Escape unmounts without a blur, so commit drafts on the way out; saves no-op when unchanged.
   const flushDrafts = useRef<() => void>(() => {});
   useEffect(() => {
     flushDrafts.current = () => {
@@ -183,10 +175,8 @@ export function ProfilePersonalizationPanel() {
     }
   };
 
-  // The avatar is shown all over the app (sidebar, chat messages, greeting),
-  // so writing it to the store can trigger a wide re-render. Mark the picked
-  // value locally first so its ring moves this frame, then commit the store
-  // write on the next frame. Boxed because null is a valid pick (no picture).
+  // The avatar store write re-renders widely, so mark the pick locally first and commit next frame.
+  // Boxed because null is a valid pick.
   const [pendingAvatar, setPendingAvatar] = useState<{
     value: string | null;
   } | null>(null);
@@ -219,8 +209,6 @@ export function ProfilePersonalizationPanel() {
 
       <div className="flex items-center gap-10 py-6 pr-2">
         <div className="relative shrink-0">
-          {/* The picture itself is the shortcut to "upload a photo"; the pencil
-              opens the rest of the options. */}
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
@@ -235,7 +223,7 @@ export function ProfilePersonalizationPanel() {
             />
             <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/45 opacity-0 any-pointer-coarse:opacity-100 transition-opacity group-hover:opacity-100">
               <HugeiconsIcon
-                icon={Image01Icon}
+                icon={ImageIcon}
                 className="size-8 text-white"
                 strokeWidth={2}
               />
@@ -296,7 +284,7 @@ export function ProfilePersonalizationPanel() {
                   type="button"
                   variant="outline"
                   onClick={() => fileInputRef.current?.click()}
-                  className="h-9 w-fit gap-2 rounded-full px-4 text-sm"
+                  className="w-fit gap-2 rounded-full text-sm"
                 >
                   <HugeiconsIcon
                     icon={Upload01Icon}
@@ -315,7 +303,7 @@ export function ProfilePersonalizationPanel() {
                   className="size-9 shrink-0 rounded-full p-0 text-muted-foreground"
                 >
                   <HugeiconsIcon
-                    icon={Delete02Icon}
+                    icon={TrashIcon}
                     className="size-4"
                     strokeWidth={2}
                   />
@@ -327,7 +315,7 @@ export function ProfilePersonalizationPanel() {
                   {t("settings.profile.chooseSloth")}
                 </span>
                 <div className="grid grid-cols-7 gap-2 max-[400px]:grid-cols-6">
-                  {PROFILE_AVATARS.map((path) => {
+                  {SLOTH_AVATARS.map((path) => {
                     const url = publicAssetUrl(path);
                     const selected = shownAvatar === url;
                     const label =
@@ -335,8 +323,8 @@ export function ProfilePersonalizationPanel() {
                         .split("/")
                         .pop()
                         ?.replace(PNG_SUFFIX, "")
-                        .replace(SVG_SUFFIX, "")
-                        .trim() ?? "avatar";
+                        .replace(SLOTH_NAME, "")
+                        .trim() ?? "sloth";
                     return (
                       <button
                         key={path}
@@ -346,8 +334,7 @@ export function ProfilePersonalizationPanel() {
                         aria-label={label}
                         title={label}
                         className={cn(
-                          // No transition here: animating the ring makes the old
-                          // icon's selection border linger when switching sloths.
+                          // No transition: animating the ring makes the old selection border linger.
                           "relative aspect-square overflow-hidden rounded-full bg-muted ring-1 ring-border hover:ring-ring focus-visible:outline-none focus-visible:ring-ring",
                           selected &&
                             "ring-2 ring-ring-strong hover:ring-ring-strong",
@@ -395,7 +382,7 @@ export function ProfilePersonalizationPanel() {
                 }
               }}
               autoComplete="off"
-              placeholder={loginName || "X-"}
+              placeholder={loginName || "Unsloth"}
               className="h-9 w-full rounded-full text-sm"
             />
           </div>

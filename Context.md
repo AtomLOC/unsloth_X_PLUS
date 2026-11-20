@@ -296,8 +296,8 @@ on a run that takes hours, which does not pay for either risk.
 
 The NRC-2 → NRC-3 licence rename is not part of the webhook work described here,
 but it is no longer sitting uncommitted: this session committed it as `ee59feed3`
-on `x8-main` (the Studio tree — `LICENSE-NRC-3.md`, `core/advanced/nrc_license.py`,
-`README.md`, `scripts/release_x8_local.py`, and the header-only edits across the
+on `x+-main` (the Studio tree — `LICENSE-NRC-3.md`, `core/advanced/nrc_license.py`,
+`README.md`, `scripts/release_x_plus_local.py`, and the header-only edits across the
 labs and advanced modules, `core/training/fit.py` and the frontend labs files,
 51 files) and as `e835b40cb` on `XE-Main` (the features tree, 13 files), both
 pushed. Still uncommitted: `docs/releases/2026.5.0.md` and the other untracked
@@ -310,8 +310,8 @@ Delivered. The six paths that belong to this thread — `Context.md`,
 `studio/backend/core/advanced/resources.py`,
 `studio/backend/tests/test_labs_artifacts.py` and
 `studio/backend/tests/test_advanced_resources.py` — are committed as `56ffc47cf`
-on branch `x8-growth-policy`, pushed to the `x8` remote, and open as PR #20
-against `x8-main` with no auto-merge:
+on branch `x-plus-growth-policy`, pushed to the `x8` remote, and open as PR #20
+against `x+-main` with no auto-merge:
 https://github.com/GoldodemonINC/unsloth_8X/pull/20
 
 Two further commits ride the same branch: `eaa37fbeb` records the `observe_progress`
@@ -321,7 +321,7 @@ The index is clean. The other 43 entries in `git status` belong to concurrent
 sessions — 24 modified files under `studio/frontend/` (that session owns the
 frontend gate matrix), plus untracked `.playtest-library/`, `AGENTS.md`,
 `Project skills/`, `docs/releases/2026.5.0.md` and
-`studio/src-tauri/x8-updater.key.pub`. Stage by name, never `git add -A`.
+`studio/src-tauri/x-plus-updater.key.pub`. Stage by name, never `git add -A`.
 
 Backend gate for this thread has run: 268 passed, exit 0, across the four webhook
 suites and the eight labs and advanced suites. No backend lint gate is wired —
@@ -441,7 +441,7 @@ rather than hidden.
 
 ## Published
 
-The series is cut and public. Tags `v1.0.0`, `v1.1.0`, `v1.2.0`, `v1.2.1` on `x8-main`, each with a
+The series is cut and public. Tags `v1.0.0`, `v1.1.0`, `v1.2.0`, `v1.2.1` on `x+-main`, each with a
 release whose body is the matching `docs/releases/` file:
 
 - `v1.0.0` (`9dbca5622`) — compute-target registry, integrated-GPU budget, target environment,
@@ -556,7 +556,7 @@ bounded at 2048 entries, keys the cache inventory so two identical calls walk on
 AMX/AVX512-BF16 CPUs instead of blanket fp32, and `xpu.py` says which PyTorch build is installed and
 pins `ONEAPI_DEVICE_SELECTOR` for hybrid machines.
 
-**The mark.** `images/logo-x-minus*.svg`, four constructions of X-in-blue + dash-in-lighter-blue, with
+**The mark.** `images/logo-x-plus*.svg`, four constructions of X-in-blue + dash-in-lighter-blue, with
 `images/logo-options.html` to pick from. The one-ink file is `currentColor` and only works inlined --
 an SVG through `<img>` cannot inherit it and paints black; that is stated in the file, the options page
 and the README, because it is the kind of thing that gets discovered in production otherwise.
@@ -581,7 +581,7 @@ writes the favicon (PNG + SVG + ICO), the PWA icons, the sidebar's circle logo, 
 screens' sticker, the hub avatar, and the Tauri icons for Windows, Linux and macOS. Changing a colour
 there changes every icon, which is the point -- hand-exported icon sets drift within a week.
 
-`images/logo-x-minus-icon.svg` carries the same geometry for anything that wants vector. The earlier
+`images/logo-x-plus-icon.svg` carries the same geometry for anything that wants vector. The earlier
 constructions (horizontal, stacked-no-plate, one-ink) stay in `images/` as alternates, and
 `images/logo-options.html` now leads with the pick.
 
@@ -591,7 +591,7 @@ now carry the new bytes, so nothing had to change but the images themselves.
 
 ## Why the dash went missing
 
-The first `logo-x-minus-icon.svg` had two silent failures, both worth remembering because neither
+The first `logo-x-plus-icon.svg` had two silent failures, both worth remembering because neither
 raises anything:
 
 1. **`objectBoundingBox` gradients on a horizontal line.** The dash's bounding box has zero height, so
@@ -608,12 +608,12 @@ paint server still draws the dash instead of leaving a gap where the mark's seco
 
 ## Releases needed something to install (v1.4.0 and after)
 
-The releases had been notes-only. `release-x8.yml` refuses to publish an unsigned Windows installer --
+The releases had been notes-only. `release-x-plus.yml` refuses to publish an unsigned Windows installer --
 correctly, because the updater verifies a signature against the pubkey baked into the build, and an
 unsigned build installs once and never updates. Two things were missing, not one:
 
 1. **No `TAURI_SIGNING_PRIVATE_KEY` secret** on this repository, and no private half for the pubkey in
-   `tauri.conf.json`. The `.gitignore` already reserved `studio/src-tauri/x8-updater.key`, so the
+   `tauri.conf.json`. The `.gitignore` already reserved `studio/src-tauri/x-plus-updater.key`, so the
    intended workflow was there; the key had never been generated here. It has been now: the private
    half is in the repository secret and on disk (ignored), the `.pub` is committed, and the config's
    `pubkey` names it. **This is an identity change**: builds made before it verify updates against the
@@ -623,9 +623,9 @@ unsigned build installs once and never updates. Two things were missing, not one
    comment, in the `latest.json` asset URL, and in the post-upload check that compares the published
    manifest against an expected URL. A build published from here would have handed every client a
    manifest pointing into another repository's release, where the asset name and the signature do not
-   exist. All three name `Goldodemon-Automation/unsloth_X-` now.
+   exist. All three name `Goldodemon-Automation/unsloth_X_PLUS` now.
 
-Verified end to end: `gh workflow run "Release X8 Desktop (Windows)" -f version=1.4.0` built all three
+Verified end to end: `gh workflow run "Release X+ Desktop (Windows)" -f version=1.4.0` built all three
 flavors in ~17 minutes and the release now carries `Unsloth_1.4.0_x64-{cpu,cpu-gpu,gpu}-setup.exe`,
 their `.sig` files, and a `latest.json` whose signature and URL were read back from the published
 asset. Earlier tags cannot be backfilled honestly: their commits embed the old pubkey, so a build from
@@ -633,7 +633,7 @@ them would be signed with a key those builds do not trust. `v1.4.0` is the first
 
 ## Where the signing key lives
 
-The private half of the updater key is at `C:\UpdatingKey\x8-updater.key`, beside its `.pub` and a
+The private half of the updater key is at `C:\UpdatingKey\x-plus-updater.key`, beside its `.pub` and a
 `README.txt` that says what it is for and what happens if it is lost. The directory's inheritance is
 broken and only the user account and SYSTEM have full control; the files inherit from it, so nothing
 else on the machine can read a signing key by default. No password was set on the key, because GitHub
@@ -643,7 +643,7 @@ The working copy under `studio/src-tauri/` stays (it is gitignored) so a local `
 without copying files around. Both copies hash to `0fe45b728144830e…`; the repository secret
 `TAURI_SIGNING_PRIVATE_KEY` was set from that exact content.
 
-The public half is committed at `studio/src-tauri/x8-updater.key.pub` and is what every build verifies
+The public half is committed at `studio/src-tauri/x-plus-updater.key.pub` and is what every build verifies
 against. Losing the private key means no future updates: the only recovery is a new keypair, a new
 build carrying its public half, and a reinstall for everyone already on an earlier build.
 

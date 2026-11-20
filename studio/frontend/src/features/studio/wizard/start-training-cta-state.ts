@@ -10,7 +10,6 @@ export function resolveStartTrainingButtonLabelKey({
   isCheckingDataset,
   hasModel,
   hasDataset,
-  simulated = false,
 }: {
   stopRequested: boolean;
   startBlocked: boolean;
@@ -18,17 +17,12 @@ export function resolveStartTrainingButtonLabelKey({
   isCheckingDataset: boolean;
   hasModel: boolean;
   hasDataset: boolean;
-  /** A simulated run needs no model, dataset or GPU, so none of those gate it. */
-  simulated?: boolean;
 }): TranslationKey {
   if (stopRequested) {
     return "studio.training.stopping";
   }
   if (startBlocked) {
     return "studio.training.starting";
-  }
-  if (simulated) {
-    return "studio.training.startSimulated";
   }
   if (isLoadingModel) {
     return "studio.training.loadingModel";

@@ -3,11 +3,10 @@
 
 import { useEffect } from "react";
 
+import { getTrainingStatus } from "../api/train-api";
 // eslint-disable-next-line no-restricted-imports
 import { checkDiskSpace } from "@/features/settings/low-disk-check";
 import { createSingleFlightRequest } from "@/lib/single-flight-request";
-import { getTrainingStatus } from "../api/train-api";
-import { nextPollDelay, shouldStop } from "../lib/poll-policy";
 import {
   isTrainingStatusRequestCurrent,
   trainingStatusRequestKey,
@@ -19,18 +18,8 @@ import {
 
 const WATCH_INTERVAL_MS = 6000;
 
-/**
- * Keep training state fresh while a run is active, even off the Train page.
- *
- * The lifecycle poll (`useTrainingRuntimeLifecycle`) only runs while Train is mounted, so a run
- * finishing on another tab would leave the sidebar spinner stuck. Polls `/api/train/status` only
- * while a run is in progress. Mount once in an always-rendered shell.
- *
- * The poll runs on one timeout loop instead of a fixed interval: the delay is
- * the base one while the backend answers, a capped backoff while it does not,
- * and longer while the tab is hidden. The loop stops when the run leaves the
- * active state, and it is torn down (with the disk check below) then too.
- */
+/** The lifecycle poll only runs on the Train page; this keeps the sidebar fresh elsewhere.
+ * Mount once in an always-rendered shell. */
 export function useTrainingCompletionWatch(): void {
   const active = useTrainingRuntimeStore(isTrainingStartPending);
 
@@ -39,10 +28,8 @@ export function useTrainingCompletionWatch(): void {
       return;
     }
     let cancelled = false;
-    let timer: ReturnType<typeof setTimeout> | null = null;
-    let failures = 0;
 
-    const tick = createSingleFlightRequest(async (): Promise<boolean> => {
+    const tick = createSingleFlightRequest(async () => {
       const initial = useTrainingRuntimeStore.getState();
       const requestKey = trainingStatusRequestKey(initial);
       try {
@@ -51,75 +38,17 @@ export function useTrainingCompletionWatch(): void {
         if (!cancelled && isTrainingStatusRequestCurrent(requestKey, runtime)) {
           runtime.applyStatus(status);
         }
-        return true;
       } catch {
-        // Transient network/auth hiccup; the next tick retries, later than the
-        // last one did.
-        return false;
+        // Transient network/auth hiccup; the next tick retries.
       }
     });
 
-    const scheduleNext = (failed: boolean) => {
-      if (cancelled) {
-        return;
-      }
-      timer = setTimeout(
-        () => {
-          timer = null;
-          void run();
-        },
-        nextPollDelay({
-          baseMs: WATCH_INTERVAL_MS,
-          // The retry index: the first delay after a failure is the base delay.
-          attempt: Math.max(0, failures - 1),
-          failed,
-          hidden: document.visibilityState === "hidden",
-        }),
-      );
-    };
-
-    const run = async () => {
-      if (cancelled) {
-        return;
-      }
-      const ok = await tick();
-      if (cancelled) {
-        return;
-      }
-      failures = ok ? 0 : failures + 1;
-      if (
-        shouldStop({
-          finished: !isTrainingStartPending(useTrainingRuntimeStore.getState()),
-          attempts: failures,
-          // The watch is the only status poll when the Train page is closed, so
-          // it never gives up for good: a backend that comes back is picked up
-          // again, at the capped delay.
-          maxAttempts: Number.POSITIVE_INFINITY,
-        })
-      ) {
-        return;
-      }
-      scheduleNext(!ok);
-    };
-
-    scheduleNext(false);
-
+    const id = window.setInterval(tick, WATCH_INTERVAL_MS);
     return () => {
       cancelled = true;
-      if (timer !== null) {
-        clearTimeout(timer);
-        timer = null;
-      }
-      // The post-download half of the training disk check. startTraining takes the
-      // reading BEFORE the run; the worker then downloads the base model and any
-      // remote dataset on its own time, so the only honest moment to look again is
-      // when the run stops being active. This cleanup is that moment, and it does
-      // not care whether the run finished or failed: a run that died because the
-      // disk filled is precisely the one worth reporting.
-      //
-      // forced, for the reason the download manager's finalize is forced: the
-      // reading has to be taken AFTER the write, and unforced it would be swallowed
-      // by the interval or handed a figure from before the run.
+      window.clearInterval(id);
+      // Post-download disk check: the worker downloads after start, so look again when the run stops,
+      // finished or failed. Forced so the reading is taken after the writes.
       void checkDiskSpace({ force: true });
     };
   }, [active]);

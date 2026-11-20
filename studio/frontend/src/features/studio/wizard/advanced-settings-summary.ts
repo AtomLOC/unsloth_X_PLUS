@@ -6,18 +6,30 @@ import {
   DEFAULT_HYPERPARAMS,
   resolveCptTargetModules,
 } from "@/config/training";
-import type { AdvancedTrainingState } from "@/features/advanced/types";
 import type {
   AdvancedSettingsBaseline,
   TrainingConfigState,
 } from "@/features/training";
+import { trainingToggleDefaults } from "@/features/training/stores/training-config-policy";
 import { isAdapterMethod } from "@/types/training";
 
 type AdvancedSettingsState = Pick<
   TrainingConfigState,
   "trainingMethod" | keyof AdvancedSettingsBaseline
 > &
-  Partial<Pick<TrainingConfigState, "modelType">>;
+  Partial<
+    Pick<
+      TrainingConfigState,
+      | "modelType"
+      | "isVisionModel"
+      | "isAudioModel"
+      | "isEmbeddingModel"
+      | "isDatasetImage"
+      | "isDatasetAudio"
+      | "datasetStreaming"
+      | "datasetFormat"
+    >
+  >;
 
 const SCALAR_DEFAULTS = {
   optimizerType: DEFAULT_HYPERPARAMS.optimizerType,
@@ -80,14 +92,26 @@ function countNonDefaultScalarSettings(
   state: AdvancedSettingsState,
   baseline: AdvancedSettingsBaseline | null,
 ): number {
+  // Objective/data restrictions turn these off automatically; that is not a user change.
+  const automaticToggles = trainingToggleDefaults({
+    isVisionModel: state.isVisionModel ?? false,
+    isAudioModel: state.isAudioModel ?? false,
+    isEmbeddingModel: state.isEmbeddingModel ?? false,
+    isDatasetImage: state.isDatasetImage ?? null,
+    isDatasetAudio: state.isDatasetAudio ?? false,
+    modelType: state.modelType ?? null,
+    datasetStreaming: state.datasetStreaming ?? false,
+    datasetFormat: state.datasetFormat ?? "auto",
+    trainingMethod: state.trainingMethod,
+  });
   return Object.entries(SCALAR_DEFAULTS).reduce((total, [rawKey, value]) => {
     const key = rawKey as keyof typeof SCALAR_DEFAULTS;
     if (isIgnored(state, key)) {
       return total;
     }
     const expected =
-      key === "trainOnCompletions" && state.trainingMethod === "cpt"
-        ? false
+      key === "packing" || key === "trainOnCompletions"
+        ? baselineValue(baseline, key, value as boolean) && automaticToggles[key]
         : baselineValue(baseline, key, value);
     return state[key] === expected ? total : total + 1;
   }, 0);
@@ -151,23 +175,4 @@ export function countNonDefaultAdvancedSettings(
     return scalarCount;
   }
   return scalarCount + countNonDefaultLoraSettings(state, baseline);
-}
-
-/**
- * Advanced Studio features the run will actually use. They ride alongside the
- * hyperparameter count so the run preview does not claim "Defaults" while QAT,
- * a curriculum, blended streams or a Regression Guard suite are switched on.
- */
-export function countEnabledAdvancedFeatures(
-  advanced: AdvancedTrainingState | undefined,
-): number {
-  if (!advanced) return 0;
-  const flags = [
-    advanced.qatEnabled,
-    advanced.curriculumEnabled,
-    advanced.layerLrEnabled,
-    advanced.blendEnabled,
-    advanced.autoEvalEnabled,
-  ];
-  return flags.filter(Boolean).length;
 }

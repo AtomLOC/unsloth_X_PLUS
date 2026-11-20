@@ -3,15 +3,12 @@
 
 import type { ModelInventoryFormat } from "@/features/hub";
 import type { S3Config } from "@/types/training";
-import type { AdvancedTrainingRequest } from "@/features/advanced/types";
 
 export interface TrainingStartRequest {
   model_name: string;
   actual_model_repo_id?: string | null;
   project_name: string | null;
   training_type: string;
-  /** Named recipe behind training_type. A host with no GPU runs only "cora" or "qlora". */
-  training_preset?: "cora" | "qlora" | null;
   hf_token: string | null;
   model_known_cached?: boolean;
   model_local_path?: string | null;
@@ -20,7 +17,7 @@ export interface TrainingStartRequest {
   load_in_4bit: boolean;
   max_seq_length: number;
   vision_image_size?: number | null;
-  /** Allow loading models with custom code. Only enable for repos you trust. */
+  /** Only enable for repos you trust. */
   trust_remote_code?: boolean;
   /** sha256 fingerprint pinning user approval of this exact custom-code version. */
   approved_remote_code_fingerprint?: string | null;
@@ -36,18 +33,12 @@ export interface TrainingStartRequest {
   dataset_slice_end: number | null;
   local_datasets: string[];
   local_eval_datasets: string[];
-  /** MoE training scope; LoRA/QLoRA only. */
-  moe_expert_scope?: string | null;
-  /** Separate evaluation dataset; null keeps the eval split of the training set. */
-  eval_hf_dataset?: string | null;
-  eval_dataset_subset?: string | null;
-  /** S3 bucket configuration; only sent when the dataset source is "s3". */
   s3_config?: S3Config | null;
   format_type: string;
   custom_format_mapping?: Record<string, unknown> | null;
   num_epochs: number;
   learning_rate: string;
-  /** Optional CPT embedding LR. If omitted, backend uses lr/10; typical range is 2x-10x smaller than main LR. */
+  /** If omitted, the backend uses lr/10. */
   embedding_learning_rate?: number | null;
   batch_size: number;
   gradient_accumulation_steps: number;
@@ -57,9 +48,6 @@ export interface TrainingStartRequest {
   save_steps: number;
   eval_steps: number;
   early_stopping_patience?: number;
-  early_stop_parent_run_id?: string | null;
-  early_stop_patience_steps?: number;
-  early_stop_min_delta?: number;
   weight_decay: number;
   max_grad_norm?: number | null;
   max_grad_value?: number | null;
@@ -98,8 +86,6 @@ export interface TrainingStartRequest {
   resume_from_checkpoint?: string | null;
   /** Omitted unless the user turned drafter training on (requests stay byte-identical otherwise). */
   drafter?: DrafterTrainingRequest;
-  /** Omitted unless an Advanced Studio setting is enabled. */
-  advanced?: AdvancedTrainingRequest;
 }
 
 export interface DrafterTrainingRequest {

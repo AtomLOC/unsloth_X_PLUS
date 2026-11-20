@@ -33,16 +33,12 @@ export function TrainSubNav({
       disabled: !showTrainingView,
     },
     { value: "history", label: t("studio.tabs.history"), disabled: false },
-    { value: "compare", label: t("studio.tabs.compare"), disabled: false },
   ];
   return (
     <TabsList
       unstyled={true}
       data-tour="studio-subnav"
-      // A macOS segmented control: one recessed track, the active segment a raised pill.
-      // The underline rail it replaces had no visible container, so on a page with four
-      // sections the tabs read as stray words rather than as one control.
-      className="train-segmented flex min-w-0 flex-wrap items-center justify-start text-ui-13 tracking-nav"
+      className="flex min-w-0 flex-1 flex-wrap items-center justify-start gap-3 text-ui-13 tracking-nav sm:gap-6"
     >
       {items.map((item) => {
         const active = value === item.value;
@@ -53,10 +49,12 @@ export function TrainSubNav({
             disabled={item.disabled}
             indicatorClassName="hidden"
             className={cn(
-              "train-segment relative h-8 flex-none select-none rounded-full border-0 px-3.5 py-0 text-ui-13 transition-colors disabled:cursor-not-allowed disabled:opacity-40",
+              "relative h-9 flex-none select-none rounded-none border-0 px-0 py-0 text-ui-13 transition-colors disabled:cursor-not-allowed disabled:opacity-40",
+              // TabsTrigger's bottom-[-5px] dropped the bar below the row's border.
+              "after:pointer-events-none after:absolute after:inset-x-0 group-data-[orientation=horizontal]/tabs:after:-bottom-px after:h-[2px] after:rounded-full after:bg-foreground after:transition-opacity",
               active
-                ? "train-segment-active font-semibold text-background"
-                : "text-muted-foreground hover:text-foreground",
+                ? "font-semibold text-foreground after:opacity-100"
+                : "text-muted-foreground hover:text-foreground after:opacity-0",
             )}
           >
             {item.label}

@@ -8,8 +8,6 @@ import {
 import type { SystemInfoResponse } from "@/hooks/use-system";
 import { drafterEligible, drafterRequestFrom } from "../lib/drafter-config";
 import type { TrainingStartRequest } from "../types/api";
-import { buildAdvancedRequest } from "@/features/advanced/types";
-import { CORA_HYPERPARAMS } from "@/config/training";
 import type { TrainingConfigState } from "../types/config";
 
 function parseSliceValue(value: string | null): number | null {
@@ -43,20 +41,13 @@ function buildS3PayloadConfig(config: TrainingConfigState) {
   return s3;
 }
 
-/** Whether this configuration asks the backend for a bnb 4-bit load.
- *
- * Exported so the UI can say what the run will do: the backend refuses 4-bit for models
- * routed to the latest-transformers sidecar, and a preview reading "QLoRA · 4-bit" for a
- * 16-bit run understates its VRAM by a wide margin. */
+/** The backend refuses 4-bit for models routed to the latest-transformers sidecar. */
 export function trainingLoadsIn4Bit(
   config: Pick<TrainingConfigState, "trainingMethod" | "selectedModel">,
 ): boolean {
   const isCpt = config.trainingMethod === "cpt";
   const adapterMethod = config.trainingMethod !== "full";
-  const isQloraMethod =
-    config.trainingMethod === "qlora" ||
-    config.trainingMethod === "rl" ||
-    config.trainingMethod === "cora";
+  const isQloraMethod = config.trainingMethod === "qlora";
   const isFourBitModel = (config.selectedModel ?? "")
     .toLowerCase()
     .includes("4bit");
@@ -64,18 +55,24 @@ export function trainingLoadsIn4Bit(
 }
 
 /** Whether a run can offload layers: LoRA on the main trainer (embedding and decision models
- * train elsewhere, and the Whisper / codec audio paths have no decoder stack to stream) with
- * gradient checkpointing on, which swapped layers need. */
+ * train elsewhere, and the Whisper / codec audio paths have no decoder stack to stream; an
+ * audio-input vision model such as Gemma 3n/4 does) with gradient checkpointing on, which
+ * swapped layers need. */
 export function offloadSupported(
   config: Pick<
     TrainingConfigState,
-    "trainingMethod" | "isEmbeddingModel" | "isAudioModel" | "modelType" | "gradientCheckpointing"
+    | "trainingMethod"
+    | "isEmbeddingModel"
+    | "isAudioModel"
+    | "isVisionModel"
+    | "modelType"
+    | "gradientCheckpointing"
   >,
 ): boolean {
   return (
     config.trainingMethod !== "full" &&
     !config.isEmbeddingModel &&
-    !config.isAudioModel &&
+    (!config.isAudioModel || config.isVisionModel) &&
     config.modelType !== "embeddings" &&
     config.modelType !== "decision" &&
     config.gradientCheckpointing !== "none"
@@ -102,6 +99,7 @@ export function offloadPayload(
     | "trainingMethod"
     | "isEmbeddingModel"
     | "isAudioModel"
+    | "isVisionModel"
     | "modelType"
     | "gradientCheckpointing"
     | "offloadLayers"
@@ -174,6 +172,8 @@ export function buildTrainingStartPayload(
   config: TrainingConfigState,
   hfToken: string | null,
   system: SystemInfoResponse | null = null,
+  // The platform store's isCpuTrainingHost(): settled with the health verdict, unlike /api/system.
+  cpuTrainingHost = false,
 ): TrainingStartRequest {
   const isDecision = config.modelType === "decision";
   // Laya trains in 16-bit (LoRA or full); Clef and an LLM decision model also take QLoRA.
@@ -187,10 +187,6 @@ export function buildTrainingStartPayload(
       ? "lora"
       : config.trainingMethod;
   const isCpt = trainingMethod === "cpt";
-  const isCora = trainingMethod === "cora";
-  // No torch accelerator on this host: the backend runs CoRA through transformers + PEFT on the
-  // CPU, so the payload drops 4-bit loading and LoftQ with it.
-  const cpuHost = system?.device_backend === "cpu";
   const adapterMethod = trainingMethod !== "full";
   const loraVariants = adapterMethod && !isDecision;
   const _selectedModelLower = (config.selectedModel ?? "").toLowerCase();
@@ -213,7 +209,6 @@ export function buildTrainingStartPayload(
       ? { ...config.datasetManualMapping }
       : undefined;
 
-  // Inject conversion advisor metadata into the mapping (__ prefix keys)
   const hasAdvisorMeta =
     config.datasetSystemPrompt ||
     Object.keys(config.datasetLabelMapping).length > 0;
@@ -226,32 +221,17 @@ export function buildTrainingStartPayload(
     }
   }
 
-  const advanced = buildAdvancedRequest(
-    isCora
-      ? { ...config.advanced, qatEnabled: true, layerLrEnabled: true }
-      : config.advanced,
-    {
-      batchSize: config.batchSize,
-      isPolicyAlignment: trainingMethod === "rl",
-    },
-  );
-
   return {
     model_name: config.selectedModel ?? "",
     project_name: (config.projectName || "").trim() || null,
     training_type: toBackendTrainingType(trainingMethod),
-    // Names the recipe for the backend: a CPU-only host runs CoRA or QLoRA and refuses the rest.
-    training_preset: isCora ? "cora" : trainingMethod === "qlora" ? "qlora" : null,
     hf_token: hfToken,
     model_known_cached: config.modelKnownCached,
     model_local_path: config.modelKnownCached ? config.modelLocalPath : null,
     model_format: config.modelFormat,
-    load_in_4bit: cpuHost
-      ? false
-      : trainingLoadsIn4Bit({ ...config, trainingMethod }),
+    load_in_4bit: trainingLoadsIn4Bit({ ...config, trainingMethod }),
     // Hidden for decision runs: Laya always trains at 1024 tokens, Clef and LLMs at the recipe's length.
-    max_seq_length:
-      isCora || (isDecision && !hasLlmBackbone) ? 1024 : config.contextLength,
+    max_seq_length: isDecision && !hasLlmBackbone ? 1024 : config.contextLength,
     vision_image_size:
       config.isVisionModel && config.isDatasetImage === true && !isDeepseekOcr
         ? config.visionImageSize
@@ -266,18 +246,7 @@ export function buildTrainingStartPayload(
       hfDataset && !config.datasetStreaming ? config.datasetLocalPath : null,
     subset: hfDataset ? config.datasetSubset : null,
     train_split: hfDataset ? config.datasetSplit : null,
-    // With a second dataset selected, the eval split belongs to that dataset; its
-    // own "train" split is the usual choice and is what the picker defaults to.
-    eval_split: hfDataset
-      ? config.evalDataset
-        ? (config.evalDatasetSplit ?? "train")
-        : config.datasetEvalSplit
-      : null,
-    eval_hf_dataset: hfDataset ? (config.evalDataset ?? null) : null,
-    eval_dataset_subset: hfDataset ? (config.evalDatasetSubset ?? null) : null,
-    // Full finetuning already trains every expert, and the backend refuses the pair,
-    // so a scope only rides a LoRA/QLoRA run.
-    moe_expert_scope: adapterMethod ? (config.moeExpertScope ?? null) : null,
+    eval_split: hfDataset ? config.datasetEvalSplit : null,
     dataset_streaming:
       hfDataset && !isDecision ? config.datasetStreaming : false,
     dataset_slice_start: parseSliceValue(config.datasetSliceStart),
@@ -296,10 +265,8 @@ export function buildTrainingStartPayload(
       isCpt && config.embeddingLearningRate != null
         ? config.embeddingLearningRate
         : null,
-    batch_size: isCora ? CORA_HYPERPARAMS.batchSize : config.batchSize,
-    gradient_accumulation_steps: isCora
-      ? CORA_HYPERPARAMS.gradientAccumulation
-      : config.gradientAccumulation,
+    batch_size: config.batchSize,
+    gradient_accumulation_steps: config.gradientAccumulation,
     warmup_steps: isEmbedding ? null : config.warmupSteps,
     warmup_ratio: isEmbedding ? 0.03 : null,
     max_steps: config.maxSteps,
@@ -309,46 +276,28 @@ export function buildTrainingStartPayload(
       config.evalSteps > 0 && !isDecision && !isEmbedding
         ? normalizeEarlyStoppingPatience(config.earlyStoppingPatience)
         : 0,
-    early_stop_parent_run_id:
-      config.earlyStopPatienceSteps > 0 ? config.earlyStopParentRunId : null,
-    early_stop_patience_steps:
-      config.earlyStopParentRunId && config.earlyStopPatienceSteps > 0
-        ? Math.min(Math.floor(config.earlyStopPatienceSteps), 100000)
-        : 0,
-    early_stop_min_delta:
-      Number.isFinite(config.earlyStopMinDelta) && config.earlyStopMinDelta > 0
-        ? config.earlyStopMinDelta
-        : 0,
     weight_decay: config.weightDecay,
-    // max_grad_norm omitted on purpose: the backend now honors an explicit value,
-    // so hardcoding 0 here would pin every UI run to "clipping off" and override
-    // that. Guarded by tests/training-start-payload-grad-norm.test.ts.
+    // max_grad_norm omitted on purpose: the backend honors an explicit value. Guarded by
+    // tests/training-start-payload-grad-norm.test.ts.
     max_grad_value: null,
     random_seed: config.randomSeed,
     packing: isEmbedding || isDecision ? false : config.packing,
     // Laya's recipe needs torch AdamW; Clef keeps its recipe's (8-bit) optimizer.
-    // CoRA reads its (device-dependent) optimizer from the applied recipe in the store.
-    optim: isCora
-      ? config.optimizerType
-      : isDecision && config.decisionLayout !== "clef"
+    optim:
+      isDecision && config.decisionLayout !== "clef"
         ? "adamw_torch"
         : config.optimizerType,
-    lr_scheduler_type: isCora
-      ? CORA_HYPERPARAMS.lrSchedulerType
-      : config.lrSchedulerType,
+    lr_scheduler_type: config.lrSchedulerType,
     use_lora: adapterMethod,
-    lora_r: isCora ? CORA_HYPERPARAMS.loraRank : config.loraRank,
-    lora_alpha: isCora ? CORA_HYPERPARAMS.loraAlpha : config.loraAlpha,
+    lora_r: config.loraRank,
+    lora_alpha: config.loraAlpha,
     lora_dropout: config.loraDropout,
     target_modules: adapterMethod ? config.targetModules : [],
     gradient_checkpointing: config.gradientCheckpointing,
     ...offloadPayload(config, trainingGpuIndices(system?.gpu), system),
-    use_rslora: !isCora && loraVariants && config.loraVariant === "rslora",
-    // LoftQ quantizes through bitsandbytes, so CoRA only asks for it where that can run.
-    use_loftq: isCora
-      ? config.loraVariant === "loftq"
-      : loraVariants && config.loraVariant === "loftq",
-    use_dora: !isCora && loraVariants && config.loraVariant === "dora",
+    use_rslora: loraVariants && config.loraVariant === "rslora",
+    use_loftq: loraVariants && config.loraVariant === "loftq",
+    use_dora: loraVariants && config.loraVariant === "dora",
     // CPT always trains on full sequences (no chat format masking)
     train_on_completions:
       isEmbedding || isDecision || isCpt || isRawText
@@ -374,21 +323,19 @@ export function buildTrainingStartPayload(
       ? config.tensorboardDir.trim() || null
       : null,
     // Spread only when sent: a run without a drafter posts exactly the fields it did before.
-    ...(sendsDrafter(config, system)
+    ...(sendsDrafter(config, system, cpuTrainingHost)
       ? { drafter: drafterRequestFrom(config) }
-      : {}),
-    ...(advanced
-      ? { advanced }
       : {}),
   };
 }
 
-/** On, a run type with a drafter phase, not MLX, and not a model the backend said cannot train one.
+/** On, a run type with a drafter phase, not MLX or the CPU backend, and not a model the backend said cannot train one.
  * A capability check still pending (or for a previous model) sends it: the backend re-checks the
  * model before the drafter phase and reports a warning instead of dropping the request silently. */
 export function sendsDrafter(
   config: TrainingConfigState,
   system: SystemInfoResponse | null = null,
+  cpuTrainingHost = false,
 ): boolean {
   const capability = config.drafterCapability;
   const refused =
@@ -400,6 +347,8 @@ export function sendsDrafter(
     config.drafterEnabled &&
     drafterEligible(config) &&
     system?.device_backend !== "mlx" &&
+    !cpuTrainingHost &&
+    system?.device_backend !== "cpu" &&
     !refused
   );
 }

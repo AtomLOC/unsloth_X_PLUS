@@ -9,7 +9,7 @@ commands cited next to it.
 
 | What | Command / method | Finished at |
 |---|---|---|
-| Repro run 1 | `python studio/backend/tests/perf_harness/bench_api.py --iterations 15` (from `C:/Projectas/UnslothX-`) | 22:25:10 |
+| Repro run 1 | `python studio/backend/tests/perf_harness/bench_api.py --iterations 15` (from `C:/Projectas/unsloth_X_PLUS`) | 22:25:10 |
 | Repro run 2 | same command | 22:30:55 |
 | Repro run 3 | same command | 22:34:43 |
 | Profile #1 | `python studio/backend/tests/perf_harness/profile_hotspots.py --iterations 8` | 22:27:59 |

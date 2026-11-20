@@ -17,10 +17,8 @@ export const TARGET_MODULES = [
   "down_proj",
 ];
 
-/** CPT trains embeddings via modules_to_save; keep them visible in the UI. */
 export const CPT_EMBEDDING_MODULES = ["embed_tokens", "lm_head"] as const;
 
-/** CPT requires embed_tokens and lm_head in addition to standard LoRA modules. */
 export const CPT_TARGET_MODULES = [...TARGET_MODULES, ...CPT_EMBEDDING_MODULES];
 
 const CPT_UI_TARGET_MODULES = ["all-linear", ...CPT_TARGET_MODULES] as const;
@@ -39,7 +37,6 @@ export function isCptAllLinearTargetModules(
   );
 }
 
-/** Preserve all-linear model defaults for CPT. */
 export function resolveCptTargetModules(
   currentTargetModules: readonly string[],
 ): string[] {
@@ -112,8 +109,7 @@ export const OPTIMIZER_OPTIONS: ReadonlyArray<{
   { value: "adamw_torch_fused", label: "AdamW (PyTorch Fused)" },
 ];
 
-// MLX trainer optimizers (Apple Silicon); must match SUPPORTED_MLX_OPTIMIZERS in unsloth-zoo's
-// mlx/trainer.py. The CUDA/torch names above are remapped to AdamW on MLX.
+// Must match SUPPORTED_MLX_OPTIMIZERS in unsloth-zoo's mlx/trainer.py.
 export const MLX_OPTIMIZER_OPTIONS: ReadonlyArray<{
   value: string;
   label: string;
@@ -134,41 +130,11 @@ export const LR_SCHEDULER_OPTIONS: ReadonlyArray<{
   { value: "cosine", label: "Cosine" },
 ];
 
-/** Method-aware learning rate defaults; the backend mirrors these in
- * studio/backend/assets/configs/. */
+/** Method-aware LR defaults; mirrored in studio/backend/assets/configs/. */
 export const LR_DEFAULT_LORA = 2e-4;
 export const LR_DEFAULT_FULL = 2e-5;
 export const LR_DEFAULT_CPT = 5e-5;
 export const LR_DEFAULT_DECISION_FULL = 2.5e-5;
-export const LR_DEFAULT_CORA = 1e-4;
-
-export const CORA_HYPERPARAMS = {
-  learningRate: LR_DEFAULT_CORA,
-  loraRank: 8,
-  loraAlpha: 24,
-  loraVariant: "loftq" as const,
-  optimizerType: "paged_adamw_8bit",
-  lrSchedulerType: "cosine",
-  batchSize: 1,
-  gradientAccumulation: 3,
-  contextLength: 1024,
-} as const;
-
-export const CORA_DATASET_MIN_BYTES = 0.01 * 1024 ** 3;
-export const CORA_DATASET_MAX_BYTES = 0.8 * 1024 ** 3;
-
-export function coraDatasetSizeIssue(bytes: number | null | undefined): string | null {
-  if (typeof bytes !== "number" || !Number.isFinite(bytes) || bytes <= 0) {
-    return null;
-  }
-  if (bytes < CORA_DATASET_MIN_BYTES) {
-    return "CoRA expects at least 10 MB of training text.";
-  }
-  if (bytes > CORA_DATASET_MAX_BYTES) {
-    return "CoRA is tuned for at most 0.8 GB of training text; use QLoRA for larger sets.";
-  }
-  return null;
-}
 
 // Also the advanced-settings summary's "unchanged" reference while CPT is selected.
 export const CPT_LORA_HYPERPARAMS = {
@@ -205,8 +171,8 @@ export const DEFAULT_HYPERPARAMS = {
   drafterEpochs: 1,
   drafterLearningRate: null as number | null,
   drafterDraftSteps: 3,
-  packing: false,
-  trainOnCompletions: false,
+  packing: true,
+  trainOnCompletions: true,
   gradientCheckpointing: "unsloth" as const,
   offloadLayers: 0 as number | "auto",
   offloadVramGb: null as number | null,

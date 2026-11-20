@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. See /LICENSE-NRC-3.md
 
 """User-defined evaluation tasks.
 
@@ -22,7 +22,7 @@ same code path as a built-in one. That matters for the comparison report -- two
 different scorers would make the delta meaningless.
 
 Task ids are namespaced ``custom:<slug>`` so a local task can never shadow a
-built-in suite, and the generated lm-eval name is prefixed ``x8_local_`` so it
+built-in suite, and the generated lm-eval name is prefixed ``x_plus_local_`` so it
 cannot shadow an upstream task either.
 """
 
@@ -36,7 +36,7 @@ from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 SUITE_PREFIX = "custom:"
-LM_EVAL_PREFIX = "x8_local_"
+LM_EVAL_PREFIX = "x_plus_local_"
 
 #: Where tasks are read from when no directory is given.
 DEFAULT_DIRECTORY = Path.home() / ".unsloth" / "eval-tasks"

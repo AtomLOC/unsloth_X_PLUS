@@ -5,7 +5,7 @@ with the command shown. Nothing here is estimated.
 
 ## Scope
 
-Repo: `UnslothX-` (Unsloth Studio fork). Backend `studio/backend` (Python 3.13, FastAPI,
+Repo: `unsloth_X_PLUS` (Unsloth Studio fork). Backend `studio/backend` (Python 3.13, FastAPI,
 ~1760 test modules). Frontend `studio/frontend` (React 19 + Vite 8 + Tailwind 4,
 ~1310 test modules, 13 127 individual tests).
 
@@ -76,7 +76,7 @@ Both numbers are in `benchmarks/PERF_FINDINGS.md` and in the final report.
 | # | Task | Owner (model) | Files it may touch |
 | --- | --- | --- | --- |
 | 1 | UI consistency: audit + standardise tokens | MiMo 2.6 Pro (subagent) | `UI_AUDIT.md`, `studio/frontend/src/index.css` |
-| 2 | UI remake: new dark-first shell, branding `X-` | MiMo 2.6 Pro + DeepSeek V4.1 Flash (subagents) | new `studio/frontend/src/app-shell/*`, shell wiring, `index.css` |
+| 2 | UI remake: new dark-first shell, branding `X+` | MiMo 2.6 Pro + DeepSeek V4.1 Flash (subagents) | new `studio/frontend/src/app-shell/*`, shell wiring, `index.css` |
 | 3 | README screenshots | DeepSeek V4.1 Flash (subagent) + me | `docs/screenshots/*`, `README.md` |
 | 4 | Bug hunt (backend + frontend edge cases) | DeepSeek V4.1 Flash (subagent) | one narrow module per bug + its test |
 | 5 | Perf P1 (DNS per request) | DeepAI Cyber (subagent) | `utils/host_policy.py`, `tests/test_host_policy.py` |
@@ -131,7 +131,7 @@ named.
 
 Every change is additive or a narrow replacement in one file; `git stash`/per-file revert
 restores the previous behaviour. The only intentionally user-visible change is the shell
-reskin and the `X-` branding (Task 2), which is reversible by reverting the new shell
+reskin and the `X+` branding (Task 2), which is reversible by reverting the new shell
 module and its wiring.
 
 ## Change log (what actually landed)
@@ -142,7 +142,7 @@ module and its wiring.
 | Perf P2 | `routes/models.py` remembers an unchanged local inventory for 3 s, keyed by the existing epoch + scan-folder key, returns a copy per caller | `tests/test_local_inventory_memo.py` (7 tests) |
 | Perf P3 | `utils/cache_inventory.py` signature-check TTL (delegated) | see `benchmarks/PERF_FINDINGS.md` |
 | UI Task 1 | canonical radius / control-height / icon / type / space / focus tokens; `--radius` derives from the scale; six duplicate dark hover tones collapse to one | `UI_AUDIT.md` |
-| UI Task 2 | dark shipped by default (`theme-boot.js` + `theme-store.ts`); dark identity deepened (`#0b0c0f` page, `#14161a` panels, `#2a2f37` borders); wordmark/title/manifest/profile read **X-** with the logo kept; logo mark untouched | `docs/screenshots/*`, `tests/effective-profile.test.ts`, `tests/profile-login-name-spelling.test.ts` |
+| UI Task 2 | dark shipped by default (`theme-boot.js` + `theme-store.ts`); dark identity deepened (`#0b0c0f` page, `#14161a` panels, `#2a2f37` borders); wordmark/title/manifest/profile read **X+** with the logo kept; logo mark untouched | `docs/screenshots/*`, `tests/effective-profile.test.ts`, `tests/profile-login-name-spelling.test.ts` |
 | UI Task 3 | six real screenshots captured from the served build and embedded in `README.md` | `docs/screenshots/`, `studio/frontend/scripts/capture-screenshots.mjs` |
 | Security | SEC-1/2/5/6/7/8 remediated (delegated); SEC-4 desktop-secret throttled; SEC-5 SecurityHeaders `root_path` fixed | `SECURITY_AUDIT.md`, `tests/test_main_middleware_and_desktop_secret.py` |
 

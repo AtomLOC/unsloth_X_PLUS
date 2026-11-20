@@ -15,8 +15,7 @@ export type DatasetStreamingBlocker =
   | "audioModel"
   | "embeddingModel"
   | "imageDataset"
-  | "audioDataset"
-  | "appleSilicon";
+  | "audioDataset";
 
 export function getFileExtension(fileName: string): string {
   const extensionStart = fileName.lastIndexOf(".");
@@ -39,11 +38,9 @@ export function normalizeSliceInput(value: string): string | null {
 
 export function getDatasetStreamingBlockers({
   datasetEvalSplit,
-  evalDataset,
   datasetSource,
   datasetSplit,
   evalSteps,
-  isAppleSilicon,
   isAudioModel,
   isDatasetAudio,
   isDatasetImage,
@@ -53,11 +50,9 @@ export function getDatasetStreamingBlockers({
   trainOnCompletions,
 }: {
   datasetEvalSplit: string | null;
-  evalDataset: string | null;
   datasetSource: DatasetSource;
   datasetSplit: string | null;
   evalSteps: number;
-  isAppleSilicon: boolean;
   isAudioModel: boolean;
   isDatasetAudio: boolean;
   isDatasetImage: boolean | null;
@@ -81,7 +76,6 @@ export function getDatasetStreamingBlockers({
       evalSteps,
       datasetSplit,
       datasetEvalSplit,
-      evalDataset,
     })
   ) {
     blockers.push("evalSplit");
@@ -100,9 +94,6 @@ export function getDatasetStreamingBlockers({
   }
   if (isDatasetAudio) {
     blockers.push("audioDataset");
-  }
-  if (isAppleSilicon) {
-    blockers.push("appleSilicon");
   }
   return blockers;
 }

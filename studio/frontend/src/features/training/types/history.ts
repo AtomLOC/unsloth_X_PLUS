@@ -8,8 +8,6 @@ export interface TrainingRunSummary {
   project_name: string | null;
   dataset_name: string;
   display_name: string | null;
-  tags: string[];
-  notes: string | null;
   started_at: string;
   ended_at: string | null;
   total_steps: number | null;
@@ -17,7 +15,6 @@ export interface TrainingRunSummary {
   final_loss: number | null;
   output_dir: string | null;
   can_resume: boolean;
-  /** Why resume is unavailable, when the resource provenance is the cause. */
   resume_blocked_reason?: string | null;
   resumed_later: boolean;
   artifacts_available?: boolean;
@@ -52,58 +49,6 @@ export interface TrainingRunDetailResponse {
   run: TrainingRunSummary;
   config: Record<string, unknown>;
   metrics: TrainingRunMetrics;
-}
-
-export interface ResumeSafetyBlocker {
-  code: string;
-  message: string;
-}
-
-export interface ResumeSafetyReport {
-  run_id: string;
-  ok: boolean;
-  checkpoint: string | null;
-  blockers: ResumeSafetyBlocker[];
-  warnings: ResumeSafetyBlocker[];
-  checks: {
-    checkpoint: {
-      step: number | null;
-      adapter: boolean;
-      optimizer: boolean;
-      scheduler: boolean;
-      trainer_state: boolean;
-      tokenizer: DatasetFingerprint;
-    } | null;
-    dataset: ResumeSafetyComparison;
-    tokenizer: ResumeSafetyComparison;
-    current_tokenizer: DatasetFingerprint | null;
-  };
-  dataset: ResumeSafetyComparison;
-  tokenizer: ResumeSafetyComparison;
-  stored_dataset_fingerprint: DatasetFingerprint | null;
-  stored_tokenizer_fingerprint: DatasetFingerprint | null;
-}
-
-export interface ResumeSafetyComparison {
-  status: "match" | "changed" | "unavailable";
-  message: string;
-  stored_sha256?: string | null;
-  current_sha256?: string | null;
-  files?: string[];
-}
-
-export interface DatasetFingerprint {
-  status: "hashed" | "unavailable";
-  schema?: string;
-  source?: string | null;
-  sha256?: string | null;
-  reason?: string;
-  files?: number;
-  bytes?: number;
-  method?: string;
-  selection?: Record<string, unknown>;
-  created_at?: string;
-  computed_at?: string;
 }
 
 export interface TrainingRunDeleteResponse {

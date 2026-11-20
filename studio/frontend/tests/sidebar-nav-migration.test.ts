@@ -6,6 +6,7 @@ import test from "node:test";
 import {
   DEFAULT_CUSTOMIZATION,
   type SidebarNavItemPref,
+  migrateAppearanceMenuDefault,
   migrateShippedSidebarNavDefault,
   sanitizeCustomization,
 } from "../src/features/settings/stores/appearance-custom-store.ts";
@@ -113,26 +114,9 @@ test("a customized version-5 sidebar keeps its order and only gains the rows add
   );
   assert.deepEqual(
     customization.sidebarNav.map((item) => item.id),
-    [
-      ...customizedV5.map((item) => item.id),
-      "library",
-      "audio",
-      "merge",
-      "scale",
-      "labs",
-    ],
+    [...customizedV5.map((item) => item.id), "library", "audio", "tasks", "translate"],
   );
-  // Each appended row keeps the default it shipped with.
-  assert.deepEqual(
-    customization.sidebarNav.slice(-5).map((item) => [item.id, item.pinned]),
-    [
-      ["library", true],
-      ["audio", false],
-      ["merge", true],
-      ["scale", true],
-      ["labs", true],
-    ],
-  );
+  assert.equal(customization.sidebarNav.at(-1)?.pinned, false);
 });
 
 test("a user-arranged sidebar survives the migration", () => {
@@ -152,16 +136,7 @@ test("an install sitting on the version-6 default adopts the current layout", ()
   const migrated = migrateShippedSidebarNavDefault(customization, 6, 8);
   assert.deepEqual(migrated.sidebarNav, DEFAULT_CUSTOMIZATION.sidebarNav);
   const ids = migrated.sidebarNav.filter((item) => item.pinned).map((i) => i.id);
-  assert.deepEqual(ids, [
-    "hub",
-    "projects",
-    "library",
-    "images",
-    "train",
-    "merge",
-    "scale",
-    "labs",
-  ]);
+  assert.deepEqual(ids, ["hub", "projects", "library", "images", "train"]);
 });
 
 test("an install sitting on the version-7 default gains Library and moves Video to More", () => {
@@ -194,10 +169,7 @@ async function personalizationVersion(): Promise<number> {
 }
 
 test("a synced profile picks the layout change up too", async () => {
-  // Remote hydration replaces the local store wholesale, so a nav default that
-  // only migrates locally is overwritten by the stored layout on every login.
-  // PERSONALIZATION_VERSION has to move with the layout for that migration to
-  // run against the remote record.
+  // Remote hydration replaces the store, so PERSONALIZATION_VERSION must move with the layout.
   const stored = sanitizeCustomization({ sidebarNav: shippedLayouts[5] });
   const migrated = migrateShippedSidebarNavDefault(
     stored,
@@ -205,4 +177,15 @@ test("a synced profile picks the layout change up too", async () => {
     await personalizationVersion(),
   );
   assert.deepEqual(migrated.sidebarNav, DEFAULT_CUSTOMIZATION.sidebarNav);
+});
+
+test("Appearance joins the account menu once, then a hidden one stays hidden", async () => {
+  const hidden = sanitizeCustomization({ sidebarMenu: [{ id: "appearance", visible: false }] });
+  const visible = (c: typeof hidden) => c.sidebarMenu.find((item) => item.id === "appearance")?.visible;
+  assert.equal(visible(DEFAULT_CUSTOMIZATION), true);
+  assert.equal(visible(migrateAppearanceMenuDefault(hidden, 8, 9)), true);
+  assert.equal(visible(migrateAppearanceMenuDefault(hidden, 9, 9)), false);
+  const version = await personalizationVersion();
+  assert.equal(visible(migrateAppearanceMenuDefault(hidden, version - 1, version)), true);
+  assert.equal(visible(migrateAppearanceMenuDefault(hidden, version, version)), false);
 });

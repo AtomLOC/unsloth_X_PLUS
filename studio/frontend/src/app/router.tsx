@@ -3,17 +3,15 @@
 
 import { Link, createRouter, useRouterState } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { XMark } from "@/components/x-mark";
+import { MascotImg } from "@/components/mascot-img";
 import { useT } from "@/i18n";
+import { parseSearch, stringifySearch } from "./router-search";
 import { Route as rootRoute } from "./routes/__root";
 import { Route as apiMonitorRoute } from "./routes/api";
 import { Route as dataRecipesRoute } from "./routes/data-recipes";
 import { Route as dataRecipeRoute } from "./routes/data-recipes.$recipeId";
 import { Route as chatRoute } from "./routes/chat";
 import { Route as exportRoute } from "./routes/export";
-import { Route as mergeRoute } from "./routes/merge";
-import { Route as scaleRoute } from "./routes/scale";
-import { Route as labsRoute } from "./routes/labs";
 import { Route as imagesRoute } from "./routes/images";
 import { Route as videoRoute } from "./routes/video";
 import { Route as audioRoute } from "./routes/audio";
@@ -22,6 +20,8 @@ import { Route as loginRoute } from "./routes/login";
 import { Route as hubRoute } from "./routes/hub";
 import { Route as projectsRoute } from "./routes/projects";
 import { Route as libraryRoute } from "./routes/library";
+import { Route as tasksRoute } from "./routes/tasks";
+import { Route as translateRoute } from "./routes/translate";
 import { Route as changePasswordRoute } from "./routes/change-password";
 import { Route as settingsRoute } from "./routes/settings";
 import { Route as studioRoute } from "./routes/studio";
@@ -33,12 +33,11 @@ const routeTree = rootRoute.addChildren([
   hubRoute,
   settingsRoute,
   studioRoute,
-  mergeRoute,
-  scaleRoute,
-  labsRoute,
   chatRoute,
   projectsRoute,
   libraryRoute,
+  tasksRoute,
+  translateRoute,
   exportRoute,
   imagesRoute,
   videoRoute,
@@ -54,7 +53,7 @@ function DefaultNotFound() {
 
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-      <XMark className="size-20 text-muted-foreground/70" />
+      <MascotImg src="Sloth emojis/sloth shy large.png" className="size-24" />
       <div className="flex flex-col items-center gap-1">
         <h1 className="font-heading font-semibold text-2xl tracking-tight">
           {t("shell.notFound.title")}
@@ -72,6 +71,8 @@ function DefaultNotFound() {
 
 export const router = createRouter({
   routeTree,
+  parseSearch,
+  stringifySearch,
   defaultNotFoundComponent: DefaultNotFound,
 });
 

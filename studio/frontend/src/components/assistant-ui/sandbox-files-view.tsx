@@ -4,18 +4,19 @@
 import {
   Download01Icon,
   FileEmpty02Icon,
-  FolderOpenIcon,
 } from "@hugeicons/core-free-icons";
+import { FolderOpenIcon } from "@/lib/folder-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useCallback, useState } from "react";
 import { toast } from "sonner";
 
-import { isTauri } from "@/lib/api-base";
-import { downloadFile, isDownloadCancelled } from "@/lib/native-files";
+import { authFetch, getAuthToken } from "@/features/auth";
+import { apiUrl, isTauri } from "@/lib/api-base";
+import { downloadUrlStreaming, isDownloadCancelled } from "@/lib/native-files";
 import { cn } from "@/lib/utils";
 
 import { FileContextMenu, loadSandboxFile } from "./link-context-menu";
-import type { SandboxFile } from "./sandbox-files";
+import { sandboxFilePath, type SandboxFile } from "./sandbox-files";
 import { revealSandbox } from "./sandbox-reveal";
 
 function formatSize(size: number | null): string {
@@ -34,20 +35,21 @@ function SandboxFileRow({
 }) {
   const [busy, setBusy] = useState(false);
 
-  // Fetched with the bearer in the Authorization header and saved from the blob.
-  // The canvas route takes that header or a short-lived link= query (a capability
-  // minted for it), and refuses a session bearer in the query string, so a URL the
-  // native save could stream from would need such a link -- and no route mints one
-  // yet (inference.py's _sign_canvas_link has no caller). authFetch also refreshes an
-  // expired access token and retries, which a URL cannot: a stale token would
-  // otherwise save a 401 body under the file's name.
+  // Streamed to disk rather than buffered: artifacts can be gigabytes. The bearer goes in the query.
   const save = useCallback(async () => {
     setBusy(true);
     try {
-      await downloadFile(
-        await loadSandboxFile(sessionId, file.name),
-        file.name,
+      const path = sandboxFilePath(sessionId, file.name);
+      // The URL bearer is never refreshed, so authFetch refreshes first; the HEAD confirms the file.
+      const probe = await authFetch(apiUrl(path), { method: "HEAD" });
+      if (!probe.ok) throw new Error(`Download refused (${probe.status})`);
+      const token = getAuthToken();
+      const separator = path.includes("?") ? "&" : "?";
+      // Absolute: the native command rejects a relative URL.
+      const url = apiUrl(
+        token ? `${path}${separator}token=${encodeURIComponent(token)}` : path,
       );
+      await downloadUrlStreaming(url, file.name);
     } catch (error) {
       if (!isDownloadCancelled(error)) {
         toast.error(`Could not save ${file.name}.`);
@@ -71,7 +73,7 @@ function SandboxFileRow({
         onClick={save}
         disabled={busy}
         title={`Save ${file.name}`}
-        className="flex items-center gap-2 rounded border border-border px-2 py-1 text-xs text-foreground hover:bg-muted disabled:opacity-60"
+        className="btn-fill flex items-center gap-2 rounded-full px-2 py-1 text-xs text-foreground disabled:opacity-60"
       >
         <HugeiconsIcon icon={FileEmpty02Icon} className="size-3.5 shrink-0" />
         <span className="truncate font-mono">{file.name}</span>
@@ -84,11 +86,7 @@ function SandboxFileRow({
   );
 }
 
-/**
- * The row's heading, doubling as the way into the folder itself on desktop.
- * The backend opens the file manager, so in a browser it stays plain text and
- * says why.
- */
+/** Opens the folder on desktop only: the backend opens the file manager. */
 function SandboxFolderLabel({
   sessionId,
   label,
@@ -125,10 +123,6 @@ function SandboxFolderLabel({
   );
 }
 
-/**
- * "Files created" row under a tool card. Without it the only trace of a written
- * file was the model mentioning it in prose.
- */
 export function SandboxFiles({
   sessionId,
   files,
@@ -140,8 +134,7 @@ export function SandboxFiles({
 }) {
   if (!sessionId || files.length === 0) return null;
   return (
-    // No divider: the row sits outside the collapsible content, so on a collapsed card a rule
-    // would separate the header from nothing.
+    // No divider: the row is outside the collapsible, so collapsed cards keep no stray rule.
     <div className={cn("mt-2", className)}>
       <SandboxFolderLabel
         sessionId={sessionId}

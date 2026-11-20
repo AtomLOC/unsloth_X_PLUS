@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Unsloth X+</title>
+  <desc>The X- mark: X above a dash, on a black plate, X in a blue gradient and the dash in a lighter one.</desc>
+  <defs>
+    <!-- userSpaceOnUse, not the default objectBoundingBox. The dash is a horizontal line, so its
+         bounding box has zero height; an objectBoundingBox gradient collapses on that box and the
+         dash disappears in renderers that take the spec literally (GitHub's rasteriser included).
+         Same geometry as scripts/make_brand_assets.py, which draws every raster size. -->
+    <linearGradient id="xBlue" gradientUnits="userSpaceOnUse" x1="47" y1="35" x2="81" y2="69">
+      <stop offset="0" stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="dashBlue" gradientUnits="userSpaceOnUse" x1="46" y1="92" x2="82" y2="92">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#7DD3FC"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="#000000"/>
+  <!-- X above, dash below: the stacked form is the one that still reads at 16px. -->
+  <g fill="none" stroke="url(#xBlue)" stroke-width="12" stroke-linecap="round">
+    <path d="M47 35 L81 69"/>
+    <path d="M81 35 L47 69"/>
+  </g>
+  <!-- Two paths, same geometry: a solid one first so the dash can never be invisible if a renderer
+       ignores the paint server, then the gradient on top where it resolves. -->
+  <path d="M46 92 L82 92" fill="none" stroke="#38BDF8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M46 92 L82 92" fill="none" stroke="url(#dashBlue)" stroke-width="12" stroke-linecap="round"/>
+</svg>

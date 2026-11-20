@@ -6,13 +6,11 @@ import { isAccountOwner } from "@/features/auth";
 import { prepareHfTokenForUse } from "@/features/hf-auth";
 import { getHfToken, useHfTokenStore } from "@/features/hub";
 import { confirmRemoteCodeIfNeeded } from "@/features/security";
-import { loadDebugTrainingSimulation } from "@/features/settings/api/debug-training-simulation";
-import { getCachedSystemInfo } from "@/hooks/use-system";
 import { translate } from "@/i18n";
 import { primeNativeNotificationPermission } from "@/lib/native-notifications";
 import { toast } from "@/lib/toast";
 import { DatasetFormatError, checkDatasetFormat } from "../api/datasets-api";
-import { checkDiskPreflight } from "../api/disk-preflight-api";
+import { getCachedSystemInfo } from "@/hooks/use-system";
 import { buildTrainingStartPayload } from "../api/mappers";
 import {
   TrainingStartError,
@@ -257,38 +255,16 @@ class FreshTrainingStartAttempt {
   }
 }
 
-async function simulatedTrainingEnabled(): Promise<boolean> {
-  // A settings read failure must not change how a real Start behaves.
-  try {
-    return (await loadDebugTrainingSimulation()).enabled;
-  } catch {
-    return false;
-  }
-}
-
 export async function startFreshTrainingRun(): Promise<boolean> {
   const attempt = FreshTrainingStartAttempt.begin();
   if (!attempt) {
     return false;
   }
 
-  // CMT is a Labs engine with its own datasets and steps; the trainer has no method for it,
-  // so refuse here rather than send a payload the request schema would reject.
-  if (attempt.config.trainingMethod === "cmt") {
-    return attempt.cancel(translate("labs.cmt.trainerNote"));
-  }
-
-  // Settings -> Debugging: the backend runs a fake trainer and ignores the
-  // payload, so the model, dataset, token and consent steps below are skipped.
-  if (await simulatedTrainingEnabled()) {
-    return await submitFreshTrainingRun(attempt, "", true);
-  }
-
   const validation = validateTrainingConfig(
     attempt.config,
     usePlatformStore.getState().deviceType,
     isAccountOwner(),
-    usePlatformStore.getState().isCpuTrainingHost(),
   );
   if (!validation.ok) {
     return attempt.cancel(translate(validation.errorKey));
@@ -307,11 +283,8 @@ export async function startFreshTrainingRun(): Promise<boolean> {
     if (useTrainingRuntimeStore.getState().stopRequested) {
       return attempt.cancel();
     }
-    // Upgrade consent first, then the custom-code gate: the same order chat loads use,
-    // because installing a newer transformers changes what the load would even run.
-    // The upgrade check already read this model's config, so carry its custom-code
-    // verdict into the next gate rather than let that gate's fallback re-derive it from
-    // the stored flag, which a fresh run leaves false.
+    // Upgrade consent first, as in chat, since a newer transformers changes what loads. Carry its
+    // custom-code verdict forward; the gate's fallback reads a flag a fresh run leaves false.
     const upgradeVerdict = { requiresTrustRemoteCode: false };
     if (
       !(await confirmSelectedModelTransformersUpgrade(
@@ -506,9 +479,7 @@ async function confirmSelectedModelTransformersUpgrade(
   const outcome = await confirmTrainingTransformersUpgrade({
     modelName,
     hfToken,
-    // Same pin the custom-code gate resolves, so both read one config.json: a cached
-    // model loads from its pinned snapshot, whose architecture can differ from the one
-    // the repo publishes today.
+    // Same pin as the custom-code gate: a cached snapshot's architecture can differ from the repo's.
     modelCachePin: freshModelCachePin(attempt),
   });
   verdict.requiresTrustRemoteCode = outcome.requiresTrustRemoteCode;
@@ -518,7 +489,6 @@ async function confirmSelectedModelTransformersUpgrade(
   return outcome.proceed || attempt.cancel(outcome.error);
 }
 
-/** The copy of the model this start loads, for every gate that has to inspect it. */
 function freshModelCachePin(attempt: FreshTrainingStartAttempt): {
   preferLocalCache: boolean;
   modelLocalPath: string | null;
@@ -563,57 +533,22 @@ async function confirmSelectedModelRemoteCode(
 async function submitFreshTrainingRun(
   attempt: FreshTrainingStartAttempt,
   hfToken: string | null,
-  simulated = false,
 ): Promise<boolean> {
-  if (!simulated) {
-    const validation = validateTrainingConfig(
-      attempt.config,
-      usePlatformStore.getState().deviceType,
-      isAccountOwner(),
-      usePlatformStore.getState().isCpuTrainingHost(),
-    );
-    if (!validation.ok) {
-      return attempt.cancel(translate(validation.errorKey));
-    }
-    if (!attempt.config.selectedModel) {
-      return attempt.cancel(translate("studio.presets.needModel"));
-    }
-    const disk = await checkDiskPreflight({
-      model: attempt.config.selectedModel,
-      method: attempt.config.trainingMethod,
-      loadIn4Bit: attempt.config.trainingMethod === "qlora",
-      maxSeqLength: attempt.config.contextLength,
-      batchSize: attempt.config.batchSize,
-      gradientAccumulation: attempt.config.gradientAccumulation,
-      loraRank: attempt.config.loraRank,
-      maxSteps: attempt.config.maxSteps,
-      saveSteps: attempt.config.saveSteps,
-      modelKnownCached: attempt.config.modelKnownCached,
-    }).catch(() => null);
-    if (attempt.abortIfInputsChanged()) {
-      return false;
-    }
-    if (disk?.status === "over") {
-      return attempt.cancel(
-        disk.blockers[0] ?? translate("diskPreflight.over"),
-      );
-    }
+  const validation = validateTrainingConfig(
+    attempt.config,
+    usePlatformStore.getState().deviceType,
+    isAccountOwner(),
+  );
+  if (!validation.ok) {
+    return attempt.cancel(translate(validation.errorKey));
   }
 
-  const base = buildTrainingStartPayload(
+  const payload = buildTrainingStartPayload(
     attempt.config,
     hfToken,
     getCachedSystemInfo(),
+    usePlatformStore.getState().isCpuTrainingHost(),
   );
-  // The request schema is validated before the route sees the body, so a
-  // simulated start still has to name a model; the backend ignores it.
-  const payload = simulated
-    ? {
-        ...base,
-        model_name: "debug/simulated-model",
-        training_type: "LoRA/QLoRA",
-      }
-    : base;
   if (!attempt.enterTransport()) {
     return false;
   }
@@ -738,12 +673,6 @@ function needsManualMapping(
   isVlm: boolean,
   isAudio: boolean,
 ): boolean {
-  // Policy Alignment has its own dataset contract: prompt/chosen/rejected (or the role-aware
-  // messages form the RL loader converts). The SFT role mapper only knows user/assistant, so
-  // asking for it here would block a valid preference dataset before the RL worker sees it.
-  if (config.trainingMethod === "rl") {
-    return false;
-  }
   return (
     !isRawTextDatasetFormat(config.datasetFormat) &&
     (check.requires_manual_mapping ||

@@ -1,6 +1,6 @@
 {
-  "id": "goldodemon/unsloth-x8-training-smoke",
-  "title": "Unsloth X8 Training Smoke",
+  "id": "goldodemon/unsloth-x-plus-training-smoke",
+  "title": "Unsloth X+ Training Smoke",
   "code_file": "run.py",
   "language": "python",
   "kernel_type": "script",

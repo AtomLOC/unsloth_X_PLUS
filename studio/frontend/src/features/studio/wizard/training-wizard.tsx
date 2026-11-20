@@ -2,6 +2,7 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 import { PICKER_TRIGGER_CLASS } from "@/components/resource-picker/picker-focus";
+import { SectionBox, SectionField } from "@/components/section-box";
 import { SegmentedTabsList } from "@/components/segmented-tabs";
 import {
   Select,
@@ -15,117 +16,33 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { usePlatformStore } from "@/config/env";
 import { HfTokenIndicator } from "@/features/hub";
 import {
   DECISION_MODEL_LABELS,
-  useDebugTrainingSimulation,
   useSettingsDialogStore,
 } from "@/features/settings";
 import { TrainModelSelector } from "@/features/train-model-picker";
 import {
   type DecisionCheckpoint,
   TRAINING_METHOD_META,
-  visibleTrainingMethods,
-  isTrainingMethodSupportedOnDevice,
+  TRAINING_METHOD_ORDER,
   useTrainingConfigStore,
 } from "@/features/training";
 import { useT } from "@/i18n";
+import { ChipIcon, Settings01Icon } from "@/lib/hugeicons-derived";
 import { cn } from "@/lib/utils";
 import type { TrainingMethod } from "@/types/training";
 import {
-  AiBrain01Icon,
-  ArrowExpand02Icon,
-  DashboardSpeed01Icon,
   Database02Icon,
-  FloppyDiskIcon,
-  Settings05Icon,
+  Edit03Icon,
 } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
-import { type CSSProperties, type ReactNode, useEffect } from "react";
-import { AutoScaleCard } from "@/features/labs/components/auto-scale-card";
-import { CmtPanel } from "@/features/labs/components/cmt-panel";
-import {
-  ensureLabsLoaded,
-  useLabsFeature,
-  useLabsStore,
-} from "@/features/labs/store";
+import type { ReactNode } from "react";
 import { DatasetPanel } from "../sections/dataset-section";
 import { DatasetSourceToggleAction } from "../sections/dataset-source-toggle";
 import { FieldHint } from "../sections/field-hint";
 import { ParamsSection } from "../sections/params-section";
-import { TrainingPresetSection } from "../sections/training-preset-section";
 import { ConfigActions } from "./config-actions";
-import { AdvancedTrainingSection } from "@/features/advanced/components/advanced-training-section";
-import { ScalerPanel } from "@/features/advanced/components/scaler-panel";
 import type { ParamMode } from "./training-param-mode";
-
-function SectionBox({
-  title,
-  description,
-  icon,
-  chipTint,
-  titleAction,
-  children,
-  dataTour,
-}: {
-  title?: string;
-  description?: string;
-  icon?: IconSvgElement;
-  chipTint?: string;
-  titleAction?: ReactNode;
-  children: ReactNode;
-  dataTour?: string;
-}) {
-  return (
-    <section
-      data-tour={dataTour}
-      className="@container/train-card elevated-card train-card flex flex-col bg-card p-4"
-    >
-      {title && (
-        // Header: a tinted square chip, the title in one line, the action on the far edge.
-        // The divider is what separates header from body now — the old card had neither,
-        // so every section read as one undifferentiated block of fields.
-        <div className="train-card-head -mx-4 flex flex-col items-stretch gap-3 px-4 pt-1 pb-3 @md/train-card:flex-row @md/train-card:items-center @md/train-card:justify-between">
-          <div className="flex min-w-0 items-center gap-3">
-            {icon && (
-              <span
-                className="train-section-chip inline-flex size-8 shrink-0 items-center justify-center rounded-[10px]"
-                style={
-                  chipTint
-                    ? ({ "--chip-tint": chipTint } as CSSProperties)
-                    : undefined
-                }
-              >
-                <HugeiconsIcon
-                  icon={icon}
-                  strokeWidth={1.6}
-                  className="size-[calc(16px*var(--ui-space-scale,1))]"
-                />
-              </span>
-            )}
-            <div className="min-w-0">
-              <h2 className="select-none text-ui-13p5 font-semibold leading-ui-18 tracking-[-0.02em] text-foreground">
-                {title}
-              </h2>
-              {description && (
-                <p className="mt-0.5 text-ui-11p5 leading-ui-15 text-muted-foreground">
-                  {description}
-                </p>
-              )}
-            </div>
-          </div>
-          {titleAction && (
-            <div className="w-full min-w-0 @md/train-card:w-auto @md/train-card:shrink-0">
-              {titleAction}
-            </div>
-          )}
-        </div>
-      )}
-      <div className="@container/train-section train-card-body min-w-0 pt-4">{children}</div>
-    </section>
-  );
-}
 
 function ParamModeToggle({
   mode,
@@ -167,13 +84,12 @@ function SetupField({
   children: ReactNode;
 }) {
   return (
-    <div className="flex flex-col gap-2">
-      <span className="flex items-center gap-1.5 text-ui-11 font-medium uppercase tracking-[0.05em] text-muted-foreground/70">
-        {label}
-        {hint ? <FieldHint text={hint} label={label} /> : null}
-      </span>
-      <div className="min-w-0">{children}</div>
-    </div>
+    <SectionField
+      label={label}
+      hint={hint ? <FieldHint text={hint} label={label} /> : null}
+    >
+      {children}
+    </SectionField>
   );
 }
 
@@ -188,37 +104,6 @@ function TrainingMethodSelect() {
       s.modelType === "decision" &&
       (s.decisionLayout === "clef" || s.decisionLayout === "llm"),
   );
-  const deviceType = usePlatformStore((state) => state.deviceType);
-  const cpuOnly = usePlatformStore((state) => state.isCpuTrainingHost());
-  // Settings -> Debugging: the simulated trainer ignores the method, so no host limit
-  // narrows the list and nothing gets rewritten under the user.
-  const simulated = useDebugTrainingSimulation();
-  // CMT is a Labs experiment: its row exists only while that experiment is on.
-  const cmtEnabled = useLabsFeature("cmt");
-  const labsLoaded = useLabsStore((state) => state.loaded);
-  useEffect(() => {
-    ensureLabsLoaded();
-  }, []);
-  // A method persisted from another host (or the default) would sit selected while its row is
-  // disabled, and Start would refuse it. On CPU, CoRA is the only choice, so make it the choice.
-  useEffect(() => {
-    if (
-      !simulated &&
-      cpuOnly &&
-      !isTrainingMethodSupportedOnDevice(trainingMethod, deviceType, cpuOnly)
-    ) {
-      setTrainingMethod("cora");
-    }
-  }, [simulated, cpuOnly, deviceType, trainingMethod, setTrainingMethod]);
-  // Turning the CMT experiment off must not leave the wizard pointed at an engine whose
-  // routes now answer 403, so the selection falls back to the default recipe. Wait for the
-  // switch to be read: until then "off" only means "not loaded", and resetting on that would
-  // discard a persisted CMT selection on every page load.
-  useEffect(() => {
-    if (labsLoaded && !cmtEnabled && trainingMethod === "cmt") {
-      setTrainingMethod("lora");
-    }
-  }, [cmtEnabled, labsLoaded, trainingMethod, setTrainingMethod]);
   const activeMeta = TRAINING_METHOD_META[trainingMethod];
   const activeLabel = activeMeta ? t(activeMeta.labelKey) : trainingMethod;
   return (
@@ -252,29 +137,20 @@ function TrainingMethodSelect() {
         side="bottom"
         align="start"
         sideOffset={8}
-        className="rounded-[14px] ring-0"
+        className="rounded-xl ring-0"
       >
-        {visibleTrainingMethods({
-          cmtEnabled,
-          isDecision,
-          decisionTakesQlora,
-        }).map((method) => {
+        {TRAINING_METHOD_ORDER.filter(
+          (method) =>
+            !isDecision ||
+            method === "lora" ||
+            method === "full" ||
+            (decisionTakesQlora && method === "qlora"),
+        ).map((method) => {
           const meta = TRAINING_METHOD_META[method];
-          const unsupported = !isTrainingMethodSupportedOnDevice(
-            method,
-            deviceType,
-            cpuOnly,
-            simulated,
-          );
-          const unsupportedLabel = t(
-            cpuOnly
-              ? "studio.params.notSupportedCpu"
-              : "studio.params.notSupportedAppleSilicon",
-          );
           return (
             <Tooltip key={method} delayDuration={300}>
               <TooltipTrigger asChild={true} disableClickToggle={true}>
-                <SelectItem value={method} disabled={unsupported}>
+                <SelectItem value={method}>
                   <span className="flex items-center gap-2">
                     <span
                       aria-hidden="true"
@@ -284,11 +160,6 @@ function TrainingMethodSelect() {
                       )}
                     />
                     {t(meta.labelKey)}
-                    {unsupported && (
-                      <span className="text-ui-10 text-muted-foreground">
-                        · {unsupportedLabel}
-                      </span>
-                    )}
                   </span>
                 </SelectItem>
               </TooltipTrigger>
@@ -297,7 +168,7 @@ function TrainingMethodSelect() {
                 sideOffset={10}
                 className="max-w-[calc(220px*var(--ui-space-scale,1))] text-ui-11p5 leading-snug"
               >
-                {unsupported ? unsupportedLabel : t(meta.hintKey)}
+                {t(meta.hintKey)}
               </TooltipContent>
             </Tooltip>
           );
@@ -336,7 +207,7 @@ function TrainAsSelect() {
         side="bottom"
         align="start"
         sideOffset={8}
-        className="rounded-[14px] ring-0"
+        className="rounded-xl ring-0"
       >
         {["language", "decision"].map((option) => (
           <SelectItem key={option} value={option}>
@@ -386,7 +257,7 @@ function CheckpointSelect({
         side="bottom"
         align="start"
         sideOffset={8}
-        className="rounded-[14px] ring-0"
+        className="rounded-xl ring-0"
       >
         {checkpoints.map((checkpoint) => (
           <SelectItem key={checkpoint.name} value={checkpoint.name}>
@@ -457,56 +328,6 @@ function ModelPanel() {
   );
 }
 
-function CoraRecipeCard() {
-  // The GPU recipe quantizes through bitsandbytes; a CPU host has neither that kernel nor LoftQ,
-  // so the card names what actually runs there instead of a recipe this host cannot apply.
-  const cpuOnly = usePlatformStore((state) => state.isCpuTrainingHost());
-  const rows: Array<[string, string]> = [
-    [
-      "Adapter",
-      cpuOnly ? "r=8, alpha=24, plain LoRA" : "r=8, alpha=24, LoftQ init",
-    ],
-    [
-      "Base precision",
-      cpuOnly
-        ? "fp32 (a CPU has no 4-bit training kernel)"
-        : "4-bit (Q4_1), exported later to the quant you pick",
-    ],
-    ["Optimizer", cpuOnly ? "AdamW (torch)" : "Paged AdamW 8-bit"],
-    ["Schedule", "Cosine"],
-    ["Batch", "1 x 3 gradient accumulation"],
-    ["Context", "1024 tokens"],
-    [
-      "Quantization-aware",
-      cpuOnly ? "Int4 QAT, best-effort on CPU" : "Int4 QAT on",
-    ],
-    ["Layer LRs", "Embedding 0.25x to head 1.0x"],
-    ["Dataset", "0.01 GB to 0.8 GB of text"],
-  ];
-  return (
-    <SectionBox
-      title="CoRA recipe"
-      description="The CPU-first adapter recipe, fixed for every CoRA run"
-      icon={Settings05Icon}
-      chipTint="var(--chart-2)"
-    >
-      <dl className="grid gap-x-6 gap-y-2 text-ui-11 sm:grid-cols-2">
-        {rows.map(([label, value]) => (
-          <div key={label} className="flex items-baseline justify-between gap-3 border-b border-border/40 pb-1.5">
-            <dt className="text-muted-foreground">{label}</dt>
-            <dd className="text-right font-medium text-foreground">{value}</dd>
-          </div>
-        ))}
-      </dl>
-      <p className="mt-3 text-ui-10p5 leading-ui-14 text-muted-foreground/70">
-        {cpuOnly
-          ? "QAT and layer-wise learning rates are on by default for CoRA; adjust them in Advanced training below. The 4-bit pieces are dropped on a CPU host."
-          : "QAT and layer-wise learning rates are on by default for CoRA; adjust them in Advanced training below."}
-      </p>
-    </SectionBox>
-  );
-}
-
 export function TrainingWizard({
   paramMode,
   onParamModeChange,
@@ -515,92 +336,46 @@ export function TrainingWizard({
   onParamModeChange: (next: ParamMode) => void;
 }) {
   const t = useT();
-  const trainingMethod = useTrainingConfigStore((s) => s.trainingMethod);
-  const selectedModel = useTrainingConfigStore((s) => s.selectedModel);
-  // CMT owns its datasets, splits, eval and steps, so it replaces the trainer's
-  // dataset/params cards instead of trying to live inside them.
-  const cmtFeatureOn = useLabsFeature("cmt");
-  const isCmt = trainingMethod === "cmt" && cmtFeatureOn;
-  const autoScaleOn = useLabsFeature("auto-scale");
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <SectionBox
         title={t("studio.wizard.modelTitle")}
         description={t("studio.wizard.modelDescription")}
-        icon={AiBrain01Icon}
+        icon={ChipIcon}
         chipTint="var(--chart-1)"
       >
         <ModelPanel />
       </SectionBox>
 
       <SectionBox
-        title="Model scaling"
-        description="Grow the model before training it, from its own parameter count up to base + 3B"
-        icon={ArrowExpand02Icon}
-        chipTint="var(--chart-2)"
+        title={t("studio.wizard.datasetTitle")}
+        description={t("studio.wizard.datasetDescription")}
+        icon={Database02Icon}
+        chipTint="var(--chart-1)"
+        dataTour="studio-dataset"
+        titleAction={<DatasetSourceToggleAction />}
       >
-        <div className="flex flex-col gap-5">
-          {autoScaleOn && !isCmt ? (
-            <AutoScaleCard defaultModel={selectedModel ?? ""} />
-          ) : null}
-          <ScalerPanel
-            defaultSource={selectedModel ?? ""}
-            onUseCheckpoint={(path) =>
-              useTrainingConfigStore
-                .getState()
-                .selectTrainingModel(path, null, { localPath: path })
-            }
-          />
-        </div>
+        <DatasetPanel />
       </SectionBox>
 
-      {isCmt ? (
-        <CmtPanel />
-      ) : (
-        <>
-          <SectionBox
-            title={t("studio.wizard.datasetTitle")}
-            description={t("studio.wizard.datasetDescription")}
-            icon={Database02Icon}
-            chipTint="var(--chart-4)"
-            dataTour="studio-dataset"
-            titleAction={<DatasetSourceToggleAction />}
-          >
-            <DatasetPanel />
-          </SectionBox>
-
-          <SectionBox
-            title={t("studio.presets.title")}
-            description={t("studio.presets.description")}
-            icon={DashboardSpeed01Icon}
-            chipTint="var(--chart-6)"
-          >
-            <TrainingPresetSection />
-          </SectionBox>
-
-          <SectionBox
-            title={t("studio.wizard.paramsTitle")}
-            description={t("studio.wizard.paramsDescription")}
-            icon={Settings05Icon}
-            chipTint="var(--chart-5)"
-            dataTour="studio-params"
-            titleAction={
-              <ParamModeToggle mode={paramMode} onChange={onParamModeChange} />
-            }
-          >
-            <ParamsSection mode={paramMode} />
-          </SectionBox>
-
-          {trainingMethod === "cora" ? <CoraRecipeCard /> : null}
-          <AdvancedTrainingSection />
-        </>
-      )}
+      <SectionBox
+        title={t("studio.wizard.paramsTitle")}
+        description={t("studio.wizard.paramsDescription")}
+        icon={Settings01Icon}
+        chipTint="var(--chart-1)"
+        dataTour="studio-params"
+        titleAction={
+          <ParamModeToggle mode={paramMode} onChange={onParamModeChange} />
+        }
+      >
+        <ParamsSection mode={paramMode} />
+      </SectionBox>
 
       <SectionBox
         title={t("studio.wizard.configTitle")}
         description={t("studio.wizard.configDescription")}
-        icon={FloppyDiskIcon}
-        chipTint="var(--chart-3)"
+        icon={Edit03Icon}
+        chipTint="var(--chart-1)"
       >
         <ConfigActions />
       </SectionBox>

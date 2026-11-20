@@ -74,7 +74,7 @@ The fork's mark and the UI accent are two deliberately different blues.
 
 | Thing | Where it is defined | Value |
 | --- | --- | --- |
-| Mark, X | `#xBlue` in `images/logo-x-minus-icon.svg`; `X_FROM`, `X_TO` in `scripts/make_brand_assets.py` | `#1D4ED8` → `#60A5FA` |
+| Mark, X | `#xBlue` in `images/logo-x-plus-icon.svg`; `X_FROM`, `X_TO` in `scripts/make_brand_assets.py` | `#1D4ED8` → `#60A5FA` |
 | Mark, dash | `#dashBlue` (plus a solid `#38BDF8` underlay path) in the SVG; `DASH_FROM`, `DASH_TO` in the script | `#38BDF8` → `#7DD3FC` |
 | Mark, plate | `fill="#000000"` on the rounded rect; `PLATE` in the script | `#000000` |
 | UI accent | `--primary` and `--sidebar-primary` in `src/index.css` (`--control-accent` derives from `--primary`) | `#9ceaf0` |
@@ -105,9 +105,9 @@ blue is what survives that scale.
 
 They also change through different doors. The accent is CSS: edit `src/index.css`
 (and `color-themes.ts`) and the UI repaints on the next build. The mark is an
-asset: `images/logo-x-minus-icon.svg` is the vector source, and
+asset: `images/logo-x-plus-icon.svg` is the vector source, and
 `python scripts/make_brand_assets.py` from the repository root regenerates every
-raster from the same numbers — `images/logo-x-minus-icon.png`, the favicons and PWA
+raster from the same numbers — `images/logo-x-plus-icon.png`, the favicons and PWA
 icons in `studio/frontend/public/` (including `favicon.svg`, which the script
 copies verbatim from the SVG), and `studio/src-tauri/icons/`. No palette or accent
 token reaches the mark: changing `--primary` does not recolour the logo, and the
@@ -123,7 +123,7 @@ logo is not required to match it.
 3. Leave `--verified` and the chart tokens alone unless the change is about
    status or data colors.
 4. Do not touch the mark for an accent change. It is a separate pipeline:
-   `images/logo-x-minus-icon.svg` plus `python scripts/make_brand_assets.py`.
+   `images/logo-x-plus-icon.svg` plus `python scripts/make_brand_assets.py`.
 
 Afterwards, from `studio/frontend`, run
 `node --experimental-strip-types --test tests/appearance-accent-vars.test.ts tests/contrast-slider.test.ts`

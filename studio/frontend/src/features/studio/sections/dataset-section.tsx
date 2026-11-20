@@ -8,10 +8,8 @@ import { toast } from "@/lib/toast";
 import { type ReactNode, useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { DatasetAdvancedSettingsSection } from "./dataset-advanced-settings-section";
-import { DatasetPreflightCard } from "./dataset-preflight-card";
 import { DatasetSelectionSection } from "./dataset-selection";
 import { DatasetUploadField } from "./dataset-upload";
-import { EvalDatasetSection } from "./eval-dataset-section";
 import { FieldHint } from "./field-hint";
 import { S3ConfigForm } from "./s3-config-form";
 import { useDatasetUploads } from "./use-dataset-uploads";
@@ -27,7 +25,7 @@ function FieldLabel({
   hintLabel?: string;
 }) {
   return (
-    <span className="flex items-center gap-1.5 text-ui-11 font-medium uppercase tracking-[0.05em] text-muted-foreground/70">
+    <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
       {children}
       {hint ? <FieldHint text={hint} label={hintLabel ?? hint} /> : null}
     </span>
@@ -67,7 +65,7 @@ export function DatasetPanel() {
       {datasetSource === "s3" && <S3ConfigForm />}
 
       {datasetSource !== "s3" && (
-        <div className="grid grid-cols-1 items-start gap-4 @xl/train-section:grid-cols-2 @xl/train-section:gap-5">
+        <div className="grid grid-cols-1 items-start gap-4 @lg/train-section:grid-cols-2 @lg/train-section:gap-5">
           <div className="flex flex-col gap-2">
             <FieldLabel
               hint={t("studio.wizard.datasetTooltip")}
@@ -86,12 +84,6 @@ export function DatasetPanel() {
         localInventorySettled={localDatasetInventory.settled}
         uploads={uploads}
       />
-      <DatasetPreflightCard />
-      {datasetSource === "huggingface" && modelType !== "decision" ? (
-        <div className="rounded-2xl border border-border/60 bg-card p-4">
-          <EvalDatasetSection />
-        </div>
-      ) : null}
       <DatasetAdvancedSettingsSection />
     </div>
   );

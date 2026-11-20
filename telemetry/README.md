@@ -1,6 +1,6 @@
-# Unsloth X8 telemetry
+# Unsloth X+ telemetry
 
-An opt-in product-analytics collector and operator console for Unsloth X8. It
+An opt-in product-analytics collector and operator console for Unsloth X+. It
 answers the questions the app itself cannot: which models people actually run,
 what they fine-tune on, which checkpoints they merge, how many tokens flow in
 and out over 2 / 4 / 9 / 12 / 30 / 180 days, and what hardware they run it on.
@@ -42,19 +42,19 @@ Configuration:
 
 | Variable | Purpose |
 | --- | --- |
-| `X8_TELEMETRY_DB` | SQLite file path (default: `telemetry/telemetry.sqlite3`) |
-| `X8_TELEMETRY_ADMIN_TOKEN` | Required for `/api/admin/*` once set. Unset = loopback-only. |
-| `X8_TELEMETRY_INGEST_TOKEN` | Optional shared bearer token for `POST /api/v1/report` |
-| `X8_TELEMETRY_HOST` / `X8_TELEMETRY_PORT` | Used by `python -m telemetry.server` |
+| `X+_TELEMETRY_DB` | SQLite file path (default: `telemetry/telemetry.sqlite3`) |
+| `X+_TELEMETRY_ADMIN_TOKEN` | Required for `/api/admin/*` once set. Unset = loopback-only. |
+| `X+_TELEMETRY_INGEST_TOKEN` | Optional shared bearer token for `POST /api/v1/report` |
+| `X+_TELEMETRY_HOST` / `X+_TELEMETRY_PORT` | Used by `python -m telemetry.server` |
 
 For a deployment, put it behind TLS (Caddy, nginx, a tunnel) and set both tokens.
 The admin cookie is `HttpOnly`, `SameSite=Strict`, and `Secure` on HTTPS. Set
-`X8_TELEMETRY_INGEST_TOKEN` when the endpoint is public so a stranger cannot
+`X+_TELEMETRY_INGEST_TOKEN` when the endpoint is public so a stranger cannot
 inflate the counters; enter the same value under Settings → Telemetry.
 
 ## Wire the app to it
 
-1. Open Unsloth X8 → **Settings → Telemetry**.
+1. Open Unsloth X+ → **Settings → Telemetry**.
 2. Set the endpoint to `https://your-collector.example.com/api/v1/report`.
 3. Paste the ingest token if the collector has one.
 4. Turn the switch on (and use **Send now** for the first report).

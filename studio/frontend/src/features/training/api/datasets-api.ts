@@ -2,7 +2,7 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 import { authFetch } from "@/features/auth";
-import { hubTokenHeader } from "@/features/hub";
+import { hubTokenHeader } from "@/features/hub/lib/hub-token-header";
 import { readFastApiError } from "@/lib/format-fastapi-error";
 import type {
   CheckFormatResponse,
@@ -99,59 +99,6 @@ export async function checkDatasetFormat({
   return res.json();
 }
 
-export interface DatasetPreflightSample {
-  file: string;
-  line?: number;
-  row?: number;
-  error?: string;
-  keys?: string[];
-  chars?: number;
-  preview?: string;
-}
-
-export interface DatasetPreflightReport {
-  path: string;
-  files: number;
-  file_names: string[];
-  format: string;
-  rows: number;
-  checked_rows: number;
-  truncated: boolean;
-  invalid_rows: number;
-  empty_rows: number;
-  missing_text_rows: number;
-  duplicate_rows: number;
-  long_rows: number;
-  blocking_rows: number;
-  text_field: string | null;
-  long_row_chars: number;
-  samples: {
-    invalid: DatasetPreflightSample[];
-    missing_text: DatasetPreflightSample[];
-    duplicates: DatasetPreflightSample[];
-    long_rows: DatasetPreflightSample[];
-  };
-  warnings: string[];
-  ok: boolean;
-}
-
-/** Read the selected local dataset for defects; the backend writes nothing. */
-export async function checkDatasetPreflight(
-  path: string,
-  signal?: AbortSignal,
-): Promise<DatasetPreflightReport> {
-  const response = await authFetch("/api/train/dataset/preflight", {
-    method: "POST",
-    signal,
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ path }),
-  });
-  if (!response.ok) {
-    throw new Error(await readFastApiError(response, "Dataset check failed"));
-  }
-  return (await response.json()) as DatasetPreflightReport;
-}
-
 export function uploadTrainingDataset(
   file: File,
 ): Promise<UploadDatasetResponse> {
@@ -199,7 +146,6 @@ export type AiAssistMappingResponse = {
   success: boolean;
   suggested_mapping?: Record<string, string> | null;
   warning?: string | null;
-  // Conversion advisor fields
   system_prompt?: string | null;
   label_mapping?: Record<string, Record<string, string>> | null;
   dataset_type?: string | null;

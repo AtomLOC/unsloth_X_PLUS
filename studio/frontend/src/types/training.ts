@@ -2,41 +2,19 @@
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 export type ModelType = "vision" | "audio" | "embeddings" | "text" | "decision";
-export type TrainingMethod =
-  | "qlora"
-  | "lora"
-  | "full"
-  | "cpt"
-  | "rl"
-  | "cora"
-  // Labs experiment: capacity matched training runs on its own engine, not the trainer.
-  | "cmt";
+export type TrainingMethod = "qlora" | "lora" | "full" | "cpt";
 
 export function isTrainingMethod(value: unknown): value is TrainingMethod {
   return (
-    value === "qlora" ||
-    value === "lora" ||
-    value === "full" ||
-    value === "cpt" ||
-    value === "rl" ||
-    value === "cora" ||
-    value === "cmt"
+    value === "qlora" || value === "lora" || value === "full" || value === "cpt"
   );
 }
 
 export function isAdapterMethod(method: TrainingMethod): boolean {
-  // CMT inserts whole transformer blocks and trains them densely, so no LoRA variant applies.
-  return (
-    method === "lora" ||
-    method === "qlora" ||
-    method === "cpt" ||
-    method === "rl" ||
-    method === "cora"
-  );
+  return method === "lora" || method === "qlora" || method === "cpt";
 }
 export type DatasetSource = "huggingface" | "upload" | "s3";
 
-/** S3 bucket configuration for loading datasets */
 export interface S3Config {
   bucket: string;
   region: string;

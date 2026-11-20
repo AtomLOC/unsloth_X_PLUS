@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. See /LICENSE-NRC-3.md
 
 """Tests for the shrink repair preset.
 

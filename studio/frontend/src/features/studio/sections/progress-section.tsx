@@ -23,10 +23,7 @@ import { usePlatformStore } from "@/config/env";
 import { MLX_OPTIMIZER_OPTIONS, OPTIMIZER_OPTIONS } from "@/config/training";
 import { useIsAccountOwner } from "@/features/auth";
 import { setTrainingCompareHandoff } from "@/features/chat";
-import {
-  updateSystemOneSettings,
-  useSettingsDialogStore,
-} from "@/features/settings";
+import { tryFineTuneInDecisionApi } from "@/features/settings";
 import {
   getTrainingMethodLabel,
   type TrainingViewData,
@@ -35,8 +32,7 @@ import {
   useTrainingConfigStore,
   useTrainingRuntimeStore,
 } from "@/features/training";
-import { explainTrainingFailure } from "@/features/training/lib/failure-hints";
-import { useGpuUtilization, useSystemInfo } from "@/hooks";
+import { useGpuUtilization } from "@/hooks";
 import type { GpuUtilization } from "@/hooks/use-gpu-utilization";
 import { type TranslationKey, useT } from "@/i18n";
 import { toast } from "@/lib/toast";
@@ -45,28 +41,25 @@ import {
   Alert02Icon,
   ChartAverageIcon,
   DashboardSpeed01Icon,
-  FolderExportIcon,
   Notebook01Icon,
   RamMemoryIcon,
-  StopIcon,
   TaskDone01Icon,
   TemperatureIcon,
   ZapIcon,
 } from "@hugeicons/core-free-icons";
+import { FolderExportIcon } from "@/lib/folder-icons";
+import { StopIcon } from "@/lib/media-control-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Link, useNavigate } from "@tanstack/react-router";
 import { type ReactElement, type ReactNode, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { ChartSettingsSheet } from "./charts/chart-settings-sheet";
 import {
-  formatClockTime,
   formatDuration,
   formatNumber,
-  gpuHoursConsumed,
   phaseColors,
   sessionEtaSeconds,
   sessionStepsPerSecond,
-  tokensPerSecond,
 } from "./progress-section-lib";
 import type { RunConfigOverride } from "./run-config-override";
 
@@ -115,11 +108,6 @@ export function ProgressSection({
   const platformDeviceType = usePlatformStore((s) => s.deviceType);
   const isOwner = useIsAccountOwner();
   const trainingMethodLabel = getTrainingMethodLabel(data.trainingMethod);
-  // A failed run's error is read as a cause and a setting to change, never dumped:
-  // see src/features/training/lib/failure-hints.ts for what each line comes from.
-  const failure = data.error
-    ? explainTrainingFailure({ message: data.error })
-    : null;
 
   const config = useTrainingConfigStore(
     useShallow((state) => ({
@@ -174,13 +162,6 @@ export function ProgressSection({
     sessionStartStep,
     elapsed,
   );
-  const system = useSystemInfo({ enabled: !isHistorical });
-  const gpuCount = system.gpu.devices.length;
-  const throughput = tokensPerSecond(data.currentNumTokens, elapsed);
-  const gpuHours =
-    system.device_backend === "cpu" ? null : gpuHoursConsumed(elapsed, gpuCount);
-  const finishAt =
-    !isHistorical && eta != null ? formatClockTime(Date.now() + eta * 1000) : null;
   const showHalfwayHint =
     data.phase === "training" && pct >= 50 && pct < 100;
   const showCompletedHint = data.phase === "completed" && !data.isDecision;
@@ -189,7 +170,6 @@ export function ProgressSection({
     await navigate({ to: "/chat" });
   };
 
-  // A finished run can be exported to GGUF: deep-link to Export with this run preselected.
   const exportRunName = data.outputDir
     ? (data.outputDir.replace(/[/\\]+$/, "").split(/[/\\]/).pop() || null)
     : null;
@@ -210,9 +190,7 @@ export function ProgressSection({
     }
     setEnablingDecisionApi(true);
     try {
-      const model = `laya-ft:${exportRunName}`;
-      await updateSystemOneSettings({ enabled: true, model });
-      useSettingsDialogStore.getState().openDecisionTry(model);
+      await tryFineTuneInDecisionApi(exportRunName);
       toast.success(
         t("studio.progress.decisionApiEnabled", { name: exportRunName }),
       );
@@ -239,7 +217,7 @@ export function ProgressSection({
     ? data.currentGradNorm
     : (lastValue(data.gradNormHistory) ?? data.currentGradNorm);
 
-  // Prefer the run's saved snapshot when present (#6853); History shows blanks, never form values.
+  // History shows blanks, never form values.
   const cfg = configOverride ?? (isHistorical ? undefined : config);
   const cfgEpochs = cfg?.epochs;
   const cfgBatchSize = cfg?.batchSize;
@@ -253,7 +231,7 @@ export function ProgressSection({
   const cfgLoraDropout = cfg?.loraDropout;
   const cfgLoraVariant = cfg?.loraVariant;
 
-  // Mirror the training form: on Mac the MLX backend runs CUDA optimizers as AdamW.
+  // On Mac the MLX backend runs CUDA optimizers as AdamW.
   const effectiveOptimizer =
     platformDeviceType === "mac" &&
     OPTIMIZER_OPTIONS.some((o) => o.value === cfgOptimizerType)
@@ -311,7 +289,7 @@ export function ProgressSection({
             <Button
               size="sm"
               variant="outline"
-              className="h-8 gap-1.5 text-xs"
+              className="gap-1.5 text-xs"
               onClick={handleExportGguf}
             >
               <HugeiconsIcon icon={FolderExportIcon} className="size-3.5" />
@@ -322,7 +300,7 @@ export function ProgressSection({
             <Button
               size="sm"
               variant="outline"
-              className="h-8 gap-1.5 text-xs"
+              className="gap-1.5 text-xs"
               disabled={enablingDecisionApi}
               onClick={handleUseInDecisionApi}
             >
@@ -390,29 +368,16 @@ export function ProgressSection({
             />
           )}
 
-          {data.error && failure && (
-            <div className="flex flex-col gap-1 rounded-2xl border border-destructive/30 bg-destructive/5 px-3 py-2">
-              <p className="text-ui-11 font-medium text-foreground">
-                {failure.title}
-              </p>
-              <p className="text-ui-10 leading-relaxed text-muted-foreground">
-                {failure.hint}
-              </p>
-              <details className="group">
-                <summary className="w-fit cursor-pointer select-none text-ui-10 text-muted-foreground hover:text-foreground">
-                  {t("studio.postmortem.logLabel")}
-                </summary>
-                <pre className="mt-1.5 max-h-40 overflow-auto whitespace-pre-wrap break-words rounded-lg bg-background/60 p-2.5 font-mono text-ui-10 leading-relaxed text-muted-foreground">
-                  {data.error}
-                </pre>
-              </details>
-            </div>
+          {data.error && (
+            <p className="rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-xs text-red-500 leading-relaxed">
+              {data.error}
+            </p>
           )}
 
           {data.warnings.length > 0 && (
             <div
               aria-live="polite"
-              className="flex gap-2 rounded-2xl border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs leading-relaxed text-amber-700 dark:text-amber-300"
+              className="flex gap-2 rounded-lg border border-amber-500/30 bg-amber-500/5 px-3 py-2 text-xs leading-relaxed text-amber-700 dark:text-amber-300"
             >
               <HugeiconsIcon
                 icon={Alert02Icon}
@@ -472,21 +437,6 @@ export function ProgressSection({
             {data.currentNumTokens != null && (
               <span>{t("studio.progress.tokens", { value: data.currentNumTokens })}</span>
             )}
-            {throughput != null && (
-              <span>
-                {t("studio.progress.tokensPerSecond", {
-                  value: throughput.toFixed(1),
-                })}
-              </span>
-            )}
-            {finishAt != null && (
-              <span>{t("studio.progress.finishAt", { time: finishAt })}</span>
-            )}
-            {gpuHours != null && (
-              <span>
-                {t("studio.progress.gpuHours", { value: gpuHours.toFixed(2) })}
-              </span>
-            )}
           </div>
         </div>
 
@@ -530,7 +480,7 @@ function LiveGpuPanel({
               onChange={(e) => setSelectedGpu(Number(e.target.value))}
               // At the 16px coarse-pointer floor a 24px box clips descenders, and a long
               // device name widens the row past the viewport.
-              className="h-6 cursor-pointer rounded-md border border-border bg-popover px-1.5 py-0.5 text-ui-11 text-popover-foreground outline-none hover:bg-muted focus:border-ring transition-colors font-medium appearance-none pointer-coarse:h-auto pointer-coarse:min-w-0 pointer-coarse:max-w-full"
+              className="h-6 cursor-pointer rounded-full border border-border bg-popover px-1.5 py-0.5 text-ui-11 text-popover-foreground outline-none hover:bg-muted focus:border-ring transition-colors font-medium appearance-none pointer-coarse:h-auto pointer-coarse:min-w-0 pointer-coarse:max-w-full"
               title="Select GPU"
             >
               {gpus.map((device, index) => (
@@ -669,7 +619,7 @@ function ConfigPopoverButton({
           <p className="text-xs font-semibold">{t("studio.progress.configLabel")}</p>
           {configItems.map((group) => (
             <div key={group.section} className="flex flex-col gap-1">
-              <p className="text-ui-10 font-semibold uppercase tracking-wider text-muted-foreground">
+              <p className="text-ui-11 font-semibold text-muted-foreground">
                 {group.section}
               </p>
               {group.rows.map(([label, value]) => (
@@ -726,7 +676,7 @@ function TrainingHeaderActions({
           variant="destructive"
           size="sm"
           className={cn(
-            "h-8 rounded-full px-3.5 text-xs shadow-sm",
+            "rounded-full text-xs shadow-sm",
             stopRequested ? "cursor-not-allowed opacity-60" : "cursor-pointer",
           )}
           onClick={() => onOpenStopDialog(true)}
@@ -778,11 +728,11 @@ function MilestoneCallout({
   }
 
   return (
-    <div className="corner-squircle rounded-2xl border border-border/60 bg-muted/30 px-3 py-2.5">
+    <div className="corner-squircle rounded-lg border border-border/60 bg-muted/30 px-3 py-2.5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           {!showCompletedHint && (
-            <p className="text-ui-10 font-medium uppercase tracking-[0.12em] text-muted-foreground">
+            <p className="text-ui-11 font-medium text-muted-foreground">
               {t("studio.training.milestone")}
             </p>
           )}
@@ -877,7 +827,7 @@ function GpuStat({
   }
 
   return (
-    <div className="corner-squircle flex flex-col gap-2 rounded-2xl border border-border/50 bg-background/60 p-3">
+    <div className="corner-squircle flex flex-col gap-2 rounded-lg border border-border/50 bg-background/60 p-3">
       <div className="flex items-center justify-between text-xs">
         <span className="flex items-center gap-1.5 text-muted-foreground">
           {icon}

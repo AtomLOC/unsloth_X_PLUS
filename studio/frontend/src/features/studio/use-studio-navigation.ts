@@ -10,7 +10,7 @@ import type { useT } from "@/i18n";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
 
-export type TrainSubTab = "configure" | "current-run" | "history" | "compare";
+export type TrainSubTab = "configure" | "current-run" | "history";
 
 function initialStudioTab(
   selectedHistoryRunId: string | null,
@@ -27,11 +27,7 @@ function activeStudioTab(
   trainingRunActive: boolean,
   showTrainingView: boolean,
 ): TrainSubTab {
-  if (
-    trainingRunActive &&
-    requestedTab !== "history" &&
-    requestedTab !== "compare"
-  ) {
+  if (trainingRunActive && requestedTab !== "history") {
     return "current-run";
   }
   if (requestedTab === "current-run" && !showTrainingView) {
@@ -68,8 +64,7 @@ function runtimeRequestedTab({
     ((jobId !== null && jobId !== previousJobId && trainingRunActive) ||
       (trainingRunActive && !previousTrainingRunActive)) &&
     requestedTab !== "history" &&
-    requestedTab !== "current-run" &&
-    requestedTab !== "compare"
+    requestedTab !== "current-run"
   ) {
     return "current-run";
   }
@@ -94,9 +89,6 @@ export function getStudioSubtitle({
     return selectedHistoryRunId
       ? t("studio.subtitles.viewingPastRun")
       : t("studio.subtitles.viewPastRuns");
-  }
-  if (activeTab === "compare") {
-    return t("studio.subtitles.compare");
   }
   return t("studio.subtitles.configure");
 }

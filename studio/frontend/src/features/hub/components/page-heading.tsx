@@ -22,14 +22,14 @@ export function PageHeading({
   onTitleClick,
 }: PageHeadingProps) {
   return (
-    <div className={cn("page-title-halo min-w-0", className)}>
+    <div className={cn("min-w-0", className)}>
       {onTitleClick ? (
         <button
           type="button"
           onClick={onTitleClick}
           className={cn(
             TITLE_CLASS,
-            "cursor-pointer rounded-md text-left outline-none transition-opacity hover:opacity-80 focus-visible:ring-1 focus-visible:ring-ring",
+            "cursor-pointer rounded-full text-left outline-none transition-opacity hover:opacity-80 focus-visible:ring-1 focus-visible:ring-ring",
           )}
         >
           {title}
@@ -38,7 +38,9 @@ export function PageHeading({
         <h1 className={TITLE_CLASS}>{title}</h1>
       )}
       {subtitle ? (
-        <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
+        <p className="mt-2 text-ui-13 leading-ui-19 text-muted-foreground">
+          {subtitle}
+        </p>
       ) : null}
     </div>
   );

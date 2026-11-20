@@ -111,7 +111,7 @@ def _write(image: Image.Image, path: Path, size: int) -> None:
 def main() -> int:
     master = render_icon()
 
-    _write(master, ROOT / "images" / "logo-x-minus-icon.png", 512)
+    _write(master, ROOT / "images" / "logo-x-plus-icon.png", 512)
 
     print("frontend/public:")
     _write(master, FRONTEND_PUBLIC / "favicon.png", 32)
@@ -124,7 +124,7 @@ def main() -> int:
     # The hub's owner avatar and other round placements.
     _write(master, FRONTEND_PUBLIC / "rounded.png", 256)
     (FRONTEND_PUBLIC / "favicon.svg").write_text(
-        (ROOT / "images" / "logo-x-minus-icon.svg").read_text(encoding = "utf-8"), encoding = "utf-8"
+        (ROOT / "images" / "logo-x-plus-icon.svg").read_text(encoding = "utf-8"), encoding = "utf-8"
     )
     print(f"  {Path('studio/frontend/public/favicon.svg')}")
 

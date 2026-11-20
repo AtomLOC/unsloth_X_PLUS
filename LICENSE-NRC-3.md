@@ -2,7 +2,7 @@
 
 **Non-Rebranding Commons**
 
-Copyright 2026-present the X8 authors. All rights reserved except as granted below.
+Copyright 2026-present the X+ authors. All rights reserved except as granted below.
 
 ---
 
@@ -259,7 +259,7 @@ To place a file under NRC-3, add these two lines at the top of it:
 
 ```
 SPDX-License-Identifier: NRC-3
-Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 ```
 
 Files that keep an Apache-2.0 or AGPL-3.0 header are not covered by this license, whatever their

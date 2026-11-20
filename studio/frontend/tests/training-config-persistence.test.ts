@@ -68,7 +68,7 @@ test("migration preserves tuned values while protecting them from model defaults
     16,
   );
 
-  assert.equal(TRAINING_CONFIG_PERSISTENCE_VERSION, 23);
+  assert.equal(TRAINING_CONFIG_PERSISTENCE_VERSION, 24);
   assert.equal(migrated.learningRate, 0.000031);
   assert.equal(migrated.loraRank, 48);
   assert.equal(migrated.modelDefaultsAppliedFor, "org/model");
@@ -96,28 +96,6 @@ test("migration keeps method-default learning rates automatic", () => {
     migrated.trainingMethodProvenance.learningRateManuallySet,
     false,
   );
-});
-
-test("merge completes an advanced block that predates module groups", () => {
-  const merged = mergeTrainingConfig(
-    {
-      advanced: {
-        layerLrEnabled: true,
-        layerLrZones: { early: 0.1 },
-      },
-    },
-    { trainingMethod: "qlora" } as never,
-  );
-
-  // The group sliders read these records directly, so a stale localStorage
-  // entry must not leave them missing.
-  assert.equal(merged.advanced.layerLrKinds.attention, 1);
-  assert.equal(merged.advanced.layerLrKinds.moe_expert, 1);
-  assert.equal(merged.advanced.layerLrZones.early, 0.1);
-  // Fields the stale entry does not carry come back at their defaults.
-  assert.equal(merged.advanced.layerLrZones.head, 1);
-  assert.deepEqual(merged.advanced.blendSlots, []);
-  assert.ok(merged.advanced.autoEvalSuites.length > 0);
 });
 
 test("merge never restores a persisted W&B token", () => {
@@ -438,4 +416,34 @@ test("a baseline left over from another model is not used as pre-CPT params", ()
   );
 
   assert.equal(migrated.trainingMethodProvenance.loraRankBeforeCpt, undefined);
+});
+
+
+test("explicit false training toggle choices survive persistence and hydration", () => {
+  const stored = {
+    packing: false, trainOnCompletions: false,
+    trainingToggleChoices: { packing: false, trainOnCompletions: false },
+  };
+  const merged = mergeTrainingConfig(stored, {
+    trainingMethod: "qlora", packing: true, trainOnCompletions: true,
+  } as never);
+  assert.deepEqual(merged.trainingToggleChoices, stored.trainingToggleChoices);
+  assert.equal(merged.packing, false);
+  assert.equal(merged.trainOnCompletions, false);
+  const again = partializeTrainingConfig(merged);
+  assert.deepEqual(again.trainingToggleChoices, stored.trainingToggleChoices);
+});
+
+test("legacy saved false values remain opt-outs when their provenance is unknown", () => {
+  const merged = mergeTrainingConfig({ packing: false, trainOnCompletions: false }, {
+    trainingMethod: "qlora", packing: true, trainOnCompletions: true,
+  } as never);
+  assert.deepEqual(merged.trainingToggleChoices, { packing: false, trainOnCompletions: false });
+});
+
+test("automatic disabled values are not promoted into explicit choices", () => {
+  const merged = mergeTrainingConfig({
+    packing: false, trainOnCompletions: false, trainingToggleChoices: {},
+  }, { trainingMethod: "qlora", packing: true, trainOnCompletions: true } as never);
+  assert.deepEqual(merged.trainingToggleChoices, {});
 });

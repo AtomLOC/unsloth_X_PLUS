@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """SQLite storage for the telemetry collector.
 
@@ -72,7 +72,7 @@ REPORT_SCHEMA = 1
 
 def db_path() -> Path:
     """The SQLite file, overridable for deployments and tests."""
-    configured = os.environ.get("X8_TELEMETRY_DB", "").strip()
+    configured = os.environ.get("X+_TELEMETRY_DB", "").strip()
     if configured:
         return Path(configured).expanduser()
     return Path(__file__).resolve().parent / "telemetry.sqlite3"

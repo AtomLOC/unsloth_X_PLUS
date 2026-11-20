@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
+import { useTimeFormat } from "@/lib/time-format";
 import { Checkbox } from "@/components/ui/checkbox";
 import { type TranslationKey, useLocale, useT } from "@/i18n";
 import { cn } from "@/lib/utils";
-import { Folder01Icon } from "@hugeicons/core-free-icons";
+import { FolderClosedIcon } from "@/lib/folder-icons";
 import { StarPointedIcon } from "@/lib/hugeicons-derived";
 import { HugeiconsIcon } from "@hugeicons/react";
 import type { ReactNode } from "react";
@@ -23,15 +24,7 @@ function targetKey(target: LibraryTarget): string {
 }
 
 const ROW_INSET = "pl-4 pr-6";
-// Gap, not padding, so each row's hover area keeps its width.
 export const LIST_ROW_GAP = "gap-1";
-// The device picker's row treatment (compute-target-picker.tsx's IDLE_CLASS/SELECTED_CLASS), in
-// the same tokens: `accent` lifts a row in both themes, where `muted` went flat in dark, and the
-// row's own actions menu already brightens with `hover:bg-accent`. One hover for the screen.
-const ROW_HOVER = "hover:bg-accent/60";
-const ROW_SELECTED = "bg-accent hover:bg-accent";
-// One ring for every control a row offers, spelled as the shared focus class is.
-const ROW_FOCUS = "outline-none focus-visible:ring-2 focus-visible:ring-ring";
 
 const CELL = "hidden text-ui-13 text-muted-foreground sm:block";
 const ACTIVITY_COLUMN = "w-48 shrink-0";
@@ -67,8 +60,7 @@ function SortHeader({
       onClick={() => onSortChange(column)}
       aria-sort={active ? (sort.desc ? "descending" : "ascending") : undefined}
       className={cn(
-        "flex items-center gap-1 rounded-sm text-left transition-colors hover:text-foreground",
-        ROW_FOCUS,
+        "flex items-center gap-1 text-left transition-colors hover:text-foreground",
         active && "text-foreground",
         className,
       )}
@@ -104,7 +96,7 @@ function GutterCheckbox({
         }}
         aria-label={label}
         className={cn(
-          "rounded-full border-input opacity-0 transition-opacity focus-visible:opacity-100",
+          "rounded-full border-neutral-300 opacity-0 transition-opacity focus-visible:opacity-100 dark:border-input",
           group === "row"
             ? "group-hover/library-row:opacity-100"
             : "group-hover/library-head:opacity-100",
@@ -142,13 +134,13 @@ function Row({
 }) {
   const t = useT();
   const locale = useLocale();
+  useTimeFormat();
   return (
     <div
       className={cn(
-        "group/library-row relative flex items-center gap-4 rounded-[14px] text-foreground transition-colors",
-        ROW_HOVER,
+        "group/library-row relative flex items-center gap-4 rounded-md transition-colors hover:bg-muted dark:hover:bg-muted/60",
         ROW_INSET,
-        selected && ROW_SELECTED,
+        selected && "bg-muted dark:bg-muted/60",
       )}
     >
       <GutterCheckbox
@@ -165,10 +157,7 @@ function Row({
         type="button"
         aria-pressed={selecting ? selected : undefined}
         onClick={(event) => (selecting ? onToggle(event.shiftKey) : onOpen())}
-        className={cn(
-          "flex min-w-0 flex-1 items-center gap-4 rounded-lg py-2 text-left",
-          ROW_FOCUS,
-        )}
+        className="flex min-w-0 flex-1 items-center gap-4 rounded-md py-2 text-left outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         {tile}
         <span className="flex min-w-0 items-center gap-2 text-ui-14 text-foreground">{name}</span>
@@ -213,7 +202,6 @@ export function LibraryList({
   sort: LibrarySortState;
   onSortChange: (key: LibrarySortKey) => void;
   activity: boolean;
-  /** Rows listed first, with own menus and no selection (Favorites' starred chats). */
   leading?: ReactNode;
   favoriteMarks?: boolean;
 }) {
@@ -228,7 +216,6 @@ export function LibraryList({
 
   return (
     <div>
-      {/* The padding sits outside the row, so the checkbox centers on the column titles. */}
       <div className="pb-2">
         <div
           className={cn(
@@ -236,7 +223,6 @@ export function LibraryList({
             ROW_INSET,
           )}
         >
-          {/* Ticked only once everything is: a partial tick read as every row being selected. */}
           <GutterCheckbox
             checked={allSelected}
             visible={selecting}
@@ -273,8 +259,8 @@ export function LibraryList({
             onToggle={(range) => onToggle(`folder:${folder.id}`, range)}
             onOpen={() => actions.openFolder(folder.id)}
             tile={
-              <div className="flex size-9 shrink-0 items-center justify-center rounded-[10px] border border-border/60">
-                <HugeiconsIcon icon={Folder01Icon} strokeWidth={1.5} className="size-5" />
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border/60">
+                <HugeiconsIcon icon={FolderClosedIcon} strokeWidth={1.5} className="size-5" />
               </div>
             }
             name={

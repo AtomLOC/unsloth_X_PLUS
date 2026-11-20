@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. See /LICENSE-NRC-3.md
 
 """Tests for file-backed custom evaluation tasks.
 
@@ -41,7 +41,7 @@ def test_a_jsonl_file_becomes_a_generative_task(tmp_path, monkeypatch):
     assert problems == []
     task = tasks["support-triage"]
     assert task.suite_id == "custom:support-triage"
-    assert task.lm_eval_name == "x8_local_support-triage"
+    assert task.lm_eval_name == "x_plus_local_support-triage"
     assert task.kind == "generative"
     assert task.metric == "exact_match"
     assert len(task.samples) == 2
@@ -164,11 +164,11 @@ def test_the_command_runs_the_generated_task_by_name(tmp_path):
         "org/m",
         limit = 5,
         batch_size = 2,
-        task_name = "x8_local_triage",
+        task_name = "x_plus_local_triage",
         include_path = str(tmp_path),
     )
 
-    assert "x8_local_triage" in command
+    assert "x_plus_local_triage" in command
     assert "custom:triage" not in command
     assert command[command.index("--include_path") + 1] == str(tmp_path)
 
@@ -195,7 +195,7 @@ def test_written_task_files_carry_the_normalised_samples(tmp_path):
     written = eval_tasks.write_task_files(task, tmp_path / "include")
 
     config = Path(written["config"]).read_text(encoding = "utf-8")
-    assert "task: x8_local_triage" in config
+    assert "task: x_plus_local_triage" in config
     assert "output_type: multiple_choice" in config
     assert f"test: {Path(written['data']).as_posix()}" in config
     rows = Path(written["data"]).read_text(encoding = "utf-8").splitlines()

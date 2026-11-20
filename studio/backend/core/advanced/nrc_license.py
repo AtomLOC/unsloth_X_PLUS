@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """The NRC-3 notice that travels with a produced checkpoint.
 
@@ -9,7 +9,7 @@ seeds, inputs and code version; the same write now records the license and drops
 a plain-text copy beside the weights, so a reader who never opens the manifest
 still sees both what is permitted and which upstream licenses came along.
 
-Only the X8 original additions and the run record are covered. The weights,
+Only the X+ original additions and the run record are covered. The weights,
 tokenizer and dataset keep whatever license their source had, and the notice
 says so rather than implying the whole folder was relicensed.
 """
@@ -26,9 +26,9 @@ LICENSE_FILE = "LICENSE-NRC-3.txt"
 LICENSE_DOCUMENT = "LICENSE-NRC-3.md"
 
 NOTICE_TEXT = """NRC-3 License 1.0 (Non-Rebranding Commons)
-X8 / Unsloth Studio
+X+ / Unsloth Studio
 
-This folder was produced by X8. The NRC-3 terms cover the X8 original
+This folder was produced by X+. The NRC-3 terms cover the X+ original
 additions and this run record. Weights, tokenizers and datasets inherited from
 a source checkpoint or dataset keep that source's license; nothing here
 relicenses them.
@@ -72,7 +72,7 @@ def license_record() -> dict[str, Any]:
         "title": LICENSE_TITLE,
         "file": LICENSE_FILE,
         "document": LICENSE_DOCUMENT,
-        "applies_to": "X8 original additions and this run record",
+        "applies_to": "X+ original additions and this run record",
         "upstream_unchanged": True,
         "note": (
             "Weights, tokenizers and datasets inherited from a source keep that "

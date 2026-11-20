@@ -3,8 +3,6 @@
 
 import type { TrainingSeriesPoint } from "@/features/training";
 import { type ReactElement, Suspense, lazy, useMemo } from "react";
-import type { LossChartEvent } from "./charts/loss-chart-events";
-import { LossAnomalyCallout } from "./loss-anomaly-callout";
 
 const ChartsContent = lazy(() =>
   import("./charts-content").then((module) => ({
@@ -27,7 +25,6 @@ interface ChartsSectionProps {
   lrHistory: TrainingSeriesPoint[];
   gradNormHistory: TrainingSeriesPoint[];
   evalLossHistory: TrainingSeriesPoint[];
-  events?: readonly LossChartEvent[];
 }
 
 export function ChartsSection({
@@ -39,7 +36,6 @@ export function ChartsSection({
   lrHistory,
   gradNormHistory,
   evalLossHistory,
-  events = [],
 }: ChartsSectionProps): ReactElement | null {
   const series = useMemo(
     () => ({
@@ -62,14 +58,7 @@ export function ChartsSection({
         loss: point.value,
       })),
     }),
-    [
-      currentStep,
-      evalLossHistory,
-      gradNormHistory,
-      lossHistory,
-      lrHistory,
-      totalSteps,
-    ],
+    [currentStep, evalLossHistory, gradNormHistory, lossHistory, lrHistory, totalSteps],
   );
 
   if (
@@ -87,21 +76,13 @@ export function ChartsSection({
           {SKELETON_KEYS.map((key) => (
             <div
               key={key}
-              className="h-[calc(280px*var(--ui-space-scale,1))] 4xl:h-[calc(360px*var(--ui-space-scale,1))] rounded-xl border bg-muted/30 animate-pulse"
+              className="h-[calc(280px*var(--ui-space-scale,1))] 4xl:h-[calc(360px*var(--ui-space-scale,1))] rounded-2xl border bg-muted/30 animate-pulse"
             />
           ))}
         </div>
       }
     >
-      <div className="flex flex-col gap-4">
-        <LossAnomalyCallout lossHistory={lossHistory} />
-        <ChartsContent
-          metrics={series}
-          isTraining={isTraining}
-          evalEnabled={evalEnabled}
-          events={events}
-        />
-      </div>
+      <ChartsContent metrics={series} isTraining={isTraining} evalEnabled={evalEnabled} />
     </Suspense>
   );
 }

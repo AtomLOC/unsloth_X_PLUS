@@ -28,7 +28,6 @@ import { ChevronDownStandardIcon } from "@/lib/chevron-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { type ReactElement, useState } from "react";
 import { useShallow } from "zustand/react/shallow";
-import { EarlyStopParentGuard } from "./early-stop-parent-guard";
 import { ParamsRow, ParamsSliderRow } from "./params-section-controls";
 import { TrainingMemoryParams } from "./training-memory-params";
 
@@ -86,9 +85,6 @@ export function TrainingHyperparametersSection({
     useShallow((state) => ({
       epochs: state.epochs,
       isDecision: state.modelType === "decision",
-      // CoRA's recipe owns the optimizer, scheduler, batch and accumulation, so those rows are
-      // hidden for it rather than shown and ignored.
-      isCora: state.trainingMethod === "cora",
       isEmbedding: state.isEmbeddingModel || state.modelType === "embeddings",
       optimizerType: state.optimizerType,
       lrSchedulerType: state.lrSchedulerType,
@@ -113,7 +109,7 @@ export function TrainingHyperparametersSection({
       setRandomSeed: state.setRandomSeed,
     })),
   );
-  // Only mounted in advanced mode, so start expanded when the user switches to it.
+  // Only mounted in advanced mode, so start expanded.
   const [open, setOpen] = useState(true);
   const [tab, setTab] = useState<HyperparameterTab>("optimization");
   const isMac = platformDeviceType === "mac";
@@ -144,7 +140,7 @@ export function TrainingHyperparametersSection({
           onValueChange={(value) => setTab(value as HyperparameterTab)}
           className="w-full"
         >
-          <div className="flex justify-center">
+          <div className="flex justify-start">
             <SegmentedTabsList
               value={tab}
               options={tabs}
@@ -157,7 +153,7 @@ export function TrainingHyperparametersSection({
             value="optimization"
             className="mt-3 flex flex-col gap-3"
           >
-            {!store.isDecision && !store.isCora && (
+            {!store.isDecision && (
               <ParamsRow
                 label={t("studio.params.optimizer")}
                 tooltip={
@@ -195,7 +191,6 @@ export function TrainingHyperparametersSection({
                 </Select>
               </ParamsRow>
             )}
-            {!store.isCora && (
             <ParamsRow
               label={t("studio.params.lrScheduler")}
               tooltip={
@@ -228,8 +223,6 @@ export function TrainingHyperparametersSection({
                 </SelectContent>
               </Select>
             </ParamsRow>
-            )}
-            {!store.isCora && (
             <ParamsSliderRow
               label={t("studio.params.batchSize")}
               tooltip={
@@ -251,8 +244,6 @@ export function TrainingHyperparametersSection({
               max={32}
               step={1}
             />
-            )}
-            {!store.isCora && (
             <ParamsSliderRow
               label={t("studio.params.gradAccum")}
               tooltip={
@@ -274,7 +265,6 @@ export function TrainingHyperparametersSection({
               max={64}
               step={1}
             />
-            )}
             <ParamsRow
               label={t("studio.params.weightDecay")}
               tooltip={
@@ -410,7 +400,6 @@ export function TrainingHyperparametersSection({
                 />
               </ParamsRow>
             )}
-            <EarlyStopParentGuard />
             <ParamsRow
               label={t("studio.params.seed")}
               tooltip={t("studio.params.seedTooltip")}

@@ -16,10 +16,6 @@ import type {
   DecisionLayout,
 } from "../api/models-api";
 import type { DrafterCapability } from "./api";
-import type {
-  AdvancedTrainingState,
-  MoeExpertScope,
-} from "@/features/advanced/types";
 
 export type LoraVariant = "lora" | "rslora" | "loftq" | "dora";
 
@@ -65,7 +61,6 @@ export interface TrainingMethodProvenance {
   trainOnCompletionsBeforeCpt: boolean | null;
 }
 
-/** Column-to-role mapping, e.g. { "problem": "user", "solution": "assistant", "context": "system" } */
 export type DatasetManualMapping = Record<string, string>;
 
 /** "auto" retrains a native MTP head when the model has one, else trains an EAGLE-3 drafter. */
@@ -116,10 +111,6 @@ export interface TrainingConfigState {
   datasetSliceEnd: string | null;
   uploadedFile: string | null;
   uploadedEvalFile: string | null;
-  /** A second dataset for evaluation only; null = eval split of the training set. */
-  evalDataset: string | null;
-  evalDatasetSubset: string | null;
-  evalDatasetSplit: string | null;
   epochs: number;
   contextLength: number;
   learningRate: number;
@@ -139,12 +130,6 @@ export interface TrainingConfigState {
   evalSteps: number;
   /** Evaluations without a lower eval loss before the run stops; 0 = off. */
   earlyStoppingPatience: number;
-  /** Parent run whose recorded loss this run must beat; null = guard off. */
-  earlyStopParentRunId: string | null;
-  /** Training steps allowed without beating the parent's recorded loss; 0 = off. */
-  earlyStopPatienceSteps: number;
-  /** How much lower than the parent's loss counts as an improvement. */
-  earlyStopMinDelta: number;
   /** Train a speculative-decoding drafter (MTP head or EAGLE-3) after fine-tuning. */
   drafterEnabled: boolean;
   drafterStrategy: DrafterStrategy;
@@ -158,6 +143,8 @@ export interface TrainingConfigState {
   drafterCapability: DrafterCapability | null;
   packing: boolean;
   trainOnCompletions: boolean;
+  /** Explicit user/YAML choices, separate from automatic model and dataset defaults. */
+  trainingToggleChoices: { packing?: boolean; trainOnCompletions?: boolean };
   gradientCheckpointing: GradientCheckpointing;
   offloadLayers: OffloadLayers;
   offloadVramGb: number | null;
@@ -193,16 +180,8 @@ export interface TrainingConfigState {
   finetuneMLPModules: boolean;
   targetModules: string[];
   maxPositionEmbeddings: number | null;
-  /** A MoE finetune's module scope; null keeps Studio's default target list. */
-  moeExpertScope: MoeExpertScope | null;
-  /** Reported by the model config, not chosen: whether this model has experts at all. */
-  isMoeModel: boolean;
-  numExperts: number | null;
-  numExpertsPerToken: number | null;
   visionImageSize: number | null;
   s3Config: S3Config | null;
-  /** Advanced Studio block: QAT, curriculum, layer LR, blending, auto-eval, RL. */
-  advanced: AdvancedTrainingState;
 }
 
 export type AdvancedSettingsBaseline = Partial<
@@ -263,17 +242,11 @@ export interface TrainingConfigActions {
   ensureModelDefaultsLoaded: () => void;
   ensureDatasetChecked: () => void;
   setTrainingMethod: (method: TrainingMethod) => void;
-  /** Pick what a MoE finetune trains; null restores Studio's default list. */
-  setMoeExpertScope: (scope: MoeExpertScope | null) => void;
   selectHfDataset: (
     dataset: string | null,
     options?: DatasetCacheReferenceOptions,
   ) => void;
   selectLocalDataset: (file: string | null) => void;
-  /** Pick the separate evaluation dataset (Hugging Face repo id, or null to clear). */
-  selectEvalHfDataset: (dataset: string | null) => void;
-  setEvalDatasetSubset: (subset: string | null) => void;
-  setEvalDatasetSplit: (split: string | null) => void;
   selectS3Source: () => void;
   restoreBrowseDatasetSource: () => void;
   setDatasetFormat: (format: DatasetFormat) => void;
@@ -312,9 +285,6 @@ export interface TrainingConfigActions {
   setSaveSteps: (value: number) => void;
   setEvalSteps: (value: number) => void;
   setEarlyStoppingPatience: (value: number) => void;
-  setEarlyStopParentRunId: (value: string | null) => void;
-  setEarlyStopPatienceSteps: (value: number) => void;
-  setEarlyStopMinDelta: (value: number) => void;
   setDrafterEnabled: (value: boolean) => void;
   setDrafterStrategy: (value: DrafterStrategy) => void;
   setDrafterDataSource: (value: DrafterDataSource) => void;
@@ -343,7 +313,6 @@ export interface TrainingConfigActions {
   setFinetuneMLPModules: (value: boolean) => void;
   setTargetModules: (value: string[]) => void;
   setS3Config: (value: S3Config | null) => void;
-  setAdvanced: (patch: Partial<AdvancedTrainingState>) => void;
   restoreRunConfig: (config: Record<string, unknown>) => void;
   reset: () => void;
   resetToModelDefaults: () => void;

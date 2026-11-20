@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: NRC-3
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """Model surgery: prune a dense checkpoint, then upcycle its FFN into experts.
 

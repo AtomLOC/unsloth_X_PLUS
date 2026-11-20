@@ -49,8 +49,6 @@ type Props = {
   datasetEvalSplit: string | null;
   setDatasetEvalSplit: (v: string | null) => void;
   datasetStreaming: boolean;
-  /** Repo id of a separate evaluation dataset, which owns the eval split instead. */
-  separateEvalDataset?: string | null;
   setManualDatasetOptionsValid: (v: boolean) => void;
   markManualDatasetOptionsEdited: (optionsValid: boolean) => void;
 };
@@ -89,7 +87,6 @@ export function HfDatasetSubsetSplitSelectors({
   datasetEvalSplit,
   setDatasetEvalSplit,
   datasetStreaming,
-  separateEvalDataset = null,
   setManualDatasetOptionsValid,
   markManualDatasetOptionsEdited,
 }: Props) {
@@ -109,7 +106,7 @@ export function HfDatasetSubsetSplitSelectors({
   const showPlaceholderDropdowns =
     variant === "studio" && !enabled && !datasetName;
 
-  // Auto-select subset and split in one pass to avoid racing effects
+  // Auto-select subset and split in one pass to avoid racing effects.
   useEffect(() => {
     const next = nextHfDatasetOptionSelection({
       subsets: hfSubsets,
@@ -159,20 +156,14 @@ export function HfDatasetSubsetSplitSelectors({
       <SelectorDropdown
         variant={variant}
         label={t("studio.dataset.selectors.evaluationSplit")}
-        tooltip={
-          // A second dataset brings its own split, so this pick would be ignored.
-          // Saying so beats leaving a value that silently never reaches the run.
-          separateEvalDataset
-            ? `${separateEvalDataset} is evaluated instead; its own split applies.`
-            : t("studio.dataset.selectors.evaluationSplitTooltip")
-        }
-        value={disabled || separateEvalDataset ? null : datasetEvalSplit}
+        tooltip={t("studio.dataset.selectors.evaluationSplitTooltip")}
+        value={disabled ? null : datasetEvalSplit}
         onChange={setDatasetEvalSplit}
-        options={disabled || separateEvalDataset ? [] : hfSplits}
-        placeholder={separateEvalDataset ?? t("studio.dataset.selectors.none")}
+        options={disabled ? [] : hfSplits}
+        placeholder={t("studio.dataset.selectors.none")}
         noneLabel={t("studio.dataset.selectors.none")}
         allowNone={true}
-        disabled={disabled || separateEvalDataset !== null}
+        disabled={disabled}
       />
     </>
   );
@@ -287,8 +278,7 @@ function ManualDatasetOptions({
     draftSources,
   );
   if (drafts !== storedDrafts) {
-    // Persist observed prop transitions so an A -> B -> A cycle cannot revive
-    // an obsolete draft. The identity guard makes this a single adjustment.
+    // Persist observed transitions so an A -> B -> A cycle cannot revive an obsolete draft.
     setStoredDrafts(drafts);
   }
   const subsetDraft = drafts.subset.value;
@@ -380,9 +370,7 @@ function ManualDatasetOptions({
       },
     };
     setDatasetSubset(value);
-    // It nulls datasetEvalSplit but not evalSteps, so this is what stops evaluation staying
-    // armed with no split (a 422 once streaming is on). setDatasetSplit(null) is not needed:
-    // it only adds a runDatasetCheck against an assumed "train" split.
+    // Stops evaluation staying armed with no split (a 422 once streaming is on).
     setDatasetEvalSplit(null);
     setStoredDrafts(nextDrafts);
     setManualDatasetOptionsValid(

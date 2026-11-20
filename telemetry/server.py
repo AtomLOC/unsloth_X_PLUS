@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
-# Copyright 2026-present the X8 authors. All rights reserved. See /LICENSE-NRC-3.md
+# Copyright 2026-present the X+ authors. All rights reserved. See /LICENSE-NRC-3.md
 
 """HTTP surface for the telemetry collector.
 
@@ -8,7 +8,7 @@ Two audiences, two surfaces:
 * ``POST /api/v1/report`` -- the desktop app's opt-in reporter. Anonymous apart
   from an install id; optionally gated by a shared ingest token.
 * ``/api/admin/*`` -- the operator console. A token when
-  ``X8_TELEMETRY_ADMIN_TOKEN`` is set, loopback-only when it is not.
+  ``X+_TELEMETRY_ADMIN_TOKEN`` is set, loopback-only when it is not.
 
 Run from the repository root::
 
@@ -33,9 +33,9 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from telemetry import store
 
-ADMIN_TOKEN_ENV = "X8_TELEMETRY_ADMIN_TOKEN"
-INGEST_TOKEN_ENV = "X8_TELEMETRY_INGEST_TOKEN"
-ADMIN_COOKIE = "x8_telemetry_admin"
+ADMIN_TOKEN_ENV = "X+_TELEMETRY_ADMIN_TOKEN"
+INGEST_TOKEN_ENV = "X+_TELEMETRY_INGEST_TOKEN"
+ADMIN_COOKIE = "x_plus_telemetry_admin"
 MAX_REPORT_BYTES = 2 * 1024 * 1024
 DASHBOARD_DIR = Path(__file__).resolve().parent / "dashboard"
 
@@ -205,7 +205,7 @@ class LoginPayload(BaseModel):
 
 
 app = FastAPI(
-    title = "Unsloth X8 telemetry",
+    title = "Unsloth X+ telemetry",
     description = "Opt-in usage telemetry collector and operator console.",
     docs_url = None,
     redoc_url = None,
@@ -298,7 +298,7 @@ def admin_export() -> PlainTextResponse:
     return PlainTextResponse(
         body,
         media_type = "text/csv; charset=utf-8",
-        headers = {"Content-Disposition": 'attachment; filename="x8-installs.csv"'},
+        headers = {"Content-Disposition": 'attachment; filename="x-plus-installs.csv"'},
     )
 
 
@@ -310,8 +310,8 @@ def main() -> None:
 
     uvicorn.run(
         "telemetry.server:app",
-        host = os.environ.get("X8_TELEMETRY_HOST", "127.0.0.1"),
-        port = int(os.environ.get("X8_TELEMETRY_PORT", "8899")),
+        host = os.environ.get("X+_TELEMETRY_HOST", "127.0.0.1"),
+        port = int(os.environ.get("X+_TELEMETRY_PORT", "8899")),
         reload = False,
     )
 

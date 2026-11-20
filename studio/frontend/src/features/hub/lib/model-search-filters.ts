@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DatasetAccessFilter } from "./dataset-filters";
+import { ggufRepoParams } from "../../../lib/model-size.ts";
 
 /** Who uploaded a model: the unsloth org, any other organization, or a personal account. */
 export type HubUploader = "unsloth" | "organization" | "personal";
@@ -22,16 +22,22 @@ export interface ModelSearchFilters {
   /** Dataset rows; the dataset list filters on these, the model search ignores them. */
   minRows?: number;
   maxRows?: number;
-  /** Dataset size on disk, in GB; also dataset-only. */
-  minGb?: number;
-  maxGb?: number;
-  /** Dataset access; absent means gated and open alike. */
-  access?: DatasetAccessFilter;
 }
 
 export function hasModelSearchFilters(filters: ModelSearchFilters): boolean {
   return Object.values(filters).some(
     (value) => value !== undefined && value !== false,
+  );
+}
+
+export function needsModelMetadata(filters: ModelSearchFilters): boolean {
+  const uploaders = filters.uploaders;
+  return (
+    filters.minContext !== undefined ||
+    filters.maxContext !== undefined ||
+    (!!uploaders &&
+      uploaders.length < HUB_UPLOADERS.length &&
+      uploaders.includes("organization") !== uploaders.includes("personal"))
   );
 }
 
@@ -113,6 +119,7 @@ export async function* filterModelListing(
   filters: ModelSearchFilters,
   fetchJson: JsonFetch,
   pinnedModel?: Promise<unknown | null>,
+  keep?: (raw: unknown) => boolean,
 ): AsyncGenerator<unknown> {
   const owners = new Map<string, Promise<boolean>>();
   async function filter(raw: unknown): Promise<ListingModel | null> {
@@ -122,11 +129,17 @@ export async function* filterModelListing(
     const model = raw as ListingModel;
     if (
       !matchesRange(
-        model.safetensors?.total ?? model.gguf?.total,
+        model.safetensors?.total ??
+          (model.gguf
+            ? ggufRepoParams(model.name, model.gguf.total)
+            : undefined),
         filters.minParams,
         filters.maxParams,
       )
     ) {
+      return null;
+    }
+    if (keep && !keep(model)) {
       return null;
     }
     const uploaders = filters.uploaders;

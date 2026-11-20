@@ -16,7 +16,6 @@ export const phaseColors: Record<TrainingPhase, string> = {
   configuring: "bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300",
   training:
     "bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300",
-  // Busy, not done: amber like the other working states, never completed green.
   finalizing:
     "bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300",
   training_drafter:
@@ -64,32 +63,6 @@ export function sessionEtaSeconds(
     return null;
   }
   return Math.round((elapsedSeconds * remaining) / sessionSteps);
-}
-
-export function formatClockTime(epochMs: number | null): string | null {
-  if (epochMs === null || !Number.isFinite(epochMs)) return null;
-  return new Date(epochMs).toLocaleTimeString(undefined, {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
-}
-
-export function tokensPerSecond(
-  tokens: number | null | undefined,
-  elapsedSeconds: number | null,
-): number | null {
-  if (tokens == null || !Number.isFinite(tokens) || tokens <= 0) return null;
-  if (elapsedSeconds == null || elapsedSeconds <= 0) return null;
-  return tokens / elapsedSeconds;
-}
-
-export function gpuHoursConsumed(
-  elapsedSeconds: number | null,
-  gpuCount: number,
-): number | null {
-  if (elapsedSeconds == null || elapsedSeconds <= 0) return null;
-  if (!Number.isFinite(gpuCount) || gpuCount < 1) return null;
-  return (elapsedSeconds / 3600) * gpuCount;
 }
 
 export function formatNumber(value: number | null | undefined, digits: number): string {
