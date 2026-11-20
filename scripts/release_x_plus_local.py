@@ -72,7 +72,7 @@ import tempfile
 import urllib.parse
 from datetime import datetime, timezone
 
-REPO = "GoldodemonINC/unsloth_8X"
+REPO = "AtomLOC/unsloth_X_PLUS"
 SEMVER = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 # Build every flavor unless --variants narrows it. The universal one is published as

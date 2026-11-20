@@ -31,6 +31,12 @@ FAKE_UPDATE_ENV_VAR = "UNSLOTH_STUDIO_FAKE_UPDATE"
 
 LOCAL_INSTALL_SOURCES = {"editable", "local_path", "vcs", "local_repo"}
 
+# This fork's wheels carry a PEP 440 local segment (2026.11.7+xplus.1), which is how a running install
+# says it is the fork rather than upstream's package of the same base version. PyPI only ever holds
+# upstream's ``unsloth``, so a PyPI verdict for a fork build is not an upgrade: acting on it would
+# replace the fork with upstream's wheel and silently drop every X+ engine.
+FORK_LOCAL_SEGMENT = "xplus"
+
 
 @dataclass(frozen = True)
 class LatestVersionResult:
@@ -112,6 +118,20 @@ def _is_version(value: str) -> bool:
     return True
 
 
+def is_fork_build(version: str) -> bool:
+    """Whether ``version`` is this fork's build, judged by its PEP 440 local segment.
+
+    ``2026.11.7+xplus.1`` is a fork build, ``2026.11.7`` is upstream's. A version the check cannot
+    parse is not treated as the fork, so the pre-existing behaviour for ``dev`` and malformed
+    versions is unchanged.
+    """
+    try:
+        parsed = Version(version)
+    except InvalidVersion:
+        return False
+    return (parsed.local or "").split(".")[0] == FORK_LOCAL_SEGMENT
+
+
 def get_studio_update_status(current_version: str) -> dict[str, Any]:
     """Return public, read-only update status for the web UI."""
     install_source = detect_install_source()
@@ -142,6 +162,18 @@ def get_studio_update_status(current_version: str) -> dict[str, Any]:
             latest_version = None,
             install_source = install_source,
             reason = "local_source",
+        )
+
+    # Before the PyPI comparison, not after: PyPI's ``unsloth`` is upstream's package, so for a fork
+    # build a newer PyPI version is not an upgrade this install may take. The desktop app has its own
+    # updater (tauri.conf.json -> this repository's releases); a browser-served fork build has none,
+    # which is why this returns no latest_version instead of guessing one.
+    if is_fork_build(current_version):
+        return _status_response(
+            current_version = current_version,
+            latest_version = None,
+            install_source = install_source,
+            reason = "fork_build",
         )
 
     if install_source != "pypi":
