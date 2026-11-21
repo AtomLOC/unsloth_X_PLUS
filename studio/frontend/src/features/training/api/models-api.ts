@@ -82,6 +82,10 @@ export interface DecisionCheckpoint {
 
 export interface ModelConfigResponse {
   id: string;
+  // MoE shape, read by the X+ expert-scope picker; routes/models.py emits these three.
+  is_moe?: boolean;
+  num_experts?: number | null;
+  num_experts_per_tok?: number | null;
   model_name?: string | null;
   config?: BackendModelConfig | null;
   is_vision: boolean;

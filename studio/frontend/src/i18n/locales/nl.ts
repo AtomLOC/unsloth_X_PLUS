@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const nl = {
   turns: {
     label: "Beurt {number}",
@@ -113,8 +110,7 @@ export const nl = {
   },
   imageViewer: {
     title: "Afbeelding",
-    description:
-      "Gebruik de pijltoetsen om tussen afbeeldingen te wisselen en plus of min om te zoomen.",
+    description: "Gebruik de pijltoetsen om tussen afbeeldingen te wisselen en plus of min om te zoomen.",
     failed: "Deze afbeelding kan niet worden geladen.",
     downloadFailed: "Kan de afbeelding niet opslaan.",
     openSource: "Bronpagina openen",
@@ -133,8 +129,7 @@ export const nl = {
   browser: {
     drafts: {
       title: "Pagina met ingevoerde tekst ontladen?",
-      description:
-        "Om de chat soepel te houden, blijven maximaal drie verborgen pagina's met ingevoerde tekst actief. Als je doorgaat, wordt {pages} ontladen, waardoor niet-opgeslagen tekst verloren kan gaan. Met Annuleren ga je terug naar het vorige tabblad.",
+      description: "Om de chat soepel te houden, blijven maximaal drie verborgen pagina's met ingevoerde tekst actief. Als je doorgaat, wordt {pages} ontladen, waardoor niet-opgeslagen tekst verloren kan gaan. Met Annuleren ga je terug naar het vorige tabblad.",
       confirm: "Ontladen en doorgaan",
     },
     agentSettings: {
@@ -142,28 +137,23 @@ export const nl = {
       docs: "Documentatie",
       docsLabel: "Documentatie over browsergebruik openen",
       enable: "Modellen de browser laten gebruiken",
-      enableDescription:
-        "Modellen openen pagina's in hun eigen browsertabblad, lezen ze en klikken en typen voor je. Ook beschikbaar in het +-menu van het invoerveld.",
+      enableDescription: "Modellen openen pagina's in hun eigen browsertabblad, lezen ze en klikken en typen voor je. Ook beschikbaar in het +-menu van het invoerveld.",
       history: "Browsegeschiedenis",
-      historyDescription:
-        "Volledige toegang slaat goedkeuring over; Nooit blokkeert de toegang nog steeds",
+      historyDescription: "Volledige toegang slaat goedkeuring over; Nooit blokkeert de toegang nog steeds",
       alwaysAsk: "Altijd vragen",
       alwaysAllow: "Altijd toestaan",
       never: "Nooit",
       scripts: "Scripts uitvoeren",
-      scriptsDescription:
-        "Kies of modellen scripts op pagina's mogen uitvoeren. Je ziet elk script voordat het wordt uitgevoerd",
+      scriptsDescription: "Kies of modellen scripts op pagina's mogen uitvoeren. Je ziet elk script voordat het wordt uitgevoerd",
       scriptsAllowDescription: "Modellen voeren zonder te vragen scripts uit op elke pagina. Een script kan alles op de pagina lezen en wijzigen",
       scriptsConfirmTitle: "Alle scripts toestaan?",
       scriptsConfirmDescription: "Modellen voeren scripts uit op elke pagina zonder ze eerst aan je te tonen. Een script kan alles op de pagina lezen en wijzigen, ook op pagina's waar je bent ingelogd. Zet dit alleen aan als je de modellen die je gebruikt vertrouwt.",
       scriptsConfirmAction: "Alle scripts toestaan",
       cursor: "Cursor weergeven",
-      cursorDescription:
-        "Toon een aanwijzer waar modellen op de pagina klikken, typen en slepen",
+      cursorDescription: "Toon een aanwijzer waar modellen op de pagina klikken, typen en slepen",
       askEveryTime: "Elke keer vragen",
       permissionsTitle: "Agenttoestemmingen",
-      permissionsDescription:
-        "Stel standaardwaarden en uitzonderingen per site in. Wachtwoord- en betaalvelden worden nooit ingevuld.",
+      permissionsDescription: "Stel standaardwaarden en uitzonderingen per site in. Wachtwoord- en betaalvelden worden nooit ingevuld.",
       site: "Site of patroon",
       sitePlaceholder: "example.com of *.example.com",
       default: "Standaard",
@@ -180,8 +170,7 @@ export const nl = {
       cancel: "Annuleren",
       removeSite: "{site} verwijderen",
       hostOnly: "Alleen deze host, niet de subdomeinen",
-      permissionsNote:
-        "Alleen sites met eigen toestemmingen worden hier weergegeven. Acties zijn inloggen, formulierverzendingen en knoppen waarmee iets wordt gekocht, verzonden of verwijderd.",
+      permissionsNote: "Alleen sites met eigen toestemmingen worden hier weergegeven. Acties zijn inloggen, formulierverzendingen en knoppen waarmee iets wordt gekocht, verzonden of verwijderd.",
       siteInvalid: "Voer een site in zoals example.com of *.example.com.",
     },
     agent: {
@@ -199,8 +188,7 @@ export const nl = {
         click: "Unsloth op “{name}” laten klikken op {host}?",
         history: "Unsloth je browsegeschiedenis laten lezen?",
         script: "Unsloth dit script laten uitvoeren op {host}?",
-        pointer:
-          "Unsloth laten klikken op onderdelen zonder label van {host}, zoals een canvas?",
+        pointer: "Unsloth laten klikken op onderdelen zonder label van {host}, zoals een canvas?",
       },
       step: {
         open: "{detail} openen",
@@ -241,8 +229,7 @@ export const nl = {
     browserUse: {
       label: "Browsergebruik",
       description: "Modellen de ingebouwde browser laten bedienen",
-      unavailable:
-        "Laad een model dat tools kan aanroepen om het de browser te laten gebruiken.",
+      unavailable: "Laad een model dat tools kan aanroepen om het de browser te laten gebruiken.",
     },
     suggested: "Voorgesteld",
     suggestedMenu: {
@@ -277,11 +264,9 @@ export const nl = {
       close: "Sluiten",
       security: "Beveiliging",
       secureTitle: "Verbinding is beveiligd",
-      secureDescription:
-        "Je gegevens, zoals wachtwoorden of kaartnummers, blijven privé wanneer ze naar deze site worden verzonden.",
+      secureDescription: "Je gegevens, zoals wachtwoorden of kaartnummers, blijven privé wanneer ze naar deze site worden verzonden.",
       insecureTitle: "Verbinding is niet beveiligd",
-      insecureDescription:
-        "Gegevens die je naar deze site verzendt, zoals wachtwoorden of kaartnummers, kunnen door anderen worden gezien.",
+      insecureDescription: "Gegevens die je naar deze site verzendt, zoals wachtwoorden of kaartnummers, kunnen door anderen worden gezien.",
       learnMore: "Meer informatie",
       certificateValid: "Certificaat is geldig",
     },
@@ -295,97 +280,71 @@ export const nl = {
     linkCopied: "Link gekopieerd",
     download: "Downloaden",
     settings: "Browserinstellingen",
-    cannotShowFile:
-      "Dit bestand kan hier niet worden weergegeven. Download het om het te openen.",
-    fileGone:
-      "Dit bestand is niet meer beschikbaar. Open het opnieuw vanuit de chat.",
+    cannotShowFile: "Dit bestand kan hier niet worden weergegeven. Download het om het te openen.",
+    fileGone: "Dit bestand is niet meer beschikbaar. Open het opnieuw vanuit de chat.",
     settingsTitle: "Browser",
     linksTitle: "Links en bestanden",
     addressBarTitle: "Adresbalk",
     openLinksSetting: "Links openen in",
-    openLinksSettingDescription:
-      "Waar links in de chat worden geopend: je standaardbrowser of een tabblad in de browser naast het gesprek. Links naar lokale adressen openen altijd in je standaardbrowser.",
+    openLinksSettingDescription: "Waar links in de chat worden geopend: je standaardbrowser of een tabblad in de browser naast het gesprek. Links naar lokale adressen openen altijd in je standaardbrowser.",
     linkDestinationDefault: "Standaardbrowser",
     linkDestinationPanel: "Unsloth-browser",
     openFilesSetting: "Bestanden openen in de browser",
-    openFilesSettingDescription:
-      "Documenten die je bijvoegt, zoals pdf's, Office-bestanden, HTML en tekst, worden geopend in een browsertabblad naast het gesprek in plaats van in een voorbeeldvenster.",
+    openFilesSettingDescription: "Documenten die je bijvoegt, zoals pdf's, Office-bestanden, HTML en tekst, worden geopend in een browsertabblad naast het gesprek in plaats van in een voorbeeldvenster.",
     searchEngineSetting: "Zoekmachine",
-    searchEngineSettingDescription:
-      "Wordt gebruikt wanneer je in de adresbalk woorden invoert in plaats van een URL.",
+    searchEngineSettingDescription: "Wordt gebruikt wanneer je in de adresbalk woorden invoert in plaats van een URL.",
     showFullUrlSetting: "Volledige URL weergeven",
-    showFullUrlSettingDescription:
-      "Toon de query en het fragment in de adresbalk, niet alleen de site en het pad.",
+    showFullUrlSettingDescription: "Toon de query en het fragment in de adresbalk, niet alleen de site en het pad.",
     bookmarksTitle: "Bladwijzers",
     bookmarksToolbarSetting: "Bladwijzerbalk",
-    bookmarksToolbarSettingDescription:
-      "Wanneer je opgeslagen pagina's onder de adresbalk worden weergegeven.",
-    bookmarkEditorSettingDescription:
-      "Geef een bladwijzer een naam en kies de locatie tijdens het opslaan.",
-    bookmarksSettingDescription:
-      "Pagina's die in de browser zijn opgeslagen bekijken, bewerken en verwijderen.",
+    bookmarksToolbarSettingDescription: "Wanneer je opgeslagen pagina's onder de adresbalk worden weergegeven.",
+    bookmarkEditorSettingDescription: "Geef een bladwijzer een naam en kies de locatie tijdens het opslaan.",
+    bookmarksSettingDescription: "Pagina's die in de browser zijn opgeslagen bekijken, bewerken en verwijderen.",
     browsingDataTitle: "Browsegegevens",
     historySetting: "Browsegeschiedenis",
-    historySettingDescription:
-      "Pagina's die in de browser zijn bezocht bekijken en beheren.",
+    historySettingDescription: "Pagina's die in de browser zijn bezocht bekijken en beheren.",
     downloadsSetting: "Downloadgeschiedenis",
-    downloadsSettingDescription:
-      "Bestanden die vanuit de browser zijn gedownload bekijken en beheren.",
+    downloadsSettingDescription: "Bestanden die vanuit de browser zijn gedownload bekijken en beheren.",
     pagesFromChat: "Open een chat om dit in de browser te bekijken.",
     tabsTitle: "Tabbladen",
     switchToNewTabsSetting: "Direct naar nieuwe tabbladen gaan",
-    switchToNewTabsSettingDescription:
-      "Als je een link in een nieuw tabblad opent met ⌘ of Ctrl, wordt deze weergegeven in plaats van op de achtergrond geopend.",
-    switchToNewTabsNative:
-      "In de desktopapp worden nieuwe tabbladen altijd op de voorgrond geopend.",
+    switchToNewTabsSettingDescription: "Als je een link in een nieuw tabblad opent met ⌘ of Ctrl, wordt deze weergegeven in plaats van op de achtergrond geopend.",
+    switchToNewTabsNative: "In de desktopapp worden nieuwe tabbladen altijd op de voorgrond geopend.",
     defaultZoomSetting: "Standaardzoom",
-    defaultZoomSettingDescription:
-      "Hoe groot pagina's worden weergegeven als ze openen. Als je de zoom van een pagina opnieuw instelt, wordt deze waarde weer gebruikt.",
+    defaultZoomSettingDescription: "Hoe groot pagina's worden weergegeven als ze openen. Als je de zoom van een pagina opnieuw instelt, wordt deze waarde weer gebruikt.",
     newTabPageTitle: "Pagina Nieuw tabblad",
     showSuggestedSetting: "Voorgestelde sites weergeven",
-    showSuggestedSettingDescription:
-      "Sites die je vaak bezoekt, als snelkoppelingen op een nieuw tabblad.",
+    showSuggestedSettingDescription: "Sites die je vaak bezoekt, als snelkoppelingen op een nieuw tabblad.",
     showRecentsSetting: "Recente pagina's weergeven",
-    showRecentsSettingDescription:
-      "Pagina's die je onlangs hebt bezocht, weergegeven op een nieuw tabblad.",
+    showRecentsSettingDescription: "Pagina's die je onlangs hebt bezocht, weergegeven op een nieuw tabblad.",
     hiddenSuggestionsSetting: "Verwijderde voorstellen",
-    hiddenSuggestionsSettingDescription:
-      "Sites die je uit Voorgesteld hebt verwijderd: {count}. Zet ze terug om ze weer te laten weergeven.",
-    hiddenSuggestionsNone:
-      "Sites die je uit Voorgesteld verwijdert, kun je hier terugzetten.",
+    hiddenSuggestionsSettingDescription: "Sites die je uit Voorgesteld hebt verwijderd: {count}. Zet ze terug om ze weer te laten weergeven.",
+    hiddenSuggestionsNone: "Sites die je uit Voorgesteld verwijdert, kun je hier terugzetten.",
     restore: "Terugzetten",
     importBookmarksSetting: "Importeren en exporteren",
-    importBookmarksSettingDescription:
-      "Haal bladwijzers op uit Chrome, Safari, Firefox of Edge met het HTML-bestand dat ze exporteren, of sla die van jou op als zo'n bestand.",
+    importBookmarksSettingDescription: "Haal bladwijzers op uit Chrome, Safari, Firefox of Edge met het HTML-bestand dat ze exporteren, of sla die van jou op als zo'n bestand.",
     importBookmarks: "Importeren…",
     exportBookmarks: "Exporteren",
     importBookmarksDoneOne: "{count} bladwijzer geïmporteerd.",
     importBookmarksDoneMany: "{count} bladwijzers geïmporteerd.",
     importBookmarksNone: "Geen nieuwe bladwijzers in dat bestand.",
-    importBookmarksPartial:
-      "{count} geïmporteerd, maar {leftOut} pasten er niet meer bij: Unsloth bewaart maximaal {max} bladwijzers.",
-    importBookmarksFailed:
-      "Kan dat bestand niet lezen. Kies een HTML-bestand met bladwijzers dat uit een browser is geëxporteerd.",
+    importBookmarksPartial: "{count} geïmporteerd, maar {leftOut} pasten er niet meer bij: Unsloth bewaart maximaal {max} bladwijzers.",
+    importBookmarksFailed: "Kan dat bestand niet lezen. Kies een HTML-bestand met bladwijzers dat uit een browser is geëxporteerd.",
     downloadsTitle: "Downloads",
     askWhereToSaveSetting: "Vragen waar elk bestand moet worden opgeslagen",
-    askWhereToSaveSettingDescription:
-      "Toon een opslagvenster voor bestanden die je in de browser downloadt.",
-    askWhereToSaveUnsupported:
-      "Je webbrowser slaat downloads op in zijn eigen downloadmap.",
+    askWhereToSaveSettingDescription: "Toon een opslagvenster voor bestanden die je in de browser downloadt.",
+    askWhereToSaveUnsupported: "Je webbrowser slaat downloads op in zijn eigen downloadmap.",
     downloadLocationSetting: "Locatie",
     downloadLocationDefault: "Map Downloads van het systeem",
     downloadLocationChange: "Wijzigen",
     downloadLocationReset: "Opnieuw instellen",
     askBeforeDownloadingSetting: "Vragen voor het downloaden",
-    askBeforeDownloadingSettingDescription:
-      "Bevestig bestanden van websites voordat ze worden opgeslagen.",
+    askBeforeDownloadingSettingDescription: "Bevestig bestanden van websites voordat ze worden opgeslagen.",
     askBeforeProgramDownloadsSetting: "Vragen voor het downloaden van programma's",
     askBeforeProgramDownloadsSettingDescription: "Bevestig bestanden die programma's kunnen uitvoeren, zoals .exe of .dmg, ook als andere downloads niets vragen.",
     downloadSitesSetting: "Downloadtoestemmingen per site",
-    downloadSitesSettingDescription:
-      "Sites waarvan je downloads altijd wilt toestaan of blokkeren.",
-    downloadSitesNone:
-      "Vink Onthouden voor de volgende keer aan wanneer erom wordt gevraagd, dan wordt de site hier weergegeven.",
+    downloadSitesSettingDescription: "Sites waarvan je downloads altijd wilt toestaan of blokkeren.",
+    downloadSitesNone: "Vink Onthouden voor de volgende keer aan wanneer erom wordt gevraagd, dan wordt de site hier weergegeven.",
     downloadSitesFor: "Downloads van {host}",
     downloadSitesRemove: "{host} vergeten",
     capture: {
@@ -420,8 +379,7 @@ export const nl = {
     downloadPrompt: {
       title: "Dit bestand downloaden?",
       description: "{host} wil {name} op je computer opslaan.",
-      dangerous:
-        "Bestanden zoals dit kunnen programma's op je computer uitvoeren. Download het alleen als je {host} vertrouwt.",
+      dangerous: "Bestanden zoals dit kunnen programma's op je computer uitvoeren. Download het alleen als je {host} vertrouwt.",
       remember: "Onthouden voor de volgende keer",
       once: "Volgende keer vragen",
       site: "Altijd voor {host}",
@@ -433,14 +391,11 @@ export const nl = {
       save: "Opslaan",
     },
     saveDownloadHistorySetting: "Downloadgeschiedenis bewaren",
-    saveDownloadHistorySettingDescription:
-      "Toon bestanden die je uit de browser downloadt onder Downloadgeschiedenis.",
+    saveDownloadHistorySettingDescription: "Toon bestanden die je uit de browser downloadt onder Downloadgeschiedenis.",
     saveHistorySetting: "Browsegeschiedenis opslaan",
-    saveHistorySettingDescription:
-      "Onthoud de pagina's die je bezoekt, voor Geschiedenis, Recent en Voorgesteld.",
+    saveHistorySettingDescription: "Onthoud de pagina's die je bezoekt, voor Geschiedenis, Recent en Voorgesteld.",
     historyRetentionSetting: "Geschiedenis bewaren gedurende",
-    historyRetentionSettingDescription:
-      "Bezoeken die ouder zijn dan dit worden automatisch verwijderd.",
+    historyRetentionSettingDescription: "Bezoeken die ouder zijn dan dit worden automatisch verwijderd.",
     retention: {
       forever: "Tot wissen",
       days90: "3 maanden",
@@ -450,17 +405,13 @@ export const nl = {
     },
     annotationsTitle: "Annotaties",
     annotationScreenshotsSetting: "Schermafbeeldingen bij annotaties",
-    annotationScreenshotsSettingDescription:
-      "Een schermafbeelding van de pagina met je markeringen helpt visiemodellen je opmerkingen te begrijpen, maar gebruikt meer context.",
-    annotationScreenshotsUnsupported:
-      "Vereist de desktopapp of een op Chromium gebaseerde browser, zoals Chrome of Edge.",
-    annotationScreenshotsHint:
-      "In een webbrowser wordt je elke keer gevraagd het tabblad te delen wanneer je annotaties verstuurt.",
+    annotationScreenshotsSettingDescription: "Een schermafbeelding van de pagina met je markeringen helpt visiemodellen je opmerkingen te begrijpen, maar gebruikt meer context.",
+    annotationScreenshotsUnsupported: "Vereist de desktopapp of een op Chromium gebaseerde browser, zoals Chrome of Edge.",
+    annotationScreenshotsHint: "In een webbrowser wordt je elke keer gevraagd het tabblad te delen wanneer je annotaties verstuurt.",
     annotationScreenshotsAlways: "Altijd toevoegen",
     annotationScreenshotsNever: "Nooit toevoegen",
     clearDataSetting: "Browsegegevens wissen",
-    clearDataSettingDescription:
-      "Wis browsegeschiedenis, downloadgeschiedenis en pagina's in de cache. Pagina's bewaren cookies en sitegegevens alleen totdat Unsloth opnieuw wordt geladen.",
+    clearDataSettingDescription: "Wis browsegeschiedenis, downloadgeschiedenis en pagina's in de cache. Pagina's bewaren cookies en sitegegevens alleen totdat Unsloth opnieuw wordt geladen.",
     manage: "Beheren",
     fullView: {
       enter: "Volledige weergave openen",
@@ -514,8 +465,7 @@ export const nl = {
       taken: "Schermafbeelding gemaakt",
       save: "Opslaan",
       failed: "Kan geen schermafbeelding maken",
-      otherSurface:
-        "Deel dit tabblad om een schermafbeelding van de pagina te maken",
+      otherSurface: "Deel dit tabblad om een schermafbeelding van de pagina te maken",
     },
     device: {
       mobile: "Mobiel",
@@ -554,10 +504,8 @@ export const nl = {
       pathCopied: "Pad gekopieerd",
       openFailed: "Kan {name} niet openen.",
       wrap: "Regels laten teruglopen",
-      reactNeedsNode:
-        "Voor React-voorbeelden is Node.js 20.19 of nieuwer nodig. Installeer het als het ontbreekt en voer daarna de Unsloth-installatie opnieuw uit.",
-      reactFailed:
-        "Kan dit voorbeeld niet voorbereiden. Voer het opnieuw uit om het nog eens te proberen.",
+      reactNeedsNode: "Voor React-voorbeelden is Node.js 20.19 of nieuwer nodig. Installeer het als het ontbreekt en voer daarna de Unsloth-installatie opnieuw uit.",
+      reactFailed: "Kan dit voorbeeld niet voorbereiden. Voer het opnieuw uit om het nog eens te proberen.",
     },
     video: {
       play: "Afspelen",
@@ -597,13 +545,10 @@ export const nl = {
       remove: "Verwijderen",
       clearHistory: "Geschiedenis wissen",
       clearDownloads: "Downloads wissen",
-      noHistory:
-        "Pagina's die je in de browser bezoekt, worden hier weergegeven.",
+      noHistory: "Pagina's die je in de browser bezoekt, worden hier weergegeven.",
       showMore: "Meer weergeven",
-      noDownloads:
-        "Bestanden die je uit de browser downloadt, worden hier weergegeven.",
-      noBookmarks:
-        "Pagina's die je met de ster in de adresbalk als bladwijzer opslaat, worden hier weergegeven.",
+      noDownloads: "Bestanden die je uit de browser downloadt, worden hier weergegeven.",
+      noBookmarks: "Pagina's die je met de ster in de adresbalk als bladwijzer opslaat, worden hier weergegeven.",
       noMatches: "Niets komt overeen met je zoekopdracht.",
       fromChat: "Uit chat",
       searchHistory: "Browsegeschiedenis doorzoeken",
@@ -641,39 +586,30 @@ export const nl = {
       undo: "Ongedaan maken",
       manage: "Bladwijzers beheren",
       more: "Meer bladwijzers",
-      toolbarEmpty:
-        "Maak een bladwijzer voor een pagina met de ster in de adresbalk om deze hier toe te voegen.",
+      toolbarEmpty: "Maak een bladwijzer voor een pagina met de ster in de adresbalk om deze hier toe te voegen.",
       toolbarAlways: "Altijd weergeven",
       toolbarNewTab: "Alleen weergeven op nieuw tabblad",
       toolbarNever: "Nooit weergeven",
     },
     clearData: {
       title: "Browsegegevens wissen?",
-      description:
-        "Hiermee worden je browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en cookies en sitegegevens gewist, waardoor je wordt uitgelogd bij sites. Gedownloade bestanden blijven op je computer staan.",
+      description: "Hiermee worden je browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en cookies en sitegegevens gewist, waardoor je wordt uitgelogd bij sites. Gedownloade bestanden blijven op je computer staan.",
       cancel: "Annuleren",
       confirm: "Gegevens wissen",
       done: "Browsegegevens gewist",
     },
     error: {
       title: "Deze pagina kan niet worden geladen",
-      description:
-        "{host} reageerde niet, weigerde de verbinding of blokkeerde het verzoek.",
+      description: "{host} reageerde niet, weigerde de verbinding of blokkeerde het verzoek.",
       retry: "Opnieuw proberen",
       botCheckTitle: "Deze site controleert op een echte browser",
-      botCheckDescription:
-        "{host} vraagt bezoekers te bewijzen dat ze een mens zijn, wat de weergave in de app hier niet kan. Open de site in plaats daarvan in je browser.",
-      botCheckDescriptionWeb:
-        "{host} vraagt bezoekers te bewijzen dat ze een mens zijn, wat de weergave in de app hier niet kan. Open de site in je browser of in {app}, dat de site wel kan openen.",
+      botCheckDescription: "{host} vraagt bezoekers te bewijzen dat ze een mens zijn, wat de weergave in de app hier niet kan. Open de site in plaats daarvan in je browser.",
+      botCheckDescriptionWeb: "{host} vraagt bezoekers te bewijzen dat ze een mens zijn, wat de weergave in de app hier niet kan. Open de site in je browser of in {app}, dat de site wel kan openen.",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "Deze pagina is het resultaat van een formulier. Als je de pagina opnieuw laadt, wordt het formulier opnieuw verzonden, waardoor de actie mogelijk wordt herhaald.",
-      upload:
-        "Bestanden uploaden werkt niet in deze weergave. Open de pagina in je systeembrowser om het te versturen.",
-      scriptNavigation:
-        "Deze pagina probeerde via een script naar een ander adres te gaan, wat deze weergave niet kan volgen. Open de pagina in plaats daarvan in je systeembrowser.",
-      needsBrowser:
-        "Deze pagina probeerde een browserfunctie te gebruiken die deze weergave blokkeert, dus delen ervan werken mogelijk niet. Open de pagina in plaats daarvan in je systeembrowser.",
+      resubmit: "Deze pagina is het resultaat van een formulier. Als je de pagina opnieuw laadt, wordt het formulier opnieuw verzonden, waardoor de actie mogelijk wordt herhaald.",
+      upload: "Bestanden uploaden werkt niet in deze weergave. Open de pagina in je systeembrowser om het te versturen.",
+      scriptNavigation: "Deze pagina probeerde via een script naar een ander adres te gaan, wat deze weergave niet kan volgen. Open de pagina in plaats daarvan in je systeembrowser.",
+      needsBrowser: "Deze pagina probeerde een browserfunctie te gebruiken die deze weergave blokkeert, dus delen ervan werken mogelijk niet. Open de pagina in plaats daarvan in je systeembrowser.",
     },
     native: {
       externalPrompt: "{host} wil {url} openen",
@@ -681,18 +617,12 @@ export const nl = {
       downloading: "{name} downloaden",
       downloaded: "{name} opgeslagen in Downloads",
       downloadFailed: "Kan {name} niet downloaden",
-      notMarked:
-        "{name} is opgeslagen, maar kan niet worden gemarkeerd als gedownload van internet, dus je systeem waarschuwt niet voordat het wordt geopend.",
-      blocked:
-        "Dit adres kan niet worden geopend in het browserpaneel. Daarin worden alleen openbare websites geopend.",
-      blockedLocal:
-        "Dit lokale adres kan hier niet worden geopend. Typ het in de adresbalk om het te openen.",
-      studioAddress:
-        "Dit is het eigen adres van Unsloth, dus het kan niet worden geopend in het browserpaneel.",
-      clearDataSettingDescription:
-        "Wis browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en de cookies en sitegegevens die pagina's bewaren, waardoor je wordt uitgelogd bij sites.",
-      clearDataDescription:
-        "Hiermee worden je browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en cookies en sitegegevens gewist, waardoor je wordt uitgelogd bij sites. Gedownloade bestanden blijven op je computer staan.",
+      notMarked: "{name} is opgeslagen, maar kan niet worden gemarkeerd als gedownload van internet, dus je systeem waarschuwt niet voordat het wordt geopend.",
+      blocked: "Dit adres kan niet worden geopend in het browserpaneel. Daarin worden alleen openbare websites geopend.",
+      blockedLocal: "Dit lokale adres kan hier niet worden geopend. Typ het in de adresbalk om het te openen.",
+      studioAddress: "Dit is het eigen adres van Unsloth, dus het kan niet worden geopend in het browserpaneel.",
+      clearDataSettingDescription: "Wis browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en de cookies en sitegegevens die pagina's bewaren, waardoor je wordt uitgelogd bij sites.",
+      clearDataDescription: "Hiermee worden je browsegeschiedenis, downloadgeschiedenis, pagina's in de cache en cookies en sitegegevens gewist, waardoor je wordt uitgelogd bij sites. Gedownloade bestanden blijven op je computer staan.",
       clearDataFailed: "Kan sitegegevens niet wissen. Probeer het opnieuw.",
     },
   },
@@ -759,37 +689,28 @@ export const nl = {
     tensor: "Tensorparallel",
     pipeline: "Pipelineparallel",
     data: "Replica's (dataparallel)",
-    pipelineHelp:
-      "Verdeel modellagen over GPU's. Elke GPU moet ruimte hebben voor zijn lagen en cache.",
-    dataHelp:
-      "Verdeel verzoeken over GPU's. Dense modellen moeten op elke GPU passen; MoE-modellen kunnen experts delen.",
+    pipelineHelp: "Verdeel modellagen over GPU's. Elke GPU moet ruimte hebben voor zijn lagen en cache.",
+    dataHelp: "Verdeel verzoeken over GPU's. Dense modellen moeten op elke GPU passen; MoE-modellen kunnen experts delen.",
     tensorParallel: "Verdeel berekeningen van lagen over {count} GPU's.",
-    inUse:
-      "Ontlaad het model voordat je de engine ervan herstelt, terugzet of verwijdert.",
+    inUse: "Ontlaad het model voordat je de engine ervan herstelt, terugzet of verwijdert.",
     title: "Meer engines",
-    description:
-      "Extra engines voor GPU's (bèta). Ze kunnen modellen sneller uitvoeren, vooral bij batchinferentie. Installeer ze hier en kies ze daarna in de uitvoerinstellingen van het model.",
+    description: "Extra engines voor GPU's (bèta). Ze kunnen modellen sneller uitvoeren, vooral bij batchinferentie. Installeer ze hier en kies ze daarna in de uitvoerinstellingen van het model.",
     picker: "Inferentie-engine",
     precision: "Precisie",
     precisionAuto: "Standaard van model",
-    precisionHelp:
-      "Standaard van model behoudt de opgeslagen precisie. Andere opties converteren niet-gekwantiseerde gewichten tijdens het laden.",
+    precisionHelp: "Standaard van model behoudt de opgeslagen precisie. Andere opties converteren niet-gekwantiseerde gewichten tijdens het laden.",
     kvCache: "KV-cache",
     kvCacheFp8: "FP8 (half zoveel geheugen)",
-    kvCacheHelp:
-      "FP8 slaat de contextcache op in 8 bits, waardoor ongeveer twee keer zoveel context in hetzelfde geheugen past. Zonder gekalibreerde schalen in het checkpoint kunnen antwoorden iets minder nauwkeurig zijn.",
+    kvCacheHelp: "FP8 slaat de contextcache op in 8 bits, waardoor ongeveer twee keer zoveel context in hetzelfde geheugen past. Zonder gekalibreerde schalen in het checkpoint kunnen antwoorden iets minder nauwkeurig zijn.",
     gpuMemory: "Limiet GPU-geheugen",
     gpuMemoryAuto: "Automatisch",
-    gpuMemoryHelp:
-      "Het maximale deel van elke geselecteerde GPU dat de engine mag gebruiken. Automatisch gebruikt wat vrij is; verlaag het om ruimte te laten voor andere programma's.",
+    gpuMemoryHelp: "Het maximale deel van elke geselecteerde GPU dat de engine mag gebruiken. Automatisch gebruikt wat vrij is; verlaag het om ruimte te laten voor andere programma's.",
     seed: "Seed",
     seedPlaceholder: "Standaard van engine",
-    seedHelp:
-      "Stelt de willekeurige seed van de engine in. Gelijktijdige chats kunnen gesamplede antwoorden nog steeds beïnvloeden.",
+    seedHelp: "Stelt de willekeurige seed van de engine in. Gelijktijdige chats kunnen gesamplede antwoorden nog steeds beïnvloeden.",
     default: "Standaard",
     installRequired: "installatie vereist",
-    ownerRequired:
-      "Vraag de eigenaar van Unsloth om deze engine te installeren.",
+    ownerRequired: "Vraag de eigenaar van Unsloth om deze engine te installeren.",
     cancelInstall: "Installatie annuleren",
     installed: "{version} geïnstalleerd",
     repair: "Herstellen",
@@ -801,26 +722,19 @@ export const nl = {
     installTitle: "{engine} installeren",
     installAndLoad: "Installeren en laden",
     confirm: "{engine} {version} installeren? Dit kan enkele GB downloaden.",
-    confirmSized:
-      "{engine} {version} installeren? Ongeveer {size} om te downloaden.",
-    wslSetup:
-      "Op Windows draait {engine} in een privé-WSL2-omgeving die Unsloth instelt. Je krijgt één verzoek om beheerdersrechten en mogelijk moet je opnieuw opstarten.",
-    wslReady:
-      "Op Windows draait {engine} in de privé-WSL2-omgeving van Unsloth.",
-    wslRestart:
-      "Start Windows opnieuw op om het inschakelen van WSL2 te voltooien en klik daarna nogmaals op Installeren.",
+    confirmSized: "{engine} {version} installeren? Ongeveer {size} om te downloaden.",
+    wslSetup: "Op Windows draait {engine} in een privé-WSL2-omgeving die Unsloth instelt. Je krijgt één verzoek om beheerdersrechten en mogelijk moet je opnieuw opstarten.",
+    wslReady: "Op Windows draait {engine} in de privé-WSL2-omgeving van Unsloth.",
+    wslRestart: "Start Windows opnieuw op om het inschakelen van WSL2 te voltooien en klik daarna nogmaals op Installeren.",
     background: "Wordt op de achtergrond geïnstalleerd.",
-    failed:
-      "Installatie van engine mislukt. Probeer het opnieuw of gebruik de standaardengine.",
+    failed: "Installatie van engine mislukt. Probeer het opnieuw of gebruik de standaardengine.",
     details: "Technische details",
     cancelled: "Installatie geannuleerd. Je kunt het opnieuw proberen.",
-    scope:
-      "Tekst- en afbeeldingschat op NVIDIA-GPU's. Het eerste laden kan langer duren.",
+    scope: "Tekst- en afbeeldingschat op NVIDIA-GPU's. Het eerste laden kan langer duren.",
   },
   sandboxSetup: {
     levelTitle: "OS-sandbox is niet beschikbaar",
-    levelDescription:
-      "Installeer deze om Hoog te gebruiken, of houd Laag (softwaresandbox).",
+    levelDescription: "Installeer deze om Hoog te gebruiken, of houd Laag (softwaresandbox).",
     useLow: "Sandbox Laag gebruiken",
     checking: "Sandbox op deze computer controleren…",
     install: "Sandbox installeren",
@@ -828,53 +742,40 @@ export const nl = {
     copyCommand: "Opdracht kopiëren",
     copied: "Opdracht gekopieerd",
     copyFailed: "Kan de opdracht niet kopiëren",
-    copiedRunIt:
-      "Opdracht gekopieerd. Voer deze uit in een terminal op de computer waarop Unsloth draait en schakel daarna over naar Hoog.",
-    ownerOnly:
-      "Alleen de eigenaar kan deze installeren, vanaf de computer waarop Unsloth draait.",
-    windowsNote:
-      "Vereist na elke herstart een stap als beheerder. MXC is een preview, geen beveiligingsgrens.",
-    running:
-      "Bezig met instellen. Sta het verzoek om je wachtwoord of beheerdersrechten toe op de computer waarop Unsloth draait…",
+    copiedRunIt: "Opdracht gekopieerd. Voer deze uit in een terminal op de computer waarop Unsloth draait en schakel daarna over naar Hoog.",
+    ownerOnly: "Alleen de eigenaar kan deze installeren, vanaf de computer waarop Unsloth draait.",
+    windowsNote: "Vereist na elke herstart een stap als beheerder. MXC is een preview, geen beveiligingsgrens.",
+    running: "Bezig met instellen. Sta het verzoek om je wachtwoord of beheerdersrechten toe op de computer waarop Unsloth draait…",
     succeeded: "De OS-sandbox is klaar. Sandbox Hoog is ingeschakeld.",
-    stillUnavailable:
-      "Instellen is voltooid, maar de OS-sandbox doorstaat de controle nog steeds niet.",
+    stillUnavailable: "Instellen is voltooid, maar de OS-sandbox doorstaat de controle nog steeds niet.",
     declined: "Het verzoek om je wachtwoord of beheerdersrechten is geweigerd.",
     failed: "Instellen mislukt.",
     startError: "Kan het instellen van de sandbox niet starten",
     checkFailed: "Kan de sandbox op deze computer niet controleren.",
     retry: "Opnieuw proberen",
-    keepsRunning:
-      "Als je dit sluit, wordt het instellen niet gestopt. Het resultaat wordt weergegeven in Instellingen > Beveiliging.",
+    keepsRunning: "Als je dit sluit, wordt het instellen niet gestopt. Het resultaat wordt weergegeven in Instellingen > Beveiliging.",
   },
   composerSettings: {
     shareDraft: "Concepten delen tussen chats",
     shareDraftDescription: "Gebruik één concept voor chats en vergelijkingen. Standaard uit; elke chat bewaart zijn eigen concept.",
     title: "Invoerveld",
     plainText: "Invoerveld met platte tekst",
-    plainTextDescription:
-      "Behoud code, Markdown en links als letterlijke tekst. Schakel uit om een opgemaakt voorbeeld te tonen.",
+    plainTextDescription: "Behoud code, Markdown en links als letterlijke tekst. Schakel uit om een opgemaakt voorbeeld te tonen.",
     richPaste: "Opgemaakte tekst plakken",
     richPasteDescription: "Plakt links, tabellen en opmaak als Markdown. {shortcut} plakt platte tekst. Volledige rich-text-editor volgt binnenkort.",
     showContext: "Gebruik van contextvenster",
     sendShortcut: "Sneltoets voor versturen",
     sendMultiline: "{mod} + Enter voor prompts met meerdere regels",
     sendAlways: "Altijd {mod} + Enter",
-    sendEnterDescription:
-      "Enter verstuurt. Shift + Enter voegt een nieuwe regel toe.",
-    sendMultilineDescription:
-      "Enter verstuurt een prompt van één regel. Zodra de prompt meer dan één regel heeft, voegt Enter een nieuwe regel toe en verstuurt {mod} + Enter.",
-    sendAlwaysDescription:
-      "{mod} + Enter verstuurt. Enter voegt een nieuwe regel toe.",
+    sendEnterDescription: "Enter verstuurt. Shift + Enter voegt een nieuwe regel toe.",
+    sendMultilineDescription: "Enter verstuurt een prompt van één regel. Zodra de prompt meer dan één regel heeft, voegt Enter een nieuwe regel toe en verstuurt {mod} + Enter.",
+    sendAlwaysDescription: "{mod} + Enter verstuurt. Enter voegt een nieuwe regel toe.",
     followUp: "Gedrag bij vervolgberichten",
-    followUpDescription:
-      "Wat er gebeurt als je iets verstuurt tijdens een antwoord. Druk op {shortcut} om eenmalig het omgekeerde te doen.",
-    followUpMultilineShortcut:
-      "{shortcut} ({multiline} in een prompt met meerdere regels)",
+    followUpDescription: "Wat er gebeurt als je iets verstuurt tijdens een antwoord. Druk op {shortcut} om eenmalig het omgekeerde te doen.",
+    followUpMultilineShortcut: "{shortcut} ({multiline} in een prompt met meerdere regels)",
     queue: "Wachtrij",
     steer: "Bijsturen",
-    steerDescription:
-      "Bijsturen stopt het huidige antwoord en verstuurt je vervolgbericht als volgende.",
+    steerDescription: "Bijsturen stopt het huidige antwoord en verstuurt je vervolgbericht als volgende.",
     settings: "Instellingen voor invoerveld",
     preview: "Opgemaakt voorbeeld",
   },
@@ -883,15 +784,12 @@ export const nl = {
     listLabel: "Prompts in wachtrij",
     regionLabel: "Promptwachtrij, {current} van {total}",
     itemLabel: "Prompt {position} van {total} in wachtrij: {prompt}",
-    reorderInstructions:
-      "Sleep de greep om de volgorde te wijzigen. Gebruik met de focus op de greep Omhoog of Omlaag om één positie te verplaatsen, of Home of End om naar het begin of einde te gaan.",
+    reorderInstructions: "Sleep de greep om de volgorde te wijzigen. Gebruik met de focus op de greep Omhoog of Omlaag om één positie te verplaatsen, of Home of End om naar het begin of einde te gaan.",
     dragTooltip: "Slepen om volgorde te wijzigen",
-    reorderLabel:
-      "Volgorde wijzigen van prompt {position} van {total} in wachtrij",
+    reorderLabel: "Volgorde wijzigen van prompt {position} van {total} in wachtrij",
     paused: "Gepauzeerd",
     steer: "Bijsturen",
-    steerTooltip:
-      "Het antwoord onderbreken en deze prompt als volgende versturen",
+    steerTooltip: "Het antwoord onderbreken en deze prompt als volgende versturen",
     steerLabel: "Bijsturen met prompt {position} in wachtrij",
     removeTooltip: "Verwijderen uit wachtrij",
     removeLabel: "Prompt {position} uit wachtrij verwijderen",
@@ -911,26 +809,19 @@ export const nl = {
     sendLabel: "Bericht versturen",
     followUpTooltip: "{action} ({send}) · {opposite} voor het omgekeerde",
     announceUpdated: "Prompt in wachtrij bijgewerkt.",
-    announceEditFailed:
-      "Deze prompt kan niet meer worden bewerkt omdat de wachtrij is gewijzigd.",
+    announceEditFailed: "Deze prompt kan niet meer worden bewerkt omdat de wachtrij is gewijzigd.",
     announceRemoved: "Prompt uit wachtrij verwijderd.",
     announceSteered: "Deze prompt stuurt het antwoord als volgende bij.",
-    announceSteerFailed:
-      "Deze prompt kan het antwoord niet bijsturen. Controleer de wachtrij en probeer het opnieuw.",
+    announceSteerFailed: "Deze prompt kan het antwoord niet bijsturen. Controleer de wachtrij en probeer het opnieuw.",
     announceCopied: "Prompt gekopieerd.",
     announceCopyFailed: "Kan deze prompt niet kopiëren. Probeer het opnieuw.",
-    announceQueueingOn:
-      "Nieuwe vervolgberichten komen in de wachtrij na het huidige antwoord.",
-    announceQueueingOff:
-      "Nieuwe vervolgberichten sturen het huidige antwoord bij.",
+    announceQueueingOn: "Nieuwe vervolgberichten komen in de wachtrij na het huidige antwoord.",
+    announceQueueingOff: "Nieuwe vervolgberichten sturen het huidige antwoord bij.",
     announceMoved: "Prompt verplaatst naar positie {position} van {total}.",
-    announceMoveFailed:
-      "De wachtrij is gewijzigd voordat deze prompt kon worden verplaatst. Probeer het opnieuw.",
-    announceDragReset:
-      "De wachtrij is gewijzigd. Sleep opnieuw om de volgorde van de overige prompts te wijzigen.",
+    announceMoveFailed: "De wachtrij is gewijzigd voordat deze prompt kon worden verplaatst. Probeer het opnieuw.",
+    announceDragReset: "De wachtrij is gewijzigd. Sleep opnieuw om de volgorde van de overige prompts te wijzigen.",
     editingHint: "Bericht bewerken",
-    queueingOffHint:
-      "Nieuwe berichten onderbreken en worden als volgende uitgevoerd.",
+    queueingOffHint: "Nieuwe berichten onderbreken en worden als volgende uitgevoerd.",
     queueingOnHint: "Nieuwe berichten wachten op hun beurt.",
     queueingHintShared: "De wachtrij blijft behouden.",
   },
@@ -945,12 +836,10 @@ export const nl = {
     modeConversation: "Alleen gesprek",
     modeFiles: "Alleen bestanden",
     checkFailed: "Kan bestandswijzigingen niet controleren: {error}",
-    summary:
-      "Te herstellen bestanden: {restore}. Te verwijderen: {remove}. Opnieuw te maken: {recreate}.",
+    summary: "Te herstellen bestanden: {restore}. Te verwijderen: {remove}. Opnieuw te maken: {recreate}.",
     conflicts: "Sindsdien gewijzigd, wordt overgeslagen",
     untracked: "Kan niet worden hersteld",
-    scopeNote:
-      "Bestanden omvatten code. Programma's, pakketten en bestanden buiten de map van deze chat worden niet gewijzigd.",
+    scopeNote: "Bestanden omvatten code. Programma's, pakketten en bestanden buiten de map van deze chat worden niet gewijzigd.",
     back: "Terug",
     cancel: "Annuleren",
     confirm: "Terugspoelen",
@@ -959,8 +848,7 @@ export const nl = {
     restoredMany: "{count} bestanden hersteld",
     nothingRestored: "Er hoefden geen bestanden te worden hersteld",
     skippedCount: "{count} overgeslagen",
-    filesNotRestored:
-      "{count} gewijzigde bestanden kunnen niet worden hersteld en blijven zoals ze zijn.",
+    filesNotRestored: "{count} gewijzigde bestanden kunnen niet worden hersteld en blijven zoals ze zijn.",
     restoreFailed: "Kan bestanden niet herstellen",
     undo: "Ongedaan maken",
     undone: "Herstellen van bestanden ongedaan gemaakt",
@@ -990,8 +878,7 @@ export const nl = {
     addScheduledTask: "Geplande taak toevoegen…",
     compact: "Gesprek comprimeren",
     compactEmpty: "Nog niets om te comprimeren",
-    compactUnsupported:
-      "Comprimeren vereist een GGUF- of MLX-model met toolondersteuning",
+    compactUnsupported: "Comprimeren vereist een GGUF- of MLX-model met toolondersteuning",
   },
   welcome: {
     goodToSeeYou: "Fijn je te zien",
@@ -1010,23 +897,19 @@ export const nl = {
     nightShift: "De nachtdienst begint",
     nightShiftName: "De nachtdienst begint, {name}",
     temporaryChat: "Tijdelijke chat",
-    temporaryChatDescription:
-      "Deze chat verschijnt niet in je geschiedenis en wordt niet opgeslagen. Hij verdwijnt wanneer je weggaat.",
+    temporaryChatDescription: "Deze chat verschijnt niet in je geschiedenis en wordt niet opgeslagen. Hij verdwijnt wanneer je weggaat.",
   },
   picker: {
     unifiedTightFit: "Krap",
-    unifiedTightFitHint:
-      "Wordt op deze Mac mogelijk geladen met een kortere context of werkt langzamer.",
+    unifiedTightFitHint: "Wordt op deze Mac mogelijk geladen met een kortere context of werkt langzamer.",
     residentToRun: "om te draaien",
-    residentToRunHint:
-      "GPU-geheugen dat de laadcontrole tijdens het draaien vereist",
+    residentToRunHint: "GPU-geheugen dat de laadcontrole tijdens het draaien vereist",
     onDevice: "Op apparaat",
     huggingFace: "Hugging Face",
     retry: "Opnieuw proberen",
     loadMore: "Meer laden",
     offlineTitle: "Je bent offline",
-    offlineBody:
-      "Schakel over naar Apparaat om {noun} uit de cache of lokaal te gebruiken.",
+    offlineBody: "Schakel over naar Apparaat om {noun} uit de cache of lokaal te gebruiken.",
     offlineSwitchDevice: "Apparaat",
     searchAriaLabel: "{noun} zoeken",
     modelSourceAriaLabel: "Modelbron",
@@ -1035,14 +918,12 @@ export const nl = {
     modelDroppedByProvider: "{provider} · niet meer aangeboden",
     modelDisabled: "Niet ingeschakeld",
     modelDisabledByProvider: "{provider} · niet ingeschakeld",
-    multipleMatches:
-      "Meerdere overeenkomende {noun}. Kies er een uit de lijst.",
+    multipleMatches: "Meerdere overeenkomende {noun}. Kies er een uit de lijst.",
     rateLimitedTitle: "Limiet van Hugging Face bereikt",
     rateLimitedBody: "Wacht even en zoek daarna opnieuw naar {noun}.",
     modelScope: "ModelScope",
     useModelScope: "ModelScope gebruiken",
-    useModelScopeHint:
-      "Zoek en download in plaats daarvan via ModelScope. Je kunt terugschakelen in Instellingen.",
+    useModelScopeHint: "Zoek en download in plaats daarvan via ModelScope. Je kunt terugschakelen in Instellingen.",
     useModelScopeFailed: "Kan niet overschakelen naar ModelScope.",
     updateToken: "Token bijwerken",
     hfToken: {
@@ -1051,10 +932,8 @@ export const nl = {
       add: "Niet ingesteld",
       savedAriaLabel: "Hugging Face-token opgeslagen",
       addAriaLabel: "Hugging Face-token instellen",
-      savedHint:
-        "Token opgeslagen. De toegang wordt gecontroleerd wanneer je het gebruikt.",
-      addHint:
-        "Stel een token in voor toegang tot privé- en afgeschermde repository's.",
+      savedHint: "Token opgeslagen. De toegang wordt gecontroleerd wanneer je het gebruikt.",
+      addHint: "Stel een token in voor toegang tot privé- en afgeschermde repository's.",
     },
   },
   common: {
@@ -1141,8 +1020,7 @@ export const nl = {
       audio: "Audio",
       tasks: "Gepland",
       translate: "Vertalen",
-      trainChecking:
-        "Deze computer controleren op ondersteuning voor training...",
+      trainChecking: "Deze computer controleren op ondersteuning voor training...",
       videoChecking: "Deze computer controleren op ondersteuning voor video...",
       more: "Meer",
       customizeSidebar: "Zijbalk aanpassen",
@@ -1165,8 +1043,7 @@ export const nl = {
       guidedTour: "Rondleiding",
       help: "Help",
       logOut: "Uitloggen",
-      logOutNeedsPassword:
-        "Stel een wachtwoord in via Instellingen > Extern en LAN voordat je uitlogt, zodat je weer kunt inloggen.",
+      logOutNeedsPassword: "Stel een wachtwoord in via Instellingen > Extern en LAN voordat je uitlogt, zodat je weer kunt inloggen.",
       logOutFailed: "Kan niet veilig uitloggen. Probeer het zo meteen opnieuw.",
       shutdown: "Afsluiten",
     },
@@ -1227,10 +1104,8 @@ export const nl = {
       unpinProjects: "Projecten losmaken",
       deleteProjects: "Projecten verwijderen",
       deleteProjectsTitle: "Projecten verwijderen",
-      deleteProjectsDescription:
-        "Hiermee worden {count} projecten en al hun chats definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
-      deleteProjectsFilesDescription:
-        "De werkruimtemap van elk project wordt van de schijf verwijderd.",
+      deleteProjectsDescription: "Hiermee worden {count} projecten en al hun chats definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+      deleteProjectsFilesDescription: "De werkruimtemap van elk project wordt van de schijf verwijderd.",
       countSelected: "{count} geselecteerd",
       pinChats: "Chats vastzetten",
       unpinChats: "Chats losmaken",
@@ -1239,13 +1114,10 @@ export const nl = {
       markRead: "Markeren als gelezen",
       deleteChats: "Chats verwijderen",
       deleteTitle: "Chats verwijderen",
-      deleteDescription:
-        "Hiermee worden {count} chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
-      deleteFilesDescription:
-        "De eigen sandboxmap van elke chat wordt van de schijf verwijderd. Bestanden die ze in een project hebben geschreven, blijven in de werkruimte van dat project.",
+      deleteDescription: "Hiermee worden {count} chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+      deleteFilesDescription: "De eigen sandboxmap van elke chat wordt van de schijf verwijderd. Bestanden die ze in een project hebben geschreven, blijven in de werkruimte van dat project.",
       deleteFilesLabel: "Bestanden en sandboxmap verwijderen",
-      deleteChatFilesDescription:
-        "De eigen sandboxmap van deze chat wordt van de schijf verwijderd. Bestanden die de chat in een project heeft geschreven, blijven in de werkruimte van dat project.",
+      deleteChatFilesDescription: "De eigen sandboxmap van deze chat wordt van de schijf verwijderd. Bestanden die de chat in een project heeft geschreven, blijven in de werkruimte van dat project.",
     },
     organize: {
       sidebarHeading: "Zijbalk ordenen",
@@ -1255,8 +1127,7 @@ export const nl = {
       projectsHome: "Projectoverzicht",
       lastUpdated: "Laatst bijgewerkt",
       manualOrder: "Handmatige volgorde",
-      switchedToManual:
-        "Handmatig gesorteerd: sleep rijen om de volgorde te wijzigen",
+      switchedToManual: "Handmatig gesorteerd: sleep rijen om de volgorde te wijzigen",
       organizeChats: "Chats ordenen",
       organizeProjects: "Projecten ordenen",
       sortPinnedChats: "Vastgezette chats sorteren",
@@ -1289,11 +1160,11 @@ export const nl = {
     dialog: {
       deleteChat: {
         title: "Chat verwijderen",
-        description: 'Hiermee worden de chat "{name}" en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.',
+        description: "Hiermee worden de chat \"{name}\" en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
       },
       deleteRun: {
         title: "Trainingsrun verwijderen",
-        description: 'Weet je zeker dat je de run "{name}" wilt verwijderen?',
+        description: "Weet je zeker dat je de run \"{name}\" wilt verwijderen?",
       },
       renameChat: {
         title: "Naam van chat wijzigen",
@@ -1305,8 +1176,7 @@ export const nl = {
       },
     },
     toast: {
-      cannotDeleteRunningRun:
-        "Een actieve trainingsrun kan niet worden verwijderd",
+      cannotDeleteRunningRun: "Een actieve trainingsrun kan niet worden verwijderd",
       failedToDeleteChat: "Kan chat niet verwijderen",
       failedToDeleteRun: "Kan run niet verwijderen",
       failedToRenameChat: "Kan naam van chat niet wijzigen",
@@ -1319,32 +1189,26 @@ export const nl = {
       signsInAs: "Logt in als {username}",
       signsInAsOwner: "Logt in als {alias} of {username}",
       signInName: "Je inlognaam",
-      signInNameDescription:
-        "De naam die je typt om in te loggen als deze installatie meer dan één account heeft. unsloth werkt ook altijd. Laat leeg om alleen unsloth te gebruiken.",
+      signInNameDescription: "De naam die je typt om in te loggen als deze installatie meer dan één account heeft. unsloth werkt ook altijd. Laat leeg om alleen unsloth te gebruiken.",
       signInNameSave: "Naam opslaan",
       title: "Accounts",
-      description:
-        "Maak privé-Unsloth-accounts aan. Nieuwe gebruikers loggen in met een eenmalige installatiecode en kiezen een wachtwoord.",
+      description: "Maak privé-Unsloth-accounts aan. Nieuwe gebruikers loggen in met een eenmalige installatiecode en kiezen een wachtwoord.",
       username: "Gebruikersnaam",
       create: "Account aanmaken",
-      createDescription:
-        "Deel een installatiecode zodat ze hun eigen wachtwoord kunnen kiezen.",
+      createDescription: "Deel een installatiecode zodat ze hun eigen wachtwoord kunnen kiezen.",
       actionsFor: "{username} beheren",
       actions: "Acties",
       search: "Accounts zoeken",
       noResults: "Geen overeenkomende accounts",
       created: "Aangemaakt",
       status: "Status",
-      loginHint:
-        "Log in als {username} met deze code als wachtwoord en kies daarna een nieuw wachtwoord.",
+      loginHint: "Log in als {username} met deze code als wachtwoord en kies daarna een nieuw wachtwoord.",
       privateAccount: "Privéaccount",
       modelAccess: "Toegang tot modellen",
       modelAccessTitle: "Toegang tot modellen voor {username}",
-      modelAccessDescription:
-        "Kies welke Hugging Face-modellen dit account kan zien, downloaden, laden en via zijn API-sleutels kan gebruiken.",
+      modelAccessDescription: "Kies welke Hugging Face-modellen dit account kan zien, downloaden, laden en via zijn API-sleutels kan gebruiken.",
       modelAccessLabel: "Toegestane modellen",
-      modelAccessHint:
-        "Eén model per regel, bijvoorbeeld unsloth/Qwen3-4B-GGUF, of unsloth/* voor een hele organisatie. Laat leeg om elk model toe te staan.",
+      modelAccessHint: "Eén model per regel, bijvoorbeeld unsloth/Qwen3-4B-GGUF, of unsloth/* voor een hele organisatie. Laat leeg om elk model toe te staan.",
       modelAccessSave: "Opslaan",
       modelAccessLimited: "Beperkte toegang tot modellen",
       rename: "Naam wijzigen",
@@ -1353,27 +1217,23 @@ export const nl = {
       empty: "Nog geen andere accounts",
       setupCode: "Installatiecode",
       setupFor: "Installatiecode voor {username}",
-      shownOnce:
-        "Kopieer deze code nu en deel hem met de accounthouder. Hij wordt alleen hier weergegeven en kan één keer worden gebruikt binnen 60 minuten.",
+      shownOnce: "Kopieer deze code nu en deel hem met de accounthouder. Hij wordt alleen hier weergegeven en kan één keer worden gebruikt binnen 60 minuten.",
       expires: "Verloopt {expiry}",
       copy: "Installatiecode kopiëren",
       copied: "Gekopieerd",
-      copyFailed:
-        "Kopiëren mislukt. Selecteer en kopieer de installatiecode hierboven.",
+      copyFailed: "Kopiëren mislukt. Selecteer en kopieer de installatiecode hierboven.",
       dismiss: "Gereed",
       owner: "Eigenaar van installatie",
       active: "Ingeschakeld",
       inactive: "Uitgeschakeld",
       regenerate: "Installatiecode opnieuw genereren",
       resetTitle: "Wachtwoord van {username} resetten?",
-      resetDescription:
-        "Als je de installatiecode opnieuw genereert, wordt het wachtwoord van {username} vervangen, wordt deze persoon uitgelogd en worden de bijbehorende API-sleutels ingetrokken. Geef de nieuwe code door, zodat er opnieuw een wachtwoord kan worden gekozen.",
+      resetDescription: "Als je de installatiecode opnieuw genereert, wordt het wachtwoord van {username} vervangen, wordt deze persoon uitgelogd en worden de bijbehorende API-sleutels ingetrokken. Geef de nieuwe code door, zodat er opnieuw een wachtwoord kan worden gekozen.",
       deactivate: "Uitschakelen",
       reactivate: "Inschakelen",
       delete: "Account verwijderen",
       deleteTitle: "{username} verwijderen?",
-      deleteDescription:
-        "Hiermee worden de sessies van {username} ingetrokken en wordt het lopende werk geannuleerd. De chats, instellingen, inloggegevens, uploads, datasets, trainingsruns, uitvoer, exports, galerijen, sandboxes, projecten en tijdelijke bestanden worden buiten gebruik gesteld. Mappen worden hernoemd en apart gezet, nooit verwijderd. Als je deze gebruikersnaam opnieuw aanmaakt, begint er een nieuw account zonder deze gegevens.",
+      deleteDescription: "Hiermee worden de sessies van {username} ingetrokken en wordt het lopende werk geannuleerd. De chats, instellingen, inloggegevens, uploads, datasets, trainingsruns, uitvoer, exports, galerijen, sandboxes, projecten en tijdelijke bestanden worden buiten gebruik gesteld. Mappen worden hernoemd en apart gezet, nooit verwijderd. Als je deze gebruikersnaam opnieuw aanmaakt, begint er een nieuw account zonder deze gegevens.",
       cancel: "Annuleren",
       retry: "Accounts vernieuwen",
       failed: "Accountverzoek mislukt.",
@@ -1396,21 +1256,18 @@ export const nl = {
       medium: "Middel",
       large: "Groot",
       imageLayout: "Afbeeldingskaarten",
-      imageLayoutDescription:
-        "Behoud de vorm van elke afbeelding of snijd ze bij tot gelijke vierkanten.",
+      imageLayoutDescription: "Behoud de vorm van elke afbeelding of snijd ze bij tot gelijke vierkanten.",
       masonry: "Oorspronkelijke vorm",
       square: "Vierkant",
       showCardDates: "Datums op kaarten weergeven",
-      showCardDatesDescription:
-        "Toon wanneer elk bestand voor het laatst is gewijzigd.",
+      showCardDatesDescription: "Toon wanneer elk bestand voor het laatst is gewijzigd.",
       browsingSection: "Bladeren",
       startTab: "Openen op",
       startTabDescription: "Het tabblad waarop de bibliotheek opent.",
       suggested: "Voorgesteld",
       all: "Alles",
       sort: "Sorteren op",
-      sortDescription:
-        "Volgorde van bestanden en mappen. Voorgesteld toont altijd de meest recente.",
+      sortDescription: "Volgorde van bestanden en mappen. Voorgesteld toont altijd de meest recente.",
       recent: "Meest recent",
       oldest: "Oudste",
       name: "Naam",
@@ -1419,35 +1276,26 @@ export const nl = {
       tabAuto: "Als ze bestanden bevatten",
       tabAlways: "Altijd",
       contentSection: "Inhoud",
-      contentDescription:
-        "Kies wat de bibliotheek toont. Verborgen bestanden worden niet verwijderd.",
+      contentDescription: "Kies wat de bibliotheek toont. Verborgen bestanden worden niet verwijderd.",
       showChatAttachments: "Chatbijlagen",
-      showChatAttachmentsDescription:
-        "Bestanden die je aan chats hebt toegevoegd.",
+      showChatAttachmentsDescription: "Bestanden die je aan chats hebt toegevoegd.",
       showChatToolFiles: "Bestanden van chattools",
-      showChatToolFilesDescription:
-        "Bestanden die code en tools tijdens chats hebben gemaakt.",
+      showChatToolFilesDescription: "Bestanden die code en tools tijdens chats hebben gemaakt.",
       showGeneratedMedia: "Gegenereerde media",
-      showGeneratedMediaDescription:
-        "Afbeeldingen, video's en audio van de pagina's Afbeeldingen, Video en Audio.",
-      showFineTunesDescription:
-        "Modellen die je in Unsloth hebt getraind of geëxporteerd.",
+      showGeneratedMediaDescription: "Afbeeldingen, video's en audio van de pagina's Afbeeldingen, Video en Audio.",
+      showFineTunesDescription: "Modellen die je in Unsloth hebt getraind of geëxporteerd.",
       deletingSection: "Verwijderen",
       confirmDelete: "Bevestigen vóór verwijderen",
-      confirmDeleteDescription:
-        "Vragen voordat bestanden en mappen uit de bibliotheek worden verwijderd.",
+      confirmDeleteDescription: "Vragen voordat bestanden en mappen uit de bibliotheek worden verwijderd.",
       reset: "Bibliotheekinstellingen opnieuw instellen",
-      resetDescription:
-        "Zet elke optie hierboven terug naar de standaardwaarde.",
+      resetDescription: "Zet elke optie hierboven terug naar de standaardwaarde.",
       resetButton: "Opnieuw instellen",
       resetDone: "Bibliotheekinstellingen opnieuw ingesteld",
       storageSection: "Opslag",
       downloadsSection: "Afbeeldingsdownloads",
       imageInfoStamp: "Infostempel",
-      imageInfoStampDescription:
-        "Toon het model, de datum en de seed onderaan afbeeldingen die je downloadt van de pagina Afbeeldingen. De generatie-instellingen worden hoe dan ook in het bestand opgeslagen.",
-      storageDescription:
-        "Open een categorie om de bestanden te zien, grootste eerst, en verwijder wat je niet meer nodig hebt.",
+      imageInfoStampDescription: "Toon het model, de datum en de seed onderaan afbeeldingen die je downloadt van de pagina Afbeeldingen. De generatie-instellingen worden hoe dan ook in het bestand opgeslagen.",
+      storageDescription: "Open een categorie om de bestanden te zien, grootste eerst, en verwijder wat je niet meer nodig hebt.",
       storageUsed: "{size} gebruikt door de bibliotheek",
       storageDisk: "{free} vrij van {total} op deze schijf",
       storageEmpty: "Er is nog niets opgeslagen in de bibliotheek.",
@@ -1457,25 +1305,21 @@ export const nl = {
       storageOpen: "Openen",
       storageError: "Kan de opslag van de bibliotheek niet lezen.",
       locationsSection: "Bestanden op schijf",
-      locationsDescription:
-        "Waar Unsloth elk soort bestand bewaart. Bibliotheekmappen zijn labels binnen Unsloth, geen mappen op schijf. Finetunes en exports blijven waar ze zijn, omdat training en chats via hun pad naar ze verwijzen.",
+      locationsDescription: "Waar Unsloth elk soort bestand bewaart. Bibliotheekmappen zijn labels binnen Unsloth, geen mappen op schijf. Finetunes en exports blijven waar ze zijn, omdat training en chats via hun pad naar ze verwijzen.",
       locationUploads: "Bibliotheekuploads",
       locationExports: "Exports",
       revealFailed: "Kan bestandsbeheer niet openen",
       locationReset: "Opnieuw instellen",
       locationMoveTitle: "{name} naar een nieuwe map verplaatsen",
-      locationMoveDescription:
-        "Kies een willekeurige map. Als deze al bestanden bevat, maakt Unsloth er een eigen map in. Alles wat hier al staat, wordt ook verplaatst.",
+      locationMoveDescription: "Kies een willekeurige map. Als deze al bestanden bevat, maakt Unsloth er een eigen map in. Alles wat hier al staat, wordt ook verplaatst.",
       locationMoveAction: "Hierheen verplaatsen",
       locationMoving: "{name} verplaatsen…",
       locationMoved: "{name} verplaatst",
       locationMoveFailed: "Kan {name} niet verplaatsen",
       locationFree: "{free} vrij op deze schijf",
-      locationUnavailable:
-        "Niet beschikbaar. Sluit de schijf opnieuw aan of stel de map opnieuw in.",
+      locationUnavailable: "Niet beschikbaar. Sluit de schijf opnieuw aan of stel de map opnieuw in.",
       locationResetUnavailableTitle: "{name} opnieuw instellen?",
-      locationResetUnavailableDescription:
-        "De schijf ervan is niet aangesloten. De bestanden in {path} blijven op die schijf en worden pas weer in de bibliotheek weergegeven als je ze terugzet.",
+      locationResetUnavailableDescription: "De schijf ervan is niet aangesloten. De bestanden in {path} blijven op die schijf en worden pas weer in de bibliotheek weergegeven als je ze terugzet.",
       locationLeftBehind: "De bestanden in {path} blijven op die schijf.",
       dataStorage: "Bibliotheekopslag",
       manageStorage: "Opslag beheren",
@@ -1485,8 +1329,7 @@ export const nl = {
       itemCountOne: "1 item",
       itemCount: "{count} items",
       tabsSection: "Tabbladen",
-      tabsDescription:
-        "Kies welke tabbladen de bibliotheek toont. Een tabblad dat je via een link opent, wordt nog steeds weergegeven.",
+      tabsDescription: "Kies welke tabbladen de bibliotheek toont. Een tabblad dat je via een link opent, wordt nog steeds weergegeven.",
       tabHidden: "Verborgen",
       lastVisited: "Laatst bezocht",
     },
@@ -1514,8 +1357,7 @@ export const nl = {
     },
     keyboardShortcuts: {
       title: "Sneltoetsen",
-      intro:
-        "Om een sneltoets te wijzigen, selecteer je de toetscombinatie en typ je daarna de nieuwe toetsen",
+      intro: "Om een sneltoets te wijzigen, selecteer je de toetscombinatie en typ je daarna de nieuwe toetsen",
       searchPlaceholder: "Sneltoetsen zoeken…",
       keystrokePlaceholder: "Druk op een sneltoets om te zoeken",
       searchByKeystrokes: "Zoeken op toetsaanslagen",
@@ -1523,20 +1365,15 @@ export const nl = {
       noResults: "Geen sneltoetsen komen overeen met die zoekopdracht.",
       unassigned: "geen",
       recording: "Druk op een toetsreeks",
-      needsModifier:
-        "Voeg ⌘, Ctrl of Alt toe. Een losse toets zou typen onderscheppen.",
+      needsModifier: "Voeg ⌘, Ctrl of Alt toe. Een losse toets zou typen onderscheppen.",
       conflict: "Ook gebruikt door een andere sneltoets",
-      conflictShadowed:
-        "Een andere sneltoets heeft deze combinatie en wordt in plaats daarvan uitgevoerd",
+      conflictShadowed: "Een andere sneltoets heeft deze combinatie en wordt in plaats daarvan uitgevoerd",
       edit: "Sneltoets wijzigen",
       reset: "Standaard herstellen",
       resetAll: "Standaardwaarden herstellen",
-      browserReserved:
-        "Je browser houdt deze combinatie mogelijk voor zichzelf. In de desktopapp werkt hij wel.",
-      metaUnsupported:
-        "De Windows-toets kan niet in sneltoetsen worden gebruikt.",
-      altGraphUnsupported:
-        "Combinaties met AltGr kunnen niet als sneltoets worden gebruikt.",
+      browserReserved: "Je browser houdt deze combinatie mogelijk voor zichzelf. In de desktopapp werkt hij wel.",
+      metaUnsupported: "De Windows-toets kan niet in sneltoetsen worden gebruikt.",
+      altGraphUnsupported: "Combinaties met AltGr kunnen niet als sneltoets worden gebruikt.",
       desktopOnly: "Alleen desktopapp",
       groups: {
         composer: "Invoerveld",
@@ -1555,8 +1392,7 @@ export const nl = {
         },
         toggleBrowserFullView: {
           label: "Volledige browserweergave aan/uit",
-          description:
-            "De browser over het hele venster weergeven, met de chat erboven zwevend",
+          description: "De browser over het hele venster weergeven, met de chat erboven zwevend",
         },
         openSettings: {
           label: "Instellingen openen",
@@ -1596,8 +1432,7 @@ export const nl = {
         },
         newTemporaryChat: {
           label: "Nieuwe tijdelijke chat",
-          description:
-            "Een chat starten die niet in de geschiedenis wordt opgeslagen",
+          description: "Een chat starten die niet in de geschiedenis wordt opgeslagen",
         },
         newStandaloneChat: {
           label: "Nieuwe losse chat",
@@ -1609,13 +1444,11 @@ export const nl = {
         },
         markChatUnread: {
           label: "Markeren als ongelezen",
-          description:
-            "De geselecteerde chats of de huidige chat als ongelezen markeren",
+          description: "De geselecteerde chats of de huidige chat als ongelezen markeren",
         },
         togglePinChat: {
           label: "Vastzetten aan/uit",
-          description:
-            "De geselecteerde chats of de huidige chat vastzetten of losmaken",
+          description: "De geselecteerde chats of de huidige chat vastzetten of losmaken",
         },
         selectAllChats: {
           label: "Alle chats selecteren",
@@ -1623,8 +1456,7 @@ export const nl = {
         },
         clearChatSelection: {
           label: "Selectie wissen",
-          description:
-            "De geselecteerde chats deselecteren. Escape doet dit ook",
+          description: "De geselecteerde chats deselecteren. Escape doet dit ook",
         },
         deleteSelectedChats: {
           label: "Geselecteerde chats verwijderen",
@@ -1648,8 +1480,7 @@ export const nl = {
         },
         nextChatNeedingAttention: {
           label: "Volgende chat die aandacht nodig heeft",
-          description:
-            "Naar de volgende chat gaan die genereert, in de wachtrij staat of ongelezen is",
+          description: "Naar de volgende chat gaan die genereert, in de wachtrij staat of ongelezen is",
         },
         clearAllUnreads: {
           label: "Alle ongelezen wissen",
@@ -1741,8 +1572,7 @@ export const nl = {
         },
         openComposerMenu: {
           label: "+-menu openen",
-          description:
-            "Het +-menu met tools en bijlagen van het invoerveld openen",
+          description: "Het +-menu met tools en bijlagen van het invoerveld openen",
         },
         sendMessage: {
           label: "Bericht versturen",
@@ -1754,8 +1584,7 @@ export const nl = {
         },
         steerMessage: {
           label: "Antwoord bijsturen",
-          description:
-            "Het huidige antwoord stoppen en het concept als volgende versturen",
+          description: "Het huidige antwoord stoppen en het concept als volgende versturen",
         },
         stopGeneration: {
           label: "Genereren stoppen",
@@ -1793,8 +1622,7 @@ export const nl = {
     },
     sandbox: {
       title: "Beveiliging",
-      description:
-        "Of toolaanroepen voor Python en Terminal op deze computer in een OS-sandbox worden uitgevoerd.",
+      description: "Of toolaanroepen voor Python en Terminal op deze computer in een OS-sandbox worden uitgevoerd.",
       docs: "Documentatie",
       docsLabel: "Documentatie over de sandbox openen",
       toolsSection: "Deze computer",
@@ -1803,37 +1631,27 @@ export const nl = {
       terminal: "Terminal",
       osIsolation: "OS-sandbox ({backend})",
       softwareSafeguards: "Softwarematige beveiliging",
-      noReason:
-        "Hier werkt nog geen OS-sandbox, dus Unsloth controleert in plaats daarvan elke aanroep.",
-      runsInCmd:
-        "Wordt uitgevoerd in cmd.exe, omdat Git Bash niet kan starten in de Windows-sandbox.",
+      noReason: "Hier werkt nog geen OS-sandbox, dus Unsloth controleert in plaats daarvan elke aanroep.",
+      runsInCmd: "Wordt uitgevoerd in cmd.exe, omdat Git Bash niet kan starten in de Windows-sandbox.",
       loadError: "Kan de sandboxstatus niet laden",
       saveError: "Kan de sandboxinstelling niet opslaan",
       prepareError: "Kan deze pc niet voorbereiden",
-      unsupported:
-        "Deze Unsloth-server rapporteert nog geen sandboxstatus. Werk Unsloth bij om deze hier te beheren.",
+      unsupported: "Deze Unsloth-server rapporteert nog geen sandboxstatus. Werk Unsloth bij om deze hier te beheren.",
       windowsSection: "Windows-sandbox (preview)",
-      windowsDescription:
-        "De MXC-sandbox van Microsoft. Deze gebruikt de container die in Windows is ingebouwd, of een alternatief op Windows-versies zonder die container.",
+      windowsDescription: "De MXC-sandbox van Microsoft. Deze gebruikt de container die in Windows is ingebouwd, of een alternatief op Windows-versies zonder die container.",
       builtinLabel: "Ingebouwde container",
-      builtinDescription:
-        "De Windows-sandbox draait in de ingebouwde container van Windows, zonder stap als beheerder.",
+      builtinDescription: "De Windows-sandbox draait in de ingebouwde container van Windows, zonder stap als beheerder.",
       builtinInUse: "In gebruik",
       optInLabel: "Alternatieve sandbox gebruiken",
-      optInDescription:
-        "Voor Windows-versies zonder de ingebouwde container. Python en Terminal kunnen dan alleen bestanden in de map van de chat wijzigen.",
-      optInNotNeeded:
-        "Niet nodig op deze pc, omdat de ingebouwde container werkt.",
-      disclosure:
-        "Het alternatief vereist een eenmalige stap als beheerder, Deze pc voorbereiden, die na elke herstart moet worden herhaald. Terwijl een tool draait, geeft Unsloth deze tijdelijk toegang tot de mappen die nodig zijn. MXC is nog een preview, geen beveiligingsgrens.",
+      optInDescription: "Voor Windows-versies zonder de ingebouwde container. Python en Terminal kunnen dan alleen bestanden in de map van de chat wijzigen.",
+      optInNotNeeded: "Niet nodig op deze pc, omdat de ingebouwde container werkt.",
+      disclosure: "Het alternatief vereist een eenmalige stap als beheerder, Deze pc voorbereiden, die na elke herstart moet worden herhaald. Terwijl een tool draait, geeft Unsloth deze tijdelijk toegang tot de mappen die nodig zijn. MXC is nog een preview, geen beveiligingsgrens.",
       lockedDacl: "Ingesteld door UNSLOTH_MXC_ALLOW_DACL_FALLBACK",
       grantsLabel: "Snellere start van tools",
-      grantsDescription:
-        "Behoudt tussen aanroepen alleen-lezentoegang tot de eigen runtimemappen van Unsloth. Als dit uit staat, start elke aanroep een paar seconden langzamer.",
+      grantsDescription: "Behoudt tussen aanroepen alleen-lezentoegang tot de eigen runtimemappen van Unsloth. Als dit uit staat, start elke aanroep een paar seconden langzamer.",
       lockedGrants: "Ingesteld door UNSLOTH_MXC_PERSISTENT_READ_GRANTS",
       memoryLabel: "Geheugenlimiet",
-      memoryDescription:
-        "Maximale hoeveelheid geheugen die één Python- of Terminal-aanroep in de sandbox kan reserveren. Geldt vanaf de volgende aanroep. Standaard is {defaultSize} GB.",
+      memoryDescription: "Maximale hoeveelheid geheugen die één Python- of Terminal-aanroep in de sandbox kan reserveren. Geldt vanaf de volgende aanroep. Standaard is {defaultSize} GB.",
       memoryLocked: "Ingesteld door UNSLOTH_STUDIO_SANDBOX_AS_GB",
       memoryInvalid: "Voer een geheel getal in van {min} tot {max}.",
       restored: "Toegang tot {count} mappen verwijderd.",
@@ -1849,43 +1667,33 @@ export const nl = {
       prepFailed: "Voorbereiden mislukt.",
       setupLabel: "OS-sandbox",
       setupCommandHint: "Voer dit uit op de computer waarop Unsloth draait:",
-      macosBuiltIn:
-        "macOS heeft een ingebouwde sandbox, dus er hoeft niets te worden geïnstalleerd.",
-      setupKeywords:
-        "installeren installatie setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac beheerder",
+      macosBuiltIn: "macOS heeft een ingebouwde sandbox, dus er hoeft niets te worden geïnstalleerd.",
+      setupKeywords: "installeren installatie setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac beheerder",
       setupSucceeded: "De OS-sandbox is gereed.",
-      runtimeMissing:
-        "Nog niet geïnstalleerd. Voor de installatie is geen verzoek om beheerdersrechten nodig.",
+      runtimeMissing: "Nog niet geïnstalleerd. Voor de installatie is geen verzoek om beheerdersrechten nodig.",
       runtimeLabel: "Windows-sandboxruntime",
       installRuntime: "Runtime installeren",
       installingRuntime: "Installeren…",
       installRuntimeFailed: "Installatie van de runtime mislukt.",
       installRuntimeError: "Kan de installatie van de runtime niet starten.",
-      unsupportedArch:
-        "De Windows-sandbox (MXC) werkt alleen op x64- en ARM64-versies van Windows en is daarom niet beschikbaar op deze pc.",
-      builtinNeedsUpdate:
-        "De ingebouwde container van Windows vereist build {required} of nieuwer, en op deze pc draait {current}. Installeer de nieuwste Windows-update om hem zonder beheerdersstap te gebruiken, of schakel hieronder de terugvaloptie in.",
-      unsupportedBuild:
-        "De Windows-sandbox (MXC) vereist Windows 11 24H2 (build 26100) of nieuwer en is daarom niet beschikbaar op deze pc.",
+      unsupportedArch: "De Windows-sandbox (MXC) werkt alleen op x64- en ARM64-versies van Windows en is daarom niet beschikbaar op deze pc.",
+      builtinNeedsUpdate: "De ingebouwde container van Windows vereist build {required} of nieuwer, en op deze pc draait {current}. Installeer de nieuwste Windows-update om hem zonder beheerdersstap te gebruiken, of schakel hieronder de terugvaloptie in.",
+      unsupportedBuild: "De Windows-sandbox (MXC) vereist Windows 11 24H2 (build 26100) of nieuwer en is daarom niet beschikbaar op deze pc.",
       permissionLabel: "Tooltoestemmingen",
       levelRowLabel: "Sandboxniveau",
       levelPickerTitle: "Hoe moet code in een sandbox worden uitgevoerd?",
       levelOff: "Uitgeschakeld",
       levelOffShort: "Volledige toegang schakelt de sandbox uit",
-      levelHighDetail:
-        "Python en Terminal draaien in de OS-sandbox (bubblewrap, Seatbelt of MXC), bovenop softwarematige sandboxing. Zonder werkende OS-sandbox wordt bij riskante aanroepen eerst om toestemming gevraagd.",
-      levelLowDetail:
-        "Python en Terminal draaien alleen met softwarematige sandboxing, buiten de OS-sandbox. Bij riskante aanroepen wordt eerst om toestemming gevraagd, tenzij je Volledige toegang hebt gekozen.",
+      levelHighDetail: "Python en Terminal draaien in de OS-sandbox (bubblewrap, Seatbelt of MXC), bovenop softwarematige sandboxing. Zonder werkende OS-sandbox wordt bij riskante aanroepen eerst om toestemming gevraagd.",
+      levelLowDetail: "Python en Terminal draaien alleen met softwarematige sandboxing, buiten de OS-sandbox. Bij riskante aanroepen wordt eerst om toestemming gevraagd, tenzij je Volledige toegang hebt gekozen.",
       levelLabel: "Sandbox",
       levelHigh: "Hoog",
       levelLow: "Laag",
       levelHighShort: "Voegt OS-isolatie toe aan Python en Terminal",
       levelLowShort: "Alleen software. Riskante code vraagt eerst",
-      levelFullAccessNote:
-        "Volledige toegang schakelt de sandbox uit. Deze instelling geldt weer zodra je een ander niveau kiest.",
+      levelFullAccessNote: "Volledige toegang schakelt de sandbox uit. Deze instelling geldt weer zodra je een ander niveau kiest.",
       learnMore: "Meer informatie",
-      managedNote:
-        "De eigenaar van deze Unsloth-server stelt de OS-sandbox in.",
+      managedNote: "De eigenaar van deze Unsloth-server stelt de OS-sandbox in.",
       trustedFoldersTitle: "Vertrouwde mappen",
       trustedFoldersLabel: "Uitvoeren zonder te vragen",
       trustedFoldersDescription: "Python en Terminal mogen bestanden in deze mappen lezen en uitvoeren zonder om goedkeuring te vragen, alleen in je eigen chats. Schrijven naar deze mappen vraagt nog steeds om goedkeuring. Eén map per regel.",
@@ -1897,8 +1705,7 @@ export const nl = {
       description: "Lees de Unsloth-logboeken zonder de app te verlaten.",
       logSection: "Logbestand",
       source: "Logbestand",
-      sourceHint:
-        "De modelrunners schrijven hun eigen logboeken, dus een mislukte laadactie of generatie wordt daar vaak verklaard in plaats van in het serverlogboek.",
+      sourceHint: "De modelrunners schrijven hun eigen logboeken, dus een mislukte laadactie of generatie wordt daar vaak verklaard in plaats van in het serverlogboek.",
       path: "Locatie",
       pathCopy: "Pad kopiëren",
       currentSession: "Huidig",
@@ -1917,64 +1724,49 @@ export const nl = {
       modeInterval: "Elke 3 seconden",
       modeManual: "Handmatig",
       refreshNow: "Nu vernieuwen",
-      privacyNote:
-        "Inloggegevens worden in deze weergave gemaskeerd. Het bestand op schijf is niet gemaskeerd.",
+      privacyNote: "Inloggegevens worden in deze weergave gemaskeerd. Het bestand op schijf is niet gemaskeerd.",
       copyVisible: "Zichtbaar logboek kopiëren",
       empty: "Er is nog niets gelogd.",
-      disabled:
-        "Loggen naar bestand is uitgeschakeld (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
+      disabled: "Loggen naar bestand is uitgeschakeld (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
       missing: "Geen logbestand gevonden.",
       unreadable: "Kan het logbestand niet lezen.",
       viewLogs: "Logboeken bekijken",
-      timeout:
-        "Er is een time-out opgetreden bij het opvragen van het logboek. De server is mogelijk onbereikbaar.",
-      droppedNotice:
-        "Sommige regels zijn overgeslagen: het logboek werd sneller geschreven dan het kon worden gelezen.",
-      morePending:
-        "Er worden nog meer regels gelezen; ze verschijnen bij de volgende vernieuwing.",
-      staleSession:
-        "Loggen naar bestand is uitgeschakeld, dus dit is een eerdere sessie die niet wordt bijgewerkt.",
+      timeout: "Er is een time-out opgetreden bij het opvragen van het logboek. De server is mogelijk onbereikbaar.",
+      droppedNotice: "Sommige regels zijn overgeslagen: het logboek werd sneller geschreven dan het kon worden gelezen.",
+      morePending: "Er worden nog meer regels gelezen; ze verschijnen bij de volgende vernieuwing.",
+      staleSession: "Loggen naar bestand is uitgeschakeld, dus dit is een eerdere sessie die niet wordt bijgewerkt.",
       downloadAllLogs: "Alle logboeken downloaden (.zip)",
       downloadingAllLogs: "Logboeken inpakken...",
-      exportMaskedNote:
-        "Inloggegevens worden in de geëxporteerde bestanden gemaskeerd. Van zeer grote logboeken worden alleen de recentste regels bewaard en sommige logboeken kunnen volledig worden weggelaten; zie EXPORT_WARNINGS.txt in het archief.",
+      exportMaskedNote: "Inloggegevens worden in de geëxporteerde bestanden gemaskeerd. Van zeer grote logboeken worden alleen de recentste regels bewaard en sommige logboeken kunnen volledig worden weggelaten; zie EXPORT_WARNINGS.txt in het archief.",
       downloadedTo: "Opgeslagen in {path}",
       downloadedToBrowser: "Download gestart.",
       showInFolder: "Weergeven in map",
       openLogsFolder: "Logboekmap openen",
       openLogsFolderFailed: "Kan de logboekmap niet openen.",
       exportFailed: "Kan de logboeken niet downloaden.",
-      exportTooOld:
-        "De actieve Unsloth-backend is te oud om logboeken te exporteren. Werk die backend bij en start opnieuw.",
-      exportForbidden:
-        "Voor het downloaden van alle logboeken is een ingelogde Unsloth-sessie nodig. Een API-sleutel is niet voldoende.",
-      keywords:
-        "debug debuggen foutopsporing log logboek logboeken fout fouten crash vastlopen traceback stacktrace probleemoplossing diagnose mislukt",
+      exportTooOld: "De actieve Unsloth-backend is te oud om logboeken te exporteren. Werk die backend bij en start opnieuw.",
+      exportForbidden: "Voor het downloaden van alle logboeken is een ingelogde Unsloth-sessie nodig. Een API-sleutel is niet voldoende.",
+      keywords: "debug debuggen foutopsporing log logboek logboeken fout fouten crash vastlopen traceback stacktrace probleemoplossing diagnose mislukt",
     },
     voice: {
       title: "Spraak",
       description: "Microfoon, dicteren, spraak-naar-tekst en voorlezen",
       dictation: {
         audioUploadTitle: "Dicteren met een opname",
-        audioUploadDescription:
-          "Je browser vereist een beveiligde verbinding (HTTPS) om direct in Unsloth op te nemen. Gebruik op deze HTTP-verbinding de recorder van je telefoon of kies in plaats daarvan een opgeslagen opname. Je Unsloth-server zet de audio om in tekst en voegt die toe aan je bericht.",
+        audioUploadDescription: "Je browser vereist een beveiligde verbinding (HTTPS) om direct in Unsloth op te nemen. Gebruik op deze HTTP-verbinding de recorder van je telefoon of kies in plaats daarvan een opgeslagen opname. Je Unsloth-server zet de audio om in tekst en voegt die toe aan je bericht.",
         audioUploadChooseFile: "Opname kiezen",
         audioUploadRecord: "Audio opnemen",
-        audioUploadIphoneHint:
-          "Sla op de iPhone een opname op vanuit Dictafoon of een andere recorder-app en kies die hier.",
-        audioUploadServerModelNote:
-          "Deze opname gebruikt het lokale model dat hierboven op de Unsloth-server wordt weergegeven, ook als normaal dicteren een andere engine gebruikt.",
+        audioUploadIphoneHint: "Sla op de iPhone een opname op vanuit Dictafoon of een andere recorder-app en kies die hier.",
+        audioUploadServerModelNote: "Deze opname gebruikt het lokale model dat hierboven op de Unsloth-server wordt weergegeven, ook als normaal dicteren een andere engine gebruikt.",
         audioUploadAutomatic: "Automatisch",
         audioUploadModelReady: "Gereed op deze Unsloth-server",
         audioUploadRetryTitle: "Kan {file} niet transcriberen",
         audioUploadRetry: "Transcriptie opnieuw proberen",
-        audioUploadChooseModel:
-          "Kies een lokaal spraakherkenningsmodel in de spraakinstellingen.",
+        audioUploadChooseModel: "Kies een lokaal spraakherkenningsmodel in de spraakinstellingen.",
         audioUploadEmpty: "De geselecteerde opname is leeg.",
         audioUploadTooLarge: "Kies een opname kleiner dan {size}.",
         audioUploadVideoUnsupported: "Kies een audio-opname, geen video.",
-        audioUploadNoSpeech:
-          "Het model heeft geen spraak gehoord in die opname.",
+        audioUploadNoSpeech: "Het model heeft geen spraak gehoord in die opname.",
         audioUploadFailed: "Kan de opname niet transcriberen.",
         audioUploadCancel: "Transcriptie annuleren",
         audioUploadTranscribing: "Audio transcriberen…",
@@ -1988,48 +1780,36 @@ export const nl = {
         micRecordForModel: "Audio opnemen voor het model",
         engineLabel: "Dicteerengine",
         engineBrowser: "Browser",
-        engineBrowserDescription:
-          "Transcribeert audio met de spraakdienst van je browser. Selecteer 'Lokale transcriptie' om een STT-model te gebruiken.",
+        engineBrowserDescription: "Transcribeert audio met de spraakdienst van je browser. Selecteer 'Lokale transcriptie' om een STT-model te gebruiken.",
         engineModel: "Lokale transcriptie",
-        engineModelDescription:
-          "Voert lokaal een spraak-naar-tekstmodel (STT) uit en werkt offline. Downloaden, laden, en na inactiviteit wordt het ontladen.",
+        engineModelDescription: "Voert lokaal een spraak-naar-tekstmodel (STT) uit en werkt offline. Downloaden, laden, en na inactiviteit wordt het ontladen.",
         engineCustom: "Aangepast eindpunt",
-        engineCustomDescription:
-          "Stuurt opgenomen audio naar een OpenAI-compatibele STT-server uit je verbindingen.",
+        engineCustomDescription: "Stuurt opgenomen audio naar een OpenAI-compatibele STT-server uit je verbindingen.",
         connectionLabel: "Verbinding",
-        connectionDescription:
-          "Voeg in Verbindingen een OpenAI-compatibele server en een optionele API-sleutel toe.",
+        connectionDescription: "Voeg in Verbindingen een OpenAI-compatibele server en een optionele API-sleutel toe.",
         connectionPlaceholder: "Selecteer een verbinding",
         connectionEmpty: "Geen verbindingen beschikbaar",
         customModelLabel: "Model",
-        customModelDescription:
-          "Modelnaam die naar /v1/audio/transcriptions wordt gestuurd.",
+        customModelDescription: "Modelnaam die naar /v1/audio/transcriptions wordt gestuurd.",
         sttModelLabel: "Spraakherkenningsmodel",
-        sttModelDescription:
-          "Kies of zoek een STT-model om lokaal uit te voeren.",
+        sttModelDescription: "Kies of zoek een STT-model om lokaal uit te voeren.",
         sttQuantLabel: "Kwantisatie",
-        sttQuantDescription:
-          "Kies of zoek een STT-model om lokaal uit te voeren en kies daarna de kwantisatie.",
+        sttQuantDescription: "Kies of zoek een STT-model om lokaal uit te voeren en kies daarna de kwantisatie.",
         sttDeviceLabel: "Laden in",
         sttContextLabel: "Spraakcontext",
         sttContextAuto: "Automatisch (aanbevolen)",
-        sttContextAutoDescription:
-          "Past zich aan elke opname aan en gebruikt meer geheugen voor langere audio. Oudere runtimes hebben mogelijk een vaste grootte nodig om geheugen te besparen. Geldt voor Qwen3-ASR in Spraak en Transcriberen.",
-        sttContextFixedDescription:
-          "Kleinere limieten gebruiken minder geheugen. Opnamen die niet passen hebben een hogere limiet of Automatisch nodig. Geldt voor Qwen3-ASR in Spraak en Transcriberen.",
+        sttContextAutoDescription: "Past zich aan elke opname aan en gebruikt meer geheugen voor langere audio. Oudere runtimes hebben mogelijk een vaste grootte nodig om geheugen te besparen. Geldt voor Qwen3-ASR in Spraak en Transcriberen.",
+        sttContextFixedDescription: "Kleinere limieten gebruiken minder geheugen. Opnamen die niet passen hebben een hogere limiet of Automatisch nodig. Geldt voor Qwen3-ASR in Spraak en Transcriberen.",
         sttContextTokens: "{count} tokens",
         sttDeviceAuto: "GPU indien beschikbaar",
         sttDeviceCpu: "CPU-RAM",
-        sttDeviceAutoDescription:
-          "Gebruik de GPU als die er is, en anders de CPU.",
-        sttDeviceCpuDescription:
-          "Houd het model in het systeem-RAM. Transcriptie is trager, maar er wordt geen GPU-geheugen gebruikt.",
+        sttDeviceAutoDescription: "Gebruik de GPU als die er is, en anders de CPU.",
+        sttDeviceCpuDescription: "Houd het model in het systeem-RAM. Transcriptie is trager, maar er wordt geen GPU-geheugen gebruikt.",
         sttModelSearchPlaceholder: "Zoek een model op HF",
         sttModelSearching: "Zoeken op Hugging Face…",
         sttModelValidating: "Whisper-compatibiliteit controleren…",
         sttModelNoResults: "Geen Whisper-modellen gevonden",
-        sttModelInvalid:
-          "Deze repository kan niet worden gebruikt voor dicteren",
+        sttModelInvalid: "Deze repository kan niet worden gebruikt voor dicteren",
         sttModelFailed: "Kan het STT-model niet laden",
         sttModelUnsupported: "Opnemen wordt niet ondersteund in deze browser",
         sttChecking: "Controleren…",
@@ -2037,18 +1817,15 @@ export const nl = {
         sttLoadingModel: "Model laden…",
         sttReady: "Geladen op {device}",
         sttLoaded: "Geladen",
-        sttUnavailable:
-          "Niet geïnstalleerd op deze server. Voer `unsloth studio update` uit om lokaal dicteren in te schakelen.",
+        sttUnavailable: "Niet geïnstalleerd op deze server. Voer `unsloth studio update` uit om lokaal dicteren in te schakelen.",
         sttRetry: "Opnieuw proberen",
         sttDownloadChecking: "Downloadstatus controleren…",
         sttNotDownloaded: "Niet gedownload",
         sttDownloadStatusFailed: "Kan de downloadstatus niet controleren",
         sttDownload: "Downloaden",
         sttDownloadConfirmTitle: "{model} downloaden?",
-        sttDownloadConfirmBody:
-          "Lokaal dicteren werkt volledig offline, maar vereist eerst het spraakmodel {model}. Ongeveer {size}, eenmalig opgehaald in je Hugging Face-cache.",
-        sttDownloadConfirmBodyUnsized:
-          "Lokaal dicteren werkt volledig offline, maar vereist eerst het spraakmodel {model}. Het wordt eenmalig opgehaald in je Hugging Face-cache.",
+        sttDownloadConfirmBody: "Lokaal dicteren werkt volledig offline, maar vereist eerst het spraakmodel {model}. Ongeveer {size}, eenmalig opgehaald in je Hugging Face-cache.",
+        sttDownloadConfirmBodyUnsized: "Lokaal dicteren werkt volledig offline, maar vereist eerst het spraakmodel {model}. Het wordt eenmalig opgehaald in je Hugging Face-cache.",
         sttOpenVoiceSettings: "Spraakinstellingen openen",
         sttDownloadStarted: "{model} downloaden",
         sttDownloading: "Downloaden… {progress}%",
@@ -2065,17 +1842,12 @@ export const nl = {
         microphoneLabel: "Microfoon",
         microphoneFallbackName: "Microfoon {index}",
         microphoneDescription: "Gebruikt voor dicteren",
-        microphoneFallbackHint:
-          "Gebruikt voor dicteren. Valt terug op de systeemstandaard als de spraakengine van de browser dit apparaat niet kan gebruiken",
-        microphoneGrantDescription:
-          "Sta microfoontoegang toe om apparaatnamen te tonen",
+        microphoneFallbackHint: "Gebruikt voor dicteren. Valt terug op de systeemstandaard als de spraakengine van de browser dit apparaat niet kan gebruiken",
+        microphoneGrantDescription: "Sta microfoontoegang toe om apparaatnamen te tonen",
         allowMicrophone: "Microfoon toestaan",
-        micAccessBlocked:
-          "Microfoontoegang is geblokkeerd. Sta microfoontoegang toe voor deze Unsloth-pagina en probeer het opnieuw.",
-        micAccessBlockedDesktop:
-          "Microfoontoegang is geblokkeerd. Probeer het opnieuw en kies Toestaan, of schakel de microfoon in via de privacyinstellingen van je systeem.",
-        micAccessUnsupported:
-          "Microfoontoegang wordt niet ondersteund in deze browser of context.",
+        micAccessBlocked: "Microfoontoegang is geblokkeerd. Sta microfoontoegang toe voor deze Unsloth-pagina en probeer het opnieuw.",
+        micAccessBlockedDesktop: "Microfoontoegang is geblokkeerd. Probeer het opnieuw en kies Toestaan, of schakel de microfoon in via de privacyinstellingen van je systeem.",
+        micAccessUnsupported: "Microfoontoegang wordt niet ondersteund in deze browser of context.",
         systemDefault: "Systeemstandaard",
         savedMicDisconnected: "Opgeslagen microfoon (niet verbonden)",
         languageLabel: "Dicteertaal",
@@ -2085,8 +1857,7 @@ export const nl = {
       },
       dictionary: {
         sectionTitle: "Dicteerwoordenboek",
-        sectionDescription:
-          "Stel in hoe dicteren bepaalde woorden of zinnen spelt",
+        sectionDescription: "Stel in hoe dicteren bepaalde woorden of zinnen spelt",
         manageLabel: "Aangepaste spellingen",
         manage: "Beheren",
         backToVoice: "Terug naar Spraak",
@@ -2098,12 +1869,10 @@ export const nl = {
       },
       recents: {
         sectionTitle: "Dicteergeschiedenis",
-        sectionDescription:
-          "Elk dictaat wordt hier opgeslagen, zodat je tekst kunt terughalen",
+        sectionDescription: "Elk dictaat wordt hier opgeslagen, zodat je tekst kunt terughalen",
         manageLabel: "Dicteergeschiedenis",
         manage: "Beheren",
-        pageDescription:
-          "Elk dictaat wordt opgeslagen. Bekijk, kopieer of verwijder ze, of open de chat waarin een dictaat is gebruikt.",
+        pageDescription: "Elk dictaat wordt opgeslagen. Bekijk, kopieer of verwijder ze, of open de chat waarin een dictaat is gebruikt.",
         searchPlaceholder: "Dictaten zoeken",
         sortLabel: "Dictaten sorteren",
         sortNewest: "Nieuwste",
@@ -2122,16 +1891,13 @@ export const nl = {
         copyFailed: "Kan niet kopiëren naar klembord",
         delete: "Dictaat verwijderen",
         deleteTitle: "Dictaat verwijderen",
-        deleteDescription:
-          "Dit opgeslagen dictaat verwijderen? Dit kan niet ongedaan worden gemaakt.",
-        deleteLinkedDescription:
-          "Dit opgeslagen dictaat verwijderen? Je kunt ook de chat verwijderen waarin het is gebruikt. Dit kan niet ongedaan worden gemaakt.",
+        deleteDescription: "Dit opgeslagen dictaat verwijderen? Dit kan niet ongedaan worden gemaakt.",
+        deleteLinkedDescription: "Dit opgeslagen dictaat verwijderen? Je kunt ook de chat verwijderen waarin het is gebruikt. Dit kan niet ongedaan worden gemaakt.",
         deleteWithChat: "Chat en dictaat verwijderen",
         deleteWithChatFailed: "Kan de chat niet verwijderen",
         clear: "Geschiedenis wissen",
         clearTitle: "Dicteergeschiedenis wissen",
-        clearDescription:
-          "Alle opgeslagen dictaten verwijderen? Dit kan niet ongedaan worden gemaakt.",
+        clearDescription: "Alle opgeslagen dictaten verwijderen? Dit kan niet ongedaan worden gemaakt.",
         clearConfirm: "Alles wissen",
         showMore: "Meer tonen ({count})",
         openChat: "Chat openen",
@@ -2144,33 +1910,26 @@ export const nl = {
         autoDescription: "Elk antwoord voorlezen zodra het klaar is",
         engineLabel: "TTS-engine",
         engineSystemDescription: "Ingebouwde stemmen van het apparaat",
-        engineStudioDescription:
-          "Spreekt met een model dat is geladen in Audio › Tekst naar spraak",
+        engineStudioDescription: "Spreekt met een model dat is geladen in Audio › Tekst naar spraak",
         engineSystem: "Systeemstemmen",
         engineStudio: "Unsloth-model",
         engineCustom: "Aangepast eindpunt",
-        engineCustomDescription:
-          "Een OpenAI-compatibele TTS-server uit je verbindingen (bijv. Kokoro)",
+        engineCustomDescription: "Een OpenAI-compatibele TTS-server uit je verbindingen (bijv. Kokoro)",
         connectionLabel: "Verbinding",
-        connectionDescription:
-          "Voeg een OpenAI-compatibele server toe op het tabblad Verbindingen",
+        connectionDescription: "Voeg een OpenAI-compatibele server toe op het tabblad Verbindingen",
         connectionPlaceholder: "Selecteer een verbinding",
         customModelLabel: "Model",
-        customVoiceDescription:
-          "Stemnaam die het eindpunt verwacht; standaard alloy",
+        customVoiceDescription: "Stemnaam die het eindpunt verwacht; standaard alloy",
         modelLabel: "TTS-model",
-        modelDescription:
-          "Geen geladen. Laad er een in Audio › Tekst naar spraak.",
+        modelDescription: "Geen geladen. Laad er een in Audio › Tekst naar spraak.",
         modelLoaded: "{model} is geladen",
         keepBothLabel: "Chatmodel geladen houden",
-        keepBothDescription:
-          "Meerdere modellen geladen houden staat uit, dus het laden van een spraakmodel ontlaadt het chatmodel.",
+        keepBothDescription: "Meerdere modellen geladen houden staat uit, dus het laden van een spraakmodel ontlaadt het chatmodel.",
         keepBothAction: "Beide geladen houden",
         openAudioAction: "Audio openen",
         voiceLabel: "Stem",
         voiceDescription: "Beste stemmen op dit apparaat",
-        studioVoiceDescription:
-          "Stemmen die in Audio zijn opgeslagen vereisen een kloonmodel",
+        studioVoiceDescription: "Stemmen die in Audio zijn opgeslagen vereisen een kloonmodel",
         studioVoiceDefault: "Eigen stem van het model",
         studioVoiceSaved: "Opgeslagen stem",
         speedLabel: "Snelheid",
@@ -2191,8 +1950,7 @@ export const nl = {
       description: "Algemene voorkeuren voor Unsloth.",
       account: "Account",
       huggingFaceToken: "Hugging Face-token",
-      huggingFaceTokenDescription:
-        "Gebruikt om afgeschermde modellen te laden en artefacten te pushen.",
+      huggingFaceTokenDescription: "Gebruikt om afgeschermde modellen te laden en artefacten te pushen.",
       hideToken: "Token verbergen",
       showToken: "Token tonen",
       clearToken: "Wissen",
@@ -2203,26 +1961,21 @@ export const nl = {
       passwordDialog: {
         trigger: "Wachtwoord wijzigen",
         title: "Wachtwoord wijzigen",
-        description:
-          "Voer je huidige wachtwoord in en kies een nieuw wachtwoord (minimaal {minLength} tekens).",
+        description: "Voer je huidige wachtwoord in en kies een nieuw wachtwoord (minimaal {minLength} tekens).",
         setTrigger: "Extern wachtwoord instellen",
         setTitle: "Extern wachtwoord instellen",
-        setDescription:
-          "Kies het wachtwoord waarmee externe browsers inloggen als unsloth (minimaal {minLength} tekens). De Unsloth Desktop-app blijft automatisch inloggen.",
+        setDescription: "Kies het wachtwoord waarmee externe browsers inloggen als unsloth (minimaal {minLength} tekens). De Unsloth Desktop-app blijft automatisch inloggen.",
         setSubmit: "Wachtwoord instellen",
         setting: "Instellen...",
         setDone: "Wachtwoord ingesteld.",
         currentPassword: "Huidig wachtwoord",
         newPassword: "Nieuw wachtwoord",
         confirmPassword: "Nieuw wachtwoord bevestigen",
-        currentTooShort:
-          "Het huidige wachtwoord moet minimaal {minLength} tekens bevatten.",
-        newTooShort:
-          "Het nieuwe wachtwoord moet minimaal {minLength} tekens bevatten.",
+        currentTooShort: "Het huidige wachtwoord moet minimaal {minLength} tekens bevatten.",
+        newTooShort: "Het nieuwe wachtwoord moet minimaal {minLength} tekens bevatten.",
         newHasSpaces: "Het nieuwe wachtwoord mag geen spaties bevatten.",
         mismatch: "De wachtwoorden komen niet overeen.",
-        samePassword:
-          "Het nieuwe wachtwoord moet verschillen van je huidige wachtwoord.",
+        samePassword: "Het nieuwe wachtwoord moet verschillen van je huidige wachtwoord.",
         update: "Wachtwoord bijwerken",
         updating: "Bijwerken...",
         updated: "Wachtwoord bijgewerkt.",
@@ -2230,8 +1983,7 @@ export const nl = {
       },
       chatDefaults: "Chatstandaarden",
       autoTitleNewChats: "Nieuwe chats automatisch een titel geven",
-      autoTitleNewChatsDescription:
-        "Een titel genereren op basis van het eerste bericht.",
+      autoTitleNewChatsDescription: "Een titel genereren op basis van het eerste bericht.",
       mlWarmup: {
         sectionTitle: "Prestaties bij het opstarten",
         description: "Bereid geselecteerde functies voor om ze bij het eerste gebruik sneller beschikbaar te maken. Alles staat standaard uit. Deze opties kunnen gedeelde afhankelijkheden laden en meer RAM gebruiken wanneer de app inactief is.",
@@ -2255,86 +2007,58 @@ export const nl = {
       helperLlm: {
         sectionTitle: "Helper-LLM",
         preloadOnStartup: "Helper-LLM vooraf cachen bij opstarten",
-        preloadOnStartupDescription:
-          "Het helpermodel voor AI Assist bij het opstarten op de achtergrond downloaden. Standaard uit; AI Assist kan het ook nog op aanvraag ophalen.",
-        disabledByEnv:
-          "Uitgeschakeld door UNSLOTH_HELPER_MODEL_DISABLE in de backendomgeving.",
+        preloadOnStartupDescription: "Het helpermodel voor AI Assist bij het opstarten op de achtergrond downloaden. Standaard uit; AI Assist kan het ook nog op aanvraag ophalen.",
+        disabledByEnv: "Uitgeschakeld door UNSLOTH_HELPER_MODEL_DISABLE in de backendomgeving.",
         loadError: "Kan de Helper-LLM-instellingen niet laden.",
         saveError: "Kan de Helper-LLM-instellingen niet opslaan.",
       },
       developerMode: {
         sectionTitle: "Ontwikkelaarsmodus",
         videoCpu: "Videogeneratie op CPU toestaan (experimenteel)",
-        videoCpuDescription:
-          "Hiermee werkt de pagina Video op een host zonder ondersteunde GPU. Standaard uit; niet ondersteund en erg traag.",
-        notApplicable:
-          "Heeft geen effect op deze machine: video draait al op de GPU, of wordt geblokkeerd door iets waar de CPU niet omheen kan.",
-        forcedOnByEnv:
-          "Ingeschakeld door UNSLOTH_VIDEO_ALLOW_CPU in de backendomgeving.",
-        forcedOffByEnv:
-          "Uitgeschakeld door UNSLOTH_VIDEO_ALLOW_CPU in de backendomgeving.",
+        videoCpuDescription: "Hiermee werkt de pagina Video op een host zonder ondersteunde GPU. Standaard uit; niet ondersteund en erg traag.",
+        notApplicable: "Heeft geen effect op deze machine: video draait al op de GPU, of wordt geblokkeerd door iets waar de CPU niet omheen kan.",
+        forcedOnByEnv: "Ingeschakeld door UNSLOTH_VIDEO_ALLOW_CPU in de backendomgeving.",
+        forcedOffByEnv: "Uitgeschakeld door UNSLOTH_VIDEO_ALLOW_CPU in de backendomgeving.",
         confirmTitle: "Videogeneratie op CPU inschakelen?",
-        confirmWarning:
-          "Videogeneratie op de CPU kan uren duren, veel RAM verbruiken en je systeem laten vastlopen. Doorgaan is op eigen risico.",
-        ramBelowMinimum:
-          "Deze machine heeft {host} GB RAM, minder dan de {min} GB die het kleinste videomodel op de CPU nodig heeft. Het laden mislukt waarschijnlijk of laat het systeem vastlopen.",
-        ramOk:
-          "Deze machine heeft {host} GB RAM. Het kleinste videomodel heeft op de CPU ongeveer {min} GB nodig; grotere modellen hebben veel meer nodig.",
-        ramUnknown:
-          "Het kleinste videomodel heeft op de CPU ongeveer {min} GB RAM nodig; grotere modellen hebben veel meer nodig.",
-        performanceEstimate:
-          "Reken op minuten per denoisingstap: een clip van 5 frames op 832x480 van Wan2.1 1.3B met 3 stappen duurde ongeveer 4 minuten op 16 CPU-threads, en een volledige clip met standaardinstellingen kan uren duren.",
+        confirmWarning: "Videogeneratie op de CPU kan uren duren, veel RAM verbruiken en je systeem laten vastlopen. Doorgaan is op eigen risico.",
+        ramBelowMinimum: "Deze machine heeft {host} GB RAM, minder dan de {min} GB die het kleinste videomodel op de CPU nodig heeft. Het laden mislukt waarschijnlijk of laat het systeem vastlopen.",
+        ramOk: "Deze machine heeft {host} GB RAM. Het kleinste videomodel heeft op de CPU ongeveer {min} GB nodig; grotere modellen hebben veel meer nodig.",
+        ramUnknown: "Het kleinste videomodel heeft op de CPU ongeveer {min} GB RAM nodig; grotere modellen hebben veel meer nodig.",
+        performanceEstimate: "Reken op minuten per denoisingstap: een clip van 5 frames op 832x480 van Wan2.1 1.3B met 3 stappen duurde ongeveer 4 minuten op 16 CPU-threads, en een volledige clip met standaardinstellingen kan uren duren.",
         confirmAction: "Toch inschakelen",
         loadError: "Kan de instellingen voor de ontwikkelaarsmodus niet laden.",
-        saveError:
-          "Kan de instellingen voor de ontwikkelaarsmodus niet opslaan.",
+        saveError: "Kan de instellingen voor de ontwikkelaarsmodus niet opslaan.",
       },
       modelAutoSwitch: {
         sectionTitle: "Automatisch van model wisselen (OpenAI API)",
         enable: "Model wisselen per verzoek",
-        enableDescription:
-          "Een gedownload model dat in een API-verzoek wordt genoemd laden voordat het verzoek wordt verwerkt. Standaard uit.",
+        enableDescription: "Een gedownload model dat in een API-verzoek wordt genoemd laden voordat het verzoek wordt verwerkt. Standaard uit.",
         autoDownload: "Ontbrekende modellen downloaden",
-        autoDownloadDescription:
-          "Een GGUF ophalen die in een API-verzoek wordt genoemd en nog niet is gedownload. Iedereen met een API-sleutel kan dan schijfruimte en bandbreedte gebruiken.",
+        autoDownloadDescription: "Een GGUF ophalen die in een API-verzoek wordt genoemd en nog niet is gedownload. Iedereen met een API-sleutel kan dan schijfruimte en bandbreedte gebruiken.",
         idleUnload: "Automatisch ontladen bij inactiviteit",
-        idleUnloadDescription:
-          "VRAM vrijmaken na dit aantal seconden inactiviteit. 0 houdt het model geladen, minimaal 60.",
-        idleSecondsAriaLabel:
-          "Seconden tot automatisch ontladen bij inactiviteit",
+        idleUnloadDescription: "VRAM vrijmaken na dit aantal seconden inactiviteit. 0 houdt het model geladen, minimaal 60.",
+        idleSecondsAriaLabel: "Seconden tot automatisch ontladen bij inactiviteit",
         mediaEnable: "Afbeeldings- en videomodel wisselen per verzoek",
-        mediaEnableDescription:
-          "Een gedownload afbeeldings- of videomodel dat in een API-verzoek wordt genoemd laden voordat er wordt gegenereerd. Los van het wisselen van chatmodel. Standaard uit.",
-        mediaIdleUnload:
-          "Automatisch ontladen bij inactiviteit voor afbeelding en video",
-        mediaIdleUnloadDescription:
-          "VRAM vrijmaken door de afbeeldings- en videomodellen na dit aantal seconden inactiviteit te ontladen. Los van het wisselen van chatmodel. 0 houdt ze geladen, minimaal 60.",
-        mediaIdleSecondsAriaLabel:
-          "Seconden tot automatisch ontladen bij inactiviteit voor afbeelding en video",
-        mediaIdlePaused:
-          "Gepauzeerd zolang Model in GPU-geheugen houden aan staat.",
+        mediaEnableDescription: "Een gedownload afbeeldings- of videomodel dat in een API-verzoek wordt genoemd laden voordat er wordt gegenereerd. Los van het wisselen van chatmodel. Standaard uit.",
+        mediaIdleUnload: "Automatisch ontladen bij inactiviteit voor afbeelding en video",
+        mediaIdleUnloadDescription: "VRAM vrijmaken door de afbeeldings- en videomodellen na dit aantal seconden inactiviteit te ontladen. Los van het wisselen van chatmodel. 0 houdt ze geladen, minimaal 60.",
+        mediaIdleSecondsAriaLabel: "Seconden tot automatisch ontladen bij inactiviteit voor afbeelding en video",
+        mediaIdlePaused: "Gepauzeerd zolang Model in GPU-geheugen houden aan staat.",
         idleNeedsEnable: "Schakel eerst Model wisselen per verzoek in.",
         idleActiveViaEnv: "Actief via UNSLOTH_MODEL_IDLE_TTL.",
-        loadError:
-          "Kan de instellingen voor automatisch van model wisselen niet laden.",
-        saveError:
-          "Kan de instellingen voor automatisch van model wisselen niet opslaan.",
-        idleError:
-          "Voer 0 in om het model geladen te houden, of minimaal 60 seconden.",
+        loadError: "Kan de instellingen voor automatisch van model wisselen niet laden.",
+        saveError: "Kan de instellingen voor automatisch van model wisselen niet opslaan.",
+        idleError: "Voer 0 in om het model geladen te houden, of minimaal 60 seconden.",
         idleUnsaved: "Nog niet opgeslagen.",
         keepKv: "Chatcontext behouden bij ontladen",
-        keepKvDescription:
-          "De KV-cache opslaan vóór het ontladen bij inactiviteit, of voordat een afbeeldings- of videomodel de GPU overneemt, zodat hervatte chats de geschiedenis niet opnieuw hoeven te lezen. Tot 10 GB op schijf.",
-        keepKvKeywords:
-          "kv cache context wisselen swap hervatten afbeelding video",
+        keepKvDescription: "De KV-cache opslaan vóór het ontladen bij inactiviteit, of voordat een afbeeldings- of videomodel de GPU overneemt, zodat hervatte chats de geschiedenis niet opnieuw hoeven te lezen. Tot 10 GB op schijf.",
+        keepKvKeywords: "kv cache context wisselen swap hervatten afbeelding video",
         apiOnly: "Alleen modellen ontladen die via de API zijn geladen",
-        apiOnlyDescription:
-          "Ontladen bij inactiviteit laat een model dat je vanuit Unsloth hebt geladen in het geheugen staan en maakt alleen modellen vrij die door een API-verzoek zijn geladen.",
+        apiOnlyDescription: "Ontladen bij inactiviteit laat een model dat je vanuit Unsloth hebt geladen in het geheugen staan en maakt alleen modellen vrij die door een API-verzoek zijn geladen.",
       },
       modelAliases: {
         sectionTitle: "Modelaliassen (OpenAI API)",
-        description:
-          "Korte namen die API-clients kunnen gebruiken in plaats van de volledige modelnaam.",
+        description: "Korte namen die API-clients kunnen gebruiken in plaats van de volledige modelnaam.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Aliasnaam",
         modelAriaLabel: "Model waarnaar de alias verwijst",
@@ -2348,26 +2072,20 @@ export const nl = {
         speculativeDecoding: "Speculatieve decodering",
         savedSetting: "Opgeslagen instelling",
         loadSettings: "Laadinstellingen",
-        loadSettingsHint:
-          "Alleen voor GGUF-modellen. Lege velden gebruiken de opgeslagen instellingen van het model.",
+        loadSettingsHint: "Alleen voor GGUF-modellen. Lege velden gebruiken de opgeslagen instellingen van het model.",
       },
       previewSharing: {
         sectionTitle: "Voorbeelden delen",
         enableLabel: "Openbare voorbeeldlinks",
-        enableDescription:
-          "Iedereen met een ondertekende link laten chatten met een voltooid model, zonder in te loggen. Schakel uit om de openbare voorbeeldomgeving offline te halen; gedeelde links werken dan niet meer.",
-        loadError:
-          "Kan de instellingen voor het delen van voorbeelden niet laden.",
-        saveError:
-          "Kan de instellingen voor het delen van voorbeelden niet opslaan.",
+        enableDescription: "Iedereen met een ondertekende link laten chatten met een voltooid model, zonder in te loggen. Schakel uit om de openbare voorbeeldomgeving offline te halen; gedeelde links werken dan niet meer.",
+        loadError: "Kan de instellingen voor het delen van voorbeelden niet laden.",
+        saveError: "Kan de instellingen voor het delen van voorbeelden niet opslaan.",
         revokeLabel: "Alle voorbeeldlinks intrekken",
-        revokeDescription:
-          "Het ondertekeningsgeheim vervangen, zodat elke link die je hebt gedeeld niet meer werkt. Nieuw gekopieerde links blijven werken.",
+        revokeDescription: "Het ondertekeningsgeheim vervangen, zodat elke link die je hebt gedeeld niet meer werkt. Nieuw gekopieerde links blijven werken.",
         revokeAction: "Links intrekken",
         revoking: "Intrekken...",
         revokeConfirmTitle: "Alle voorbeeldlinks intrekken?",
-        revokeConfirmDescription:
-          "Elke voorbeeldlink die je hebt gedeeld, werkt onmiddellijk niet meer. Dit kan niet ongedaan worden gemaakt.",
+        revokeConfirmDescription: "Elke voorbeeldlink die je hebt gedeeld, werkt onmiddellijk niet meer. Dit kan niet ongedaan worden gemaakt.",
         revokeConfirmAction: "Alle links intrekken",
         revoked: "Alle voorbeeldlinks ingetrokken",
         revokeError: "Kan de voorbeeldlinks niet intrekken",
@@ -2375,14 +2093,10 @@ export const nl = {
       managedProviderUrls: {
         sectionTitle: "Beheerde accounts",
         enableLabel: "Lokale en netwerkverbindingen",
-        enableDescription:
-          "Beheerde accounts toestaan hun verbindingen naar lokale of netwerkadressen te laten verwijzen, zoals een Ollama- of llama.cpp-server op deze computer of je LAN. Standaard uit, omdat deze accounts daarmee services kunnen bereiken die op je computer en je netwerk draaien.",
-        lockedByEnvironment:
-          "Ingesteld door UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 op deze server, waardoor privéadressen voor elk account worden geweigerd.",
-        loadError:
-          "Kan de verbindingsinstellingen voor beheerde accounts niet laden.",
-        saveError:
-          "Kan de verbindingsinstellingen voor beheerde accounts niet opslaan.",
+        enableDescription: "Beheerde accounts toestaan hun verbindingen naar lokale of netwerkadressen te laten verwijzen, zoals een Ollama- of llama.cpp-server op deze computer of je LAN. Standaard uit, omdat deze accounts daarmee services kunnen bereiken die op je computer en je netwerk draaien.",
+        lockedByEnvironment: "Ingesteld door UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 op deze server, waardoor privéadressen voor elk account worden geweigerd.",
+        loadError: "Kan de verbindingsinstellingen voor beheerde accounts niet laden.",
+        saveError: "Kan de verbindingsinstellingen voor beheerde accounts niet opslaan.",
       },
       permissions: {
         sectionTitle: "Toestemmingen",
@@ -2410,11 +2124,9 @@ export const nl = {
       notifications: {
         sectionTitle: "Meldingen",
         showLoadedModels: "Kaart met geladen modellen",
-        showLoadedModelsDescription:
-          "Een kaart in de hoek met alle geladen modellen, om er met één klik een te ontladen.",
+        showLoadedModelsDescription: "Een kaart in de hoek met alle geladen modellen, om er met één klik een te ontladen.",
         updateReminders: "Updateherinneringen",
-        updateRemindersDescription:
-          "Hoe vaak een nieuwe versie wordt aangeboden wanneer die klaarstaat.",
+        updateRemindersDescription: "Hoe vaak een nieuwe versie wordt aangeboden wanneer die klaarstaat.",
         llamaHint: "Chat- en GGUF-modellen",
         audioHint: "Spraak, muziek en transcriptie",
         frequency: {
@@ -2429,79 +2141,57 @@ export const nl = {
       startup: {
         sectionTitle: "Opstarten",
         launchAtLogin: "Unsloth starten bij inloggen",
-        launchAtLoginDescription:
-          "Unsloth op de achtergrond starten wanneer je inlogt. Het blijft in de menubalk of het systeemvak tot je het opent.",
+        launchAtLoginDescription: "Unsloth op de achtergrond starten wanneer je inlogt. Het blijft in de menubalk of het systeemvak tot je het opent.",
         closeToTray: "Sluiten naar systeemvak",
-        closeToTrayDescription:
-          "Unsloth en de server op de achtergrond laten draaien wanneer je het hoofdvenster sluit.",
-        closeToTraySaveError:
-          "Kan de instelling voor sluiten naar systeemvak niet bijwerken.",
+        closeToTrayDescription: "Unsloth en de server op de achtergrond laten draaien wanneer je het hoofdvenster sluit.",
+        closeToTraySaveError: "Kan de instelling voor sluiten naar systeemvak niet bijwerken.",
         menuBarIcon: "Tonen in menubalk",
-        menuBarIconDescription:
-          "Het Unsloth-symbool tonen in de menubalk van macOS. Wanneer het verborgen is, blijft Unsloth in plaats daarvan in het Dock staan, ook wanneer het bij inloggen start.",
-        menuBarIconSaveError:
-          "Kan de instelling voor het menubalksymbool niet bijwerken.",
+        menuBarIconDescription: "Het Unsloth-symbool tonen in de menubalk van macOS. Wanneer het verborgen is, blijft Unsloth in plaats daarvan in het Dock staan, ook wanneer het bij inloggen start.",
+        menuBarIconSaveError: "Kan de instelling voor het menubalksymbool niet bijwerken.",
         loadError: "Kan de instelling voor starten bij inloggen niet laden.",
-        saveError:
-          "Kan de instelling voor starten bij inloggen niet bijwerken.",
+        saveError: "Kan de instelling voor starten bij inloggen niet bijwerken.",
       },
       power: {
         sectionTitle: "Energie",
         keepAwake: "Computer wakker houden",
-        keepAwakeDescription:
-          "Voorkomt dat deze computer vanzelf in slaapstand gaat zolang Unsloth draait. Het scherm kan wel uitgaan.",
+        keepAwakeDescription: "Voorkomt dat deze computer vanzelf in slaapstand gaat zolang Unsloth draait. Het scherm kan wel uitgaan.",
         keepAwakeKeywords: "slaapstand sluimer stand-by energie sleep caffeinate",
         loadError: "De instelling computer wakker houden kon niet worden geladen.",
         saveError: "De instelling computer wakker houden kon niet worden bijgewerkt.",
       },
       hub: {
         source: "Modelbron",
-        sourceDescription:
-          "Waar de modelhub zoekt en downloadt. Kies ModelScope als Hugging Face op je netwerk geblokkeerd of traag is.",
-        sourceFallback:
-          "Kan ModelScope niet starten, dus Hugging Face wordt gebruikt. Controleer de Unsloth-logboeken.",
+        sourceDescription: "Waar de modelhub zoekt en downloadt. Kies ModelScope als Hugging Face op je netwerk geblokkeerd of traag is.",
+        sourceFallback: "Kan ModelScope niet starten, dus Hugging Face wordt gebruikt. Controleer de Unsloth-logboeken.",
         autoSourceTitle: "Modelbron gewijzigd naar ModelScope",
-        autoSourceDescription:
-          "Hugging Face is in jouw regio vaak traag of geblokkeerd, dus Unsloth downloadt modellen nu van ModelScope.",
+        autoSourceDescription: "Hugging Face is in jouw regio vaak traag of geblokkeerd, dus Unsloth downloadt modellen nu van ModelScope.",
         autoSourceAction: "Instellingen voor modelbron openen",
         sectionTitle: "Modelhub",
         endpoint: "Hugging Face-eindpunt",
-        endpointDescription:
-          "Waar modellen en datasets vandaan worden gedownload. Laat leeg voor huggingface.co, of voer een mirror in, zoals https://hf-mirror.com.",
+        endpointDescription: "Waar modellen en datasets vandaan worden gedownload. Laat leeg voor huggingface.co, of voer een mirror in, zoals https://hf-mirror.com.",
         datasetsServer: "Gebruiken voor datasetvoorbeelden",
-        datasetsServerDescription:
-          "Ook verzoeken voor datasetvoorbeelden (HF_DATASETS_SERVER) naar dit eindpunt sturen. Schakel dit alleen in als de mirror ze aanbiedt.",
-        invalidEndpoint:
-          "Voer een http(s)-URL in zonder inloggegevens of query. Gewone http werkt alleen voor een lokaal adres.",
+        datasetsServerDescription: "Ook verzoeken voor datasetvoorbeelden (HF_DATASETS_SERVER) naar dit eindpunt sturen. Schakel dit alleen in als de mirror ze aanbiedt.",
+        invalidEndpoint: "Voer een http(s)-URL in zonder inloggegevens of query. Gewone http werkt alleen voor een lokaal adres.",
         saveFailed: "Kan de hubinstellingen niet opslaan.",
         loadFailed: "Kan de hubinstellingen niet laden.",
       },
       downloads: {
         sectionTitle: "Downloads",
         transport: "Downloadtransport",
-        transportDescription:
-          "Hoe model- en datasetbestanden van Hugging Face worden binnengehaald. HTTPS hervat waar het gebleven was; Xet is bij een eerste download vaak sneller, maar begint het bestand opnieuw als je annuleert.",
-        transportHint:
-          "HTTPS is gewone TLS: elk netwerk, elke proxy en elke VPN staat het toe, een geannuleerde of onderbroken overdracht wordt hervat vanaf de bytes die al op schijf staan, en het geheugengebruik blijft gelijk. Xet haalt gededupliceerde blokken op, zodat een repo die data deelt met een repo die je al hebt veel sneller binnen kan zijn, maar het vereist hf_xet, gebruikt meer RAM, en bij annuleren wordt het bestand dat onderweg is weggegooid. Automatisch kijkt naar deze machine: het weegt het RAM af en of Xet hier is blijven hangen, en valt terug op HTTPS.",
+        transportDescription: "Hoe model- en datasetbestanden van Hugging Face worden binnengehaald. HTTPS hervat waar het gebleven was; Xet is bij een eerste download vaak sneller, maar begint het bestand opnieuw als je annuleert.",
+        transportHint: "HTTPS is gewone TLS: elk netwerk, elke proxy en elke VPN staat het toe, een geannuleerde of onderbroken overdracht wordt hervat vanaf de bytes die al op schijf staan, en het geheugengebruik blijft gelijk. Xet haalt gededupliceerde blokken op, zodat een repo die data deelt met een repo die je al hebt veel sneller binnen kan zijn, maar het vereist hf_xet, gebruikt meer RAM, en bij annuleren wordt het bestand dat onderweg is weggegooid. Automatisch kijkt naar deze machine: het weegt het RAM af en of Xet hier is blijven hangen, en valt terug op HTTPS.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Automatisch",
-        httpsHint:
-          "Standaard-TLS. Hervat na annuleren, werkt op elk netwerk, stabiel geheugengebruik.",
-        transportDescriptionNoResume:
-          "Hoe model- en datasetbestanden van Hugging Face worden binnengehaald. Geen van beide transporten kan op deze installatie hervatten, dus een geannuleerde download begint opnieuw; Xet is bij een eerste download vaak sneller.",
-        httpsHintNoResume:
-          "Standaard-TLS. Werkt op elk netwerk, stabiel geheugengebruik. Deze installatie kan een geannuleerde download niet hervatten.",
-        xetHint:
-          "Overdracht van gededupliceerde blokken. Vaak sneller bij een nieuwe download, begint het bestand opnieuw als je annuleert, vereist meer geheugen.",
-        autoHint:
-          "Kiest per machine en schakelt over op HTTPS als Xet hier blijft hangen of mislukt.",
+        httpsHint: "Standaard-TLS. Hervat na annuleren, werkt op elk netwerk, stabiel geheugengebruik.",
+        transportDescriptionNoResume: "Hoe model- en datasetbestanden van Hugging Face worden binnengehaald. Geen van beide transporten kan op deze installatie hervatten, dus een geannuleerde download begint opnieuw; Xet is bij een eerste download vaak sneller.",
+        httpsHintNoResume: "Standaard-TLS. Werkt op elk netwerk, stabiel geheugengebruik. Deze installatie kan een geannuleerde download niet hervatten.",
+        xetHint: "Overdracht van gededupliceerde blokken. Vaak sneller bij een nieuwe download, begint het bestand opnieuw als je annuleert, vereist meer geheugen.",
+        autoHint: "Kiest per machine en schakelt over op HTTPS als Xet hier blijft hangen of mislukt.",
         autoCurrently: "Automatisch gebruikt {transport} op deze machine.",
-        xetMissing:
-          "Xet is niet beschikbaar omdat hf_xet niet is geïnstalleerd.",
+        xetMissing: "Xet is niet beschikbaar omdat hf_xet niet is geïnstalleerd.",
         speedLimit: "Downloadsnelheidslimiet",
-        speedLimitDescription:
-          "Geen limiet zolang er geen waarde is ingesteld. Een beperkte download gebruikt HTTPS.",
+        speedLimitDescription: "Geen limiet zolang er geen waarde is ingesteld. Een beperkte download gebruikt HTTPS.",
         speedLimitNoLimit: "Geen limiet",
         speedLimitInvalid: "Voer een getal in Mbit/s in of laat het veld leeg.",
         speedLimitUsesHttps: "Zolang er een snelheidslimiet is ingesteld, gebruiken downloads HTTPS. Bestanden groter dan 50 GB gebruiken nog steeds Xet, zonder de limiet.",
@@ -2514,21 +2204,15 @@ export const nl = {
       rag: {
         sectionTitle: "Documenten en RAG",
         embeddingModel: "Embeddingmodel",
-        embeddingModelShort:
-          "Zet je documenten om in vectoren, zodat de chat erin kan zoeken.",
-        embeddingModelDescription:
-          "Hugging Face-model of lokaal pad dat wordt gebruikt om je documenten te indexeren en te doorzoeken. Standaard is {defaultModel}.",
+        embeddingModelShort: "Zet je documenten om in vectoren, zodat de chat erin kan zoeken.",
+        embeddingModelDescription: "Hugging Face-model of lokaal pad dat wordt gebruikt om je documenten te indexeren en te doorzoeken. Standaard is {defaultModel}.",
         searchPlaceholder: "Zoek een model op HF",
-        reindexWarning:
-          "Geldt alleen voor nieuw geïndexeerde documenten. Embed bestaande documenten opnieuw nadat je het model hebt gewijzigd.",
+        reindexWarning: "Geldt alleen voor nieuw geïndexeerde documenten. Embed bestaande documenten opnieuw nadat je het model hebt gewijzigd.",
         reembed: {
           label: "Documenten opnieuw embedden",
-          staleOne:
-            "1 document is geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat het over.",
-          staleMany:
-            "{count} documenten zijn geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat ze over.",
-          staleArchived:
-            "Eerdere chatgeschiedenis is geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat die over.",
+          staleOne: "1 document is geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat het over.",
+          staleMany: "{count} documenten zijn geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat ze over.",
+          staleArchived: "Eerdere chatgeschiedenis is geïndexeerd met een ander embeddingmodel, dus semantisch zoeken slaat die over.",
           running: "Opnieuw embedden: {done} van {total}",
           action: "Opnieuw embedden",
           stop: "Stoppen",
@@ -2552,20 +2236,16 @@ export const nl = {
         unloadFailed: "Kan het embeddingmodel niet uitwerpen",
         ejected: "Embeddingmodel uitgeworpen",
         ejectModel: "Model uitwerpen",
-        onDeviceHint:
-          "Gedownload naar deze computer. Het wordt alleen in het geheugen geladen terwijl documenten worden geïndexeerd of doorzocht, dus tot die tijd gebruikt het geen RAM of VRAM.",
-        loadedHint:
-          "Staat nu in het geheugen en gebruikt RAM of VRAM. Beweeg de aanwijzer over de modelkiezer en klik op het rode symbool om het uit te werpen.",
+        onDeviceHint: "Gedownload naar deze computer. Het wordt alleen in het geheugen geladen terwijl documenten worden geïndexeerd of doorzocht, dus tot die tijd gebruikt het geen RAM of VRAM.",
+        loadedHint: "Staat nu in het geheugen en gebruikt RAM of VRAM. Beweeg de aanwijzer over de modelkiezer en klik op het rode symbool om het uit te werpen.",
         notLoaded: "Niet geladen",
-        notLoadedHint:
-          "Staat nu niet in het geheugen. Het wordt vanzelf geladen wanneer er weer documenten worden geïndexeerd of doorzocht; daarna kun je het uitwerpen via de kiezer.",
+        notLoadedHint: "Staat nu niet in het geheugen. Het wordt vanzelf geladen wanneer er weer documenten worden geïndexeerd of doorzocht; daarna kun je het uitwerpen via de kiezer.",
         downloadingStatus: "Downloaden…",
         notDownloaded: "Niet gedownload",
         notDownloadedSized: "Niet gedownload · {size}",
         loaded: "Geladen",
         downloading: "{model} downloaden",
-        downloadingDescription:
-          "De voortgang staat in het downloadpaneel. Het indexeren gebruikt het model zodra het binnen is.",
+        downloadingDescription: "De voortgang staat in het downloadpaneel. Het indexeren gebruikt het model zodra het binnen is.",
         downloadFailed: "Kan de download niet starten",
         downloadConflict: "Hervat deze download vanuit de Hub",
         downloadBusy: "Download is al bezig",
@@ -2578,17 +2258,14 @@ export const nl = {
         localModel: "Lokaal model",
         switched: "Embeddingmodel ingesteld op {model}",
         switchedNeedsDownload: "{model} is nog niet gedownload",
-        switchedNeedsDownloadDescription:
-          "Download het in Instellingen voordat je nieuwe bestanden indexeert.",
-        switchedUncheckedDescription:
-          "Kan niet controleren of het is gedownload. Controleer dit in Instellingen voordat je nieuwe bestanden indexeert.",
+        switchedNeedsDownloadDescription: "Download het in Instellingen voordat je nieuwe bestanden indexeert.",
+        switchedUncheckedDescription: "Kan niet controleren of het is gedownload. Controleer dit in Instellingen voordat je nieuwe bestanden indexeert.",
         openSettings: "Instellingen openen",
         switchFailed: "Kan niet van embeddingmodel wisselen",
         back: "Terug naar bronnen",
         menuSubtitle: "Voor zoeken in bestanden",
         device: "Embeddingapparaat",
-        deviceDescription:
-          "Waar het embeddingmodel draait, voor elk model. De GPU indexeert grote documentverzamelingen sneller, maar houdt wat VRAM in gebruik tot Unsloth opnieuw start.",
+        deviceDescription: "Waar het embeddingmodel draait, voor elk model. De GPU indexeert grote documentverzamelingen sneller, maar houdt wat VRAM in gebruik tot Unsloth opnieuw start.",
         deviceAuto: "Automatisch",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2619,41 +2296,31 @@ export const nl = {
       },
       fullInstall: {
         label: "Installatietype",
-        description:
-          "Alleen chat (GGUF). De volledige installatie voegt training, export, video, safetensors-modellen en extra functies voor het genereren van afbeeldingen toe.",
-        descriptionCpu:
-          "Alleen chat (GGUF). Er is geen ondersteunde GPU gevonden, dus de volledige installatie voegt training op de CPU toe.",
+        description: "Alleen chat (GGUF). De volledige installatie voegt training, export, video, safetensors-modellen en extra functies voor het genereren van afbeeldingen toe.",
+        descriptionCpu: "Alleen chat (GGUF). Er is geen ondersteunde GPU gevonden, dus de volledige installatie voegt training op de CPU toe.",
         action: "Upgraden naar volledige installatie",
         confirmTitle: "Upgraden naar de volledige installatie?",
-        confirmDescription:
-          "Deze installatie voor Alleen chat draait GGUF-modellen. De volledige installatie voegt PyTorch toe voor de GPU van deze machine, waarmee training, export, video, safetensors-modellen en extra functies voor het genereren van afbeeldingen beschikbaar worden. Er worden enkele gigabytes gedownload (minimaal 5 GB schijfruimte) en de server wordt opnieuw gestart. Chats, modellen en instellingen blijven behouden. Dit kan enkele minuten duren.",
-        confirmDescriptionCpu:
-          "Deze installatie voor Alleen chat draait GGUF-modellen. Er is op deze machine geen ondersteunde GPU gevonden, dus de volledige installatie voegt PyTorch voor de CPU toe, waarmee training op de CPU beschikbaar wordt. Training op de CPU is veel trager dan op een GPU. Er is minimaal 5 GB schijfruimte nodig en de server wordt opnieuw gestart. Chats, modellen en instellingen blijven behouden. Dit kan enkele minuten duren.",
+        confirmDescription: "Deze installatie voor Alleen chat draait GGUF-modellen. De volledige installatie voegt PyTorch toe voor de GPU van deze machine, waarmee training, export, video, safetensors-modellen en extra functies voor het genereren van afbeeldingen beschikbaar worden. Er worden enkele gigabytes gedownload (minimaal 5 GB schijfruimte) en de server wordt opnieuw gestart. Chats, modellen en instellingen blijven behouden. Dit kan enkele minuten duren.",
+        confirmDescriptionCpu: "Deze installatie voor Alleen chat draait GGUF-modellen. Er is op deze machine geen ondersteunde GPU gevonden, dus de volledige installatie voegt PyTorch voor de CPU toe, waarmee training op de CPU beschikbaar wordt. Training op de CPU is veel trager dan op een GPU. Er is minimaal 5 GB schijfruimte nodig en de server wordt opnieuw gestart. Chats, modellen en instellingen blijven behouden. Dit kan enkele minuten duren.",
         confirmAction: "Upgraden",
-        keywords:
-          "volledige installatie upgraden installeren installatietype alleen chat gguf training trainen finetunen fine-tune pytorch torch export exporteren video afbeeldingen genereren safetensors",
+        keywords: "volledige installatie upgraden installeren installatietype alleen chat gguf training trainen finetunen fine-tune pytorch torch export exporteren video afbeeldingen genereren safetensors",
       },
       repairInstall: {
         label: "Installatie herstellen",
-        description:
-          "Voert het installatieprogramma opnieuw uit over de beheerde omgeving. Gebruik dit als de GPU niet wordt gedetecteerd of de app niet start.",
+        description: "Voert het installatieprogramma opnieuw uit over de beheerde omgeving. Gebruik dit als de GPU niet wordt gedetecteerd of de app niet start.",
         action: "Installatie herstellen",
         confirmTitle: "Deze installatie herstellen?",
-        confirmDescription:
-          "Stopt de server en voert het installatieprogramma opnieuw uit, dat PyTorch voor de GPU van deze machine opnieuw installeert in de nieuwste ondersteunde versie. Chats en instellingen blijven behouden. Dit kan enkele minuten duren.",
-        confirmDescriptionChatOnly:
-          "Stopt de server en voert het installatieprogramma opnieuw uit. Dit is een installatie voor Alleen chat, dus het installatieprogramma upgradet deze ook naar de volledige installatie met PyTorch, in totaal enkele gigabytes. Chats en instellingen blijven behouden. Dit kan enkele minuten duren.",
+        confirmDescription: "Stopt de server en voert het installatieprogramma opnieuw uit, dat PyTorch voor de GPU van deze machine opnieuw installeert in de nieuwste ondersteunde versie. Chats en instellingen blijven behouden. Dit kan enkele minuten duren.",
+        confirmDescriptionChatOnly: "Stopt de server en voert het installatieprogramma opnieuw uit. Dit is een installatie voor Alleen chat, dus het installatieprogramma upgradet deze ook naar de volledige installatie met PyTorch, in totaal enkele gigabytes. Chats en instellingen blijven behouden. Dit kan enkele minuten duren.",
         confirmAction: "Nu herstellen",
       },
       resetPreferences: {
         sectionTitle: "Gevarenzone",
         label: "Alle lokale voorkeuren resetten",
-        description:
-          "Wist voorkeuren die alleen lokaal zijn opgeslagen. Chats, API-toegang en instellingen in de database blijven behouden.",
+        description: "Wist voorkeuren die alleen lokaal zijn opgeslagen. Chats, API-toegang en instellingen in de database blijven behouden.",
         action: "Voorkeuren resetten",
         confirmTitle: "Alle lokale voorkeuren resetten?",
-        confirmDescription:
-          "Wist voorkeuren die alleen lokaal zijn opgeslagen en laadt Unsloth opnieuw. Chats, API-toegang en instellingen in de database blijven behouden.",
+        confirmDescription: "Wist voorkeuren die alleen lokaal zijn opgeslagen en laadt Unsloth opnieuw. Chats, API-toegang en instellingen in de database blijven behouden.",
         confirmAction: "Resetten en opnieuw laden",
       },
     },
@@ -2685,25 +2352,20 @@ export const nl = {
       noneLabel: "Geen",
       nameSaved: "Profielnaam opgeslagen",
       namePersistErrorTitle: "Kan de profielnaam niet blijvend opslaan",
-      namePersistErrorDescription:
-        "Naam bijgewerkt voor deze sessie, maar blijft mogelijk niet bewaard na opnieuw laden.",
+      namePersistErrorDescription: "Naam bijgewerkt voor deze sessie, maar blijft mogelijk niet bewaard na opnieuw laden.",
       photoUpdated: "Profielfoto bijgewerkt",
       photoPersistErrorTitle: "Kan de profielfoto niet blijvend opslaan",
-      photoPersistErrorDescription:
-        "Foto bijgewerkt voor deze sessie, maar blijft mogelijk niet bewaard na opnieuw laden.",
+      photoPersistErrorDescription: "Foto bijgewerkt voor deze sessie, maar blijft mogelijk niet bewaard na opnieuw laden.",
       photoUpdateErrorTitle: "Kan de profielfoto niet bijwerken",
       imageUseError: "Kan deze afbeelding niet gebruiken.",
       stats: {
         title: "Je statistieken",
-        subtitle:
-          "Alles hieronder is geteld op basis van je eigen geschiedenis. Er wordt niets verzameld of naar Unsloth gestuurd.",
+        subtitle: "Alles hieronder is geteld op basis van je eigen geschiedenis. Er wordt niets verzameld of naar Unsloth gestuurd.",
         retry: "Opnieuw proberen",
         exportCsv: "CSV exporteren",
         exportError: "Kan je tokengebruik niet exporteren",
-        privacyNote:
-          "Statistieken worden berekend uit de lokale chat-, API-gebruiks- en traininggeschiedenis van je Unsloth-installatie. API-prompts, -antwoorden en -sleutels worden nooit opgeslagen voor statistieken. Er wordt niets naar Unsloth of een derde partij gestuurd.",
-        emptyChats:
-          "Nog geen chat- of API-gebruik. Begin een gesprek of doe een geverifieerd lokaal API-verzoek, en je statistieken verschijnen hier.",
+        privacyNote: "Statistieken worden berekend uit de lokale chat-, API-gebruiks- en traininggeschiedenis van je Unsloth-installatie. API-prompts, -antwoorden en -sleutels worden nooit opgeslagen voor statistieken. Er wordt niets naar Unsloth of een derde partij gestuurd.",
+        emptyChats: "Nog geen chat- of API-gebruik. Begin een gesprek of doe een geverifieerd lokaal API-verzoek, en je statistieken verschijnen hier.",
         lifetimeTokens: "Tokens in totaal",
         peakTokens: "Piekdag",
         longestChat: "Langste chat",
@@ -2768,22 +2430,16 @@ export const nl = {
       gpuRendering: {
         sectionTitle: "Rendering",
         label: "GPU-rendering",
-        description:
-          "Unsloth tekenen met je videokaart. Automatisch gebruikt deze waar bekend is dat het werkt. Wijzigingen worden toegepast nadat Unsloth opnieuw is gestart.",
+        description: "Unsloth tekenen met je videokaart. Automatisch gebruikt deze waar bekend is dat het werkt. Wijzigingen worden toegepast nadat Unsloth opnieuw is gestart.",
         auto: "Automatisch",
         on: "Aan",
         off: "Uit",
-        oldWebkitWarning:
-          "WebKitGTK {version} op Wayland: GPU-rendering kan bij het starten crashen op NVIDIA met fractionele schaling (WebKit-bug 280210). Als dat gebeurt, schakelt Unsloth vanzelf terug naar CPU-rendering. Op WebKitGTK 2.50.4 leverde het geen meetbare versnelling op (in beide gevallen 8 fps), dus Aan wordt hier niet aanbevolen.",
-        oldDriverWarning:
-          "NVIDIA-stuurprogramma {version} op X11: Unsloth houdt GPU-rendering uit tot het stuurprogramma versie 610 of nieuwer is. Oudere stuurprogramma's lekken per frame een bestandsdescriptor, en het venster stopt binnen enkele minuten met tekenen.",
-        fallbackNote:
-          "GPU-rendering is bij het starten gecrasht op dit systeem, dus Unsloth gebruikt CPU-rendering.",
+        oldWebkitWarning: "WebKitGTK {version} op Wayland: GPU-rendering kan bij het starten crashen op NVIDIA met fractionele schaling (WebKit-bug 280210). Als dat gebeurt, schakelt Unsloth vanzelf terug naar CPU-rendering. Op WebKitGTK 2.50.4 leverde het geen meetbare versnelling op (in beide gevallen 8 fps), dus Aan wordt hier niet aanbevolen.",
+        oldDriverWarning: "NVIDIA-stuurprogramma {version} op X11: Unsloth houdt GPU-rendering uit tot het stuurprogramma versie 610 of nieuwer is. Oudere stuurprogramma's lekken per frame een bestandsdescriptor, en het venster stopt binnen enkele minuten met tekenen.",
+        fallbackNote: "GPU-rendering is bij het starten gecrasht op dit systeem, dus Unsloth gebruikt CPU-rendering.",
         tryAgain: "GPU opnieuw proberen",
-        envOverride:
-          "Ingesteld door de omgevingsvariabele {name}. Deze instelling heeft geen effect totdat die is verwijderd.",
-        macNote:
-          "macOS rendert altijd met de GPU. WebKit heeft geen ondersteunde optie om dit uit te schakelen.",
+        envOverride: "Ingesteld door de omgevingsvariabele {name}. Deze instelling heeft geen effect totdat die is verwijderd.",
+        macNote: "macOS rendert altijd met de GPU. WebKit heeft geen ondersteunde optie om dit uit te schakelen.",
         restartPending: "Start Unsloth opnieuw om toe te passen.",
         restartNow: "Nu opnieuw starten",
         loadError: "Kan de instelling voor GPU-rendering niet laden.",
@@ -2800,8 +2456,7 @@ export const nl = {
       },
       palette: {
         label: "Thema",
-        description:
-          "Kleuren die in heel Unsloth worden gebruikt, in de lichte en donkere modus.",
+        description: "Kleuren die in heel Unsloth worden gebruikt, in de lichte en donkere modus.",
         standard: "Standaard",
         moreThemes: "Meer thema's",
       },
@@ -2834,8 +2489,7 @@ export const nl = {
         },
         sentAttachments: {
           label: "Bijlagen in verzonden berichten",
-          description:
-            "Standaard toont elk bestand met het type, Compact past meer op elke regel. Automatisch schakelt over op Compact bij meer dan zes bestanden.",
+          description: "Standaard toont elk bestand met het type, Compact past meer op elke regel. Automatisch schakelt over op Compact bij meer dan zes bestanden.",
           auto: "Automatisch",
           list: "Standaard",
           chips: "Compact",
@@ -2876,16 +2530,13 @@ export const nl = {
         importFont: {
           upload: "Uploaden",
           scanFolder: "Map selecteren",
-          alreadyAvailable:
-            "Dit lettertype is al beschikbaar, dus de bestaande kopie wordt gebruikt.",
+          alreadyAvailable: "Dit lettertype is al beschikbaar, dus de bestaande kopie wordt gebruikt.",
           folderNoFonts: "Geen lettertypebestanden gevonden in die map.",
           remove: "Verwijderen",
-          errorInvalidType:
-            "Niet-ondersteund bestandstype. Gebruik .woff2, .woff, .ttf of .otf.",
+          errorInvalidType: "Niet-ondersteund bestandstype. Gebruik .woff2, .woff, .ttf of .otf.",
           errorTooLarge: "Lettertypebestand is te groot (max. 1,5 MB).",
           errorLimit: "Je kunt maximaal 3 lettertypen importeren.",
-          errorStorageFull:
-            "Niet genoeg lokale opslag voor dit lettertype. Verwijder eerst een geïmporteerd lettertype.",
+          errorStorageFull: "Niet genoeg lokale opslag voor dit lettertype. Verwijder eerst een geïmporteerd lettertype.",
           errorFailed: "Kan dit lettertypebestand niet laden.",
         },
         interfaceScale: {
@@ -2920,8 +2571,7 @@ export const nl = {
         },
         pointerCursors: {
           label: "Handcursor gebruiken",
-          description:
-            "De cursor in een handje veranderen wanneer je over interactieve elementen beweegt.",
+          description: "De cursor in een handje veranderen wanneer je over interactieve elementen beweegt.",
         },
       },
       language: {
@@ -2932,19 +2582,16 @@ export const nl = {
         search: "Talen zoeken",
         noResults: "Geen overeenkomende talen",
         spellCheck: "Spellingcontrole",
-        spellCheckDescription:
-          "Verkeerd gespelde woorden onderstrepen terwijl je typt.",
+        spellCheckDescription: "Verkeerd gespelde woorden onderstrepen terwijl je typt.",
       },
       layout: {
         title: "Indeling",
         compactSidebar: "Zijbalk standaard vastzetten",
-        compactSidebarDescription:
-          "De zijbalk uitgevouwen houden in plaats van in te klappen tot symbolen.",
+        compactSidebarDescription: "De zijbalk uitgevouwen houden in plaats van in te klappen tot symbolen.",
       },
       sidebarNav: {
         title: "Navigatie in zijbalk",
-        description:
-          "De tabbladen in de zijbalk vastzetten en herschikken. Losgemaakte tabbladen gaan naar het menu Meer.",
+        description: "De tabbladen in de zijbalk vastzetten en herschikken. Losgemaakte tabbladen gaan naar het menu Meer.",
         dragToReorder: "Sleep om te herschikken",
         pinToSidebar: "{name} vastzetten in de zijbalk",
         moreHolds: "Meer ({count})",
@@ -2962,13 +2609,11 @@ export const nl = {
       liveUpdates: "Live-updates",
       floatingWindow: "Zwevend venster",
       showFloatingWindow: "Zwevend venster tonen",
-      showFloatingWindowDescription:
-        "CPU-, RAM- en GPU-gebruik zichtbaar houden boven Unsloth.",
+      showFloatingWindowDescription: "CPU-, RAM- en GPU-gebruik zichtbaar houden boven Unsloth.",
       liveMonitor: {
         title: "Live monitor",
         apiTitle: "API-monitor",
-        apiDescription:
-          "Zie direct wat andere apps naar de API van deze server sturen.",
+        apiDescription: "Zie direct wat andere apps naar de API van deze server sturen.",
         summary: "Live verzoeken, fouten en tokengebruik",
         status: "{active} actief · {recent} recent · {model}",
         noModelLoaded: "Geen model geladen",
@@ -2988,8 +2633,7 @@ export const nl = {
         modelBreakdown: "Uitsplitsen per model",
         modelBreakdownDescription: "Verdeel het deel van Unsloth in de geheugenbalk over elk geladen model en de rest van de app.",
         autoOpen: "Zwevende monitor opent automatisch",
-        autoOpenDescription:
-          "Opent een klein paneel wanneer er API-verkeer binnenkomt.",
+        autoOpenDescription: "Opent een klein paneel wanneer er API-verkeer binnenkomt.",
         cpu: "CPU",
         ram: "RAM",
         disk: "Schijf",
@@ -3005,8 +2649,7 @@ export const nl = {
         gpuUnusable: "GPU onbruikbaar",
         gpuUnusableDetail: "Gedetecteerd, maar PyTorch kan hem niet gebruiken",
         detailedView: "Gedetailleerde weergave",
-        detailedViewDescription:
-          "Per GPU de belasting, temperatuur en het vermogen tonen in het zwevende venster.",
+        detailedViewDescription: "Per GPU de belasting, temperatuur en het vermogen tonen in het zwevende venster.",
         gpuLoad: "GPU-belasting",
         temperature: "Temperatuur",
         power: "Vermogen",
@@ -3022,16 +2665,11 @@ export const nl = {
         unavailable: "niet beschikbaar",
         detecting: "Zoeken naar GPU's...",
         unreadable: "Kan de hardware van deze server niet uitlezen.",
-        noGpu:
-          "Geen aparte GPU gedetecteerd.",
-        noUsableGpu:
-          "Geen enkele GPU op deze machine is bruikbaar voor PyTorch.",
-        mismatchCpuBuild:
-          "PyTorch is een build voor alleen CPU ({version}), dus de onderstaande GPU's kunnen niet worden gebruikt. Herstel de installatie om GPU-ondersteuning terug te krijgen.",
-        mismatchUnavailable:
-          "PyTorch ({version}) kan de onderstaande GPU's niet initialiseren, dus ze kunnen niet worden gebruikt. Controleer het GPU-stuurprogramma of herstel de installatie.",
-        driverIdleEvict:
-          "AMD-stuurprogramma {version} heeft een bekende bug waardoor Windows kan vastlopen wanneer een AMD-GPU inactief is, meestal bij meer dan één GPU. Werk bij naar Adrenalin 26.9.2 of nieuwer.",
+        noGpu: "Geen aparte GPU gedetecteerd.",
+        noUsableGpu: "Geen enkele GPU op deze machine is bruikbaar voor PyTorch.",
+        mismatchCpuBuild: "PyTorch is een build voor alleen CPU ({version}), dus de onderstaande GPU's kunnen niet worden gebruikt. Herstel de installatie om GPU-ondersteuning terug te krijgen.",
+        mismatchUnavailable: "PyTorch ({version}) kan de onderstaande GPU's niet initialiseren, dus ze kunnen niet worden gebruikt. Controleer het GPU-stuurprogramma of herstel de installatie.",
+        driverIdleEvict: "AMD-stuurprogramma {version} heeft een bekende bug waardoor Windows kan vastlopen wanneer een AMD-GPU inactief is, meestal bij meer dan één GPU. Werk bij naar Adrenalin 26.9.2 of nieuwer.",
         driverIdleEvictDetails: "Details",
         dismissNotice: "Sluiten",
         unusableDevice: "onbruikbaar",
@@ -3049,37 +2687,28 @@ export const nl = {
       llamaBackend: {
         title: "GGUF-inferentie-engine",
         label: "Rekenbackend",
-        description:
-          "De backend die llama.cpp gebruikt om GGUF-modellen uit te voeren.",
+        description: "De backend die llama.cpp gebruikt om GGUF-modellen uit te voeren.",
         runningOn: "llama.cpp draait momenteel op {backend}.",
         hint: "Installeert de llama.cpp-build voor deze backend en behoudt die bij updates. Handig als de automatische keuze crasht of je GPU-stuurprogramma die niet ondersteunt. Alleen backends met een build voor deze machine worden getoond; training wordt niet beïnvloed.",
         autoWith: "Automatisch ({backend})",
         apply: "Toepassen",
         applying: "Installeren...",
-        applyHint:
-          "Downloadt de nieuwe build en start llama.cpp opnieuw. Een geladen model wordt ontladen.",
-        applyHintWithSize:
-          "Downloadt {size} en start llama.cpp opnieuw. Een geladen model wordt ontladen.",
+        applyHint: "Downloadt de nieuwe build en start llama.cpp opnieuw. Een geladen model wordt ontladen.",
+        applyHintWithSize: "Downloadt {size} en start llama.cpp opnieuw. Een geladen model wordt ontladen.",
         switchedTo: "llama.cpp draait nu op {backend}.",
         switchFailed: "Kan de llama.cpp-backend niet wijzigen.",
-        switchInterrupted:
-          "Het wisselen is onderbroken voordat het was voltooid.",
-        envLocked:
-          "Ingesteld op {backend} door de omgevingsvariabele UNSLOTH_LLAMA_CPP_BACKEND, die deze instelling overschrijft.",
+        switchInterrupted: "Het wisselen is onderbroken voordat het was voltooid.",
+        envLocked: "Ingesteld op {backend} door de omgevingsvariabele UNSLOTH_LLAMA_CPP_BACKEND, die deze instelling overschrijft.",
         customPath: {
           label: "Aangepaste llama.cpp-map",
           description: "Je eigen llama-server-build gebruiken.",
           hint: "Kies de llama.cpp-map met llama-server, of een build waarin die onder build/bin staat. De aangepaste runtime wordt gebruikt voor GGUF-chat, embeddings en ondersteunde spraakmodellen. Omgevingsvariabelen hebben nog steeds voorrang.",
           automatic: "Automatisch (meegeleverd)",
-          bundled:
-            "Gebruikt de llama.cpp-runtime die door Unsloth is geïnstalleerd.",
-          active:
-            "Je aangepaste llama-server wordt gebruikt bij het volgende laden van een model.",
+          bundled: "Gebruikt de llama.cpp-runtime die door Unsloth is geïnstalleerd.",
+          active: "Je aangepaste llama-server wordt gebruikt bij het volgende laden van een model.",
           environmentManaged: "Beheerd door de omgevingsvariabele {variable}.",
-          missingBinary:
-            "llama-server is niet meer beschikbaar in deze map. Kies een andere map of gebruik de meegeleverde runtime.",
-          reloadRequired:
-            "Laad het model opnieuw om de geselecteerde llama-server te gebruiken.",
+          missingBinary: "llama-server is niet meer beschikbaar in deze map. Kies een andere map of gebruik de meegeleverde runtime.",
+          reloadRequired: "Laad het model opnieuw om de geselecteerde llama-server te gebruiken.",
           change: "Wijzigen",
           saving: "Opslaan...",
           useBundled: "Meegeleverde gebruiken",
@@ -3097,76 +2726,51 @@ export const nl = {
           metal: "Metal",
         },
         unsupported: {
-          notInstalled:
-            "Er is geen beheerde llama.cpp-installatie gevonden, dus er is geen backend om te wisselen.",
-          localLink:
-            "llama.cpp is een lokale map die je zelf hebt gekoppeld, dus Unsloth vervangt die niet.",
-          sourceBuild:
-            "Deze llama.cpp is gebouwd vanuit de broncode, dus de backend kan hier niet worden gewijzigd.",
-          customPath:
-            "Er is een aangepaste llama.cpp-map geselecteerd. De build daarvan bepaalt de rekenbackend.",
-          unresolved:
-            "Kan de beschikbare backends niet controleren. Controleer je verbinding en probeer het opnieuw.",
-          updateChecksDisabled:
-            "Controles op updates zijn uitgeschakeld (UNSLOTH_DISABLE_UPDATE_CHECK=1), dus de beschikbare backends worden niet opgezocht.",
+          notInstalled: "Er is geen beheerde llama.cpp-installatie gevonden, dus er is geen backend om te wisselen.",
+          localLink: "llama.cpp is een lokale map die je zelf hebt gekoppeld, dus Unsloth vervangt die niet.",
+          sourceBuild: "Deze llama.cpp is gebouwd vanuit de broncode, dus de backend kan hier niet worden gewijzigd.",
+          customPath: "Er is een aangepaste llama.cpp-map geselecteerd. De build daarvan bepaalt de rekenbackend.",
+          unresolved: "Kan de beschikbare backends niet controleren. Controleer je verbinding en probeer het opnieuw.",
+          updateChecksDisabled: "Controles op updates zijn uitgeschakeld (UNSLOTH_DISABLE_UPDATE_CHECK=1), dus de beschikbare backends worden niet opgezocht.",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf inferentie inference cuda rocm hip vulkan metal cpu gpu versneller accelerator prebuilt wisselen engine aangepast pad map directory llama-server uitvoerbaar bestand binary",
+        llamaBackendKeywords: "llama.cpp backend gguf inferentie inference cuda rocm hip vulkan metal cpu gpu versneller accelerator prebuilt wisselen engine aangepast pad map directory llama-server uitvoerbaar bestand binary",
       },
       modelMemory: {
         title: "Model laden",
         keepResident: "Model in GPU-geheugen houden",
         keepResidentDescription: "Tussen prompts in VRAM blijven.",
-        keepResidentHint:
-          "De gewichten niet teruggeven aan het systeem-RAM zolang het model geladen blijft. Schakelt automatisch ontladen bij inactiviteit uit, en wanneer de gewichten wel in het host-RAM staan (unified memory of een gedeeltelijke GPU-offload), wordt ook --mlock doorgegeven, zodat het besturingssysteem ze niet kan wegschrijven en bij je volgende prompt opnieuw hoeft te uploaden.",
+        keepResidentHint: "De gewichten niet teruggeven aan het systeem-RAM zolang het model geladen blijft. Schakelt automatisch ontladen bij inactiviteit uit, en wanneer de gewichten wel in het host-RAM staan (unified memory of een gedeeltelijke GPU-offload), wordt ook --mlock doorgegeven, zodat het besturingssysteem ze niet kan wegschrijven en bij je volgende prompt opnieuw hoeft te uploaden.",
         noRamReserve: "Geen systeem-RAM reserveren voor het model",
-        noRamReserveDescription:
-          "Minder host-RAM vasthouden voor modelgewichten.",
-        noRamReserveHint:
-          "Slaat geheugengemapt laden over op ondersteunde Windows-builds wanneer het model volledig naar de GPU is overgeheveld, zodat de pagina's niet resident worden gehouden. Anders blijft geheugengemapt laden behouden. Vereiste CPU-buffers kunnen nog steeds RAM gebruiken. Laat --no-mmap en --mlock weg.",
+        noRamReserveDescription: "Minder host-RAM vasthouden voor modelgewichten.",
+        noRamReserveHint: "Slaat geheugengemapt laden over op ondersteunde Windows-builds wanneer het model volledig naar de GPU is overgeheveld, zodat de pagina's niet resident worden gehouden. Anders blijft geheugengemapt laden behouden. Vereiste CPU-buffers kunnen nog steeds RAM gebruiken. Laat --no-mmap en --mlock weg.",
         multiModel: "Meerdere modellen geladen houden",
         openSystemSettings: "Openen in Systeem",
         multiModelOff: "Uit",
         multiModelFit: "Als ze passen",
         multiModelAlways: "Altijd",
-        multiModelDescription:
-          "Het laden van een chat-, spraak-, afbeeldings- of videomodel ontlaadt de andere.",
-        multiModelDescriptionFit:
-          "Bij het laden van een model blijven de andere geladen als ze passen. Als ze niet passen, worden eerst de modellen ontladen die niet in gebruik zijn, en daarna het actieve model.",
-        multiModelDescriptionAlways:
-          "Het laden van een model ontlaadt nooit een ander model. Een model dat niet past, wordt niet geladen. Automatisch ontladen bij inactiviteit en training maken nog steeds geheugen vrij.",
-        multiModelHint:
-          "Geldt voor chat-, spraak-, afbeeldings- en videomodellen. Elk geladen chatmodel beantwoordt de verzoeken die het noemen. Met meerdere GPU's probeert Unsloth een nieuw model op een GPU te plaatsen die door geen ander model wordt gebruikt. “Als ze passen” laat ongeveer 1 GB vrij. Een model dat naast andere wordt geladen, krijgt het geheugen dat zij vrijlaten, dus het kan met een kortere context starten. “Als ze passen” en “Altijd” ontladen nooit een model op een andere GPU.",
+        multiModelDescription: "Het laden van een chat-, spraak-, afbeeldings- of videomodel ontlaadt de andere.",
+        multiModelDescriptionFit: "Bij het laden van een model blijven de andere geladen als ze passen. Als ze niet passen, worden eerst de modellen ontladen die niet in gebruik zijn, en daarna het actieve model.",
+        multiModelDescriptionAlways: "Het laden van een model ontlaadt nooit een ander model. Een model dat niet past, wordt niet geladen. Automatisch ontladen bij inactiviteit en training maken nog steeds geheugen vrij.",
+        multiModelHint: "Geldt voor chat-, spraak-, afbeeldings- en videomodellen. Elk geladen chatmodel beantwoordt de verzoeken die het noemen. Met meerdere GPU's probeert Unsloth een nieuw model op een GPU te plaatsen die door geen ander model wordt gebruikt. “Als ze passen” laat ongeveer 1 GB vrij. Een model dat naast andere wordt geladen, krijgt het geheugen dat zij vrijlaten, dus het kan met een kortere context starten. “Als ze passen” en “Altijd” ontladen nooit een model op een andere GPU.",
         allowOversizedLoad: "Te grote modellen toch laden",
-        allowOversizedLoadDescription:
-          "Afbeeldings- en videomodellen laden, ook als de geheugencontrole aangeeft dat ze niet passen.",
-        allowOversizedLoadHint:
-          "Geldt waar de CPU en GPU één geheugenpool delen (Apple Silicon, geïntegreerde GPU's). Unsloth weigert te laden wanneer de geschatte grootte van de modelgewichten groter is dan het geheugen dat overblijft na het reserveren van ruimte voor het besturingssysteem. Als dit aan staat, wordt toch geprobeerd die modellen te laden. De schatting kan in beide richtingen verkeerd zijn: het laden van een te groot model kan mislukken, al het geheugen opgebruiken, de computer zwaar laten swappen of niet meer laten reageren, of Unsloth laten stoppen. Standaard uit.",
-        mediaIdleUnloadDescription:
-          "VRAM vrijmaken door de afbeeldings- en videomodellen na dit aantal seconden inactiviteit te ontladen. 0 houdt ze geladen, minimaal 60.",
-        mlockVetoed:
-          "--mlock blijft uit: het model vastzetten zou RAM reserveren voor het hele model. Automatisch ontladen bij inactiviteit blijft uitgeschakeld.",
-        mlockNotApplicable:
-          "Volledig op de GPU: niets in het systeem-RAM om te vergrendelen. Automatisch ontladen bij inactiviteit blijft uit.",
-        memlockCapped:
-          "Dit systeem beperkt vergrendeld geheugen tot {limit}. Een groter model wordt niet volledig vastgezet; verhoog de limiet met ulimit -l.",
-        reloadRequired:
-          "Laad het model opnieuw om de nieuwe geheugenflags toe te passen.",
+        allowOversizedLoadDescription: "Afbeeldings- en videomodellen laden, ook als de geheugencontrole aangeeft dat ze niet passen.",
+        allowOversizedLoadHint: "Geldt waar de CPU en GPU één geheugenpool delen (Apple Silicon, geïntegreerde GPU's). Unsloth weigert te laden wanneer de geschatte grootte van de modelgewichten groter is dan het geheugen dat overblijft na het reserveren van ruimte voor het besturingssysteem. Als dit aan staat, wordt toch geprobeerd die modellen te laden. De schatting kan in beide richtingen verkeerd zijn: het laden van een te groot model kan mislukken, al het geheugen opgebruiken, de computer zwaar laten swappen of niet meer laten reageren, of Unsloth laten stoppen. Standaard uit.",
+        mediaIdleUnloadDescription: "VRAM vrijmaken door de afbeeldings- en videomodellen na dit aantal seconden inactiviteit te ontladen. 0 houdt ze geladen, minimaal 60.",
+        mlockVetoed: "--mlock blijft uit: het model vastzetten zou RAM reserveren voor het hele model. Automatisch ontladen bij inactiviteit blijft uitgeschakeld.",
+        mlockNotApplicable: "Volledig op de GPU: niets in het systeem-RAM om te vergrendelen. Automatisch ontladen bij inactiviteit blijft uit.",
+        memlockCapped: "Dit systeem beperkt vergrendeld geheugen tot {limit}. Een groter model wordt niet volledig vastgezet; verhoog de limiet met ulimit -l.",
+        reloadRequired: "Laad het model opnieuw om de nieuwe geheugenflags toe te passen.",
         loadError: "Kan de instellingen voor modelgeheugen niet laden",
         saveError: "Kan de instellingen voor modelgeheugen niet opslaan",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu geheugen memory ram resident vastzetten pin vergrendelen lock geladen houden ontladen unload inactief idle mmap no-mmap laadmodus swap paging",
-        multiModelKeywords:
-          "meerdere modellen tegelijk naast elkaar wisselen swap passen ontladen unload vram gpu afbeelding video chat spraak tts stem voorlezen altijd inactief",
-        mediaIdleUnloadKeywords:
-          "afbeelding video diffusion inactief idle ontladen unload ttl time-out seconden vrijmaken vram gpu geheugen",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu geheugen memory ram resident vastzetten pin vergrendelen lock geladen houden ontladen unload inactief idle mmap no-mmap laadmodus swap paging",
+        multiModelKeywords: "meerdere modellen tegelijk naast elkaar wisselen swap passen ontladen unload vram gpu afbeelding video chat spraak tts stem voorlezen altijd inactief",
+        mediaIdleUnloadKeywords: "afbeelding video diffusion inactief idle ontladen unload ttl time-out seconden vrijmaken vram gpu geheugen",
       },
       storage: {
         title: "Opslag",
         systemDisk: "Systeemschijf",
         systemUsed: "{used} van {total} gebruikt op de systeemschijf",
-        modelsDiskSummary:
-          "Schijf van modellenmap: {used} van {total} gebruikt, {free} vrij",
+        modelsDiskSummary: "Schijf van modellenmap: {used} van {total} gebruikt, {free} vrij",
         segmentModels: "Modellen",
         segmentCaches: "Caches",
         segmentOther: "Overig",
@@ -3177,10 +2781,8 @@ export const nl = {
         diskFree: "{free} vrij",
         modelsFolder: "Modellenmap",
         modelsFolderDescription: "Waar gedownloade modellen worden opgeslagen.",
-        modelsFolderHint:
-          "Waar gedownloade modellen worden opgeslagen. Wijzig dit om modellen buiten je systeemschijf te houden. Geldt alleen voor nieuwe downloads. Modellen die je al hebt, blijven waar ze zijn.",
-        modelsFolderKeywords:
-          "modellenmap map directory pad locatie downloaden downloads cache opslag schijf station verplaatsen hugging face",
+        modelsFolderHint: "Waar gedownloade modellen worden opgeslagen. Wijzig dit om modellen buiten je systeemschijf te houden. Geldt alleen voor nieuwe downloads. Modellen die je al hebt, blijven waar ze zijn.",
+        modelsFolderKeywords: "modellenmap map directory pad locatie downloaden downloads cache opslag schijf station verplaatsen hugging face",
         futureDownloads: "Alleen nieuwe downloads",
         environmentManaged: "Beheerd door de omgevingsvariabele {variable}.",
         locationFree: "{free} vrij",
@@ -3198,11 +2800,9 @@ export const nl = {
         copyError: "Kan het pad niet kopiëren",
         caches: {
           label: "Cachebestanden",
-          description:
-            "{size} in caches, waarvan {reclaimable} nu kan worden gewist.",
+          description: "{size} in caches, waarvan {reclaimable} nu kan worden gewist.",
           hint: "Pakketdownloads, gecompileerde kernels en overdrachtscaches die Unsloth opnieuw opbouwt wanneer het ze nodig heeft. Gedownloade modellen, projecten, chats, instellingen en je Hugging Face-token worden hier nooit gewist.",
-          keywords:
-            "cache caches opschonen purge prune wissen clear clean ruimte vrijmaken schijf uv pip npm bun triton inductor cuda numba matplotlib vllm gecompileerd compiled xet tijdelijk",
+          keywords: "cache caches opschonen purge prune wissen clear clean ruimte vrijmaken schijf uv pip npm bun triton inductor cuda numba matplotlib vllm gecompileerd compiled xet tijdelijk",
           measuring: "Cachegrootten meten...",
           measureFailed: "Kan de caches niet meten",
           empty: "Geen cachebestanden gevonden.",
@@ -3211,24 +2811,18 @@ export const nl = {
           hideDetailsAction: "Details verbergen",
           showFolders: "Mappen tonen",
           hideFolders: "Mappen verbergen",
-          previousLocations:
-            "Inclusief eerdere locaties. De hoofdknop Wissen geldt voor de huidige cachemap. Knoppen bij modellen wissen alleen de geselecteerde kopie.",
-          clearModelDescription:
-            "Hiermee wordt alleen deze gecachte kopie verwijderd. Die wordt opnieuw gedownload wanneer dat nodig is.",
+          previousLocations: "Inclusief eerdere locaties. De hoofdknop Wissen geldt voor de huidige cachemap. Knoppen bij modellen wissen alleen de geselecteerde kopie.",
+          clearModelDescription: "Hiermee wordt alleen deze gecachte kopie verwijderd. Die wordt opnieuw gedownload wanneer dat nodig is.",
           clearAction: "Caches wissen",
           clearOneAction: "Wissen",
           clearingAction: "Wissen...",
           confirmTitle: "Gecachte bestanden wissen?",
           confirmDescription: "Hiermee komt ongeveer {size} vrij.",
           confirmOneTitle: "{name} wissen?",
-          safety:
-            "Unsloth bouwt een cache opnieuw op wanneer het die weer nodig heeft. Gedownloade modellen, projecten, chats, instellingen en je Hugging Face-token blijven onaangetast.",
-          hubCost:
-            "Dit is de modelcache. Als je deze wist, worden die modellen opnieuw gedownload wanneer je ze weer gebruikt.",
-          datasetsCost:
-            "Als je dit wist, worden die datasets opnieuw gedownload wanneer je ze weer gebruikt.",
-          npuCost:
-            "Dit zijn je gedownloade NPU-modellen. Wissen verwijdert ze, en je downloadt ze opnieuw via de Hub om ze te gebruiken.",
+          safety: "Unsloth bouwt een cache opnieuw op wanneer het die weer nodig heeft. Gedownloade modellen, projecten, chats, instellingen en je Hugging Face-token blijven onaangetast.",
+          hubCost: "Dit is de modelcache. Als je deze wist, worden die modellen opnieuw gedownload wanneer je ze weer gebruikt.",
+          datasetsCost: "Als je dit wist, worden die datasets opnieuw gedownload wanneer je ze weer gebruikt.",
+          npuCost: "Dit zijn je gedownloade NPU-modellen. Wissen verwijdert ze, en je downloadt ze opnieuw via de Hub om ze te gebruiken.",
           blocked: "Niet gewist: {reason}",
           cleared: "{size} gewist",
           partial: "Sommige cachebestanden konden niet worden verwijderd",
@@ -3256,8 +2850,7 @@ export const nl = {
         lowDisk: {
           title: "Schijfruimte raakt op",
           criticalTitle: "Schijfruimte is kritiek laag",
-          description:
-            "{free} vrij van {total}. Caches wissen kan ruimte vrijmaken.",
+          description: "{free} vrij van {total}. Caches wissen kan ruimte vrijmaken.",
           action: "Caches bekijken",
         },
       },
@@ -3278,14 +2871,10 @@ export const nl = {
     },
     agents: {
       title: "Agents",
-      description:
-        "Verbind coding agents zoals Claude Code en Codex met een lokaal model via unsloth start.",
-      agentKeywords:
-        "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
-      vscodeNote:
-        "VS Code is de uitzondering: deze opdracht voegt het aangeboden model toe aan de modellenlijst van Copilot Chat in VS Code (chatLanguageModels.json).",
-      intro:
-        "verbindt Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode en andere agents met een model dat lokaal door Unsloth wordt aangeboden, volledig offline. Het draait een OpenAI-compatibele server en raakt de configuratiebestanden van je agent nooit aan.",
+      description: "Verbind coding agents zoals Claude Code en Codex met een lokaal model via unsloth start.",
+      agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
+      vscodeNote: "VS Code is de uitzondering: deze opdracht voegt het aangeboden model toe aan de modellenlijst van Copilot Chat in VS Code (chatLanguageModels.json).",
+      intro: "verbindt Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode en andere agents met een model dat lokaal door Unsloth wordt aangeboden, volledig offline. Het draait een OpenAI-compatibele server en raakt de configuratiebestanden van je agent nooit aan.",
       readDocs: "Documentatie lezen",
       copy: "Kopiëren",
       copied: "Gekopieerd",
@@ -3295,46 +2884,37 @@ export const nl = {
       model: "Model",
       searchModels: "GGUF-modellen zoeken...",
       noModels: "Geen overeenkomende GGUF-modellen.",
-      showingModels:
-        "{shown} van {total} resultaten worden getoond. Typ verder om de lijst te verfijnen.",
+      showingModels: "{shown} van {total} resultaten worden getoond. Typ verder om de lijst te verfijnen.",
       quantization: "Kwantisatie",
       loadingQuantizations: "Kwantisaties laden...",
       noQuantizations: "Geen aparte kwantisatie",
       recommended: "Aanbevolen",
       downloaded: "Gedownload",
-      quantizationLoadError:
-        "Kan niet alle kwantisaties laden. De opdracht gebruikt de beschikbare modelwaarde.",
+      quantizationLoadError: "Kan niet alle kwantisaties laden. De opdracht gebruikt de beschikbare modelwaarde.",
       generatedCommand: "Gegenereerde opdracht",
       docs: "Documentatie",
       docsLabel: "Documentatie van unsloth start openen",
       agentDocs: "Installatiedocumentatie voor {agent} openen",
       copyGeneratedCommand: "Gegenereerde opdracht kopiëren",
-      automaticSettingsNote:
-        "Unsloth past automatisch de aanbevolen instellingen van het model toe als je geen flags hebt ingesteld.",
-      configurationNote:
-        "Je kunt ook elke configuratie aanpassen. Zie verderop of de",
+      automaticSettingsNote: "Unsloth past automatisch de aanbevolen instellingen van het model toe als je geen flags hebt ingesteld.",
+      configurationNote: "Je kunt ook elke configuratie aanpassen. Zie verderop of de",
       configurationDocs: "documentatie",
       configurationFlagsSuffix: "voor flags.",
-      modelNote:
-        "Claude Code en Codex vereisen een GGUF-model dat door llama-server wordt aangeboden, of een MLX-model. Andere agents kunnen ook modellen op basis van Transformers gebruiken; verwijder --model om het model te gebruiken dat al in Unsloth is geladen.",
+      modelNote: "Claude Code en Codex vereisen een GGUF-model dat door llama-server wordt aangeboden, of een MLX-model. Andere agents kunnen ook modellen op basis van Transformers gebruiken; verwijder --model om het model te gebruiken dat al in Unsloth is geladen.",
       subagent: {
         title: "Een lokaal model als subagent gebruiken",
-        description:
-          "Laat {agent} op het huidige model draaien en delegeer geselecteerde taken aan dit lokale Unsloth-model.",
+        description: "Laat {agent} op het huidige model draaien en delegeer geselecteerde taken aan dit lokale Unsloth-model.",
         setupCommand: "Installatieopdracht",
         copySetupCommand: "Installatieopdracht voor subagent kopiëren",
         usagePrompt: "Typ daarna in {agent}:",
         copyUsagePrompt: "Gebruiksprompt voor subagent kopiëren",
-        defaultPrompt:
-          "Start een lokale agent om deze functie te implementeren.",
+        defaultPrompt: "Start een lokale agent om deze functie te implementeren.",
         opencodePrompt: "@unsloth zoek de oorzaak van deze mislukte test",
       },
       quickstart: {
         title: "Een opdracht samenstellen",
-        description:
-          "Start een agent met het model dat momenteel in Unsloth is geladen. Laad eerst een model en vervang claude daarna door een van de ondersteunde agents hieronder.",
-        noneDetected:
-          "Er zijn geen ondersteunde agent-CLI's gevonden in je PATH.",
+        description: "Start een agent met het model dat momenteel in Unsloth is geladen. Laad eerst een model en vervang claude daarna door een van de ondersteunde agents hieronder.",
+        noneDetected: "Er zijn geen ondersteunde agent-CLI's gevonden in je PATH.",
         installed: "Geïnstalleerd",
       },
       supportedAgents: {
@@ -3344,57 +2924,48 @@ export const nl = {
       },
       models: {
         title: "Een model kiezen",
-        description:
-          "Geef --model mee om een model en kwantisatie te kiezen, en --context-length om het venster in te stellen. Gebruik een kwantisatieachtervoegsel of een expliciete flag --gguf-variant.",
+        description: "Geef --model mee om een model en kwantisatie te kiezen, en --context-length om het venster in te stellen. Gebruik een kwantisatieachtervoegsel of een expliciete flag --gguf-variant.",
         suffixLabel: "Met een kwantisatieachtervoegsel",
         variantLabel: "Met een expliciete variant-flag",
       },
       options: {
         title: "Veelgebruikte opties",
-        description:
-          "Unsloth-flags worden eerst verwerkt; alles wat niet wordt herkend, wordt rechtstreeks doorgegeven aan de agent.",
-        model:
-          "Selecteer een model. Zonder --model gebruikt unsloth start het model dat momenteel in Unsloth is geladen, en geeft een fout als er geen model is geladen.",
-        contextLength:
-          "Stel de gevraagde contextlengte in (alias: --max-seq-length).",
+        description: "Unsloth-flags worden eerst verwerkt; alles wat niet wordt herkend, wordt rechtstreeks doorgegeven aan de agent.",
+        model: "Selecteer een model. Zonder --model gebruikt unsloth start het model dat momenteel in Unsloth is geladen, en geeft een fout als er geen model is geladen.",
+        contextLength: "Stel de gevraagde contextlengte in (alias: --max-seq-length).",
         ggufVariant: "Kies de GGUF-kwantisatievariant.",
-        loadIn4bit:
-          "Laden in 4-bit in- of uitschakelen voor Hugging Face-modellen.",
-        tensorParallel:
-          "Tensor-parallel over meerdere GPU's in- of uitschakelen.",
+        loadIn4bit: "Laden in 4-bit in- of uitschakelen voor Hugging Face-modellen.",
+        tensorParallel: "Tensor-parallel over meerdere GPU's in- of uitschakelen.",
         serve: "De automatische lokale server in- of uitschakelen.",
-        launch:
-          "De agent starten, of alleen de opdracht en omgeving weergeven.",
+        launch: "De agent starten, of alleen de opdracht en omgeving weergeven.",
         persist: "Door Unsloth beheerde agentopslag bewaren tussen runs.",
-        asSubagent:
-          "Houd de bovenliggende agent op zijn huidige model en registreer Unsloth als lokale subagent (Claude Code, Codex, OpenCode en Pi).",
+        asSubagent: "Houd de bovenliggende agent op zijn huidige model en registreer Unsloth als lokale subagent (Claude Code, Codex, OpenCode en Pi).",
         apiKey: "Geef je Unsloth-API-sleutel op (of stel UNSLOTH_API_KEY in).",
-        reasoning:
-          "Redeneren gebruiken in de chat: aan, uit of automatisch. Automatisch volgt het chatsjabloon van het model, wat meestal aan betekent.",
-        reasoningEffort:
-          "Redeneerinspanning die aan het chatsjabloon van het model wordt doorgegeven, bijvoorbeeld medium. Niveaus verschillen per model, dus gebruik er een die dat model accepteert. Niet ingesteld behoudt de eigen waarde van het sjabloon.",
+        reasoning: "Redeneren gebruiken in de chat: aan, uit of automatisch. Automatisch volgt het chatsjabloon van het model, wat meestal aan betekent.",
+        reasoningEffort: "Redeneerinspanning die aan het chatsjabloon van het model wordt doorgegeven, bijvoorbeeld medium. Niveaus verschillen per model, dus gebruik er een die dat model accepteert. Niet ingesteld behoudt de eigen waarde van het sjabloon.",
         yolo: "Goedkeuringsprompts overslaan. Alleen gebruiken in vertrouwde omgevingen.",
       },
       remote: {
         title: "Verbinden met een externe Unsloth",
-        description:
-          "Laat unsloth start verwijzen naar een Unsloth-instantie die elders draait door deze variabelen in te stellen vóór het starten (of geef --api-key direct op):",
+        description: "Laat unsloth start verwijzen naar een Unsloth-instantie die elders draait door deze variabelen in te stellen vóór het starten (of geef --api-key direct op):",
       },
       passthrough: {
         title: "Agentargumenten doorgeven",
-        description:
-          "Argumenten na de Unsloth-flags worden doorgestuurd naar de agent zelf, zodat eigen opdrachten zoals resume blijven werken:",
+        description: "Argumenten na de Unsloth-flags worden doorgestuurd naar de agent zelf, zodat eigen opdrachten zoals resume blijven werken:",
       },
       dryRun: {
         title: "Voorbeeld zonder starten",
-        description:
-          "Voeg --no-launch toe om de omgeving en opdracht weer te geven in plaats van de agent te starten. Als --model is ingesteld, kan het model nog steeds worden opgezocht en geladen.",
+        description: "Voeg --no-launch toe om de omgeving en opdracht weer te geven in plaats van de agent te starten. Als --model is ingesteld, kan het model nog steeds worden opgezocht en geladen.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Antwoorden" },
-        thinkingTools: { title: "Denken en tools" },
+        replies: {
+          title: "Antwoorden",
+        },
+        thinkingTools: {
+          title: "Denken en tools",
+        },
         conversations: {
           title: "Gesprekken",
         },
@@ -3420,32 +2991,23 @@ export const nl = {
         description: "Chats, projecten en secties zoeken, sorteren en ordenen.",
         action: "Bibliotheek openen",
       },
-      projectAttachmentsHint:
-        "Overschrijf deze instelling via het bijlagemenu van elke chat.",
-      rememberParamsPerModelHint:
-        "Als dit uit staat, worden voor elk model dezelfde instellingen gebruikt.",
-      autoCompactHint:
-        "Lokale GGUF- en MLX-chats: verwijderde beurten worden geïndexeerd zodat het model ze terug kan zoeken, en bij een reset worden de vaste instructies die passen woordelijk teruggeplaatst, waarbij de oudste en nieuwste voorrang krijgen boven het midden. Archiveren vereist een opgeslagen chat en de vectorindex; zonder die worden oudere beurten weggelaten. Gebruikt de contextlengte die je hebt ingesteld, niet het beschikbare VRAM. API-modellen: de provider vat oudere beurten samen waar mogelijk, anders worden de oudste beurten weggelaten wanneer de chat het gepubliceerde contextvenster van het model nadert.",
-      pastedTextShortDescription:
-        "Geplakte tekst van {count} tekens of meer wordt een .txt-bijlage.",
-      pastedTextOffDescription:
-        "Geplakte tekst blijft altijd in het berichtvak.",
+      projectAttachmentsHint: "Overschrijf deze instelling via het bijlagemenu van elke chat.",
+      rememberParamsPerModelHint: "Als dit uit staat, worden voor elk model dezelfde instellingen gebruikt.",
+      autoCompactHint: "Lokale GGUF- en MLX-chats: verwijderde beurten worden geïndexeerd zodat het model ze terug kan zoeken, en bij een reset worden de vaste instructies die passen woordelijk teruggeplaatst, waarbij de oudste en nieuwste voorrang krijgen boven het midden. Archiveren vereist een opgeslagen chat en de vectorindex; zonder die worden oudere beurten weggelaten. Gebruikt de contextlengte die je hebt ingesteld, niet het beschikbare VRAM. API-modellen: de provider vat oudere beurten samen waar mogelijk, anders worden de oudste beurten weggelaten wanneer de chat het gepubliceerde contextvenster van het model nadert.",
+      pastedTextShortDescription: "Geplakte tekst van {count} tekens of meer wordt een .txt-bijlage.",
+      pastedTextOffDescription: "Geplakte tekst blijft altijd in het berichtvak.",
       title: "Chat",
       description: "Pas aan hoe chat zich op dit apparaat gedraagt.",
       modelSelection: {
         title: "Modelselectie",
         expandQuantizations: "Kwantisaties uitvouwen",
-        expandQuantizationsDescription:
-          "GGUF-kwantisaties tonen in Op apparaat zonder elk model te openen.",
+        expandQuantizationsDescription: "GGUF-kwantisaties tonen in Op apparaat zonder elk model te openen.",
         showAllQuantizations: "Alle kwantisaties",
-        showAllQuantizationsDescription:
-          "Kwantisaties die niet zijn gedownload, opnemen in Op apparaat.",
+        showAllQuantizationsDescription: "Kwantisaties die niet zijn gedownload, opnemen in Op apparaat.",
         showMemoryBar: "VRAM-gebruiksbalk",
-        showMemoryBarDescription:
-          "Geschat VRAM tonen voor modelgewichten, context en speculatieve decodering.",
+        showMemoryBarDescription: "Geschat VRAM tonen voor modelgewichten, context en speculatieve decodering.",
         fitOnDeviceOnly: "Alleen modellen tonen die passen",
-        fitOnDeviceOnlyDescription:
-          "Modellen die te groot zijn voor het GPU-geheugen en RAM van dit apparaat verbergen in de modelkiezer en de Hub. Gedownloade modellen blijven zichtbaar.",
+        fitOnDeviceOnlyDescription: "Modellen die te groot zijn voor het GPU-geheugen en RAM van dit apparaat verbergen in de modelkiezer en de Hub. Gedownloade modellen blijven zichtbaar.",
         pickerExpandLoaded: "Volledige modellijst tonen",
         pickerExpandLoadedDescription: "Open de modelkiezer op de volledige lijst terwijl een model is geladen, in plaats van alleen het geladen model. Het uit- of samenvouwen van de kiezer wijzigt deze instelling ook.",
         pickerMonochromeIcons: "Monochrome modelpictogrammen",
@@ -3453,8 +3015,7 @@ export const nl = {
       },
       menu: {
         title: "Chatmenu",
-        description:
-          "Zet items vast in het +-menu van de chat en sleep ze om de volgorde te wijzigen. Andere items gaan naar “Meer”.",
+        description: "Zet items vast in het +-menu van de chat en sleep ze om de volgorde te wijzigen. Andere items gaan naar “Meer”.",
         deepResearch: "Diepgaand onderzoek",
         browserUse: "Browsergebruik",
         computerUse: "Computergebruik",
@@ -3471,75 +3032,52 @@ export const nl = {
         more: "Meer",
       },
       pastedTextThreshold: "Lange geplakte tekst inkorten",
-      pastedTextThresholdDescription:
-        "Druk op {shortcut} om direct in het berichtvak te plakken.",
+      pastedTextThresholdDescription: "Druk op {shortcut} om direct in het berichtvak te plakken.",
       pastedTextThresholdOff: "Uit",
       autoScroll: "Scrollen tijdens genereren",
-      autoScrollDescription:
-        "Automatisch scrollen houdt nieuwe tekst in beeld. Handmatig blijft staan zodat je vanaf het begin kunt lezen.",
+      autoScrollDescription: "Automatisch scrollen houdt nieuwe tekst in beeld. Handmatig blijft staan zodat je vanaf het begin kunt lezen.",
       autoScrollAuto: "Automatisch scrollen",
       autoScrollManual: "Handmatig",
-      autoScrollKeywords:
-        "scrollen automatisch scrollen volgen onderaan springen streamen genereren weergave vergrendelen vasthouden handmatig scroll autoscroll auto-scroll follow bottom manual",
+      autoScrollKeywords: "scrollen automatisch scrollen volgen onderaan springen streamen genereren weergave vergrendelen vasthouden handmatig scroll autoscroll auto-scroll follow bottom manual",
       replyNotification: "Melden wanneer een antwoord klaar is",
-      replyNotificationDescription:
-        "Een systeemmelding tonen wanneer een antwoord klaar is terwijl Unsloth geminimaliseerd is of op de achtergrond draait.",
-      replyNotificationBlocked:
-        "Meldingen zijn geblokkeerd. Sta ze toe voor Unsloth in je browser- of systeeminstellingen en probeer het opnieuw.",
-      replyNotificationKeywords:
-        "melden melding waarschuwing klaar voltooid gereed antwoord reactie achtergrond geminimaliseerd bureaublad geluid notify notification alert done reply",
+      replyNotificationDescription: "Een systeemmelding tonen wanneer een antwoord klaar is terwijl Unsloth geminimaliseerd is of op de achtergrond draait.",
+      replyNotificationBlocked: "Meldingen zijn geblokkeerd. Sta ze toe voor Unsloth in je browser- of systeeminstellingen en probeer het opnieuw.",
+      replyNotificationKeywords: "melden melding waarschuwing klaar voltooid gereed antwoord reactie achtergrond geminimaliseerd bureaublad geluid notify notification alert done reply",
       showLinkPreviews: "Linkvoorbeelden",
       showLinkPreviewsDescription: "Toon voorbeelden wanneer je de muisaanwijzer boven bronlinks houdt.",
       showResponseModel: "Antwoordmodel",
-      showResponseModelDescription:
-        "Modelgegevens tonen in antwoorden van de assistent.",
+      showResponseModelDescription: "Modelgegevens tonen in antwoorden van de assistent.",
       showReplyTimes: "Antwoordtijden",
-      showReplyTimesDescription:
-        "Onder elk antwoord tonen wanneer het klaar was.",
-      showReplyTimesKeywords:
-        "tijdstempel tijd klok datum uur wanneer voltooid aangekomen antwoord reactie bericht timestamp time",
+      showReplyTimesDescription: "Onder elk antwoord tonen wanneer het klaar was.",
+      showReplyTimesKeywords: "tijdstempel tijd klok datum uur wanneer voltooid aangekomen antwoord reactie bericht timestamp time",
       showGenerationDetails: "Gedetailleerde snelheidsinfo",
-      showGenerationDetailsDescription:
-        "Voegt promptleessnelheid, tokenaantallen en conceptacceptatie toe aan de live weergaven.",
-      showGenerationDetailsKeywords:
-        "uitgebreid ontwikkelaar statistieken snelheid tok/s prefill decode verbose developer stats speed",
+      showGenerationDetailsDescription: "Voegt promptleessnelheid, tokenaantallen en conceptacceptatie toe aan de live weergaven.",
+      showGenerationDetailsKeywords: "uitgebreid ontwikkelaar statistieken snelheid tok/s prefill decode verbose developer stats speed",
       generationStatsUpdates: "Snelheids- en contextstatistieken",
-      generationStatsUpdatesDescription:
-        "Realtime telt tokens per seconde en contextgebruik terwijl een antwoord wordt gestreamd. Na afloop werkt ze bij zodra elk antwoord klaar is.",
-      generationStatsUpdatesHint:
-        "Realtime ververst de weergave van tokens per seconde onder een antwoord en de contextbalk boven in de chat een paar keer per seconde terwijl het antwoord wordt geschreven. Na afloop werkt ze één keer bij, als elk antwoord klaar is. Realtime kan vertraging of tragere prestaties veroorzaken, vooral op oudere of drukke computers.",
+      generationStatsUpdatesDescription: "Realtime telt tokens per seconde en contextgebruik terwijl een antwoord wordt gestreamd. Na afloop werkt ze bij zodra elk antwoord klaar is.",
+      generationStatsUpdatesHint: "Realtime ververst de weergave van tokens per seconde onder een antwoord en de contextbalk boven in de chat een paar keer per seconde terwijl het antwoord wordt geschreven. Na afloop werkt ze één keer bij, als elk antwoord klaar is. Realtime kan vertraging of tragere prestaties veroorzaken, vooral op oudere of drukke computers.",
       generationStatsUpdatesSettled: "Na afloop",
       generationStatsUpdatesRealtime: "Realtime",
-      generationStatsUpdatesKeywords:
-        "realtime live bijwerken snelheid context statistieken realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "realtime live bijwerken snelheid context statistieken realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Antwoord bewerken bij antwoorden",
-      inlineEditResponseDescription:
-        "Antwoord bewerken bij elk antwoord tonen, in plaats van in het menu Meer.",
+      inlineEditResponseDescription: "Antwoord bewerken bij elk antwoord tonen, in plaats van in het menu Meer.",
       turnNavigation: "Beurtnavigatie",
       turnNavigationDescription: "Toont je berichten als een balk aan de linkerrand van lange chats. Wijs een beurt aan voor een voorbeeld, klik om erheen te gaan en zet bladwijzers om beurten terug te vinden.",
       composerPosition: "Positie van het invoerveld",
       composerPositionDescription: "Waar het invoerveld staat bij het starten van een nieuwe chat, van de bovenkant van de pagina tot onderaan.",
       projectAttachments: "Bestanden delen binnen een project",
-      projectAttachmentsDescription:
-        "Nieuwe chatbijlagen beschikbaar maken voor elke chat in het project.",
+      projectAttachmentsDescription: "Nieuwe chatbijlagen beschikbaar maken voor elke chat in het project.",
       rememberParamsPerModel: "Instellingen per model onthouden",
-      rememberParamsPerModelDescription:
-        "De laatst gebruikte prompt, temperatuur en andere instellingen van elk model herstellen.",
+      rememberParamsPerModelDescription: "De laatst gebruikte prompt, temperatuur en andere instellingen van elk model herstellen.",
       autoCompact: "Lange chats automatisch comprimeren",
-      autoCompactDescription:
-        "Oudere beurten worden naar een doorzoekbaar archief verplaatst wanneer een chat zijn context vult.",
-      autoCompactKeywords:
-        "comprimeren compressie automatisch comprimeren contextvenster afkappen doorlopend checkpoint ruimte archief ophalen terughalen rag zoeken compaction compact auto-compact context window truncate archive retrieval recall search",
+      autoCompactDescription: "Oudere beurten worden naar een doorzoekbaar archief verplaatst wanneer een chat zijn context vult.",
+      autoCompactKeywords: "comprimeren compressie automatisch comprimeren contextvenster afkappen doorlopend checkpoint ruimte archief ophalen terughalen rag zoeken compaction compact auto-compact context window truncate archive retrieval recall search",
       keepRunningWhenTabClosed: "Doorgaan nadat het tabblad is gesloten",
-      keepRunningWhenTabClosedDescription:
-        "Antwoorden, zoeken op het web en Diepgaand onderzoek gaan door op de server nadat het tabblad is gesloten. Schakel dit uit om ze in plaats daarvan te stoppen.",
-      keepRunningWhenTabClosedHint:
-        "Open de chat opnieuw op een willekeurig apparaat om verder te gaan met een run die doorliep. Als dit uit staat, stopt een run binnen ongeveer een minuut nadat het laatste tabblad is gesloten, zodat herladen hem niet stopt. Geldt voor runs die zijn gestart nadat je dit hebt gewijzigd. Tijdelijke chats, antwoorden van API-modellen of op bijlagen, en beurten die het browserpaneel gebruiken, stoppen altijd met hun tabblad.",
-      keepRunningWhenTabClosedKeywords:
-        "achtergrond tabblad sluiten gesloten verlaten blijven draaien doorgaan stoppen annuleren diepgaand onderzoek zoeken op het web hervatten opnieuw verbinden apparaat telefoon background tab close keep running deep research web search resume",
+      keepRunningWhenTabClosedDescription: "Antwoorden, zoeken op het web en Diepgaand onderzoek gaan door op de server nadat het tabblad is gesloten. Schakel dit uit om ze in plaats daarvan te stoppen.",
+      keepRunningWhenTabClosedHint: "Open de chat opnieuw op een willekeurig apparaat om verder te gaan met een run die doorliep. Als dit uit staat, stopt een run binnen ongeveer een minuut nadat het laatste tabblad is gesloten, zodat herladen hem niet stopt. Geldt voor runs die zijn gestart nadat je dit hebt gewijzigd. Tijdelijke chats, antwoorden van API-modellen of op bijlagen, en beurten die het browserpaneel gebruiken, stoppen altijd met hun tabblad.",
+      keepRunningWhenTabClosedKeywords: "achtergrond tabblad sluiten gesloten verlaten blijven draaien doorgaan stoppen annuleren diepgaand onderzoek zoeken op het web hervatten opnieuw verbinden apparaat telefoon background tab close keep running deep research web search resume",
       firstTokenLabel: "Wachtlimiet voor eerste token",
-      firstTokenDescription:
-        "Hoe lang lokale GGUF-modellen zonder voortgang in promptverwerking mogen wachten vóór het eerste token. Geldt voor nieuwe wachttijden voor alle accounts. Onbeperkt blijft wachten totdat je stopt.",
+      firstTokenDescription: "Hoe lang lokale GGUF-modellen zonder voortgang in promptverwerking mogen wachten vóór het eerste token. Geldt voor nieuwe wachttijden voor alle accounts. Onbeperkt blijft wachten totdat je stopt.",
       firstTokenDefault: "20 min (standaard)",
       firstTokenCustom: "Aangepast",
       firstTokenUnlimited: "Onbeperkt",
@@ -3547,71 +3085,55 @@ export const nl = {
       firstTokenRange: "Minuten (1–10.080)",
       firstTokenSave: "Opslaan",
       firstTokenSaving: "Opslaan…",
-      firstTokenLoadError:
-        "Kan de wachtlimiet voor het eerste token niet laden.",
-      firstTokenSaveError:
-        "Kan de wachtlimiet voor het eerste token niet opslaan.",
-      firstTokenKeywords:
-        "time-out eerste token prefill traag CPU nacht onbeperkt wachten limiet timeout first token slow overnight unlimited waiting limit",
+      firstTokenLoadError: "Kan de wachtlimiet voor het eerste token niet laden.",
+      firstTokenSaveError: "Kan de wachtlimiet voor het eerste token niet opslaan.",
+      firstTokenKeywords: "time-out eerste token prefill traag CPU nacht onbeperkt wachten limiet timeout first token slow overnight unlimited waiting limit",
       toolResultLimit: "Lengte van tooluitvoer",
-      toolResultLimitDescription:
-        "Aantal tekens van één Python-, Terminal- of MCP-toolresultaat dat het model leest. Standaard is {count}.",
-      toolResultLimitHint:
-        "Langere Python- en Terminal-uitvoer wordt opgeslagen in een bestand dat het model in delen kan lezen. Een hogere limiet geldt voor modellen die in Unsloth draaien, en kleine contextvensters krijgen nog steeds minder. API-modellen houden de standaardwaarde, tenzij je die verlaagt.",
+      toolResultLimitDescription: "Aantal tekens van één Python-, Terminal- of MCP-toolresultaat dat het model leest. Standaard is {count}.",
+      toolResultLimitHint: "Langere Python- en Terminal-uitvoer wordt opgeslagen in een bestand dat het model in delen kan lezen. Een hogere limiet geldt voor modellen die in Unsloth draaien, en kleine contextvensters krijgen nog steeds minder. API-modellen houden de standaardwaarde, tenzij je die verlaagt.",
       toolResultLimitDefault: "{count} (standaard)",
       toolResultLimitLocked: "Ingesteld door UNSLOTH_TOOL_RESULT_MAX_CHARS",
       toolResultLimitLoadError: "Kan de lengte van tooluitvoer niet laden.",
       toolResultLimitSaveError: "Kan de lengte van tooluitvoer niet opslaan.",
-      toolResultLimitKeywords:
-        "tool uitvoer resultaat afkappen afgekapt limiet maximum tekens lengte terminal python mcp output result truncate cap characters chars length",
+      toolResultLimitKeywords: "tool uitvoer resultaat afkappen afgekapt limiet maximum tekens lengte terminal python mcp output result truncate cap characters chars length",
       visibility: {
         collapsed: "Samengevouwen",
         auto: "Uitvouwen tijdens uitvoering",
         expanded: "Altijd uitgevouwen",
       },
-      visibilityKeywords:
-        "samenvouwen samengevouwen uitvouwen uitgevouwen open gesloten redeneren denken toolaanroepen toolactiviteit groeperen streamen collapse expand reasoning thinking tool calls fold group",
+      visibilityKeywords: "samenvouwen samengevouwen uitvouwen uitgevouwen open gesloten redeneren denken toolaanroepen toolactiviteit groeperen streamen collapse expand reasoning thinking tool calls fold group",
       thinking: {
         visibility: "Denken",
-        visibilityDescription:
-          "Hoe redeneren wordt geopend. Je kunt elk blok nog steeds zelf uit- of samenvouwen.",
+        visibilityDescription: "Hoe redeneren wordt geopend. Je kunt elk blok nog steeds zelf uit- of samenvouwen.",
       },
       memory: {
         title: "Geheugen",
-        description:
-          "Notities die elke chat leest, voor elk model, lokaal of in de cloud. Chats in een project lezen ook het AGENTS.md van dat project.",
+        description: "Notities die elke chat leest, voor elk model, lokaal of in de cloud. Chats in een project lezen ook het AGENTS.md van dat project.",
         enable: "Geheugen gebruiken in chats",
         enableDescription: "Deze notities met elke chat meesturen.",
-        locked:
-          "Uitgeschakeld voor deze installatie door UNSLOTH_STUDIO_AGENTS_MD.",
+        locked: "Uitgeschakeld voor deze installatie door UNSLOTH_STUDIO_AGENTS_MD.",
         editor: "Geheugennotities",
-        placeholder:
-          "Bijvoorbeeld:\n- Ik schrijf Python en gebruik uv.\n- Houd antwoorden kort.",
+        placeholder: "Bijvoorbeeld:\n- Ik schrijf Python en gebruik uv.\n- Houd antwoorden kort.",
         hint: "Opgeslagen in {path}. Je kunt dat bestand ook in elke teksteditor bewerken.",
         size: "{used} / {max} KB",
         save: "Opslaan",
         saved: "Geheugen opgeslagen",
         loadError: "Kan geheugen niet laden.",
         saveError: "Kan geheugen niet opslaan.",
-        keywords:
-          "geheugen onthouden personalisatie profiel voorkeuren notities feiten aangepaste instructies over mij agents.md claude.md memory remember personalization preferences notes custom instructions",
+        keywords: "geheugen onthouden personalisatie profiel voorkeuren notities feiten aangepaste instructies over mij agents.md claude.md memory remember personalization preferences notes custom instructions",
       },
       currentDate: {
         label: "Het model de datum van vandaag vertellen",
-        description:
-          "De datum van vandaag meesturen zodat zoeken en onderzoek recente bronnen vinden.",
+        description: "De datum van vandaag meesturen zodat zoeken en onderzoek recente bronnen vinden.",
         loadError: "Kan instellingen voor de huidige datum niet laden",
         saveError: "Kan instellingen voor de huidige datum niet bijwerken",
       },
       tools: {
         visibility: "Toolaanroepen",
-        visibilityDescription:
-          "Hoe toolactiviteit wordt geopend. Je kunt elke aanroep nog steeds zelf uit- of samenvouwen.",
+        visibilityDescription: "Hoe toolactiviteit wordt geopend. Je kunt elke aanroep nog steeds zelf uit- of samenvouwen.",
         foldIntoThinking: "Toolaanroepen groeperen onder Denken",
-        foldIntoThinkingDescription:
-          "De toolaanroepen van een beurt in het Denken-blok tonen in plaats van op eigen rijen.",
-        foldIntoThinkingBlocked:
-          "Niet beschikbaar terwijl toolaanroepen op Altijd uitgevouwen staan, waardoor ze op eigen rijen blijven.",
+        foldIntoThinkingDescription: "De toolaanroepen van een beurt in het Denken-blok tonen in plaats van op eigen rijen.",
+        foldIntoThinkingBlocked: "Niet beschikbaar terwijl toolaanroepen op Altijd uitgevouwen staan, waardoor ze op eigen rijen blijven.",
       },
       webSearch: {
         title: "Zoeken op het web",
@@ -3621,23 +3143,19 @@ export const nl = {
       artifacts: {
         title: "HTML-pagina's",
         collapseHtmlBlocks: "HTML-blokken samenvouwen",
-        collapseHtmlBlocksDescription:
-          "Volledige HTML-documenten in de chat tonen als een kaart die in de browser opent, in plaats van als code.",
+        collapseHtmlBlocksDescription: "Volledige HTML-documenten in de chat tonen als een kaart die in de browser opent, in plaats van als code.",
         allowNetworkAccess: "HTML-pagina's netwerktoegang geven",
-        allowNetworkAccessDescription:
-          "HTML-pagina's uit de chat externe scripts, stijlen, lettertypen en media laten laden. Schakel dit uit voor offline voorbeelden.",
+        allowNetworkAccessDescription: "HTML-pagina's uit de chat externe scripts, stijlen, lettertypen en media laten laden. Schakel dit uit voor offline voorbeelden.",
         blockedBanner: "{count} externe bron van {hosts} geblokkeerd.",
         blockedBannerPlural: "{count} externe bronnen van {hosts} geblokkeerd.",
         blockedBannerAction: "Toestaan voor deze pagina",
         blockedTitle: "Netwerktoegang staat uit voor HTML-pagina's",
-        blockedHint:
-          "Schakel “{setting}” in via Instellingen → Browser om HTML-pagina's externe bronnen te laten laden, of sta het alleen voor deze pagina toe.",
+        blockedHint: "Schakel “{setting}” in via Instellingen → Browser om HTML-pagina's externe bronnen te laten laden, of sta het alleen voor deze pagina toe.",
         blockedSettingsAction: "Instellingen openen",
         blockedDismiss: "Sluiten",
         errorTitle: "Er is een fout opgetreden op deze pagina",
         errorTitlePlural: "Er zijn {count} fouten opgetreden op deze pagina",
-        errorHint:
-          "Herstellen met het model plaatst de fout in het berichtvak. Er wordt niets verzonden totdat je het verstuurt.",
+        errorHint: "Herstellen met het model plaatst de fout in het berichtvak. Er wordt niets verzonden totdat je het verstuurt.",
         errorBannerAction: "Herstellen met het model",
         errorConsoleAction: "Console openen",
         errorConsoleHideAction: "Console verbergen",
@@ -3650,8 +3168,7 @@ export const nl = {
         consoleClear: "Console wissen",
         consoleClose: "Console sluiten",
         consoleEmpty: "Nog geen console-uitvoer.",
-        consoleCapped:
-          "Alleen de laatste {count} items worden bewaard; eerdere uitvoer is weggelaten.",
+        consoleCapped: "Alleen de laatste {count} items worden bewaard; eerdere uitvoer is weggelaten.",
       },
       data: "Gegevens",
       exportHistory: "Chatgeschiedenis exporteren",
@@ -3659,48 +3176,39 @@ export const nl = {
       exportAction: "Exporteren",
       exportingAction: "Exporteren...",
       exportConversations: "Recent en Projecten exporteren",
-      exportConversationsDescription:
-        "Download Recent, of Recent plus projectchats, als Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML of PDF, gecombineerd of per chat. Message JSONL is per chat beschikbaar.",
+      exportConversationsDescription: "Download Recent, of Recent plus projectchats, als Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML of PDF, gecombineerd of per chat. Message JSONL is per chat beschikbaar.",
       exportConversationsAction: "Exporteren",
       exportScopeRecents: "Recent",
       exportScopeAll: "Recent + Projecten",
       importChats: "Chats importeren",
-      importChatsDescription:
-        "JSON-, JSONL-, NDJSON-, CSV- of Markdown-bestanden importeren in Recent.",
+      importChatsDescription: "JSON-, JSONL-, NDJSON-, CSV- of Markdown-bestanden importeren in Recent.",
       importChatsAction: "Importeren",
       importNoConversations: "Geen gesprekken gevonden in bestand.",
       importedOneChat: "1 gesprek geïmporteerd in Recent.",
       importedChatCount: "{count} gesprekken geïmporteerd in Recent.",
       importingChats: "Chats importeren: tot nu toe {count} ({percent}%)...",
-      importedChatCountPartial:
-        "{count} gesprekken geïmporteerd in Recent; {failed} konden niet worden opgeslagen.",
+      importedChatCountPartial: "{count} gesprekken geïmporteerd in Recent; {failed} konden niet worden opgeslagen.",
       importFailed: "Importeren mislukt.",
       importFromSource: "Importeren uit {source}",
-      importFromSourceDescription:
-        "Kopieer je {source}-gesprekken naar Unsloth, gegroepeerd per project waartoe ze behoren.",
+      importFromSourceDescription: "Kopieer je {source}-gesprekken naar Unsloth, gegroepeerd per project waartoe ze behoren.",
       importingAction: "Importeren...",
       importedSourceOneChat: "1 gesprek geïmporteerd uit {source}.",
       importedSourceChatCount: "{count} gesprekken geïmporteerd uit {source}.",
       sourceUpdated: "{count} nieuwe berichten toegevoegd uit {source}.",
       sourceUpToDate: "{source}-gesprekken zijn al up-to-date.",
-      importedSourcePartial:
-        "Sommige {source}-gesprekken konden niet worden geïmporteerd.",
+      importedSourcePartial: "Sommige {source}-gesprekken konden niet worden geïmporteerd.",
       clearHistory: "Chatgeschiedenis wissen",
       clearHistoryDescription: "Chatgeschiedenis van dit apparaat verwijderen.",
       clearAction: "Wissen",
       clearAllChats: "Alle chats wissen",
-      clearAllChatsDescription:
-        "Elke chat op dit apparaat definitief verwijderen.",
+      clearAllChatsDescription: "Elke chat op dit apparaat definitief verwijderen.",
       noChatsToClear: "Geen chats om te wissen.",
-      clearOneChatDescription:
-        "De enige chat op dit apparaat definitief verwijderen.",
-      clearChatCountDescription:
-        "Alle {count} chats op dit apparaat definitief verwijderen.",
+      clearOneChatDescription: "De enige chat op dit apparaat definitief verwijderen.",
+      clearChatCountDescription: "Alle {count} chats op dit apparaat definitief verwijderen.",
       clearChatsAction: "Chats wissen",
       clearOneChatTitle: "1 chat wissen?",
       clearChatsTitle: "{count} chats wissen?",
-      clearChatsConfirmDescription:
-        "Verwijdert elke chat op dit apparaat definitief. Dit kan niet ongedaan worden gemaakt.",
+      clearChatsConfirmDescription: "Verwijdert elke chat op dit apparaat definitief. Dit kan niet ongedaan worden gemaakt.",
       clearingAction: "Wissen...",
       clearOneChatAction: "1 chat wissen",
       clearChatCountAction: "{count} chats wissen",
@@ -3708,18 +3216,12 @@ export const nl = {
       clearedOneChat: "1 chat gewist",
       clearedChatCount: "{count} chats gewist",
       someChatsCouldNotBeCleared: "Sommige chats konden niet worden gewist",
-      chatsClearedRemainOne:
-        "{clearedCount} chats gewist; 1 chat resteert. Probeer het opnieuw.",
-      chatsClearedRemain:
-        "{clearedCount} chats gewist; {remainingCount} chats resteren. Probeer het opnieuw.",
-      oneChatClearedRemain:
-        "1 chat gewist; {remainingCount} chats resteren. Probeer het opnieuw.",
-      oneChatClearedRemainOne:
-        "1 chat gewist; 1 chat resteert. Probeer het opnieuw.",
-      storageClearFailedOne:
-        "Wissen van de opslag mislukt; mogelijk resteert 1 chat. Probeer het opnieuw.",
-      storageClearFailed:
-        "Wissen van de opslag mislukt; mogelijk resteren {count} chats. Probeer het opnieuw.",
+      chatsClearedRemainOne: "{clearedCount} chats gewist; 1 chat resteert. Probeer het opnieuw.",
+      chatsClearedRemain: "{clearedCount} chats gewist; {remainingCount} chats resteren. Probeer het opnieuw.",
+      oneChatClearedRemain: "1 chat gewist; {remainingCount} chats resteren. Probeer het opnieuw.",
+      oneChatClearedRemainOne: "1 chat gewist; 1 chat resteert. Probeer het opnieuw.",
+      storageClearFailedOne: "Wissen van de opslag mislukt; mogelijk resteert 1 chat. Probeer het opnieuw.",
+      storageClearFailed: "Wissen van de opslag mislukt; mogelijk resteren {count} chats. Probeer het opnieuw.",
       failedToClearChats: "Kan chats niet wissen",
     },
     data: {
@@ -3759,22 +3261,18 @@ export const nl = {
         deleteResults: "Resultaten verwijderen",
         noChats: "Geen chats komen overeen met je zoekopdracht.",
         noArchivedChats: "Geen gearchiveerde chats.",
-        noArchivedMatches:
-          "Geen gearchiveerde chats komen overeen met je zoekopdracht.",
+        noArchivedMatches: "Geen gearchiveerde chats komen overeen met je zoekopdracht.",
         noMedia: "Geen gearchiveerde items.",
-        noMediaMatches:
-          "Geen gearchiveerde items komen overeen met je zoekopdracht.",
+        noMediaMatches: "Geen gearchiveerde items komen overeen met je zoekopdracht.",
         itemCount: "Items: {count}",
-        incompleteSearch:
-          "Zoekopdracht is onvolledig. Probeer de resterende items opnieuw te laden.",
+        incompleteSearch: "Zoekopdracht is onvolledig. Probeer de resterende items opnieuw te laden.",
         searchingRemaining: "Resterende items doorzoeken ({count} geladen)...",
         noLoadedMatches: "Geen overeenkomsten in de tot nu toe geladen items.",
         deleteItem: "Verwijderen: {title}",
         unarchiveItem: "Uit archief halen: {title}",
         deleteItemsTitle: "Gearchiveerde items verwijderen ({count})",
         unarchiveItemsTitle: "Items uit archief halen ({count})",
-        deleteFilesWarning:
-          "Deze bestanden worden definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+        deleteFilesWarning: "Deze bestanden worden definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
         restoreWarning: "Deze items keren terug naar de galerie.",
         working: "Bezig...",
         loadFailed: "Kan gearchiveerde items niet laden",
@@ -3783,8 +3281,7 @@ export const nl = {
         deleteFailed: "Kan geselecteerde items niet verwijderen",
         projectsFailed: "Kan gearchiveerde projecten niet laden",
         pageStalled: "De archiefpagina ging niet verder. Probeer het opnieuw.",
-        pageChanged:
-          "Het archief is tijdens het laden gewijzigd. Probeer het opnieuw.",
+        pageChanged: "Het archief is tijdens het laden gewijzigd. Probeer het opnieuw.",
         selectAll: "Alle zichtbare chats selecteren",
         selectItem: "“{title}” selecteren",
         selectedChats: "Geselecteerde chats: {count}",
@@ -3800,36 +3297,28 @@ export const nl = {
         movedChatsToRecents: "Chats verplaatst naar Recent: {count}",
         moveFailed: "Kan chats niet verplaatsen",
         deleteChatsTitle: "Chats verwijderen ({count})",
-        deleteChatsWarning:
-          "Hiermee worden {count} chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+        deleteChatsWarning: "Hiermee worden {count} chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
         deleteArchivedTitle: "{count} gearchiveerde chats verwijderen",
-        deleteArchivedWarning:
-          "Hiermee worden {count} gearchiveerde chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+        deleteArchivedWarning: "Hiermee worden {count} gearchiveerde chats en hun berichten definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
         deleting: "Verwijderen...",
       },
       title: "Gegevens",
       backToData: "Terug naar Gegevens",
       exportFailed: "Kan chats niet exporteren",
-      description:
-        "Beheer chatgeschiedenis en geüploade bestanden die op dit apparaat zijn opgeslagen.",
+      description: "Beheer chatgeschiedenis en geüploade bestanden die op dit apparaat zijn opgeslagen.",
       manageFiles: {
         label: "Bestanden beheren",
-        description:
-          "Afbeeldingen, video's, audio en bestanden zoeken, sorteren en ordenen.",
+        description: "Afbeeldingen, video's, audio en bestanden zoeken, sorteren en ordenen.",
         action: "Bibliotheek openen",
       },
       archivedChats: "Gearchiveerde chats",
-      archivedChatsDescription:
-        "Bekijk en beheer chats die je hebt gearchiveerd.",
+      archivedChatsDescription: "Bekijk en beheer chats die je hebt gearchiveerd.",
       archivedImages: "Gearchiveerde afbeeldingen",
-      archivedImagesDescription:
-        "Bekijk en beheer afbeeldingen die je hebt gearchiveerd.",
+      archivedImagesDescription: "Bekijk en beheer afbeeldingen die je hebt gearchiveerd.",
       archivedVideos: "Gearchiveerde video's",
-      archivedVideosDescription:
-        "Bekijk en beheer video's die je hebt gearchiveerd.",
+      archivedVideosDescription: "Bekijk en beheer video's die je hebt gearchiveerd.",
       archivedAudio: "Gearchiveerde audio",
-      archivedAudioDescription:
-        "Bekijk en beheer audiofragmenten die je hebt gearchiveerd.",
+      archivedAudioDescription: "Bekijk en beheer audiofragmenten die je hebt gearchiveerd.",
       manageAction: "Beheren",
       exportArchivedChats: "Exporteren",
       exportingArchivedChats: "Exporteren...",
@@ -3838,54 +3327,43 @@ export const nl = {
       noArchivedChatsToExport: "Geen gearchiveerde chats om te exporteren.",
       failedToExportArchivedChats: "Kan gearchiveerde chats niet exporteren",
       archiveAllChats: "Alle chats archiveren",
-      archiveAllChatsDescription:
-        "Elke chat in Recent en Projecten naar het archief verplaatsen.",
+      archiveAllChatsDescription: "Elke chat in Recent en Projecten naar het archief verplaatsen.",
       noChatsToArchive: "Geen chats om te archiveren.",
       archiveAllAction: "Alles archiveren",
       archivingAction: "Archiveren...",
       archiveAllChatsTitle: "Alle chats archiveren?",
-      archiveAllChatsConfirmDescription:
-        "Verplaatst elke chat op dit apparaat naar het archief. Gearchiveerde chats blijven beschikbaar en kunnen op elk moment uit het archief worden gehaald.",
+      archiveAllChatsConfirmDescription: "Verplaatst elke chat op dit apparaat naar het archief. Gearchiveerde chats blijven beschikbaar en kunnen op elk moment uit het archief worden gehaald.",
       archivedAllChats: "Alle chats gearchiveerd",
       archivedOneChat: "1 chat gearchiveerd",
       archivedChatCount: "{count} chats gearchiveerd",
       failedToArchiveChats: "Kan chats niet archiveren",
       confirmBeforeDeleting: "Bevestigen voor verwijderen",
-      confirmBeforeDeletingDescription:
-        "Om bevestiging vragen voordat een chat wordt verwijderd. Schakel dit uit om direct te verwijderen.",
+      confirmBeforeDeletingDescription: "Om bevestiging vragen voordat een chat wordt verwijderd. Schakel dit uit om direct te verwijderen.",
       alwaysDeleteFiles: "Altijd bestanden verwijderen",
-      alwaysDeleteFilesDescription:
-        "Bij het verwijderen van een chat wordt ook de eigen sandboxmap van die chat van de schijf verwijderd. Bestanden die de chat in een project heeft geschreven, blijven in die projectwerkruimte.",
+      alwaysDeleteFilesDescription: "Bij het verwijderen van een chat wordt ook de eigen sandboxmap van die chat van de schijf verwijderd. Bestanden die de chat in een project heeft geschreven, blijven in die projectwerkruimte.",
       chatsSection: "Chats en archieven",
       transferSection: "Importeren en exporteren",
       deletionSection: "Verwijderen",
       archives: "Archieven",
       archiveChatsLabel: "Chats",
       archiveVideosLabel: "Video's",
-      exportFormatsSummary:
-        "Recent en projectchats exporteren in je voorkeursindeling.",
+      exportFormatsSummary: "Recent en projectchats exporteren in je voorkeursindeling.",
       trainingSummary: "Maak van je chats een dataset voor finetuning.",
-      confirmDeletionSummary:
-        "Vragen voordat afzonderlijke chats worden verwijderd.",
+      confirmDeletionSummary: "Vragen voordat afzonderlijke chats worden verwijderd.",
       sandboxFiles: "Sandboxbestanden van chats",
-      sandboxFilesDescription:
-        "Standaardactie bij het verwijderen van een chat.",
+      sandboxFilesDescription: "Standaardactie bij het verwijderen van een chat.",
       keepSandboxFiles: "Sandboxbestanden behouden",
       deleteSandboxFiles: "Sandboxbestanden verwijderen",
-      projectFilesKept:
-        "Sandboxen zijn mappen die voor afzonderlijke chats worden aangemaakt. Bestanden die in projectwerkruimten zijn opgeslagen, blijven behouden.",
+      projectFilesKept: "Sandboxen zijn mappen die voor afzonderlijke chats worden aangemaakt. Bestanden die in projectwerkruimten zijn opgeslagen, blijven behouden.",
       deleteAllAction: "Alles verwijderen",
       deleteChatsOnly: "Alleen chats verwijderen…",
       deleteChatsAndSandboxes: "Chats en sandboxen verwijderen…",
-      deleteSandboxFilesDescription:
-        "Ook de sandboxmap van elke chat en de bestanden daarin verwijderen. Bestanden in projectwerkruimten blijven behouden.",
+      deleteSandboxFilesDescription: "Ook de sandboxmap van elke chat en de bestanden daarin verwijderen. Bestanden in projectwerkruimten blijven behouden.",
       filesSection: "Bestanden",
       uploadedFiles: "Geüploade bestanden",
-      uploadedFilesDescription:
-        "Bekijk en beheer bestanden die zijn geüpload naar chats, projecten en kennisbanken.",
+      uploadedFilesDescription: "Bekijk en beheer bestanden die zijn geüpload naar chats, projecten en kennisbanken.",
       fineTuneExport: "Chats gebruiken als trainingsgegevens",
-      fineTuneExportDescription:
-        "Maak een JSONL-dataset voor finetuning van je chats. Laad deze in Trainen, verfijn in Recepten of exporteer.",
+      fineTuneExportDescription: "Maak een JSONL-dataset voor finetuning van je chats. Laad deze in Trainen, verfijn in Recepten of exporteer.",
       fineTuneExportAction: "JSONL exporteren",
       fineTuneRunAction: "Uitvoeren",
       fineTuneExportingAction: "Exporteren...",
@@ -3903,13 +3381,11 @@ export const nl = {
     },
     remoteLan: {
       title: "Extern en LAN",
-      description:
-        "Bereik deze Unsloth vanaf je andere apparaten, via je lokale netwerk of een tijdelijke openbare URL.",
+      description: "Bereik deze Unsloth vanaf je andere apparaten, via je lokale netwerk of een tijdelijke openbare URL.",
     },
     apiKeys: {
       title: "API",
-      description:
-        "Toegang tot Unsloth via de met OpenAI en Anthropic compatibele API.",
+      description: "Toegang tot Unsloth via de met OpenAI en Anthropic compatibele API.",
       readDocs: "API-documentatie lezen",
       noAccess: "Nog geen API-toegang.",
       accessTokens: "Toegangstokens",
@@ -3942,8 +3418,7 @@ export const nl = {
       copyAccessToken: "Toegangstoken kopiëren",
       copyNow: "Kopieer het nu - het wordt niet opnieuw getoond.",
       usageExamples: "Chat-API",
-      usageNoModel:
-        "Laad of download een model om uitvoerbare voorbeelden te zien. Deze server heeft nog geen model om te noemen.",
+      usageNoModel: "Laad of download een model om uitvoerbare voorbeelden te zien. Deze server heeft nog geen model om te noemen.",
       usageTools: "Tools",
       exampleLanguage: "Taal",
       exampleRequest: "Verzoek",
@@ -3955,18 +3430,15 @@ export const nl = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "Beveiligde HTTPS",
-      secureHttpsHint:
-        "De 0.0.0.0-poort is nog steeds wereldwijd bereikbaar. Start Unsloth voor volledige beveiliging met --secure om alleen deze HTTPS-link beschikbaar te maken.",
+      secureHttpsHint: "De 0.0.0.0-poort is nog steeds wereldwijd bereikbaar. Start Unsloth voor volledige beveiliging met --secure om alleen deze HTTPS-link beschikbaar te maken.",
       copyTunnelUrl: "Tunnel-URL kopiëren",
       copySnippet: "Fragment kopiëren",
       copy: "Kopiëren",
       copied: "Gekopieerd",
       codingAgents: "Codeeragents",
-      codingAgentsHint:
-        "Start een codeeragent tegen deze server. Deze gebruikt het geladen model; een lokale server maakt automatisch een API-sleutel aan, bij een externe server staat die in de opdracht.",
+      codingAgentsHint: "Start een codeeragent tegen deze server. Deze gebruikt het geladen model; een lokale server maakt automatisch een API-sleutel aan, bij een externe server staat die in de opdracht.",
       openAgentsTab: "Openen in Agents",
-      codingAgentsSwap:
-        "Vervang claude door codex, openclaw, opencode of hermes.",
+      codingAgentsSwap: "Vervang claude door codex, openclaw, opencode of hermes.",
       relativeNever: "nooit",
       relativeJustNow: "zojuist",
       expired: "verlopen",
@@ -3978,20 +3450,17 @@ export const nl = {
       revokeToken: "Token intrekken",
       regenerateToken: "Token opnieuw genereren",
       regenerateTitle: "Toegangstoken “{name}” opnieuw genereren?",
-      regenerateDescription:
-        "Een nieuw token met dezelfde naam en geldigheidsduur vervangt dit token. Apps die het huidige token gebruiken, verliezen direct de toegang.",
+      regenerateDescription: "Een nieuw token met dezelfde naam en geldigheidsduur vervangt dit token. Apps die het huidige token gebruiken, verliezen direct de toegang.",
       regenerateAction: "Opnieuw genereren",
       regenerating: "Opnieuw genereren...",
       regenerateError: "Kan toegangstoken niet opnieuw genereren.",
       revokeTitle: "Toegangstoken “{name}” intrekken?",
-      revokeDescription:
-        "Apps die dit token gebruiken, verliezen direct de toegang. Dit kan niet ongedaan worden gemaakt.",
+      revokeDescription: "Apps die dit token gebruiken, verliezen direct de toegang. Dit kan niet ongedaan worden gemaakt.",
       revokeAction: "“{name}” intrekken",
       revoking: "Intrekken...",
       audioApi: {
         title: "Audio-API",
-        description:
-          "Spraak, stemklonen, transcriptie en de workflows van de pagina Audio.",
+        description: "Spraak, stemklonen, transcriptie en de workflows van de pagina Audio.",
         speak: "Spreken",
         clone: "Klonen",
         transcribe: "Transcriberen",
@@ -4000,51 +3469,38 @@ export const nl = {
         convert: "Converteren",
         music: "Muziek",
         edit: "Bewerken",
-        placeholderModel:
-          "Nog geen gedownload model kan dit voorbeeld uitvoeren, dus het getoonde model is een tijdelijke invulling. Download er eerst een op de pagina Audio.",
-        autoSwitchOff:
-          "Het model wordt alleen op naam geladen zolang Automatisch van model wisselen aan staat. Schakel het in, of laad het model eerst op de bijbehorende pagina Audio.",
+        placeholderModel: "Nog geen gedownload model kan dit voorbeeld uitvoeren, dus het getoonde model is een tijdelijke invulling. Download er eerst een op de pagina Audio.",
+        autoSwitchOff: "Het model wordt alleen op naam geladen zolang Automatisch van model wisselen aan staat. Schakel het in, of laad het model eerst op de bijbehorende pagina Audio.",
         useViaApi: "Gebruiken via API",
       },
       mediaApi: {
         title: "Afbeeldingen/video-API",
-        description:
-          "Genereer afbeeldingen en video's vanuit je eigen code met de OpenAI-compatibele eindpunten.",
+        description: "Genereer afbeeldingen en video's vanuit je eigen code met de OpenAI-compatibele eindpunten.",
         images: "Afbeeldingen",
         video: "Video",
-        placeholderModel:
-          "Het getoonde model is een voorbeeld. Laad een model op de pagina Afbeeldingen of Video en open dit via de bijbehorende API-knop om het in te vullen.",
-        autoSwitchOff:
-          "Automatisch van model wisselen voor media staat uit, dus verzoeken draaien op het model dat de pagina heeft geladen, welke naam ze ook opgeven.",
+        placeholderModel: "Het getoonde model is een voorbeeld. Laad een model op de pagina Afbeeldingen of Video en open dit via de bijbehorende API-knop om het in te vullen.",
+        autoSwitchOff: "Automatisch van model wisselen voor media staat uit, dus verzoeken draaien op het model dat de pagina heeft geladen, welke naam ze ook opgeven.",
       },
       trainingApi: {
         title: "Training-API",
-        description:
-          "Finetune modellen vanuit je eigen code met de OpenAI-compatibele finetuning-eindpunten: upload een JSONL-bestand, maak een taak aan, volg de gebeurtenissen en chat daarna met het getrainde model.",
-        placeholder:
-          "Het getoonde model en de instellingen zijn een voorbeeld. Open dit via de API-knop op de pagina Trainen om je huidige configuratie in te vullen.",
-        hubDataset:
-          "Je pagina Trainen gebruikt een Hugging Face- of S3-dataset. De API traint op geüploade bestanden, dus sla de dataset op als JSONL en upload die.",
-        batching:
-          "Compatibele taken die in de wachtrij staan, worden automatisch samen getraind.",
-        chatNote:
-          "Chatten met het getrainde model op naam vereist dat Automatisch van model wisselen aan staat, of laad het eerst op de pagina Chat.",
+        description: "Finetune modellen vanuit je eigen code met de OpenAI-compatibele finetuning-eindpunten: upload een JSONL-bestand, maak een taak aan, volg de gebeurtenissen en chat daarna met het getrainde model.",
+        placeholder: "Het getoonde model en de instellingen zijn een voorbeeld. Open dit via de API-knop op de pagina Trainen om je huidige configuratie in te vullen.",
+        hubDataset: "Je pagina Trainen gebruikt een Hugging Face- of S3-dataset. De API traint op geüploade bestanden, dus sla de dataset op als JSONL en upload die.",
+        batching: "Compatibele taken die in de wachtrij staan, worden automatisch samen getraind.",
+        chatNote: "Chatten met het getrainde model op naam vereist dat Automatisch van model wisselen aan staat, of laad het eerst op de pagina Chat.",
         cancelTitle: "Een taak annuleren",
-        cancelDescription:
-          "Stopt een taak in de wachtrij of een actieve taak. Geen onderdeel van het voorbeeld hierboven.",
+        cancelDescription: "Stopt een taak in de wachtrij of een actieve taak. Geen onderdeel van het voorbeeld hierboven.",
       },
       decisionApi: {
         title: "Decision API",
         docs: "Documentatie",
         docsLabel: "Documentatie van de Decision API openen",
-        description:
-          "Beantwoord ja/nee-, meerkeuze- en scorevragen over tekst met een model op deze computer of een beslissingsmodel uit Verbindingen. Werkt met de TypeSafe SDK.",
+        description: "Beantwoord ja/nee-, meerkeuze- en scorevragen over tekst met een model op deze computer of een beslissingsmodel uit Verbindingen. Werkt met de TypeSafe SDK.",
         codeTitle: "Aanroepen vanuit code",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "Andere MCP-clients maken hier verbinding met hetzelfde token.",
         enable: "Verzoeken verwerken",
-        enableDescription:
-          "Biedt /v1/systemone aan. Bij inschakelen wordt het model gedownload.",
+        enableDescription: "Biedt /v1/systemone aan. Bij inschakelen wordt het model gedownload.",
         enableRemoteDescription: "Biedt /v1/systemone aan.",
         lockedByEnv: "Ingesteld door {name}.",
         model: "Model",
@@ -4056,16 +3512,13 @@ export const nl = {
         modelClef: "Clef",
         recommended: "Aanbevolen",
         device: "Uitvoeren op",
-        deviceDescription:
-          "GPU antwoordt sneller en geeft zijn geheugen vrij wanneer het model wordt ontladen.",
+        deviceDescription: "GPU antwoordt sneller en geeft zijn geheugen vrij wanneer het model wordt ontladen.",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
         backend: "Runtime",
         backendAuto: "Automatisch",
-        backendDescription:
-          "Automatisch biedt Clef aan via llama.cpp wanneer het model een GGUF-build heeft en valt anders terug op PyTorch. llama.cpp leest ook afbeeldingen.",
-        backendDescriptionMlx:
-          "Automatisch biedt Clef aan via MLX op Apple Silicon en via llama.cpp wanneer alleen de GGUF-build van het model is geladen of gedownload. MLX leest alleen afbeeldingen voor Clef-modellen. llama.cpp leest ook afbeeldingen.",
+        backendDescription: "Automatisch biedt Clef aan via llama.cpp wanneer het model een GGUF-build heeft en valt anders terug op PyTorch. llama.cpp leest ook afbeeldingen.",
+        backendDescriptionMlx: "Automatisch biedt Clef aan via MLX op Apple Silicon en via llama.cpp wanneer alleen de GGUF-build van het model is geladen of gedownload. MLX leest alleen afbeeldingen voor Clef-modellen. llama.cpp leest ook afbeeldingen.",
         backendStatus: "Runtime: {backend}",
         backendNone: "niet beschikbaar",
         mediaImages: "Leest tekst en afbeeldingen.",
@@ -4081,37 +3534,30 @@ export const nl = {
         download: "Downloaden",
         downloadConfirmTitle: "Laya {model} downloaden?",
         downloadConfirmTitleModel: "{model} downloaden?",
-        downloadConfirmBody:
-          "De Decision API heeft dit model nodig om verzoeken te beantwoorden. Ongeveer {size}, eenmalig opgehaald in je Hugging Face-cache.",
+        downloadConfirmBody: "De Decision API heeft dit model nodig om verzoeken te beantwoorden. Ongeveer {size}, eenmalig opgehaald in je Hugging Face-cache.",
         unload: "Ontladen",
         downloadBusy: "Er wordt al een Decision API-model gedownload.",
         downloadFailed: "Kan de download niet starten.",
         saveFailed: "Kan de Decision API-instelling niet opslaan.",
         loadError: "Kan Decision API-instellingen niet laden.",
         sendsTo: "Verzoeken worden verzonden naar {provider}.",
-        connectionMissing:
-          "Deze verbinding bestaat niet meer of heeft geen beslissingsmodellen. Kies een ander model.",
-        addConnection:
-          "Als je een in de cloud gehost beslissingsmodel wilt gebruiken, voeg je er een toe in ",
+        connectionMissing: "Deze verbinding bestaat niet meer of heeft geen beslissingsmodellen. Kies een ander model.",
+        addConnection: "Als je een in de cloud gehost beslissingsmodel wilt gebruiken, voeg je er een toe in ",
         connectionsLink: "Verbindingen",
         addConnectionSuffix: ".",
       },
       mcp: {
         title: "Agenttoegang (MCP)",
-        description:
-          "Laat codeeragents zoals Claude Code en Codex Unsloth gebruiken via MCP.",
+        description: "Laat codeeragents zoals Claude Code en Codex Unsloth gebruiken via MCP.",
         enable: "Agentverbindingen toestaan",
-        enableDescription:
-          "Biedt /mcp/ aan voor verzoeken met een Unsloth-API-sleutel.",
+        enableDescription: "Biedt /mcp/ aan voor verzoeken met een Unsloth-API-sleutel.",
         lockedByEnv: "Ingesteld door {name}.",
         loadError: "Kan instellingen voor agenttoegang niet laden.",
         saveError: "Kan de instelling voor agenttoegang niet opslaan.",
         agent: "Agent",
-        exportKeyHint:
-          "Stel {name} in op een Unsloth-API-sleutel voordat je de agent start.",
+        exportKeyHint: "Stel {name} in op een Unsloth-API-sleutel voordat je de agent start.",
         configFileHint: "Voeg dit toe aan {path}.",
-        keywords:
-          "mcp model context protocol agents claude codex tools toegang verbinding",
+        keywords: "mcp model context protocol agents claude codex tools toegang verbinding",
       },
     },
     mcp: {
@@ -4126,8 +3572,7 @@ export const nl = {
         allTools: "Alle tools",
         selectAll: "Alles selecteren",
         selectNone: "Niets selecteren",
-        description:
-          "Elke tool die aan staat telt mee in wat agents lezen voordat ze beginnen, dus zet uit wat je niet nodig hebt. Agents zien een uitgezette tool nooit, en aanroepen ervan worden geweigerd. Al verbonden agents zien de wijziging als ze opnieuw verbinden.",
+        description: "Elke tool die aan staat telt mee in wat agents lezen voordat ze beginnen, dus zet uit wat je niet nodig hebt. Agents zien een uitgezette tool nooit, en aanroepen ervan worden geweigerd. Al verbonden agents zien de wijziging als ze opnieuw verbinden.",
         saveError: "Kon de instelling voor Unsloth MCP-tools niet opslaan.",
         chatNote: "De chat krijgt nooit {tools}.",
         groups: {
@@ -4199,8 +3644,7 @@ export const nl = {
     },
     about: {
       title: "Over",
-      description:
-        "Documentatie, releaseopmerkingen, feedback en buildinformatie.",
+      description: "Documentatie, releaseopmerkingen, feedback en buildinformatie.",
       studioVersion: "Unsloth-versie",
       packageVersion: "Pakketversie",
       desktopAppVersion: "Versie van desktop-app",
@@ -4213,18 +3657,15 @@ export const nl = {
       whisperCppVersion: "whisper.cpp-versie",
       engines: {
         title: "Engines",
-        description:
-          "De runtimes die Unsloth gebruikt om modellen uit te voeren. Updates worden op de achtergrond geïnstalleerd, zonder herstart.",
+        description: "De runtimes die Unsloth gebruikt om modellen uit te voeren. Updates worden op de achtergrond geïnstalleerd, zonder herstart.",
         updatesLabel: "Engine-updates",
         notInstalled: "Niet geïnstalleerd",
         available: "{version} beschikbaar",
         upToDate: "Up-to-date",
         updatesAvailable: "Updates beschikbaar",
         checking: "Controleren op updates...",
-        checkFailed:
-          "Kan niet controleren op updates. Probeer het later opnieuw.",
-        unsupported:
-          "De engines van deze installatie worden buiten Unsloth beheerd.",
+        checkFailed: "Kan niet controleren op updates. Probeer het later opnieuw.",
+        unsupported: "De engines van deze installatie worden buiten Unsloth beheerd.",
         checkForUpdates: "Controleren op updates",
         update: "Bijwerken",
         updating: "Bijwerken...",
@@ -4255,8 +3696,7 @@ export const nl = {
       },
       dangerZone: "Gevarenzone",
       shutDownStudio: "Unsloth afsluiten",
-      shutDownStudioDescription:
-        "Stopt de Unsloth-server en beëindigt je sessie.",
+      shutDownStudioDescription: "Stopt de Unsloth-server en beëindigt je sessie.",
       shutDown: "Afsluiten",
       update: {
         title: "Unsloth bijwerken",
@@ -4270,32 +3710,23 @@ export const nl = {
         localUpdateHeading: "Lokale update",
         installCommandUnix: "Installatieopdracht voor macOS/Linux",
         installCommandWindows: "Installatieopdracht voor Windows",
-        localInstallDetected:
-          "Lokale installatie gedetecteerd. Werk bij vanuit je oorspronkelijke checkout om te voorkomen dat deze wordt vervangen door PyPI.",
-        pullThenUpdate:
-          "Haal de nieuwste wijzigingen op en voer daarna het lokale installatieprogramma uit:",
+        localInstallDetected: "Lokale installatie gedetecteerd. Werk bij vanuit je oorspronkelijke checkout om te voorkomen dat deze wordt vervangen door PyPI.",
+        pullThenUpdate: "Haal de nieuwste wijzigingen op en voer daarna het lokale installatieprogramma uit:",
         gitPullCommand: "git pull-opdracht",
         localInstallerCommand: "opdracht voor lokaal installatieprogramma",
-        sourceInstallDetected:
-          "Installatie vanuit broncode of VCS-pakket gedetecteerd. Installeer opnieuw vanaf het oorspronkelijke lokale pad of de Git-URL.",
-        repoCheckoutFallback:
-          "Als je de repository-checkout nog hebt, voer je daaruit het lokale installatieprogramma uit:",
+        sourceInstallDetected: "Installatie vanuit broncode of VCS-pakket gedetecteerd. Installeer opnieuw vanaf het oorspronkelijke lokale pad of de Git-URL.",
+        repoCheckoutFallback: "Als je de repository-checkout nog hebt, voer je daaruit het lokale installatieprogramma uit:",
         restartAfterUpdate: "Start Unsloth opnieuw na het bijwerken.",
         desktopReady: "Updates van de desktop-app",
-        desktopReadyDescription:
-          "Controleren of er een nieuwere versie van de desktop-app beschikbaar is.",
+        desktopReadyDescription: "Controleren of er een nieuwere versie van de desktop-app beschikbaar is.",
         desktopChecking: "Controleren op updates",
         desktopCheckingDescription: "Dit duurt meestal een paar seconden.",
         desktopAvailable: "Desktop-app {version} is beschikbaar",
-        desktopAvailableDescription:
-          "Werk nu bij; de desktop-app start opnieuw wanneer dit klaar is.",
-        desktopExternalServer:
-          "Verbonden met een Unsloth-server op poort {port} die deze app niet heeft gestart, zoals `unsloth studio` in een terminal. Stop hem waar hij is gestart, sluit dan de app af en open hem opnieuw om bij te werken.",
-        desktopManualInstall:
-          "Open de releasepagina om het nieuwste Linux-pakket te installeren.",
+        desktopAvailableDescription: "Werk nu bij; de desktop-app start opnieuw wanneer dit klaar is.",
+        desktopExternalServer: "Verbonden met een Unsloth-server op poort {port} die deze app niet heeft gestart, zoals `unsloth studio` in een terminal. Stop hem waar hij is gestart, sluit dan de app af en open hem opnieuw om bij te werken.",
+        desktopManualInstall: "Open de releasepagina om het nieuwste Linux-pakket te installeren.",
         desktopCheckFailed: "Kan niet controleren op updates",
-        desktopCheckFailedDescription:
-          "Controleer je verbinding en probeer het opnieuw.",
+        desktopCheckFailedDescription: "Controleer je verbinding en probeer het opnieuw.",
         desktopCurrent: "Desktop-app is up-to-date",
         desktopCurrentDescription: "Unsloth blijft automatisch controleren.",
         checkForUpdates: "Controleren op updates",
@@ -4304,10 +3735,8 @@ export const nl = {
         checking: "Controleren...",
         updateNow: "Nu bijwerken",
         openReleasePage: "Releasepagina openen",
-        unknownInstall:
-          "Kan niet detecteren hoe Unsloth is geïnstalleerd. Gebruik voor installaties via het installatieprogramma of PyPI de opdrachten hierboven.",
-        localCheckout:
-          "Voer voor installaties vanuit een lokale checkout het lokale installatieprogramma uit vanuit die checkout:",
+        unknownInstall: "Kan niet detecteren hoe Unsloth is geïnstalleerd. Gebruik voor installaties via het installatieprogramma of PyPI de opdrachten hierboven.",
+        localCheckout: "Voer voor installaties vanuit een lokale checkout het lokale installatieprogramma uit vanuit die checkout:",
         docs: "Installatiedocumentatie:",
         docsInstall: "Installatie",
         docsUpdating: "Bijwerken",
@@ -4321,8 +3750,7 @@ export const nl = {
   },
   studio: {
     routeTitle: "Trainen",
-    cpuTrainingNotice:
-      "Er is geen GPU gevonden, dus training draait op de CPU. Dit is veel trager dan training op een GPU en ondersteunt alleen tekstmodellen (LoRA of volledige finetuning).",
+    cpuTrainingNotice: "Er is geen GPU gevonden, dus training draait op de CPU. Dit is veel trager dan training op een GPU en ondersteunt alleen tekstmodellen (LoRA of volledige finetuning).",
     wizard: {
       modelTitle: "Model",
       modelDescription: "Selecteer model en trainingsmethode",
@@ -4335,21 +3763,16 @@ export const nl = {
       modelLabel: "Model",
       modelTooltip: "Het basismodel dat je wilt finetunen.",
       methodLabel: "Methode",
-      methodTooltip:
-        "Hoe het model wordt getraind. LoRA en QLoRA werken kleine adapters bij in plaats van elk gewicht.",
+      methodTooltip: "Hoe het model wordt getraind. LoRA en QLoRA werken kleine adapters bij in plaats van elk gewicht.",
       trainAsLabel: "Trainen als",
-      trainAsTooltip:
-        "Een taalmodel schrijft tekst. Een beslissingsmodel kiest een van de opties die je opgeeft, met een waarschijnlijkheid, en draait in de Decision API.",
+      trainAsTooltip: "Een taalmodel schrijft tekst. Een beslissingsmodel kiest een van de opties die je opgeeft, met een waarschijnlijkheid, en draait in de Decision API.",
       trainAsLanguage: "Taalmodel",
       trainAsDecision: "Beslissingsmodel",
       checkpointLabel: "Checkpoint",
-      checkpointTooltip:
-        "Het Laya-checkpoint om te finetunen. Meertalig past bij de meeste datasets.",
+      checkpointTooltip: "Het Laya-checkpoint om te finetunen. Meertalig past bij de meeste datasets.",
       datasetLabel: "Dataset",
-      datasetTooltip:
-        "De trainingsgegevens waarmee het model wordt gefinetuned.",
-      hfTokenDescription:
-        "Vereist voor afgeschermde of privémodellen en -datasets.",
+      datasetTooltip: "De trainingsgegevens waarmee het model wordt gefinetuned.",
+      hfTokenDescription: "Vereist voor afgeschermde of privémodellen en -datasets.",
       uploadLocalLabel: "Een lokaal bestand uploaden",
       sourceBrowse: "Bladeren",
       releaseToUpload: "Loslaten om te uploaden",
@@ -4357,11 +3780,9 @@ export const nl = {
       saveYaml: "YAML opslaan",
       resetDefaults: "Standaardwaarden herstellen",
       cachedModelGoneTitle: "Model in cache niet meer beschikbaar",
-      cachedModelGoneDescription:
-        "De modelbestanden staan niet meer op dit apparaat, dus de training downloadt ze opnieuw.",
+      cachedModelGoneDescription: "De modelbestanden staan niet meer op dit apparaat, dus de training downloadt ze opnieuw.",
       cachedDatasetGoneTitle: "Dataset in cache niet meer beschikbaar",
-      cachedDatasetGoneDescription:
-        "De datasetbestanden staan niet meer op dit apparaat, dus de training downloadt ze opnieuw.",
+      cachedDatasetGoneDescription: "De datasetbestanden staan niet meer op dit apparaat, dus de training downloadt ze opnieuw.",
     },
     preview: {
       title: "Voorbeeld van run",
@@ -4397,23 +3818,17 @@ export const nl = {
       dataset: "Dataset",
       downloadsOnStart: "Wordt gedownload bij start",
       continuesOnStart: "Gaat verder bij start",
-      noticeModelDownload:
-        "Dit model staat nog niet op dit apparaat. De training downloadt het automatisch.",
-      noticeModelPartial:
-        "De training voltooit de gedeeltelijke modeldownload voordat het model wordt geladen.",
-      noticeDatasetDownload:
-        "Deze dataset staat nog niet op dit apparaat. De training downloadt hem automatisch.",
-      noticeDatasetPartial:
-        "De training voltooit de gedeeltelijke datasetdownload voordat de dataset wordt gelezen.",
-      noticeTransformersUpgrade:
-        "Geen geïnstalleerde versie van transformers ondersteunt deze architectuur al. Bij het starten van de run wordt aangeboden om eerst transformers {version} te installeren.",
-      noticeSixteenBitOnly:
-        "Deze architectuur traint in 16-bit LoRA: 4-bit is er niet voor beschikbaar, dus de run heeft veel meer VRAM nodig dan QLoRA.",
-      noticeInstallSwitchesSixteenBit:
-        "Als je die release installeert in plaats van de eigen code van het model te behouden, schakelt deze run over naar 16-bit LoRA, wat veel meer VRAM nodig heeft dan QLoRA.",
+      noticeModelDownload: "Dit model staat nog niet op dit apparaat. De training downloadt het automatisch.",
+      noticeModelPartial: "De training voltooit de gedeeltelijke modeldownload voordat het model wordt geladen.",
+      noticeDatasetDownload: "Deze dataset staat nog niet op dit apparaat. De training downloadt hem automatisch.",
+      noticeDatasetPartial: "De training voltooit de gedeeltelijke datasetdownload voordat de dataset wordt gelezen.",
+      noticeTransformersUpgrade: "Geen geïnstalleerde versie van transformers ondersteunt deze architectuur al. Bij het starten van de run wordt aangeboden om eerst transformers {version} te installeren.",
+      noticeSixteenBitOnly: "Deze architectuur traint in 16-bit LoRA: 4-bit is er niet voor beschikbaar, dus de run heeft veel meer VRAM nodig dan QLoRA.",
+      noticeInstallSwitchesSixteenBit: "Als je die release installeert in plaats van de eigen code van het model te behouden, schakelt deze run over naar 16-bit LoRA, wat veel meer VRAM nodig heeft dan QLoRA.",
       advancedSettings: "Geavanceerde instellingen",
       defaultAdvancedSettings: "Standaard",
       nonDefaultAdvancedSettings: "{count} niet-standaard",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "datasets",
@@ -4424,20 +3839,16 @@ export const nl = {
       hfCacheLabel: "HF-cache",
       scanningLocal: "Datasets op dit apparaat scannen…",
       couldntScan: "Kan lokale datasets niet scannen",
-      someLocationsUnscanned:
-        "Sommige datasetlocaties konden niet worden gescand.",
-      noLocalDatasets:
-        "Nog niets op dit apparaat. Download een dataset van de Hub, bouw er een in Recepten of upload een bestand.",
+      someLocationsUnscanned: "Sommige datasetlocaties konden niet worden gescand.",
+      noLocalDatasets: "Nog niets op dit apparaat. Download een dataset van de Hub, bouw er een in Recepten of upload een bestand.",
       openDataRecipes: "Data Recipes openen",
       searchingHub: "Zoeken op Hugging Face…",
       noDatasetsFound: "Geen datasets gevonden.",
       tokenRejectedTitle: "Hugging Face-token geweigerd",
-      tokenRejectedBody:
-        "Werk je token bij in Instellingen → Algemeen en probeer het opnieuw.",
+      tokenRejectedBody: "Werk je token bij in Instellingen → Algemeen en probeer het opnieuw.",
       hubUnreachable: "Kan Hugging Face niet bereiken",
       cantUseDataset: "Kan dataset niet gebruiken",
-      reasonInvalidHubId:
-        "Voer een geldige Hugging Face-dataset-ID in: repo of owner/repo, zonder opeenvolgende punten of koppeltekens en zonder .git-achtervoegsel (maximaal 96 tekens per deel).",
+      reasonInvalidHubId: "Voer een geldige Hugging Face-dataset-ID in: repo of owner/repo, zonder opeenvolgende punten of koppeltekens en zonder .git-achtervoegsel (maximaal 96 tekens per deel).",
       sourceRecipe: "Recept",
       sourceUpload: "Upload",
       sourceLocal: "Lokaal",
@@ -4452,31 +3863,23 @@ export const nl = {
       hfCacheLabel: "HF-cache",
       scanningLocal: "Lokale modellen scannen…",
       couldntScan: "Kan lokale modellen niet scannen",
-      someLocationsUnscanned:
-        "Sommige lokale locaties konden niet worden gescand.",
+      someLocationsUnscanned: "Sommige lokale locaties konden niet worden gescand.",
       noLocalModels: "Geen lokale modellen gevonden.",
-      noLocalModelsHint:
-        "Plak hierboven een mappad of schakel over naar Hugging Face.",
+      noLocalModelsHint: "Plak hierboven een mappad of schakel over naar Hugging Face.",
       searchingHub: "Zoeken op Hugging Face…",
       noModelsFound: "Geen modellen gevonden.",
       tokenRejectedTitle: "Hugging Face-token geweigerd",
-      tokenRejectedBody:
-        "Werk je token bij in Instellingen → Algemeen en probeer het opnieuw.",
-      tokenRejectedAnonymousBody:
-        "Openbare modellen worden zonder token getoond. Werk je token bij in Instellingen → Algemeen om privé- en afgeschermde modellen te bereiken.",
+      tokenRejectedBody: "Werk je token bij in Instellingen → Algemeen en probeer het opnieuw.",
+      tokenRejectedAnonymousBody: "Openbare modellen worden zonder token getoond. Werk je token bij in Instellingen → Algemeen om privé- en afgeschermde modellen te bereiken.",
       hubUnreachable: "Kan Hugging Face niet bereiken",
       cantUseModel: "Kan model niet gebruiken voor training",
-      reasonTypeMismatch:
-        "Dit model past niet bij het trainingstype dat in de vorige stap is geselecteerd.",
+      reasonTypeMismatch: "Dit model past niet bij het trainingstype dat in de vorige stap is geselecteerd.",
       reasonEmptyId: "Voer een model-ID of lokaal modelpad in.",
       reasonGguf: "GGUF-modellen kunnen niet worden gebruikt voor training.",
-      reasonAdapter:
-        "Adapteruitvoer kan niet worden gebruikt als basismodel voor training.",
+      reasonAdapter: "Adapteruitvoer kan niet worden gebruikt als basismodel voor training.",
       reasonNotTrainable: "Dit model op het apparaat kan niet worden getraind.",
-      reasonUnsupportedFormat:
-        "Deze modelindeling wordt niet ondersteund voor training.",
-      reasonInvalidHubId:
-        "Voer een geldige Hugging Face-model-ID in: repo of owner/repo, zonder opeenvolgende punten of koppeltekens en zonder .git-achtervoegsel (maximaal 96 tekens per deel).",
+      reasonUnsupportedFormat: "Deze modelindeling wordt niet ondersteund voor training.",
+      reasonInvalidHubId: "Voer een geldige Hugging Face-model-ID in: repo of owner/repo, zonder opeenvolgende punten of koppeltekens en zonder .git-achtervoegsel (maximaal 96 tekens per deel).",
       sourceModelsFolder: "Modellenmap",
       sourceHfCache: "HF-cache",
       sourceLmStudio: "LM Studio",
@@ -4511,43 +3914,50 @@ export const nl = {
         hint: "Voortgezette pretraining voor nieuwe domeinen of talen.",
         note: "voortgezet",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Training configureren en starten",
       trainingInProgress: "Training bezig",
       viewPastRuns: "Eerdere trainingsruns bekijken",
       viewingPastRun: "Eerdere run bekijken",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Configureren",
       currentRun: "Huidige run",
       history: "Geschiedenis",
+      compare: "Compare",
     },
     goToLibrary: "Naar Bibliotheek",
     imageTraining: "Afbeeldingstraining",
     goToImageTraining: "Afbeeldings-LoRA's trainen",
     loadingRuntime: "Trainingsruntime laden...",
-    checkingSupport:
-      "Deze computer controleren op ondersteuning voor training...",
+    checkingSupport: "Deze computer controleren op ondersteuning voor training...",
     backToHistory: "Terug naar geschiedenis",
     dataset: {
       selectors: {
         subset: "Subset",
-        subsetTooltip:
-          "Selecteer welke subset (config) van de dataset je wilt gebruiken.",
+        subsetTooltip: "Selecteer welke subset (config) van de dataset je wilt gebruiken.",
         trainSplit: "Trainingssplitsing",
-        trainSplitTooltip:
-          "Selecteer welke splitsing je voor training wilt gebruiken.",
+        trainSplitTooltip: "Selecteer welke splitsing je voor training wilt gebruiken.",
         evaluationSplit: "Evaluatiesplitsing",
-        evaluationSplitTooltip:
-          "Selecteer welke splitsing je voor evaluatie wilt gebruiken. Geen betekent geen evaluatie tijdens de training.",
+        evaluationSplitTooltip: "Selecteer welke splitsing je voor evaluatie wilt gebruiken. Geen betekent geen evaluatie tijdens de training.",
         selectSubset: "Selecteer een subset...",
         selectSplit: "Selecteer een splitsing...",
         none: "Geen",
         loading: "Datasetconfiguraties en splitsingen laden...",
         manualTitle: "Datasetopties handmatig invoeren",
-        manualDescription:
-          "Voer de exacte Hugging Face-namen van config en splitsing in die je wilt gebruiken.",
+        manualDescription: "Voer de exacte Hugging Face-namen van config en splitsing in die je wilt gebruiken.",
         manualSubsetPlaceholder: "Optionele confignaam",
         manualRequired: "Een trainingssplitsing is vereist.",
         manualTooLong: "Gebruik maximaal 128 tekens.",
@@ -4567,86 +3977,65 @@ export const nl = {
       uploading: "Uploaden...",
       uploadEvalFile: "Evaluatiebestand uploaden",
       fileTooLarge: "Bestand te groot",
-      fileTooLargeDescription:
-        "{file} is {size}. Trainingsuploads ondersteunen maximaal {limit}.",
+      fileTooLargeDescription: "{file} is {size}. Trainingsuploads ondersteunen maximaal {limit}.",
       documentRedirect: {
         title: "Dit bestand moet eerst worden geconverteerd",
         genericFile: "Dit bestand",
-        description:
-          "{file} is bronmateriaal, geen dataset die klaar is voor training. Gebruik Data Recipes om het document om te zetten in een dataset en keer daarna hier terug om te finetunen.",
+        description: "{file} is bronmateriaal, geen dataset die klaar is voor training. Gebruik Data Recipes om het document om te zetten in een dataset en keer daarna hier terug om te finetunen.",
         nextStepTitle: "Beste volgende stap",
-        nextStepDescription:
-          "Open Learning Recipes en begin met een recept op basis van documenten, zoals PDF grounded QA.",
+        nextStepDescription: "Open Learning Recipes en begin met een recept op basis van documenten, zoals PDF grounded QA.",
         openAction: "Learning Recipes openen",
       },
-      evalDatasetDescription:
-        "Optioneel. Als je niets opgeeft, wordt een klein deel van de trainingsgegevens afgesplitst.",
+      evalDatasetDescription: "Optioneel. Als je niets opgeeft, wordt een klein deel van de trainingsgegevens afgesplitst.",
       advanced: "Geavanceerd",
       targetFormat: "Doelindeling",
-      targetFormatTooltip:
-        "Indeling van je trainingsgegevens. Automatisch detecteren werkt voor de meeste datasets.",
+      targetFormatTooltip: "Indeling van je trainingsgegevens. Automatisch detecteren werkt voor de meeste datasets.",
       streamingInfoAriaLabel: "Informatie over het streamen van datasets",
       streaming: {
         label: "Streamen inschakelen",
-        description:
-          "Hugging Face-tekstdatasets streamen in plaats van ze te downloaden.",
+        description: "Hugging Face-tekstdatasets streamen in plaats van ze te downloaden.",
         unavailable: "Streamen niet beschikbaar. Zo schakel je het in:",
-        completionsUnavailable:
-          "Niet beschikbaar terwijl het streamen van datasets is ingeschakeld.",
+        completionsUnavailable: "Niet beschikbaar terwijl het streamen van datasets is ingeschakeld.",
         blockers: {
-          source:
-            "Gebruik een Hugging Face-dataset (geen lokale upload of S3-bron).",
-          maxSteps:
-            "Stel Max. stappen > 0 in — gestreamde datasets hebben geen bekende lengte.",
+          source: "Gebruik een Hugging Face-dataset (geen lokale upload of S3-bron).",
+          maxSteps: "Stel Max. stappen > 0 in — gestreamde datasets hebben geen bekende lengte.",
           trainOnCompletions: "Schakel “Alleen assistentaanvullingen” uit.",
-          evalSplit:
-            "Kies een aparte evaluatiesplitsing — evaluatie staat aan, maar er is geen afzonderlijke evaluatiesplitsing ingesteld.",
+          evalSplit: "Kies een aparte evaluatiesplitsing — evaluatie staat aan, maar er is geen afzonderlijke evaluatiesplitsing ingesteld.",
           visionModel: "Visiemodellen ondersteunen geen streamen.",
           audioModel: "Audiomodellen ondersteunen geen streamen.",
-          embeddingModel:
-            "Embeddingmodellen ondersteunen geen streamen (training heeft de volledige dataset nodig).",
-          imageDataset:
-            "Deze dataset lijkt uit afbeeldingen te bestaan, die niet kunnen worden gestreamd.",
-          audioDataset:
-            "Deze dataset lijkt uit audio te bestaan, die niet kan worden gestreamd.",
+          embeddingModel: "Embeddingmodellen ondersteunen geen streamen (training heeft de volledige dataset nodig).",
+          imageDataset: "Deze dataset lijkt uit afbeeldingen te bestaan, die niet kunnen worden gestreamd.",
+          audioDataset: "Deze dataset lijkt uit audio te bestaan, die niet kan worden gestreamd.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "alleen assistentaanvullingen",
           evaluation: "evaluatie (vereist een aparte evaluatiesplitsing)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Streamen uitgeschakeld: streamen vereist een vaste waarde voor Max. stappen > 0.",
-          adjusted:
-            "Aangepast voor streamen. Incompatibele opties uitgeschakeld: {options}.",
-          needsMaxSteps:
-            "Streamen vereist een vaste waarde voor Max. stappen (gestreamde datasets hebben geen bekende lengte). Stel eerst Max. stappen > 0 in.",
-          enabledAdjusted:
-            "Streamen ingeschakeld. Incompatibele opties uitgeschakeld: {options}.",
-          disabledForDetectedModality:
-            "Streamen is uitgeschakeld omdat afbeeldings- en audiodatasets een volledige download vereisen. Controleer de instelling en start opnieuw.",
+          turnedOffMaxSteps: "Streamen uitgeschakeld: streamen vereist een vaste waarde voor Max. stappen > 0.",
+          adjusted: "Aangepast voor streamen. Incompatibele opties uitgeschakeld: {options}.",
+          needsMaxSteps: "Streamen vereist een vaste waarde voor Max. stappen (gestreamde datasets hebben geen bekende lengte). Stel eerst Max. stappen > 0 in.",
+          enabledAdjusted: "Streamen ingeschakeld. Incompatibele opties uitgeschakeld: {options}.",
+          disabledForDetectedModality: "Streamen is uitgeschakeld omdat afbeeldings- en audiodatasets een volledige download vereisen. Controleer de instelling en start opnieuw.",
         },
       },
       auto: "Automatisch",
       rawText: "Ruwe tekst",
       trainSplitStart: "Begin van trainingssplitsing",
-      trainSplitStartTooltip:
-        "Train alleen op een deel van je trainingssplitsing door een beginrij-index op te geven (inclusief, vanaf 0). Laat leeg om bij de eerste rij te beginnen.",
+      trainSplitStartTooltip: "Train alleen op een deel van je trainingssplitsing door een beginrij-index op te geven (inclusief, vanaf 0). Laat leeg om bij de eerste rij te beginnen.",
       trainSplitEnd: "Einde van trainingssplitsing",
-      trainSplitEndTooltip:
-        "Laatste rij-index uit de trainingssplitsing die wordt meegenomen (inclusief, vanaf 0). Stel bijvoorbeeld Begin in op 0 en Einde op 99 om op de eerste 100 rijen te trainen. Laat leeg om alle resterende rijen te gebruiken.",
+      trainSplitEndTooltip: "Laatste rij-index uit de trainingssplitsing die wordt meegenomen (inclusief, vanaf 0). Stel bijvoorbeeld Begin in op 0 en Einde op 99 om op de eerste 100 rijen te trainen. Laat leeg om alle resterende rijen te gebruiken.",
       endPlaceholder: "Einde",
       clear: "Wissen",
       dropFileOrClick: "Sleep een bestand hierheen of klik om te uploaden",
       uploadDetails: "Uploaddetails",
-      uploadDetailsTooltip:
-        "Maximaal {limit} per bestand. PDF, DOCX en TXT zijn geen datasets die klaar zijn voor training, dus converteer ze eerst in Learning Recipes.",
+      uploadDetailsTooltip: "Maximaal {limit} per bestand. PDF, DOCX en TXT zijn geen datasets die klaar zijn voor training, dus converteer ze eerst in Learning Recipes.",
       viewDataset: "Dataset bekijken",
       previewTokens: "Voorbeeld van tokens",
       tokenPreview: {
         title: "Tokenvoorbeeld",
-        description:
-          "Hoe {model} deze gegevens tokeniseert voor training. Alleen de tokenizer wordt gedownload.",
+        description: "Hoe {model} deze gegevens tokeniseert voor training. Alleen de tokenizer wordt gedownload.",
         datasetTab: "Datasetvoorbeelden",
         textTab: "Je eigen tekst",
         trained: "Getraind",
@@ -4654,8 +4043,7 @@ export const nl = {
         completionsOnly: "Alleen assistentaanvullingen",
         allTokens: "Alle tokens getraind",
         responseMarker: "Antwoordmarkering",
-        maskingNotApplied:
-          "De chatmarkeringen zijn niet gevonden, dus elk token wordt getraind.",
+        maskingNotApplied: "De chatmarkeringen zijn niet gevonden, dus elk token wordt getraind.",
         loading: "Tokenizer laden. Het eerste voorbeeld duurt iets langer...",
         shuffle: "Voorbeelden husselen",
         showIds: "Token-ID's tonen",
@@ -4663,21 +4051,16 @@ export const nl = {
         copied: "Token-ID's gekopieerd",
         sample: "Voorbeeld {index}",
         stats: "{tokens} tokens, {trained} getraind ({percent}%)",
-        truncated:
-          "Door de contextlengte ingekort tot {max} van {full} tokens.",
-        noTrained:
-          "Geen enkel token in deze rij wordt getraind, dus de training slaat de rij over.",
+        truncated: "Door de contextlengte ingekort tot {max} van {full} tokens.",
+        noTrained: "Geen enkel token in deze rij wordt getraind, dus de training slaat de rij over.",
         hiddenTokens: "{count} extra tokens niet getoond",
-        multimodal:
-          "Afbeeldings- en audiorijen worden hier niet getoond. Je kunt de tokenizer nog steeds uitproberen op je eigen tekst.",
+        multimodal: "Afbeeldings- en audiorijen worden hier niet getoond. Je kunt de tokenizer nog steeds uitproberen op je eigen tekst.",
         textPlaceholder: "Typ of plak tekst om de tokens te zien...",
-        textHint:
-          "Met alleen assistentaanvullingen wordt alleen de tekst na een assistentmarkering getraind.",
+        textHint: "Met alleen assistentaanvullingen wordt alleen de tekst na een assistentmarkering getraind.",
         insertExample: "Chatvoorbeeld invoegen",
         vocab: "Woordenschat: {count} tokens",
         retry: "Opnieuw proberen",
-        packing:
-          "Packing staat aan: de run voegt rijen samen tot reeksen met de contextlengte, dus waar een rij wordt afgekapt kan afwijken van deze weergave per rij.",
+        packing: "Packing staat aan: de run voegt rijen samen tot reeksen met de contextlengte, dus waar een rij wordt afgekapt kan afwijken van deze weergave per rij.",
       },
       uploadFailed: "Uploaden mislukt",
       unknownError: "Onbekende fout",
@@ -4686,8 +4069,7 @@ export const nl = {
       datasetUploaded: "Dataset geüpload",
       evalDatasetUploaded: "Evaluatiedataset geüpload",
       uploadOneFileAtATime: "Upload één bestand tegelijk",
-      uploadSingleFileDescription:
-        "Bij het uploaden van een trainingsdataset wordt één bestand geaccepteerd.",
+      uploadSingleFileDescription: "Bij het uploaden van een trainingsdataset wordt één bestand geaccepteerd.",
       previewLoadingHuggingFace: "Datasetvoorbeeld ophalen van Hugging Face...",
       previewLoading: "Voorbeeld laden...",
       mappingRequirements: {
@@ -4701,17 +4083,13 @@ export const nl = {
         heuristicTitle: "Heuristisch gedetecteerde toewijzing",
         readyTitle: "Toewijzing gereed",
         requiredTitle: "Datasetkolommen toewijzen",
-        heuristicDescription:
-          "We hebben de kolomtoewijzing hieronder automatisch gedetecteerd met heuristieken. Controleer en pas aan met de vervolgkeuzelijsten in de kolomkoppen, of gebruik AI Assist voor een slimmere toewijzing.",
-        readyDescription:
-          "Ziet er goed uit. We converteren deze dataset automatisch.",
-        requiredDescription:
-          "Wijs rollen toe aan kolommen met de vervolgkeuzelijsten in de koppen. Wijs minimaal {required} toe.",
+        heuristicDescription: "We hebben de kolomtoewijzing hieronder automatisch gedetecteerd met heuristieken. Controleer en pas aan met de vervolgkeuzelijsten in de kolomkoppen, of gebruik AI Assist voor een slimmere toewijzing.",
+        readyDescription: "Ziet er goed uit. We converteren deze dataset automatisch.",
+        requiredDescription: "Wijs rollen toe aan kolommen met de vervolgkeuzelijsten in de koppen. Wijs minimaal {required} toe.",
       },
       s3: {
         title: "S3-configuratie",
-        description:
-          "Datasets in .parquet, .json, .jsonl of .csv laden vanuit Amazon S3",
+        description: "Datasets in .parquet, .json, .jsonl of .csv laden vanuit Amazon S3",
         bucket: "Bucketnaam",
         bucketPlaceholder: "my-training-data-bucket",
         region: "AWS-regio",
@@ -4733,23 +4111,19 @@ export const nl = {
       },
       projectName: "Projectnaam",
       optional: "Optioneel",
-      projectNameDescription:
-        "Gebruikt in mapnamen voor trainingsuitvoer, standaardwaarden voor export en de geschiedenis.",
+      projectNameDescription: "Gebruikt in mapnamen voor trainingsuitvoer, standaardwaarden voor export en de geschiedenis.",
       loraSettings: "LoRA-instellingen",
       trainingHyperparameters: "Trainingshyperparameters",
       drafterSettings: "Drafter voor speculatieve decodering",
       drafterTrain: "Een drafter voor speculatieve decodering trainen",
-      drafterTrainTooltip:
-        "Traint na het finetunen een kleine draft-head zodat inferentie sneller draait in llama.cpp en vLLM; de uitvoer blijft ongewijzigd.",
+      drafterTrainTooltip: "Traint na het finetunen een kleine draft-head zodat inferentie sneller draait in llama.cpp en vLLM; de uitvoer blijft ongewijzigd.",
       drafterChecking: "Dit model controleren...",
       drafterUnavailable: "Niet beschikbaar voor dit model: {reason}",
       drafterRetrainMtp: "Traint de MTP-head van dit model opnieuw",
-      drafterEagle3:
-        "Traint een EAGLE-3-drafter (dit model heeft geen MTP-head)",
+      drafterEagle3: "Traint een EAGLE-3-drafter (dit model heeft geen MTP-head)",
       drafterDataSource: "Trainingsgegevens",
       drafterDataSourceDataset: "Antwoorden uit de dataset",
-      drafterDataSourceRegenerate:
-        "Eigen antwoorden van het model (trager, beter)",
+      drafterDataSourceRegenerate: "Eigen antwoorden van het model (trager, beter)",
       drafterMaxExamples: "Voorbeelden",
       drafterEpochs: "Epochs",
       drafterLearningRate: "Leersnelheid",
@@ -4765,21 +4139,16 @@ export const nl = {
       contextLengthTooltip: "Maximaal aantal tokens per trainingsvoorbeeld.",
       customContextLength: "Voer een aangepaste waarde in",
       learningRate: "Leersnelheid",
-      learningRateTooltip:
-        "Stapgrootte voor gewichtsupdates. Lagere waarden trainen langzamer maar stabieler.",
-      learningRateDescription:
-        "Aanbevolen: 2e-4 voor LoRA, 5e-5 voor CPT, 2e-5 voor volledige finetuning",
+      learningRateTooltip: "Stapgrootte voor gewichtsupdates. Lagere waarden trainen langzamer maar stabieler.",
+      learningRateDescription: "Aanbevolen: 2e-4 voor LoRA, 5e-5 voor CPT, 2e-5 voor volledige finetuning",
       embeddingLearningRate: "Leersnelheid voor embeddings",
-      embeddingLearningRateTooltip:
-        "Alleen gebruikt wanneer CPT embed_tokens traint. Embeddings raken makkelijker gedestabiliseerd dan LoRA-gewichten, dus ze hebben meestal een kleinere LR nodig. Laat leeg om lr/10 te gebruiken; het gebruikelijke werkbereik is 2x-10x kleiner dan de hoofd-LR. Verhoog deze alleen als de aanpassing van woordenschat of domeintokens te traag gaat.",
+      embeddingLearningRateTooltip: "Alleen gebruikt wanneer CPT embed_tokens traint. Embeddings raken makkelijker gedestabiliseerd dan LoRA-gewichten, dus ze hebben meestal een kleinere LR nodig. Laat leeg om lr/10 te gebruiken; het gebruikelijke werkbereik is 2x-10x kleiner dan de hoofd-LR. Verhoog deze alleen als de aanpassing van woordenschat of domeintokens te traag gaat.",
       rank: "Rang",
-      rankTooltip:
-        "Dimensie van de matrices met lage rang. Hoger = meer capaciteit.",
+      rankTooltip: "Dimensie van de matrices met lage rang. Hoger = meer capaciteit.",
       alpha: "Alpha",
       alphaTooltip: "Schaalfactor voor LoRA-updates. Meestal 2x de rang.",
       dropout: "Dropout",
-      dropoutTooltip:
-        "Dropout-kans voor LoRA-lagen om overfitting te verminderen.",
+      dropoutTooltip: "Dropout-kans voor LoRA-lagen om overfitting te verminderen.",
       visionLayers: "Visielagen",
       languageLayers: "Taallagen",
       attentionModules: "Attention-modules",
@@ -4791,19 +4160,15 @@ export const nl = {
       memoryEfficient: "Met SVD geïnitialiseerde LoRA",
       weightDecomposed: "LoRA met vermenigvuldigers",
       notSupportedAppleSilicon: "Niet ondersteund op Apple Silicon",
-      doraNeedsVisionLayersOff:
-        "Schakel training van visielagen uit om DoRA te gebruiken",
+      doraNeedsVisionLayersOff: "Schakel training van visielagen uit om DoRA te gebruiken",
       optimization: "Optimalisatie",
       schedule: "Schema",
       memory: "Geheugen",
       optimizer: "Optimizer",
-      optimizerTooltip:
-        "Optimalisatiealgoritme. 8-bit varianten verminderen het geheugengebruik. Fused wordt aanbevolen voor visiemodellen.",
-      optimizerTooltipMlx:
-        "Optimalisatiealgoritme. AdamW is de standaard. Lion gebruikt minder geheugen, maar heeft meestal een lagere leersnelheid nodig.",
+      optimizerTooltip: "Optimalisatiealgoritme. 8-bit varianten verminderen het geheugengebruik. Fused wordt aanbevolen voor visiemodellen.",
+      optimizerTooltipMlx: "Optimalisatiealgoritme. AdamW is de standaard. Lion gebruikt minder geheugen, maar heeft meestal een lagere leersnelheid nodig.",
       lrScheduler: "LR-scheduler",
-      lrSchedulerTooltip:
-        "Hoe de leersnelheid verandert tijdens de training. Lineair neemt gelijkmatig af; cosinus neemt af in een curve.",
+      lrSchedulerTooltip: "Hoe de leersnelheid verandert tijdens de training. Lineair neemt gelijkmatig af; cosinus neemt af in een curve.",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4817,42 +4182,33 @@ export const nl = {
         cosine: "Cosinus",
       },
       batchSize: "Batchgrootte",
-      batchSizeTooltip:
-        "Aantal samples dat per stap wordt verwerkt. Hoger gebruikt meer VRAM.",
+      batchSizeTooltip: "Aantal samples dat per stap wordt verwerkt. Hoger gebruikt meer VRAM.",
       gradAccum: "Gradiëntaccumulatiestappen",
       gradAccumTooltip: "Simuleert grotere batchgroottes zonder extra VRAM.",
       weightDecay: "Gewichtsverval",
       weightDecayTooltip: "L2-regularisatie om overfitting te voorkomen.",
       warmupSteps: "Opwarmstappen",
-      warmupStepsTooltip:
-        "Verhoog de leersnelheid geleidelijk aan het begin van de training voor stabiliteit.",
-      scheduleEpochsTooltip:
-        "Aantal volledige doorgangen door de dataset. Stel in op 0 om op het maximumaantal stappen te trainen.",
+      warmupStepsTooltip: "Verhoog de leersnelheid geleidelijk aan het begin van de training voor stabiliteit.",
+      scheduleEpochsTooltip: "Aantal volledige doorgangen door de dataset. Stel in op 0 om op het maximumaantal stappen te trainen.",
       saveSteps: "Opslagstappen",
-      saveStepsTooltip:
-        "Sla elke N stappen een checkpoint op. 0 om uit te schakelen.",
+      saveStepsTooltip: "Sla elke N stappen een checkpoint op. 0 om uit te schakelen.",
       evalSteps: "Evaluatiestappen",
-      evalStepsTooltip:
-        "Fractie van het totale aantal trainingsstappen tussen evaluaties (0-1). Stel in op 0 om evaluatie uit te schakelen. Bijv. 0,01 = evalueer elke 1% van de stappen.",
+      evalStepsTooltip: "Fractie van het totale aantal trainingsstappen tussen evaluaties (0-1). Stel in op 0 om evaluatie uit te schakelen. Bijv. 0,01 = evalueer elke 1% van de stappen.",
       earlyStoppingPatience: "Geduld voor vroegtijdig stoppen",
-      earlyStoppingPatienceTooltip:
-        "Stop de training na dit aantal opeenvolgende evaluaties zonder lagere evaluatie-loss en behoud de gewichten van de beste evaluatie. Vereist evaluatie (evaluatiestappen boven 0). 0 om uit te schakelen.",
+      earlyStoppingPatienceTooltip: "Stop de training na dit aantal opeenvolgende evaluaties zonder lagere evaluatie-loss en behoud de gewichten van de beste evaluatie. Vereist evaluatie (evaluatiestappen boven 0). 0 om uit te schakelen.",
       seed: "Seed",
       seedTooltip: "Willekeurige seed voor reproduceerbaarheid.",
       offloadLayers: "Lagen uitbesteden",
-      offloadLayersTooltip:
-        "Houd decoderlagen in het systeem-RAM en stream elke laag naar de GPU vlak voordat die wordt uitgevoerd, zodat een model dat groter is dan je VRAM met LoRA kan trainen. Automatisch besteedt zo weinig mogelijk lagen uit; een aantal besteedt precies zoveel lagen uit. Vereist gradient checkpointing.",
+      offloadLayersTooltip: "Houd decoderlagen in het systeem-RAM en stream elke laag naar de GPU vlak voordat die wordt uitgevoerd, zodat een model dat groter is dan je VRAM met LoRA kan trainen. Automatisch besteedt zo weinig mogelijk lagen uit; een aantal besteedt precies zoveel lagen uit. Vereist gradient checkpointing.",
       offloadOff: "Uit",
       offloadAuto: "Automatisch",
       offloadCount: "Aantal",
       offloadVramBudget: "VRAM-budget (GiB)",
-      offloadVramBudgetTooltip:
-        "De maximale hoeveelheid VRAM die deze run mag gebruiken. Automatisch besteedt genoeg lagen uit om daaronder te blijven, en twee runs kunnen één kaart delen door elk een deel te gebruiken. Leeg gebruikt de hele kaart.",
+      offloadVramBudgetTooltip: "De maximale hoeveelheid VRAM die deze run mag gebruiken. Automatisch besteedt genoeg lagen uit om daaronder te blijven, en twee runs kunnen één kaart delen door elk een deel te gebruiken. Leeg gebruikt de hele kaart.",
       offloadWholeCard: "hele kaart",
       offloadVramBudgetGpu: "VRAM-budget GPU {index} (GiB)",
       prefetchDepth: "Prefetch-diepte",
-      prefetchDepthTooltip:
-        "Hoeveel uitbestede lagen vooruit worden gekopieerd ten opzichte van de laag die wordt uitgevoerd. Automatisch begint bij 1 en houdt alleen een diepere pool aan zolang dat het wachten op kopieën meetbaar verkort.",
+      prefetchDepthTooltip: "Hoeveel uitbestede lagen vooruit worden gekopieerd ten opzichte van de laag die wordt uitgevoerd. Automatisch begint bij 1 en houdt alleen een diepere pool aan zolang dat het wachten op kopieën meetbaar verkort.",
       offloadPanelTitle: "Uitbestede lagen",
       offloadPanelGpu: "Op GPU",
       offloadPanelHost: "In systeem-RAM",
@@ -4864,23 +4220,32 @@ export const nl = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "prefetch-diepte",
       offloadPanelPinned: "vastgezet",
-      offloadPanelSweepNote:
-        "Het bewegende venster toont de volgorde waarin lagen worden opgehaald, vertraagd zodat het zichtbaar is; de getallen zijn gemeten bij de laatste stap.",
+      offloadPanelSweepNote: "Het bewegende venster toont de volgorde waarin lagen worden opgehaald, vertraagd zodat het zichtbaar is; de getallen zijn gemeten bij de laatste stap.",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Onbekende kaart",
       gradCheckpoint: "Gradient checkpointing",
-      gradCheckpointTooltip:
-        "Ruil rekenkracht in voor geheugen door activaties opnieuw te berekenen.",
+      gradCheckpointTooltip: "Ruil rekenkracht in voor geheugen door activaties opnieuw te berekenen.",
       none: "Geen",
       standard: "Standaard",
       enablePacking: "Packing inschakelen",
       assistantCompletionsOnly: "Alleen assistentaanvullingen",
       readMore: "Meer lezen",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Kan run niet dupliceren",
-      duplicateDraftChanged:
-        "Trainingsinstellingen zijn gewijzigd tijdens het laden. Probeer opnieuw te dupliceren.",
+      duplicateDraftChanged: "Trainingsinstellingen zijn gewijzigd tijdens het laden. Probeer opnieuw te dupliceren.",
       duplicateNoModel: "Deze run heeft geen opgeslagen modelconfiguratie.",
       startTraining: "Training starten",
       starting: "Starten...",
@@ -4890,52 +4255,35 @@ export const nl = {
       chooseDataset: "Kies een dataset",
       chooseModelAndDataset: "Kies model en dataset",
       validation: {
-        s3MultimodalUnsupported:
-          "S3-datasets worden nog niet ondersteund voor vision-training.",
+        s3MultimodalUnsupported: "S3-datasets worden nog niet ondersteund voor vision-training.",
         s3BucketRequired: "Voer eerst een S3-bucketnaam in.",
-        s3CredentialsRequired:
-          "Geef S3-toegangssleutels op of schakel IAM-rol in.",
+        s3CredentialsRequired: "Geef S3-toegangssleutels op of schakel IAM-rol in.",
         modelRequired: "Selecteer eerst een basismodel.",
         learningRatePositive: "Voer een leersnelheid groter dan nul in.",
-        embeddingLearningRateRange:
-          "Voer een embedding-leersnelheid groter dan 0 en kleiner dan 1 in.",
-        decisionColumnsMissing:
-          "Beslissingsmodellen hebben de kolommen state, questions en gold (of answers) nodig. Ontbrekend: {columns}.",
-        decisionOwnerOnly:
-          "Alleen de eigenaar van Unsloth kan beslissingsmodellen finetunen.",
+        embeddingLearningRateRange: "Voer een embedding-leersnelheid groter dan 0 en kleiner dan 1 in.",
+        decisionColumnsMissing: "Beslissingsmodellen hebben de kolommen state, questions en gold (of answers) nodig. Ontbrekend: {columns}.",
+        decisionOwnerOnly: "Alleen de eigenaar van Unsloth kan beslissingsmodellen finetunen.",
         hfDatasetRequired: "Selecteer eerst een Hugging Face-dataset.",
-        hfDatasetSplitRequired:
-          "Selecteer of voer eerst een trainingssplit in.",
+        hfDatasetSplitRequired: "Selecteer of voer eerst een trainingssplit in.",
         localDatasetRequired: "Selecteer eerst een lokale dataset.",
         unsupportedDatasetSource: "Niet-ondersteunde datasetbron.",
       },
       startFailed: "Kan training niet starten",
-      startUnconfirmed:
-        "Unsloth kan niet bevestigen of de training is gestart. Status wordt op de achtergrond gecontroleerd.",
+      startUnconfirmed: "Unsloth kan niet bevestigen of de training is gestart. Status wordt op de achtergrond gecontroleerd.",
       stopFailed: "Kan training niet stoppen",
       trainingStillActiveTitle: "Training nog actief",
-      stopBeforeConfig:
-        "Stop eerst de training en keer dan terug naar de configuratie.",
+      stopBeforeConfig: "Stop eerst de training en keer dan terug naar de configuratie.",
       resumeFailed: "Kan training niet hervatten",
       resumeFailedTitle: "Kan training niet hervatten",
-      resumeUnavailable:
-        "Alleen gestopte of mislukte runs met een opgeslagen checkpoint kunnen worden hervat.",
-      modelUnverified:
-        "Kan de instellingen van dit model niet verifiëren. Controleer je verbinding of Hugging Face-token en probeer het opnieuw.",
-      legacyDatasetScriptUnsupported:
-        "Deze Hub-dataset is afhankelijk van een verouderd aangepast script en wordt niet ondersteund in deze trainingsflow.",
-      hfModelAccessDenied:
-        "Hugging Face heeft toegang tot dit model geweigerd. Voeg een geldig Hugging Face-token met toegang tot de repository toe, accepteer eventuele vereiste toegangsvoorwaarden en probeer het opnieuw.",
-      hfModelVerificationRateLimited:
-        "De verificatie van het Hugging Face-model is tijdelijk beperkt. Probeer het zo opnieuw.",
-      hfModelVerificationFailed:
-        "Het Hugging Face-model kan niet worden geverifieerd. Controleer de repository-ID en je toegangstoken.",
-      hfModelMetadataUnavailable:
-        "De metadata van het Hugging Face-model zijn tijdelijk niet beschikbaar. Probeer het opnieuw voordat je de training start.",
-      datasetUnverified:
-        "Kan niet verifiëren of de dataset compatibel is met dit model. Controleer je verbinding of Hugging Face-token. Bij het starten van de training wordt de controle opnieuw uitgevoerd.",
-      setupChanged:
-        "De trainingsconfiguratie is gewijzigd tijdens het controleren. Bekijk deze en start opnieuw.",
+      resumeUnavailable: "Alleen gestopte of mislukte runs met een opgeslagen checkpoint kunnen worden hervat.",
+      modelUnverified: "Kan de instellingen van dit model niet verifiëren. Controleer je verbinding of Hugging Face-token en probeer het opnieuw.",
+      legacyDatasetScriptUnsupported: "Deze Hub-dataset is afhankelijk van een verouderd aangepast script en wordt niet ondersteund in deze trainingsflow.",
+      hfModelAccessDenied: "Hugging Face heeft toegang tot dit model geweigerd. Voeg een geldig Hugging Face-token met toegang tot de repository toe, accepteer eventuele vereiste toegangsvoorwaarden en probeer het opnieuw.",
+      hfModelVerificationRateLimited: "De verificatie van het Hugging Face-model is tijdelijk beperkt. Probeer het zo opnieuw.",
+      hfModelVerificationFailed: "Het Hugging Face-model kan niet worden geverifieerd. Controleer de repository-ID en je toegangstoken.",
+      hfModelMetadataUnavailable: "De metadata van het Hugging Face-model zijn tijdelijk niet beschikbaar. Probeer het opnieuw voordat je de training start.",
+      datasetUnverified: "Kan niet verifiëren of de dataset compatibel is met dit model. Controleer je verbinding of Hugging Face-token. Bij het starten van de training wordt de controle opnieuw uitgevoerd.",
+      setupChanged: "De trainingsconfiguratie is gewijzigd tijdens het controleren. Bekijk deze en start opnieuw.",
       uploadConfigTooltip: "Een opgeslagen YAML-configuratie laden",
       saveConfigTooltip: "Huidige configuratie downloaden als YAML",
       resetConfigTooltip: "Terugzetten naar modelstandaarden",
@@ -4946,17 +4294,14 @@ export const nl = {
       failedToReadFile: "Kan bestand niet lezen",
       failedToSaveConfig: "Kan configuratie niet opslaan",
       parametersReset: "Parameters teruggezet naar modelstandaarden",
-      audioIncompatible:
-        "Dit model ondersteunt geen audio. Schakel over naar een model dat audio ondersteunt of kies een dataset zonder audio.",
-      visionIncompatible:
-        "Een tekstmodel is niet compatibel met een multimodale dataset. Schakel over naar een vision-model of kies een dataset met alleen tekst.",
+      audioIncompatible: "Dit model ondersteunt geen audio. Schakel over naar een model dat audio ondersteunt of kies een dataset zonder audio.",
+      visionIncompatible: "Een tekstmodel is niet compatibel met een multimodale dataset. Schakel over naar een vision-model of kies een dataset met alleen tekst.",
       cancelTitle: "Training annuleren",
       cancelDescription: "Wil je de huidige training annuleren?",
       continueAction: "Training voortzetten",
       cancelAction: "Training annuleren",
       stopTitle: "Training stoppen",
-      stopDescription:
-        "Kies hoe je de huidige training wilt stoppen. Stoppen en opslaan schrijft een checkpoint waarmee je later kunt hervatten; stoppen zonder opslaan kan niet worden hervat.",
+      stopDescription: "Kies hoe je de huidige training wilt stoppen. Stoppen en opslaan schrijft een checkpoint waarmee je later kunt hervatten; stoppen zonder opslaan kan niet worden hervat.",
       stopAction: "Stoppen",
       stopping: "Stoppen...",
       stopAndSave: "Stoppen en opslaan",
@@ -4964,27 +4309,21 @@ export const nl = {
       exportModel: "Model exporteren",
       milestone: "Mijlpaal",
       halfwayDone: "Halverwege. De training is voorbij 50%.",
-      doneNextStep:
-        "Training voltooid. Volgende stap: vergelijk de uitvoer van het basismodel met die van het gefinetunede model.",
+      doneNextStep: "Training voltooid. Volgende stap: vergelijk de uitvoer van het basismodel met die van het gefinetunede model.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Geschiedenis",
       filesDeleted: "Bestanden verwijderd",
       deleteArtifactsLabel: "Ook adapterbestanden op schijf verwijderen",
-      deleteArtifactsDescription:
-        "Verwijdert de uitvoermap van de run, inclusief opgeslagen adapters en checkpoints.",
-      deleteArtifactsSharedNote:
-        "Een andere run deelt deze uitvoermap. Bestanden blijven bewaard totdat de laatste run die ze gebruikt is verwijderd.",
-      artifactsKeptShared:
-        "Run verwijderd. Adapterbestanden zijn bewaard omdat een andere run dezelfde map gebruikt.",
-      deleteArtifactsActiveError:
-        "Deze bestanden worden gebruikt door de lopende training. Stop de training voordat je ze verwijdert.",
-      deleteArtifactsFailed:
-        "De run is verwijderd, maar de bestanden ervan kunnen niet worden verwijderd.",
-      deleteArtifactsRetainedError:
-        "De adapterbestanden kunnen niet worden verwijderd, dus de training is in de geschiedenis bewaard.",
-      emptyDescription:
-        "Nog geen trainingsruns. Start je eerste training op het tabblad Configureren.",
+      deleteArtifactsDescription: "Verwijdert de uitvoermap van de run, inclusief opgeslagen adapters en checkpoints.",
+      deleteArtifactsSharedNote: "Een andere run deelt deze uitvoermap. Bestanden blijven bewaard totdat de laatste run die ze gebruikt is verwijderd.",
+      artifactsKeptShared: "Run verwijderd. Adapterbestanden zijn bewaard omdat een andere run dezelfde map gebruikt.",
+      deleteArtifactsActiveError: "Deze bestanden worden gebruikt door de lopende training. Stop de training voordat je ze verwijdert.",
+      deleteArtifactsFailed: "De run is verwijderd, maar de bestanden ervan kunnen niet worden verwijderd.",
+      deleteArtifactsRetainedError: "De adapterbestanden kunnen niet worden verwijderd, dus de training is in de geschiedenis bewaard.",
+      emptyDescription: "Nog geen trainingsruns. Start je eerste training op het tabblad Configureren.",
       loadError: "Kan trainingsruns niet laden",
       deleteError: "Kan training niet verwijderen. Probeer het opnieuw.",
       retry: "Opnieuw proberen",
@@ -4993,8 +4332,7 @@ export const nl = {
       loadingRun: "Training laden...",
       runNotFound: "Run niet gevonden",
       deleteTitle: "Training verwijderen?",
-      deleteDescription:
-        "Hiermee worden deze training en alle bijbehorende metrics definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
+      deleteDescription: "Hiermee worden deze training en alle bijbehorende metrics definitief verwijderd. Deze actie kan niet ongedaan worden gemaakt.",
       resumeTraining: "Training hervatten",
       resuming: "Hervatten...",
       deleteRun: "Run verwijderen",
@@ -5018,22 +4356,35 @@ export const nl = {
       copyPreviewLink: "Voorbeeldlink kopiëren",
       previewLinkCopied: "Voorbeeldlink gekopieerd",
       previewLinkCopyFailed: "Kan de link niet kopiëren",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Grafiekinstellingen",
-      settingsDescription:
-        "Pas de weergave van grafieken aan terwijl de training doorloopt.",
+      settingsDescription: "Pas de weergave van grafieken aan terwijl de training doorloopt.",
       openSettings: "Grafiekinstellingen openen",
       viewWindow: "Weergavevenster",
-      viewWindowDescription:
-        "Toon alleen de laatste stappen of de volledige geschiedenis.",
+      viewWindowDescription: "Toon alleen de laatste stappen of de volledige geschiedenis.",
       window: "Venster",
       all: "Alles",
       trainingLoss: "Trainings-loss",
       trainingLossDescription: "Overlays en EMA-afvlakking beheren.",
       smoothing: "Afvlakking",
-      smoothingDescription:
-        "Schuif naar rechts voor meer afvlakking. `0` = onbewerkt.",
+      smoothingDescription: "Schuif naar rechts voor meer afvlakking. `0` = onbewerkt.",
       showRawLoss: "Onbewerkte loss tonen",
       showSmoothedLoss: "Afgevlakte loss tonen",
       showAverageLine: "Gemiddeldelijn tonen",
@@ -5059,8 +4410,7 @@ export const nl = {
       waitingForFirstEvaluationStep: "Wachten op eerste evaluatiestap...",
       evaluationNotConfigured: "Evaluatie niet geconfigureerd",
       evalChartWillAppear: "De grafiek verschijnt zodra eval_steps is bereikt",
-      setEvalDatasetAndSteps:
-        "Stel een evaluatiedataset en eval_steps in om de evaluatie-loss te volgen",
+      setEvalDatasetAndSteps: "Stel een evaluatiedataset en eval_steps in om de evaluatie-loss te volgen",
     },
     progress: {
       title: "Trainingsvoortgang",
@@ -5068,8 +4418,7 @@ export const nl = {
       exportGguf: "Exporteren naar GGUF",
       useInDecisionApi: "Gebruiken in Decision API",
       decisionApiEnabled: "De Decision API gebruikt nu {name}.",
-      decisionApiFailed:
-        "Kan de Decision API niet naar dit model overschakelen.",
+      decisionApiFailed: "Kan de Decision API niet naar dit model overschakelen.",
       openConfig: "Trainingsconfiguratie openen",
       configLabel: "Trainingsconfiguratie",
       hyperparams: "Hyperparameters",
@@ -5118,6 +4467,9 @@ export const nl = {
         error: "Fout",
         stopped: "Gestopt",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Gereed",
@@ -5133,26 +4485,141 @@ export const nl = {
       dataset: "Dataset",
       datasetStreaming: "Dataset: streamen (geen volledige download)",
       modelWeights: "Modelgewichten",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Gewichten {model} + context {context} = {total} van {budget} bruikbaar VRAM",
-    readoutWithSpec:
-      "Gewichten {model} + KV {kv} + MTP-draft {spec} = {total} van {budget} bruikbaar VRAM",
+    readout: "Gewichten {model} + context {context} = {total} van {budget} bruikbaar VRAM",
+    readoutWithSpec: "Gewichten {model} + KV {kv} + MTP-draft {spec} = {total} van {budget} bruikbaar VRAM",
     kvRate: "KV gereserveerd, ~{rate}/token",
     oomLikely: "Met de huidige instellingen is OOM waarschijnlijk",
-    tooLarge:
-      "Groter dan VRAM, wordt uitbesteed aan de CPU. Een kleinere kwantisatie werkt sneller",
+    tooLarge: "Groter dan VRAM, wordt uitbesteed aan de CPU. Een kleinere kwantisatie werkt sneller",
   },
   skills: {
     title: "Skills",
-    description:
-      "Skills worden gevonden in je standaard agentmappen. Schakel ze hier in en typ daarna @ in de chat om er een te noemen.",
+    description: "Skills worden gevonden in je standaard agentmappen. Schakel ze hier in en typ daarna @ in de chat om er een te noemen.",
     precedence: "~/.agents/skills heeft voorrang op ~/.claude/skills.",
     refresh: "Vernieuwen",
-    empty:
-      "Geen skills gevonden. Voeg een map met SKILL.md toe onder ~/.agents/skills of ~/.claude/skills en vernieuw daarna.",
+    empty: "Geen skills gevonden. Voeg een map met SKILL.md toe onder ~/.agents/skills of ~/.claude/skills en vernieuw daarna.",
     sourceAgents: "Agents",
     sourceClaude: "Claude",
     sourceBundled: "Meegeleverd",
@@ -5166,24 +4633,17 @@ export const nl = {
     newSkill: "Nieuwe skill",
     import: "Importeren",
     delete: "{name} verwijderen",
-    createDescription:
-      "Opgeslagen als SKILL.md in een nieuwe map onder ~/.agents/skills en ingeschakeld zodra deze bestaat.",
+    createDescription: "Opgeslagen als SKILL.md in een nieuwe map onder ~/.agents/skills en ingeschakeld zodra deze bestaat.",
     nameLabel: "Naam",
     namePlaceholder: "bijv. code-arithmetic",
-    nameHint:
-      "Kleine letters, cijfers en enkele koppeltekens. Dit is ook de mapnaam.",
-    nameInvalid:
-      "Gebruik 1-64 kleine letters, cijfers of enkele koppeltekens, niet beginnend of eindigend met een koppelteken.",
+    nameHint: "Kleine letters, cijfers en enkele koppeltekens. Dit is ook de mapnaam.",
+    nameInvalid: "Gebruik 1-64 kleine letters, cijfers of enkele koppeltekens, niet beginnend of eindigend met een koppelteken.",
     descriptionLabel: "Beschrijving",
-    descriptionPlaceholder:
-      "Gebruiken wanneer de gebruiker om een berekening vraagt. Bereken het altijd met de codetool.",
-    descriptionHint:
-      "De regel die het model in zijn skillcatalogus ziet. Op basis hiervan beslist het wanneer de skill wordt gelezen.",
+    descriptionPlaceholder: "Gebruiken wanneer de gebruiker om een berekening vraagt. Bereken het altijd met de codetool.",
+    descriptionHint: "De regel die het model in zijn skillcatalogus ziet. Op basis hiervan beslist het wanneer de skill wordt gelezen.",
     instructionsLabel: "Instructies",
-    instructionsPlaceholder:
-      "Wat te doen wanneer deze skill van toepassing is, in Markdown.",
-    instructionsHint:
-      "De inhoud van SKILL.md, volledig gelezen zodra het model de skill kiest.",
+    instructionsPlaceholder: "Wat te doen wanneer deze skill van toepassing is, in Markdown.",
+    instructionsHint: "De inhoud van SKILL.md, volledig gelezen zodra het model de skill kiest.",
     create: "Skill maken",
     save: "Wijzigingen opslaan",
     created: "{name} gemaakt",
@@ -5198,16 +4658,13 @@ export const nl = {
     importError: "Kan skill niet importeren",
     exportError: "Kan skill niet exporteren",
     deleteTitle: "Skill verwijderen",
-    deleteDescription:
-      "“{name}” en alles in de bijbehorende map onder ~/.agents/skills verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    deleteDescription: "“{name}” en alles in de bijbehorende map onder ~/.agents/skills verwijderen? Dit kan niet ongedaan worden gemaakt.",
     search: "Skills zoeken op naam of beschrijving…",
     noMatch: "Geen skills gevonden voor “{query}”",
     clearSearch: "Zoekopdracht wissen",
-    readOnlyClaude:
-      "Alleen-lezen: gevonden in ~/.claude/skills. Bewerk het bestand daar.",
+    readOnlyClaude: "Alleen-lezen: gevonden in ~/.claude/skills. Bewerk het bestand daar.",
     readOnlyBundled: "Alleen-lezen: meegeleverd met Unsloth.",
-    readOnlyLinked:
-      "Alleen-lezen: dit item is een link. Bewerk de bestanden op hun eigen locatie.",
+    readOnlyLinked: "Alleen-lezen: dit item is een link. Bewerk de bestanden op hun eigen locatie.",
     characters: "{count} tekens",
     unsaved: "niet-opgeslagen wijzigingen",
     revert: "Terugdraaien",
@@ -5216,11 +4673,9 @@ export const nl = {
     compatibilityLabel: "Compatibiliteit",
     allowedToolsLabel: "Toegestane tools",
     sectionAgents: "Jouw skills",
-    sectionAgentsHint:
-      "Opgeslagen in ~/.agents/skills. Maak, bewerk en verwijder ze hier.",
+    sectionAgentsHint: "Opgeslagen in ~/.agents/skills. Maak, bewerk en verwijder ze hier.",
     sectionClaude: "Claude-skills",
-    sectionClaudeHint:
-      "Gevonden in ~/.claude/skills. Hier alleen-lezen; bewerk de bestanden daar.",
+    sectionClaudeHint: "Gevonden in ~/.claude/skills. Hier alleen-lezen; bewerk de bestanden daar.",
     sectionBundled: "Meegeleverd",
     sectionBundledHint: "Meegeleverd met Unsloth. Alleen-lezen.",
     linked: "Link",
@@ -5235,8 +4690,7 @@ export const nl = {
     disableAll: "Alles uitschakelen",
     resetAll: "Standaardwaarden herstellen",
     resetTitle: "Alle skills resetten?",
-    resetDescription:
-      "Elke skill wordt teruggezet naar de toestand van een nieuwe installatie: jouw skills en Claude-skills aan, meegeleverde skills uit. Je keuzes voor aan en uit worden gewist.",
+    resetDescription: "Elke skill wordt teruggezet naar de toestand van een nieuwe installatie: jouw skills en Claude-skills aan, meegeleverde skills uit. Je keuzes voor aan en uit worden gewist.",
     reset: "Opnieuw instellen",
   },
   translate: {
@@ -5345,8 +4799,7 @@ export const nl = {
   },
   scheduledTasks: {
     title: "Gepland",
-    description:
-      "Voer prompts volgens een planning uit met een van je modellen.",
+    description: "Voer prompts volgens een planning uit met een van je modellen.",
     newTask: "Nieuwe taak",
     upcoming: "Binnenkort",
     columns: {
@@ -5365,8 +4818,7 @@ export const nl = {
     chatMark: "Chat van een geplande taak",
     taskMissing: "Deze taak bestaat niet meer.",
     emptyTitle: "Nog geen geplande taken",
-    emptyDescription:
-      "Ontvang een dagelijkse samenvatting, een wekelijkse herinnering of iets anders dat je volgens een planning wilt laten doen.",
+    emptyDescription: "Ontvang een dagelijkse samenvatting, een wekelijkse herinnering of iets anders dat je volgens een planning wilt laten doen.",
     createFirst: "Een taak maken",
     loadFailed: "Kan geplande taken niet laden.",
     retry: "Opnieuw proberen",
@@ -5400,8 +4852,7 @@ export const nl = {
       name: "Naam",
       namePlaceholder: "Naam (optioneel)",
       instructions: "Instructies",
-      instructionsHint:
-        "Wordt naar het model gestuurd telkens wanneer de taak wordt uitgevoerd.",
+      instructionsHint: "Wordt naar het model gestuurd telkens wanneer de taak wordt uitgevoerd.",
       instructionsPlaceholder: "Instructies…",
       repeat: "Herhalen",
       once: "Eenmalig",
@@ -5413,8 +4864,7 @@ export const nl = {
       time: "Tijd",
       days: "Dagen",
       dayOfMonth: "Dag van de maand",
-      lastDayNote:
-        "In maanden zonder deze dag wordt de taak op de laatste dag uitgevoerd.",
+      lastDayNote: "In maanden zonder deze dag wordt de taak op de laatste dag uitgevoerd.",
       advanced: "Geavanceerd",
       notifications: "Meldingen",
       notifyAll: "Elke uitvoering",
@@ -5427,16 +4877,12 @@ export const nl = {
       model: "Model",
       modelLoaded: "Het model dat geladen is",
       modelOnDevice: "Op dit apparaat",
-      modelNote:
-        "Als dit model niet geladen is wanneer de taak wordt uitgevoerd, vraagt Unsloth het eerst.",
-      modelNoteAllowed:
-        "Laadt dit model alleen terwijl je niet met Unsloth bezig bent en zet daarna terug wat je had.",
-      modelEmpty:
-        "Download een model in Modelhub of voeg een verbinding toe om een ander model te kiezen.",
+      modelNote: "Als dit model niet geladen is wanneer de taak wordt uitgevoerd, vraagt Unsloth het eerst.",
+      modelNoteAllowed: "Laadt dit model alleen terwijl je niet met Unsloth bezig bent en zet daarna terug wat je had.",
+      modelEmpty: "Download een model in Modelhub of voeg een verbinding toe om een ander model te kiezen.",
       modelMissing: "{model} (niet op dit apparaat)",
       allowLoad: "Automatisch wisselen als ik weg ben",
-      allowLoadHint:
-        "Wanneer deze taak aan de beurt is en je Unsloth 5 minuten niet hebt gebruikt, wordt dit model zonder te vragen geladen, wordt de taak uitgevoerd en wordt daarna teruggeschakeld naar het model dat je had. Als je op dat moment Unsloth gebruikt of aan het trainen bent, wordt de uitvoering overgeslagen en blijft je model ongemoeid. Als dit uit staat, vraagt Unsloth het voordat er wordt geladen.",
+      allowLoadHint: "Wanneer deze taak aan de beurt is en je Unsloth 5 minuten niet hebt gebruikt, wordt dit model zonder te vragen geladen, wordt de taak uitgevoerd en wordt daarna teruggeschakeld naar het model dat je had. Als je op dat moment Unsloth gebruikt of aan het trainen bent, wordt de uitvoering overgeslagen en blijft je model ongemoeid. Als dit uit staat, vraagt Unsloth het voordat er wordt geladen.",
       reasoning: "Denkinspanning",
       reasoningDefault: "Standaard",
       reasoningOff: "Uit",
@@ -5446,20 +4892,14 @@ export const nl = {
     },
     deleteDialog: {
       title: "Geplande taak verwijderen?",
-      description:
-        "“{title}” wordt niet meer uitgevoerd. Chats die al zijn gemaakt, blijven bewaard.",
+      description: "“{title}” wordt niet meer uitgevoerd. Chats die al zijn gemaakt, blijven bewaard.",
     },
     errors: {
-      noModel:
-        "Er was geen model geladen. Laad een model in Chat en voer de taak daarna opnieuw uit.",
-      modelNotLoaded:
-        "Het model van de taak was niet geladen. Laad het in Chat en voer de taak daarna opnieuw uit.",
-      modelLoadFailed:
-        "Kan het model van de taak niet laden. Controleer of het nog is gedownload in Modelhub.",
-      modelBusy:
-        "Overgeslagen omdat je Unsloth aan het gebruiken was, dus je model is ongemoeid gelaten.",
-      connectionUnavailable:
-        "De verbinding van de taak ontbreekt of is uitgeschakeld. Controleer deze in Verbindingen.",
+      noModel: "Er was geen model geladen. Laad een model in Chat en voer de taak daarna opnieuw uit.",
+      modelNotLoaded: "Het model van de taak was niet geladen. Laad het in Chat en voer de taak daarna opnieuw uit.",
+      modelLoadFailed: "Kan het model van de taak niet laden. Controleer of het nog is gedownload in Modelhub.",
+      modelBusy: "Overgeslagen omdat je Unsloth aan het gebruiken was, dus je model is ongemoeid gelaten.",
+      connectionUnavailable: "De verbinding van de taak ontbreekt of is uitgeschakeld. Controleer deze in Verbindingen.",
       timeout: "Het model deed er te lang over om te antwoorden.",
       cancelled: "De uitvoering is gestopt voordat deze klaar was.",
       interrupted: "Unsloth is gesloten voordat de uitvoering klaar was.",
@@ -5472,10 +4912,8 @@ export const nl = {
     },
     loadPrompt: {
       title: "{model} laden?",
-      description:
-        "“{title}” draait op {model}, dat niet geladen is. Bij uitvoeren wordt {model} geladen totdat de taak klaar is, waarna wordt teruggezet wat je had.",
-      always:
-        "Niet meer vragen. Alleen wisselen als ik niet met Unsloth bezig ben.",
+      description: "“{title}” draait op {model}, dat niet geladen is. Bij uitvoeren wordt {model} geladen totdat de taak klaar is, waarna wordt teruggezet wat je had.",
+      always: "Niet meer vragen. Alleen wisselen als ik niet met Unsloth bezig ben.",
       notNow: "Niet nu",
       load: "Laden en uitvoeren",
     },
@@ -5486,8 +4924,7 @@ export const nl = {
       open: "Openen",
       view: "Bekijken",
     },
-    notificationBody:
-      "Je geplande taak is voltooid. Open Unsloth om het antwoord te lezen.",
+    notificationBody: "Je geplande taak is voltooid. Open Unsloth om het antwoord te lezen.",
   },
   library: {
     tabs: {
@@ -5568,28 +5005,21 @@ export const nl = {
       },
       empty: {
         chatsTitle: "Nog geen chats",
-        chatsDescription:
-          "Je gesprekken verschijnen hier, apart van je bestanden.",
+        chatsDescription: "Je gesprekken verschijnen hier, apart van je bestanden.",
         archivedTitle: "Niets gearchiveerd",
         archivedDescription: "Chats die je archiveert, verschijnen hier.",
         sectionsTitle: "Nog geen secties",
-        sectionsDescription:
-          "Met secties groepeer je chats en projecten in de zijbalk zoals jij wilt.",
+        sectionsDescription: "Met secties groepeer je chats en projecten in de zijbalk zoals jij wilt.",
         sectionTitle: "Nog niets in deze sectie",
-        sectionDescription:
-          "Verplaats chats hierheen via hun menu of start een nieuwe chat in deze sectie.",
+        sectionDescription: "Verplaats chats hierheen via hun menu of start een nieuwe chat in deze sectie.",
       },
       dialog: {
         renameChat: "Naam van chat wijzigen",
-        deleteChatDescription:
-          "Hiermee worden de chat en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
-        deleteProjectDescription:
-          "Hiermee worden het project en de chats ervan ({count}) definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
-        deleteFilesMany:
-          "Ook de bestanden en sandboxmappen verwijderen die deze chats hebben gemaakt.",
+        deleteChatDescription: "Hiermee worden de chat en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+        deleteProjectDescription: "Hiermee worden het project en de chats ervan ({count}) definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+        deleteFilesMany: "Ook de bestanden en sandboxmappen verwijderen die deze chats hebben gemaakt.",
         deleteProjectFilesLabel: "Werkruimtemap van project verwijderen",
-        deleteProjectFiles:
-          "De werkruimtemap van het project wordt van de schijf verwijderd.",
+        deleteProjectFiles: "De werkruimtemap van het project wordt van de schijf verwijderd.",
       },
       toast: {
         projectMoved: "{project} verplaatst naar {section}",
@@ -5601,31 +5031,23 @@ export const nl = {
       },
       folder: {
         openChat: "Chatmap openen",
-        openChatTitle:
-          "De map openen waarin de toolaanroepen van deze chat lezen en schrijven",
+        openChatTitle: "De map openen waarin de toolaanroepen van deze chat lezen en schrijven",
         openProject: "Projectmap openen",
-        openProjectTitle:
-          "De map openen waarin de chats van dit project lezen en schrijven",
-        chatHint:
-          "Alleen de desktop-app kan de bestandenmap van een chat openen. Download in een browser een bestand via het toolresultaat dat het heeft geschreven.",
-        projectHint:
-          "Alleen de desktop-app kan de map van een project openen. Download in een browser bestanden via de toolresultaten die ze hebben geschreven.",
+        openProjectTitle: "De map openen waarin de chats van dit project lezen en schrijven",
+        chatHint: "Alleen de desktop-app kan de bestandenmap van een chat openen. Download in een browser een bestand via het toolresultaat dat het heeft geschreven.",
+        projectHint: "Alleen de desktop-app kan de map van een project openen. Download in een browser bestanden via de toolresultaten die ze hebben geschreven.",
         manyFolders: "Deze chat heeft naar meer dan één map geschreven.",
-        manyFoldersDescription:
-          "Er zijn tools uitgevoerd aan beide kanten van een verplaatsing, dus open de map via een toolkaart.",
+        manyFoldersDescription: "Er zijn tools uitgevoerd aan beide kanten van een verplaatsing, dus open de map via een toolkaart.",
         chatFailed: "Kan de chatmap niet openen.",
         projectFailed: "Kan de projectmap niet openen.",
         chatMissing: "Deze chat heeft nog geen map.",
         projectMissing: "Dit project heeft nog geen map.",
-        missingDescription:
-          "Deze wordt gemaakt zodra een tool voor het eerst een bestand schrijft.",
+        missingDescription: "Deze wordt gemaakt zodra een tool voor het eerst een bestand schrijft.",
         upload: "Uploaden naar chatmap",
-        uploadTitle:
-          "Bestanden toevoegen aan de map waarin de toolaanroepen van deze chat lezen en schrijven",
+        uploadTitle: "Bestanden toevoegen aan de map waarin de toolaanroepen van deze chat lezen en schrijven",
         uploaded: "{name} toegevoegd aan de chatmap",
         uploadedMany: "{count} bestanden toegevoegd aan de chatmap",
-        uploadedDescription:
-          "Tools in deze chat kunnen ze nu openen. Ze worden niet aan het gesprek toegevoegd.",
+        uploadedDescription: "Tools in deze chat kunnen ze nu openen. Ze worden niet aan het gesprek toegevoegd.",
         uploadExists: "{name} staat al in de chatmap",
         uploadExistsMany: "{count} bestanden staan al in de chatmap",
         replace: "Vervangen",
@@ -5634,25 +5056,19 @@ export const nl = {
     },
     empty: {
       suggestedTitle: "Je bibliotheek is leeg",
-      suggestedDescription:
-        "Bestanden die je in chats uploadt of maakt, verschijnen hier.",
+      suggestedDescription: "Bestanden die je in chats uploadt of maakt, verschijnen hier.",
       favoritesTitle: "Nog geen favorieten",
-      favoritesDescription:
-        "Voeg bestanden toe aan je favorieten om ze hier snel terug te vinden.",
+      favoritesDescription: "Voeg bestanden toe aan je favorieten om ze hier snel terug te vinden.",
       foldersTitle: "Maak je eerste map",
       foldersDescription: "Maak mappen om items in je bibliotheek te ordenen.",
       imagesTitle: "Nog geen afbeeldingen",
-      imagesDescription:
-        "Afbeeldingen die je uploadt of genereert, verschijnen hier.",
+      imagesDescription: "Afbeeldingen die je uploadt of genereert, verschijnen hier.",
       videosTitle: "Nog geen video's",
-      videosDescription:
-        "Video's die je uploadt of genereert, verschijnen hier.",
+      videosDescription: "Video's die je uploadt of genereert, verschijnen hier.",
       audioTitle: "Nog geen audio",
-      audioDescription:
-        "Spraak, muziek en stems die je op de pagina Audio maakt, verschijnen hier.",
+      audioDescription: "Spraak, muziek en stems die je op de pagina Audio maakt, verschijnen hier.",
       modelsTitle: "Nog geen gefinetunede modellen",
-      modelsDescription:
-        "Modellen die je in Unsloth traint of exporteert, verschijnen hier.",
+      modelsDescription: "Modellen die je in Unsloth traint of exporteert, verschijnen hier.",
       createFolder: "Map maken",
       generateImage: "Een afbeelding genereren",
       generateVideo: "Een video genereren",
@@ -5661,8 +5077,7 @@ export const nl = {
       uploadFiles: "Bestanden uploaden",
       dropHere: "of zet bestanden hier neer",
       noMatchesTitle: "Geen resultaten",
-      noMatchesDescription:
-        "Probeer een andere zoekopdracht of wis de filters.",
+      noMatchesDescription: "Probeer een andere zoekopdracht of wis de filters.",
       loadErrorTitle: "Kan je bibliotheek niet laden",
       loadErrorFallback: "Er is iets misgegaan.",
       tryAgain: "Opnieuw proberen",
@@ -5776,25 +5191,18 @@ export const nl = {
       renameFile: "Naam van bestand wijzigen",
       deleteTitle: "“{name}” verwijderen?",
       deleteManyTitle: "{count} items verwijderen?",
-      deleteManyDescription:
-        "Bestanden worden verwijderd van de plek waar ze staan. Alles in een verwijderde map gaat een niveau omhoog.",
-      deleteFolderIntoParent:
-        "Alles in de map wordt verplaatst naar “{folder}”. Er worden geen bestanden verwijderd.",
-      deleteFolderIntoLibrary:
-        "Alles in de map wordt verplaatst naar je bibliotheek. Er worden geen bestanden verwijderd.",
+      deleteManyDescription: "Bestanden worden verwijderd van de plek waar ze staan. Alles in een verwijderde map gaat een niveau omhoog.",
+      deleteFolderIntoParent: "Alles in de map wordt verplaatst naar “{folder}”. Er worden geen bestanden verwijderd.",
+      deleteFolderIntoLibrary: "Alles in de map wordt verplaatst naar je bibliotheek. Er worden geen bestanden verwijderd.",
       deleteUpload: "Hiermee wordt het bestand definitief verwijderd.",
-      deleteAttachment:
-        "Het wordt ook verwijderd uit de chat waaraan het was toegevoegd.",
+      deleteAttachment: "Het wordt ook verwijderd uit de chat waaraan het was toegevoegd.",
       deleteImage: "Het wordt ook verwijderd uit je galerij Afbeeldingen.",
       deleteVideo: "Het wordt ook verwijderd uit je galerij Video.",
       deleteAudio: "Het wordt ook verwijderd uit je galerij Audio.",
-      deleteSandbox:
-        "Het wordt ook verwijderd uit de chat die het heeft gemaakt.",
-      deleteModel:
-        "Hiermee wordt het model definitief van de schijf verwijderd.",
+      deleteSandbox: "Het wordt ook verwijderd uit de chat die het heeft gemaakt.",
+      deleteModel: "Hiermee wordt het model definitief van de schijf verwijderd.",
       unsavedTitle: "Je wijzigingen zijn niet opgeslagen",
-      unsavedDescription:
-        "{reason} Probeer het opnieuw of negeer je wijzigingen om het bestand te sluiten.",
+      unsavedDescription: "{reason} Probeer het opnieuw of negeer je wijzigingen om het bestand te sluiten.",
       keepEditing: "Doorgaan met bewerken",
       discardChanges: "Wijzigingen negeren",
     },
@@ -5811,21 +5219,17 @@ export const nl = {
       sheetTruncated: "Een deel van dit werkblad wordt getoond",
       documentTruncated: "Het begin van dit document wordt getoond",
       emptyDocument: "Dit bestand is leeg.",
-      cannotPreview:
-        "Van dit bestand kan hier geen voorbeeld worden getoond. Download het om het te openen.",
+      cannotPreview: "Van dit bestand kan hier geen voorbeeld worden getoond. Download het om het te openen.",
       noPreview: "Geen voorbeeld voor dit bestandstype.",
-      tooLargeToPreview:
-        "Dit bestand is te groot om hier een voorbeeld van te tonen. Download het om het te openen.",
+      tooLargeToPreview: "Dit bestand is te groot om hier een voorbeeld van te tonen. Download het om het te openen.",
       startWriting: "Begin met schrijven…",
       type: "Type",
       baseModel: "Basismodel",
       size: "Grootte",
       location: "Locatie",
       unknown: "Onbekend",
-      readOnlyUtf16:
-        "Dit bestand is geen geldige UTF-16-tekst en wordt hier daarom alleen-lezen geopend.",
-      readOnlyNotUtf8:
-        "Dit bestand is geen UTF-8-tekst en wordt hier daarom alleen-lezen geopend. Sommige tekens worden mogelijk niet correct weergegeven.",
+      readOnlyUtf16: "Dit bestand is geen geldige UTF-16-tekst en wordt hier daarom alleen-lezen geopend.",
+      readOnlyNotUtf8: "Dit bestand is geen UTF-8-tekst en wordt hier daarom alleen-lezen geopend. Sommige tekens worden mogelijk niet correct weergegeven.",
     },
     viewer: {
       scale: "Schaal",
@@ -5885,8 +5289,7 @@ export const nl = {
       downloadFailed: "Kan {name} niet downloaden",
       downloadManyFailed: "Kan de bestanden niet downloaden",
       downloadingMany: "{count} bestanden downloaden",
-      downloadingManyDescription:
-        "Als je browser erom vraagt, sta deze site toe meerdere bestanden te downloaden.",
+      downloadingManyDescription: "Als je browser erom vraagt, sta deze site toe meerdere bestanden te downloaden.",
       preparingMany: "{count} bestanden voorbereiden…",
       zipFileName: "Bibliotheekbestanden",
       nothingToChat: "Nog niets om over te chatten",
@@ -5897,14 +5300,12 @@ export const nl = {
       attachedMany: "{count} bestanden toegevoegd",
       skippedTooLarge: "{count} te groot om toe te voegen.",
       skippedOverLimit: "Nog {count} boven de limiet van {limit} bestanden.",
-      chatFilesWaiting:
-        "{count} wordt toegevoegd zodra een model is geladen dat ze kan lezen.",
+      chatFilesWaiting: "{count} wordt toegevoegd zodra een model is geladen dat ze kan lezen.",
       openFilesFailed: "Kan de bestanden niet openen",
       editImageFailed: "Kan de afbeelding niet openen om te bewerken",
       speechModel: "{name} is een spraakmodel",
       speechModelDescription: "Kies het in het modelmenu op de pagina Audio.",
-      noMediaLink:
-        "De server heeft geen link teruggegeven om dit bestand af te spelen.",
+      noMediaLink: "De server heeft geen link teruggegeven om dit bestand af te spelen.",
       imageNotFound: "Kan deze afbeelding niet vinden",
       clipNotFound: "Kan deze clip niet vinden",
       notFoundDescription: "Mogelijk is deze gearchiveerd of verwijderd.",
@@ -5926,10 +5327,8 @@ export const nl = {
   },
   exportDecision: {
     title: "Beslissingsmodel",
-    description:
-      "{layout}-beslissingsmodellen worden geëxporteerd naar GGUF voor de decision server van llama.cpp. Kies een of meer kwantisaties.",
-    adapterNote:
-      "Dit checkpoint bevat LoRA-adapters; deze worden vóór de conversie samengevoegd.",
+    description: "{layout}-beslissingsmodellen worden geëxporteerd naar GGUF voor de decision server van llama.cpp. Kies een of meer kwantisaties.",
+    adapterNote: "Dit checkpoint bevat LoRA-adapters; deze worden vóór de conversie samengevoegd.",
     notEligibleTitle: "GGUF-export niet beschikbaar",
     ggufOnly: "Beslissingsmodellen kunnen alleen naar GGUF worden geëxporteerd",
     existing: "Al geëxporteerd: {quantizations}",
@@ -5947,8 +5346,7 @@ export const nl = {
     typeScore: "Score",
     aboutNoul: "Antwoordt ja of nee, met de kans op ja.",
     aboutChoice: "Kiest één optie uit een lijst, met een kans voor elke optie.",
-    aboutScore:
-      "Beoordeelt de toestand op een schaal van niveaus, laagste eerst.",
+    aboutScore: "Beoordeelt de toestand op een schaal van niveaus, laagste eerst.",
     model: "Beslissingsmodel",
     defaultModel: "Standaard ({model})",
     layaModel: "Laya {model}",
@@ -5956,8 +5354,7 @@ export const nl = {
     modelReady: "Gereed",
     modelLoading: "Laden",
     modelNotLoaded: "Wordt geladen bij eerste uitvoering",
-    connectionNotDefault:
-      "Stel dit eerst in als model voor de Decision API in Instellingen > API.",
+    connectionNotDefault: "Stel dit eerst in als model voor de Decision API in Instellingen > API.",
     question: "Vraag",
     questionHelp: "Wat het model moet beslissen.",
     result: "Resultaat",
@@ -5968,8 +5365,7 @@ export const nl = {
     stateHelp: "De tekst waarover moet worden beslist. Platte tekst of JSON.",
     criteria: "Criteria",
     criteriaNoulHelp: "Optioneel. Wat telt als ja en wat telt als nee.",
-    criteriaChoiceHelp:
-      "De opties waaruit gekozen kan worden, elk met een korte beschrijving.",
+    criteriaChoiceHelp: "De opties waaruit gekozen kan worden, elk met een korte beschrijving.",
     criteriaScoreHelp: "De niveaus van de schaal, laagste eerst.",
     yesWhen: "Ja wanneer",
     noWhen: "Nee wanneer",
@@ -6033,21 +5429,16 @@ export const nl = {
       noneLoaded: "Geen modellen geladen",
       noneLoadedDetail: "Modellen die je laadt, verschijnen hier.",
       otherAccount: "In gebruik door een ander account",
-      otherAccountDetail:
-        "Geheugen wordt bezet door een model dat je niet kunt zien",
-      toastStillResident:
-        "“{model}” is tijdens het uitwerpen geladen en gebruikt dus nog geheugen. Werp het opnieuw uit om het vrij te geven.",
-      toastUnverified:
-        "{model} is gevraagd om te ontladen, maar de runtime heeft dit niet bevestigd. Controleer de kaart zo meteen.",
+      otherAccountDetail: "Geheugen wordt bezet door een model dat je niet kunt zien",
+      toastStillResident: "“{model}” is tijdens het uitwerpen geladen en gebruikt dus nog geheugen. Werp het opnieuw uit om het vrij te geven.",
+      toastUnverified: "{model} is gevraagd om te ontladen, maar de runtime heeft dit niet bevestigd. Controleer de kaart zo meteen.",
       toastAlreadyFree: "{model} was niet meer geladen.",
-      toastReplaced:
-        "{model} is niet meer geladen. “{resident}” heeft de plaats ingenomen en is ongemoeid gelaten.",
+      toastReplaced: "{model} is niet meer geladen. “{resident}” heeft de plaats ingenomen en is ongemoeid gelaten.",
       toastEjected: "{model} uitgeworpen",
       toastFailed: "Kan {model} niet uitwerpen",
     },
     monitor: {
-      dragHandleLabel:
-        "De live monitor verplaatsen. Pijltoetsen verschuiven hem, dubbelklikken zet hem terug.",
+      dragHandleLabel: "De live monitor verplaatsen. Pijltoetsen verschuiven hem, dubbelklikken zet hem terug.",
       resizeHint: "Sleep een zijkant of hoek om de breedte te wijzigen. Dubbelklik om te herstellen.",
       reconnecting: "Opnieuw verbinden...",
     },
@@ -6068,8 +5459,7 @@ export const nl = {
     oldestFirst: "Oudste eerst",
     today: "Vandaag",
     yesterday: "Gisteren",
-    emptyDescription:
-      "Een project houdt verwante chats bij elkaar, met gedeelde instructies en bronnen die elke chat erin kan gebruiken.",
+    emptyDescription: "Een project houdt verwante chats bij elkaar, met gedeelde instructies en bronnen die elke chat erin kan gebruiken.",
     createFirst: "Maak je eerste project",
     noMatches: "Geen projecten gevonden voor je zoekopdracht.",
     clearSearch: "Zoekopdracht wissen",
@@ -6091,18 +5481,15 @@ export const nl = {
     renameChat: "Naam van chat wijzigen",
     chatName: "Chatnaam",
     deleteChat: "Chat verwijderen",
-    deleteChatDescription:
-      'Hiermee worden de chat "{name}" en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.',
+    deleteChatDescription: "Hiermee worden de chat \"{name}\" en de berichten ervan definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
     importChats: "Chats importeren",
     importDestination: "Kies waar je {name} wilt importeren:",
     selectDestination: "Bestemming selecteren",
     recents: "Recent",
     import: "Importeren",
     deleteProject: "Project verwijderen",
-    deleteProjectDescription:
-      'Hiermee worden het project "{name}" en al zijn chats definitief verwijderd. Dit kan niet ongedaan worden gemaakt.',
-    deleteProjectFiles:
-      "De werkruimtemap van het project wordt van de schijf verwijderd.",
+    deleteProjectDescription: "Hiermee worden het project \"{name}\" en al zijn chats definitief verwijderd. Dit kan niet ongedaan worden gemaakt.",
+    deleteProjectFiles: "De werkruimtemap van het project wordt van de schijf verwijderd.",
     deleteAll: "Alles verwijderen",
     projectFallback: "project",
     importFailed: "Importeren mislukt.",
@@ -6127,37 +5514,29 @@ export const nl = {
     currentPassword: "Huidig wachtwoord",
     newPassword: "Nieuw wachtwoord",
     confirmPassword: "Wachtwoord bevestigen",
-    setupCodeHint:
-      "Log je voor het eerst in? Plak de installatiecode die je van je beheerder hebt gekregen als wachtwoord.",
-    ownerHint:
-      "Eigenaar van de installatie? Log in als unsloth of met de inlognaam die wordt getoond in Instellingen > Accounts.",
-    currentSetupCodeHint:
-      "Plak de installatiecode waarmee je net bent ingelogd als huidig wachtwoord.",
+    setupCodeHint: "Log je voor het eerst in? Plak de installatiecode die je van je beheerder hebt gekregen als wachtwoord.",
+    ownerHint: "Eigenaar van de installatie? Log in als unsloth of met de inlognaam die wordt getoond in Instellingen > Accounts.",
+    currentSetupCodeHint: "Plak de installatiecode waarmee je net bent ingelogd als huidig wachtwoord.",
     minLength: "Moet minimaal 8 tekens bevatten.",
     ensureMatch: "Zorg ervoor dat de wachtwoorden overeenkomen.",
     noSpaces: "Nieuw wachtwoord mag geen spaties bevatten.",
     currentTooShort: "Huidig wachtwoord moet minimaal 8 tekens bevatten.",
-    setupInitFailed:
-      "Kan de installatie niet initialiseren. Laad de pagina opnieuw en probeer het nogmaals.",
+    setupInitFailed: "Kan de installatie niet initialiseren. Laad de pagina opnieuw en probeer het nogmaals.",
     newTooShort: "Nieuw wachtwoord moet minimaal 8 tekens bevatten.",
     mismatch: "Wachtwoorden komen niet overeen.",
     mustDiffer: "Nieuw wachtwoord moet verschillen van je huidige wachtwoord.",
     pleaseWait: "Even geduld...",
     continueAsOwner: "Doorgaan als eigenaar",
     signInWithUsername: "Log in met je gebruikersnaam en wachtwoord.",
-    bootstrapping:
-      "De verificatie is het standaard beheerdersaccount nog aan het aanmaken.",
-    signInToChange:
-      "Log één keer in met de vooraf ingestelde inloggegevens om het wachtwoord te wijzigen.",
+    bootstrapping: "De verificatie is het standaard beheerdersaccount nog aan het aanmaken.",
+    signInToChange: "Log één keer in met de vooraf ingestelde inloggegevens om het wachtwoord te wijzigen.",
     alreadyUpdated: "Wachtwoord is al bijgewerkt. Gebruik het inlogscherm.",
     busy: "Unsloth is bezig. Probeer het zo opnieuw.",
     updateFailed: "Wachtwoord bijwerken mislukt.",
     loadFailed: "Laden mislukt.",
     failed: "Verificatie mislukt.",
-    shuttingDown:
-      "Deze instantie wordt afgesloten: deze was bereikbaar via het netwerk en het standaardwachtwoord is nooit gewijzigd.",
-    shutdownCountdown:
-      "Deze instantie is bereikbaar via het netwerk en gebruikt nog het standaardwachtwoord, dus wordt deze afgesloten over {time}. Als je hier een wachtwoord instelt, blijft deze actief.",
+    shuttingDown: "Deze instantie wordt afgesloten: deze was bereikbaar via het netwerk en het standaardwachtwoord is nooit gewijzigd.",
+    shutdownCountdown: "Deze instantie is bereikbaar via het netwerk en gebruikt nog het standaardwachtwoord, dus wordt deze afgesloten over {time}. Als je hier een wachtwoord instelt, blijft deze actief.",
   },
   routes: {
     chat: "Chat",
@@ -6171,23 +5550,15 @@ export const nl = {
     blockedTitle: "Aangepaste code geblokkeerd",
     enableTitle: "Aangepaste code inschakelen voor dit model?",
     thisModel: "Dit model",
-    unsafeBody:
-      "{model} bevat bestanden die door de beveiligingsscan van Hugging Face als onveilig zijn gemarkeerd (bijvoorbeeld een kwaadaardige pickle die code zou uitvoeren wanneer het model wordt geladen). Het kan niet worden geladen. De gemarkeerde bestanden zijn nooit gedownload.",
-    unsafeBodyFromProvider:
-      "{model} van {provider} bevat bestanden die door de beveiligingsscan van Hugging Face als onveilig zijn gemarkeerd (bijvoorbeeld een kwaadaardige pickle die code zou uitvoeren wanneer het model wordt geladen). Het kan niet worden geladen. De gemarkeerde bestanden zijn nooit gedownload.",
-    customCode:
-      "{model} declareert aangepaste Python-code in de repository. {note}",
-    customCodeFromProvider:
-      "{model} van {provider} declareert aangepaste Python-code in de repository. {note}",
-    blockedNote:
-      "Een beveiligingsscan heeft KRITIEKE problemen gevonden, dus dit kan niet worden ingeschakeld.",
-    reviewNote:
-      "Bekijk de beveiligingsscan hieronder. Ga alleen door als je de bron van het model vertrouwt.",
+    unsafeBody: "{model} bevat bestanden die door de beveiligingsscan van Hugging Face als onveilig zijn gemarkeerd (bijvoorbeeld een kwaadaardige pickle die code zou uitvoeren wanneer het model wordt geladen). Het kan niet worden geladen. De gemarkeerde bestanden zijn nooit gedownload.",
+    unsafeBodyFromProvider: "{model} van {provider} bevat bestanden die door de beveiligingsscan van Hugging Face als onveilig zijn gemarkeerd (bijvoorbeeld een kwaadaardige pickle die code zou uitvoeren wanneer het model wordt geladen). Het kan niet worden geladen. De gemarkeerde bestanden zijn nooit gedownload.",
+    customCode: "{model} declareert aangepaste Python-code in de repository. {note}",
+    customCodeFromProvider: "{model} van {provider} declareert aangepaste Python-code in de repository. {note}",
+    blockedNote: "Een beveiligingsscan heeft KRITIEKE problemen gevonden, dus dit kan niet worden ingeschakeld.",
+    reviewNote: "Bekijk de beveiligingsscan hieronder. Ga alleen door als je de bron van het model vertrouwt.",
     trustNote: "Ga alleen door als je de bron van het model vertrouwt.",
-    flaggedIntro:
-      "Onze automatische scanner heeft onder andere deze problemen gevonden:",
-    nothingFlagged:
-      "Onze automatische scanner heeft geen verdachte bestanden gevonden, maar controleer het zelf nog even.",
+    flaggedIntro: "Onze automatische scanner heeft onder andere deze problemen gevonden:",
+    nothingFlagged: "Onze automatische scanner heeft geen verdachte bestanden gevonden, maar controleer het zelf nog even.",
     unscannedTitle: "Modelbestanden konden niet worden gescand",
     unscannedBody: "{model} bevat pickle-gewichten, die bij het laden code kunnen uitvoeren, en er is geen malwarescan voor beschikbaar. Het kan daarom niet worden geladen. {note}",
     unscannedIntro: "Bestanden die niet konden worden gescand:",
@@ -6218,15 +5589,12 @@ export const nl = {
     openChangelog: "Changelog openen",
     retry: "Opnieuw proberen",
     loadingChanges: "Nieuwe wijzigingen laden...",
-    customLlamaRepo:
-      "Deze installatie volgt een aangepaste llama.cpp-repository, dus de wijzigingen kunnen niet worden vergeleken.",
-    noItemisedNotes:
-      "Deze build is ouder dan gespecificeerde release notes, dus de wijzigingen kunnen niet worden vergeleken.",
+    customLlamaRepo: "Deze installatie volgt een aangepaste llama.cpp-repository, dus de wijzigingen kunnen niet worden vergeleken.",
+    noItemisedNotes: "Deze build is ouder dan gespecificeerde release notes, dus de wijzigingen kunnen niet worden vergeleken.",
     compareFailed: "Kan deze releases niet vergelijken.",
     llamaChangesLabel: "Nieuwe llama.cpp-wijzigingen van {from} tot {to}",
     showingChanges: "{shown} van {total} wijzigingen getoond",
-    noCarriedChanges:
-      "Er zijn geen nieuwe overgenomen wijzigingen vermeld voor deze build.",
+    noCarriedChanges: "Er zijn geen nieuwe overgenomen wijzigingen vermeld voor deze build.",
     notesFor: "Release notes voor {release}",
     notesForVersion: "Release notes voor versie {version}",
     notesTruncated: "Notes ingekort. Bekijk de volledige release notes.",
@@ -6247,8 +5615,7 @@ export const nl = {
     useDefaultLocation: "Standaard gebruiken",
     longPaths: {
       title: "Windows vraagt om toestemming",
-      approve:
-        "Keur {tool} één keer goed om lange bestandspaden in te schakelen voor gecompileerde kernels.",
+      approve: "Keur {tool} één keer goed om lange bestandspaden in te schakelen voor gecompileerde kernels.",
       waiting: "Wachten op toestemming van Windows...",
     },
     skip: "Overslaan",
@@ -6264,8 +5631,7 @@ export const nl = {
       finishingDetail: "Alles klaarmaken.",
       continuesAutomatically: "De installatie gaat automatisch verder.",
       fewMinutes: "Dit kan enkele minuten duren.",
-      someTakeLonger:
-        "Sommige onderdelen hebben meer tijd nodig om te configureren.",
+      someTakeLonger: "Sommige onderdelen hebben meer tijd nodig om te configureren.",
     },
     details: {
       showInstall: "Installatiedetails tonen",
@@ -6278,8 +5644,7 @@ export const nl = {
     repair: {
       upgrading: "Upgraden naar de volledige installatie...",
       gettingReady: "Dingen klaarmaken...",
-      upgradingDetail:
-        "PyTorch en de bijbehorende bibliotheken voor de GPU van deze computer downloaden. Dit kan enkele minuten duren.",
+      upgradingDetail: "PyTorch en de bijbehorende bibliotheken voor de GPU van deze computer downloaden. Dit kan enkele minuten duren.",
       wontTakeLong: "Dit duurt niet lang.",
       upgradeFailed: "Kan niet upgraden naar de volledige installatie",
       updateFailed: "Update mislukt",
@@ -6306,8 +5671,7 @@ export const nl = {
     diagnostics: {
       copy: "Diagnostiek kopiëren",
       copying: "Kopiëren...",
-      clipboardFailed:
-        "Kopiëren naar klembord mislukt. Selecteer en kopieer de diagnostiek hieronder.",
+      clipboardFailed: "Kopiëren naar klembord mislukt. Selecteer en kopieer de diagnostiek hieronder.",
       copyFailed: "Diagnostiek kopiëren mislukt: {error}",
     },
   },
@@ -6328,10 +5692,8 @@ export const nl = {
       dismiss: "Melding over app-update sluiten",
       failedTitle: "App-update mislukt",
       newVersion: "Nieuwe versie van Unsloth",
-      backendRecovered:
-        "Backend hersteld. Diagnostiek is nog steeds beschikbaar.",
-      linuxManual:
-        "Open de releasepagina op GitHub om het Linux-pakket te installeren",
+      backendRecovered: "Backend hersteld. Diagnostiek is nog steeds beschikbaar.",
+      linuxManual: "Open de releasepagina op GitHub om het Linux-pakket te installeren",
       available: "Er is een nieuwe app-update beschikbaar",
       showNotes: "Release notes tonen",
       hideNotes: "Release notes verbergen",
@@ -6379,10 +5741,8 @@ export const nl = {
     bundleTitle: "{count} runtime-updates",
     newBackend: "Nieuwe runtime-backend",
     newUpdate: "Nieuwe runtime-update",
-    hideUpdate:
-      "De update van {component} verbergen totdat Unsloth opnieuw wordt geopend",
-    hideUpdates:
-      "De updates van {components} verbergen totdat Unsloth opnieuw wordt geopend",
+    hideUpdate: "De update van {component} verbergen totdat Unsloth opnieuw wordt geopend",
+    hideUpdates: "De updates van {components} verbergen totdat Unsloth opnieuw wordt geopend",
     whatsNew: "Nieuw",
     hideWhatsNew: "Nieuwe functies verbergen",
     later: "Later",
@@ -6445,4 +5805,4 @@ export const nl = {
       inRam: "{amount} in RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

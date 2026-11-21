@@ -29,7 +29,11 @@ import {
   useTrainingConfigStore,
 } from "@/features/training";
 import { useT } from "@/i18n";
-import { ChipIcon, Settings01Icon } from "@/lib/hugeicons-derived";
+import {
+  ChipIcon,
+  Settings01Icon,
+  SpeedMeterIcon,
+} from "@/lib/hugeicons-derived";
 import { cn } from "@/lib/utils";
 import type { TrainingMethod } from "@/types/training";
 import {
@@ -41,6 +45,8 @@ import { DatasetPanel } from "../sections/dataset-section";
 import { DatasetSourceToggleAction } from "../sections/dataset-source-toggle";
 import { FieldHint } from "../sections/field-hint";
 import { ParamsSection } from "../sections/params-section";
+import { TrainingPresetSection } from "../sections/training-preset-section";
+import { AdvancedTrainingSection } from "@/features/advanced/components/advanced-training-section";
 import { ConfigActions } from "./config-actions";
 import type { ParamMode } from "./training-param-mode";
 
@@ -359,6 +365,15 @@ export function TrainingWizard({
       </SectionBox>
 
       <SectionBox
+        title={t("studio.presets.title")}
+        description={t("studio.presets.description")}
+        icon={SpeedMeterIcon}
+        chipTint="var(--chart-1)"
+      >
+        <TrainingPresetSection />
+      </SectionBox>
+
+      <SectionBox
         title={t("studio.wizard.paramsTitle")}
         description={t("studio.wizard.paramsDescription")}
         icon={Settings01Icon}
@@ -370,6 +385,8 @@ export function TrainingWizard({
       >
         <ParamsSection mode={paramMode} />
       </SectionBox>
+
+      <AdvancedTrainingSection />
 
       <SectionBox
         title={t("studio.wizard.configTitle")}

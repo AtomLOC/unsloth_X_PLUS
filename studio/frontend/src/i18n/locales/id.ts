@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const id = {
   turns: {
     label: "Giliran {number}",
@@ -113,8 +110,7 @@ export const id = {
   },
   imageViewer: {
     title: "Gambar",
-    description:
-      "Gunakan tombol panah untuk berpindah antargambar dan plus atau minus untuk memperbesar/memperkecil.",
+    description: "Gunakan tombol panah untuk berpindah antargambar dan plus atau minus untuk memperbesar/memperkecil.",
     failed: "Gambar ini tidak dapat dimuat.",
     downloadFailed: "Tidak dapat menyimpan gambar.",
     openSource: "Buka halaman sumber",
@@ -133,8 +129,7 @@ export const id = {
   browser: {
     drafts: {
       title: "Lepas halaman yang berisi teks yang dimasukkan?",
-      description:
-        "Agar chat tetap responsif, hanya tiga halaman tersembunyi berisi teks yang dimasukkan yang tetap berjalan. Jika dilanjutkan, {pages} akan dilepas dan teks yang belum disimpan mungkin hilang. Batal akan kembali ke tab sebelumnya.",
+      description: "Agar chat tetap responsif, hanya tiga halaman tersembunyi berisi teks yang dimasukkan yang tetap berjalan. Jika dilanjutkan, {pages} akan dilepas dan teks yang belum disimpan mungkin hilang. Batal akan kembali ke tab sebelumnya.",
       confirm: "Lepas dan lanjutkan",
     },
     agentSettings: {
@@ -142,28 +137,23 @@ export const id = {
       docs: "Dokumentasi",
       docsLabel: "Buka dokumentasi penggunaan browser",
       enable: "Izinkan model menggunakan browser",
-      enableDescription:
-        "Model membuka halaman di tab browsernya sendiri, membacanya, serta mengklik dan mengetik untuk Anda. Juga tersedia di menu + pada kolom pesan.",
+      enableDescription: "Model membuka halaman di tab browsernya sendiri, membacanya, serta mengklik dan mengetik untuk Anda. Juga tersedia di menu + pada kolom pesan.",
       history: "Riwayat penjelajahan",
-      historyDescription:
-        "Akses penuh melewati persetujuan; Jangan pernah tetap memblokir akses",
+      historyDescription: "Akses penuh melewati persetujuan; Jangan pernah tetap memblokir akses",
       alwaysAsk: "Selalu tanya",
       alwaysAllow: "Selalu izinkan",
       never: "Jangan pernah",
       scripts: "Jalankan skrip",
-      scriptsDescription:
-        "Pilih apakah model dapat menjalankan skrip di halaman. Anda melihat setiap skrip sebelum dijalankan",
+      scriptsDescription: "Pilih apakah model dapat menjalankan skrip di halaman. Anda melihat setiap skrip sebelum dijalankan",
       scriptsAllowDescription: "Model menjalankan skrip di halaman mana pun tanpa bertanya. Skrip dapat membaca dan mengubah apa pun di halaman",
       scriptsConfirmTitle: "Izinkan semua skrip?",
       scriptsConfirmDescription: "Model akan menjalankan skrip di setiap halaman tanpa menunjukkannya kepada Anda terlebih dahulu. Skrip dapat membaca dan mengubah apa pun di halaman, termasuk halaman tempat Anda masuk. Aktifkan hanya jika Anda memercayai model yang Anda gunakan.",
       scriptsConfirmAction: "Izinkan semua skrip",
       cursor: "Tampilkan kursor",
-      cursorDescription:
-        "Tampilkan penunjuk di tempat model mengklik, mengetik, dan menyeret di halaman",
+      cursorDescription: "Tampilkan penunjuk di tempat model mengklik, mengetik, dan menyeret di halaman",
       askEveryTime: "Tanya setiap kali",
       permissionsTitle: "Izin agen",
-      permissionsDescription:
-        "Atur default dan pengecualian per situs. Kolom kata sandi dan pembayaran tidak pernah diisi.",
+      permissionsDescription: "Atur default dan pengecualian per situs. Kolom kata sandi dan pembayaran tidak pernah diisi.",
       site: "Situs atau pola",
       sitePlaceholder: "example.com atau *.example.com",
       default: "Default",
@@ -180,8 +170,7 @@ export const id = {
       cancel: "Batal",
       removeSite: "Hapus {site}",
       hostOnly: "Hanya host ini, bukan subdomainnya",
-      permissionsNote:
-        "Hanya situs yang memiliki izin sendiri yang muncul di sini. Tindakan mencakup proses masuk, pengiriman formulir, dan tombol untuk membeli, mengirim, atau menghapus.",
+      permissionsNote: "Hanya situs yang memiliki izin sendiri yang muncul di sini. Tindakan mencakup proses masuk, pengiriman formulir, dan tombol untuk membeli, mengirim, atau menghapus.",
       siteInvalid: "Masukkan situs seperti example.com atau *.example.com.",
     },
     agent: {
@@ -199,8 +188,7 @@ export const id = {
         click: "Izinkan Unsloth mengklik “{name}” di {host}?",
         history: "Izinkan Unsloth membaca riwayat penjelajahan Anda?",
         script: "Izinkan Unsloth menjalankan skrip ini di {host}?",
-        pointer:
-          "Izinkan Unsloth mengklik bagian tanpa label di {host}, seperti kanvas?",
+        pointer: "Izinkan Unsloth mengklik bagian tanpa label di {host}, seperti kanvas?",
       },
       step: {
         open: "Membuka {detail}",
@@ -241,8 +229,7 @@ export const id = {
     browserUse: {
       label: "Penggunaan browser",
       description: "Izinkan model mengendalikan browser bawaan",
-      unavailable:
-        "Muat model yang dapat memanggil alat agar model dapat menggunakan browser.",
+      unavailable: "Muat model yang dapat memanggil alat agar model dapat menggunakan browser.",
     },
     suggested: "Disarankan",
     suggestedMenu: {
@@ -277,11 +264,9 @@ export const id = {
       close: "Tutup",
       security: "Keamanan",
       secureTitle: "Koneksi aman",
-      secureDescription:
-        "Informasi Anda, seperti kata sandi atau nomor kartu, bersifat pribadi saat dikirim ke situs ini.",
+      secureDescription: "Informasi Anda, seperti kata sandi atau nomor kartu, bersifat pribadi saat dikirim ke situs ini.",
       insecureTitle: "Koneksi tidak aman",
-      insecureDescription:
-        "Informasi yang Anda kirim ke situs ini, seperti kata sandi atau nomor kartu, dapat dilihat oleh orang lain.",
+      insecureDescription: "Informasi yang Anda kirim ke situs ini, seperti kata sandi atau nomor kartu, dapat dilihat oleh orang lain.",
       learnMore: "Pelajari lebih lanjut",
       certificateValid: "Sertifikat valid",
     },
@@ -295,96 +280,71 @@ export const id = {
     linkCopied: "Tautan disalin",
     download: "Unduh",
     settings: "Pengaturan browser",
-    cannotShowFile:
-      "File ini tidak dapat ditampilkan di sini. Unduh untuk membukanya.",
+    cannotShowFile: "File ini tidak dapat ditampilkan di sini. Unduh untuk membukanya.",
     fileGone: "File ini sudah tidak tersedia. Buka lagi dari chat.",
     settingsTitle: "Browser",
     linksTitle: "Tautan dan file",
     addressBarTitle: "Bilah alamat",
     openLinksSetting: "Buka tautan di",
-    openLinksSettingDescription:
-      "Tempat tautan di chat dibuka: browser default Anda, atau tab di browser di samping percakapan. Tautan ke alamat lokal selalu dibuka di browser default Anda.",
+    openLinksSettingDescription: "Tempat tautan di chat dibuka: browser default Anda, atau tab di browser di samping percakapan. Tautan ke alamat lokal selalu dibuka di browser default Anda.",
     linkDestinationDefault: "Browser default",
     linkDestinationPanel: "Browser Unsloth",
     openFilesSetting: "Buka file di browser",
-    openFilesSettingDescription:
-      "Dokumen yang Anda lampirkan, seperti PDF, file Office, HTML, dan teks, dibuka di tab browser di samping percakapan, bukan di jendela pratinjau.",
+    openFilesSettingDescription: "Dokumen yang Anda lampirkan, seperti PDF, file Office, HTML, dan teks, dibuka di tab browser di samping percakapan, bukan di jendela pratinjau.",
     searchEngineSetting: "Mesin pencari",
-    searchEngineSettingDescription:
-      "Digunakan saat bilah alamat menerima kata-kata, bukan URL.",
+    searchEngineSettingDescription: "Digunakan saat bilah alamat menerima kata-kata, bukan URL.",
     showFullUrlSetting: "Tampilkan URL lengkap",
-    showFullUrlSettingDescription:
-      "Sertakan kueri dan fragmen di bilah alamat, bukan hanya situs dan jalur.",
+    showFullUrlSettingDescription: "Sertakan kueri dan fragmen di bilah alamat, bukan hanya situs dan jalur.",
     bookmarksTitle: "Bookmark",
     bookmarksToolbarSetting: "Bilah bookmark",
-    bookmarksToolbarSettingDescription:
-      "Kapan halaman tersimpan Anda ditampilkan di bawah bilah alamat.",
-    bookmarkEditorSettingDescription:
-      "Beri nama bookmark dan pilih lokasinya saat Anda menyimpannya.",
-    bookmarksSettingDescription:
-      "Lihat, edit, dan hapus halaman yang disimpan di browser.",
+    bookmarksToolbarSettingDescription: "Kapan halaman tersimpan Anda ditampilkan di bawah bilah alamat.",
+    bookmarkEditorSettingDescription: "Beri nama bookmark dan pilih lokasinya saat Anda menyimpannya.",
+    bookmarksSettingDescription: "Lihat, edit, dan hapus halaman yang disimpan di browser.",
     browsingDataTitle: "Data penjelajahan",
     historySetting: "Riwayat penjelajahan",
-    historySettingDescription:
-      "Lihat dan kelola halaman yang dikunjungi di browser.",
+    historySettingDescription: "Lihat dan kelola halaman yang dikunjungi di browser.",
     downloadsSetting: "Riwayat unduhan",
-    downloadsSettingDescription:
-      "Lihat dan kelola file yang diunduh dari browser.",
+    downloadsSettingDescription: "Lihat dan kelola file yang diunduh dari browser.",
     pagesFromChat: "Buka chat untuk melihat ini di browser.",
     tabsTitle: "Tab",
     switchToNewTabsSetting: "Langsung beralih ke tab baru",
-    switchToNewTabsSettingDescription:
-      "Saat Anda membuka tautan di tab baru dengan ⌘ atau Ctrl, tampilkan tab tersebut alih-alih membukanya di latar belakang.",
-    switchToNewTabsNative:
-      "Halaman di aplikasi desktop selalu membuka tab baru di depan.",
+    switchToNewTabsSettingDescription: "Saat Anda membuka tautan di tab baru dengan ⌘ atau Ctrl, tampilkan tab tersebut alih-alih membukanya di latar belakang.",
+    switchToNewTabsNative: "Halaman di aplikasi desktop selalu membuka tab baru di depan.",
     defaultZoomSetting: "Zoom default",
-    defaultZoomSettingDescription:
-      "Seberapa besar halaman tampil saat dibuka. Mengatur ulang zoom halaman akan kembali ke nilai ini.",
+    defaultZoomSettingDescription: "Seberapa besar halaman tampil saat dibuka. Mengatur ulang zoom halaman akan kembali ke nilai ini.",
     newTabPageTitle: "Halaman tab baru",
     showSuggestedSetting: "Tampilkan situs yang disarankan",
-    showSuggestedSettingDescription:
-      "Situs yang sering Anda kunjungi, sebagai pintasan di tab baru.",
+    showSuggestedSettingDescription: "Situs yang sering Anda kunjungi, sebagai pintasan di tab baru.",
     showRecentsSetting: "Tampilkan halaman terbaru",
-    showRecentsSettingDescription:
-      "Halaman yang baru-baru ini Anda kunjungi, ditampilkan di tab baru.",
+    showRecentsSettingDescription: "Halaman yang baru-baru ini Anda kunjungi, ditampilkan di tab baru.",
     hiddenSuggestionsSetting: "Saran yang dihapus",
-    hiddenSuggestionsSettingDescription:
-      "Situs yang Anda hapus dari Disarankan: {count}. Pulihkan agar situs tersebut muncul lagi.",
-    hiddenSuggestionsNone:
-      "Situs yang Anda hapus dari Disarankan dapat dipulihkan di sini.",
+    hiddenSuggestionsSettingDescription: "Situs yang Anda hapus dari Disarankan: {count}. Pulihkan agar situs tersebut muncul lagi.",
+    hiddenSuggestionsNone: "Situs yang Anda hapus dari Disarankan dapat dipulihkan di sini.",
     restore: "Pulihkan",
     importBookmarksSetting: "Impor dan ekspor",
-    importBookmarksSettingDescription:
-      "Bawa bookmark dari Chrome, Safari, Firefox, atau Edge menggunakan file HTML yang diekspornya, atau simpan bookmark Anda sebagai file tersebut.",
+    importBookmarksSettingDescription: "Bawa bookmark dari Chrome, Safari, Firefox, atau Edge menggunakan file HTML yang diekspornya, atau simpan bookmark Anda sebagai file tersebut.",
     importBookmarks: "Impor…",
     exportBookmarks: "Ekspor",
     importBookmarksDoneOne: "{count} bookmark diimpor.",
     importBookmarksDoneMany: "{count} bookmark diimpor.",
     importBookmarksNone: "Tidak ada bookmark baru di file tersebut.",
-    importBookmarksPartial:
-      "{count} diimpor, tetapi {leftOut} lainnya tidak muat: Unsloth menyimpan hingga {max} bookmark.",
-    importBookmarksFailed:
-      "Tidak dapat membaca file tersebut. Pilih file HTML bookmark yang diekspor dari browser.",
+    importBookmarksPartial: "{count} diimpor, tetapi {leftOut} lainnya tidak muat: Unsloth menyimpan hingga {max} bookmark.",
+    importBookmarksFailed: "Tidak dapat membaca file tersebut. Pilih file HTML bookmark yang diekspor dari browser.",
     downloadsTitle: "Unduhan",
     askWhereToSaveSetting: "Tanyakan lokasi penyimpanan setiap file",
-    askWhereToSaveSettingDescription:
-      "Tampilkan dialog simpan untuk file yang Anda unduh di browser.",
-    askWhereToSaveUnsupported:
-      "Browser web Anda menyimpan unduhan ke folder unduhannya sendiri.",
+    askWhereToSaveSettingDescription: "Tampilkan dialog simpan untuk file yang Anda unduh di browser.",
+    askWhereToSaveUnsupported: "Browser web Anda menyimpan unduhan ke folder unduhannya sendiri.",
     downloadLocationSetting: "Lokasi",
     downloadLocationDefault: "Folder Unduhan sistem",
     downloadLocationChange: "Ubah",
     downloadLocationReset: "Atur ulang",
     askBeforeDownloadingSetting: "Tanya sebelum mengunduh",
-    askBeforeDownloadingSettingDescription:
-      "Konfirmasi file dari situs web sebelum disimpan.",
+    askBeforeDownloadingSettingDescription: "Konfirmasi file dari situs web sebelum disimpan.",
     askBeforeProgramDownloadsSetting: "Tanya sebelum mengunduh program",
     askBeforeProgramDownloadsSettingDescription: "Konfirmasi file yang dapat menjalankan program, seperti .exe atau .dmg, meskipun unduhan lain tidak bertanya.",
     downloadSitesSetting: "Izin unduhan situs",
-    downloadSitesSettingDescription:
-      "Situs yang Anda pilih untuk selalu diizinkan atau diblokir unduhannya.",
-    downloadSitesNone:
-      "Centang Ingat untuk lain kali saat ditanya, dan situs tersebut akan muncul di sini.",
+    downloadSitesSettingDescription: "Situs yang Anda pilih untuk selalu diizinkan atau diblokir unduhannya.",
+    downloadSitesNone: "Centang Ingat untuk lain kali saat ditanya, dan situs tersebut akan muncul di sini.",
     downloadSitesFor: "Unduhan dari {host}",
     downloadSitesRemove: "Lupakan {host}",
     capture: {
@@ -419,8 +379,7 @@ export const id = {
     downloadPrompt: {
       title: "Unduh file ini?",
       description: "{host} ingin menyimpan {name} ke komputer Anda.",
-      dangerous:
-        "File seperti ini dapat menjalankan program di komputer Anda. Unduh hanya jika Anda memercayai {host}.",
+      dangerous: "File seperti ini dapat menjalankan program di komputer Anda. Unduh hanya jika Anda memercayai {host}.",
       remember: "Ingat untuk lain kali",
       once: "Tanya lain kali",
       site: "Selalu untuk {host}",
@@ -432,14 +391,11 @@ export const id = {
       save: "Simpan",
     },
     saveDownloadHistorySetting: "Simpan riwayat unduhan",
-    saveDownloadHistorySettingDescription:
-      "Cantumkan file yang Anda unduh dari browser di Riwayat unduhan.",
+    saveDownloadHistorySettingDescription: "Cantumkan file yang Anda unduh dari browser di Riwayat unduhan.",
     saveHistorySetting: "Simpan riwayat penjelajahan",
-    saveHistorySettingDescription:
-      "Ingat halaman yang Anda kunjungi, untuk Riwayat, Terbaru, dan Disarankan.",
+    saveHistorySettingDescription: "Ingat halaman yang Anda kunjungi, untuk Riwayat, Terbaru, dan Disarankan.",
     historyRetentionSetting: "Simpan riwayat selama",
-    historyRetentionSettingDescription:
-      "Kunjungan yang lebih lama dari ini akan dihapus secara otomatis.",
+    historyRetentionSettingDescription: "Kunjungan yang lebih lama dari ini akan dihapus secara otomatis.",
     retention: {
       forever: "Sampai dihapus",
       days90: "3 bulan",
@@ -449,17 +405,13 @@ export const id = {
     },
     annotationsTitle: "Anotasi",
     annotationScreenshotsSetting: "Screenshot anotasi",
-    annotationScreenshotsSettingDescription:
-      "Screenshot halaman beserta tanda Anda membantu model vision memahami komentar Anda, tetapi menggunakan lebih banyak konteks.",
-    annotationScreenshotsUnsupported:
-      "Memerlukan aplikasi desktop atau browser berbasis Chromium, seperti Chrome atau Edge.",
-    annotationScreenshotsHint:
-      "Di browser web, Anda akan diminta membagikan tab setiap kali mengirim anotasi.",
+    annotationScreenshotsSettingDescription: "Screenshot halaman beserta tanda Anda membantu model vision memahami komentar Anda, tetapi menggunakan lebih banyak konteks.",
+    annotationScreenshotsUnsupported: "Memerlukan aplikasi desktop atau browser berbasis Chromium, seperti Chrome atau Edge.",
+    annotationScreenshotsHint: "Di browser web, Anda akan diminta membagikan tab setiap kali mengirim anotasi.",
     annotationScreenshotsAlways: "Selalu sertakan",
     annotationScreenshotsNever: "Jangan pernah sertakan",
     clearDataSetting: "Hapus data penjelajahan",
-    clearDataSettingDescription:
-      "Hapus riwayat penjelajahan, riwayat unduhan, dan halaman yang di-cache. Halaman menyimpan cookie dan data situs hanya sampai Unsloth dimuat ulang.",
+    clearDataSettingDescription: "Hapus riwayat penjelajahan, riwayat unduhan, dan halaman yang di-cache. Halaman menyimpan cookie dan data situs hanya sampai Unsloth dimuat ulang.",
     manage: "Kelola",
     fullView: {
       enter: "Masuk ke tampilan penuh",
@@ -552,10 +504,8 @@ export const id = {
       pathCopied: "Jalur disalin",
       openFailed: "Tidak dapat membuka {name}.",
       wrap: "Bungkus baris",
-      reactNeedsNode:
-        "Pratinjau React memerlukan Node.js 20.19 atau yang lebih baru. Instal jika belum ada, lalu jalankan ulang penyiapan Unsloth.",
-      reactFailed:
-        "Tidak dapat menyiapkan pratinjau ini. Jalankan lagi untuk mencoba ulang.",
+      reactNeedsNode: "Pratinjau React memerlukan Node.js 20.19 atau yang lebih baru. Instal jika belum ada, lalu jalankan ulang penyiapan Unsloth.",
+      reactFailed: "Tidak dapat menyiapkan pratinjau ini. Jalankan lagi untuk mencoba ulang.",
     },
     video: {
       play: "Putar",
@@ -598,8 +548,7 @@ export const id = {
       noHistory: "Halaman yang Anda kunjungi di browser akan muncul di sini.",
       showMore: "Tampilkan lebih banyak",
       noDownloads: "File yang Anda unduh dari browser akan muncul di sini.",
-      noBookmarks:
-        "Halaman yang Anda bookmark dengan ikon bintang di bilah alamat akan muncul di sini.",
+      noBookmarks: "Halaman yang Anda bookmark dengan ikon bintang di bilah alamat akan muncul di sini.",
       noMatches: "Tidak ada yang cocok dengan pencarian Anda.",
       fromChat: "Dari chat",
       searchHistory: "Cari riwayat penjelajahan",
@@ -637,39 +586,30 @@ export const id = {
       undo: "Urungkan",
       manage: "Kelola bookmark",
       more: "Bookmark lainnya",
-      toolbarEmpty:
-        "Bookmark halaman dengan ikon bintang di bilah alamat untuk menambahkannya di sini.",
+      toolbarEmpty: "Bookmark halaman dengan ikon bintang di bilah alamat untuk menambahkannya di sini.",
       toolbarAlways: "Selalu tampilkan",
       toolbarNewTab: "Hanya tampilkan di tab baru",
       toolbarNever: "Jangan pernah tampilkan",
     },
     clearData: {
       title: "Hapus data penjelajahan?",
-      description:
-        "Tindakan ini menghapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs, sehingga Anda akan keluar dari situs. File yang diunduh tetap ada di komputer Anda.",
+      description: "Tindakan ini menghapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs, sehingga Anda akan keluar dari situs. File yang diunduh tetap ada di komputer Anda.",
       cancel: "Batal",
       confirm: "Hapus data",
       done: "Data penjelajahan dihapus",
     },
     error: {
       title: "Halaman ini tidak dapat dimuat",
-      description:
-        "{host} tidak merespons, menolak koneksi, atau memblokir permintaan.",
+      description: "{host} tidak merespons, menolak koneksi, atau memblokir permintaan.",
       retry: "Coba lagi",
       botCheckTitle: "Situs ini memeriksa apakah browser asli digunakan",
-      botCheckDescription:
-        "{host} meminta pengunjung membuktikan bahwa mereka manusia, yang tidak dapat dilakukan tampilan dalam aplikasi di sini. Buka di browser Anda.",
-      botCheckDescriptionWeb:
-        "{host} meminta pengunjung membuktikan bahwa mereka manusia, yang tidak dapat dilakukan tampilan dalam aplikasi di sini. Buka di browser Anda, atau di {app}, yang dapat membukanya.",
+      botCheckDescription: "{host} meminta pengunjung membuktikan bahwa mereka manusia, yang tidak dapat dilakukan tampilan dalam aplikasi di sini. Buka di browser Anda.",
+      botCheckDescriptionWeb: "{host} meminta pengunjung membuktikan bahwa mereka manusia, yang tidak dapat dilakukan tampilan dalam aplikasi di sini. Buka di browser Anda, atau di {app}, yang dapat membukanya.",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "Halaman ini berasal dari formulir. Memuatnya lagi akan mengirim formulir lagi, yang dapat mengulangi tindakannya.",
-      upload:
-        "Unggahan file tidak berfungsi di tampilan ini. Buka halaman di browser sistem Anda untuk mengirimnya.",
-      scriptNavigation:
-        "Halaman ini mencoba membuka alamat lain melalui skrip, yang tidak dapat diikuti tampilan ini. Buka di browser sistem Anda.",
-      needsBrowser:
-        "Halaman ini mencoba menggunakan fitur browser yang diblokir tampilan ini, sehingga sebagian halaman mungkin tidak berfungsi. Buka di browser sistem Anda.",
+      resubmit: "Halaman ini berasal dari formulir. Memuatnya lagi akan mengirim formulir lagi, yang dapat mengulangi tindakannya.",
+      upload: "Unggahan file tidak berfungsi di tampilan ini. Buka halaman di browser sistem Anda untuk mengirimnya.",
+      scriptNavigation: "Halaman ini mencoba membuka alamat lain melalui skrip, yang tidak dapat diikuti tampilan ini. Buka di browser sistem Anda.",
+      needsBrowser: "Halaman ini mencoba menggunakan fitur browser yang diblokir tampilan ini, sehingga sebagian halaman mungkin tidak berfungsi. Buka di browser sistem Anda.",
     },
     native: {
       externalPrompt: "{host} ingin membuka {url}",
@@ -677,18 +617,12 @@ export const id = {
       downloading: "Mengunduh {name}",
       downloaded: "{name} disimpan ke Unduhan",
       downloadFailed: "Tidak dapat mengunduh {name}",
-      notMarked:
-        "{name} telah disimpan tetapi tidak dapat ditandai sebagai diunduh dari internet, sehingga sistem Anda tidak akan memperingatkan sebelum membukanya.",
-      blocked:
-        "Alamat ini tidak dapat dibuka di panel browser. Panel ini hanya membuka situs web publik.",
-      blockedLocal:
-        "Alamat lokal ini tidak dapat dibuka di sini. Ketik di bilah alamat untuk membukanya.",
-      studioAddress:
-        "Ini adalah alamat Unsloth sendiri, sehingga tidak dapat dibuka di panel browser.",
-      clearDataSettingDescription:
-        "Hapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs yang disimpan halaman, sehingga Anda akan keluar dari situs.",
-      clearDataDescription:
-        "Tindakan ini menghapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs, sehingga Anda akan keluar dari situs. File yang diunduh tetap ada di komputer Anda.",
+      notMarked: "{name} telah disimpan tetapi tidak dapat ditandai sebagai diunduh dari internet, sehingga sistem Anda tidak akan memperingatkan sebelum membukanya.",
+      blocked: "Alamat ini tidak dapat dibuka di panel browser. Panel ini hanya membuka situs web publik.",
+      blockedLocal: "Alamat lokal ini tidak dapat dibuka di sini. Ketik di bilah alamat untuk membukanya.",
+      studioAddress: "Ini adalah alamat Unsloth sendiri, sehingga tidak dapat dibuka di panel browser.",
+      clearDataSettingDescription: "Hapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs yang disimpan halaman, sehingga Anda akan keluar dari situs.",
+      clearDataDescription: "Tindakan ini menghapus riwayat penjelajahan, riwayat unduhan, halaman yang di-cache, serta cookie dan data situs, sehingga Anda akan keluar dari situs. File yang diunduh tetap ada di komputer Anda.",
       clearDataFailed: "Tidak dapat menghapus data situs. Coba lagi.",
     },
   },
@@ -755,33 +689,25 @@ export const id = {
     tensor: "Paralel tensor",
     pipeline: "Paralel pipeline",
     data: "Replika (paralel data)",
-    pipelineHelp:
-      "Bagi lapisan model ke beberapa GPU. Setiap GPU harus memuat lapisan dan cache-nya.",
-    dataHelp:
-      "Sebarkan permintaan ke beberapa GPU. Model dense harus muat di setiap GPU; model MoE dapat berbagi expert.",
+    pipelineHelp: "Bagi lapisan model ke beberapa GPU. Setiap GPU harus memuat lapisan dan cache-nya.",
+    dataHelp: "Sebarkan permintaan ke beberapa GPU. Model dense harus muat di setiap GPU; model MoE dapat berbagi expert.",
     tensorParallel: "Bagi komputasi lapisan ke {count} GPU.",
-    inUse:
-      "Lepas model sebelum memperbaiki, memulihkan, atau menghapus engine-nya.",
+    inUse: "Lepas model sebelum memperbaiki, memulihkan, atau menghapus engine-nya.",
     title: "Engine lainnya",
-    description:
-      "Engine tambahan untuk GPU (Beta). Engine ini dapat menjalankan model lebih cepat, terutama untuk inferensi batch. Instal di sini, lalu pilih di pengaturan jalankan model.",
+    description: "Engine tambahan untuk GPU (Beta). Engine ini dapat menjalankan model lebih cepat, terutama untuk inferensi batch. Instal di sini, lalu pilih di pengaturan jalankan model.",
     picker: "Engine inferensi",
     precision: "Presisi",
     precisionAuto: "Default model",
-    precisionHelp:
-      "Default model mempertahankan presisi yang tersimpan. Opsi lain mengonversi bobot yang tidak dikuantisasi saat dimuat.",
+    precisionHelp: "Default model mempertahankan presisi yang tersimpan. Opsi lain mengonversi bobot yang tidak dikuantisasi saat dimuat.",
     kvCache: "Cache KV",
     kvCacheFp8: "FP8 (setengah memori)",
-    kvCacheHelp:
-      "FP8 menyimpan cache konteks dalam 8 bit, sehingga memuat sekitar dua kali lipat konteks dalam memori yang sama. Tanpa skala terkalibrasi di checkpoint, jawaban dapat sedikit kurang akurat.",
+    kvCacheHelp: "FP8 menyimpan cache konteks dalam 8 bit, sehingga memuat sekitar dua kali lipat konteks dalam memori yang sama. Tanpa skala terkalibrasi di checkpoint, jawaban dapat sedikit kurang akurat.",
     gpuMemory: "Batas memori GPU",
     gpuMemoryAuto: "Otomatis",
-    gpuMemoryHelp:
-      "Porsi maksimum dari setiap GPU yang dipilih yang boleh digunakan engine. Otomatis menggunakan yang tersedia; turunkan untuk menyisakan ruang bagi program lain.",
+    gpuMemoryHelp: "Porsi maksimum dari setiap GPU yang dipilih yang boleh digunakan engine. Otomatis menggunakan yang tersedia; turunkan untuk menyisakan ruang bagi program lain.",
     seed: "Seed",
     seedPlaceholder: "Default engine",
-    seedHelp:
-      "Mengatur seed acak engine. Chat yang berjalan bersamaan tetap dapat mengubah balasan hasil sampling.",
+    seedHelp: "Mengatur seed acak engine. Chat yang berjalan bersamaan tetap dapat mengubah balasan hasil sampling.",
     default: "Default",
     installRequired: "perlu diinstal",
     ownerRequired: "Minta pemilik Unsloth untuk menginstal engine ini.",
@@ -797,23 +723,18 @@ export const id = {
     installAndLoad: "Instal dan muat",
     confirm: "Instal {engine} {version}? Ini dapat mengunduh beberapa GB.",
     confirmSized: "Instal {engine} {version}? Sekitar {size} untuk diunduh.",
-    wslSetup:
-      "Di Windows, {engine} berjalan di lingkungan WSL2 pribadi yang disiapkan Unsloth. Akan ada satu permintaan izin administrator dan mungkin perlu memulai ulang.",
-    wslReady:
-      "Di Windows, {engine} berjalan di dalam lingkungan WSL2 pribadi Unsloth.",
-    wslRestart:
-      "Mulai ulang Windows untuk menyelesaikan pengaktifan WSL2, lalu klik Instal lagi.",
+    wslSetup: "Di Windows, {engine} berjalan di lingkungan WSL2 pribadi yang disiapkan Unsloth. Akan ada satu permintaan izin administrator dan mungkin perlu memulai ulang.",
+    wslReady: "Di Windows, {engine} berjalan di dalam lingkungan WSL2 pribadi Unsloth.",
+    wslRestart: "Mulai ulang Windows untuk menyelesaikan pengaktifan WSL2, lalu klik Instal lagi.",
     background: "Diinstal di latar belakang.",
     failed: "Instalasi engine gagal. Coba lagi atau gunakan engine default.",
     details: "Detail teknis",
     cancelled: "Instalasi dibatalkan. Anda dapat mencoba lagi.",
-    scope:
-      "Chat teks dan gambar di GPU NVIDIA. Pemuatan pertama mungkin memakan waktu lebih lama.",
+    scope: "Chat teks dan gambar di GPU NVIDIA. Pemuatan pertama mungkin memakan waktu lebih lama.",
   },
   sandboxSetup: {
     levelTitle: "Sandbox OS tidak tersedia",
-    levelDescription:
-      "Instal untuk menggunakan Tinggi, atau tetap gunakan Rendah (sandbox perangkat lunak).",
+    levelDescription: "Instal untuk menggunakan Tinggi, atau tetap gunakan Rendah (sandbox perangkat lunak).",
     useLow: "Gunakan sandbox Rendah",
     checking: "Memeriksa sandbox di komputer ini…",
     install: "Instal sandbox",
@@ -821,52 +742,40 @@ export const id = {
     copyCommand: "Salin perintah",
     copied: "Perintah disalin",
     copyFailed: "Tidak dapat menyalin perintah",
-    copiedRunIt:
-      "Perintah disalin. Jalankan di terminal pada komputer yang menjalankan Unsloth, lalu beralih ke Tinggi.",
-    ownerOnly:
-      "Hanya pemilik yang dapat menginstalnya, dari komputer yang menjalankan Unsloth.",
-    windowsNote:
-      "Memerlukan langkah administrator setiap kali komputer dimulai ulang. MXC adalah pratinjau, bukan batas keamanan.",
-    running:
-      "Menyiapkan. Setujui permintaan kata sandi atau izin administrator di komputer yang menjalankan Unsloth…",
+    copiedRunIt: "Perintah disalin. Jalankan di terminal pada komputer yang menjalankan Unsloth, lalu beralih ke Tinggi.",
+    ownerOnly: "Hanya pemilik yang dapat menginstalnya, dari komputer yang menjalankan Unsloth.",
+    windowsNote: "Memerlukan langkah administrator setiap kali komputer dimulai ulang. MXC adalah pratinjau, bukan batas keamanan.",
+    running: "Menyiapkan. Setujui permintaan kata sandi atau izin administrator di komputer yang menjalankan Unsloth…",
     succeeded: "Sandbox OS siap. Sandbox Tinggi aktif.",
-    stillUnavailable:
-      "Penyiapan selesai, tetapi sandbox OS masih belum lolos pemeriksaan.",
+    stillUnavailable: "Penyiapan selesai, tetapi sandbox OS masih belum lolos pemeriksaan.",
     declined: "Permintaan kata sandi atau izin administrator ditolak.",
     failed: "Penyiapan gagal.",
     startError: "Gagal memulai penyiapan sandbox",
     checkFailed: "Tidak dapat memeriksa sandbox di komputer ini.",
     retry: "Coba lagi",
-    keepsRunning:
-      "Menutup ini tidak menghentikan penyiapan. Hasilnya ditampilkan di Pengaturan > Keamanan.",
+    keepsRunning: "Menutup ini tidak menghentikan penyiapan. Hasilnya ditampilkan di Pengaturan > Keamanan.",
   },
   composerSettings: {
     shareDraft: "Bagikan draf antarobrolan",
     shareDraftDescription: "Gunakan satu draf untuk obrolan dan perbandingan. Nonaktif secara default; setiap obrolan menyimpan drafnya sendiri.",
     title: "Kolom pesan",
     plainText: "Kolom pesan teks biasa",
-    plainTextDescription:
-      "Pertahankan kode, Markdown, dan tautan sebagai teks literal. Nonaktifkan untuk menampilkan pratinjau berformat.",
+    plainTextDescription: "Pertahankan kode, Markdown, dan tautan sebagai teks literal. Nonaktifkan untuk menampilkan pratinjau berformat.",
     richPaste: "Tempel teks berformat",
     richPasteDescription: "Menempel tautan, tabel, dan format sebagai Markdown. {shortcut} menempel teks biasa. Composer teks kaya lengkap segera hadir.",
     showContext: "Penggunaan jendela konteks",
     sendShortcut: "Pintasan kirim",
     sendMultiline: "{mod} + Enter untuk prompt multibaris",
     sendAlways: "Selalu {mod} + Enter",
-    sendEnterDescription:
-      "Enter untuk mengirim. Shift + Enter menambahkan baris baru.",
-    sendMultilineDescription:
-      "Enter mengirim prompt satu baris. Setelah prompt lebih dari satu baris, Enter menambahkan baris baru dan {mod} + Enter mengirim.",
-    sendAlwaysDescription:
-      "{mod} + Enter untuk mengirim. Enter menambahkan baris baru.",
+    sendEnterDescription: "Enter untuk mengirim. Shift + Enter menambahkan baris baru.",
+    sendMultilineDescription: "Enter mengirim prompt satu baris. Setelah prompt lebih dari satu baris, Enter menambahkan baris baru dan {mod} + Enter mengirim.",
+    sendAlwaysDescription: "{mod} + Enter untuk mengirim. Enter menambahkan baris baru.",
     followUp: "Perilaku pesan lanjutan",
-    followUpDescription:
-      "Apa yang terjadi saat Anda mengirim selama respons berlangsung. Tekan {shortcut} untuk melakukan kebalikannya sekali.",
+    followUpDescription: "Apa yang terjadi saat Anda mengirim selama respons berlangsung. Tekan {shortcut} untuk melakukan kebalikannya sekali.",
     followUpMultilineShortcut: "{shortcut} ({multiline} di prompt multibaris)",
     queue: "Antrekan",
     steer: "Arahkan",
-    steerDescription:
-      "Arahkan menghentikan respons saat ini dan mengirim pesan lanjutan Anda berikutnya.",
+    steerDescription: "Arahkan menghentikan respons saat ini dan mengirim pesan lanjutan Anda berikutnya.",
     settings: "Pengaturan kolom pesan",
     preview: "Pratinjau berformat",
   },
@@ -875,8 +784,7 @@ export const id = {
     listLabel: "Prompt dalam antrean",
     regionLabel: "Antrean prompt, {current} dari {total}",
     itemLabel: "Prompt dalam antrean {position} dari {total}: {prompt}",
-    reorderInstructions:
-      "Seret pegangan untuk mengubah urutan. Saat pegangan difokuskan, gunakan Atas atau Bawah untuk memindahkan satu posisi, atau Home atau End untuk memindahkan ke depan atau akhir.",
+    reorderInstructions: "Seret pegangan untuk mengubah urutan. Saat pegangan difokuskan, gunakan Atas atau Bawah untuk memindahkan satu posisi, atau Home atau End untuk memindahkan ke depan atau akhir.",
     dragTooltip: "Seret untuk mengubah urutan",
     reorderLabel: "Ubah urutan prompt dalam antrean {position} dari {total}",
     paused: "Dijeda",
@@ -901,23 +809,17 @@ export const id = {
     sendLabel: "Kirim pesan",
     followUpTooltip: "{action} ({send}) · {opposite} untuk kebalikannya",
     announceUpdated: "Prompt dalam antrean diperbarui.",
-    announceEditFailed:
-      "Prompt ini tidak dapat diedit lagi karena antrean berubah.",
+    announceEditFailed: "Prompt ini tidak dapat diedit lagi karena antrean berubah.",
     announceRemoved: "Prompt dihapus dari antrean.",
     announceSteered: "Prompt ini akan mengarahkan respons berikutnya.",
-    announceSteerFailed:
-      "Prompt ini tidak dapat mengarahkan respons. Periksa antrean dan coba lagi.",
+    announceSteerFailed: "Prompt ini tidak dapat mengarahkan respons. Periksa antrean dan coba lagi.",
     announceCopied: "Prompt disalin.",
     announceCopyFailed: "Tidak dapat menyalin prompt ini. Coba lagi.",
-    announceQueueingOn:
-      "Pesan lanjutan baru akan diantrekan setelah respons saat ini.",
-    announceQueueingOff:
-      "Pesan lanjutan baru akan mengarahkan respons saat ini.",
+    announceQueueingOn: "Pesan lanjutan baru akan diantrekan setelah respons saat ini.",
+    announceQueueingOff: "Pesan lanjutan baru akan mengarahkan respons saat ini.",
     announceMoved: "Prompt dipindahkan ke posisi {position} dari {total}.",
-    announceMoveFailed:
-      "Antrean berubah sebelum prompt ini dapat dipindahkan. Coba lagi.",
-    announceDragReset:
-      "Antrean berubah. Seret lagi untuk mengubah urutan prompt yang tersisa.",
+    announceMoveFailed: "Antrean berubah sebelum prompt ini dapat dipindahkan. Coba lagi.",
+    announceDragReset: "Antrean berubah. Seret lagi untuk mengubah urutan prompt yang tersisa.",
     editingHint: "Mengedit pesan",
     queueingOffHint: "Pesan baru menginterupsi dan dijalankan berikutnya.",
     queueingOnHint: "Pesan baru menunggu gilirannya.",
@@ -934,12 +836,10 @@ export const id = {
     modeConversation: "Hanya percakapan",
     modeFiles: "Hanya file",
     checkFailed: "Tidak dapat memeriksa perubahan file: {error}",
-    summary:
-      "File yang akan dipulihkan: {restore}. Akan dihapus: {remove}. Akan dibuat ulang: {recreate}.",
+    summary: "File yang akan dipulihkan: {restore}. Akan dihapus: {remove}. Akan dibuat ulang: {recreate}.",
     conflicts: "Telah berubah sejak itu, akan dilewati",
     untracked: "Tidak dapat dipulihkan",
-    scopeNote:
-      "File mencakup kode. Program, paket, dan file di luar folder chat ini tidak diubah.",
+    scopeNote: "File mencakup kode. Program, paket, dan file di luar folder chat ini tidak diubah.",
     back: "Kembali",
     cancel: "Batal",
     confirm: "Putar balik",
@@ -948,8 +848,7 @@ export const id = {
     restoredMany: "{count} file dipulihkan",
     nothingRestored: "Tidak ada file yang perlu dipulihkan",
     skippedCount: "{count} dilewati",
-    filesNotRestored:
-      "{count} file yang berubah tidak dapat dipulihkan dan tetap seperti apa adanya.",
+    filesNotRestored: "{count} file yang berubah tidak dapat dipulihkan dan tetap seperti apa adanya.",
     restoreFailed: "Tidak dapat memulihkan file",
     undo: "Urungkan",
     undone: "Pemulihan file diurungkan",
@@ -979,8 +878,7 @@ export const id = {
     addScheduledTask: "Tambahkan tugas terjadwal…",
     compact: "Padatkan percakapan",
     compactEmpty: "Belum ada yang dapat dipadatkan",
-    compactUnsupported:
-      "Pemadatan memerlukan model GGUF atau MLX yang mendukung alat",
+    compactUnsupported: "Pemadatan memerlukan model GGUF atau MLX yang mendukung alat",
   },
   welcome: {
     goodToSeeYou: "Senang bertemu Anda",
@@ -999,23 +897,19 @@ export const id = {
     nightShift: "Sif malam dimulai",
     nightShiftName: "Sif malam dimulai, {name}",
     temporaryChat: "Chat sementara",
-    temporaryChatDescription:
-      "Chat ini tidak akan muncul di riwayat Anda dan tidak disimpan. Chat akan hilang saat Anda keluar.",
+    temporaryChatDescription: "Chat ini tidak akan muncul di riwayat Anda dan tidak disimpan. Chat akan hilang saat Anda keluar.",
   },
   picker: {
     unifiedTightFit: "Pas-pasan",
-    unifiedTightFitHint:
-      "Mungkin dimuat dengan konteks lebih pendek atau berjalan lebih lambat di Mac ini.",
+    unifiedTightFitHint: "Mungkin dimuat dengan konteks lebih pendek atau berjalan lebih lambat di Mac ini.",
     residentToRun: "untuk menjalankan",
-    residentToRunHint:
-      "Memori GPU yang dibutuhkan pemeriksaan pemuatan saat berjalan",
+    residentToRunHint: "Memori GPU yang dibutuhkan pemeriksaan pemuatan saat berjalan",
     onDevice: "Di Perangkat",
     huggingFace: "Hugging Face",
     retry: "Coba lagi",
     loadMore: "Muat lebih banyak",
     offlineTitle: "Anda sedang offline",
-    offlineBody:
-      "Beralih ke Perangkat untuk menggunakan {noun} yang di-cache atau lokal.",
+    offlineBody: "Beralih ke Perangkat untuk menggunakan {noun} yang di-cache atau lokal.",
     offlineSwitchDevice: "Perangkat",
     searchAriaLabel: "Cari {noun}",
     modelSourceAriaLabel: "Sumber model",
@@ -1024,14 +918,12 @@ export const id = {
     modelDroppedByProvider: "{provider} · tidak lagi ditawarkan",
     modelDisabled: "Tidak diaktifkan",
     modelDisabledByProvider: "{provider} · tidak diaktifkan",
-    multipleMatches:
-      "Ada beberapa {noun} yang cocok. Pilih salah satu dari daftar.",
+    multipleMatches: "Ada beberapa {noun} yang cocok. Pilih salah satu dari daftar.",
     rateLimitedTitle: "Batas permintaan Hugging Face tercapai",
     rateLimitedBody: "Tunggu sebentar, lalu coba lagi mencari {noun}.",
     modelScope: "ModelScope",
     useModelScope: "Gunakan ModelScope",
-    useModelScopeHint:
-      "Cari dan unduh dari ModelScope sebagai gantinya. Anda dapat beralih kembali di Pengaturan.",
+    useModelScopeHint: "Cari dan unduh dari ModelScope sebagai gantinya. Anda dapat beralih kembali di Pengaturan.",
     useModelScopeFailed: "Tidak dapat beralih ke ModelScope.",
     updateToken: "Perbarui token",
     hfToken: {
@@ -1041,8 +933,7 @@ export const id = {
       savedAriaLabel: "Token Hugging Face tersimpan",
       addAriaLabel: "Atur token Hugging Face",
       savedHint: "Token tersimpan. Akses diperiksa saat Anda menggunakannya.",
-      addHint:
-        "Atur token untuk mengakses repositori pribadi dan yang dibatasi (gated).",
+      addHint: "Atur token untuk mengakses repositori pribadi dan yang dibatasi (gated).",
     },
   },
   common: {
@@ -1152,8 +1043,7 @@ export const id = {
       guidedTour: "Tur Terpandu",
       help: "Bantuan",
       logOut: "Keluar",
-      logOutNeedsPassword:
-        "Atur kata sandi di Pengaturan > Jarak jauh & LAN sebelum keluar, agar Anda dapat masuk kembali.",
+      logOutNeedsPassword: "Atur kata sandi di Pengaturan > Jarak jauh & LAN sebelum keluar, agar Anda dapat masuk kembali.",
       logOutFailed: "Tidak dapat keluar dengan aman. Coba lagi sebentar lagi.",
       shutdown: "Matikan",
     },
@@ -1214,10 +1104,8 @@ export const id = {
       unpinProjects: "Lepas sematan proyek",
       deleteProjects: "Hapus proyek",
       deleteProjectsTitle: "Hapus proyek",
-      deleteProjectsDescription:
-        "{count} proyek dan semua chat di dalamnya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
-      deleteProjectsFilesDescription:
-        "Folder ruang kerja setiap proyek akan dihapus dari disk.",
+      deleteProjectsDescription: "{count} proyek dan semua chat di dalamnya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+      deleteProjectsFilesDescription: "Folder ruang kerja setiap proyek akan dihapus dari disk.",
       countSelected: "{count} dipilih",
       pinChats: "Sematkan chat",
       unpinChats: "Lepas sematan chat",
@@ -1226,13 +1114,10 @@ export const id = {
       markRead: "Tandai sudah dibaca",
       deleteChats: "Hapus chat",
       deleteTitle: "Hapus chat",
-      deleteDescription:
-        "{count} chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
-      deleteFilesDescription:
-        "Folder sandbox milik setiap chat akan dihapus dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
+      deleteDescription: "{count} chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+      deleteFilesDescription: "Folder sandbox milik setiap chat akan dihapus dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
       deleteFilesLabel: "Hapus file dan folder sandbox",
-      deleteChatFilesDescription:
-        "Folder sandbox milik chat ini akan dihapus dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
+      deleteChatFilesDescription: "Folder sandbox milik chat ini akan dihapus dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
     },
     organize: {
       sidebarHeading: "Atur bilah sisi",
@@ -1275,11 +1160,11 @@ export const id = {
     dialog: {
       deleteChat: {
         title: "Hapus chat",
-        description: 'Chat "{name}" dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.',
+        description: "Chat \"{name}\" dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
       },
       deleteRun: {
         title: "Hapus proses pelatihan",
-        description: 'Yakin ingin menghapus proses "{name}" ini?',
+        description: "Yakin ingin menghapus proses \"{name}\" ini?",
       },
       renameChat: {
         title: "Ganti nama chat",
@@ -1291,8 +1176,7 @@ export const id = {
       },
     },
     toast: {
-      cannotDeleteRunningRun:
-        "Tidak dapat menghapus proses pelatihan yang sedang berjalan",
+      cannotDeleteRunningRun: "Tidak dapat menghapus proses pelatihan yang sedang berjalan",
       failedToDeleteChat: "Gagal menghapus chat",
       failedToDeleteRun: "Gagal menghapus proses",
       failedToRenameChat: "Gagal mengganti nama chat",
@@ -1305,32 +1189,26 @@ export const id = {
       signsInAs: "Masuk sebagai {username}",
       signsInAsOwner: "Masuk sebagai {alias} atau {username}",
       signInName: "Nama masuk Anda",
-      signInNameDescription:
-        "Nama yang Anda ketik untuk masuk saat instalasi ini memiliki lebih dari satu akun. unsloth juga selalu berfungsi. Biarkan kosong untuk hanya menggunakan unsloth.",
+      signInNameDescription: "Nama yang Anda ketik untuk masuk saat instalasi ini memiliki lebih dari satu akun. unsloth juga selalu berfungsi. Biarkan kosong untuk hanya menggunakan unsloth.",
       signInNameSave: "Simpan nama",
       title: "Akun",
-      description:
-        "Buat akun Unsloth pribadi. Pengguna baru masuk dengan kode penyiapan sekali pakai dan memilih kata sandi.",
+      description: "Buat akun Unsloth pribadi. Pengguna baru masuk dengan kode penyiapan sekali pakai dan memilih kata sandi.",
       username: "Nama pengguna",
       create: "Buat akun",
-      createDescription:
-        "Bagikan kode penyiapan agar mereka dapat memilih kata sandi sendiri.",
+      createDescription: "Bagikan kode penyiapan agar mereka dapat memilih kata sandi sendiri.",
       actionsFor: "Kelola {username}",
       actions: "Tindakan",
       search: "Cari akun",
       noResults: "Tidak ada akun yang cocok",
       created: "Dibuat",
       status: "Status",
-      loginHint:
-        "Masuk sebagai {username} dengan kode ini sebagai kata sandi, lalu pilih kata sandi baru.",
+      loginHint: "Masuk sebagai {username} dengan kode ini sebagai kata sandi, lalu pilih kata sandi baru.",
       privateAccount: "Akun pribadi",
       modelAccess: "Akses model",
       modelAccessTitle: "Akses model untuk {username}",
-      modelAccessDescription:
-        "Pilih model Hugging Face yang dapat dilihat, diunduh, dimuat, dan digunakan akun ini melalui kunci API-nya.",
+      modelAccessDescription: "Pilih model Hugging Face yang dapat dilihat, diunduh, dimuat, dan digunakan akun ini melalui kunci API-nya.",
       modelAccessLabel: "Model yang diizinkan",
-      modelAccessHint:
-        "Satu model per baris, misalnya unsloth/Qwen3-4B-GGUF, atau unsloth/* untuk seluruh organisasi. Biarkan kosong untuk mengizinkan semua model.",
+      modelAccessHint: "Satu model per baris, misalnya unsloth/Qwen3-4B-GGUF, atau unsloth/* untuk seluruh organisasi. Biarkan kosong untuk mengizinkan semua model.",
       modelAccessSave: "Simpan",
       modelAccessLimited: "Akses model terbatas",
       rename: "Ganti nama",
@@ -1339,27 +1217,23 @@ export const id = {
       empty: "Belum ada akun lain",
       setupCode: "Kode penyiapan",
       setupFor: "Kode penyiapan untuk {username}",
-      shownOnce:
-        "Salin kode ini sekarang dan bagikan kepada pemilik akun. Kode hanya ditampilkan di sini dan dapat digunakan satu kali dalam 60 menit.",
+      shownOnce: "Salin kode ini sekarang dan bagikan kepada pemilik akun. Kode hanya ditampilkan di sini dan dapat digunakan satu kali dalam 60 menit.",
       expires: "Kedaluwarsa {expiry}",
       copy: "Salin kode penyiapan",
       copied: "Disalin",
-      copyFailed:
-        "Tidak dapat menyalin. Pilih dan salin kode penyiapan di atas.",
+      copyFailed: "Tidak dapat menyalin. Pilih dan salin kode penyiapan di atas.",
       dismiss: "Selesai",
       owner: "Pemilik instalasi",
       active: "Aktif",
       inactive: "Nonaktif",
       regenerate: "Buat ulang kode penyiapan",
       resetTitle: "Atur ulang kata sandi {username}?",
-      resetDescription:
-        "Membuat ulang kode penyiapan akan mengganti kata sandi {username}, mengeluarkannya dari sesi, dan mencabut kunci API-nya. Berikan kode baru agar mereka dapat memilih kata sandi lagi.",
+      resetDescription: "Membuat ulang kode penyiapan akan mengganti kata sandi {username}, mengeluarkannya dari sesi, dan mencabut kunci API-nya. Berikan kode baru agar mereka dapat memilih kata sandi lagi.",
       deactivate: "Nonaktifkan",
       reactivate: "Aktifkan",
       delete: "Hapus akun",
       deleteTitle: "Hapus {username}?",
-      deleteDescription:
-        "Tindakan ini mencabut sesi {username} dan membatalkan pekerjaannya. Chat, pengaturan, kredensial, unggahan, dataset, proses pelatihan, output, ekspor, galeri, sandbox, proyek, dan file sementaranya akan dihentikan penggunaannya. Direktori diganti namanya dan disisihkan, tidak pernah dihapus. Membuat nama pengguna ini lagi akan memulai akun baru tanpa data tersebut.",
+      deleteDescription: "Tindakan ini mencabut sesi {username} dan membatalkan pekerjaannya. Chat, pengaturan, kredensial, unggahan, dataset, proses pelatihan, output, ekspor, galeri, sandbox, proyek, dan file sementaranya akan dihentikan penggunaannya. Direktori diganti namanya dan disisihkan, tidak pernah dihapus. Membuat nama pengguna ini lagi akan memulai akun baru tanpa data tersebut.",
       cancel: "Batal",
       retry: "Muat ulang akun",
       failed: "Permintaan akun gagal.",
@@ -1382,8 +1256,7 @@ export const id = {
       medium: "Sedang",
       large: "Besar",
       imageLayout: "Kartu gambar",
-      imageLayoutDescription:
-        "Pertahankan bentuk setiap gambar, atau potong menjadi persegi yang seragam.",
+      imageLayoutDescription: "Pertahankan bentuk setiap gambar, atau potong menjadi persegi yang seragam.",
       masonry: "Bentuk asli",
       square: "Persegi",
       showCardDates: "Tampilkan tanggal di kartu",
@@ -1394,32 +1267,26 @@ export const id = {
       suggested: "Disarankan",
       all: "Semua",
       sort: "Urutkan menurut",
-      sortDescription:
-        "Urutan file dan folder. Disarankan selalu menampilkan yang terbaru.",
+      sortDescription: "Urutan file dan folder. Disarankan selalu menampilkan yang terbaru.",
       recent: "Terbaru",
       oldest: "Terlama",
       name: "Nama",
       suggestedLimit: "Item yang disarankan",
-      suggestedLimitDescription:
-        "Jumlah file terbaru yang ditampilkan di Disarankan.",
+      suggestedLimitDescription: "Jumlah file terbaru yang ditampilkan di Disarankan.",
       tabAuto: "Saat ada file",
       tabAlways: "Selalu",
       contentSection: "Konten",
-      contentDescription:
-        "Pilih apa yang ditampilkan Pustaka. File yang disembunyikan tidak dihapus.",
+      contentDescription: "Pilih apa yang ditampilkan Pustaka. File yang disembunyikan tidak dihapus.",
       showChatAttachments: "Lampiran chat",
       showChatAttachmentsDescription: "File yang Anda lampirkan ke chat.",
       showChatToolFiles: "File dari alat chat",
-      showChatToolFilesDescription:
-        "File yang dibuat oleh kode dan alat selama chat.",
+      showChatToolFilesDescription: "File yang dibuat oleh kode dan alat selama chat.",
       showGeneratedMedia: "Media yang dihasilkan",
-      showGeneratedMediaDescription:
-        "Gambar, video, dan audio dari halaman Gambar, Video, dan Audio.",
+      showGeneratedMediaDescription: "Gambar, video, dan audio dari halaman Gambar, Video, dan Audio.",
       showFineTunesDescription: "Model yang Anda latih atau ekspor di Unsloth.",
       deletingSection: "Penghapusan",
       confirmDelete: "Konfirmasi sebelum menghapus",
-      confirmDeleteDescription:
-        "Tanya sebelum menghapus file dan folder dari Pustaka.",
+      confirmDeleteDescription: "Tanya sebelum menghapus file dan folder dari Pustaka.",
       reset: "Atur ulang pengaturan Pustaka",
       resetDescription: "Kembalikan setiap opsi di atas ke default-nya.",
       resetButton: "Atur ulang",
@@ -1427,10 +1294,8 @@ export const id = {
       storageSection: "Penyimpanan",
       downloadsSection: "Unduhan gambar",
       imageInfoStamp: "Cap info",
-      imageInfoStampDescription:
-        "Tampilkan model, tanggal, dan seed di bagian bawah gambar yang Anda unduh dari halaman Gambar. Pengaturan pembuatan tetap disimpan di dalam file.",
-      storageDescription:
-        "Buka kategori untuk melihat file-filenya dari yang terbesar, lalu hapus yang tidak lagi Anda perlukan.",
+      imageInfoStampDescription: "Tampilkan model, tanggal, dan seed di bagian bawah gambar yang Anda unduh dari halaman Gambar. Pengaturan pembuatan tetap disimpan di dalam file.",
+      storageDescription: "Buka kategori untuk melihat file-filenya dari yang terbesar, lalu hapus yang tidak lagi Anda perlukan.",
       storageUsed: "{size} digunakan oleh Pustaka",
       storageDisk: "{free} kosong dari {total} di disk ini",
       storageEmpty: "Belum ada yang disimpan di Pustaka.",
@@ -1440,25 +1305,21 @@ export const id = {
       storageOpen: "Buka",
       storageError: "Tidak dapat membaca penyimpanan Pustaka.",
       locationsSection: "File di disk",
-      locationsDescription:
-        "Tempat Unsloth menyimpan setiap jenis file. Folder Pustaka adalah label di dalam Unsloth, bukan folder di disk. Hasil fine-tune dan ekspor tetap berada di tempatnya, karena pelatihan dan chat merujuknya melalui jalur.",
+      locationsDescription: "Tempat Unsloth menyimpan setiap jenis file. Folder Pustaka adalah label di dalam Unsloth, bukan folder di disk. Hasil fine-tune dan ekspor tetap berada di tempatnya, karena pelatihan dan chat merujuknya melalui jalur.",
       locationUploads: "Unggahan Pustaka",
       locationExports: "Ekspor",
       revealFailed: "Tidak dapat membuka pengelola file",
       locationReset: "Atur ulang",
       locationMoveTitle: "Pindahkan {name} ke folder baru",
-      locationMoveDescription:
-        "Pilih folder mana pun. Jika folder tersebut sudah berisi file, Unsloth akan membuat foldernya sendiri di dalamnya. Semua yang sudah ada di sini juga akan dipindahkan.",
+      locationMoveDescription: "Pilih folder mana pun. Jika folder tersebut sudah berisi file, Unsloth akan membuat foldernya sendiri di dalamnya. Semua yang sudah ada di sini juga akan dipindahkan.",
       locationMoveAction: "Pindahkan ke sini",
       locationMoving: "Memindahkan {name}…",
       locationMoved: "{name} dipindahkan",
       locationMoveFailed: "Tidak dapat memindahkan {name}",
       locationFree: "{free} kosong di drive ini",
-      locationUnavailable:
-        "Tidak tersedia. Sambungkan kembali drive-nya, atau atur ulang folder.",
+      locationUnavailable: "Tidak tersedia. Sambungkan kembali drive-nya, atau atur ulang folder.",
       locationResetUnavailableTitle: "Atur ulang {name}?",
-      locationResetUnavailableDescription:
-        "Drive-nya tidak tersambung. File di {path} tetap berada di drive tersebut dan tidak akan ditampilkan di Pustaka sampai Anda memindahkannya kembali.",
+      locationResetUnavailableDescription: "Drive-nya tidak tersambung. File di {path} tetap berada di drive tersebut dan tidak akan ditampilkan di Pustaka sampai Anda memindahkannya kembali.",
       locationLeftBehind: "File di {path} tetap berada di drive tersebut.",
       dataStorage: "Penyimpanan Pustaka",
       manageStorage: "Kelola penyimpanan",
@@ -1468,8 +1329,7 @@ export const id = {
       itemCountOne: "1 item",
       itemCount: "{count} item",
       tabsSection: "Tab",
-      tabsDescription:
-        "Pilih tab yang ditampilkan Pustaka. Tab yang Anda buka dari tautan tetap muncul.",
+      tabsDescription: "Pilih tab yang ditampilkan Pustaka. Tab yang Anda buka dari tautan tetap muncul.",
       tabHidden: "Tersembunyi",
       lastVisited: "Terakhir dikunjungi",
     },
@@ -1497,8 +1357,7 @@ export const id = {
     },
     keyboardShortcuts: {
       title: "Pintasan keyboard",
-      intro:
-        "Untuk mengubah pintasan, pilih kombinasi tombol, lalu ketik tombol yang baru",
+      intro: "Untuk mengubah pintasan, pilih kombinasi tombol, lalu ketik tombol yang baru",
       searchPlaceholder: "Cari pintasan…",
       keystrokePlaceholder: "Tekan pintasan untuk mencari",
       searchByKeystrokes: "Cari berdasarkan tombol",
@@ -1506,19 +1365,15 @@ export const id = {
       noResults: "Tidak ada pintasan yang cocok dengan pencarian tersebut.",
       unassigned: "tidak ada",
       recording: "Tekan urutan tombol",
-      needsModifier:
-        "Tambahkan ⌘, Ctrl, atau Alt. Tombol tunggal akan mengganggu pengetikan.",
+      needsModifier: "Tambahkan ⌘, Ctrl, atau Alt. Tombol tunggal akan mengganggu pengetikan.",
       conflict: "Juga digunakan oleh pintasan lain",
-      conflictShadowed:
-        "Pintasan lain memiliki kombinasi ini dan yang dijalankan adalah pintasan tersebut",
+      conflictShadowed: "Pintasan lain memiliki kombinasi ini dan yang dijalankan adalah pintasan tersebut",
       edit: "Ubah pintasan",
       reset: "Pulihkan default",
       resetAll: "Pulihkan semua default",
-      browserReserved:
-        "Browser Anda mungkin mencadangkan kombinasi ini untuk dirinya sendiri. Kombinasi ini berfungsi di aplikasi desktop.",
+      browserReserved: "Browser Anda mungkin mencadangkan kombinasi ini untuk dirinya sendiri. Kombinasi ini berfungsi di aplikasi desktop.",
       metaUnsupported: "Tombol Windows tidak dapat digunakan dalam pintasan.",
-      altGraphUnsupported:
-        "Kombinasi AltGr tidak dapat digunakan sebagai pintasan.",
+      altGraphUnsupported: "Kombinasi AltGr tidak dapat digunakan sebagai pintasan.",
       desktopOnly: "Hanya aplikasi desktop",
       groups: {
         composer: "Kolom pesan",
@@ -1537,8 +1392,7 @@ export const id = {
         },
         toggleBrowserFullView: {
           label: "Alihkan tampilan penuh browser",
-          description:
-            "Tampilkan browser di seluruh jendela, dengan chat mengambang di atasnya",
+          description: "Tampilkan browser di seluruh jendela, dengan chat mengambang di atasnya",
         },
         openSettings: {
           label: "Buka pengaturan",
@@ -1590,13 +1444,11 @@ export const id = {
         },
         markChatUnread: {
           label: "Tandai belum dibaca",
-          description:
-            "Tandai chat yang dipilih sebagai belum dibaca, atau chat saat ini",
+          description: "Tandai chat yang dipilih sebagai belum dibaca, atau chat saat ini",
         },
         togglePinChat: {
           label: "Alihkan sematan",
-          description:
-            "Sematkan atau lepas sematan chat yang dipilih, atau chat saat ini",
+          description: "Sematkan atau lepas sematan chat yang dipilih, atau chat saat ini",
         },
         selectAllChats: {
           label: "Pilih semua chat",
@@ -1604,8 +1456,7 @@ export const id = {
         },
         clearChatSelection: {
           label: "Hapus pilihan",
-          description:
-            "Batalkan pilihan chat yang dipilih. Escape juga dapat melakukannya",
+          description: "Batalkan pilihan chat yang dipilih. Escape juga dapat melakukannya",
         },
         deleteSelectedChats: {
           label: "Hapus chat yang dipilih",
@@ -1629,8 +1480,7 @@ export const id = {
         },
         nextChatNeedingAttention: {
           label: "Chat berikutnya yang perlu perhatian",
-          description:
-            "Beralih ke chat berikutnya yang sedang membuat respons, dalam antrean, atau belum dibaca",
+          description: "Beralih ke chat berikutnya yang sedang membuat respons, dalam antrean, atau belum dibaca",
         },
         clearAllUnreads: {
           label: "Hapus semua status belum dibaca",
@@ -1772,8 +1622,7 @@ export const id = {
     },
     sandbox: {
       title: "Keamanan",
-      description:
-        "Apakah panggilan alat Python dan Terminal dijalankan di dalam sandbox OS di komputer ini.",
+      description: "Apakah panggilan alat Python dan Terminal dijalankan di dalam sandbox OS di komputer ini.",
       docs: "Dokumentasi",
       docsLabel: "Buka dokumentasi sandbox",
       toolsSection: "Komputer ini",
@@ -1782,37 +1631,27 @@ export const id = {
       terminal: "Terminal",
       osIsolation: "Sandbox OS ({backend})",
       softwareSafeguards: "Pengaman perangkat lunak",
-      noReason:
-        "Belum ada sandbox OS yang berfungsi di sini, jadi Unsloth memeriksa setiap panggilan sebagai gantinya.",
-      runsInCmd:
-        "Berjalan di cmd.exe, karena Git Bash tidak dapat dimulai di sandbox Windows.",
+      noReason: "Belum ada sandbox OS yang berfungsi di sini, jadi Unsloth memeriksa setiap panggilan sebagai gantinya.",
+      runsInCmd: "Berjalan di cmd.exe, karena Git Bash tidak dapat dimulai di sandbox Windows.",
       loadError: "Gagal memuat status sandbox",
       saveError: "Gagal menyimpan pengaturan sandbox",
       prepareError: "Gagal menyiapkan PC ini",
-      unsupported:
-        "Server Unsloth ini belum melaporkan status sandbox. Perbarui Unsloth untuk mengelolanya di sini.",
+      unsupported: "Server Unsloth ini belum melaporkan status sandbox. Perbarui Unsloth untuk mengelolanya di sini.",
       windowsSection: "Sandbox Windows (pratinjau)",
-      windowsDescription:
-        "Sandbox MXC dari Microsoft. Sandbox ini menggunakan kontainer bawaan Windows, atau cadangan pada versi Windows yang tidak memilikinya.",
+      windowsDescription: "Sandbox MXC dari Microsoft. Sandbox ini menggunakan kontainer bawaan Windows, atau cadangan pada versi Windows yang tidak memilikinya.",
       builtinLabel: "Kontainer bawaan",
-      builtinDescription:
-        "Sandbox Windows berjalan di kontainer bawaan Windows, tanpa langkah administrator.",
+      builtinDescription: "Sandbox Windows berjalan di kontainer bawaan Windows, tanpa langkah administrator.",
       builtinInUse: "Digunakan",
       optInLabel: "Gunakan sandbox cadangan",
-      optInDescription:
-        "Untuk versi Windows tanpa kontainer bawaan. Python dan Terminal kemudian hanya dapat mengubah file di folder chat.",
-      optInNotNeeded:
-        "Tidak diperlukan di PC ini, karena kontainer bawaan berfungsi.",
-      disclosure:
-        "Sandbox cadangan memerlukan langkah administrator satu kali, Siapkan PC ini, yang harus diulangi setiap kali komputer dimulai ulang. Saat alat berjalan, Unsloth memberinya akses sementara ke folder yang diperlukannya. MXC masih berupa pratinjau, bukan batas keamanan.",
+      optInDescription: "Untuk versi Windows tanpa kontainer bawaan. Python dan Terminal kemudian hanya dapat mengubah file di folder chat.",
+      optInNotNeeded: "Tidak diperlukan di PC ini, karena kontainer bawaan berfungsi.",
+      disclosure: "Sandbox cadangan memerlukan langkah administrator satu kali, Siapkan PC ini, yang harus diulangi setiap kali komputer dimulai ulang. Saat alat berjalan, Unsloth memberinya akses sementara ke folder yang diperlukannya. MXC masih berupa pratinjau, bukan batas keamanan.",
       lockedDacl: "Diatur oleh UNSLOTH_MXC_ALLOW_DACL_FALLBACK",
       grantsLabel: "Alat dimulai lebih cepat",
-      grantsDescription:
-        "Mempertahankan akses hanya-baca ke folder runtime milik Unsloth di antara panggilan. Jika nonaktif, setiap panggilan dimulai beberapa detik lebih lambat.",
+      grantsDescription: "Mempertahankan akses hanya-baca ke folder runtime milik Unsloth di antara panggilan. Jika nonaktif, setiap panggilan dimulai beberapa detik lebih lambat.",
       lockedGrants: "Diatur oleh UNSLOTH_MXC_PERSISTENT_READ_GRANTS",
       memoryLabel: "Batas memori",
-      memoryDescription:
-        "Memori maksimum yang dapat dicadangkan oleh satu panggilan Python atau Terminal dalam sandbox. Berlaku mulai panggilan berikutnya. Default-nya {defaultSize} GB.",
+      memoryDescription: "Memori maksimum yang dapat dicadangkan oleh satu panggilan Python atau Terminal dalam sandbox. Berlaku mulai panggilan berikutnya. Default-nya {defaultSize} GB.",
       memoryLocked: "Diatur oleh UNSLOTH_STUDIO_SANDBOX_AS_GB",
       memoryInvalid: "Masukkan bilangan bulat dari {min} hingga {max}.",
       restored: "Akses dicabut dari {count} folder.",
@@ -1828,41 +1667,31 @@ export const id = {
       prepFailed: "Penyiapan gagal.",
       setupLabel: "Sandbox OS",
       setupCommandHint: "Jalankan ini di komputer yang menjalankan Unsloth:",
-      macosBuiltIn:
-        "macOS memiliki sandbox bawaan, jadi tidak ada yang perlu diinstal.",
-      setupKeywords:
-        "install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac instal penyiapan",
+      macosBuiltIn: "macOS memiliki sandbox bawaan, jadi tidak ada yang perlu diinstal.",
+      setupKeywords: "install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac instal penyiapan",
       setupSucceeded: "Sandbox OS siap.",
-      runtimeMissing:
-        "Belum diinstal. Penginstalannya tidak memerlukan izin administrator.",
+      runtimeMissing: "Belum diinstal. Penginstalannya tidak memerlukan izin administrator.",
       runtimeLabel: "Runtime sandbox Windows",
       installRuntime: "Instal runtime",
       installingRuntime: "Menginstal…",
       installRuntimeFailed: "Instalasi runtime gagal.",
       installRuntimeError: "Tidak dapat memulai instalasi runtime.",
-      unsupportedArch:
-        "Sandbox Windows (MXC) hanya berjalan di Windows x64 dan ARM64, sehingga tidak tersedia di PC ini.",
-      builtinNeedsUpdate:
-        "Kontainer bawaan Windows memerlukan build {required} atau yang lebih baru, sedangkan PC ini menjalankan {current}. Instal pembaruan Windows terbaru untuk menggunakannya tanpa langkah administrator, atau aktifkan sandbox cadangan di bawah.",
-      unsupportedBuild:
-        "Sandbox Windows (MXC) memerlukan Windows 11 24H2 (build 26100) atau yang lebih baru, sehingga tidak tersedia di PC ini.",
+      unsupportedArch: "Sandbox Windows (MXC) hanya berjalan di Windows x64 dan ARM64, sehingga tidak tersedia di PC ini.",
+      builtinNeedsUpdate: "Kontainer bawaan Windows memerlukan build {required} atau yang lebih baru, sedangkan PC ini menjalankan {current}. Instal pembaruan Windows terbaru untuk menggunakannya tanpa langkah administrator, atau aktifkan sandbox cadangan di bawah.",
+      unsupportedBuild: "Sandbox Windows (MXC) memerlukan Windows 11 24H2 (build 26100) atau yang lebih baru, sehingga tidak tersedia di PC ini.",
       permissionLabel: "Izin alat",
       levelRowLabel: "Tingkat sandbox",
       levelPickerTitle: "Bagaimana kode harus di-sandbox?",
       levelOff: "Nonaktif",
       levelOffShort: "Akses penuh menonaktifkan sandbox",
-      levelHighDetail:
-        "Python dan Terminal berjalan di dalam sandbox OS (bubblewrap, Seatbelt, atau MXC) di atas sandbox perangkat lunak. Tanpa sandbox OS yang berfungsi, panggilan berisiko akan meminta izin terlebih dahulu.",
-      levelLowDetail:
-        "Python dan Terminal hanya berjalan dengan sandbox perangkat lunak, di luar sandbox OS. Panggilan berisiko akan meminta izin terlebih dahulu kecuali Anda memilih Akses penuh.",
+      levelHighDetail: "Python dan Terminal berjalan di dalam sandbox OS (bubblewrap, Seatbelt, atau MXC) di atas sandbox perangkat lunak. Tanpa sandbox OS yang berfungsi, panggilan berisiko akan meminta izin terlebih dahulu.",
+      levelLowDetail: "Python dan Terminal hanya berjalan dengan sandbox perangkat lunak, di luar sandbox OS. Panggilan berisiko akan meminta izin terlebih dahulu kecuali Anda memilih Akses penuh.",
       levelLabel: "Sandbox",
       levelHigh: "Tinggi",
       levelLow: "Rendah",
       levelHighShort: "Menambahkan isolasi OS ke Python dan Terminal",
-      levelLowShort:
-        "Hanya perangkat lunak. Kode berisiko meminta izin terlebih dahulu",
-      levelFullAccessNote:
-        "Akses penuh menonaktifkan sandbox. Pengaturan ini berlaku lagi saat Anda memilih tingkat lain.",
+      levelLowShort: "Hanya perangkat lunak. Kode berisiko meminta izin terlebih dahulu",
+      levelFullAccessNote: "Akses penuh menonaktifkan sandbox. Pengaturan ini berlaku lagi saat Anda memilih tingkat lain.",
       learnMore: "Pelajari lebih lanjut",
       managedNote: "Pemilik server Unsloth ini yang menyiapkan sandbox OS.",
       trustedFoldersTitle: "Folder tepercaya",
@@ -1876,8 +1705,7 @@ export const id = {
       description: "Baca log Unsloth tanpa meninggalkan aplikasi.",
       logSection: "File log",
       source: "File log",
-      sourceHint:
-        "Runner model menulis log-nya sendiri, sehingga kegagalan pemuatan atau pembuatan sering kali dijelaskan di sana, bukan di log server.",
+      sourceHint: "Runner model menulis log-nya sendiri, sehingga kegagalan pemuatan atau pembuatan sering kali dijelaskan di sana, bukan di log server.",
       path: "Lokasi",
       pathCopy: "Salin jalur",
       currentSession: "Saat ini",
@@ -1896,64 +1724,49 @@ export const id = {
       modeInterval: "Setiap 3 detik",
       modeManual: "Manual",
       refreshNow: "Muat ulang sekarang",
-      privacyNote:
-        "Kredensial disamarkan di tampilan ini. File di disk tidak disamarkan.",
+      privacyNote: "Kredensial disamarkan di tampilan ini. File di disk tidak disamarkan.",
       copyVisible: "Salin log yang terlihat",
       empty: "Belum ada yang dicatat.",
-      disabled:
-        "Pencatatan ke file dinonaktifkan (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
+      disabled: "Pencatatan ke file dinonaktifkan (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
       missing: "File log tidak ditemukan.",
       unreadable: "File log tidak dapat dibaca.",
       viewLogs: "Lihat log",
-      timeout:
-        "Waktu permintaan log habis. Server mungkin tidak dapat dijangkau.",
-      droppedNotice:
-        "Beberapa baris dilewati: log ditulis lebih cepat daripada yang dapat dibaca.",
-      morePending:
-        "Baris lainnya masih dibaca; baris tersebut akan muncul pada pemuatan ulang berikutnya.",
-      staleSession:
-        "Pencatatan ke file dinonaktifkan, jadi ini adalah sesi sebelumnya dan tidak akan diperbarui.",
+      timeout: "Waktu permintaan log habis. Server mungkin tidak dapat dijangkau.",
+      droppedNotice: "Beberapa baris dilewati: log ditulis lebih cepat daripada yang dapat dibaca.",
+      morePending: "Baris lainnya masih dibaca; baris tersebut akan muncul pada pemuatan ulang berikutnya.",
+      staleSession: "Pencatatan ke file dinonaktifkan, jadi ini adalah sesi sebelumnya dan tidak akan diperbarui.",
       downloadAllLogs: "Unduh semua log (.zip)",
       downloadingAllLogs: "Mengemas log...",
-      exportMaskedNote:
-        "Kredensial disamarkan di file yang diekspor. Log yang sangat besar hanya menyimpan baris terbarunya, dan beberapa log mungkin tidak disertakan sama sekali; lihat EXPORT_WARNINGS.txt di arsip.",
+      exportMaskedNote: "Kredensial disamarkan di file yang diekspor. Log yang sangat besar hanya menyimpan baris terbarunya, dan beberapa log mungkin tidak disertakan sama sekali; lihat EXPORT_WARNINGS.txt di arsip.",
       downloadedTo: "Disimpan ke {path}",
       downloadedToBrowser: "Unduhan dimulai.",
       showInFolder: "Tampilkan di folder",
       openLogsFolder: "Buka folder log",
       openLogsFolderFailed: "Tidak dapat membuka folder log.",
       exportFailed: "Tidak dapat mengunduh log.",
-      exportTooOld:
-        "Backend Unsloth yang berjalan terlalu lama untuk mengekspor log. Perbarui backend tersebut dan mulai ulang.",
-      exportForbidden:
-        "Mengunduh semua log memerlukan sesi Unsloth yang sudah masuk. Kunci API saja tidak cukup.",
-      keywords:
-        "debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed kesalahan galat mogok diagnostik gagal pemecahan masalah",
+      exportTooOld: "Backend Unsloth yang berjalan terlalu lama untuk mengekspor log. Perbarui backend tersebut dan mulai ulang.",
+      exportForbidden: "Mengunduh semua log memerlukan sesi Unsloth yang sudah masuk. Kunci API saja tidak cukup.",
+      keywords: "debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed kesalahan galat mogok diagnostik gagal pemecahan masalah",
     },
     voice: {
       title: "Suara",
       description: "Mikrofon, dikte, ucapan ke teks, dan bacakan",
       dictation: {
         audioUploadTitle: "Dikte dengan rekaman",
-        audioUploadDescription:
-          "Browser Anda memerlukan koneksi aman (HTTPS) untuk merekam langsung di Unsloth. Pada koneksi HTTP ini, gunakan perekam di ponsel Anda atau pilih rekaman yang tersimpan. Server Unsloth Anda akan mentranskripsikan audio dan menambahkan teksnya ke pesan Anda.",
+        audioUploadDescription: "Browser Anda memerlukan koneksi aman (HTTPS) untuk merekam langsung di Unsloth. Pada koneksi HTTP ini, gunakan perekam di ponsel Anda atau pilih rekaman yang tersimpan. Server Unsloth Anda akan mentranskripsikan audio dan menambahkan teksnya ke pesan Anda.",
         audioUploadChooseFile: "Pilih rekaman",
         audioUploadRecord: "Rekam audio",
-        audioUploadIphoneHint:
-          "Di iPhone, simpan rekaman dari Memo Suara atau aplikasi perekam lain, lalu pilih di sini.",
-        audioUploadServerModelNote:
-          "Rekaman ini menggunakan model lokal yang ditampilkan di atas pada server Unsloth, meskipun dikte biasa menggunakan engine yang berbeda.",
+        audioUploadIphoneHint: "Di iPhone, simpan rekaman dari Memo Suara atau aplikasi perekam lain, lalu pilih di sini.",
+        audioUploadServerModelNote: "Rekaman ini menggunakan model lokal yang ditampilkan di atas pada server Unsloth, meskipun dikte biasa menggunakan engine yang berbeda.",
         audioUploadAutomatic: "Otomatis",
         audioUploadModelReady: "Siap di server Unsloth ini",
         audioUploadRetryTitle: "Tidak dapat mentranskripsikan {file}",
         audioUploadRetry: "Coba lagi transkripsi",
-        audioUploadChooseModel:
-          "Pilih model pengenalan ucapan lokal di pengaturan Suara.",
+        audioUploadChooseModel: "Pilih model pengenalan ucapan lokal di pengaturan Suara.",
         audioUploadEmpty: "Rekaman yang dipilih kosong.",
         audioUploadTooLarge: "Pilih rekaman yang lebih kecil dari {size}.",
         audioUploadVideoUnsupported: "Pilih rekaman audio, bukan video.",
-        audioUploadNoSpeech:
-          "Model tidak mendengar ucapan apa pun di rekaman tersebut.",
+        audioUploadNoSpeech: "Model tidak mendengar ucapan apa pun di rekaman tersebut.",
         audioUploadFailed: "Rekaman tidak dapat ditranskripsikan.",
         audioUploadCancel: "Batalkan transkripsi",
         audioUploadTranscribing: "Mentranskripsikan audio…",
@@ -1967,41 +1780,31 @@ export const id = {
         micRecordForModel: "Rekam audio untuk model",
         engineLabel: "Engine dikte",
         engineBrowser: "Browser",
-        engineBrowserDescription:
-          "Mentranskripsikan audio menggunakan layanan ucapan browser Anda. Pilih 'Transkripsi lokal' untuk menggunakan model STT.",
+        engineBrowserDescription: "Mentranskripsikan audio menggunakan layanan ucapan browser Anda. Pilih 'Transkripsi lokal' untuk menggunakan model STT.",
         engineModel: "Transkripsi lokal",
-        engineModelDescription:
-          "Menjalankan model ucapan ke teks (STT) secara lokal dan berfungsi offline. Unduh, muat, lalu model dilepas setelah tidak aktif.",
+        engineModelDescription: "Menjalankan model ucapan ke teks (STT) secara lokal dan berfungsi offline. Unduh, muat, lalu model dilepas setelah tidak aktif.",
         engineCustom: "Endpoint kustom",
-        engineCustomDescription:
-          "Mengirim audio yang direkam ke server STT yang kompatibel dengan OpenAI dari Koneksi Anda.",
+        engineCustomDescription: "Mengirim audio yang direkam ke server STT yang kompatibel dengan OpenAI dari Koneksi Anda.",
         connectionLabel: "Koneksi",
-        connectionDescription:
-          "Tambahkan server yang kompatibel dengan OpenAI dan kunci API opsional di Koneksi.",
+        connectionDescription: "Tambahkan server yang kompatibel dengan OpenAI dan kunci API opsional di Koneksi.",
         connectionPlaceholder: "Pilih koneksi",
         connectionEmpty: "Tidak ada koneksi yang tersedia",
         customModelLabel: "Model",
-        customModelDescription:
-          "Nama model yang dikirim ke /v1/audio/transcriptions.",
+        customModelDescription: "Nama model yang dikirim ke /v1/audio/transcriptions.",
         sttModelLabel: "Model pengenalan ucapan",
-        sttModelDescription:
-          "Pilih atau cari model STT untuk dijalankan secara lokal.",
+        sttModelDescription: "Pilih atau cari model STT untuk dijalankan secara lokal.",
         sttQuantLabel: "Kuantisasi",
-        sttQuantDescription:
-          "Pilih atau cari model STT untuk dijalankan secara lokal, lalu kuantisasinya.",
+        sttQuantDescription: "Pilih atau cari model STT untuk dijalankan secara lokal, lalu kuantisasinya.",
         sttDeviceLabel: "Muat ke",
         sttContextLabel: "Konteks suara",
         sttContextAuto: "Otomatis (disarankan)",
-        sttContextAutoDescription:
-          "Menyesuaikan dengan setiap rekaman, dengan lebih banyak memori untuk audio yang lebih panjang. Runtime lama mungkin memerlukan ukuran tetap untuk mengurangi memori. Berlaku untuk Qwen3-ASR di Suara dan Transkripsikan.",
-        sttContextFixedDescription:
-          "Batas yang lebih kecil menggunakan lebih sedikit memori. Rekaman yang tidak muat memerlukan batas lebih tinggi atau Otomatis. Berlaku untuk Qwen3-ASR di Suara dan Transkripsikan.",
+        sttContextAutoDescription: "Menyesuaikan dengan setiap rekaman, dengan lebih banyak memori untuk audio yang lebih panjang. Runtime lama mungkin memerlukan ukuran tetap untuk mengurangi memori. Berlaku untuk Qwen3-ASR di Suara dan Transkripsikan.",
+        sttContextFixedDescription: "Batas yang lebih kecil menggunakan lebih sedikit memori. Rekaman yang tidak muat memerlukan batas lebih tinggi atau Otomatis. Berlaku untuk Qwen3-ASR di Suara dan Transkripsikan.",
         sttContextTokens: "{count} token",
         sttDeviceAuto: "GPU jika tersedia",
         sttDeviceCpu: "RAM CPU",
         sttDeviceAutoDescription: "Gunakan GPU jika ada, dan CPU jika tidak.",
-        sttDeviceCpuDescription:
-          "Simpan model di RAM sistem. Transkripsi lebih lambat, tetapi memori GPU tidak digunakan.",
+        sttDeviceCpuDescription: "Simpan model di RAM sistem. Transkripsi lebih lambat, tetapi memori GPU tidak digunakan.",
         sttModelSearchPlaceholder: "Cari model apa pun di HF",
         sttModelSearching: "Mencari di Hugging Face…",
         sttModelValidating: "Memeriksa kompatibilitas Whisper…",
@@ -2014,18 +1817,15 @@ export const id = {
         sttLoadingModel: "Memuat model…",
         sttReady: "Dimuat di {device}",
         sttLoaded: "Dimuat",
-        sttUnavailable:
-          "Tidak terinstal di server ini. Jalankan `unsloth studio update` untuk mengaktifkan dikte lokal.",
+        sttUnavailable: "Tidak terinstal di server ini. Jalankan `unsloth studio update` untuk mengaktifkan dikte lokal.",
         sttRetry: "Coba lagi",
         sttDownloadChecking: "Memeriksa status unduhan…",
         sttNotDownloaded: "Belum diunduh",
         sttDownloadStatusFailed: "Tidak dapat memeriksa status unduhan",
         sttDownload: "Unduh",
         sttDownloadConfirmTitle: "Unduh {model}?",
-        sttDownloadConfirmBody:
-          "Dikte lokal berjalan sepenuhnya offline, tetapi memerlukan model ucapan {model} terlebih dahulu. Sekitar {size}, diambil sekali ke cache Hugging Face Anda.",
-        sttDownloadConfirmBodyUnsized:
-          "Dikte lokal berjalan sepenuhnya offline, tetapi memerlukan model ucapan {model} terlebih dahulu. Model diambil sekali ke cache Hugging Face Anda.",
+        sttDownloadConfirmBody: "Dikte lokal berjalan sepenuhnya offline, tetapi memerlukan model ucapan {model} terlebih dahulu. Sekitar {size}, diambil sekali ke cache Hugging Face Anda.",
+        sttDownloadConfirmBodyUnsized: "Dikte lokal berjalan sepenuhnya offline, tetapi memerlukan model ucapan {model} terlebih dahulu. Model diambil sekali ke cache Hugging Face Anda.",
         sttOpenVoiceSettings: "Buka pengaturan Suara",
         sttDownloadStarted: "Mengunduh {model}",
         sttDownloading: "Mengunduh… {progress}%",
@@ -2042,17 +1842,12 @@ export const id = {
         microphoneLabel: "Mikrofon",
         microphoneFallbackName: "Mikrofon {index}",
         microphoneDescription: "Digunakan untuk dikte",
-        microphoneFallbackHint:
-          "Digunakan untuk dikte. Kembali ke default sistem jika engine ucapan browser tidak dapat menggunakan perangkat ini",
-        microphoneGrantDescription:
-          "Izinkan akses mikrofon untuk menampilkan nama perangkat",
+        microphoneFallbackHint: "Digunakan untuk dikte. Kembali ke default sistem jika engine ucapan browser tidak dapat menggunakan perangkat ini",
+        microphoneGrantDescription: "Izinkan akses mikrofon untuk menampilkan nama perangkat",
         allowMicrophone: "Izinkan mikrofon",
-        micAccessBlocked:
-          "Akses mikrofon diblokir. Izinkan akses mikrofon untuk halaman Unsloth ini, lalu coba lagi.",
-        micAccessBlockedDesktop:
-          "Akses mikrofon diblokir. Coba lagi dan pilih Izinkan, atau aktifkan mikrofon di pengaturan privasi sistem Anda.",
-        micAccessUnsupported:
-          "Akses mikrofon tidak didukung di browser atau konteks ini.",
+        micAccessBlocked: "Akses mikrofon diblokir. Izinkan akses mikrofon untuk halaman Unsloth ini, lalu coba lagi.",
+        micAccessBlockedDesktop: "Akses mikrofon diblokir. Coba lagi dan pilih Izinkan, atau aktifkan mikrofon di pengaturan privasi sistem Anda.",
+        micAccessUnsupported: "Akses mikrofon tidak didukung di browser atau konteks ini.",
         systemDefault: "Default sistem",
         savedMicDisconnected: "Mikrofon tersimpan (tidak tersambung)",
         languageLabel: "Bahasa dikte",
@@ -2074,12 +1869,10 @@ export const id = {
       },
       recents: {
         sectionTitle: "Riwayat dikte",
-        sectionDescription:
-          "Setiap dikte disimpan di sini agar Anda dapat memulihkan teks",
+        sectionDescription: "Setiap dikte disimpan di sini agar Anda dapat memulihkan teks",
         manageLabel: "Riwayat dikte",
         manage: "Kelola",
-        pageDescription:
-          "Setiap dikte disimpan. Lihat, salin, atau hapus, atau buka chat tempat dikte digunakan.",
+        pageDescription: "Setiap dikte disimpan. Lihat, salin, atau hapus, atau buka chat tempat dikte digunakan.",
         searchPlaceholder: "Cari dikte",
         sortLabel: "Urutkan dikte",
         sortNewest: "Terbaru",
@@ -2098,16 +1891,13 @@ export const id = {
         copyFailed: "Tidak dapat menyalin ke papan klip",
         delete: "Hapus dikte",
         deleteTitle: "Hapus dikte",
-        deleteDescription:
-          "Hapus dikte tersimpan ini? Tindakan ini tidak dapat diurungkan.",
-        deleteLinkedDescription:
-          "Hapus dikte tersimpan ini? Anda juga dapat menghapus chat tempat dikte ini digunakan. Tindakan ini tidak dapat diurungkan.",
+        deleteDescription: "Hapus dikte tersimpan ini? Tindakan ini tidak dapat diurungkan.",
+        deleteLinkedDescription: "Hapus dikte tersimpan ini? Anda juga dapat menghapus chat tempat dikte ini digunakan. Tindakan ini tidak dapat diurungkan.",
         deleteWithChat: "Hapus chat dan dikte",
         deleteWithChatFailed: "Tidak dapat menghapus chat",
         clear: "Hapus riwayat",
         clearTitle: "Hapus riwayat dikte",
-        clearDescription:
-          "Hapus semua dikte tersimpan? Tindakan ini tidak dapat diurungkan.",
+        clearDescription: "Hapus semua dikte tersimpan? Tindakan ini tidak dapat diurungkan.",
         clearConfirm: "Hapus semua",
         showMore: "Tampilkan lebih banyak ({count})",
         openChat: "Buka chat",
@@ -2120,33 +1910,26 @@ export const id = {
         autoDescription: "Bacakan setiap balasan segera setelah selesai",
         engineLabel: "Engine TTS",
         engineSystemDescription: "Suara bawaan perangkat",
-        engineStudioDescription:
-          "Berbicara dengan model yang dimuat di Audio › Teks ke Ucapan",
+        engineStudioDescription: "Berbicara dengan model yang dimuat di Audio › Teks ke Ucapan",
         engineSystem: "Suara sistem",
         engineStudio: "Model Unsloth",
         engineCustom: "Endpoint kustom",
-        engineCustomDescription:
-          "Server TTS yang kompatibel dengan OpenAI dari koneksi Anda (mis. Kokoro)",
+        engineCustomDescription: "Server TTS yang kompatibel dengan OpenAI dari koneksi Anda (mis. Kokoro)",
         connectionLabel: "Koneksi",
-        connectionDescription:
-          "Tambahkan server yang kompatibel dengan OpenAI di tab Koneksi",
+        connectionDescription: "Tambahkan server yang kompatibel dengan OpenAI di tab Koneksi",
         connectionPlaceholder: "Pilih koneksi",
         customModelLabel: "Model",
-        customVoiceDescription:
-          "Nama suara yang diharapkan endpoint; default-nya alloy",
+        customVoiceDescription: "Nama suara yang diharapkan endpoint; default-nya alloy",
         modelLabel: "Model TTS",
-        modelDescription:
-          "Belum ada yang dimuat. Muat model di Audio › Teks ke Ucapan.",
+        modelDescription: "Belum ada yang dimuat. Muat model di Audio › Teks ke Ucapan.",
         modelLoaded: "{model} telah dimuat",
         keepBothLabel: "Tetap muat model chat",
-        keepBothDescription:
-          "Tetap muat beberapa model sedang Nonaktif, jadi memuat model ucapan akan melepas model chat.",
+        keepBothDescription: "Tetap muat beberapa model sedang Nonaktif, jadi memuat model ucapan akan melepas model chat.",
         keepBothAction: "Tetap muat keduanya",
         openAudioAction: "Buka Audio",
         voiceLabel: "Suara",
         voiceDescription: "Suara terbaik di perangkat ini",
-        studioVoiceDescription:
-          "Suara yang disimpan di Audio memerlukan model kloning",
+        studioVoiceDescription: "Suara yang disimpan di Audio memerlukan model kloning",
         studioVoiceDefault: "Suara bawaan model",
         studioVoiceSaved: "Suara tersimpan",
         speedLabel: "Kecepatan",
@@ -2167,8 +1950,7 @@ export const id = {
       description: "Preferensi global untuk Unsloth.",
       account: "Akun",
       huggingFaceToken: "Token Hugging Face",
-      huggingFaceTokenDescription:
-        "Digunakan untuk memuat model yang dibatasi (gated) dan mengunggah artefak.",
+      huggingFaceTokenDescription: "Digunakan untuk memuat model yang dibatasi (gated) dan mengunggah artefak.",
       hideToken: "Sembunyikan token",
       showToken: "Tampilkan token",
       clearToken: "Hapus",
@@ -2179,20 +1961,17 @@ export const id = {
       passwordDialog: {
         trigger: "Ubah kata sandi",
         title: "Ubah kata sandi",
-        description:
-          "Masukkan kata sandi saat ini dan pilih kata sandi baru (minimal {minLength} karakter).",
+        description: "Masukkan kata sandi saat ini dan pilih kata sandi baru (minimal {minLength} karakter).",
         setTrigger: "Atur kata sandi jarak jauh",
         setTitle: "Atur kata sandi jarak jauh",
-        setDescription:
-          "Pilih kata sandi yang digunakan browser jarak jauh untuk masuk sebagai unsloth (minimal {minLength} karakter). Aplikasi Unsloth Desktop tetap masuk secara otomatis.",
+        setDescription: "Pilih kata sandi yang digunakan browser jarak jauh untuk masuk sebagai unsloth (minimal {minLength} karakter). Aplikasi Unsloth Desktop tetap masuk secara otomatis.",
         setSubmit: "Atur kata sandi",
         setting: "Mengatur...",
         setDone: "Kata sandi telah diatur.",
         currentPassword: "Kata sandi saat ini",
         newPassword: "Kata sandi baru",
         confirmPassword: "Konfirmasi kata sandi baru",
-        currentTooShort:
-          "Kata sandi saat ini harus minimal {minLength} karakter.",
+        currentTooShort: "Kata sandi saat ini harus minimal {minLength} karakter.",
         newTooShort: "Kata sandi baru harus minimal {minLength} karakter.",
         newHasSpaces: "Kata sandi baru tidak boleh berisi spasi.",
         mismatch: "Kata sandi tidak cocok.",
@@ -2228,35 +2007,24 @@ export const id = {
       helperLlm: {
         sectionTitle: "LLM Pembantu",
         preloadOnStartup: "Cache LLM Pembantu saat startup",
-        preloadOnStartupDescription:
-          "Unduh model pembantu AI Assist di latar belakang saat startup. Nonaktif secara default; AI Assist tetap dapat mengambilnya saat diperlukan.",
-        disabledByEnv:
-          "Dinonaktifkan oleh UNSLOTH_HELPER_MODEL_DISABLE di lingkungan backend.",
+        preloadOnStartupDescription: "Unduh model pembantu AI Assist di latar belakang saat startup. Nonaktif secara default; AI Assist tetap dapat mengambilnya saat diperlukan.",
+        disabledByEnv: "Dinonaktifkan oleh UNSLOTH_HELPER_MODEL_DISABLE di lingkungan backend.",
         loadError: "Gagal memuat pengaturan LLM Pembantu.",
         saveError: "Gagal menyimpan pengaturan LLM Pembantu.",
       },
       developerMode: {
         sectionTitle: "Mode pengembang",
         videoCpu: "Izinkan pembuatan video di CPU (eksperimental)",
-        videoCpuDescription:
-          "Memungkinkan halaman Video berjalan di host tanpa GPU yang didukung. Nonaktif secara default; tidak didukung dan sangat lambat.",
-        notApplicable:
-          "Tidak berpengaruh di mesin ini: video sudah berjalan di GPU-nya, atau diblokir oleh sesuatu yang tidak dapat diatasi CPU.",
-        forcedOnByEnv:
-          "Diaktifkan oleh UNSLOTH_VIDEO_ALLOW_CPU di lingkungan backend.",
-        forcedOffByEnv:
-          "Dinonaktifkan oleh UNSLOTH_VIDEO_ALLOW_CPU di lingkungan backend.",
+        videoCpuDescription: "Memungkinkan halaman Video berjalan di host tanpa GPU yang didukung. Nonaktif secara default; tidak didukung dan sangat lambat.",
+        notApplicable: "Tidak berpengaruh di mesin ini: video sudah berjalan di GPU-nya, atau diblokir oleh sesuatu yang tidak dapat diatasi CPU.",
+        forcedOnByEnv: "Diaktifkan oleh UNSLOTH_VIDEO_ALLOW_CPU di lingkungan backend.",
+        forcedOffByEnv: "Dinonaktifkan oleh UNSLOTH_VIDEO_ALLOW_CPU di lingkungan backend.",
         confirmTitle: "Aktifkan pembuatan video di CPU?",
-        confirmWarning:
-          "Pembuatan video di CPU dapat memakan waktu berjam-jam, menghabiskan banyak RAM, dan dapat membuat sistem Anda macet. Lanjutkan dengan risiko Anda sendiri.",
-        ramBelowMinimum:
-          "Mesin ini memiliki RAM {host} GB, di bawah {min} GB yang dibutuhkan model video terkecil di CPU. Pemuatan kemungkinan akan gagal atau membuat sistem macet.",
-        ramOk:
-          "Mesin ini memiliki RAM {host} GB. Model video terkecil membutuhkan sekitar {min} GB di CPU; model yang lebih besar membutuhkan jauh lebih banyak.",
-        ramUnknown:
-          "Model video terkecil membutuhkan sekitar {min} GB RAM di CPU; model yang lebih besar membutuhkan jauh lebih banyak.",
-        performanceEstimate:
-          "Perkirakan beberapa menit per langkah denoising: klip 5 frame 832x480 dari Wan2.1 1.3B dengan 3 langkah memakan waktu sekitar 4 menit pada 16 thread CPU, dan klip berdurasi penuh dengan pengaturan default dapat memakan waktu berjam-jam.",
+        confirmWarning: "Pembuatan video di CPU dapat memakan waktu berjam-jam, menghabiskan banyak RAM, dan dapat membuat sistem Anda macet. Lanjutkan dengan risiko Anda sendiri.",
+        ramBelowMinimum: "Mesin ini memiliki RAM {host} GB, di bawah {min} GB yang dibutuhkan model video terkecil di CPU. Pemuatan kemungkinan akan gagal atau membuat sistem macet.",
+        ramOk: "Mesin ini memiliki RAM {host} GB. Model video terkecil membutuhkan sekitar {min} GB di CPU; model yang lebih besar membutuhkan jauh lebih banyak.",
+        ramUnknown: "Model video terkecil membutuhkan sekitar {min} GB RAM di CPU; model yang lebih besar membutuhkan jauh lebih banyak.",
+        performanceEstimate: "Perkirakan beberapa menit per langkah denoising: klip 5 frame 832x480 dari Wan2.1 1.3B dengan 3 langkah memakan waktu sekitar 4 menit pada 16 thread CPU, dan klip berdurasi penuh dengan pengaturan default dapat memakan waktu berjam-jam.",
         confirmAction: "Tetap aktifkan",
         loadError: "Gagal memuat pengaturan Mode pengembang.",
         saveError: "Gagal menyimpan pengaturan Mode pengembang.",
@@ -2264,45 +2032,33 @@ export const id = {
       modelAutoSwitch: {
         sectionTitle: "Peralihan model otomatis (API OpenAI)",
         enable: "Ganti model sesuai permintaan",
-        enableDescription:
-          "Muat model yang telah diunduh yang disebutkan dalam permintaan API sebelum melayani. Nonaktif secara default.",
+        enableDescription: "Muat model yang telah diunduh yang disebutkan dalam permintaan API sebelum melayani. Nonaktif secara default.",
         autoDownload: "Unduh model yang belum ada",
-        autoDownloadDescription:
-          "Ambil GGUF yang disebutkan dalam permintaan API yang belum diunduh. Siapa pun yang memiliki kunci API kemudian dapat menggunakan disk dan bandwidth.",
+        autoDownloadDescription: "Ambil GGUF yang disebutkan dalam permintaan API yang belum diunduh. Siapa pun yang memiliki kunci API kemudian dapat menggunakan disk dan bandwidth.",
         idleUnload: "Lepas otomatis saat tidak aktif",
-        idleUnloadDescription:
-          "Bebaskan VRAM setelah sekian detik tidak aktif. 0 membuat model tetap dimuat, minimum 60.",
+        idleUnloadDescription: "Bebaskan VRAM setelah sekian detik tidak aktif. 0 membuat model tetap dimuat, minimum 60.",
         idleSecondsAriaLabel: "Detik lepas otomatis saat tidak aktif",
         mediaEnable: "Ganti model gambar dan video sesuai permintaan",
-        mediaEnableDescription:
-          "Muat model gambar atau video yang telah diunduh yang disebutkan dalam permintaan API sebelum membuat. Terpisah dari peralihan model chat. Nonaktif secara default.",
-        mediaIdleUnload:
-          "Lepas otomatis saat tidak aktif untuk gambar dan video",
-        mediaIdleUnloadDescription:
-          "Bebaskan VRAM dengan melepas model gambar dan video setelah sekian detik tidak aktif. Terpisah dari peralihan model chat. 0 membuat model tetap dimuat, minimum 60.",
-        mediaIdleSecondsAriaLabel:
-          "Detik lepas otomatis saat tidak aktif untuk gambar dan video",
+        mediaEnableDescription: "Muat model gambar atau video yang telah diunduh yang disebutkan dalam permintaan API sebelum membuat. Terpisah dari peralihan model chat. Nonaktif secara default.",
+        mediaIdleUnload: "Lepas otomatis saat tidak aktif untuk gambar dan video",
+        mediaIdleUnloadDescription: "Bebaskan VRAM dengan melepas model gambar dan video setelah sekian detik tidak aktif. Terpisah dari peralihan model chat. 0 membuat model tetap dimuat, minimum 60.",
+        mediaIdleSecondsAriaLabel: "Detik lepas otomatis saat tidak aktif untuk gambar dan video",
         mediaIdlePaused: "Dijeda selama Simpan model di memori GPU aktif.",
-        idleNeedsEnable:
-          "Aktifkan Ganti model sesuai permintaan terlebih dahulu.",
+        idleNeedsEnable: "Aktifkan Ganti model sesuai permintaan terlebih dahulu.",
         idleActiveViaEnv: "Aktif melalui UNSLOTH_MODEL_IDLE_TTL.",
         loadError: "Gagal memuat pengaturan peralihan model otomatis.",
         saveError: "Gagal menyimpan pengaturan peralihan model otomatis.",
         idleError: "Masukkan 0 agar model tetap dimuat, atau minimal 60 detik.",
         idleUnsaved: "Belum disimpan.",
         keepKv: "Pertahankan konteks chat saat model dilepas",
-        keepKvDescription:
-          "Simpan cache KV sebelum pelepasan karena tidak aktif, atau sebelum model gambar atau video mengambil alih GPU, agar chat yang dilanjutkan tidak perlu membaca ulang riwayat. Hingga 10 GB di disk.",
-        keepKvKeywords:
-          "kv cache context swap resume image video konteks lanjutkan gambar",
+        keepKvDescription: "Simpan cache KV sebelum pelepasan karena tidak aktif, atau sebelum model gambar atau video mengambil alih GPU, agar chat yang dilanjutkan tidak perlu membaca ulang riwayat. Hingga 10 GB di disk.",
+        keepKvKeywords: "kv cache context swap resume image video konteks lanjutkan gambar",
         apiOnly: "Hanya lepas model yang dimuat oleh API",
-        apiOnlyDescription:
-          "Pelepasan saat tidak aktif membiarkan model yang Anda muat dari Unsloth tetap di memori, dan hanya membebaskan model yang dimuat oleh permintaan API.",
+        apiOnlyDescription: "Pelepasan saat tidak aktif membiarkan model yang Anda muat dari Unsloth tetap di memori, dan hanya membebaskan model yang dimuat oleh permintaan API.",
       },
       modelAliases: {
         sectionTitle: "Alias model (API OpenAI)",
-        description:
-          "Nama pendek yang dapat digunakan klien API sebagai pengganti nama lengkap model.",
+        description: "Nama pendek yang dapat digunakan klien API sebagai pengganti nama lengkap model.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Nama alias",
         modelAriaLabel: "Model yang dituju alias",
@@ -2316,24 +2072,20 @@ export const id = {
         speculativeDecoding: "Decoding spekulatif",
         savedSetting: "Pengaturan tersimpan",
         loadSettings: "Pengaturan pemuatan",
-        loadSettingsHint:
-          "Hanya untuk model GGUF. Kolom kosong memakai pengaturan tersimpan milik model.",
+        loadSettingsHint: "Hanya untuk model GGUF. Kolom kosong memakai pengaturan tersimpan milik model.",
       },
       previewSharing: {
         sectionTitle: "Berbagi pratinjau",
         enableLabel: "Tautan pratinjau publik",
-        enableDescription:
-          "Izinkan siapa pun yang memiliki tautan bertanda tangan untuk chat dengan model yang sudah jadi, tanpa perlu masuk. Nonaktifkan untuk membuat pratinjau publik offline; tautan yang dibagikan akan berhenti berfungsi.",
+        enableDescription: "Izinkan siapa pun yang memiliki tautan bertanda tangan untuk chat dengan model yang sudah jadi, tanpa perlu masuk. Nonaktifkan untuk membuat pratinjau publik offline; tautan yang dibagikan akan berhenti berfungsi.",
         loadError: "Gagal memuat pengaturan berbagi pratinjau.",
         saveError: "Gagal menyimpan pengaturan berbagi pratinjau.",
         revokeLabel: "Cabut semua tautan pratinjau",
-        revokeDescription:
-          "Ganti rahasia penandatanganan sehingga setiap tautan yang telah Anda bagikan berhenti berfungsi. Tautan yang baru disalin tetap berfungsi.",
+        revokeDescription: "Ganti rahasia penandatanganan sehingga setiap tautan yang telah Anda bagikan berhenti berfungsi. Tautan yang baru disalin tetap berfungsi.",
         revokeAction: "Cabut tautan",
         revoking: "Mencabut...",
         revokeConfirmTitle: "Cabut semua tautan pratinjau?",
-        revokeConfirmDescription:
-          "Setiap tautan pratinjau yang telah Anda bagikan akan segera berhenti berfungsi. Tindakan ini tidak dapat diurungkan.",
+        revokeConfirmDescription: "Setiap tautan pratinjau yang telah Anda bagikan akan segera berhenti berfungsi. Tindakan ini tidak dapat diurungkan.",
         revokeConfirmAction: "Cabut semua tautan",
         revoked: "Semua tautan pratinjau dicabut",
         revokeError: "Tidak dapat mencabut tautan pratinjau",
@@ -2341,10 +2093,8 @@ export const id = {
       managedProviderUrls: {
         sectionTitle: "Akun terkelola",
         enableLabel: "Koneksi lokal dan jaringan",
-        enableDescription:
-          "Izinkan akun terkelola mengarahkan koneksinya ke alamat lokal atau jaringan, seperti server Ollama atau llama.cpp di komputer ini atau LAN Anda. Nonaktif secara default, karena memungkinkan akun tersebut menjangkau layanan yang berjalan di komputer dan jaringan Anda.",
-        lockedByEnvironment:
-          "Diatur oleh UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 di server ini, yang menolak alamat pribadi untuk setiap akun.",
+        enableDescription: "Izinkan akun terkelola mengarahkan koneksinya ke alamat lokal atau jaringan, seperti server Ollama atau llama.cpp di komputer ini atau LAN Anda. Nonaktif secara default, karena memungkinkan akun tersebut menjangkau layanan yang berjalan di komputer dan jaringan Anda.",
+        lockedByEnvironment: "Diatur oleh UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 di server ini, yang menolak alamat pribadi untuk setiap akun.",
         loadError: "Gagal memuat pengaturan koneksi akun terkelola.",
         saveError: "Gagal menyimpan pengaturan koneksi akun terkelola.",
       },
@@ -2374,11 +2124,9 @@ export const id = {
       notifications: {
         sectionTitle: "Notifikasi",
         showLoadedModels: "Kartu model yang dimuat",
-        showLoadedModelsDescription:
-          "Kartu di sudut yang berisi setiap model yang dimuat, untuk melepasnya dengan sekali klik.",
+        showLoadedModelsDescription: "Kartu di sudut yang berisi setiap model yang dimuat, untuk melepasnya dengan sekali klik.",
         updateReminders: "Pengingat pembaruan",
-        updateRemindersDescription:
-          "Seberapa sering menawarkan versi baru saat tersedia.",
+        updateRemindersDescription: "Seberapa sering menawarkan versi baru saat tersedia.",
         llamaHint: "Model chat dan GGUF",
         audioHint: "Ucapan, musik, dan transkripsi",
         frequency: {
@@ -2393,16 +2141,12 @@ export const id = {
       startup: {
         sectionTitle: "Startup",
         launchAtLogin: "Jalankan Unsloth saat masuk",
-        launchAtLoginDescription:
-          "Mulai Unsloth di latar belakang saat Anda masuk. Unsloth tetap berada di bilah menu atau baki sistem hingga Anda membukanya.",
+        launchAtLoginDescription: "Mulai Unsloth di latar belakang saat Anda masuk. Unsloth tetap berada di bilah menu atau baki sistem hingga Anda membukanya.",
         closeToTray: "Tutup ke baki sistem",
-        closeToTrayDescription:
-          "Biarkan Unsloth dan servernya tetap berjalan di latar belakang saat Anda menutup jendela utama.",
-        closeToTraySaveError:
-          "Gagal memperbarui pengaturan tutup ke baki sistem.",
+        closeToTrayDescription: "Biarkan Unsloth dan servernya tetap berjalan di latar belakang saat Anda menutup jendela utama.",
+        closeToTraySaveError: "Gagal memperbarui pengaturan tutup ke baki sistem.",
         menuBarIcon: "Tampilkan di bilah menu",
-        menuBarIconDescription:
-          "Tampilkan ikon Unsloth di bilah menu macOS. Jika disembunyikan, Unsloth tetap berada di Dock, termasuk saat dimulai ketika masuk.",
+        menuBarIconDescription: "Tampilkan ikon Unsloth di bilah menu macOS. Jika disembunyikan, Unsloth tetap berada di Dock, termasuk saat dimulai ketika masuk.",
         menuBarIconSaveError: "Gagal memperbarui pengaturan ikon bilah menu.",
         loadError: "Gagal memuat pengaturan jalankan saat masuk.",
         saveError: "Gagal memperbarui pengaturan jalankan saat masuk.",
@@ -2410,59 +2154,44 @@ export const id = {
       power: {
         sectionTitle: "Daya",
         keepAwake: "Biarkan komputer tetap aktif",
-        keepAwakeDescription:
-          "Mencegah komputer ini masuk mode tidur dengan sendirinya selama Unsloth berjalan. Layar tetap bisa mati.",
+        keepAwakeDescription: "Mencegah komputer ini masuk mode tidur dengan sendirinya selama Unsloth berjalan. Layar tetap bisa mati.",
         keepAwakeKeywords: "tidur suspend siaga hibernasi daya sleep caffeinate",
         loadError: "Gagal memuat pengaturan biarkan komputer tetap aktif.",
         saveError: "Gagal memperbarui pengaturan biarkan komputer tetap aktif.",
       },
       hub: {
         source: "Sumber model",
-        sourceDescription:
-          "Tempat hub model mencari dan mengunduh. Pilih ModelScope jika Hugging Face diblokir atau lambat di jaringan Anda.",
-        sourceFallback:
-          "ModelScope tidak dapat dimulai, jadi Hugging Face yang digunakan. Periksa log Unsloth.",
+        sourceDescription: "Tempat hub model mencari dan mengunduh. Pilih ModelScope jika Hugging Face diblokir atau lambat di jaringan Anda.",
+        sourceFallback: "ModelScope tidak dapat dimulai, jadi Hugging Face yang digunakan. Periksa log Unsloth.",
         autoSourceTitle: "Sumber model dialihkan ke ModelScope",
-        autoSourceDescription:
-          "Hugging Face sering lambat atau diblokir di wilayah Anda, jadi Unsloth sekarang mengunduh model dari ModelScope.",
+        autoSourceDescription: "Hugging Face sering lambat atau diblokir di wilayah Anda, jadi Unsloth sekarang mengunduh model dari ModelScope.",
         autoSourceAction: "Buka pengaturan Sumber model",
         sectionTitle: "Hub model",
         endpoint: "Endpoint Hugging Face",
-        endpointDescription:
-          "Tempat model dan dataset diunduh. Biarkan kosong untuk huggingface.co, atau masukkan mirror seperti https://hf-mirror.com.",
+        endpointDescription: "Tempat model dan dataset diunduh. Biarkan kosong untuk huggingface.co, atau masukkan mirror seperti https://hf-mirror.com.",
         datasetsServer: "Gunakan untuk pratinjau dataset",
-        datasetsServerDescription:
-          "Kirim juga permintaan pratinjau dataset (HF_DATASETS_SERVER) ke endpoint ini. Aktifkan hanya jika mirror melayaninya.",
-        invalidEndpoint:
-          "Masukkan URL http(s) tanpa info masuk atau kueri. http biasa hanya berfungsi untuk alamat lokal.",
+        datasetsServerDescription: "Kirim juga permintaan pratinjau dataset (HF_DATASETS_SERVER) ke endpoint ini. Aktifkan hanya jika mirror melayaninya.",
+        invalidEndpoint: "Masukkan URL http(s) tanpa info masuk atau kueri. http biasa hanya berfungsi untuk alamat lokal.",
         saveFailed: "Tidak dapat menyimpan pengaturan hub.",
         loadFailed: "Tidak dapat memuat pengaturan hub.",
       },
       downloads: {
         sectionTitle: "Unduhan",
         transport: "Transportasi unduhan",
-        transportDescription:
-          "Cara file model dan dataset diunduh dari Hugging Face. HTTPS melanjutkan dari titik berhenti; Xet sering lebih cepat pada unduhan pertama tetapi memulai file dari awal jika Anda membatalkan.",
-        transportHint:
-          "HTTPS adalah TLS biasa: setiap jaringan, proxy, dan VPN mengizinkannya, transfer yang dibatalkan atau terputus dilanjutkan dari byte yang sudah ada di disk, dan penggunaan memori tetap stabil. Xet mengambil potongan yang telah dideduplikasi, sehingga repo yang berbagi data dengan repo yang sudah Anda miliki dapat tiba jauh lebih cepat, tetapi memerlukan hf_xet, menggunakan lebih banyak RAM, dan pembatalan akan membuang file yang sedang diunduh. Otomatis menanyakan mesin ini: mempertimbangkan RAM dan apakah Xet sering macet di sini, lalu beralih ke HTTPS.",
+        transportDescription: "Cara file model dan dataset diunduh dari Hugging Face. HTTPS melanjutkan dari titik berhenti; Xet sering lebih cepat pada unduhan pertama tetapi memulai file dari awal jika Anda membatalkan.",
+        transportHint: "HTTPS adalah TLS biasa: setiap jaringan, proxy, dan VPN mengizinkannya, transfer yang dibatalkan atau terputus dilanjutkan dari byte yang sudah ada di disk, dan penggunaan memori tetap stabil. Xet mengambil potongan yang telah dideduplikasi, sehingga repo yang berbagi data dengan repo yang sudah Anda miliki dapat tiba jauh lebih cepat, tetapi memerlukan hf_xet, menggunakan lebih banyak RAM, dan pembatalan akan membuang file yang sedang diunduh. Otomatis menanyakan mesin ini: mempertimbangkan RAM dan apakah Xet sering macet di sini, lalu beralih ke HTTPS.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Otomatis",
-        httpsHint:
-          "TLS standar. Dilanjutkan setelah pembatalan, berfungsi di jaringan apa pun, penggunaan memori stabil.",
-        transportDescriptionNoResume:
-          "Cara file model dan dataset diunduh dari Hugging Face. Kedua transportasi tidak dapat melanjutkan unduhan di instalasi ini, jadi unduhan yang dibatalkan dimulai dari awal; Xet sering lebih cepat pada unduhan pertama.",
-        httpsHintNoResume:
-          "TLS standar. Berfungsi di jaringan apa pun, penggunaan memori stabil. Instalasi ini tidak dapat melanjutkan unduhan yang dibatalkan.",
-        xetHint:
-          "Transfer potongan yang dideduplikasi. Sering lebih cepat pada unduhan baru, memulai ulang file jika Anda membatalkan, memerlukan lebih banyak memori.",
-        autoHint:
-          "Memilih per mesin dan beralih ke HTTPS jika Xet macet atau gagal di sini.",
+        httpsHint: "TLS standar. Dilanjutkan setelah pembatalan, berfungsi di jaringan apa pun, penggunaan memori stabil.",
+        transportDescriptionNoResume: "Cara file model dan dataset diunduh dari Hugging Face. Kedua transportasi tidak dapat melanjutkan unduhan di instalasi ini, jadi unduhan yang dibatalkan dimulai dari awal; Xet sering lebih cepat pada unduhan pertama.",
+        httpsHintNoResume: "TLS standar. Berfungsi di jaringan apa pun, penggunaan memori stabil. Instalasi ini tidak dapat melanjutkan unduhan yang dibatalkan.",
+        xetHint: "Transfer potongan yang dideduplikasi. Sering lebih cepat pada unduhan baru, memulai ulang file jika Anda membatalkan, memerlukan lebih banyak memori.",
+        autoHint: "Memilih per mesin dan beralih ke HTTPS jika Xet macet atau gagal di sini.",
         autoCurrently: "Otomatis menggunakan {transport} di mesin ini.",
         xetMissing: "Xet tidak tersedia karena hf_xet tidak terinstal.",
         speedLimit: "Batas kecepatan unduhan",
-        speedLimitDescription:
-          "Tanpa batas kecuali ada angka yang diatur. Unduhan yang dibatasi memakai HTTPS.",
+        speedLimitDescription: "Tanpa batas kecuali ada angka yang diatur. Unduhan yang dibatasi memakai HTTPS.",
         speedLimitNoLimit: "Tanpa batas",
         speedLimitInvalid: "Masukkan angka dalam Mbit/s, atau biarkan kolom kosong.",
         speedLimitUsesHttps: "Unduhan menggunakan HTTPS selama batas kecepatan diatur. File di atas 50 GB tetap menggunakan Xet, tanpa batas.",
@@ -2475,21 +2204,15 @@ export const id = {
       rag: {
         sectionTitle: "Dokumen & RAG",
         embeddingModel: "Model embedding",
-        embeddingModelShort:
-          "Mengubah dokumen Anda menjadi vektor agar chat dapat mencarinya.",
-        embeddingModelDescription:
-          "Model Hugging Face atau jalur lokal yang digunakan untuk mengindeks dan mencari dokumen Anda. Default-nya {defaultModel}.",
+        embeddingModelShort: "Mengubah dokumen Anda menjadi vektor agar chat dapat mencarinya.",
+        embeddingModelDescription: "Model Hugging Face atau jalur lokal yang digunakan untuk mengindeks dan mencari dokumen Anda. Default-nya {defaultModel}.",
         searchPlaceholder: "Cari model apa pun di HF",
-        reindexWarning:
-          "Hanya memengaruhi dokumen yang baru diindeks. Lakukan embedding ulang dokumen yang ada setelah mengganti model.",
+        reindexWarning: "Hanya memengaruhi dokumen yang baru diindeks. Lakukan embedding ulang dokumen yang ada setelah mengganti model.",
         reembed: {
           label: "Embedding ulang dokumen",
-          staleOne:
-            "1 dokumen diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
-          staleMany:
-            "{count} dokumen diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
-          staleArchived:
-            "Riwayat chat sebelumnya diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
+          staleOne: "1 dokumen diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
+          staleMany: "{count} dokumen diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
+          staleArchived: "Riwayat chat sebelumnya diindeks dengan model embedding yang berbeda, sehingga pencarian semantik melewatinya.",
           running: "Embedding ulang: {done} dari {total}",
           action: "Embedding ulang",
           stop: "Hentikan",
@@ -2513,20 +2236,16 @@ export const id = {
         unloadFailed: "Tidak dapat mengeluarkan model embedding",
         ejected: "Model embedding dikeluarkan",
         ejectModel: "Keluarkan model",
-        onDeviceHint:
-          "Diunduh ke komputer ini. Model hanya dimuat ke memori saat dokumen diindeks atau dicari, sehingga tidak menggunakan RAM atau VRAM hingga saat itu.",
-        loadedHint:
-          "Saat ini ada di memori, menggunakan RAM atau VRAM. Arahkan kursor ke pemilih model dan klik ikon merah untuk mengeluarkannya.",
+        onDeviceHint: "Diunduh ke komputer ini. Model hanya dimuat ke memori saat dokumen diindeks atau dicari, sehingga tidak menggunakan RAM atau VRAM hingga saat itu.",
+        loadedHint: "Saat ini ada di memori, menggunakan RAM atau VRAM. Arahkan kursor ke pemilih model dan klik ikon merah untuk mengeluarkannya.",
         notLoaded: "Tidak dimuat",
-        notLoadedHint:
-          "Saat ini tidak ada di memori. Model akan dimuat sendiri saat dokumen diindeks atau dicari berikutnya, lalu Anda dapat mengeluarkannya dari pemilih.",
+        notLoadedHint: "Saat ini tidak ada di memori. Model akan dimuat sendiri saat dokumen diindeks atau dicari berikutnya, lalu Anda dapat mengeluarkannya dari pemilih.",
         downloadingStatus: "Mengunduh…",
         notDownloaded: "Belum diunduh",
         notDownloadedSized: "Belum diunduh · {size}",
         loaded: "Dimuat",
         downloading: "Mengunduh {model}",
-        downloadingDescription:
-          "Progres ada di panel unduhan. Pengindeksan akan menggunakannya setelah selesai diunduh.",
+        downloadingDescription: "Progres ada di panel unduhan. Pengindeksan akan menggunakannya setelah selesai diunduh.",
         downloadFailed: "Tidak dapat memulai unduhan",
         downloadConflict: "Lanjutkan unduhan ini dari Hub",
         downloadBusy: "Unduhan sudah berlangsung",
@@ -2539,17 +2258,14 @@ export const id = {
         localModel: "Model lokal",
         switched: "Model embedding diatur ke {model}",
         switchedNeedsDownload: "{model} belum diunduh",
-        switchedNeedsDownloadDescription:
-          "Unduh di Pengaturan sebelum mengindeks file baru.",
-        switchedUncheckedDescription:
-          "Tidak dapat memeriksa apakah model sudah diunduh. Periksa di Pengaturan sebelum mengindeks file baru.",
+        switchedNeedsDownloadDescription: "Unduh di Pengaturan sebelum mengindeks file baru.",
+        switchedUncheckedDescription: "Tidak dapat memeriksa apakah model sudah diunduh. Periksa di Pengaturan sebelum mengindeks file baru.",
         openSettings: "Buka pengaturan",
         switchFailed: "Tidak dapat mengganti model embedding",
         back: "Kembali ke sumber",
         menuSubtitle: "Mendukung pencarian file",
         device: "Perangkat embedding",
-        deviceDescription:
-          "Tempat model embedding berjalan, untuk setiap model. GPU mengindeks kumpulan dokumen besar lebih cepat tetapi tetap menggunakan sebagian VRAM hingga Unsloth dimulai ulang.",
+        deviceDescription: "Tempat model embedding berjalan, untuk setiap model. GPU mengindeks kumpulan dokumen besar lebih cepat tetapi tetap menggunakan sebagian VRAM hingga Unsloth dimulai ulang.",
         deviceAuto: "Otomatis",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2580,41 +2296,31 @@ export const id = {
       },
       fullInstall: {
         label: "Jenis instalasi",
-        description:
-          "Hanya chat (GGUF). Instalasi lengkap menambahkan pelatihan, ekspor, video, model safetensors, dan fitur pembuatan gambar tambahan.",
-        descriptionCpu:
-          "Hanya chat (GGUF). Tidak ditemukan GPU yang didukung, jadi instalasi lengkap menambahkan pelatihan di CPU.",
+        description: "Hanya chat (GGUF). Instalasi lengkap menambahkan pelatihan, ekspor, video, model safetensors, dan fitur pembuatan gambar tambahan.",
+        descriptionCpu: "Hanya chat (GGUF). Tidak ditemukan GPU yang didukung, jadi instalasi lengkap menambahkan pelatihan di CPU.",
         action: "Tingkatkan ke instalasi lengkap",
         confirmTitle: "Tingkatkan ke instalasi lengkap?",
-        confirmDescription:
-          "Instalasi Hanya chat ini menjalankan model GGUF. Instalasi lengkap menambahkan PyTorch untuk GPU mesin ini, yang mengaktifkan pelatihan, ekspor, video, model safetensors, dan fitur pembuatan gambar tambahan. Proses ini mengunduh beberapa gigabyte (minimal 5 GB ruang disk) dan memulai ulang server. Chat, model, dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
-        confirmDescriptionCpu:
-          "Instalasi Hanya chat ini menjalankan model GGUF. Tidak ditemukan GPU yang didukung di mesin ini, jadi instalasi lengkap menambahkan PyTorch untuk CPU, yang mengaktifkan pelatihan di CPU. Pelatihan di CPU jauh lebih lambat daripada di GPU. Proses ini memerlukan ruang disk minimal 5 GB dan memulai ulang server. Chat, model, dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
+        confirmDescription: "Instalasi Hanya chat ini menjalankan model GGUF. Instalasi lengkap menambahkan PyTorch untuk GPU mesin ini, yang mengaktifkan pelatihan, ekspor, video, model safetensors, dan fitur pembuatan gambar tambahan. Proses ini mengunduh beberapa gigabyte (minimal 5 GB ruang disk) dan memulai ulang server. Chat, model, dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
+        confirmDescriptionCpu: "Instalasi Hanya chat ini menjalankan model GGUF. Tidak ditemukan GPU yang didukung di mesin ini, jadi instalasi lengkap menambahkan PyTorch untuk CPU, yang mengaktifkan pelatihan di CPU. Pelatihan di CPU jauh lebih lambat daripada di GPU. Proses ini memerlukan ruang disk minimal 5 GB dan memulai ulang server. Chat, model, dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
         confirmAction: "Tingkatkan",
-        keywords:
-          "full install upgrade install type chat only gguf add training train training fine-tune pytorch torch export video image generation safetensors instalasi lengkap tingkatkan pelatihan latih ekspor gambar",
+        keywords: "full install upgrade install type chat only gguf add training train training fine-tune pytorch torch export video image generation safetensors instalasi lengkap tingkatkan pelatihan latih ekspor gambar",
       },
       repairInstall: {
         label: "Perbaiki instalasi",
-        description:
-          "Menjalankan ulang penginstal pada lingkungan terkelola. Gunakan ini jika GPU tidak terdeteksi atau aplikasi tidak mau dimulai.",
+        description: "Menjalankan ulang penginstal pada lingkungan terkelola. Gunakan ini jika GPU tidak terdeteksi atau aplikasi tidak mau dimulai.",
         action: "Perbaiki instalasi",
         confirmTitle: "Perbaiki instalasi ini?",
-        confirmDescription:
-          "Menghentikan server dan menjalankan ulang penginstal, yang menginstal ulang PyTorch untuk GPU mesin ini ke rilis terbaru yang didukung. Chat dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
-        confirmDescriptionChatOnly:
-          "Menghentikan server dan menjalankan ulang penginstal. Ini adalah instalasi Hanya chat, jadi penginstal juga meningkatkannya ke instalasi lengkap dengan PyTorch, total beberapa gigabyte. Chat dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
+        confirmDescription: "Menghentikan server dan menjalankan ulang penginstal, yang menginstal ulang PyTorch untuk GPU mesin ini ke rilis terbaru yang didukung. Chat dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
+        confirmDescriptionChatOnly: "Menghentikan server dan menjalankan ulang penginstal. Ini adalah instalasi Hanya chat, jadi penginstal juga meningkatkannya ke instalasi lengkap dengan PyTorch, total beberapa gigabyte. Chat dan pengaturan tetap disimpan. Proses ini dapat memakan waktu beberapa menit.",
         confirmAction: "Perbaiki sekarang",
       },
       resetPreferences: {
         sectionTitle: "Zona berbahaya",
         label: "Atur ulang semua preferensi lokal",
-        description:
-          "Menghapus preferensi yang hanya tersimpan lokal. Chat, akses API, dan pengaturan yang tersimpan di DB tetap dipertahankan.",
+        description: "Menghapus preferensi yang hanya tersimpan lokal. Chat, akses API, dan pengaturan yang tersimpan di DB tetap dipertahankan.",
         action: "Atur ulang preferensi",
         confirmTitle: "Atur ulang semua preferensi lokal?",
-        confirmDescription:
-          "Menghapus preferensi yang hanya tersimpan lokal dan memuat ulang Unsloth. Chat, akses API, dan pengaturan yang tersimpan di DB tetap dipertahankan.",
+        confirmDescription: "Menghapus preferensi yang hanya tersimpan lokal dan memuat ulang Unsloth. Chat, akses API, dan pengaturan yang tersimpan di DB tetap dipertahankan.",
         confirmAction: "Atur ulang dan muat ulang",
       },
     },
@@ -2645,28 +2351,21 @@ export const id = {
       noPicture: "Tidak ada foto profil",
       noneLabel: "Tidak ada",
       nameSaved: "Nama profil disimpan",
-      namePersistErrorTitle:
-        "Tidak dapat menyimpan nama profil secara permanen",
-      namePersistErrorDescription:
-        "Nama diperbarui untuk sesi ini, tetapi mungkin tidak tersimpan setelah dimuat ulang.",
+      namePersistErrorTitle: "Tidak dapat menyimpan nama profil secara permanen",
+      namePersistErrorDescription: "Nama diperbarui untuk sesi ini, tetapi mungkin tidak tersimpan setelah dimuat ulang.",
       photoUpdated: "Foto profil diperbarui",
-      photoPersistErrorTitle:
-        "Tidak dapat menyimpan foto profil secara permanen",
-      photoPersistErrorDescription:
-        "Foto diperbarui untuk sesi ini, tetapi mungkin tidak tersimpan setelah dimuat ulang.",
+      photoPersistErrorTitle: "Tidak dapat menyimpan foto profil secara permanen",
+      photoPersistErrorDescription: "Foto diperbarui untuk sesi ini, tetapi mungkin tidak tersimpan setelah dimuat ulang.",
       photoUpdateErrorTitle: "Tidak dapat memperbarui foto profil",
       imageUseError: "Tidak dapat menggunakan gambar ini.",
       stats: {
         title: "Statistik Anda",
-        subtitle:
-          "Semua yang di bawah ini dihitung dari riwayat Anda sendiri. Tidak ada yang dikumpulkan atau dikirim ke Unsloth.",
+        subtitle: "Semua yang di bawah ini dihitung dari riwayat Anda sendiri. Tidak ada yang dikumpulkan atau dikirim ke Unsloth.",
         retry: "Coba lagi",
         exportCsv: "Ekspor CSV",
         exportError: "Tidak dapat mengekspor penggunaan token Anda",
-        privacyNote:
-          "Statistik dihitung dari riwayat chat, penggunaan API, dan pelatihan lokal yang disimpan oleh instalasi Unsloth Anda. Prompt, respons, dan kunci API tidak pernah disimpan untuk statistik. Tidak ada yang dikirim ke Unsloth atau pihak ketiga mana pun.",
-        emptyChats:
-          "Belum ada penggunaan chat atau API. Mulai percakapan atau buat permintaan API lokal yang diautentikasi, dan statistik Anda akan muncul di sini.",
+        privacyNote: "Statistik dihitung dari riwayat chat, penggunaan API, dan pelatihan lokal yang disimpan oleh instalasi Unsloth Anda. Prompt, respons, dan kunci API tidak pernah disimpan untuk statistik. Tidak ada yang dikirim ke Unsloth atau pihak ketiga mana pun.",
+        emptyChats: "Belum ada penggunaan chat atau API. Mulai percakapan atau buat permintaan API lokal yang diautentikasi, dan statistik Anda akan muncul di sini.",
         lifetimeTokens: "Total token sepanjang waktu",
         peakTokens: "Hari puncak",
         longestChat: "Chat terpanjang",
@@ -2731,22 +2430,16 @@ export const id = {
       gpuRendering: {
         sectionTitle: "Rendering",
         label: "Rendering GPU",
-        description:
-          "Gambar Unsloth dengan kartu grafis Anda. Otomatis menggunakannya jika diketahui berfungsi. Perubahan berlaku setelah Unsloth dimulai ulang.",
+        description: "Gambar Unsloth dengan kartu grafis Anda. Otomatis menggunakannya jika diketahui berfungsi. Perubahan berlaku setelah Unsloth dimulai ulang.",
         auto: "Otomatis",
         on: "Aktif",
         off: "Nonaktif",
-        oldWebkitWarning:
-          "WebKitGTK {version} di Wayland: rendering GPU dapat mogok saat diluncurkan di NVIDIA dengan penskalaan pecahan (bug WebKit 280210). Jika terjadi, Unsloth akan kembali ke rendering CPU dengan sendirinya. Di WebKitGTK 2.50.4, tidak ada peningkatan kecepatan yang terukur (8 fps dalam kedua kasus), jadi Aktif tidak disarankan di sini.",
-        oldDriverWarning:
-          "Driver NVIDIA {version} di X11: Unsloth menonaktifkan rendering GPU hingga driver versi 610 atau yang lebih baru. Driver lama membocorkan satu file descriptor per frame, dan jendela berhenti menggambar dalam hitungan menit.",
-        fallbackNote:
-          "Rendering GPU mogok saat diluncurkan di sistem ini, jadi Unsloth menggunakan rendering CPU.",
+        oldWebkitWarning: "WebKitGTK {version} di Wayland: rendering GPU dapat mogok saat diluncurkan di NVIDIA dengan penskalaan pecahan (bug WebKit 280210). Jika terjadi, Unsloth akan kembali ke rendering CPU dengan sendirinya. Di WebKitGTK 2.50.4, tidak ada peningkatan kecepatan yang terukur (8 fps dalam kedua kasus), jadi Aktif tidak disarankan di sini.",
+        oldDriverWarning: "Driver NVIDIA {version} di X11: Unsloth menonaktifkan rendering GPU hingga driver versi 610 atau yang lebih baru. Driver lama membocorkan satu file descriptor per frame, dan jendela berhenti menggambar dalam hitungan menit.",
+        fallbackNote: "Rendering GPU mogok saat diluncurkan di sistem ini, jadi Unsloth menggunakan rendering CPU.",
         tryAgain: "Coba GPU lagi",
-        envOverride:
-          "Diatur oleh variabel lingkungan {name}. Pengaturan ini tidak berpengaruh hingga variabel tersebut dihapus.",
-        macNote:
-          "macOS selalu merender dengan GPU. WebKit tidak memiliki opsi yang didukung untuk menonaktifkannya.",
+        envOverride: "Diatur oleh variabel lingkungan {name}. Pengaturan ini tidak berpengaruh hingga variabel tersebut dihapus.",
+        macNote: "macOS selalu merender dengan GPU. WebKit tidak memiliki opsi yang didukung untuk menonaktifkannya.",
         restartPending: "Mulai ulang Unsloth untuk menerapkan.",
         restartNow: "Mulai ulang sekarang",
         loadError: "Tidak dapat memuat pengaturan rendering GPU.",
@@ -2763,8 +2456,7 @@ export const id = {
       },
       palette: {
         label: "Tema",
-        description:
-          "Warna yang digunakan di seluruh Unsloth, dalam mode terang dan gelap.",
+        description: "Warna yang digunakan di seluruh Unsloth, dalam mode terang dan gelap.",
         standard: "Standar",
         moreThemes: "Tema lainnya",
       },
@@ -2797,8 +2489,7 @@ export const id = {
         },
         sentAttachments: {
           label: "Lampiran di pesan terkirim",
-          description:
-            "Standar menampilkan setiap file beserta jenisnya, ringkas memuat lebih banyak di setiap baris. Otomatis beralih ke ringkas jika lebih dari enam file.",
+          description: "Standar menampilkan setiap file beserta jenisnya, ringkas memuat lebih banyak di setiap baris. Otomatis beralih ke ringkas jika lebih dari enam file.",
           auto: "Otomatis",
           list: "Standar",
           chips: "Ringkas",
@@ -2839,16 +2530,13 @@ export const id = {
         importFont: {
           upload: "Unggah",
           scanFolder: "Pilih folder",
-          alreadyAvailable:
-            "Font ini sudah tersedia, jadi salinan yang ada akan digunakan.",
+          alreadyAvailable: "Font ini sudah tersedia, jadi salinan yang ada akan digunakan.",
           folderNoFonts: "Tidak ada file font di folder tersebut.",
           remove: "Hapus",
-          errorInvalidType:
-            "Jenis file tidak didukung. Gunakan .woff2, .woff, .ttf, atau .otf.",
+          errorInvalidType: "Jenis file tidak didukung. Gunakan .woff2, .woff, .ttf, atau .otf.",
           errorTooLarge: "File font terlalu besar (maks. 1.5 MB).",
           errorLimit: "Anda dapat mengimpor hingga 3 font.",
-          errorStorageFull:
-            "Penyimpanan lokal tidak cukup untuk font ini. Hapus font yang diimpor terlebih dahulu.",
+          errorStorageFull: "Penyimpanan lokal tidak cukup untuk font ini. Hapus font yang diimpor terlebih dahulu.",
           errorFailed: "Tidak dapat memuat file font ini.",
         },
         interfaceScale: {
@@ -2857,8 +2545,7 @@ export const id = {
         },
         uiFontSize: {
           label: "Ukuran font UI",
-          description:
-            "Sesuaikan ukuran dasar yang digunakan untuk UI Unsloth.",
+          description: "Sesuaikan ukuran dasar yang digunakan untuk UI Unsloth.",
         },
         codeFontSize: {
           label: "Ukuran font kode",
@@ -2884,8 +2571,7 @@ export const id = {
         },
         pointerCursors: {
           label: "Gunakan kursor penunjuk",
-          description:
-            "Ubah kursor menjadi penunjuk saat diarahkan ke elemen interaktif.",
+          description: "Ubah kursor menjadi penunjuk saat diarahkan ke elemen interaktif.",
         },
       },
       language: {
@@ -2896,19 +2582,16 @@ export const id = {
         search: "Cari bahasa",
         noResults: "Tidak ada bahasa yang cocok",
         spellCheck: "Pemeriksa ejaan",
-        spellCheckDescription:
-          "Garis bawahi kata yang salah eja saat Anda mengetik.",
+        spellCheckDescription: "Garis bawahi kata yang salah eja saat Anda mengetik.",
       },
       layout: {
         title: "Tata letak",
         compactSidebar: "Sematkan bilah sisi secara default",
-        compactSidebarDescription:
-          "Biarkan bilah sisi tetap diluaskan alih-alih diciutkan menjadi ikon.",
+        compactSidebarDescription: "Biarkan bilah sisi tetap diluaskan alih-alih diciutkan menjadi ikon.",
       },
       sidebarNav: {
         title: "Navigasi bilah sisi",
-        description:
-          "Sematkan dan ubah urutan tab bilah sisi. Tab yang tidak disematkan masuk ke menu Lainnya.",
+        description: "Sematkan dan ubah urutan tab bilah sisi. Tab yang tidak disematkan masuk ke menu Lainnya.",
         dragToReorder: "Seret untuk mengubah urutan",
         pinToSidebar: "Sematkan {name} ke bilah sisi",
         moreHolds: "Lainnya ({count})",
@@ -2926,13 +2609,11 @@ export const id = {
       liveUpdates: "Pembaruan langsung",
       floatingWindow: "Jendela mengambang",
       showFloatingWindow: "Tampilkan jendela mengambang",
-      showFloatingWindowDescription:
-        "Tampilkan penggunaan CPU, RAM, dan GPU di layar di atas Unsloth.",
+      showFloatingWindowDescription: "Tampilkan penggunaan CPU, RAM, dan GPU di layar di atas Unsloth.",
       liveMonitor: {
         title: "Pemantau langsung",
         apiTitle: "Pemantau API",
-        apiDescription:
-          "Lihat apa yang dikirim aplikasi lain ke API server ini saat tiba.",
+        apiDescription: "Lihat apa yang dikirim aplikasi lain ke API server ini saat tiba.",
         summary: "Permintaan, kesalahan, dan penggunaan token secara langsung",
         status: "{active} aktif · {recent} terbaru · {model}",
         noModelLoaded: "Tidak ada model yang dimuat",
@@ -2966,11 +2647,9 @@ export const id = {
         free: "{value} kosong",
         noGpu: "Tidak ada GPU yang terlihat",
         gpuUnusable: "GPU tidak dapat digunakan",
-        gpuUnusableDetail:
-          "Terdeteksi, tetapi PyTorch tidak dapat menggunakannya",
+        gpuUnusableDetail: "Terdeteksi, tetapi PyTorch tidak dapat menggunakannya",
         detailedView: "Tampilan terperinci",
-        detailedViewDescription:
-          "Tampilkan beban, suhu, dan daya setiap GPU di jendela mengambang.",
+        detailedViewDescription: "Tampilkan beban, suhu, dan daya setiap GPU di jendela mengambang.",
         gpuLoad: "Beban GPU",
         temperature: "Suhu",
         power: "Daya",
@@ -2986,16 +2665,11 @@ export const id = {
         unavailable: "tidak tersedia",
         detecting: "Memeriksa GPU...",
         unreadable: "Tidak dapat membaca perangkat keras server ini.",
-        noGpu:
-          "Tidak ada GPU khusus yang terdeteksi.",
-        noUsableGpu:
-          "Tidak ada GPU di mesin ini yang dapat digunakan oleh PyTorch.",
-        mismatchCpuBuild:
-          "PyTorch adalah build khusus CPU ({version}), sehingga GPU di bawah tidak dapat digunakan. Perbaiki instalasi untuk memulihkan dukungan GPU.",
-        mismatchUnavailable:
-          "PyTorch ({version}) tidak dapat menginisialisasi GPU di bawah, sehingga GPU tersebut tidak dapat digunakan. Periksa driver GPU, atau perbaiki instalasi.",
-        driverIdleEvict:
-          "Driver AMD {version} memiliki bug yang diketahui dapat membuat Windows macet saat GPU AMD menganggur, paling sering dengan lebih dari satu GPU. Perbarui ke Adrenalin 26.9.2 atau yang lebih baru.",
+        noGpu: "Tidak ada GPU khusus yang terdeteksi.",
+        noUsableGpu: "Tidak ada GPU di mesin ini yang dapat digunakan oleh PyTorch.",
+        mismatchCpuBuild: "PyTorch adalah build khusus CPU ({version}), sehingga GPU di bawah tidak dapat digunakan. Perbaiki instalasi untuk memulihkan dukungan GPU.",
+        mismatchUnavailable: "PyTorch ({version}) tidak dapat menginisialisasi GPU di bawah, sehingga GPU tersebut tidak dapat digunakan. Periksa driver GPU, atau perbaiki instalasi.",
+        driverIdleEvict: "Driver AMD {version} memiliki bug yang diketahui dapat membuat Windows macet saat GPU AMD menganggur, paling sering dengan lebih dari satu GPU. Perbarui ke Adrenalin 26.9.2 atau yang lebih baru.",
         driverIdleEvictDetails: "Detail",
         dismissNotice: "Tutup",
         unusableDevice: "tidak dapat digunakan",
@@ -3013,35 +2687,28 @@ export const id = {
       llamaBackend: {
         title: "Engine inferensi GGUF",
         label: "Backend komputasi",
-        description:
-          "Backend yang digunakan llama.cpp untuk menjalankan model GGUF.",
+        description: "Backend yang digunakan llama.cpp untuk menjalankan model GGUF.",
         runningOn: "llama.cpp saat ini berjalan di {backend}.",
         hint: "Menginstal build llama.cpp untuk backend ini dan mempertahankannya saat pembaruan. Berguna saat pilihan otomatis mogok atau driver GPU Anda tidak mendukungnya. Hanya backend yang memiliki build untuk mesin ini yang dicantumkan; pelatihan tidak terpengaruh.",
         autoWith: "Otomatis ({backend})",
         apply: "Terapkan",
         applying: "Menginstal...",
-        applyHint:
-          "Mengunduh build baru dan memulai ulang llama.cpp. Model yang dimuat akan dilepas.",
-        applyHintWithSize:
-          "Mengunduh {size} dan memulai ulang llama.cpp. Model yang dimuat akan dilepas.",
+        applyHint: "Mengunduh build baru dan memulai ulang llama.cpp. Model yang dimuat akan dilepas.",
+        applyHintWithSize: "Mengunduh {size} dan memulai ulang llama.cpp. Model yang dimuat akan dilepas.",
         switchedTo: "llama.cpp sekarang berjalan di {backend}.",
         switchFailed: "Tidak dapat mengubah backend llama.cpp.",
         switchInterrupted: "Peralihan terhenti sebelum selesai.",
-        envLocked:
-          "Diatur ke {backend} oleh variabel lingkungan UNSLOTH_LLAMA_CPP_BACKEND, yang menggantikan pengaturan ini.",
+        envLocked: "Diatur ke {backend} oleh variabel lingkungan UNSLOTH_LLAMA_CPP_BACKEND, yang menggantikan pengaturan ini.",
         customPath: {
           label: "Folder llama.cpp kustom",
           description: "Gunakan build llama-server Anda sendiri.",
           hint: "Pilih folder llama.cpp yang berisi llama-server, atau build yang menyimpannya di build/bin. Runtime kustom digunakan untuk chat GGUF, embedding, dan model suara yang didukung. Variabel lingkungan tetap diprioritaskan.",
           automatic: "Otomatis (bawaan)",
           bundled: "Menggunakan runtime llama.cpp yang diinstal oleh Unsloth.",
-          active:
-            "llama-server kustom Anda akan digunakan pada pemuatan model berikutnya.",
+          active: "llama-server kustom Anda akan digunakan pada pemuatan model berikutnya.",
           environmentManaged: "Dikelola oleh variabel lingkungan {variable}.",
-          missingBinary:
-            "llama-server tidak lagi tersedia di folder ini. Pilih folder lain atau gunakan runtime bawaan.",
-          reloadRequired:
-            "Muat ulang model untuk menggunakan llama-server yang dipilih.",
+          missingBinary: "llama-server tidak lagi tersedia di folder ini. Pilih folder lain atau gunakan runtime bawaan.",
+          reloadRequired: "Muat ulang model untuk menggunakan llama-server yang dipilih.",
           change: "Ubah",
           saving: "Menyimpan...",
           useBundled: "Gunakan bawaan",
@@ -3059,76 +2726,51 @@ export const id = {
           metal: "Metal",
         },
         unsupported: {
-          notInstalled:
-            "Tidak ditemukan instalasi llama.cpp terkelola, jadi tidak ada backend yang dapat dialihkan.",
-          localLink:
-            "llama.cpp adalah direktori lokal yang Anda tautkan sendiri, jadi Unsloth tidak akan menggantinya.",
-          sourceBuild:
-            "llama.cpp ini dibuat dari kode sumber, jadi backend-nya tidak dapat dialihkan dari sini.",
-          customPath:
-            "Folder llama.cpp kustom dipilih. Build-nya yang menentukan backend komputasi.",
-          unresolved:
-            "Backend yang tersedia tidak dapat diperiksa. Periksa koneksi Anda dan coba lagi.",
-          updateChecksDisabled:
-            "Pemeriksaan pembaruan dinonaktifkan (UNSLOTH_DISABLE_UPDATE_CHECK=1), jadi backend yang tersedia tidak dicari.",
+          notInstalled: "Tidak ditemukan instalasi llama.cpp terkelola, jadi tidak ada backend yang dapat dialihkan.",
+          localLink: "llama.cpp adalah direktori lokal yang Anda tautkan sendiri, jadi Unsloth tidak akan menggantinya.",
+          sourceBuild: "llama.cpp ini dibuat dari kode sumber, jadi backend-nya tidak dapat dialihkan dari sini.",
+          customPath: "Folder llama.cpp kustom dipilih. Build-nya yang menentukan backend komputasi.",
+          unresolved: "Backend yang tersedia tidak dapat diperiksa. Periksa koneksi Anda dan coba lagi.",
+          updateChecksDisabled: "Pemeriksaan pembaruan dinonaktifkan (UNSLOTH_DISABLE_UPDATE_CHECK=1), jadi backend yang tersedia tidak dicari.",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary inferensi akselerator alihkan kustom jalur direktori",
+        llamaBackendKeywords: "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary inferensi akselerator alihkan kustom jalur direktori",
       },
       modelMemory: {
         title: "Pemuatan model",
         keepResident: "Simpan model di memori GPU",
         keepResidentDescription: "Tetap di VRAM di antara prompt.",
-        keepResidentHint:
-          "Jangan kembalikan bobot ke RAM sistem selama model tetap dimuat. Menonaktifkan lepas otomatis saat tidak aktif, dan saat bobot berada di RAM host (memori terpadu, atau offload GPU parsial), juga meneruskan --mlock agar OS tidak dapat memindahkannya ke swap lalu mengunggahnya ulang pada prompt berikutnya.",
+        keepResidentHint: "Jangan kembalikan bobot ke RAM sistem selama model tetap dimuat. Menonaktifkan lepas otomatis saat tidak aktif, dan saat bobot berada di RAM host (memori terpadu, atau offload GPU parsial), juga meneruskan --mlock agar OS tidak dapat memindahkannya ke swap lalu mengunggahnya ulang pada prompt berikutnya.",
         noRamReserve: "Jangan cadangkan RAM sistem untuk model",
-        noRamReserveDescription:
-          "Kurangi RAM host yang ditahan untuk bobot model.",
-        noRamReserveHint:
-          "Melewati pemuatan yang dipetakan ke memori pada build Windows yang didukung saat model sepenuhnya di-offload ke GPU, sehingga halamannya tidak tetap ditahan di memori. Jika tidak, pemuatan yang dipetakan ke memori tetap digunakan. Buffer CPU yang diperlukan tetap dapat menggunakan RAM. Menghapus --no-mmap dan --mlock.",
+        noRamReserveDescription: "Kurangi RAM host yang ditahan untuk bobot model.",
+        noRamReserveHint: "Melewati pemuatan yang dipetakan ke memori pada build Windows yang didukung saat model sepenuhnya di-offload ke GPU, sehingga halamannya tidak tetap ditahan di memori. Jika tidak, pemuatan yang dipetakan ke memori tetap digunakan. Buffer CPU yang diperlukan tetap dapat menggunakan RAM. Menghapus --no-mmap dan --mlock.",
         multiModel: "Tetap muat beberapa model",
         openSystemSettings: "Buka di Sistem",
         multiModelOff: "Nonaktif",
         multiModelFit: "Saat muat",
         multiModelAlways: "Selalu",
-        multiModelDescription:
-          "Memuat model chat, ucapan, gambar, atau video akan melepas model lainnya.",
-        multiModelDescriptionFit:
-          "Memuat model akan mempertahankan model lain jika muat. Jika tidak, model yang tidak digunakan dilepas terlebih dahulu, lalu model yang aktif.",
-        multiModelDescriptionAlways:
-          "Memuat model tidak pernah melepas model lain. Model yang tidak muat tidak akan dimuat. Lepas otomatis saat tidak aktif dan pelatihan tetap membebaskan memori.",
-        multiModelHint:
-          "Mencakup model chat, ucapan, gambar, dan video. Setiap model chat yang dimuat menjawab permintaan yang menyebut namanya. Dengan beberapa GPU, Unsloth mencoba menempatkan model baru di GPU yang tidak digunakan model lain. “Saat muat” menyisakan sekitar 1 GB. Model yang dimuat bersama model lain mendapatkan memori yang tersisa, sehingga mungkin dimulai dengan konteks lebih pendek. “Saat muat” dan “Selalu” tidak pernah melepas model di GPU lain.",
+        multiModelDescription: "Memuat model chat, ucapan, gambar, atau video akan melepas model lainnya.",
+        multiModelDescriptionFit: "Memuat model akan mempertahankan model lain jika muat. Jika tidak, model yang tidak digunakan dilepas terlebih dahulu, lalu model yang aktif.",
+        multiModelDescriptionAlways: "Memuat model tidak pernah melepas model lain. Model yang tidak muat tidak akan dimuat. Lepas otomatis saat tidak aktif dan pelatihan tetap membebaskan memori.",
+        multiModelHint: "Mencakup model chat, ucapan, gambar, dan video. Setiap model chat yang dimuat menjawab permintaan yang menyebut namanya. Dengan beberapa GPU, Unsloth mencoba menempatkan model baru di GPU yang tidak digunakan model lain. “Saat muat” menyisakan sekitar 1 GB. Model yang dimuat bersama model lain mendapatkan memori yang tersisa, sehingga mungkin dimulai dengan konteks lebih pendek. “Saat muat” dan “Selalu” tidak pernah melepas model di GPU lain.",
         allowOversizedLoad: "Izinkan pemuatan model yang terlalu besar",
-        allowOversizedLoadDescription:
-          "Muat model gambar dan video meskipun pemeriksaan memori menyatakan model tersebut tidak akan muat.",
-        allowOversizedLoadHint:
-          "Berlaku jika CPU dan GPU berbagi satu kumpulan memori (Apple Silicon, GPU terintegrasi). Unsloth menolak pemuatan jika perkiraan bobot model lebih besar daripada memori yang tersisa setelah menyisakan ruang untuk sistem operasi. Jika opsi ini aktif, pemuatan tersebut tetap dicoba. Perkiraan dapat meleset ke dua arah: pemuatan yang terlalu besar dapat gagal, menghabiskan seluruh memori, membuat komputer melakukan swap berat atau berhenti merespons, atau menghentikan Unsloth. Nonaktif secara default.",
-        mediaIdleUnloadDescription:
-          "Bebaskan VRAM dengan melepas model gambar dan video setelah sekian detik tidak aktif. 0 membuat model tetap dimuat, minimum 60.",
-        mlockVetoed:
-          "--mlock tetap nonaktif: mengunci model di tempatnya akan mencadangkan RAM untuk seluruh model. Lepas otomatis saat tidak aktif tetap dinonaktifkan.",
-        mlockNotApplicable:
-          "Sepenuhnya di GPU: tidak ada yang perlu dikunci di RAM sistem. Lepas otomatis saat tidak aktif tetap nonaktif.",
-        memlockCapped:
-          "Sistem ini membatasi memori terkunci hingga {limit}. Model yang lebih besar tidak akan terkunci sepenuhnya; naikkan batasnya dengan ulimit -l.",
-        reloadRequired:
-          "Muat ulang model untuk menerapkan flag memori yang baru.",
+        allowOversizedLoadDescription: "Muat model gambar dan video meskipun pemeriksaan memori menyatakan model tersebut tidak akan muat.",
+        allowOversizedLoadHint: "Berlaku jika CPU dan GPU berbagi satu kumpulan memori (Apple Silicon, GPU terintegrasi). Unsloth menolak pemuatan jika perkiraan bobot model lebih besar daripada memori yang tersisa setelah menyisakan ruang untuk sistem operasi. Jika opsi ini aktif, pemuatan tersebut tetap dicoba. Perkiraan dapat meleset ke dua arah: pemuatan yang terlalu besar dapat gagal, menghabiskan seluruh memori, membuat komputer melakukan swap berat atau berhenti merespons, atau menghentikan Unsloth. Nonaktif secara default.",
+        mediaIdleUnloadDescription: "Bebaskan VRAM dengan melepas model gambar dan video setelah sekian detik tidak aktif. 0 membuat model tetap dimuat, minimum 60.",
+        mlockVetoed: "--mlock tetap nonaktif: mengunci model di tempatnya akan mencadangkan RAM untuk seluruh model. Lepas otomatis saat tidak aktif tetap dinonaktifkan.",
+        mlockNotApplicable: "Sepenuhnya di GPU: tidak ada yang perlu dikunci di RAM sistem. Lepas otomatis saat tidak aktif tetap nonaktif.",
+        memlockCapped: "Sistem ini membatasi memori terkunci hingga {limit}. Model yang lebih besar tidak akan terkunci sepenuhnya; naikkan batasnya dengan ulimit -l.",
+        reloadRequired: "Muat ulang model untuk menerapkan flag memori yang baru.",
         loadError: "Gagal memuat pengaturan memori model",
         saveError: "Gagal menyimpan pengaturan memori model",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging memori kunci dimuat lepas tidak aktif",
-        multiModelKeywords:
-          "multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle beberapa model bersama muat lepas gambar ucapan suara bacakan selalu",
-        mediaIdleUnloadKeywords:
-          "image video diffusion idle unload ttl timeout seconds free vram gpu memory gambar difusi tidak aktif lepas detik memori",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging memori kunci dimuat lepas tidak aktif",
+        multiModelKeywords: "multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle beberapa model bersama muat lepas gambar ucapan suara bacakan selalu",
+        mediaIdleUnloadKeywords: "image video diffusion idle unload ttl timeout seconds free vram gpu memory gambar difusi tidak aktif lepas detik memori",
       },
       storage: {
         title: "Penyimpanan",
         systemDisk: "Disk sistem",
         systemUsed: "{used} digunakan dari {total} di disk sistem",
-        modelsDiskSummary:
-          "Drive folder model: {used} digunakan dari {total}, {free} kosong",
+        modelsDiskSummary: "Drive folder model: {used} digunakan dari {total}, {free} kosong",
         segmentModels: "Model",
         segmentCaches: "Cache",
         segmentOther: "Lainnya",
@@ -3139,10 +2781,8 @@ export const id = {
         diskFree: "{free} kosong",
         modelsFolder: "Folder model",
         modelsFolderDescription: "Tempat model yang diunduh disimpan.",
-        modelsFolderHint:
-          "Tempat model yang diunduh disimpan. Ubah untuk menyimpan model di luar drive sistem Anda. Hanya berlaku untuk unduhan baru. Model yang sudah Anda miliki tetap berada di tempatnya.",
-        modelsFolderKeywords:
-          "models folder directory path location download downloads cache storage disk drive move relocate hugging face folder model direktori jalur lokasi unduh unduhan penyimpanan pindahkan",
+        modelsFolderHint: "Tempat model yang diunduh disimpan. Ubah untuk menyimpan model di luar drive sistem Anda. Hanya berlaku untuk unduhan baru. Model yang sudah Anda miliki tetap berada di tempatnya.",
+        modelsFolderKeywords: "models folder directory path location download downloads cache storage disk drive move relocate hugging face folder model direktori jalur lokasi unduh unduhan penyimpanan pindahkan",
         futureDownloads: "Hanya unduhan baru",
         environmentManaged: "Dikelola oleh variabel lingkungan {variable}.",
         locationFree: "{free} kosong",
@@ -3160,11 +2800,9 @@ export const id = {
         copyError: "Tidak dapat menyalin jalur",
         caches: {
           label: "File cache",
-          description:
-            "{size} di cache, {reclaimable} di antaranya dapat dihapus sekarang.",
+          description: "{size} di cache, {reclaimable} di antaranya dapat dihapus sekarang.",
           hint: "Unduhan paket, kernel yang dikompilasi, dan cache transfer yang dibuat ulang oleh Unsloth saat diperlukan. Model yang diunduh, proyek, chat, pengaturan, dan token Hugging Face Anda tidak pernah dihapus di sini.",
-          keywords:
-            "cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary hapus bersihkan ruang kosong sementara dikompilasi",
+          keywords: "cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary hapus bersihkan ruang kosong sementara dikompilasi",
           measuring: "Mengukur ukuran cache...",
           measureFailed: "Tidak dapat mengukur cache",
           empty: "File cache tidak ditemukan.",
@@ -3173,24 +2811,18 @@ export const id = {
           hideDetailsAction: "Sembunyikan detail",
           showFolders: "Tampilkan folder",
           hideFolders: "Sembunyikan folder",
-          previousLocations:
-            "Termasuk lokasi sebelumnya. Tombol Hapus utama memengaruhi folder cache saat ini. Tombol model hanya menghapus salinan yang dipilih.",
-          clearModelDescription:
-            "Tindakan ini hanya menghapus salinan cache ini. Salinan akan diunduh lagi saat diperlukan.",
+          previousLocations: "Termasuk lokasi sebelumnya. Tombol Hapus utama memengaruhi folder cache saat ini. Tombol model hanya menghapus salinan yang dipilih.",
+          clearModelDescription: "Tindakan ini hanya menghapus salinan cache ini. Salinan akan diunduh lagi saat diperlukan.",
           clearAction: "Hapus cache",
           clearOneAction: "Hapus",
           clearingAction: "Menghapus...",
           confirmTitle: "Hapus file cache?",
           confirmDescription: "Tindakan ini membebaskan sekitar {size}.",
           confirmOneTitle: "Hapus {name}?",
-          safety:
-            "Unsloth membuat ulang cache saat berikutnya diperlukan. Model yang diunduh, proyek, chat, pengaturan, dan token Hugging Face Anda tidak disentuh.",
-          hubCost:
-            "Ini adalah cache model. Menghapusnya akan membuat model tersebut diunduh lagi saat Anda menggunakannya berikutnya.",
-          datasetsCost:
-            "Menghapus ini akan membuat dataset tersebut diunduh lagi saat Anda menggunakannya berikutnya.",
-          npuCost:
-            "Ini adalah model NPU yang sudah Anda unduh. Membersihkannya akan menghapusnya, dan Anda perlu mengunduhnya lagi dari Hub untuk memakainya.",
+          safety: "Unsloth membuat ulang cache saat berikutnya diperlukan. Model yang diunduh, proyek, chat, pengaturan, dan token Hugging Face Anda tidak disentuh.",
+          hubCost: "Ini adalah cache model. Menghapusnya akan membuat model tersebut diunduh lagi saat Anda menggunakannya berikutnya.",
+          datasetsCost: "Menghapus ini akan membuat dataset tersebut diunduh lagi saat Anda menggunakannya berikutnya.",
+          npuCost: "Ini adalah model NPU yang sudah Anda unduh. Membersihkannya akan menghapusnya, dan Anda perlu mengunduhnya lagi dari Hub untuk memakainya.",
           blocked: "Tidak dihapus: {reason}",
           cleared: "{size} dihapus",
           partial: "Beberapa file cache tidak dapat dihapus",
@@ -3218,8 +2850,7 @@ export const id = {
         lowDisk: {
           title: "Ruang disk hampir habis",
           criticalTitle: "Ruang disk sangat sedikit",
-          description:
-            "{free} kosong dari {total}. Menghapus cache dapat membebaskan ruang.",
+          description: "{free} kosong dari {total}. Menghapus cache dapat membebaskan ruang.",
           action: "Tinjau cache",
         },
       },
@@ -3240,14 +2871,10 @@ export const id = {
     },
     agents: {
       title: "Agen",
-      description:
-        "Hubungkan agen coding seperti Claude Code dan Codex ke model lokal dengan unsloth start.",
-      agentKeywords:
-        "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex agen coding",
-      vscodeNote:
-        "VS Code adalah pengecualian: perintah ini menambahkan model yang dilayani ke daftar model Copilot Chat di VS Code (chatLanguageModels.json).",
-      intro:
-        "menghubungkan Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode, dan agen lainnya ke model yang dilayani secara lokal oleh Unsloth, sepenuhnya offline. Perintah ini menjalankan server yang kompatibel dengan OpenAI dan tidak pernah menyentuh file konfigurasi agen Anda.",
+      description: "Hubungkan agen coding seperti Claude Code dan Codex ke model lokal dengan unsloth start.",
+      agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex agen coding",
+      vscodeNote: "VS Code adalah pengecualian: perintah ini menambahkan model yang dilayani ke daftar model Copilot Chat di VS Code (chatLanguageModels.json).",
+      intro: "menghubungkan Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode, dan agen lainnya ke model yang dilayani secara lokal oleh Unsloth, sepenuhnya offline. Perintah ini menjalankan server yang kompatibel dengan OpenAI dan tidak pernah menyentuh file konfigurasi agen Anda.",
       readDocs: "Baca dokumentasi",
       copy: "Salin",
       copied: "Disalin",
@@ -3257,44 +2884,36 @@ export const id = {
       model: "Model",
       searchModels: "Cari model GGUF...",
       noModels: "Tidak ada model GGUF yang cocok.",
-      showingModels:
-        "Menampilkan {shown} dari {total} hasil. Terus ketik untuk mempersempit daftar.",
+      showingModels: "Menampilkan {shown} dari {total} hasil. Terus ketik untuk mempersempit daftar.",
       quantization: "Kuantisasi",
       loadingQuantizations: "Memuat kuantisasi...",
       noQuantizations: "Tidak ada kuantisasi terpisah",
       recommended: "Disarankan",
       downloaded: "Diunduh",
-      quantizationLoadError:
-        "Tidak dapat memuat semua kuantisasi. Perintah akan menggunakan nilai model yang tersedia.",
+      quantizationLoadError: "Tidak dapat memuat semua kuantisasi. Perintah akan menggunakan nilai model yang tersedia.",
       generatedCommand: "Perintah yang dihasilkan",
       docs: "Dokumentasi",
       docsLabel: "Buka dokumentasi unsloth start",
       agentDocs: "Buka dokumentasi penyiapan {agent}",
       copyGeneratedCommand: "Salin perintah yang dihasilkan",
-      automaticSettingsNote:
-        "Unsloth secara otomatis menerapkan pengaturan yang disarankan model jika Anda belum mengatur flag apa pun.",
-      configurationNote:
-        "Anda juga dapat menyesuaikan konfigurasi apa pun. Lihat di bawah atau",
+      automaticSettingsNote: "Unsloth secara otomatis menerapkan pengaturan yang disarankan model jika Anda belum mengatur flag apa pun.",
+      configurationNote: "Anda juga dapat menyesuaikan konfigurasi apa pun. Lihat di bawah atau",
       configurationDocs: "dokumentasi",
       configurationFlagsSuffix: "untuk flag.",
-      modelNote:
-        "Claude Code dan Codex memerlukan model GGUF yang dilayani oleh llama-server, atau model MLX. Agen lain juga dapat menggunakan model berbasis transformer; hapus --model untuk menggunakan model yang sudah dimuat di Unsloth.",
+      modelNote: "Claude Code dan Codex memerlukan model GGUF yang dilayani oleh llama-server, atau model MLX. Agen lain juga dapat menggunakan model berbasis transformer; hapus --model untuk menggunakan model yang sudah dimuat di Unsloth.",
       subagent: {
         title: "Gunakan model lokal sebagai subagen",
-        description:
-          "Biarkan {agent} tetap menggunakan model saat ini dan delegasikan tugas tertentu ke model Unsloth lokal ini.",
+        description: "Biarkan {agent} tetap menggunakan model saat ini dan delegasikan tugas tertentu ke model Unsloth lokal ini.",
         setupCommand: "Perintah penyiapan",
         copySetupCommand: "Salin perintah penyiapan subagen",
         usagePrompt: "Lalu di {agent}, ketik:",
         copyUsagePrompt: "Salin prompt penggunaan subagen",
-        defaultPrompt:
-          "Jalankan agen lokal untuk mengimplementasikan fungsi ini.",
+        defaultPrompt: "Jalankan agen lokal untuk mengimplementasikan fungsi ini.",
         opencodePrompt: "@unsloth temukan penyebab kegagalan tes ini",
       },
       quickstart: {
         title: "Buat perintah",
-        description:
-          "Luncurkan agen dengan model yang sedang dimuat di Unsloth. Muat model terlebih dahulu, lalu ganti claude dengan agen yang didukung di bawah.",
+        description: "Luncurkan agen dengan model yang sedang dimuat di Unsloth. Muat model terlebih dahulu, lalu ganti claude dengan agen yang didukung di bawah.",
         noneDetected: "Tidak ditemukan CLI agen yang didukung di PATH Anda.",
         installed: "Terinstal",
       },
@@ -3305,55 +2924,48 @@ export const id = {
       },
       models: {
         title: "Memilih model",
-        description:
-          "Berikan --model untuk memilih model dan kuantisasi, dan --context-length untuk mengatur jendela konteks. Gunakan sufiks kuantisasi, atau flag --gguf-variant secara eksplisit.",
+        description: "Berikan --model untuk memilih model dan kuantisasi, dan --context-length untuk mengatur jendela konteks. Gunakan sufiks kuantisasi, atau flag --gguf-variant secara eksplisit.",
         suffixLabel: "Dengan sufiks kuantisasi",
         variantLabel: "Dengan flag varian eksplisit",
       },
       options: {
         title: "Opsi umum",
-        description:
-          "Flag Unsloth diurai terlebih dahulu; apa pun yang tidak dikenalinya diteruskan langsung ke agen.",
-        model:
-          "Pilih model. Tanpa --model, unsloth start menggunakan model yang sedang dimuat di Unsloth dan menampilkan kesalahan jika tidak ada yang dimuat.",
-        contextLength:
-          "Atur panjang konteks yang diminta (alias: --max-seq-length).",
+        description: "Flag Unsloth diurai terlebih dahulu; apa pun yang tidak dikenalinya diteruskan langsung ke agen.",
+        model: "Pilih model. Tanpa --model, unsloth start menggunakan model yang sedang dimuat di Unsloth dan menampilkan kesalahan jika tidak ada yang dimuat.",
+        contextLength: "Atur panjang konteks yang diminta (alias: --max-seq-length).",
         ggufVariant: "Pilih varian kuantisasi GGUF.",
         loadIn4bit: "Alihkan pemuatan 4-bit untuk model Hugging Face.",
         tensorParallel: "Alihkan paralel tensor di beberapa GPU.",
         serve: "Aktifkan atau nonaktifkan server lokal otomatis.",
         launch: "Luncurkan agen, atau hanya cetak perintah dan lingkungannya.",
-        persist:
-          "Pertahankan penyimpanan agen yang dikelola Unsloth di antara proses.",
-        asSubagent:
-          "Biarkan induk tetap menggunakan model saat ini dan daftarkan Unsloth sebagai subagen lokal (Claude Code, Codex, OpenCode, dan Pi).",
+        persist: "Pertahankan penyimpanan agen yang dikelola Unsloth di antara proses.",
+        asSubagent: "Biarkan induk tetap menggunakan model saat ini dan daftarkan Unsloth sebagai subagen lokal (Claude Code, Codex, OpenCode, dan Pi).",
         apiKey: "Berikan kunci API Unsloth Anda (atau atur UNSLOTH_API_KEY).",
-        reasoning:
-          "Gunakan penalaran di chat: on, off, atau auto. Auto mengikuti template chat model, yang biasanya berarti on.",
-        reasoningEffort:
-          "Upaya penalaran yang diteruskan ke template chat model, mis. medium. Tingkatnya berbeda per model, jadi gunakan yang diterima model tersebut. Jika tidak diatur, nilai bawaan template dipertahankan.",
+        reasoning: "Gunakan penalaran di chat: on, off, atau auto. Auto mengikuti template chat model, yang biasanya berarti on.",
+        reasoningEffort: "Upaya penalaran yang diteruskan ke template chat model, mis. medium. Tingkatnya berbeda per model, jadi gunakan yang diterima model tersebut. Jika tidak diatur, nilai bawaan template dipertahankan.",
         yolo: "Lewati permintaan persetujuan. Gunakan hanya di lingkungan tepercaya.",
       },
       remote: {
         title: "Hubungkan ke Unsloth jarak jauh",
-        description:
-          "Arahkan unsloth start ke instans Unsloth yang berjalan di tempat lain dengan mengatur ini sebelum meluncurkan (atau berikan --api-key secara langsung):",
+        description: "Arahkan unsloth start ke instans Unsloth yang berjalan di tempat lain dengan mengatur ini sebelum meluncurkan (atau berikan --api-key secara langsung):",
       },
       passthrough: {
         title: "Meneruskan argumen agen",
-        description:
-          "Argumen setelah flag Unsloth diteruskan ke agen itu sendiri, sehingga perintah bawaan seperti resume tetap berfungsi:",
+        description: "Argumen setelah flag Unsloth diteruskan ke agen itu sendiri, sehingga perintah bawaan seperti resume tetap berfungsi:",
       },
       dryRun: {
         title: "Pratinjau tanpa meluncurkan",
-        description:
-          "Tambahkan --no-launch untuk mencetak lingkungan dan perintah alih-alih meluncurkan agen. Jika --model diatur, model mungkin tetap diresolusi dan dimuat.",
+        description: "Tambahkan --no-launch untuk mencetak lingkungan dan perintah alih-alih meluncurkan agen. Jika --model diatur, model mungkin tetap diresolusi dan dimuat.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Balasan" },
-        thinkingTools: { title: "Penalaran dan alat" },
+        replies: {
+          title: "Balasan",
+        },
+        thinkingTools: {
+          title: "Penalaran dan alat",
+        },
         conversations: {
           title: "Percakapan",
         },
@@ -3379,32 +2991,23 @@ export const id = {
         description: "Cari, urutkan, dan atur chat, proyek, dan bagian.",
         action: "Buka Pustaka",
       },
-      projectAttachmentsHint:
-        "Ganti pengaturan ini dari menu lampiran setiap chat.",
-      rememberParamsPerModelHint:
-        "Jika nonaktif, gunakan pengaturan yang sama untuk setiap model.",
-      autoCompactHint:
-        "Chat GGUF dan MLX lokal: giliran yang dikeluarkan diindeks agar model dapat mencarinya kembali, dan saat reset, instruksi tetap yang muat dikutip kembali kata demi kata, dengan mempertahankan yang terlama dan terbaru dibanding bagian tengah. Pengarsipan memerlukan chat yang tersimpan dan indeks vektor; tanpanya giliran lama akan dibuang. Menggunakan panjang konteks yang Anda atur, bukan VRAM yang tersedia. Model API: penyedia merangkum giliran lama jika memungkinkan, jika tidak giliran terlama dibuang saat chat mendekati jendela konteks yang dipublikasikan model.",
-      pastedTextShortDescription:
-        "Tempelan sebanyak {count} karakter atau lebih menjadi lampiran .txt.",
-      pastedTextOffDescription:
-        "Teks yang ditempel selalu tetap di kotak pesan.",
+      projectAttachmentsHint: "Ganti pengaturan ini dari menu lampiran setiap chat.",
+      rememberParamsPerModelHint: "Jika nonaktif, gunakan pengaturan yang sama untuk setiap model.",
+      autoCompactHint: "Chat GGUF dan MLX lokal: giliran yang dikeluarkan diindeks agar model dapat mencarinya kembali, dan saat reset, instruksi tetap yang muat dikutip kembali kata demi kata, dengan mempertahankan yang terlama dan terbaru dibanding bagian tengah. Pengarsipan memerlukan chat yang tersimpan dan indeks vektor; tanpanya giliran lama akan dibuang. Menggunakan panjang konteks yang Anda atur, bukan VRAM yang tersedia. Model API: penyedia merangkum giliran lama jika memungkinkan, jika tidak giliran terlama dibuang saat chat mendekati jendela konteks yang dipublikasikan model.",
+      pastedTextShortDescription: "Tempelan sebanyak {count} karakter atau lebih menjadi lampiran .txt.",
+      pastedTextOffDescription: "Teks yang ditempel selalu tetap di kotak pesan.",
       title: "Chat",
       description: "Sesuaikan perilaku chat di perangkat ini.",
       modelSelection: {
         title: "Pemilihan model",
         expandQuantizations: "Luaskan kuantisasi",
-        expandQuantizationsDescription:
-          "Tampilkan kuantisasi GGUF di Di Perangkat tanpa membuka setiap model.",
+        expandQuantizationsDescription: "Tampilkan kuantisasi GGUF di Di Perangkat tanpa membuka setiap model.",
         showAllQuantizations: "Semua kuantisasi",
-        showAllQuantizationsDescription:
-          "Sertakan kuantisasi yang belum diunduh di Di Perangkat.",
+        showAllQuantizationsDescription: "Sertakan kuantisasi yang belum diunduh di Di Perangkat.",
         showMemoryBar: "Bilah penggunaan VRAM",
-        showMemoryBarDescription:
-          "Tampilkan perkiraan VRAM untuk bobot model, konteks, dan decoding spekulatif.",
+        showMemoryBarDescription: "Tampilkan perkiraan VRAM untuk bobot model, konteks, dan decoding spekulatif.",
         fitOnDeviceOnly: "Hanya tampilkan model yang muat",
-        fitOnDeviceOnlyDescription:
-          "Sembunyikan model yang terlalu besar untuk memori GPU dan RAM perangkat ini di pemilih model dan Hub. Model yang sudah diunduh tetap terlihat.",
+        fitOnDeviceOnlyDescription: "Sembunyikan model yang terlalu besar untuk memori GPU dan RAM perangkat ini di pemilih model dan Hub. Model yang sudah diunduh tetap terlihat.",
         pickerExpandLoaded: "Tampilkan daftar model lengkap",
         pickerExpandLoadedDescription: "Buka pemilih model pada daftar lengkap saat model dimuat, bukan hanya model yang dimuat. Membuka atau menutup pemilih juga mengubah pengaturan ini.",
         pickerMonochromeIcons: "Ikon model monokrom",
@@ -3412,8 +3015,7 @@ export const id = {
       },
       menu: {
         title: "Menu chat",
-        description:
-          "Sematkan item ke menu + chat dan seret untuk mengubah urutan. Item lain dipindahkan ke “Lainnya”.",
+        description: "Sematkan item ke menu + chat dan seret untuk mengubah urutan. Item lain dipindahkan ke “Lainnya”.",
         deepResearch: "Riset mendalam",
         browserUse: "Penggunaan browser",
         computerUse: "Penggunaan komputer",
@@ -3430,75 +3032,52 @@ export const id = {
         more: "Lainnya",
       },
       pastedTextThreshold: "Ringkas tempelan panjang",
-      pastedTextThresholdDescription:
-        "Tekan {shortcut} untuk menempel langsung ke kotak pesan.",
+      pastedTextThresholdDescription: "Tekan {shortcut} untuk menempel langsung ke kotak pesan.",
       pastedTextThresholdOff: "Nonaktif",
       autoScroll: "Gulir selama membuat",
-      autoScrollDescription:
-        "Gulir otomatis menjaga teks baru tetap terlihat. Manual tetap di tempat agar Anda dapat membaca dari awal.",
+      autoScrollDescription: "Gulir otomatis menjaga teks baru tetap terlihat. Manual tetap di tempat agar Anda dapat membaca dari awal.",
       autoScrollAuto: "Gulir otomatis",
       autoScrollManual: "Manual",
-      autoScrollKeywords:
-        "scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual gulir otomatis ikuti bawah",
+      autoScrollKeywords: "scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual gulir otomatis ikuti bawah",
       replyNotification: "Beri tahu saat balasan selesai",
-      replyNotificationDescription:
-        "Tampilkan notifikasi sistem saat balasan selesai ketika Unsloth diperkecil atau berada di latar belakang.",
-      replyNotificationBlocked:
-        "Notifikasi diblokir. Izinkan notifikasi untuk Unsloth di pengaturan browser atau sistem Anda, lalu coba lagi.",
-      replyNotificationKeywords:
-        "notify notification alert done finished complete ready response reply background minimized desktop sound notifikasi pemberitahuan selesai balasan latar belakang suara",
+      replyNotificationDescription: "Tampilkan notifikasi sistem saat balasan selesai ketika Unsloth diperkecil atau berada di latar belakang.",
+      replyNotificationBlocked: "Notifikasi diblokir. Izinkan notifikasi untuk Unsloth di pengaturan browser atau sistem Anda, lalu coba lagi.",
+      replyNotificationKeywords: "notify notification alert done finished complete ready response reply background minimized desktop sound notifikasi pemberitahuan selesai balasan latar belakang suara",
       showLinkPreviews: "Pratinjau tautan",
       showLinkPreviewsDescription: "Tampilkan pratinjau saat mengarahkan kursor ke tautan sumber.",
       showResponseModel: "Model respons",
-      showResponseModelDescription:
-        "Tampilkan detail model di respons asisten.",
+      showResponseModelDescription: "Tampilkan detail model di respons asisten.",
       showReplyTimes: "Waktu balasan",
-      showReplyTimesDescription:
-        "Tampilkan kapan setiap balasan selesai, di bawah balasan.",
-      showReplyTimesKeywords:
-        "timestamp time clock date hour when finished arrived reply response message waktu jam tanggal balasan pesan",
+      showReplyTimesDescription: "Tampilkan kapan setiap balasan selesai, di bawah balasan.",
+      showReplyTimesKeywords: "timestamp time clock date hour when finished arrived reply response message waktu jam tanggal balasan pesan",
       showGenerationDetails: "Info kecepatan terperinci",
-      showGenerationDetailsDescription:
-        "Menambahkan kecepatan membaca prompt, jumlah token, dan penerimaan draf ke tampilan langsung.",
-      showGenerationDetailsKeywords:
-        "verbose developer stats speed tok/s prefill decode statistik kecepatan",
+      showGenerationDetailsDescription: "Menambahkan kecepatan membaca prompt, jumlah token, dan penerimaan draf ke tampilan langsung.",
+      showGenerationDetailsKeywords: "verbose developer stats speed tok/s prefill decode statistik kecepatan",
       generationStatsUpdates: "Statistik kecepatan dan konteks",
-      generationStatsUpdatesDescription:
-        "Waktu nyata menghitung token per detik dan penggunaan konteks saat balasan sedang dialirkan. Setelah selesai memperbaruinya saat setiap balasan selesai.",
-      generationStatsUpdatesHint:
-        "Waktu nyata menyegarkan penunjuk token per detik di bawah balasan dan bilah konteks di atas chat beberapa kali per detik saat balasan ditulis. Setelah selesai memperbaruinya sekali, setelah setiap balasan selesai. Waktu nyata dapat menyebabkan lag atau kinerja lebih lambat, terutama pada perangkat lama atau sibuk.",
+      generationStatsUpdatesDescription: "Waktu nyata menghitung token per detik dan penggunaan konteks saat balasan sedang dialirkan. Setelah selesai memperbaruinya saat setiap balasan selesai.",
+      generationStatsUpdatesHint: "Waktu nyata menyegarkan penunjuk token per detik di bawah balasan dan bilah konteks di atas chat beberapa kali per detik saat balasan ditulis. Setelah selesai memperbaruinya sekali, setelah setiap balasan selesai. Waktu nyata dapat menyebabkan lag atau kinerja lebih lambat, terutama pada perangkat lama atau sibuk.",
       generationStatsUpdatesSettled: "Setelah selesai",
       generationStatsUpdatesRealtime: "Waktu nyata",
-      generationStatsUpdatesKeywords:
-        "waktu nyata langsung perbarui kecepatan konteks statistik realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "waktu nyata langsung perbarui kecepatan konteks statistik realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Edit respons pada respons",
-      inlineEditResponseDescription:
-        "Tampilkan Edit respons di setiap respons, alih-alih di menu Lainnya.",
+      inlineEditResponseDescription: "Tampilkan Edit respons di setiap respons, alih-alih di menu Lainnya.",
       turnNavigation: "Navigasi giliran",
       turnNavigationDescription: "Tampilkan prompt Anda sebagai bilah di tepi kiri chat panjang. Arahkan kursor untuk pratinjau giliran, klik untuk melompat ke sana, dan tandai giliran agar mudah ditemukan lagi.",
       composerPosition: "Posisi kolom pesan",
       composerPositionDescription: "Letak kolom pesan saat memulai chat baru, dari atas halaman hingga ke bawah.",
       projectAttachments: "Bagikan file di seluruh proyek",
-      projectAttachmentsDescription:
-        "Jadikan lampiran chat baru tersedia untuk setiap chat dalam proyek.",
+      projectAttachmentsDescription: "Jadikan lampiran chat baru tersedia untuk setiap chat dalam proyek.",
       rememberParamsPerModel: "Ingat pengaturan per model",
-      rememberParamsPerModelDescription:
-        "Pulihkan prompt, temperatur, dan pengaturan lain yang terakhir digunakan untuk setiap model.",
+      rememberParamsPerModelDescription: "Pulihkan prompt, temperatur, dan pengaturan lain yang terakhir digunakan untuk setiap model.",
       autoCompact: "Padatkan chat panjang secara otomatis",
-      autoCompactDescription:
-        "Giliran lama dipindahkan ke arsip yang dapat dicari saat chat memenuhi konteksnya.",
-      autoCompactKeywords:
-        "compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search pemadatan padatkan konteks arsip cari",
+      autoCompactDescription: "Giliran lama dipindahkan ke arsip yang dapat dicari saat chat memenuhi konteksnya.",
+      autoCompactKeywords: "compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search pemadatan padatkan konteks arsip cari",
       keepRunningWhenTabClosed: "Tetap berjalan setelah tab ditutup",
-      keepRunningWhenTabClosedDescription:
-        "Balasan, pencarian web, dan Riset Mendalam terus berjalan di server setelah tab ditutup. Nonaktifkan untuk menghentikannya.",
-      keepRunningWhenTabClosedHint:
-        "Buka kembali chat di perangkat apa pun untuk melanjutkan proses yang tetap berjalan. Jika nonaktif, proses berhenti dalam sekitar satu menit setelah tab terakhirnya ditutup, sehingga memuat ulang tidak menghentikannya. Berlaku untuk proses yang dimulai setelah Anda mengubah ini. Chat sementara, balasan dari model API atau untuk lampiran, dan giliran yang menggunakan panel browser selalu berhenti bersama tabnya.",
-      keepRunningWhenTabClosedKeywords:
-        "background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone latar belakang tutup tetap berjalan lanjutkan hentikan riset ponsel",
+      keepRunningWhenTabClosedDescription: "Balasan, pencarian web, dan Riset Mendalam terus berjalan di server setelah tab ditutup. Nonaktifkan untuk menghentikannya.",
+      keepRunningWhenTabClosedHint: "Buka kembali chat di perangkat apa pun untuk melanjutkan proses yang tetap berjalan. Jika nonaktif, proses berhenti dalam sekitar satu menit setelah tab terakhirnya ditutup, sehingga memuat ulang tidak menghentikannya. Berlaku untuk proses yang dimulai setelah Anda mengubah ini. Chat sementara, balasan dari model API atau untuk lampiran, dan giliran yang menggunakan panel browser selalu berhenti bersama tabnya.",
+      keepRunningWhenTabClosedKeywords: "background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone latar belakang tutup tetap berjalan lanjutkan hentikan riset ponsel",
       firstTokenLabel: "Batas waktu tunggu token pertama",
-      firstTokenDescription:
-        "Berapa lama model GGUF lokal boleh menunggu tanpa progres pemrosesan prompt sebelum token pertama. Berlaku untuk penantian baru di semua akun. Tanpa batas akan terus menunggu hingga Anda menghentikannya.",
+      firstTokenDescription: "Berapa lama model GGUF lokal boleh menunggu tanpa progres pemrosesan prompt sebelum token pertama. Berlaku untuk penantian baru di semua akun. Tanpa batas akan terus menunggu hingga Anda menghentikannya.",
       firstTokenDefault: "20 menit (default)",
       firstTokenCustom: "Kustom",
       firstTokenUnlimited: "Tanpa batas",
@@ -3506,71 +3085,55 @@ export const id = {
       firstTokenRange: "Menit (1–10,080)",
       firstTokenSave: "Simpan",
       firstTokenSaving: "Menyimpan…",
-      firstTokenLoadError:
-        "Tidak dapat memuat batas waktu tunggu token pertama.",
-      firstTokenSaveError:
-        "Tidak dapat menyimpan batas waktu tunggu token pertama.",
-      firstTokenKeywords:
-        "timeout first token prefill slow CPU overnight unlimited waiting limit batas waktu token pertama lambat tanpa batas tunggu",
+      firstTokenLoadError: "Tidak dapat memuat batas waktu tunggu token pertama.",
+      firstTokenSaveError: "Tidak dapat menyimpan batas waktu tunggu token pertama.",
+      firstTokenKeywords: "timeout first token prefill slow CPU overnight unlimited waiting limit batas waktu token pertama lambat tanpa batas tunggu",
       toolResultLimit: "Panjang output alat",
-      toolResultLimitDescription:
-        "Jumlah karakter dari satu hasil alat Python, Terminal, atau MCP yang dibaca model. Default-nya {count}.",
-      toolResultLimitHint:
-        "Output Python dan Terminal yang lebih panjang disimpan ke file yang dapat dibaca model per bagian. Batas yang lebih tinggi berlaku untuk model yang berjalan di Unsloth, dan jendela konteks kecil tetap mendapatkan lebih sedikit. Model API tetap menggunakan default kecuali Anda menurunkannya.",
+      toolResultLimitDescription: "Jumlah karakter dari satu hasil alat Python, Terminal, atau MCP yang dibaca model. Default-nya {count}.",
+      toolResultLimitHint: "Output Python dan Terminal yang lebih panjang disimpan ke file yang dapat dibaca model per bagian. Batas yang lebih tinggi berlaku untuk model yang berjalan di Unsloth, dan jendela konteks kecil tetap mendapatkan lebih sedikit. Model API tetap menggunakan default kecuali Anda menurunkannya.",
       toolResultLimitDefault: "{count} (default)",
       toolResultLimitLocked: "Diatur oleh UNSLOTH_TOOL_RESULT_MAX_CHARS",
       toolResultLimitLoadError: "Gagal memuat panjang output alat.",
       toolResultLimitSaveError: "Gagal menyimpan panjang output alat.",
-      toolResultLimitKeywords:
-        "tool output result truncate truncated truncation limit cap characters chars length terminal python mcp alat hasil potong batas karakter panjang",
+      toolResultLimitKeywords: "tool output result truncate truncated truncation limit cap characters chars length terminal python mcp alat hasil potong batas karakter panjang",
       visibility: {
         collapsed: "Diciutkan",
         auto: "Luaskan saat berjalan",
         expanded: "Selalu diluaskan",
       },
-      visibilityKeywords:
-        "collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming ciutkan luaskan penalaran berpikir panggilan alat",
+      visibilityKeywords: "collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming ciutkan luaskan penalaran berpikir panggilan alat",
       thinking: {
         visibility: "Berpikir",
-        visibilityDescription:
-          "Cara penalaran dibuka. Anda tetap dapat meluaskan atau menciutkan blok mana pun sendiri.",
+        visibilityDescription: "Cara penalaran dibuka. Anda tetap dapat meluaskan atau menciutkan blok mana pun sendiri.",
       },
       memory: {
         title: "Memori",
-        description:
-          "Catatan yang dibaca setiap chat, untuk setiap model, lokal maupun cloud. Chat dalam proyek juga membaca AGENTS.md proyek tersebut.",
+        description: "Catatan yang dibaca setiap chat, untuk setiap model, lokal maupun cloud. Chat dalam proyek juga membaca AGENTS.md proyek tersebut.",
         enable: "Gunakan memori di chat",
         enableDescription: "Kirim catatan ini bersama setiap chat.",
-        locked:
-          "Dinonaktifkan untuk instalasi ini oleh UNSLOTH_STUDIO_AGENTS_MD.",
+        locked: "Dinonaktifkan untuk instalasi ini oleh UNSLOTH_STUDIO_AGENTS_MD.",
         editor: "Catatan memori",
-        placeholder:
-          "Contoh:\n- Saya menulis Python dan menggunakan uv.\n- Buat jawaban singkat.",
+        placeholder: "Contoh:\n- Saya menulis Python dan menggunakan uv.\n- Buat jawaban singkat.",
         hint: "Disimpan ke {path}. Anda juga dapat mengedit file tersebut di editor teks apa pun.",
         size: "{used} / {max} KB",
         save: "Simpan",
         saved: "Memori disimpan",
         loadError: "Gagal memuat memori.",
         saveError: "Gagal menyimpan memori.",
-        keywords:
-          "memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md memori ingat personalisasi profil preferensi catatan instruksi kustom tentang saya",
+        keywords: "memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md memori ingat personalisasi profil preferensi catatan instruksi kustom tentang saya",
       },
       currentDate: {
         label: "Beri tahu model tanggal hari ini",
-        description:
-          "Sertakan tanggal hari ini agar pencarian dan riset menemukan sumber terbaru.",
+        description: "Sertakan tanggal hari ini agar pencarian dan riset menemukan sumber terbaru.",
         loadError: "Gagal memuat pengaturan tanggal saat ini",
         saveError: "Gagal memperbarui pengaturan tanggal saat ini",
       },
       tools: {
         visibility: "Panggilan alat",
-        visibilityDescription:
-          "Cara aktivitas alat dibuka. Anda tetap dapat meluaskan atau menciutkan panggilan mana pun sendiri.",
+        visibilityDescription: "Cara aktivitas alat dibuka. Anda tetap dapat meluaskan atau menciutkan panggilan mana pun sendiri.",
         foldIntoThinking: "Kelompokkan panggilan alat di bawah Berpikir",
-        foldIntoThinkingDescription:
-          "Tampilkan panggilan alat suatu giliran di dalam blok Berpikir-nya, alih-alih di baris tersendiri.",
-        foldIntoThinkingBlocked:
-          "Tidak tersedia saat panggilan alat diatur ke Selalu diluaskan, yang menempatkannya di baris tersendiri.",
+        foldIntoThinkingDescription: "Tampilkan panggilan alat suatu giliran di dalam blok Berpikir-nya, alih-alih di baris tersendiri.",
+        foldIntoThinkingBlocked: "Tidak tersedia saat panggilan alat diatur ke Selalu diluaskan, yang menempatkannya di baris tersendiri.",
       },
       webSearch: {
         title: "Pencarian web",
@@ -3580,24 +3143,19 @@ export const id = {
       artifacts: {
         title: "Halaman HTML",
         collapseHtmlBlocks: "Ciutkan blok HTML",
-        collapseHtmlBlocksDescription:
-          "Tampilkan dokumen HTML lengkap di chat sebagai kartu yang terbuka di browser, bukan sebagai kode.",
+        collapseHtmlBlocksDescription: "Tampilkan dokumen HTML lengkap di chat sebagai kartu yang terbuka di browser, bukan sebagai kode.",
         allowNetworkAccess: "Izinkan akses jaringan untuk halaman HTML",
-        allowNetworkAccessDescription:
-          "Izinkan halaman HTML dari chat memuat skrip, gaya, font, dan media eksternal. Nonaktifkan untuk pratinjau offline.",
+        allowNetworkAccessDescription: "Izinkan halaman HTML dari chat memuat skrip, gaya, font, dan media eksternal. Nonaktifkan untuk pratinjau offline.",
         blockedBanner: "{count} sumber daya eksternal dari {hosts} diblokir.",
-        blockedBannerPlural:
-          "{count} sumber daya eksternal dari {hosts} diblokir.",
+        blockedBannerPlural: "{count} sumber daya eksternal dari {hosts} diblokir.",
         blockedBannerAction: "Izinkan untuk halaman ini",
         blockedTitle: "Akses jaringan nonaktif untuk halaman HTML",
-        blockedHint:
-          "Aktifkan “{setting}” di Pengaturan → Browser agar halaman HTML dapat memuat sumber daya eksternal, atau izinkan hanya untuk halaman ini.",
+        blockedHint: "Aktifkan “{setting}” di Pengaturan → Browser agar halaman HTML dapat memuat sumber daya eksternal, atau izinkan hanya untuk halaman ini.",
         blockedSettingsAction: "Buka Pengaturan",
         blockedDismiss: "Tutup",
         errorTitle: "Halaman ini mengalami kesalahan",
         errorTitlePlural: "Halaman ini mengalami {count} kesalahan",
-        errorHint:
-          "Perbaiki dengan model akan menempatkan kesalahan di kotak pesan. Tidak ada yang dikirim sampai Anda mengirimnya.",
+        errorHint: "Perbaiki dengan model akan menempatkan kesalahan di kotak pesan. Tidak ada yang dikirim sampai Anda mengirimnya.",
         errorBannerAction: "Perbaiki dengan model",
         errorConsoleAction: "Buka konsol",
         errorConsoleHideAction: "Sembunyikan konsol",
@@ -3610,8 +3168,7 @@ export const id = {
         consoleClear: "Kosongkan konsol",
         consoleClose: "Tutup konsol",
         consoleEmpty: "Belum ada output konsol.",
-        consoleCapped:
-          "Hanya {count} entri terakhir yang disimpan; output sebelumnya dibuang.",
+        consoleCapped: "Hanya {count} entri terakhir yang disimpan; output sebelumnya dibuang.",
       },
       data: "Data",
       exportHistory: "Ekspor riwayat chat",
@@ -3619,47 +3176,39 @@ export const id = {
       exportAction: "Ekspor",
       exportingAction: "Mengekspor...",
       exportConversations: "Ekspor Terbaru dan Proyek",
-      exportConversationsDescription:
-        "Unduh Terbaru atau Terbaru beserta chat proyek sebagai Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML, atau PDF, digabung atau per chat. Message JSONL tersedia per chat.",
+      exportConversationsDescription: "Unduh Terbaru atau Terbaru beserta chat proyek sebagai Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML, atau PDF, digabung atau per chat. Message JSONL tersedia per chat.",
       exportConversationsAction: "Ekspor",
       exportScopeRecents: "Terbaru",
       exportScopeAll: "Terbaru + Proyek",
       importChats: "Impor chat",
-      importChatsDescription:
-        "Impor file JSON, JSONL, NDJSON, CSV, atau Markdown ke Terbaru.",
+      importChatsDescription: "Impor file JSON, JSONL, NDJSON, CSV, atau Markdown ke Terbaru.",
       importChatsAction: "Impor",
       importNoConversations: "Tidak ada percakapan di file.",
       importedOneChat: "1 percakapan diimpor ke Terbaru.",
       importedChatCount: "{count} percakapan diimpor ke Terbaru.",
       importingChats: "Mengimpor chat: {count} sejauh ini ({percent}%)...",
-      importedChatCountPartial:
-        "{count} percakapan diimpor ke Terbaru; {failed} tidak dapat disimpan.",
+      importedChatCountPartial: "{count} percakapan diimpor ke Terbaru; {failed} tidak dapat disimpan.",
       importFailed: "Impor gagal.",
       importFromSource: "Impor dari {source}",
-      importFromSourceDescription:
-        "Salin percakapan {source} Anda ke Unsloth, dikelompokkan berdasarkan proyeknya.",
+      importFromSourceDescription: "Salin percakapan {source} Anda ke Unsloth, dikelompokkan berdasarkan proyeknya.",
       importingAction: "Mengimpor...",
       importedSourceOneChat: "1 percakapan diimpor dari {source}.",
       importedSourceChatCount: "{count} percakapan diimpor dari {source}.",
       sourceUpdated: "{count} pesan baru ditambahkan dari {source}.",
       sourceUpToDate: "Percakapan {source} sudah yang terbaru.",
-      importedSourcePartial:
-        "Beberapa percakapan {source} tidak dapat diimpor.",
+      importedSourcePartial: "Beberapa percakapan {source} tidak dapat diimpor.",
       clearHistory: "Hapus riwayat chat",
       clearHistoryDescription: "Hapus riwayat chat dari perangkat ini.",
       clearAction: "Hapus",
       clearAllChats: "Hapus semua chat",
       clearAllChatsDescription: "Hapus permanen setiap chat di perangkat ini.",
       noChatsToClear: "Tidak ada chat yang dapat dihapus.",
-      clearOneChatDescription:
-        "Hapus permanen satu-satunya chat di perangkat ini.",
-      clearChatCountDescription:
-        "Hapus permanen semua {count} chat di perangkat ini.",
+      clearOneChatDescription: "Hapus permanen satu-satunya chat di perangkat ini.",
+      clearChatCountDescription: "Hapus permanen semua {count} chat di perangkat ini.",
       clearChatsAction: "Hapus chat",
       clearOneChatTitle: "Hapus 1 chat?",
       clearChatsTitle: "Hapus {count} chat?",
-      clearChatsConfirmDescription:
-        "Menghapus permanen setiap chat di perangkat ini. Tindakan ini tidak dapat diurungkan.",
+      clearChatsConfirmDescription: "Menghapus permanen setiap chat di perangkat ini. Tindakan ini tidak dapat diurungkan.",
       clearingAction: "Menghapus...",
       clearOneChatAction: "Hapus 1 chat",
       clearChatCountAction: "Hapus {count} chat",
@@ -3667,18 +3216,12 @@ export const id = {
       clearedOneChat: "1 chat dihapus",
       clearedChatCount: "{count} chat dihapus",
       someChatsCouldNotBeCleared: "Beberapa chat tidak dapat dihapus",
-      chatsClearedRemainOne:
-        "{clearedCount} chat dihapus; 1 chat tersisa. Silakan coba lagi.",
-      chatsClearedRemain:
-        "{clearedCount} chat dihapus; {remainingCount} chat tersisa. Silakan coba lagi.",
-      oneChatClearedRemain:
-        "1 chat dihapus; {remainingCount} chat tersisa. Silakan coba lagi.",
-      oneChatClearedRemainOne:
-        "1 chat dihapus; 1 chat tersisa. Silakan coba lagi.",
-      storageClearFailedOne:
-        "Penghapusan penyimpanan gagal; 1 chat mungkin tersisa. Silakan coba lagi.",
-      storageClearFailed:
-        "Penghapusan penyimpanan gagal; {count} chat mungkin tersisa. Silakan coba lagi.",
+      chatsClearedRemainOne: "{clearedCount} chat dihapus; 1 chat tersisa. Silakan coba lagi.",
+      chatsClearedRemain: "{clearedCount} chat dihapus; {remainingCount} chat tersisa. Silakan coba lagi.",
+      oneChatClearedRemain: "1 chat dihapus; {remainingCount} chat tersisa. Silakan coba lagi.",
+      oneChatClearedRemainOne: "1 chat dihapus; 1 chat tersisa. Silakan coba lagi.",
+      storageClearFailedOne: "Penghapusan penyimpanan gagal; 1 chat mungkin tersisa. Silakan coba lagi.",
+      storageClearFailed: "Penghapusan penyimpanan gagal; {count} chat mungkin tersisa. Silakan coba lagi.",
       failedToClearChats: "Gagal menghapus chat",
     },
     data: {
@@ -3718,22 +3261,18 @@ export const id = {
         deleteResults: "Hapus hasil",
         noChats: "Tidak ada chat yang cocok dengan pencarian Anda.",
         noArchivedChats: "Tidak ada chat yang diarsipkan.",
-        noArchivedMatches:
-          "Tidak ada chat yang diarsipkan yang cocok dengan pencarian Anda.",
+        noArchivedMatches: "Tidak ada chat yang diarsipkan yang cocok dengan pencarian Anda.",
         noMedia: "Tidak ada item yang diarsipkan.",
-        noMediaMatches:
-          "Tidak ada item yang diarsipkan yang cocok dengan pencarian Anda.",
+        noMediaMatches: "Tidak ada item yang diarsipkan yang cocok dengan pencarian Anda.",
         itemCount: "Item: {count}",
-        incompleteSearch:
-          "Pencarian belum lengkap. Coba muat ulang item yang tersisa.",
+        incompleteSearch: "Pencarian belum lengkap. Coba muat ulang item yang tersisa.",
         searchingRemaining: "Mencari item yang tersisa ({count} dimuat)...",
         noLoadedMatches: "Tidak ada yang cocok di item yang dimuat sejauh ini.",
         deleteItem: "Hapus: {title}",
         unarchiveItem: "Batalkan arsip: {title}",
         deleteItemsTitle: "Hapus item yang diarsipkan ({count})",
         unarchiveItemsTitle: "Batalkan arsip item ({count})",
-        deleteFilesWarning:
-          "File ini akan dihapus secara permanen. Tindakan ini tidak dapat diurungkan.",
+        deleteFilesWarning: "File ini akan dihapus secara permanen. Tindakan ini tidak dapat diurungkan.",
         restoreWarning: "Item ini akan kembali ke galeri.",
         working: "Memproses...",
         loadFailed: "Gagal memuat item yang diarsipkan",
@@ -3744,7 +3283,7 @@ export const id = {
         pageStalled: "Halaman arsip tidak berpindah. Coba lagi.",
         pageChanged: "Arsip berubah saat dimuat. Coba lagi.",
         selectAll: "Pilih semua chat yang terlihat",
-        selectItem: 'Pilih "{title}"',
+        selectItem: "Pilih \"{title}\"",
         selectedChats: "Chat dipilih: {count}",
         move: "Pindahkan",
         pin: "Sematkan",
@@ -3758,35 +3297,28 @@ export const id = {
         movedChatsToRecents: "Chat dipindahkan ke Terbaru: {count}",
         moveFailed: "Gagal memindahkan chat",
         deleteChatsTitle: "Hapus chat ({count})",
-        deleteChatsWarning:
-          "{count} chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+        deleteChatsWarning: "{count} chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
         deleteArchivedTitle: "Hapus {count} chat yang diarsipkan",
-        deleteArchivedWarning:
-          "{count} chat yang diarsipkan dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+        deleteArchivedWarning: "{count} chat yang diarsipkan dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
         deleting: "Menghapus...",
       },
       title: "Data",
       backToData: "Kembali ke Data",
       exportFailed: "Tidak dapat mengekspor chat",
-      description:
-        "Kelola riwayat chat dan file yang diunggah yang tersimpan di perangkat ini.",
+      description: "Kelola riwayat chat dan file yang diunggah yang tersimpan di perangkat ini.",
       manageFiles: {
         label: "Kelola file",
         description: "Cari, urutkan, dan atur gambar, video, audio, dan file.",
         action: "Buka Pustaka",
       },
       archivedChats: "Chat yang diarsipkan",
-      archivedChatsDescription:
-        "Lihat dan kelola chat yang telah Anda arsipkan.",
+      archivedChatsDescription: "Lihat dan kelola chat yang telah Anda arsipkan.",
       archivedImages: "Gambar yang diarsipkan",
-      archivedImagesDescription:
-        "Lihat dan kelola gambar yang telah Anda arsipkan.",
+      archivedImagesDescription: "Lihat dan kelola gambar yang telah Anda arsipkan.",
       archivedVideos: "Video yang diarsipkan",
-      archivedVideosDescription:
-        "Lihat dan kelola video yang telah Anda arsipkan.",
+      archivedVideosDescription: "Lihat dan kelola video yang telah Anda arsipkan.",
       archivedAudio: "Audio yang diarsipkan",
-      archivedAudioDescription:
-        "Lihat dan kelola klip audio yang telah Anda arsipkan.",
+      archivedAudioDescription: "Lihat dan kelola klip audio yang telah Anda arsipkan.",
       manageAction: "Kelola",
       exportArchivedChats: "Ekspor",
       exportingArchivedChats: "Mengekspor...",
@@ -3795,52 +3327,43 @@ export const id = {
       noArchivedChatsToExport: "Tidak ada chat yang diarsipkan untuk diekspor.",
       failedToExportArchivedChats: "Gagal mengekspor chat yang diarsipkan",
       archiveAllChats: "Arsipkan semua chat",
-      archiveAllChatsDescription:
-        "Pindahkan setiap chat di Terbaru dan Proyek ke arsip.",
+      archiveAllChatsDescription: "Pindahkan setiap chat di Terbaru dan Proyek ke arsip.",
       noChatsToArchive: "Tidak ada chat untuk diarsipkan.",
       archiveAllAction: "Arsipkan semua",
       archivingAction: "Mengarsipkan...",
       archiveAllChatsTitle: "Arsipkan semua chat?",
-      archiveAllChatsConfirmDescription:
-        "Memindahkan setiap chat di perangkat ini ke arsip. Chat yang diarsipkan tetap tersedia dan dapat dibatalkan arsipnya kapan saja.",
+      archiveAllChatsConfirmDescription: "Memindahkan setiap chat di perangkat ini ke arsip. Chat yang diarsipkan tetap tersedia dan dapat dibatalkan arsipnya kapan saja.",
       archivedAllChats: "Semua chat diarsipkan",
       archivedOneChat: "1 chat diarsipkan",
       archivedChatCount: "{count} chat diarsipkan",
       failedToArchiveChats: "Gagal mengarsipkan chat",
       confirmBeforeDeleting: "Konfirmasi sebelum menghapus",
-      confirmBeforeDeletingDescription:
-        "Minta konfirmasi sebelum chat dihapus. Nonaktifkan untuk langsung menghapus.",
+      confirmBeforeDeletingDescription: "Minta konfirmasi sebelum chat dihapus. Nonaktifkan untuk langsung menghapus.",
       alwaysDeleteFiles: "Selalu hapus file",
-      alwaysDeleteFilesDescription:
-        "Menghapus chat juga menghapus folder sandbox miliknya dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
+      alwaysDeleteFilesDescription: "Menghapus chat juga menghapus folder sandbox miliknya dari disk. File yang ditulisnya di dalam proyek tetap berada di ruang kerja proyek tersebut.",
       chatsSection: "Chat & arsip",
       transferSection: "Impor & ekspor",
       deletionSection: "Penghapusan",
       archives: "Arsip",
       archiveChatsLabel: "Chat",
       archiveVideosLabel: "Video",
-      exportFormatsSummary:
-        "Ekspor chat Terbaru dan proyek dalam format pilihan Anda.",
+      exportFormatsSummary: "Ekspor chat Terbaru dan proyek dalam format pilihan Anda.",
       trainingSummary: "Ubah chat Anda menjadi dataset fine-tuning.",
       confirmDeletionSummary: "Tanya sebelum menghapus chat satu per satu.",
       sandboxFiles: "File sandbox chat",
       sandboxFilesDescription: "Tindakan default saat menghapus chat.",
       keepSandboxFiles: "Simpan file sandbox",
       deleteSandboxFiles: "Hapus file sandbox",
-      projectFilesKept:
-        "Sandbox adalah folder yang dibuat untuk masing-masing chat. File yang disimpan di ruang kerja proyek tetap dipertahankan.",
+      projectFilesKept: "Sandbox adalah folder yang dibuat untuk masing-masing chat. File yang disimpan di ruang kerja proyek tetap dipertahankan.",
       deleteAllAction: "Hapus semua",
       deleteChatsOnly: "Hapus chat saja…",
       deleteChatsAndSandboxes: "Hapus chat dan sandbox…",
-      deleteSandboxFilesDescription:
-        "Hapus juga folder sandbox setiap chat beserta file di dalamnya. File di ruang kerja proyek tetap dipertahankan.",
+      deleteSandboxFilesDescription: "Hapus juga folder sandbox setiap chat beserta file di dalamnya. File di ruang kerja proyek tetap dipertahankan.",
       filesSection: "File",
       uploadedFiles: "File yang diunggah",
-      uploadedFilesDescription:
-        "Lihat dan kelola file yang diunggah ke chat, proyek, dan basis pengetahuan.",
+      uploadedFilesDescription: "Lihat dan kelola file yang diunggah ke chat, proyek, dan basis pengetahuan.",
       fineTuneExport: "Gunakan chat sebagai data pelatihan",
-      fineTuneExportDescription:
-        "Buat dataset JSONL untuk fine-tuning dari chat Anda. Muat di Latih, sempurnakan di Resep, atau ekspor.",
+      fineTuneExportDescription: "Buat dataset JSONL untuk fine-tuning dari chat Anda. Muat di Latih, sempurnakan di Resep, atau ekspor.",
       fineTuneExportAction: "Ekspor JSONL",
       fineTuneRunAction: "Jalankan",
       fineTuneExportingAction: "Mengekspor...",
@@ -3858,13 +3381,11 @@ export const id = {
     },
     remoteLan: {
       title: "Jarak jauh & LAN",
-      description:
-        "Akses Unsloth ini dari perangkat Anda yang lain, melalui jaringan lokal atau URL publik sementara.",
+      description: "Akses Unsloth ini dari perangkat Anda yang lain, melalui jaringan lokal atau URL publik sementara.",
     },
     apiKeys: {
       title: "API",
-      description:
-        "Akses Unsloth melalui API yang kompatibel dengan OpenAI dan Anthropic.",
+      description: "Akses Unsloth melalui API yang kompatibel dengan OpenAI dan Anthropic.",
       readDocs: "Baca dokumentasi API",
       noAccess: "Belum ada akses API.",
       accessTokens: "Token akses",
@@ -3889,7 +3410,7 @@ export const id = {
       accessInferenceHint: "Dapat mengobrol dengan model yang dimuat dan melihat daftarnya, tetapi tidak dapat memuat, melepas, atau mengunduh model, atau mengubah pengaturan",
       accessInferenceBadge: "Inferensi",
       accessError: "Tidak dapat mengubah akses kunci ini",
-      createTokenHint: 'Buat token bernama "{name}"',
+      createTokenHint: "Buat token bernama \"{name}\"",
       defaultTokenName: "Token Baru {n}",
       creating: "Membuat...",
       newTokenCreated: "Token akses baru dibuat",
@@ -3897,8 +3418,7 @@ export const id = {
       copyAccessToken: "Salin token akses",
       copyNow: "Salin sekarang - token ini tidak akan ditampilkan lagi.",
       usageExamples: "API Chat",
-      usageNoModel:
-        "Muat atau unduh model untuk melihat contoh yang dapat dijalankan. Server ini belum memiliki model untuk disebutkan.",
+      usageNoModel: "Muat atau unduh model untuk melihat contoh yang dapat dijalankan. Server ini belum memiliki model untuk disebutkan.",
       usageTools: "Alat",
       exampleLanguage: "Bahasa",
       exampleRequest: "Permintaan",
@@ -3910,18 +3430,15 @@ export const id = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "HTTPS aman",
-      secureHttpsHint:
-        "Port 0.0.0.0 masih dapat dijangkau secara global. Untuk keamanan penuh, luncurkan Unsloth dengan --secure agar hanya tautan HTTPS ini yang terekspos.",
+      secureHttpsHint: "Port 0.0.0.0 masih dapat dijangkau secara global. Untuk keamanan penuh, luncurkan Unsloth dengan --secure agar hanya tautan HTTPS ini yang terekspos.",
       copyTunnelUrl: "Salin URL tunnel",
       copySnippet: "Salin cuplikan",
       copy: "Salin",
       copied: "Disalin",
       codingAgents: "Agen coding",
-      codingAgentsHint:
-        "Luncurkan agen coding ke server ini. Agen menggunakan model yang dimuat; server lokal membuat kunci API secara otomatis, server jarak jauh menyertakannya dalam perintah.",
+      codingAgentsHint: "Luncurkan agen coding ke server ini. Agen menggunakan model yang dimuat; server lokal membuat kunci API secara otomatis, server jarak jauh menyertakannya dalam perintah.",
       openAgentsTab: "Buka di Agen",
-      codingAgentsSwap:
-        "Ganti claude dengan codex, openclaw, opencode, atau hermes.",
+      codingAgentsSwap: "Ganti claude dengan codex, openclaw, opencode, atau hermes.",
       relativeNever: "tidak pernah",
       relativeJustNow: "baru saja",
       expired: "kedaluwarsa",
@@ -3932,21 +3449,18 @@ export const id = {
       copyFailed: "Tidak dapat menyalin",
       revokeToken: "Cabut token",
       regenerateToken: "Buat ulang token",
-      regenerateTitle: 'Buat ulang token akses "{name}"?',
-      regenerateDescription:
-        "Token baru dengan nama dan periode kedaluwarsa yang sama akan menggantikan token ini. Aplikasi yang menggunakan token saat ini akan langsung kehilangan akses.",
+      regenerateTitle: "Buat ulang token akses \"{name}\"?",
+      regenerateDescription: "Token baru dengan nama dan periode kedaluwarsa yang sama akan menggantikan token ini. Aplikasi yang menggunakan token saat ini akan langsung kehilangan akses.",
       regenerateAction: "Buat ulang",
       regenerating: "Membuat ulang...",
       regenerateError: "Tidak dapat membuat ulang token akses.",
-      revokeTitle: 'Cabut token akses "{name}"?',
-      revokeDescription:
-        "Aplikasi yang menggunakan token ini akan langsung kehilangan akses. Tindakan ini tidak dapat diurungkan.",
-      revokeAction: 'Cabut "{name}"',
+      revokeTitle: "Cabut token akses \"{name}\"?",
+      revokeDescription: "Aplikasi yang menggunakan token ini akan langsung kehilangan akses. Tindakan ini tidak dapat diurungkan.",
+      revokeAction: "Cabut \"{name}\"",
       revoking: "Mencabut...",
       audioApi: {
         title: "API Audio",
-        description:
-          "Ucapan, kloning suara, transkripsi, dan alur kerja halaman Audio.",
+        description: "Ucapan, kloning suara, transkripsi, dan alur kerja halaman Audio.",
         speak: "Ucapkan",
         clone: "Kloning",
         transcribe: "Transkripsikan",
@@ -3955,51 +3469,38 @@ export const id = {
         convert: "Konversi",
         music: "Musik",
         edit: "Edit",
-        placeholderModel:
-          "Belum ada model yang diunduh yang dapat menjalankan contoh ini, jadi model yang ditampilkan hanya pengganti. Unduh model di halaman Audio terlebih dahulu.",
-        autoSwitchOff:
-          "Model hanya dimuat berdasarkan nama saat Peralihan model otomatis aktif. Aktifkan, atau muat model di halaman Audio-nya terlebih dahulu.",
+        placeholderModel: "Belum ada model yang diunduh yang dapat menjalankan contoh ini, jadi model yang ditampilkan hanya pengganti. Unduh model di halaman Audio terlebih dahulu.",
+        autoSwitchOff: "Model hanya dimuat berdasarkan nama saat Peralihan model otomatis aktif. Aktifkan, atau muat model di halaman Audio-nya terlebih dahulu.",
         useViaApi: "Gunakan melalui API",
       },
       mediaApi: {
         title: "API Gambar / Video",
-        description:
-          "Buat gambar dan video dari kode Anda sendiri dengan endpoint yang kompatibel dengan OpenAI.",
+        description: "Buat gambar dan video dari kode Anda sendiri dengan endpoint yang kompatibel dengan OpenAI.",
         images: "Gambar",
         video: "Video",
-        placeholderModel:
-          "Model yang ditampilkan adalah contoh. Muat model di halaman Gambar atau Video dan buka ini dari tombol API-nya untuk mengisinya.",
-        autoSwitchOff:
-          "Peralihan otomatis media nonaktif, jadi permintaan dijalankan pada model yang dimuat halaman, apa pun nama yang disebutkan.",
+        placeholderModel: "Model yang ditampilkan adalah contoh. Muat model di halaman Gambar atau Video dan buka ini dari tombol API-nya untuk mengisinya.",
+        autoSwitchOff: "Peralihan otomatis media nonaktif, jadi permintaan dijalankan pada model yang dimuat halaman, apa pun nama yang disebutkan.",
       },
       trainingApi: {
         title: "API Pelatihan",
-        description:
-          "Lakukan fine-tune model dari kode Anda sendiri dengan endpoint fine-tuning yang kompatibel dengan OpenAI: unggah file JSONL, buat job, ikuti event-nya, lalu chat dengan model yang telah dilatih.",
-        placeholder:
-          "Model dan pengaturan yang ditampilkan adalah contoh. Buka ini dari tombol API di halaman Latih untuk mengisi penyiapan Anda saat ini.",
-        hubDataset:
-          "Halaman Latih Anda menggunakan dataset Hugging Face atau S3. API melatih pada file yang diunggah, jadi simpan dataset sebagai JSONL lalu unggah.",
-        batching:
-          "Job kompatibel yang menunggu di antrean dilatih bersama secara otomatis.",
-        chatNote:
-          "Chat dengan model yang telah dilatih berdasarkan nama memerlukan Peralihan model otomatis aktif, atau muat model di halaman Chat terlebih dahulu.",
+        description: "Lakukan fine-tune model dari kode Anda sendiri dengan endpoint fine-tuning yang kompatibel dengan OpenAI: unggah file JSONL, buat job, ikuti event-nya, lalu chat dengan model yang telah dilatih.",
+        placeholder: "Model dan pengaturan yang ditampilkan adalah contoh. Buka ini dari tombol API di halaman Latih untuk mengisi penyiapan Anda saat ini.",
+        hubDataset: "Halaman Latih Anda menggunakan dataset Hugging Face atau S3. API melatih pada file yang diunggah, jadi simpan dataset sebagai JSONL lalu unggah.",
+        batching: "Job kompatibel yang menunggu di antrean dilatih bersama secara otomatis.",
+        chatNote: "Chat dengan model yang telah dilatih berdasarkan nama memerlukan Peralihan model otomatis aktif, atau muat model di halaman Chat terlebih dahulu.",
         cancelTitle: "Batalkan job",
-        cancelDescription:
-          "Menghentikan job yang dalam antrean atau sedang berjalan. Bukan bagian dari contoh di atas.",
+        cancelDescription: "Menghentikan job yang dalam antrean atau sedang berjalan. Bukan bagian dari contoh di atas.",
       },
       decisionApi: {
         title: "API Keputusan",
         docs: "Dokumentasi",
         docsLabel: "Buka dokumentasi API Keputusan",
-        description:
-          "Jawab pertanyaan ya/tidak, pilihan ganda, dan skor tentang teks dengan model di mesin ini atau model keputusan dari Koneksi. Berfungsi dengan SDK TypeSafe.",
+        description: "Jawab pertanyaan ya/tidak, pilihan ganda, dan skor tentang teks dengan model di mesin ini atau model keputusan dari Koneksi. Berfungsi dengan SDK TypeSafe.",
         codeTitle: "Panggil dari kode",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "Klien MCP lain terhubung ke sini dengan token yang sama.",
         enable: "Layani permintaan",
-        enableDescription:
-          "Melayani /v1/systemone. Mengaktifkannya akan mengunduh model.",
+        enableDescription: "Melayani /v1/systemone. Mengaktifkannya akan mengunduh model.",
         enableRemoteDescription: "Melayani /v1/systemone.",
         lockedByEnv: "Diatur oleh {name}.",
         model: "Model",
@@ -4011,16 +3512,13 @@ export const id = {
         modelClef: "Clef",
         recommended: "Disarankan",
         device: "Jalankan di",
-        deviceDescription:
-          "GPU menjawab lebih cepat dan membebaskan memorinya saat model dilepas.",
+        deviceDescription: "GPU menjawab lebih cepat dan membebaskan memorinya saat model dilepas.",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
         backend: "Runtime",
         backendAuto: "Otomatis",
-        backendDescription:
-          "Otomatis melayani Clef melalui llama.cpp jika model memiliki build GGUF dan beralih ke PyTorch jika tidak. llama.cpp juga membaca gambar.",
-        backendDescriptionMlx:
-          "Otomatis melayani Clef melalui MLX di Apple Silicon dan melalui llama.cpp jika hanya build GGUF model yang dimuat atau diunduh. MLX hanya membaca gambar untuk model Clef. llama.cpp juga membaca gambar.",
+        backendDescription: "Otomatis melayani Clef melalui llama.cpp jika model memiliki build GGUF dan beralih ke PyTorch jika tidak. llama.cpp juga membaca gambar.",
+        backendDescriptionMlx: "Otomatis melayani Clef melalui MLX di Apple Silicon dan melalui llama.cpp jika hanya build GGUF model yang dimuat atau diunduh. MLX hanya membaca gambar untuk model Clef. llama.cpp juga membaca gambar.",
         backendStatus: "Runtime: {backend}",
         backendNone: "tidak tersedia",
         mediaImages: "Membaca teks dan gambar.",
@@ -4036,37 +3534,30 @@ export const id = {
         download: "Unduh",
         downloadConfirmTitle: "Unduh Laya {model}?",
         downloadConfirmTitleModel: "Unduh {model}?",
-        downloadConfirmBody:
-          "API Keputusan memerlukan model ini untuk menjawab permintaan. Sekitar {size}, diambil sekali ke cache Hugging Face Anda.",
+        downloadConfirmBody: "API Keputusan memerlukan model ini untuk menjawab permintaan. Sekitar {size}, diambil sekali ke cache Hugging Face Anda.",
         unload: "Lepas",
         downloadBusy: "Model API Keputusan sedang diunduh.",
         downloadFailed: "Tidak dapat memulai unduhan.",
         saveFailed: "Tidak dapat menyimpan pengaturan API Keputusan.",
         loadError: "Tidak dapat memuat pengaturan API Keputusan.",
         sendsTo: "Permintaan dikirim ke {provider}.",
-        connectionMissing:
-          "Koneksi ini sudah tidak ada atau tidak memiliki model keputusan. Pilih model lain.",
-        addConnection:
-          "Untuk menggunakan model keputusan yang di-host di cloud, tambahkan di ",
+        connectionMissing: "Koneksi ini sudah tidak ada atau tidak memiliki model keputusan. Pilih model lain.",
+        addConnection: "Untuk menggunakan model keputusan yang di-host di cloud, tambahkan di ",
         connectionsLink: "Koneksi",
         addConnectionSuffix: ".",
       },
       mcp: {
         title: "Akses agen (MCP)",
-        description:
-          "Izinkan agen coding seperti Claude Code dan Codex menggunakan Unsloth melalui MCP.",
+        description: "Izinkan agen coding seperti Claude Code dan Codex menggunakan Unsloth melalui MCP.",
         enable: "Izinkan koneksi agen",
-        enableDescription:
-          "Melayani /mcp/ untuk permintaan yang membawa kunci API Unsloth.",
+        enableDescription: "Melayani /mcp/ untuk permintaan yang membawa kunci API Unsloth.",
         lockedByEnv: "Diatur oleh {name}.",
         loadError: "Tidak dapat memuat pengaturan akses agen.",
         saveError: "Tidak dapat menyimpan pengaturan akses agen.",
         agent: "Agen",
-        exportKeyHint:
-          "Atur {name} ke kunci API Unsloth sebelum Anda memulai agen.",
+        exportKeyHint: "Atur {name} ke kunci API Unsloth sebelum Anda memulai agen.",
         configFileHint: "Tambahkan ini ke {path}.",
-        keywords:
-          "mcp model context protocol agents claude codex tools agen alat",
+        keywords: "mcp model context protocol agents claude codex tools agen alat",
       },
     },
     mcp: {
@@ -4081,8 +3572,7 @@ export const id = {
         allTools: "Semua alat",
         selectAll: "Pilih semua",
         selectNone: "Jangan pilih apa pun",
-        description:
-          "Setiap alat yang aktif menambah apa yang dibaca agen sebelum mulai, jadi nonaktifkan yang tidak Anda perlukan. Agen tidak pernah melihat alat yang nonaktif, dan panggilan ke alat itu ditolak. Agen yang sudah terhubung melihat perubahannya saat terhubung ulang.",
+        description: "Setiap alat yang aktif menambah apa yang dibaca agen sebelum mulai, jadi nonaktifkan yang tidak Anda perlukan. Agen tidak pernah melihat alat yang nonaktif, dan panggilan ke alat itu ditolak. Agen yang sudah terhubung melihat perubahannya saat terhubung ulang.",
         saveError: "Tidak dapat menyimpan pengaturan alat Unsloth MCP.",
         chatNote: "Chat tidak pernah mendapatkan {tools}.",
         groups: {
@@ -4167,8 +3657,7 @@ export const id = {
       whisperCppVersion: "Versi whisper.cpp",
       engines: {
         title: "Engine",
-        description:
-          "Runtime yang digunakan Unsloth untuk menjalankan model. Pembaruan diinstal di latar belakang, tanpa mulai ulang.",
+        description: "Runtime yang digunakan Unsloth untuk menjalankan model. Pembaruan diinstal di latar belakang, tanpa mulai ulang.",
         updatesLabel: "Pembaruan engine",
         notInstalled: "Tidak terinstal",
         available: "{version} tersedia",
@@ -4207,8 +3696,7 @@ export const id = {
       },
       dangerZone: "Zona berbahaya",
       shutDownStudio: "Matikan Unsloth",
-      shutDownStudioDescription:
-        "Menghentikan server Unsloth dan mengakhiri sesi Anda.",
+      shutDownStudioDescription: "Menghentikan server Unsloth dan mengakhiri sesi Anda.",
       shutDown: "Matikan",
       update: {
         title: "Perbarui Unsloth",
@@ -4222,44 +3710,33 @@ export const id = {
         localUpdateHeading: "Pembaruan lokal",
         installCommandUnix: "Perintah instalasi macOS/Linux",
         installCommandWindows: "Perintah instalasi Windows",
-        localInstallDetected:
-          "Instalasi lokal terdeteksi. Perbarui dari checkout asli Anda agar tidak diganti dengan PyPI.",
-        pullThenUpdate:
-          "Tarik perubahan terbaru, lalu jalankan penginstal lokal:",
+        localInstallDetected: "Instalasi lokal terdeteksi. Perbarui dari checkout asli Anda agar tidak diganti dengan PyPI.",
+        pullThenUpdate: "Tarik perubahan terbaru, lalu jalankan penginstal lokal:",
         gitPullCommand: "perintah git pull",
         localInstallerCommand: "perintah penginstal lokal",
-        sourceInstallDetected:
-          "Instalasi dari kode sumber atau paket VCS terdeteksi. Instal ulang dari jalur lokal asli atau URL Git.",
-        repoCheckoutFallback:
-          "Jika Anda masih memiliki checkout repo, jalankan penginstal lokal dari sana:",
+        sourceInstallDetected: "Instalasi dari kode sumber atau paket VCS terdeteksi. Instal ulang dari jalur lokal asli atau URL Git.",
+        repoCheckoutFallback: "Jika Anda masih memiliki checkout repo, jalankan penginstal lokal dari sana:",
         restartAfterUpdate: "Mulai ulang Unsloth setelah memperbarui.",
         desktopReady: "Pembaruan aplikasi desktop",
-        desktopReadyDescription:
-          "Periksa apakah versi aplikasi desktop yang lebih baru tersedia.",
+        desktopReadyDescription: "Periksa apakah versi aplikasi desktop yang lebih baru tersedia.",
         desktopChecking: "Memeriksa pembaruan",
         desktopCheckingDescription: "Biasanya memerlukan beberapa detik.",
         desktopAvailable: "Aplikasi desktop {version} tersedia",
-        desktopAvailableDescription:
-          "Perbarui sekarang dan aplikasi desktop akan dimulai ulang setelah selesai.",
-        desktopExternalServer:
-          "Terhubung ke server Unsloth di port {port} yang tidak dijalankan oleh aplikasi ini, seperti `unsloth studio` di terminal. Hentikan server itu di tempat ia dijalankan, lalu tutup dan buka kembali aplikasi untuk memperbarui.",
-        desktopManualInstall:
-          "Buka halaman rilis untuk menginstal paket Linux terbaru.",
+        desktopAvailableDescription: "Perbarui sekarang dan aplikasi desktop akan dimulai ulang setelah selesai.",
+        desktopExternalServer: "Terhubung ke server Unsloth di port {port} yang tidak dijalankan oleh aplikasi ini, seperti `unsloth studio` di terminal. Hentikan server itu di tempat ia dijalankan, lalu tutup dan buka kembali aplikasi untuk memperbarui.",
+        desktopManualInstall: "Buka halaman rilis untuk menginstal paket Linux terbaru.",
         desktopCheckFailed: "Tidak dapat memeriksa pembaruan",
         desktopCheckFailedDescription: "Periksa koneksi Anda dan coba lagi.",
         desktopCurrent: "Aplikasi desktop sudah terbaru",
-        desktopCurrentDescription:
-          "Unsloth akan terus memeriksa secara otomatis.",
+        desktopCurrentDescription: "Unsloth akan terus memeriksa secara otomatis.",
         checkForUpdates: "Periksa pembaruan",
         checkAgain: "Periksa lagi",
         retryCheck: "Coba lagi",
         checking: "Memeriksa...",
         updateNow: "Perbarui sekarang",
         openReleasePage: "Buka halaman rilis",
-        unknownInstall:
-          "Tidak dapat mendeteksi cara Unsloth diinstal. Untuk instalasi melalui penginstal atau PyPI, gunakan perintah di atas.",
-        localCheckout:
-          "Untuk instalasi dari checkout lokal, jalankan penginstal lokal dari checkout tersebut:",
+        unknownInstall: "Tidak dapat mendeteksi cara Unsloth diinstal. Untuk instalasi melalui penginstal atau PyPI, gunakan perintah di atas.",
+        localCheckout: "Untuk instalasi dari checkout lokal, jalankan penginstal lokal dari checkout tersebut:",
         docs: "Dokumentasi instalasi:",
         docsInstall: "Instalasi",
         docsUpdating: "Memperbarui",
@@ -4273,8 +3750,7 @@ export const id = {
   },
   studio: {
     routeTitle: "Latih",
-    cpuTrainingNotice:
-      "Tidak ditemukan GPU, jadi pelatihan berjalan di CPU. Pelatihan ini jauh lebih lambat daripada di GPU dan hanya mendukung model teks (LoRA atau finetuning penuh).",
+    cpuTrainingNotice: "Tidak ditemukan GPU, jadi pelatihan berjalan di CPU. Pelatihan ini jauh lebih lambat daripada di GPU dan hanya mendukung model teks (LoRA atau finetuning penuh).",
     wizard: {
       modelTitle: "Model",
       modelDescription: "Pilih model dan metode pelatihan",
@@ -4287,20 +3763,16 @@ export const id = {
       modelLabel: "Model",
       modelTooltip: "Model dasar yang ingin Anda fine-tune.",
       methodLabel: "Metode",
-      methodTooltip:
-        "Cara model dilatih. LoRA dan QLoRA memperbarui adapter kecil, bukan setiap bobot.",
+      methodTooltip: "Cara model dilatih. LoRA dan QLoRA memperbarui adapter kecil, bukan setiap bobot.",
       trainAsLabel: "Latih sebagai",
-      trainAsTooltip:
-        "Model bahasa menulis teks. Model keputusan memilih salah satu opsi yang Anda berikan, beserta probabilitasnya, dan berjalan di API Keputusan.",
+      trainAsTooltip: "Model bahasa menulis teks. Model keputusan memilih salah satu opsi yang Anda berikan, beserta probabilitasnya, dan berjalan di API Keputusan.",
       trainAsLanguage: "Model bahasa",
       trainAsDecision: "Model keputusan",
       checkpointLabel: "Checkpoint",
-      checkpointTooltip:
-        "Checkpoint Laya yang akan di-fine-tune. Multibahasa cocok untuk sebagian besar dataset.",
+      checkpointTooltip: "Checkpoint Laya yang akan di-fine-tune. Multibahasa cocok untuk sebagian besar dataset.",
       datasetLabel: "Dataset",
       datasetTooltip: "Data pelatihan yang digunakan untuk fine-tune model.",
-      hfTokenDescription:
-        "Diperlukan untuk model dan dataset yang dibatasi (gated) atau pribadi.",
+      hfTokenDescription: "Diperlukan untuk model dan dataset yang dibatasi (gated) atau pribadi.",
       uploadLocalLabel: "Unggah file lokal",
       sourceBrowse: "Telusuri",
       releaseToUpload: "Lepaskan untuk mengunggah",
@@ -4308,11 +3780,9 @@ export const id = {
       saveYaml: "Simpan YAML",
       resetDefaults: "Atur ulang ke default",
       cachedModelGoneTitle: "Model yang di-cache tidak lagi tersedia",
-      cachedModelGoneDescription:
-        "File model sudah tidak ada di perangkat ini, jadi pelatihan akan mengunduhnya lagi.",
+      cachedModelGoneDescription: "File model sudah tidak ada di perangkat ini, jadi pelatihan akan mengunduhnya lagi.",
       cachedDatasetGoneTitle: "Dataset yang di-cache tidak lagi tersedia",
-      cachedDatasetGoneDescription:
-        "File dataset sudah tidak ada di perangkat ini, jadi pelatihan akan mengunduhnya lagi.",
+      cachedDatasetGoneDescription: "File dataset sudah tidak ada di perangkat ini, jadi pelatihan akan mengunduhnya lagi.",
     },
     preview: {
       title: "Pratinjau proses",
@@ -4348,23 +3818,17 @@ export const id = {
       dataset: "Dataset",
       downloadsOnStart: "Diunduh saat dimulai",
       continuesOnStart: "Dilanjutkan saat dimulai",
-      noticeModelDownload:
-        "Model ini belum ada di perangkat ini. Pelatihan akan mengunduhnya secara otomatis.",
-      noticeModelPartial:
-        "Pelatihan akan menyelesaikan unduhan model yang belum lengkap sebelum memuatnya.",
-      noticeDatasetDownload:
-        "Dataset ini belum ada di perangkat ini. Pelatihan akan mengunduhnya secara otomatis.",
-      noticeDatasetPartial:
-        "Pelatihan akan menyelesaikan unduhan dataset yang belum lengkap sebelum membacanya.",
-      noticeTransformersUpgrade:
-        "Belum ada transformers terinstal yang mendukung arsitektur ini. Memulai proses akan menawarkan untuk menginstal transformers {version} terlebih dahulu.",
-      noticeSixteenBitOnly:
-        "Arsitektur ini dilatih dengan LoRA 16-bit: 4-bit tidak tersedia untuknya, sehingga proses memerlukan VRAM jauh lebih banyak daripada QLoRA.",
-      noticeInstallSwitchesSixteenBit:
-        "Menginstal rilis tersebut alih-alih mempertahankan kode bawaan model akan mengalihkan proses ini ke LoRA 16-bit, yang memerlukan VRAM jauh lebih banyak daripada QLoRA.",
+      noticeModelDownload: "Model ini belum ada di perangkat ini. Pelatihan akan mengunduhnya secara otomatis.",
+      noticeModelPartial: "Pelatihan akan menyelesaikan unduhan model yang belum lengkap sebelum memuatnya.",
+      noticeDatasetDownload: "Dataset ini belum ada di perangkat ini. Pelatihan akan mengunduhnya secara otomatis.",
+      noticeDatasetPartial: "Pelatihan akan menyelesaikan unduhan dataset yang belum lengkap sebelum membacanya.",
+      noticeTransformersUpgrade: "Belum ada transformers terinstal yang mendukung arsitektur ini. Memulai proses akan menawarkan untuk menginstal transformers {version} terlebih dahulu.",
+      noticeSixteenBitOnly: "Arsitektur ini dilatih dengan LoRA 16-bit: 4-bit tidak tersedia untuknya, sehingga proses memerlukan VRAM jauh lebih banyak daripada QLoRA.",
+      noticeInstallSwitchesSixteenBit: "Menginstal rilis tersebut alih-alih mempertahankan kode bawaan model akan mengalihkan proses ini ke LoRA 16-bit, yang memerlukan VRAM jauh lebih banyak daripada QLoRA.",
       advancedSettings: "Pengaturan lanjutan",
       defaultAdvancedSettings: "Default",
       nonDefaultAdvancedSettings: "{count} bukan default",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "dataset",
@@ -4376,18 +3840,15 @@ export const id = {
       scanningLocal: "Memindai dataset di perangkat ini…",
       couldntScan: "Tidak dapat memindai dataset lokal",
       someLocationsUnscanned: "Beberapa lokasi dataset tidak dapat dipindai.",
-      noLocalDatasets:
-        "Belum ada apa pun di perangkat ini. Unduh dataset dari Hub, buat di Resep, atau unggah file.",
+      noLocalDatasets: "Belum ada apa pun di perangkat ini. Unduh dataset dari Hub, buat di Resep, atau unggah file.",
       openDataRecipes: "Buka Resep Data",
       searchingHub: "Mencari di Hugging Face…",
       noDatasetsFound: "Dataset tidak ditemukan.",
       tokenRejectedTitle: "Token Hugging Face ditolak",
-      tokenRejectedBody:
-        "Perbarui token Anda di Pengaturan → Umum, lalu coba lagi.",
+      tokenRejectedBody: "Perbarui token Anda di Pengaturan → Umum, lalu coba lagi.",
       hubUnreachable: "Tidak dapat menjangkau Hugging Face",
       cantUseDataset: "Tidak dapat menggunakan dataset",
-      reasonInvalidHubId:
-        "Masukkan ID dataset Hugging Face yang valid: repo atau owner/repo, tanpa titik atau tanda hubung berurutan dan tanpa akhiran .git (maksimum 96 karakter per bagian).",
+      reasonInvalidHubId: "Masukkan ID dataset Hugging Face yang valid: repo atau owner/repo, tanpa titik atau tanda hubung berurutan dan tanpa akhiran .git (maksimum 96 karakter per bagian).",
       sourceRecipe: "Resep",
       sourceUpload: "Unggahan",
       sourceLocal: "Lokal",
@@ -4404,28 +3865,21 @@ export const id = {
       couldntScan: "Tidak dapat memindai model lokal",
       someLocationsUnscanned: "Beberapa lokasi lokal tidak dapat dipindai.",
       noLocalModels: "Model lokal tidak ditemukan.",
-      noLocalModelsHint:
-        "Tempel jalur folder di atas atau beralih ke Hugging Face.",
+      noLocalModelsHint: "Tempel jalur folder di atas atau beralih ke Hugging Face.",
       searchingHub: "Mencari di Hugging Face…",
       noModelsFound: "Model tidak ditemukan.",
       tokenRejectedTitle: "Token Hugging Face ditolak",
-      tokenRejectedBody:
-        "Perbarui token Anda di Pengaturan → Umum, lalu coba lagi.",
-      tokenRejectedAnonymousBody:
-        "Model publik ditampilkan tanpa token. Perbarui token Anda di Pengaturan → Umum untuk menjangkau model pribadi dan yang dibatasi (gated).",
+      tokenRejectedBody: "Perbarui token Anda di Pengaturan → Umum, lalu coba lagi.",
+      tokenRejectedAnonymousBody: "Model publik ditampilkan tanpa token. Perbarui token Anda di Pengaturan → Umum untuk menjangkau model pribadi dan yang dibatasi (gated).",
       hubUnreachable: "Tidak dapat menjangkau Hugging Face",
       cantUseModel: "Tidak dapat menggunakan model untuk pelatihan",
-      reasonTypeMismatch:
-        "Model ini tidak cocok dengan jenis pelatihan yang dipilih di langkah sebelumnya.",
+      reasonTypeMismatch: "Model ini tidak cocok dengan jenis pelatihan yang dipilih di langkah sebelumnya.",
       reasonEmptyId: "Masukkan ID model atau jalur model lokal.",
       reasonGguf: "Model GGUF tidak dapat digunakan untuk pelatihan.",
-      reasonAdapter:
-        "Output adapter tidak dapat digunakan sebagai model dasar pelatihan.",
+      reasonAdapter: "Output adapter tidak dapat digunakan sebagai model dasar pelatihan.",
       reasonNotTrainable: "Model di perangkat ini tidak dapat dilatih.",
-      reasonUnsupportedFormat:
-        "Format model ini tidak didukung untuk pelatihan.",
-      reasonInvalidHubId:
-        "Masukkan ID model Hugging Face yang valid: repo atau owner/repo, tanpa titik atau tanda hubung berurutan dan tanpa akhiran .git (maksimum 96 karakter per bagian).",
+      reasonUnsupportedFormat: "Format model ini tidak didukung untuk pelatihan.",
+      reasonInvalidHubId: "Masukkan ID model Hugging Face yang valid: repo atau owner/repo, tanpa titik atau tanda hubung berurutan dan tanpa akhiran .git (maksimum 96 karakter per bagian).",
       sourceModelsFolder: "Folder model",
       sourceHfCache: "Cache HF",
       sourceLmStudio: "LM Studio",
@@ -4460,17 +3914,29 @@ export const id = {
         hint: "Pretraining lanjutan untuk domain atau bahasa baru.",
         note: "lanjutan",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Konfigurasikan dan mulai pelatihan",
       trainingInProgress: "Pelatihan sedang berlangsung",
       viewPastRuns: "Lihat proses pelatihan sebelumnya",
       viewingPastRun: "Melihat proses sebelumnya",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Konfigurasi",
       currentRun: "Proses Saat Ini",
       history: "Riwayat",
+      compare: "Compare",
     },
     goToLibrary: "Buka Pustaka",
     imageTraining: "Pelatihan gambar",
@@ -4481,20 +3947,17 @@ export const id = {
     dataset: {
       selectors: {
         subset: "Subset",
-        subsetTooltip:
-          "Pilih subset (konfigurasi) dataset yang akan digunakan.",
+        subsetTooltip: "Pilih subset (konfigurasi) dataset yang akan digunakan.",
         trainSplit: "Split Pelatihan",
         trainSplitTooltip: "Pilih split yang akan digunakan untuk pelatihan.",
         evaluationSplit: "Split Evaluasi",
-        evaluationSplitTooltip:
-          'Pilih split yang akan digunakan untuk evaluasi. "Tidak ada" berarti tidak ada evaluasi selama pelatihan.',
+        evaluationSplitTooltip: "Pilih split yang akan digunakan untuk evaluasi. \"Tidak ada\" berarti tidak ada evaluasi selama pelatihan.",
         selectSubset: "Pilih subset...",
         selectSplit: "Pilih split...",
         none: "Tidak ada",
         loading: "Memuat konfigurasi dan split dataset...",
         manualTitle: "Masukkan opsi dataset secara manual",
-        manualDescription:
-          "Masukkan nama konfigurasi dan split Hugging Face yang tepat untuk digunakan.",
+        manualDescription: "Masukkan nama konfigurasi dan split Hugging Face yang tepat untuk digunakan.",
         manualSubsetPlaceholder: "Nama konfigurasi opsional",
         manualRequired: "Split pelatihan wajib diisi.",
         manualTooLong: "Gunakan 128 karakter atau kurang.",
@@ -4514,86 +3977,65 @@ export const id = {
       uploading: "Mengunggah...",
       uploadEvalFile: "Unggah file evaluasi",
       fileTooLarge: "File terlalu besar",
-      fileTooLargeDescription:
-        "{file} berukuran {size}. Unggahan pelatihan mendukung hingga {limit}.",
+      fileTooLargeDescription: "{file} berukuran {size}. Unggahan pelatihan mendukung hingga {limit}.",
       documentRedirect: {
         title: "File ini perlu dikonversi terlebih dahulu",
         genericFile: "File ini",
-        description:
-          "{file} adalah bahan sumber, bukan dataset yang siap dilatih. Gunakan Resep Data untuk mengubah dokumen menjadi dataset, lalu kembali ke sini untuk fine-tune.",
+        description: "{file} adalah bahan sumber, bukan dataset yang siap dilatih. Gunakan Resep Data untuk mengubah dokumen menjadi dataset, lalu kembali ke sini untuk fine-tune.",
         nextStepTitle: "Langkah berikutnya yang terbaik",
-        nextStepDescription:
-          "Buka Resep Pembelajaran dan mulai dengan resep berbasis dokumen seperti QA berbasis PDF.",
+        nextStepDescription: "Buka Resep Pembelajaran dan mulai dengan resep berbasis dokumen seperti QA berbasis PDF.",
         openAction: "Buka Resep Pembelajaran",
       },
-      evalDatasetDescription:
-        "Opsional. Jika tidak diberikan, sebagian kecil akan dipisahkan dari data pelatihan.",
+      evalDatasetDescription: "Opsional. Jika tidak diberikan, sebagian kecil akan dipisahkan dari data pelatihan.",
       advanced: "Lanjutan",
       targetFormat: "Format Target",
-      targetFormatTooltip:
-        "Format data pelatihan Anda. Deteksi otomatis berfungsi untuk sebagian besar dataset.",
+      targetFormatTooltip: "Format data pelatihan Anda. Deteksi otomatis berfungsi untuk sebagian besar dataset.",
       streamingInfoAriaLabel: "Informasi streaming dataset",
       streaming: {
         label: "Aktifkan streaming",
-        description:
-          "Streaming dataset teks Hugging Face alih-alih mengunduhnya.",
+        description: "Streaming dataset teks Hugging Face alih-alih mengunduhnya.",
         unavailable: "Streaming tidak tersedia. Untuk mengaktifkan:",
-        completionsUnavailable:
-          "Tidak tersedia saat streaming dataset diaktifkan.",
+        completionsUnavailable: "Tidak tersedia saat streaming dataset diaktifkan.",
         blockers: {
-          source:
-            "Gunakan dataset Hugging Face (bukan unggahan lokal atau sumber S3).",
-          maxSteps:
-            "Atur Langkah Maks > 0 — dataset streaming tidak memiliki panjang yang diketahui.",
-          trainOnCompletions: 'Nonaktifkan "Hanya completion asisten".',
-          evalSplit:
-            "Pilih split evaluasi terpisah — evaluasi aktif tetapi tidak ada split evaluasi tersendiri yang diatur.",
+          source: "Gunakan dataset Hugging Face (bukan unggahan lokal atau sumber S3).",
+          maxSteps: "Atur Langkah Maks > 0 — dataset streaming tidak memiliki panjang yang diketahui.",
+          trainOnCompletions: "Nonaktifkan \"Hanya completion asisten\".",
+          evalSplit: "Pilih split evaluasi terpisah — evaluasi aktif tetapi tidak ada split evaluasi tersendiri yang diatur.",
           visionModel: "Model vision tidak mendukung streaming.",
           audioModel: "Model audio tidak mendukung streaming.",
-          embeddingModel:
-            "Model embedding tidak mendukung streaming (pelatihan memerlukan dataset lengkap).",
-          imageDataset:
-            "Dataset ini tampaknya berupa gambar, yang tidak dapat di-streaming.",
-          audioDataset:
-            "Dataset ini tampaknya berupa audio, yang tidak dapat di-streaming.",
+          embeddingModel: "Model embedding tidak mendukung streaming (pelatihan memerlukan dataset lengkap).",
+          imageDataset: "Dataset ini tampaknya berupa gambar, yang tidak dapat di-streaming.",
+          audioDataset: "Dataset ini tampaknya berupa audio, yang tidak dapat di-streaming.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "hanya completion asisten",
           evaluation: "evaluasi (memerlukan split evaluasi terpisah)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Streaming dinonaktifkan: streaming memerlukan Langkah Maks tetap > 0.",
-          adjusted:
-            "Disesuaikan untuk streaming. Opsi yang tidak kompatibel dinonaktifkan: {options}.",
-          needsMaxSteps:
-            "Streaming memerlukan Langkah Maks tetap (dataset streaming tidak memiliki panjang yang diketahui). Atur Langkah Maks > 0 terlebih dahulu.",
-          enabledAdjusted:
-            "Streaming diaktifkan. Opsi yang tidak kompatibel dinonaktifkan: {options}.",
-          disabledForDetectedModality:
-            "Streaming dinonaktifkan karena dataset gambar dan audio memerlukan unduhan lengkap. Tinjau pengaturannya, lalu mulai lagi.",
+          turnedOffMaxSteps: "Streaming dinonaktifkan: streaming memerlukan Langkah Maks tetap > 0.",
+          adjusted: "Disesuaikan untuk streaming. Opsi yang tidak kompatibel dinonaktifkan: {options}.",
+          needsMaxSteps: "Streaming memerlukan Langkah Maks tetap (dataset streaming tidak memiliki panjang yang diketahui). Atur Langkah Maks > 0 terlebih dahulu.",
+          enabledAdjusted: "Streaming diaktifkan. Opsi yang tidak kompatibel dinonaktifkan: {options}.",
+          disabledForDetectedModality: "Streaming dinonaktifkan karena dataset gambar dan audio memerlukan unduhan lengkap. Tinjau pengaturannya, lalu mulai lagi.",
         },
       },
       auto: "Otomatis",
       rawText: "Teks Mentah",
       trainSplitStart: "Awal Split Pelatihan",
-      trainSplitStartTooltip:
-        "Latih hanya pada sebagian split pelatihan dengan menentukan indeks baris awal (inklusif, berbasis 0). Biarkan kosong untuk mulai dari baris pertama.",
+      trainSplitStartTooltip: "Latih hanya pada sebagian split pelatihan dengan menentukan indeks baris awal (inklusif, berbasis 0). Biarkan kosong untuk mulai dari baris pertama.",
       trainSplitEnd: "Akhir Split Pelatihan",
-      trainSplitEndTooltip:
-        "Indeks baris terakhir yang disertakan dari split pelatihan (inklusif, berbasis 0). Misalnya, atur Awal ke 0 dan Akhir ke 99 untuk melatih pada 100 baris pertama. Biarkan kosong untuk menggunakan semua baris yang tersisa.",
+      trainSplitEndTooltip: "Indeks baris terakhir yang disertakan dari split pelatihan (inklusif, berbasis 0). Misalnya, atur Awal ke 0 dan Akhir ke 99 untuk melatih pada 100 baris pertama. Biarkan kosong untuk menggunakan semua baris yang tersisa.",
       endPlaceholder: "Akhir",
       clear: "Hapus",
       dropFileOrClick: "Letakkan file atau klik untuk mengunggah",
       uploadDetails: "Detail unggahan",
-      uploadDetailsTooltip:
-        "Hingga {limit} per file. PDF, DOCX, dan TXT bukan dataset yang siap dilatih, jadi konversikan di Resep Pembelajaran terlebih dahulu.",
+      uploadDetailsTooltip: "Hingga {limit} per file. PDF, DOCX, dan TXT bukan dataset yang siap dilatih, jadi konversikan di Resep Pembelajaran terlebih dahulu.",
       viewDataset: "Lihat dataset",
       previewTokens: "Pratinjau token",
       tokenPreview: {
         title: "Pratinjau token",
-        description:
-          "Cara {model} melakukan tokenisasi data ini untuk pelatihan. Hanya tokenizer yang diunduh.",
+        description: "Cara {model} melakukan tokenisasi data ini untuk pelatihan. Hanya tokenizer yang diunduh.",
         datasetTab: "Sampel dataset",
         textTab: "Teks Anda",
         trained: "Dilatih",
@@ -4601,31 +4043,24 @@ export const id = {
         completionsOnly: "Hanya completion asisten",
         allTokens: "Semua token dilatih",
         responseMarker: "Penanda respons",
-        maskingNotApplied:
-          "Penanda chat tidak ditemukan, sehingga setiap token dilatih.",
-        loading:
-          "Memuat tokenizer. Pratinjau pertama memerlukan waktu sedikit lebih lama...",
+        maskingNotApplied: "Penanda chat tidak ditemukan, sehingga setiap token dilatih.",
+        loading: "Memuat tokenizer. Pratinjau pertama memerlukan waktu sedikit lebih lama...",
         shuffle: "Acak sampel",
         showIds: "Tampilkan ID token",
         copyIds: "Salin ID",
         copied: "ID token disalin",
         sample: "Sampel {index}",
         stats: "{tokens} token, {trained} dilatih ({percent}%)",
-        truncated:
-          "Dipotong menjadi {max} dari {full} token oleh panjang konteks.",
-        noTrained:
-          "Tidak ada token di baris ini yang dilatih, sehingga pelatihan melewatinya.",
+        truncated: "Dipotong menjadi {max} dari {full} token oleh panjang konteks.",
+        noTrained: "Tidak ada token di baris ini yang dilatih, sehingga pelatihan melewatinya.",
         hiddenTokens: "{count} token lainnya tidak ditampilkan",
-        multimodal:
-          "Baris gambar dan audio tidak ditampilkan di sini. Anda tetap dapat mencoba tokenizer pada teks Anda sendiri.",
+        multimodal: "Baris gambar dan audio tidak ditampilkan di sini. Anda tetap dapat mencoba tokenizer pada teks Anda sendiri.",
         textPlaceholder: "Ketik atau tempel teks untuk melihat token-nya...",
-        textHint:
-          "Dengan hanya completion asisten, hanya teks setelah penanda asisten yang dilatih.",
+        textHint: "Dengan hanya completion asisten, hanya teks setelah penanda asisten yang dilatih.",
         insertExample: "Sisipkan contoh chat",
         vocab: "Kosakata: {count} token",
         retry: "Coba lagi",
-        packing:
-          "Packing aktif: proses menggabungkan baris menjadi urutan sepanjang konteks, sehingga titik pemotongan baris dapat berbeda dari tampilan per baris ini.",
+        packing: "Packing aktif: proses menggabungkan baris menjadi urutan sepanjang konteks, sehingga titik pemotongan baris dapat berbeda dari tampilan per baris ini.",
       },
       uploadFailed: "Unggahan gagal",
       unknownError: "Kesalahan tidak diketahui",
@@ -4634,10 +4069,8 @@ export const id = {
       datasetUploaded: "Dataset diunggah",
       evalDatasetUploaded: "Dataset evaluasi diunggah",
       uploadOneFileAtATime: "Unggah satu file sekaligus",
-      uploadSingleFileDescription:
-        "Unggahan dataset pelatihan hanya menerima satu file.",
-      previewLoadingHuggingFace:
-        "Mengambil pratinjau dataset dari Hugging Face...",
+      uploadSingleFileDescription: "Unggahan dataset pelatihan hanya menerima satu file.",
+      previewLoadingHuggingFace: "Mengambil pratinjau dataset dari Hugging Face...",
       previewLoading: "Memuat pratinjau...",
       mappingRequirements: {
         audioAndText: "audio dan teks",
@@ -4650,17 +4083,13 @@ export const id = {
         heuristicTitle: "Pemetaan terdeteksi secara heuristik",
         readyTitle: "Pemetaan siap",
         requiredTitle: "Petakan kolom dataset",
-        heuristicDescription:
-          "Kami mendeteksi pemetaan kolom di bawah secara otomatis menggunakan heuristik. Harap tinjau dan sesuaikan menggunakan dropdown di header kolom, atau gunakan AI Assist untuk pemetaan yang lebih cerdas.",
-        readyDescription:
-          "Terlihat baik. Kami akan mengonversi dataset ini secara otomatis.",
-        requiredDescription:
-          "Tetapkan peran ke kolom menggunakan dropdown di header. Setidaknya, tetapkan {required}.",
+        heuristicDescription: "Kami mendeteksi pemetaan kolom di bawah secara otomatis menggunakan heuristik. Harap tinjau dan sesuaikan menggunakan dropdown di header kolom, atau gunakan AI Assist untuk pemetaan yang lebih cerdas.",
+        readyDescription: "Terlihat baik. Kami akan mengonversi dataset ini secara otomatis.",
+        requiredDescription: "Tetapkan peran ke kolom menggunakan dropdown di header. Setidaknya, tetapkan {required}.",
       },
       s3: {
         title: "Konfigurasi S3",
-        description:
-          "Muat dataset .parquet, .json, .jsonl, atau .csv dari Amazon S3",
+        description: "Muat dataset .parquet, .json, .jsonl, atau .csv dari Amazon S3",
         bucket: "Nama Bucket",
         bucketPlaceholder: "my-training-data-bucket",
         region: "Region AWS",
@@ -4682,23 +4111,19 @@ export const id = {
       },
       projectName: "Nama Proyek",
       optional: "Opsional",
-      projectNameDescription:
-        "Digunakan dalam nama folder output pelatihan, default ekspor, dan riwayat.",
+      projectNameDescription: "Digunakan dalam nama folder output pelatihan, default ekspor, dan riwayat.",
       loraSettings: "Pengaturan LoRA",
       trainingHyperparameters: "Hyperparameter Pelatihan",
       drafterSettings: "Drafter Decoding Spekulatif",
       drafterTrain: "Latih drafter decoding spekulatif",
-      drafterTrainTooltip:
-        "Melatih draft head kecil setelah fine-tuning agar inferensi berjalan lebih cepat di llama.cpp dan vLLM; output tidak berubah.",
+      drafterTrainTooltip: "Melatih draft head kecil setelah fine-tuning agar inferensi berjalan lebih cepat di llama.cpp dan vLLM; output tidak berubah.",
       drafterChecking: "Memeriksa model ini...",
       drafterUnavailable: "Tidak tersedia untuk model ini: {reason}",
       drafterRetrainMtp: "Melatih ulang MTP head model ini",
-      drafterEagle3:
-        "Melatih drafter EAGLE-3 (model ini tidak memiliki MTP head)",
+      drafterEagle3: "Melatih drafter EAGLE-3 (model ini tidak memiliki MTP head)",
       drafterDataSource: "Data pelatihan",
       drafterDataSourceDataset: "Jawaban dataset",
-      drafterDataSourceRegenerate:
-        "Jawaban model sendiri (lebih lambat, lebih baik)",
+      drafterDataSourceRegenerate: "Jawaban model sendiri (lebih lambat, lebih baik)",
       drafterMaxExamples: "Contoh",
       drafterEpochs: "Epoch",
       drafterLearningRate: "Laju pembelajaran",
@@ -4714,21 +4139,16 @@ export const id = {
       contextLengthTooltip: "Jumlah maksimum token per sampel pelatihan.",
       customContextLength: "Masukkan nilai kustom",
       learningRate: "Laju Pembelajaran",
-      learningRateTooltip:
-        "Ukuran langkah untuk pembaruan bobot. Nilai yang lebih rendah melatih lebih lambat tetapi lebih stabil.",
-      learningRateDescription:
-        "Disarankan: 2e-4 untuk LoRA, 5e-5 untuk CPT, 2e-5 untuk fine-tune penuh",
+      learningRateTooltip: "Ukuran langkah untuk pembaruan bobot. Nilai yang lebih rendah melatih lebih lambat tetapi lebih stabil.",
+      learningRateDescription: "Disarankan: 2e-4 untuk LoRA, 5e-5 untuk CPT, 2e-5 untuk fine-tune penuh",
       embeddingLearningRate: "Laju Pembelajaran Embedding",
-      embeddingLearningRateTooltip:
-        "Hanya digunakan saat CPT melatih embed_tokens. Embedding lebih mudah menjadi tidak stabil dibandingkan bobot LoRA, sehingga biasanya memerlukan LR yang lebih kecil. Biarkan kosong untuk menggunakan lr/10; rentang yang umum berfungsi adalah 2x-10x lebih kecil dari LR utama. Naikkan hanya jika adaptasi kosakata atau token domain terlalu lambat.",
+      embeddingLearningRateTooltip: "Hanya digunakan saat CPT melatih embed_tokens. Embedding lebih mudah menjadi tidak stabil dibandingkan bobot LoRA, sehingga biasanya memerlukan LR yang lebih kecil. Biarkan kosong untuk menggunakan lr/10; rentang yang umum berfungsi adalah 2x-10x lebih kecil dari LR utama. Naikkan hanya jika adaptasi kosakata atau token domain terlalu lambat.",
       rank: "Rank",
-      rankTooltip:
-        "Dimensi matriks berperingkat rendah. Lebih tinggi = kapasitas lebih besar.",
+      rankTooltip: "Dimensi matriks berperingkat rendah. Lebih tinggi = kapasitas lebih besar.",
       alpha: "Alpha",
       alphaTooltip: "Faktor penskalaan untuk pembaruan LoRA. Biasanya 2x rank.",
       dropout: "Dropout",
-      dropoutTooltip:
-        "Probabilitas dropout untuk lapisan LoRA guna mengurangi overfitting.",
+      dropoutTooltip: "Probabilitas dropout untuk lapisan LoRA guna mengurangi overfitting.",
       visionLayers: "Lapisan vision",
       languageLayers: "Lapisan bahasa",
       attentionModules: "Modul attention",
@@ -4740,19 +4160,15 @@ export const id = {
       memoryEfficient: "LoRA dengan inisialisasi SVD",
       weightDecomposed: "LoRA dengan pengali",
       notSupportedAppleSilicon: "Tidak didukung di Apple Silicon",
-      doraNeedsVisionLayersOff:
-        "Nonaktifkan pelatihan lapisan vision untuk menggunakan DoRA",
+      doraNeedsVisionLayersOff: "Nonaktifkan pelatihan lapisan vision untuk menggunakan DoRA",
       optimization: "Optimisasi",
       schedule: "Jadwal",
       memory: "Memori",
       optimizer: "Optimizer",
-      optimizerTooltip:
-        "Algoritme optimisasi. Varian 8-bit mengurangi penggunaan memori. Fused disarankan untuk model vision.",
-      optimizerTooltipMlx:
-        "Algoritme optimisasi. AdamW adalah default. Lion menggunakan lebih sedikit memori tetapi biasanya memerlukan laju pembelajaran yang lebih rendah.",
+      optimizerTooltip: "Algoritme optimisasi. Varian 8-bit mengurangi penggunaan memori. Fused disarankan untuk model vision.",
+      optimizerTooltipMlx: "Algoritme optimisasi. AdamW adalah default. Lion menggunakan lebih sedikit memori tetapi biasanya memerlukan laju pembelajaran yang lebih rendah.",
       lrScheduler: "Penjadwal LR",
-      lrSchedulerTooltip:
-        "Cara laju pembelajaran berubah selama pelatihan. Linear menurun secara stabil; cosine menurun secara melengkung.",
+      lrSchedulerTooltip: "Cara laju pembelajaran berubah selama pelatihan. Linear menurun secara stabil; cosine menurun secara melengkung.",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4766,43 +4182,33 @@ export const id = {
         cosine: "Cosine",
       },
       batchSize: "Ukuran Batch",
-      batchSizeTooltip:
-        "Sampel yang diproses per langkah. Nilai lebih tinggi menggunakan lebih banyak VRAM.",
+      batchSizeTooltip: "Sampel yang diproses per langkah. Nilai lebih tinggi menggunakan lebih banyak VRAM.",
       gradAccum: "Langkah Akumulasi Gradien",
-      gradAccumTooltip:
-        "Menyimulasikan ukuran batch yang lebih besar tanpa VRAM tambahan.",
+      gradAccumTooltip: "Menyimulasikan ukuran batch yang lebih besar tanpa VRAM tambahan.",
       weightDecay: "Peluruhan Bobot",
       weightDecayTooltip: "Regularisasi L2 untuk mencegah overfitting.",
       warmupSteps: "Langkah Warmup",
-      warmupStepsTooltip:
-        "Naikkan LR secara bertahap di awal pelatihan demi stabilitas.",
-      scheduleEpochsTooltip:
-        "Jumlah lintasan penuh atas dataset. Atur 0 untuk menjalankan berdasarkan langkah maks.",
+      warmupStepsTooltip: "Naikkan LR secara bertahap di awal pelatihan demi stabilitas.",
+      scheduleEpochsTooltip: "Jumlah lintasan penuh atas dataset. Atur 0 untuk menjalankan berdasarkan langkah maks.",
       saveSteps: "Langkah Simpan",
-      saveStepsTooltip:
-        "Simpan checkpoint setiap N langkah. 0 untuk menonaktifkan.",
+      saveStepsTooltip: "Simpan checkpoint setiap N langkah. 0 untuk menonaktifkan.",
       evalSteps: "Langkah Evaluasi",
-      evalStepsTooltip:
-        "Fraksi total langkah pelatihan di antara evaluasi (0-1). Atur ke 0 untuk menonaktifkan evaluasi. Mis. 0.01 = evaluasi setiap 1% langkah.",
+      evalStepsTooltip: "Fraksi total langkah pelatihan di antara evaluasi (0-1). Atur ke 0 untuk menonaktifkan evaluasi. Mis. 0.01 = evaluasi setiap 1% langkah.",
       earlyStoppingPatience: "Kesabaran Early Stopping",
-      earlyStoppingPatienceTooltip:
-        "Hentikan pelatihan setelah sejumlah evaluasi berturut-turut tanpa eval loss yang lebih rendah, dan pertahankan bobot dari evaluasi terbaik. Memerlukan evaluasi (Langkah Evaluasi di atas 0). 0 untuk menonaktifkan.",
+      earlyStoppingPatienceTooltip: "Hentikan pelatihan setelah sejumlah evaluasi berturut-turut tanpa eval loss yang lebih rendah, dan pertahankan bobot dari evaluasi terbaik. Memerlukan evaluasi (Langkah Evaluasi di atas 0). 0 untuk menonaktifkan.",
       seed: "Seed",
       seedTooltip: "Seed acak untuk reprodusibilitas.",
       offloadLayers: "Offload lapisan",
-      offloadLayersTooltip:
-        "Simpan lapisan decoder di RAM sistem dan alirkan masing-masing ke GPU tepat sebelum dijalankan, sehingga model yang lebih besar dari VRAM Anda dapat dilatih dengan LoRA. Otomatis meng-offload sesedikit mungkin agar muat; jumlah tertentu meng-offload tepat sebanyak itu. Memerlukan gradient checkpointing.",
+      offloadLayersTooltip: "Simpan lapisan decoder di RAM sistem dan alirkan masing-masing ke GPU tepat sebelum dijalankan, sehingga model yang lebih besar dari VRAM Anda dapat dilatih dengan LoRA. Otomatis meng-offload sesedikit mungkin agar muat; jumlah tertentu meng-offload tepat sebanyak itu. Memerlukan gradient checkpointing.",
       offloadOff: "Nonaktif",
       offloadAuto: "Otomatis",
       offloadCount: "Jumlah",
       offloadVramBudget: "Anggaran VRAM (GiB)",
-      offloadVramBudgetTooltip:
-        "VRAM maksimum yang boleh digunakan proses ini. Otomatis meng-offload cukup lapisan agar muat di bawahnya, dan dua proses dapat berbagi satu kartu dengan masing-masing mengambil sebagian. Kosong berarti menggunakan seluruh kartu.",
+      offloadVramBudgetTooltip: "VRAM maksimum yang boleh digunakan proses ini. Otomatis meng-offload cukup lapisan agar muat di bawahnya, dan dua proses dapat berbagi satu kartu dengan masing-masing mengambil sebagian. Kosong berarti menggunakan seluruh kartu.",
       offloadWholeCard: "seluruh kartu",
       offloadVramBudgetGpu: "Anggaran VRAM GPU {index} (GiB)",
       prefetchDepth: "Kedalaman prefetch",
-      prefetchDepthTooltip:
-        "Berapa banyak lapisan yang di-offload yang disalin lebih dulu dari lapisan yang sedang berjalan. Otomatis dimulai dari 1 dan mempertahankan kumpulan yang lebih dalam hanya selama hal itu terukur mengurangi waktu tunggu penyalinan.",
+      prefetchDepthTooltip: "Berapa banyak lapisan yang di-offload yang disalin lebih dulu dari lapisan yang sedang berjalan. Otomatis dimulai dari 1 dan mempertahankan kumpulan yang lebih dalam hanya selama hal itu terukur mengurangi waktu tunggu penyalinan.",
       offloadPanelTitle: "Lapisan yang di-offload",
       offloadPanelGpu: "Di GPU",
       offloadPanelHost: "Di RAM sistem",
@@ -4814,25 +4220,33 @@ export const id = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "kedalaman prefetch",
       offloadPanelPinned: "disematkan",
-      offloadPanelSweepNote:
-        "Jendela bergerak menunjukkan urutan pengambilan lapisan, diperlambat agar terlihat; angka diukur pada langkah terakhir.",
+      offloadPanelSweepNote: "Jendela bergerak menunjukkan urutan pengambilan lapisan, diperlambat agar terlihat; angka diukur pada langkah terakhir.",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Kartu tidak dikenal",
       gradCheckpoint: "Gradient Checkpointing",
-      gradCheckpointTooltip:
-        "Tukar komputasi dengan memori dengan menghitung ulang aktivasi.",
+      gradCheckpointTooltip: "Tukar komputasi dengan memori dengan menghitung ulang aktivasi.",
       none: "Tidak ada",
       standard: "Standar",
       enablePacking: "Aktifkan packing",
       assistantCompletionsOnly: "Hanya completion asisten",
       readMore: "Baca selengkapnya",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Tidak dapat menduplikasi proses",
-      duplicateDraftChanged:
-        "Pengaturan pelatihan berubah saat dimuat. Coba duplikasi lagi.",
-      duplicateNoModel:
-        "Proses ini tidak memiliki konfigurasi model yang tersimpan.",
+      duplicateDraftChanged: "Pengaturan pelatihan berubah saat dimuat. Coba duplikasi lagi.",
+      duplicateNoModel: "Proses ini tidak memiliki konfigurasi model yang tersimpan.",
       startTraining: "Mulai Pelatihan",
       starting: "Memulai...",
       loadingModel: "Memuat model...",
@@ -4841,53 +4255,35 @@ export const id = {
       chooseDataset: "Pilih dataset",
       chooseModelAndDataset: "Pilih model dan dataset",
       validation: {
-        s3MultimodalUnsupported:
-          "Dataset S3 belum didukung untuk pelatihan vision.",
+        s3MultimodalUnsupported: "Dataset S3 belum didukung untuk pelatihan vision.",
         s3BucketRequired: "Masukkan nama bucket S3 terlebih dahulu.",
-        s3CredentialsRequired:
-          "Berikan kunci akses S3 atau aktifkan peran IAM.",
+        s3CredentialsRequired: "Berikan kunci akses S3 atau aktifkan peran IAM.",
         modelRequired: "Pilih model dasar terlebih dahulu.",
-        learningRatePositive:
-          "Masukkan laju pembelajaran yang lebih besar dari nol.",
-        embeddingLearningRateRange:
-          "Masukkan laju pembelajaran embedding yang lebih besar dari 0 dan kurang dari 1.",
-        decisionColumnsMissing:
-          "Model keputusan memerlukan kolom state, questions, dan gold (atau answers). Tidak ada: {columns}.",
-        decisionOwnerOnly:
-          "Hanya pemilik Unsloth yang dapat melakukan fine-tune model keputusan.",
+        learningRatePositive: "Masukkan laju pembelajaran yang lebih besar dari nol.",
+        embeddingLearningRateRange: "Masukkan laju pembelajaran embedding yang lebih besar dari 0 dan kurang dari 1.",
+        decisionColumnsMissing: "Model keputusan memerlukan kolom state, questions, dan gold (atau answers). Tidak ada: {columns}.",
+        decisionOwnerOnly: "Hanya pemilik Unsloth yang dapat melakukan fine-tune model keputusan.",
         hfDatasetRequired: "Pilih dataset Hugging Face terlebih dahulu.",
-        hfDatasetSplitRequired:
-          "Pilih atau masukkan split pelatihan terlebih dahulu.",
+        hfDatasetSplitRequired: "Pilih atau masukkan split pelatihan terlebih dahulu.",
         localDatasetRequired: "Pilih dataset lokal terlebih dahulu.",
         unsupportedDatasetSource: "Sumber dataset tidak didukung.",
       },
       startFailed: "Gagal memulai pelatihan",
-      startUnconfirmed:
-        "Unsloth tidak dapat mengonfirmasi apakah pelatihan sudah dimulai. Memeriksa status di latar belakang.",
+      startUnconfirmed: "Unsloth tidak dapat mengonfirmasi apakah pelatihan sudah dimulai. Memeriksa status di latar belakang.",
       stopFailed: "Gagal menghentikan pelatihan",
       trainingStillActiveTitle: "Pelatihan masih aktif",
-      stopBeforeConfig:
-        "Hentikan pelatihan terlebih dahulu, lalu kembali ke konfigurasi.",
+      stopBeforeConfig: "Hentikan pelatihan terlebih dahulu, lalu kembali ke konfigurasi.",
       resumeFailed: "Gagal melanjutkan pelatihan",
       resumeFailedTitle: "Tidak dapat melanjutkan pelatihan",
-      resumeUnavailable:
-        "Hanya proses yang dihentikan atau mengalami kesalahan dengan checkpoint tersimpan yang dapat dilanjutkan.",
-      modelUnverified:
-        "Tidak dapat memverifikasi pengaturan model ini. Periksa koneksi atau token Hugging Face Anda, lalu coba lagi.",
-      legacyDatasetScriptUnsupported:
-        "Dataset Hub ini bergantung pada skrip kustom lama dan tidak didukung dalam alur pelatihan ini.",
-      hfModelAccessDenied:
-        "Hugging Face menolak akses ke model ini. Tambahkan token Hugging Face yang valid dengan akses repositori dan setujui persyaratan akses yang diperlukan, lalu coba lagi.",
-      hfModelVerificationRateLimited:
-        "Verifikasi model Hugging Face dibatasi. Coba lagi sebentar lagi.",
-      hfModelVerificationFailed:
-        "Model Hugging Face tidak dapat diverifikasi. Periksa ID repositori dan token akses Anda.",
-      hfModelMetadataUnavailable:
-        "Metadata model Hugging Face sementara tidak tersedia. Coba lagi sebelum memulai pelatihan.",
-      datasetUnverified:
-        "Tidak dapat memverifikasi apakah dataset kompatibel dengan model ini. Periksa koneksi atau token Hugging Face Anda — memulai pelatihan akan mencoba pemeriksaan lagi.",
-      setupChanged:
-        "Penyiapan pelatihan berubah saat sedang diperiksa. Tinjau dan mulai lagi.",
+      resumeUnavailable: "Hanya proses yang dihentikan atau mengalami kesalahan dengan checkpoint tersimpan yang dapat dilanjutkan.",
+      modelUnverified: "Tidak dapat memverifikasi pengaturan model ini. Periksa koneksi atau token Hugging Face Anda, lalu coba lagi.",
+      legacyDatasetScriptUnsupported: "Dataset Hub ini bergantung pada skrip kustom lama dan tidak didukung dalam alur pelatihan ini.",
+      hfModelAccessDenied: "Hugging Face menolak akses ke model ini. Tambahkan token Hugging Face yang valid dengan akses repositori dan setujui persyaratan akses yang diperlukan, lalu coba lagi.",
+      hfModelVerificationRateLimited: "Verifikasi model Hugging Face dibatasi. Coba lagi sebentar lagi.",
+      hfModelVerificationFailed: "Model Hugging Face tidak dapat diverifikasi. Periksa ID repositori dan token akses Anda.",
+      hfModelMetadataUnavailable: "Metadata model Hugging Face sementara tidak tersedia. Coba lagi sebelum memulai pelatihan.",
+      datasetUnverified: "Tidak dapat memverifikasi apakah dataset kompatibel dengan model ini. Periksa koneksi atau token Hugging Face Anda — memulai pelatihan akan mencoba pemeriksaan lagi.",
+      setupChanged: "Penyiapan pelatihan berubah saat sedang diperiksa. Tinjau dan mulai lagi.",
       uploadConfigTooltip: "Muat konfigurasi YAML yang tersimpan",
       saveConfigTooltip: "Unduh konfigurasi saat ini sebagai YAML",
       resetConfigTooltip: "Atur ulang ke default model",
@@ -4898,18 +4294,14 @@ export const id = {
       failedToReadFile: "Gagal membaca file",
       failedToSaveConfig: "Gagal menyimpan konfigurasi",
       parametersReset: "Parameter diatur ulang ke default model",
-      audioIncompatible:
-        "Model ini tidak mendukung audio. Beralih ke model yang mendukung audio atau pilih dataset non-audio.",
-      visionIncompatible:
-        "Model teks tidak kompatibel dengan dataset multimodal. Beralih ke model vision atau pilih dataset khusus teks.",
+      audioIncompatible: "Model ini tidak mendukung audio. Beralih ke model yang mendukung audio atau pilih dataset non-audio.",
+      visionIncompatible: "Model teks tidak kompatibel dengan dataset multimodal. Beralih ke model vision atau pilih dataset khusus teks.",
       cancelTitle: "Batalkan Pelatihan",
-      cancelDescription:
-        "Apakah Anda ingin membatalkan proses pelatihan saat ini?",
+      cancelDescription: "Apakah Anda ingin membatalkan proses pelatihan saat ini?",
       continueAction: "Lanjutkan Pelatihan",
       cancelAction: "Batalkan Pelatihan",
       stopTitle: "Hentikan Pelatihan",
-      stopDescription:
-        "Pilih cara menghentikan proses pelatihan saat ini. Hentikan dan Simpan menulis checkpoint yang dapat Anda lanjutkan nanti; menghentikan tanpa menyimpan tidak dapat dilanjutkan.",
+      stopDescription: "Pilih cara menghentikan proses pelatihan saat ini. Hentikan dan Simpan menulis checkpoint yang dapat Anda lanjutkan nanti; menghentikan tanpa menyimpan tidak dapat dilanjutkan.",
       stopAction: "Hentikan",
       stopping: "Menghentikan...",
       stopAndSave: "Hentikan dan Simpan",
@@ -4917,27 +4309,21 @@ export const id = {
       exportModel: "Ekspor Model",
       milestone: "Tonggak",
       halfwayDone: "Setengah jalan. Pelatihan sudah melewati 50%.",
-      doneNextStep:
-        "Pelatihan selesai. Langkah berikutnya: bandingkan output model dasar dengan model hasil fine-tune.",
+      doneNextStep: "Pelatihan selesai. Langkah berikutnya: bandingkan output model dasar dengan model hasil fine-tune.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Riwayat",
       filesDeleted: "File dihapus",
       deleteArtifactsLabel: "Hapus juga file adapter di disk",
-      deleteArtifactsDescription:
-        "Menghapus folder output proses, termasuk adapter dan checkpoint yang tersimpan.",
-      deleteArtifactsSharedNote:
-        "Proses lain berbagi folder output ini. File dipertahankan hingga proses terakhir yang menggunakannya dihapus.",
-      artifactsKeptShared:
-        "Proses dihapus. File adapter dipertahankan karena proses lain menggunakan folder yang sama.",
-      deleteArtifactsActiveError:
-        "File ini sedang digunakan oleh proses pelatihan yang berlangsung. Hentikan pelatihan sebelum menghapusnya.",
-      deleteArtifactsFailed:
-        "Proses telah dihapus tetapi file-nya tidak dapat dihapus.",
-      deleteArtifactsRetainedError:
-        "File adapter tidak dapat dihapus, sehingga proses pelatihan tetap disimpan di riwayat.",
-      emptyDescription:
-        "Belum ada proses pelatihan. Mulai proses pelatihan pertama Anda di tab Konfigurasi.",
+      deleteArtifactsDescription: "Menghapus folder output proses, termasuk adapter dan checkpoint yang tersimpan.",
+      deleteArtifactsSharedNote: "Proses lain berbagi folder output ini. File dipertahankan hingga proses terakhir yang menggunakannya dihapus.",
+      artifactsKeptShared: "Proses dihapus. File adapter dipertahankan karena proses lain menggunakan folder yang sama.",
+      deleteArtifactsActiveError: "File ini sedang digunakan oleh proses pelatihan yang berlangsung. Hentikan pelatihan sebelum menghapusnya.",
+      deleteArtifactsFailed: "Proses telah dihapus tetapi file-nya tidak dapat dihapus.",
+      deleteArtifactsRetainedError: "File adapter tidak dapat dihapus, sehingga proses pelatihan tetap disimpan di riwayat.",
+      emptyDescription: "Belum ada proses pelatihan. Mulai proses pelatihan pertama Anda di tab Konfigurasi.",
       loadError: "Gagal memuat proses pelatihan",
       deleteError: "Gagal menghapus proses pelatihan. Silakan coba lagi.",
       retry: "Coba lagi",
@@ -4946,8 +4332,7 @@ export const id = {
       loadingRun: "Memuat proses pelatihan...",
       runNotFound: "Proses tidak ditemukan",
       deleteTitle: "Hapus proses pelatihan?",
-      deleteDescription:
-        "Tindakan ini akan menghapus permanen proses pelatihan ini beserta semua metriknya. Tindakan ini tidak dapat diurungkan.",
+      deleteDescription: "Tindakan ini akan menghapus permanen proses pelatihan ini beserta semua metriknya. Tindakan ini tidak dapat diurungkan.",
       resumeTraining: "Lanjutkan pelatihan",
       resuming: "Melanjutkan...",
       deleteRun: "Hapus proses",
@@ -4971,22 +4356,35 @@ export const id = {
       copyPreviewLink: "Salin tautan pratinjau",
       previewLinkCopied: "Tautan pratinjau disalin",
       previewLinkCopyFailed: "Tidak dapat menyalin tautan",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Pengaturan Grafik",
-      settingsDescription:
-        "Sesuaikan tampilan grafik sementara pelatihan tetap berjalan.",
+      settingsDescription: "Sesuaikan tampilan grafik sementara pelatihan tetap berjalan.",
       openSettings: "Buka pengaturan grafik",
       viewWindow: "Jendela tampilan",
-      viewWindowDescription:
-        "Tampilkan hanya langkah terbaru atau seluruh riwayat.",
+      viewWindowDescription: "Tampilkan hanya langkah terbaru atau seluruh riwayat.",
       window: "Jendela",
       all: "Semua",
       trainingLoss: "Loss Pelatihan",
       trainingLossDescription: "Kendalikan overlay dan penghalusan EMA.",
       smoothing: "Penghalusan",
-      smoothingDescription:
-        "Geser ke kanan untuk penghalusan lebih banyak. `0` = mentah.",
+      smoothingDescription: "Geser ke kanan untuk penghalusan lebih banyak. `0` = mentah.",
       showRawLoss: "Tampilkan loss mentah",
       showSmoothedLoss: "Tampilkan loss yang dihaluskan",
       showAverageLine: "Tampilkan garis rata-rata",
@@ -5012,8 +4410,7 @@ export const id = {
       waitingForFirstEvaluationStep: "Menunggu langkah evaluasi pertama...",
       evaluationNotConfigured: "Evaluasi belum dikonfigurasi",
       evalChartWillAppear: "Grafik akan muncul setelah eval_steps tercapai",
-      setEvalDatasetAndSteps:
-        "Atur dataset evaluasi & eval_steps untuk melacak eval loss",
+      setEvalDatasetAndSteps: "Atur dataset evaluasi & eval_steps untuk melacak eval loss",
     },
     progress: {
       title: "Progres Pelatihan",
@@ -5070,6 +4467,9 @@ export const id = {
         error: "Kesalahan",
         stopped: "Dihentikan",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Siap",
@@ -5085,26 +4485,141 @@ export const id = {
       dataset: "Dataset",
       datasetStreaming: "Dataset: streaming (tanpa unduhan penuh)",
       modelWeights: "Bobot model",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Bobot {model} + konteks {context} = {total} dari {budget} VRAM yang dapat digunakan",
-    readoutWithSpec:
-      "Bobot {model} + KV {kv} + draf MTP {spec} = {total} dari {budget} VRAM yang dapat digunakan",
+    readout: "Bobot {model} + konteks {context} = {total} dari {budget} VRAM yang dapat digunakan",
+    readoutWithSpec: "Bobot {model} + KV {kv} + draf MTP {spec} = {total} dari {budget} VRAM yang dapat digunakan",
     kvRate: "KV dicadangkan, ~{rate}/token",
     oomLikely: "Dengan pengaturan saat ini kemungkinan OOM",
-    tooLarge:
-      "Lebih besar dari VRAM, akan di-offload ke CPU. Kuantisasi yang lebih kecil berjalan lebih cepat",
+    tooLarge: "Lebih besar dari VRAM, akan di-offload ke CPU. Kuantisasi yang lebih kecil berjalan lebih cepat",
   },
   skills: {
     title: "Skill",
-    description:
-      "Skill ditemukan dari folder agen standar Anda. Aktifkan di sini, lalu ketik @ di chat untuk menyebutkannya.",
+    description: "Skill ditemukan dari folder agen standar Anda. Aktifkan di sini, lalu ketik @ di chat untuk menyebutkannya.",
     precedence: "~/.agents/skills lebih diutamakan daripada ~/.claude/skills.",
     refresh: "Muat ulang",
-    empty:
-      "Skill tidak ditemukan. Tambahkan folder SKILL.md di bawah ~/.agents/skills atau ~/.claude/skills, lalu muat ulang.",
+    empty: "Skill tidak ditemukan. Tambahkan folder SKILL.md di bawah ~/.agents/skills atau ~/.claude/skills, lalu muat ulang.",
     sourceAgents: "Agen",
     sourceClaude: "Claude",
     sourceBundled: "Bawaan",
@@ -5118,24 +4633,17 @@ export const id = {
     newSkill: "Skill baru",
     import: "Impor",
     delete: "Hapus {name}",
-    createDescription:
-      "Disimpan sebagai SKILL.md di folder baru di bawah ~/.agents/skills, dan diaktifkan segera setelah dibuat.",
+    createDescription: "Disimpan sebagai SKILL.md di folder baru di bawah ~/.agents/skills, dan diaktifkan segera setelah dibuat.",
     nameLabel: "Nama",
     namePlaceholder: "mis. code-arithmetic",
-    nameHint:
-      "Huruf kecil, angka, dan tanda hubung tunggal. Ini juga menjadi nama folder.",
-    nameInvalid:
-      "Gunakan 1-64 huruf kecil, angka, atau tanda hubung tunggal, tidak diawali atau diakhiri dengan tanda hubung.",
+    nameHint: "Huruf kecil, angka, dan tanda hubung tunggal. Ini juga menjadi nama folder.",
+    nameInvalid: "Gunakan 1-64 huruf kecil, angka, atau tanda hubung tunggal, tidak diawali atau diakhiri dengan tanda hubung.",
     descriptionLabel: "Deskripsi",
-    descriptionPlaceholder:
-      "Gunakan saat pengguna meminta perhitungan aritmetika. Selalu hitung dengan alat kode.",
-    descriptionHint:
-      "Baris yang dilihat model di katalog skill-nya. Dari baris ini model memutuskan kapan membaca skill.",
+    descriptionPlaceholder: "Gunakan saat pengguna meminta perhitungan aritmetika. Selalu hitung dengan alat kode.",
+    descriptionHint: "Baris yang dilihat model di katalog skill-nya. Dari baris ini model memutuskan kapan membaca skill.",
     instructionsLabel: "Instruksi",
-    instructionsPlaceholder:
-      "Apa yang harus dilakukan saat skill ini berlaku, dalam Markdown.",
-    instructionsHint:
-      "Isi SKILL.md, dibaca seluruhnya setelah model memilih skill.",
+    instructionsPlaceholder: "Apa yang harus dilakukan saat skill ini berlaku, dalam Markdown.",
+    instructionsHint: "Isi SKILL.md, dibaca seluruhnya setelah model memilih skill.",
     create: "Buat skill",
     save: "Simpan perubahan",
     created: "{name} dibuat",
@@ -5150,16 +4658,13 @@ export const id = {
     importError: "Tidak dapat mengimpor skill",
     exportError: "Tidak dapat mengekspor skill",
     deleteTitle: "Hapus skill",
-    deleteDescription:
-      'Hapus "{name}" dan semua isi foldernya di bawah ~/.agents/skills? Tindakan ini tidak dapat diurungkan.',
+    deleteDescription: "Hapus \"{name}\" dan semua isi foldernya di bawah ~/.agents/skills? Tindakan ini tidak dapat diurungkan.",
     search: "Cari skill berdasarkan nama atau deskripsi…",
     noMatch: "Tidak ada skill yang cocok dengan “{query}”",
     clearSearch: "Hapus pencarian",
-    readOnlyClaude:
-      "Hanya-baca: ditemukan di ~/.claude/skills. Edit file di sana.",
+    readOnlyClaude: "Hanya-baca: ditemukan di ~/.claude/skills. Edit file di sana.",
     readOnlyBundled: "Hanya-baca: bawaan Unsloth.",
-    readOnlyLinked:
-      "Hanya-baca: entri ini adalah tautan. Edit file di lokasi aslinya.",
+    readOnlyLinked: "Hanya-baca: entri ini adalah tautan. Edit file di lokasi aslinya.",
     characters: "{count} karakter",
     unsaved: "perubahan belum disimpan",
     revert: "Kembalikan",
@@ -5168,17 +4673,14 @@ export const id = {
     compatibilityLabel: "Kompatibilitas",
     allowedToolsLabel: "Alat yang diizinkan",
     sectionAgents: "Skill Anda",
-    sectionAgentsHint:
-      "Disimpan di ~/.agents/skills. Buat, edit, dan hapus di sini.",
+    sectionAgentsHint: "Disimpan di ~/.agents/skills. Buat, edit, dan hapus di sini.",
     sectionClaude: "Skill Claude",
-    sectionClaudeHint:
-      "Ditemukan di ~/.claude/skills. Hanya-baca di sini; edit file di sana.",
+    sectionClaudeHint: "Ditemukan di ~/.claude/skills. Hanya-baca di sini; edit file di sana.",
     sectionBundled: "Bawaan",
     sectionBundledHint: "Disertakan dengan Unsloth. Hanya-baca.",
     linked: "Tautan",
     discardTitle: "Buang perubahan?",
-    discardDescription:
-      "Pengeditan pada {name} yang belum disimpan akan hilang.",
+    discardDescription: "Pengeditan pada {name} yang belum disimpan akan hilang.",
     discard: "Buang",
     mentions: "Skill",
     manage: "Kelola skill",
@@ -5188,8 +4690,7 @@ export const id = {
     disableAll: "Nonaktifkan semua",
     resetAll: "Atur ulang ke default",
     resetTitle: "Atur ulang semua skill?",
-    resetDescription:
-      "Setiap skill kembali ke kondisi instalasi baru: skill Anda dan skill Claude aktif, skill bawaan nonaktif. Pilihan aktif dan nonaktif Anda akan dihapus.",
+    resetDescription: "Setiap skill kembali ke kondisi instalasi baru: skill Anda dan skill Claude aktif, skill bawaan nonaktif. Pilihan aktif dan nonaktif Anda akan dihapus.",
     reset: "Atur ulang",
   },
   translate: {
@@ -5298,8 +4799,7 @@ export const id = {
   },
   scheduledTasks: {
     title: "Terjadwal",
-    description:
-      "Jalankan prompt sesuai jadwal dengan model mana pun milik Anda.",
+    description: "Jalankan prompt sesuai jadwal dengan model mana pun milik Anda.",
     newTask: "Tugas baru",
     upcoming: "Akan datang",
     columns: {
@@ -5318,8 +4818,7 @@ export const id = {
     chatMark: "Chat dari tugas terjadwal",
     taskMissing: "Tugas ini sudah tidak ada.",
     emptyTitle: "Belum ada tugas terjadwal",
-    emptyDescription:
-      "Dapatkan ringkasan harian, pengingat mingguan, atau apa pun yang ingin Anda selesaikan sesuai jadwal.",
+    emptyDescription: "Dapatkan ringkasan harian, pengingat mingguan, atau apa pun yang ingin Anda selesaikan sesuai jadwal.",
     createFirst: "Buat tugas",
     loadFailed: "Tidak dapat memuat tugas terjadwal.",
     retry: "Coba lagi",
@@ -5365,8 +4864,7 @@ export const id = {
       time: "Waktu",
       days: "Hari",
       dayOfMonth: "Tanggal dalam bulan",
-      lastDayNote:
-        "Bulan yang tidak memiliki tanggal ini akan dijalankan pada hari terakhirnya.",
+      lastDayNote: "Bulan yang tidak memiliki tanggal ini akan dijalankan pada hari terakhirnya.",
       advanced: "Lanjutan",
       notifications: "Notifikasi",
       notifyAll: "Setiap proses",
@@ -5379,16 +4877,12 @@ export const id = {
       model: "Model",
       modelLoaded: "Model apa pun yang sedang dimuat",
       modelOnDevice: "Di perangkat ini",
-      modelNote:
-        "Jika model ini belum dimuat saat tugas dijalankan, Unsloth akan bertanya terlebih dahulu.",
-      modelNoteAllowed:
-        "Memuat model ini hanya saat Anda tidak menggunakan Unsloth, lalu mengembalikan model yang sebelumnya Anda gunakan.",
-      modelEmpty:
-        "Unduh model di Hub model atau tambahkan koneksi untuk memilih model lain.",
+      modelNote: "Jika model ini belum dimuat saat tugas dijalankan, Unsloth akan bertanya terlebih dahulu.",
+      modelNoteAllowed: "Memuat model ini hanya saat Anda tidak menggunakan Unsloth, lalu mengembalikan model yang sebelumnya Anda gunakan.",
+      modelEmpty: "Unduh model di Hub model atau tambahkan koneksi untuk memilih model lain.",
       modelMissing: "{model} (tidak ada di perangkat ini)",
       allowLoad: "Beralih otomatis saat saya tidak ada",
-      allowLoadHint:
-        "Saat tugas ini jatuh tempo dan Anda belum menggunakan Unsloth selama 5 menit, Unsloth memuat model ini tanpa bertanya, menjalankan tugas, lalu beralih kembali ke model yang sebelumnya Anda gunakan. Jika Anda sedang menggunakan Unsloth atau melatih model pada saat itu, proses dilewati dan model Anda tidak diubah. Jika nonaktif, Unsloth bertanya sebelum memuat.",
+      allowLoadHint: "Saat tugas ini jatuh tempo dan Anda belum menggunakan Unsloth selama 5 menit, Unsloth memuat model ini tanpa bertanya, menjalankan tugas, lalu beralih kembali ke model yang sebelumnya Anda gunakan. Jika Anda sedang menggunakan Unsloth atau melatih model pada saat itu, proses dilewati dan model Anda tidak diubah. Jika nonaktif, Unsloth bertanya sebelum memuat.",
       reasoning: "Upaya berpikir",
       reasoningDefault: "Default",
       reasoningOff: "Nonaktif",
@@ -5398,20 +4892,14 @@ export const id = {
     },
     deleteDialog: {
       title: "Hapus tugas terjadwal?",
-      description:
-        "“{title}” akan berhenti dijalankan. Chat yang sudah dibuatnya tetap disimpan.",
+      description: "“{title}” akan berhenti dijalankan. Chat yang sudah dibuatnya tetap disimpan.",
     },
     errors: {
-      noModel:
-        "Tidak ada model yang dimuat. Muat model di Chat, lalu jalankan tugas lagi.",
-      modelNotLoaded:
-        "Model tugas belum dimuat. Muat di Chat, lalu jalankan tugas lagi.",
-      modelLoadFailed:
-        "Tidak dapat memuat model tugas. Pastikan model masih diunduh di Hub model.",
-      modelBusy:
-        "Dilewati karena Anda sedang menggunakan Unsloth, sehingga model Anda tidak diubah.",
-      connectionUnavailable:
-        "Koneksi tugas tidak ada atau dinonaktifkan. Periksa di Koneksi.",
+      noModel: "Tidak ada model yang dimuat. Muat model di Chat, lalu jalankan tugas lagi.",
+      modelNotLoaded: "Model tugas belum dimuat. Muat di Chat, lalu jalankan tugas lagi.",
+      modelLoadFailed: "Tidak dapat memuat model tugas. Pastikan model masih diunduh di Hub model.",
+      modelBusy: "Dilewati karena Anda sedang menggunakan Unsloth, sehingga model Anda tidak diubah.",
+      connectionUnavailable: "Koneksi tugas tidak ada atau dinonaktifkan. Periksa di Koneksi.",
       timeout: "Model terlalu lama menjawab.",
       cancelled: "Proses dihentikan sebelum selesai.",
       interrupted: "Unsloth ditutup sebelum proses selesai.",
@@ -5424,10 +4912,8 @@ export const id = {
     },
     loadPrompt: {
       title: "Muat {model}?",
-      description:
-        "“{title}” berjalan di {model}, yang belum dimuat. Menjalankannya akan memuat {model} hingga selesai, lalu mengembalikan model yang sebelumnya Anda gunakan.",
-      always:
-        "Jangan tanya lagi. Beralih hanya saat saya tidak menggunakan Unsloth.",
+      description: "“{title}” berjalan di {model}, yang belum dimuat. Menjalankannya akan memuat {model} hingga selesai, lalu mengembalikan model yang sebelumnya Anda gunakan.",
+      always: "Jangan tanya lagi. Beralih hanya saat saya tidak menggunakan Unsloth.",
       notNow: "Jangan sekarang",
       load: "Muat dan jalankan",
     },
@@ -5438,8 +4924,7 @@ export const id = {
       open: "Buka",
       view: "Lihat",
     },
-    notificationBody:
-      "Tugas terjadwal Anda telah selesai. Buka Unsloth untuk membaca jawabannya.",
+    notificationBody: "Tugas terjadwal Anda telah selesai. Buka Unsloth untuk membaca jawabannya.",
   },
   library: {
     tabs: {
@@ -5465,7 +4950,7 @@ export const id = {
         chats: "Cari chat",
         projects: "Cari proyek",
         archived: "Cari chat yang diarsipkan",
-        project: 'Cari di "{project}"',
+        project: "Cari di \"{project}\"",
         sections: "Cari bagian",
       },
       toolbar: {
@@ -5520,25 +5005,19 @@ export const id = {
       },
       empty: {
         chatsTitle: "Belum ada chat",
-        chatsDescription:
-          "Percakapan Anda muncul di sini, terpisah dari file Anda.",
+        chatsDescription: "Percakapan Anda muncul di sini, terpisah dari file Anda.",
         archivedTitle: "Tidak ada yang diarsipkan",
         archivedDescription: "Chat yang Anda arsipkan muncul di sini.",
         sectionsTitle: "Belum ada bagian",
-        sectionsDescription:
-          "Bagian mengelompokkan chat dan proyek di bilah sisi sesuka Anda.",
+        sectionsDescription: "Bagian mengelompokkan chat dan proyek di bilah sisi sesuka Anda.",
         sectionTitle: "Belum ada apa pun di bagian ini",
-        sectionDescription:
-          "Pindahkan chat ke sini dari menunya, atau mulai chat baru di bagian ini.",
+        sectionDescription: "Pindahkan chat ke sini dari menunya, atau mulai chat baru di bagian ini.",
       },
       dialog: {
         renameChat: "Ganti nama chat",
-        deleteChatDescription:
-          "Chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
-        deleteProjectDescription:
-          "Proyek dan chat di dalamnya ({count}) akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
-        deleteFilesMany:
-          "Hapus juga file dan folder sandbox yang dibuat oleh chat ini.",
+        deleteChatDescription: "Chat dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+        deleteProjectDescription: "Proyek dan chat di dalamnya ({count}) akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
+        deleteFilesMany: "Hapus juga file dan folder sandbox yang dibuat oleh chat ini.",
         deleteProjectFilesLabel: "Hapus folder ruang kerja proyek",
         deleteProjectFiles: "Folder ruang kerja proyek akan dihapus dari disk.",
       },
@@ -5546,37 +5025,29 @@ export const id = {
         projectMoved: "{project} dipindahkan ke {section}",
         projectUnfiled: "{project} dikeluarkan dari {section}",
         forkFailed: "Gagal mencabangkan",
-        projectDeleted: '"{name}" dihapus',
+        projectDeleted: "\"{name}\" dihapus",
         projectDeleteFailed: "Gagal menghapus proyek",
         removedFromSection: "Dikeluarkan dari bagian: {count}",
       },
       folder: {
         openChat: "Buka folder chat",
-        openChatTitle:
-          "Buka folder yang dibaca dan ditulis oleh panggilan alat chat ini",
+        openChatTitle: "Buka folder yang dibaca dan ditulis oleh panggilan alat chat ini",
         openProject: "Buka folder proyek",
-        openProjectTitle:
-          "Buka folder yang dibaca dan ditulis oleh chat proyek ini",
-        chatHint:
-          "Hanya aplikasi desktop yang dapat membuka folder file chat. Di browser, unduh file dari hasil alat yang menulisnya.",
-        projectHint:
-          "Hanya aplikasi desktop yang dapat membuka folder proyek. Di browser, unduh file dari hasil alat yang menulisnya.",
+        openProjectTitle: "Buka folder yang dibaca dan ditulis oleh chat proyek ini",
+        chatHint: "Hanya aplikasi desktop yang dapat membuka folder file chat. Di browser, unduh file dari hasil alat yang menulisnya.",
+        projectHint: "Hanya aplikasi desktop yang dapat membuka folder proyek. Di browser, unduh file dari hasil alat yang menulisnya.",
         manyFolders: "Chat ini menulis ke lebih dari satu folder.",
-        manyFoldersDescription:
-          "Chat ini menjalankan alat sebelum dan sesudah pemindahan, jadi buka folder dari kartu alat.",
+        manyFoldersDescription: "Chat ini menjalankan alat sebelum dan sesudah pemindahan, jadi buka folder dari kartu alat.",
         chatFailed: "Tidak dapat membuka folder chat.",
         projectFailed: "Tidak dapat membuka folder proyek.",
         chatMissing: "Chat ini belum memiliki folder.",
         projectMissing: "Proyek ini belum memiliki folder.",
-        missingDescription:
-          "Folder dibuat saat alat pertama kali menulis file.",
+        missingDescription: "Folder dibuat saat alat pertama kali menulis file.",
         upload: "Unggah ke folder chat",
-        uploadTitle:
-          "Tambahkan file ke folder yang dibaca dan ditulis oleh panggilan alat chat ini",
+        uploadTitle: "Tambahkan file ke folder yang dibaca dan ditulis oleh panggilan alat chat ini",
         uploaded: "{name} ditambahkan ke folder chat",
         uploadedMany: "{count} file ditambahkan ke folder chat",
-        uploadedDescription:
-          "Alat di chat ini sekarang dapat membukanya. File tidak ditambahkan ke percakapan.",
+        uploadedDescription: "Alat di chat ini sekarang dapat membukanya. File tidak ditambahkan ke percakapan.",
         uploadExists: "{name} sudah ada di folder chat",
         uploadExistsMany: "{count} file sudah ada di folder chat",
         replace: "Ganti",
@@ -5585,11 +5056,9 @@ export const id = {
     },
     empty: {
       suggestedTitle: "Pustaka Anda kosong",
-      suggestedDescription:
-        "File yang Anda unggah atau buat di chat muncul di sini.",
+      suggestedDescription: "File yang Anda unggah atau buat di chat muncul di sini.",
       favoritesTitle: "Belum ada favorit",
-      favoritesDescription:
-        "Tambahkan file ke favorit agar cepat ditemukan di sini.",
+      favoritesDescription: "Tambahkan file ke favorit agar cepat ditemukan di sini.",
       foldersTitle: "Buat folder pertama Anda",
       foldersDescription: "Buat folder untuk mengatur item di pustaka Anda.",
       imagesTitle: "Belum ada gambar",
@@ -5597,11 +5066,9 @@ export const id = {
       videosTitle: "Belum ada video",
       videosDescription: "Video yang Anda unggah atau buat muncul di sini.",
       audioTitle: "Belum ada audio",
-      audioDescription:
-        "Ucapan, musik, dan stem yang Anda buat di halaman Audio muncul di sini.",
+      audioDescription: "Ucapan, musik, dan stem yang Anda buat di halaman Audio muncul di sini.",
       modelsTitle: "Belum ada model hasil fine-tune",
-      modelsDescription:
-        "Model yang Anda latih atau ekspor di Unsloth muncul di sini.",
+      modelsDescription: "Model yang Anda latih atau ekspor di Unsloth muncul di sini.",
       createFolder: "Buat folder",
       generateImage: "Buat gambar",
       generateVideo: "Buat video",
@@ -5622,7 +5089,7 @@ export const id = {
     searchLibrary: "Cari di pustaka",
     searchFolder: "Cari di folder",
     dropToUpload: "Letakkan untuk mengunggah",
-    dropToUploadInto: 'Letakkan untuk mengunggah ke "{folder}"',
+    dropToUploadInto: "Letakkan untuk mengunggah ke \"{folder}\"",
     itemCountOne: "{count} item",
     itemCount: "{count} item",
     selectItem: "Pilih {name}",
@@ -5722,14 +5189,11 @@ export const id = {
       create: "Buat",
       renameFolder: "Ganti nama folder",
       renameFile: "Ganti nama file",
-      deleteTitle: 'Hapus "{name}"?',
+      deleteTitle: "Hapus \"{name}\"?",
       deleteManyTitle: "Hapus {count} item?",
-      deleteManyDescription:
-        "File dihapus dari lokasi aslinya. Apa pun di dalam folder yang dihapus akan naik satu tingkat.",
-      deleteFolderIntoParent:
-        'Semua isinya dipindahkan ke "{folder}". Tidak ada file yang dihapus.',
-      deleteFolderIntoLibrary:
-        "Semua isinya dipindahkan ke Pustaka Anda. Tidak ada file yang dihapus.",
+      deleteManyDescription: "File dihapus dari lokasi aslinya. Apa pun di dalam folder yang dihapus akan naik satu tingkat.",
+      deleteFolderIntoParent: "Semua isinya dipindahkan ke \"{folder}\". Tidak ada file yang dihapus.",
+      deleteFolderIntoLibrary: "Semua isinya dipindahkan ke Pustaka Anda. Tidak ada file yang dihapus.",
       deleteUpload: "Tindakan ini menghapus file secara permanen.",
       deleteAttachment: "File juga dihapus dari chat tempat file dilampirkan.",
       deleteImage: "File juga dihapus dari galeri Gambar Anda.",
@@ -5738,8 +5202,7 @@ export const id = {
       deleteSandbox: "File juga dihapus dari chat yang membuatnya.",
       deleteModel: "Tindakan ini menghapus model dari disk secara permanen.",
       unsavedTitle: "Perubahan Anda tidak disimpan",
-      unsavedDescription:
-        "{reason} Coba lagi, atau buang perubahan Anda untuk menutup file.",
+      unsavedDescription: "{reason} Coba lagi, atau buang perubahan Anda untuk menutup file.",
       keepEditing: "Lanjutkan mengedit",
       discardChanges: "Buang perubahan",
     },
@@ -5756,21 +5219,17 @@ export const id = {
       sheetTruncated: "Menampilkan sebagian sheet ini",
       documentTruncated: "Menampilkan bagian awal dokumen ini",
       emptyDocument: "File ini kosong.",
-      cannotPreview:
-        "File ini tidak dapat dipratinjau di sini. Unduh untuk membukanya.",
+      cannotPreview: "File ini tidak dapat dipratinjau di sini. Unduh untuk membukanya.",
       noPreview: "Tidak ada pratinjau untuk jenis file ini.",
-      tooLargeToPreview:
-        "File ini terlalu besar untuk dipratinjau di sini. Unduh untuk membukanya.",
+      tooLargeToPreview: "File ini terlalu besar untuk dipratinjau di sini. Unduh untuk membukanya.",
       startWriting: "Mulai menulis…",
       type: "Jenis",
       baseModel: "Model dasar",
       size: "Ukuran",
       location: "Lokasi",
       unknown: "Tidak diketahui",
-      readOnlyUtf16:
-        "File ini bukan teks UTF-16 yang valid, jadi dibuka dalam mode hanya-baca di sini.",
-      readOnlyNotUtf8:
-        "File ini bukan teks UTF-8, jadi dibuka dalam mode hanya-baca di sini. Beberapa karakter mungkin tidak ditampilkan dengan benar.",
+      readOnlyUtf16: "File ini bukan teks UTF-16 yang valid, jadi dibuka dalam mode hanya-baca di sini.",
+      readOnlyNotUtf8: "File ini bukan teks UTF-8, jadi dibuka dalam mode hanya-baca di sini. Beberapa karakter mungkin tidak ditampilkan dengan benar.",
     },
     viewer: {
       scale: "Skala",
@@ -5830,8 +5289,7 @@ export const id = {
       downloadFailed: "Tidak dapat mengunduh {name}",
       downloadManyFailed: "Tidak dapat mengunduh file",
       downloadingMany: "Mengunduh {count} file",
-      downloadingManyDescription:
-        "Jika browser Anda bertanya, izinkan situs ini mengunduh beberapa file.",
+      downloadingManyDescription: "Jika browser Anda bertanya, izinkan situs ini mengunduh beberapa file.",
       preparingMany: "Menyiapkan {count} file…",
       zipFileName: "File Pustaka",
       nothingToChat: "Belum ada yang dapat dibahas",
@@ -5842,8 +5300,7 @@ export const id = {
       attachedMany: "{count} file dilampirkan",
       skippedTooLarge: "{count} terlalu besar untuk dilampirkan.",
       skippedOverLimit: "{count} lainnya melebihi batas {limit} file.",
-      chatFilesWaiting:
-        "{count} akan dilampirkan setelah model yang dapat membacanya dimuat.",
+      chatFilesWaiting: "{count} akan dilampirkan setelah model yang dapat membacanya dimuat.",
       openFilesFailed: "Tidak dapat membuka file",
       editImageFailed: "Tidak dapat membuka gambar untuk diedit",
       speechModel: "{name} adalah model ucapan",
@@ -5870,10 +5327,8 @@ export const id = {
   },
   exportDecision: {
     title: "Model keputusan",
-    description:
-      "Model keputusan {layout} diekspor ke GGUF untuk server keputusan llama.cpp. Pilih satu atau beberapa kuantisasi.",
-    adapterNote:
-      "Checkpoint ini berisi adapter LoRA; adapter digabungkan sebelum konversi.",
+    description: "Model keputusan {layout} diekspor ke GGUF untuk server keputusan llama.cpp. Pilih satu atau beberapa kuantisasi.",
+    adapterNote: "Checkpoint ini berisi adapter LoRA; adapter digabungkan sebelum konversi.",
     notEligibleTitle: "Ekspor GGUF tidak tersedia",
     ggufOnly: "Model keputusan hanya dapat diekspor ke GGUF",
     existing: "Sudah diekspor: {quantizations}",
@@ -5883,18 +5338,15 @@ export const id = {
   },
   decisions: {
     title: "Coba keputusan",
-    description:
-      "Ajukan pertanyaan kepada model keputusan tentang teks apa pun.",
+    description: "Ajukan pertanyaan kepada model keputusan tentang teks apa pun.",
     tryIt: "Coba",
     tryItOff: "Aktifkan Layani permintaan untuk mencobanya.",
     typeNoul: "Ya / tidak",
     typeChoice: "Pilihan",
     typeScore: "Skor",
     aboutNoul: "Menjawab ya atau tidak, beserta probabilitas ya.",
-    aboutChoice:
-      "Memilih satu opsi dari daftar, beserta probabilitas untuk masing-masing.",
-    aboutScore:
-      "Menilai keadaan pada skala tingkat, dimulai dari yang terendah.",
+    aboutChoice: "Memilih satu opsi dari daftar, beserta probabilitas untuk masing-masing.",
+    aboutScore: "Menilai keadaan pada skala tingkat, dimulai dari yang terendah.",
     model: "Model keputusan",
     defaultModel: "Default ({model})",
     layaModel: "Laya {model}",
@@ -5902,8 +5354,7 @@ export const id = {
     modelReady: "Siap",
     modelLoading: "Memuat",
     modelNotLoaded: "Dimuat saat pertama dijalankan",
-    connectionNotDefault:
-      "Atur ini sebagai model API Keputusan di Pengaturan > API terlebih dahulu.",
+    connectionNotDefault: "Atur ini sebagai model API Keputusan di Pengaturan > API terlebih dahulu.",
     question: "Pertanyaan",
     questionHelp: "Apa yang harus diputuskan model.",
     result: "Hasil",
@@ -5913,10 +5364,8 @@ export const id = {
     state: "Keadaan",
     stateHelp: "Teks yang akan diputuskan. Teks biasa atau JSON.",
     criteria: "Kriteria",
-    criteriaNoulHelp:
-      "Opsional. Apa yang dianggap ya dan apa yang dianggap tidak.",
-    criteriaChoiceHelp:
-      "Opsi yang dapat dipilih, masing-masing dengan deskripsi singkat.",
+    criteriaNoulHelp: "Opsional. Apa yang dianggap ya dan apa yang dianggap tidak.",
+    criteriaChoiceHelp: "Opsi yang dapat dipilih, masing-masing dengan deskripsi singkat.",
     criteriaScoreHelp: "Tingkat skala, dimulai dari yang terendah.",
     yesWhen: "Ya jika",
     noWhen: "Tidak jika",
@@ -5980,21 +5429,16 @@ export const id = {
       noneLoaded: "Tidak ada model yang dimuat",
       noneLoadedDetail: "Model yang Anda muat akan ditampilkan di sini.",
       otherAccount: "Digunakan oleh akun lain",
-      otherAccountDetail:
-        "Memori ditempati oleh model yang tidak dapat Anda lihat",
-      toastStillResident:
-        '"{model}" dimuat saat sedang dikeluarkan, sehingga masih menggunakan memori. Keluarkan lagi untuk membebaskannya.',
-      toastUnverified:
-        "{model} diminta untuk dilepas, tetapi runtime-nya tidak mengonfirmasi. Periksa kartu sebentar lagi.",
+      otherAccountDetail: "Memori ditempati oleh model yang tidak dapat Anda lihat",
+      toastStillResident: "\"{model}\" dimuat saat sedang dikeluarkan, sehingga masih menggunakan memori. Keluarkan lagi untuk membebaskannya.",
+      toastUnverified: "{model} diminta untuk dilepas, tetapi runtime-nya tidak mengonfirmasi. Periksa kartu sebentar lagi.",
       toastAlreadyFree: "{model} sudah tidak dimuat.",
-      toastReplaced:
-        '{model} sudah tidak dimuat. "{resident}" menggantikannya dan dibiarkan apa adanya.',
+      toastReplaced: "{model} sudah tidak dimuat. \"{resident}\" menggantikannya dan dibiarkan apa adanya.",
       toastEjected: "{model} dikeluarkan",
       toastFailed: "Gagal mengeluarkan {model}",
     },
     monitor: {
-      dragHandleLabel:
-        "Pindahkan pemantau langsung. Tombol panah menggesernya sedikit, klik dua kali untuk mengatur ulang.",
+      dragHandleLabel: "Pindahkan pemantau langsung. Tombol panah menggesernya sedikit, klik dua kali untuk mengatur ulang.",
       resizeHint: "Seret sisi atau sudut untuk mengubah lebar. Klik dua kali untuk mengatur ulang.",
       reconnecting: "Menyambungkan kembali...",
     },
@@ -6015,8 +5459,7 @@ export const id = {
     oldestFirst: "Terlama dahulu",
     today: "Hari ini",
     yesterday: "Kemarin",
-    emptyDescription:
-      "Proyek menyatukan chat yang saling terkait, dengan instruksi dan sumber bersama yang dapat digunakan setiap chat di dalamnya.",
+    emptyDescription: "Proyek menyatukan chat yang saling terkait, dengan instruksi dan sumber bersama yang dapat digunakan setiap chat di dalamnya.",
     createFirst: "Buat proyek pertama Anda",
     noMatches: "Tidak ada proyek yang cocok dengan pencarian Anda.",
     clearSearch: "Hapus pencarian",
@@ -6038,16 +5481,14 @@ export const id = {
     renameChat: "Ganti nama chat",
     chatName: "Nama chat",
     deleteChat: "Hapus chat",
-    deleteChatDescription:
-      'Chat "{name}" dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.',
+    deleteChatDescription: "Chat \"{name}\" dan pesannya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
     importChats: "Impor chat",
     importDestination: "Pilih tujuan impor {name}:",
     selectDestination: "Pilih tujuan",
     recents: "Terbaru",
     import: "Impor",
     deleteProject: "Hapus proyek",
-    deleteProjectDescription:
-      'Proyek "{name}" dan semua chat di dalamnya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.',
+    deleteProjectDescription: "Proyek \"{name}\" dan semua chat di dalamnya akan dihapus secara permanen. Tindakan ini tidak dapat dibatalkan.",
     deleteProjectFiles: "Folder ruang kerja proyek akan dihapus dari disk.",
     deleteAll: "Hapus semua",
     projectFallback: "proyek",
@@ -6073,18 +5514,14 @@ export const id = {
     currentPassword: "Kata sandi saat ini",
     newPassword: "Kata sandi baru",
     confirmPassword: "Konfirmasi kata sandi",
-    setupCodeHint:
-      "Pertama kali masuk? Tempel kode penyiapan dari administrator Anda sebagai kata sandi.",
-    ownerHint:
-      "Pemilik instalasi? Masuk sebagai unsloth, atau nama masuk yang ditampilkan di Pengaturan > Akun.",
-    currentSetupCodeHint:
-      "Tempel kode penyiapan yang baru saja Anda gunakan untuk masuk sebagai kata sandi saat ini.",
+    setupCodeHint: "Pertama kali masuk? Tempel kode penyiapan dari administrator Anda sebagai kata sandi.",
+    ownerHint: "Pemilik instalasi? Masuk sebagai unsloth, atau nama masuk yang ditampilkan di Pengaturan > Akun.",
+    currentSetupCodeHint: "Tempel kode penyiapan yang baru saja Anda gunakan untuk masuk sebagai kata sandi saat ini.",
     minLength: "Minimal 8 karakter.",
     ensureMatch: "Pastikan kata sandi cocok.",
     noSpaces: "Kata sandi baru tidak boleh berisi spasi.",
     currentTooShort: "Kata sandi saat ini harus minimal 8 karakter.",
-    setupInitFailed:
-      "Tidak dapat menginisialisasi penyiapan. Muat ulang halaman dan coba lagi.",
+    setupInitFailed: "Tidak dapat menginisialisasi penyiapan. Muat ulang halaman dan coba lagi.",
     newTooShort: "Kata sandi baru harus minimal 8 karakter.",
     mismatch: "Kata sandi tidak cocok.",
     mustDiffer: "Kata sandi baru harus berbeda dari kata sandi saat ini.",
@@ -6092,17 +5529,14 @@ export const id = {
     continueAsOwner: "Lanjutkan sebagai pemilik",
     signInWithUsername: "Masuk dengan nama pengguna dan kata sandi Anda.",
     bootstrapping: "Autentikasi masih menyiapkan akun admin default.",
-    signInToChange:
-      "Masuk sekali dengan kredensial awal untuk mengubah kata sandi.",
+    signInToChange: "Masuk sekali dengan kredensial awal untuk mengubah kata sandi.",
     alreadyUpdated: "Kata sandi sudah diperbarui. Gunakan layar masuk.",
     busy: "Unsloth sedang sibuk. Coba lagi sebentar lagi.",
     updateFailed: "Pembaruan kata sandi gagal.",
     loadFailed: "Gagal memuat.",
     failed: "Autentikasi gagal.",
-    shuttingDown:
-      "Instans ini sedang dimatikan: instans dapat dijangkau di jaringan dan kata sandi default-nya tidak pernah diubah.",
-    shutdownCountdown:
-      "Instans ini dapat dijangkau di jaringan dan masih menggunakan kata sandi default, sehingga akan dimatikan dalam {time}. Mengatur kata sandi di sini akan membuatnya tetap berjalan.",
+    shuttingDown: "Instans ini sedang dimatikan: instans dapat dijangkau di jaringan dan kata sandi default-nya tidak pernah diubah.",
+    shutdownCountdown: "Instans ini dapat dijangkau di jaringan dan masih menggunakan kata sandi default, sehingga akan dimatikan dalam {time}. Mengatur kata sandi di sini akan membuatnya tetap berjalan.",
   },
   routes: {
     chat: "Chat",
@@ -6116,22 +5550,15 @@ export const id = {
     blockedTitle: "Kode kustom diblokir",
     enableTitle: "Aktifkan kode kustom untuk model ini?",
     thisModel: "Model ini",
-    unsafeBody:
-      "{model} berisi file yang ditandai tidak aman oleh pemindaian keamanan Hugging Face (misalnya, pickle berbahaya yang akan menjalankan kode saat model dimuat). Model ini tidak dapat dimuat. File yang ditandai tidak pernah diunduh.",
-    unsafeBodyFromProvider:
-      "{model} dari {provider} berisi file yang ditandai tidak aman oleh pemindaian keamanan Hugging Face (misalnya, pickle berbahaya yang akan menjalankan kode saat model dimuat). Model ini tidak dapat dimuat. File yang ditandai tidak pernah diunduh.",
-    customCode:
-      "{model} mendeklarasikan kode Python kustom di repositorinya. {note}",
-    customCodeFromProvider:
-      "{model} dari {provider} mendeklarasikan kode Python kustom di repositorinya. {note}",
-    blockedNote:
-      "Pemindaian keamanan menandai masalah CRITICAL, sehingga tidak dapat diaktifkan.",
-    reviewNote:
-      "Tinjau pemindaian keamanan di bawah. Lanjutkan hanya jika Anda memercayai sumber model.",
+    unsafeBody: "{model} berisi file yang ditandai tidak aman oleh pemindaian keamanan Hugging Face (misalnya, pickle berbahaya yang akan menjalankan kode saat model dimuat). Model ini tidak dapat dimuat. File yang ditandai tidak pernah diunduh.",
+    unsafeBodyFromProvider: "{model} dari {provider} berisi file yang ditandai tidak aman oleh pemindaian keamanan Hugging Face (misalnya, pickle berbahaya yang akan menjalankan kode saat model dimuat). Model ini tidak dapat dimuat. File yang ditandai tidak pernah diunduh.",
+    customCode: "{model} mendeklarasikan kode Python kustom di repositorinya. {note}",
+    customCodeFromProvider: "{model} dari {provider} mendeklarasikan kode Python kustom di repositorinya. {note}",
+    blockedNote: "Pemindaian keamanan menandai masalah CRITICAL, sehingga tidak dapat diaktifkan.",
+    reviewNote: "Tinjau pemindaian keamanan di bawah. Lanjutkan hanya jika Anda memercayai sumber model.",
     trustNote: "Lanjutkan hanya jika Anda memercayai sumber model.",
     flaggedIntro: "Pemindai otomatis kami menandai masalah, termasuk:",
-    nothingFlagged:
-      "Pemindai otomatis kami tidak menandai file yang mengkhawatirkan, tetapi harap periksa kembali.",
+    nothingFlagged: "Pemindai otomatis kami tidak menandai file yang mengkhawatirkan, tetapi harap periksa kembali.",
     unscannedTitle: "File model tidak dapat dipindai",
     unscannedBody: "{model} berisi bobot pickle, yang dapat menjalankan kode saat dimuat, dan tidak ada pemindaian malware yang tersedia untuknya, sehingga tidak dapat dimuat. {note}",
     unscannedIntro: "File yang tidak dapat dipindai:",
@@ -6162,15 +5589,12 @@ export const id = {
     openChangelog: "Buka changelog",
     retry: "Coba lagi",
     loadingChanges: "Memuat perubahan baru...",
-    customLlamaRepo:
-      "Instalasi ini melacak repositori llama.cpp kustom, sehingga perubahannya tidak dapat dibandingkan.",
-    noItemisedNotes:
-      "Build ini lebih lama dari catatan rilis per item, sehingga perubahannya tidak dapat dibandingkan.",
+    customLlamaRepo: "Instalasi ini melacak repositori llama.cpp kustom, sehingga perubahannya tidak dapat dibandingkan.",
+    noItemisedNotes: "Build ini lebih lama dari catatan rilis per item, sehingga perubahannya tidak dapat dibandingkan.",
     compareFailed: "Tidak dapat membandingkan rilis ini.",
     llamaChangesLabel: "Perubahan llama.cpp baru dari {from} ke {to}",
     showingChanges: "Menampilkan {shown} dari {total} perubahan",
-    noCarriedChanges:
-      "Tidak ada perubahan baru yang dibawa yang tercantum untuk build ini.",
+    noCarriedChanges: "Tidak ada perubahan baru yang dibawa yang tercantum untuk build ini.",
     notesFor: "Catatan rilis untuk {release}",
     notesForVersion: "Catatan rilis untuk versi {version}",
     notesTruncated: "Catatan dipotong. Lihat catatan rilis lengkap.",
@@ -6191,8 +5615,7 @@ export const id = {
     useDefaultLocation: "Gunakan default",
     longPaths: {
       title: "Windows akan meminta izin",
-      approve:
-        "Setujui {tool} sekali untuk mengaktifkan jalur file panjang bagi kernel yang dikompilasi.",
+      approve: "Setujui {tool} sekali untuk mengaktifkan jalur file panjang bagi kernel yang dikompilasi.",
       waiting: "Menunggu izin Windows...",
     },
     skip: "Lewati",
@@ -6208,8 +5631,7 @@ export const id = {
       finishingDetail: "Menyiapkan semuanya.",
       continuesAutomatically: "Penyiapan akan berlanjut secara otomatis.",
       fewMinutes: "Proses ini dapat memakan waktu beberapa menit.",
-      someTakeLonger:
-        "Beberapa komponen membutuhkan waktu lebih lama untuk dikonfigurasi.",
+      someTakeLonger: "Beberapa komponen membutuhkan waktu lebih lama untuk dikonfigurasi.",
     },
     details: {
       showInstall: "Tampilkan detail instalasi",
@@ -6222,8 +5644,7 @@ export const id = {
     repair: {
       upgrading: "Meningkatkan ke instalasi lengkap...",
       gettingReady: "Menyiapkan semuanya...",
-      upgradingDetail:
-        "Mengunduh PyTorch dan library-nya untuk GPU mesin ini. Proses ini dapat memakan waktu beberapa menit.",
+      upgradingDetail: "Mengunduh PyTorch dan library-nya untuk GPU mesin ini. Proses ini dapat memakan waktu beberapa menit.",
       wontTakeLong: "Ini tidak akan lama.",
       upgradeFailed: "Tidak dapat meningkatkan ke instalasi lengkap",
       updateFailed: "Pembaruan gagal",
@@ -6250,8 +5671,7 @@ export const id = {
     diagnostics: {
       copy: "Salin Diagnostik",
       copying: "Menyalin...",
-      clipboardFailed:
-        "Gagal menyalin ke papan klip. Pilih dan salin diagnostik di bawah.",
+      clipboardFailed: "Gagal menyalin ke papan klip. Pilih dan salin diagnostik di bawah.",
       copyFailed: "Gagal menyalin diagnostik: {error}",
     },
   },
@@ -6261,8 +5681,7 @@ export const id = {
     installing: "Menginstal pembaruan...",
     failed: "Pembaruan gagal",
     updating: "Memperbarui...",
-    updatingBackendDetail:
-      "Proses ini dapat memakan waktu beberapa menit. Jangan tutup aplikasi.",
+    updatingBackendDetail: "Proses ini dapat memakan waktu beberapa menit. Jangan tutup aplikasi.",
     percentDownloaded: "{percent}% diunduh",
     restartShortly: "Aplikasi akan segera dimulai ulang.",
     failedDetail: "Terjadi kesalahan selama pembaruan.",
@@ -6322,10 +5741,8 @@ export const id = {
     bundleTitle: "{count} pembaruan runtime",
     newBackend: "Backend runtime baru",
     newUpdate: "Pembaruan runtime baru",
-    hideUpdate:
-      "Sembunyikan pembaruan {component} hingga Unsloth dibuka kembali",
-    hideUpdates:
-      "Sembunyikan pembaruan {components} hingga Unsloth dibuka kembali",
+    hideUpdate: "Sembunyikan pembaruan {component} hingga Unsloth dibuka kembali",
+    hideUpdates: "Sembunyikan pembaruan {components} hingga Unsloth dibuka kembali",
     whatsNew: "Yang baru",
     hideWhatsNew: "Sembunyikan yang baru",
     later: "Nanti",
@@ -6388,4 +5805,4 @@ export const id = {
       inRam: "{amount} di RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const vi = {
   turns: {
     label: "Lượt {number}",
@@ -113,8 +110,7 @@ export const vi = {
   },
   imageViewer: {
     title: "Hình ảnh",
-    description:
-      "Dùng các phím mũi tên để chuyển giữa các hình ảnh và phím cộng hoặc trừ để thu phóng.",
+    description: "Dùng các phím mũi tên để chuyển giữa các hình ảnh và phím cộng hoặc trừ để thu phóng.",
     failed: "Không thể tải hình ảnh này.",
     downloadFailed: "Không thể lưu hình ảnh.",
     openSource: "Mở trang nguồn",
@@ -133,8 +129,7 @@ export const vi = {
   browser: {
     drafts: {
       title: "Gỡ một trang có văn bản đã nhập?",
-      description:
-        "Để cuộc trò chuyện luôn phản hồi nhanh, chỉ ba trang ẩn có văn bản đã nhập được tiếp tục chạy. Nếu tiếp tục, {pages} sẽ bị gỡ và văn bản chưa lưu có thể bị mất. Hủy sẽ quay lại thẻ trước đó.",
+      description: "Để cuộc trò chuyện luôn phản hồi nhanh, chỉ ba trang ẩn có văn bản đã nhập được tiếp tục chạy. Nếu tiếp tục, {pages} sẽ bị gỡ và văn bản chưa lưu có thể bị mất. Hủy sẽ quay lại thẻ trước đó.",
       confirm: "Gỡ và tiếp tục",
     },
     agentSettings: {
@@ -142,28 +137,23 @@ export const vi = {
       docs: "Tài liệu",
       docsLabel: "Mở tài liệu về sử dụng trình duyệt",
       enable: "Cho phép mô hình sử dụng trình duyệt",
-      enableDescription:
-        "Mô hình mở trang trong thẻ trình duyệt riêng, đọc trang, rồi nhấp và nhập thay bạn. Cũng có trong menu + của khung soạn thảo.",
+      enableDescription: "Mô hình mở trang trong thẻ trình duyệt riêng, đọc trang, rồi nhấp và nhập thay bạn. Cũng có trong menu + của khung soạn thảo.",
       history: "Lịch sử duyệt web",
-      historyDescription:
-        "Toàn quyền truy cập bỏ qua bước phê duyệt; Không bao giờ vẫn chặn truy cập",
+      historyDescription: "Toàn quyền truy cập bỏ qua bước phê duyệt; Không bao giờ vẫn chặn truy cập",
       alwaysAsk: "Luôn hỏi",
       alwaysAllow: "Luôn cho phép",
       never: "Không bao giờ",
       scripts: "Chạy tập lệnh",
-      scriptsDescription:
-        "Chọn xem mô hình có được chạy tập lệnh trên trang hay không. Bạn sẽ thấy từng tập lệnh trước khi nó chạy",
+      scriptsDescription: "Chọn xem mô hình có được chạy tập lệnh trên trang hay không. Bạn sẽ thấy từng tập lệnh trước khi nó chạy",
       scriptsAllowDescription: "Mô hình chạy tập lệnh trên mọi trang mà không hỏi. Tập lệnh có thể đọc và thay đổi mọi thứ trên trang",
       scriptsConfirmTitle: "Cho phép tất cả tập lệnh?",
       scriptsConfirmDescription: "Các mô hình sẽ chạy tập lệnh trên mọi trang mà không cho bạn xem trước. Tập lệnh có thể đọc và thay đổi mọi thứ trên trang, kể cả những trang bạn đã đăng nhập. Chỉ bật tùy chọn này nếu bạn tin tưởng các mô hình mình sử dụng.",
       scriptsConfirmAction: "Cho phép tất cả tập lệnh",
       cursor: "Hiển thị con trỏ",
-      cursorDescription:
-        "Hiển thị con trỏ tại nơi mô hình nhấp, nhập và kéo trên trang",
+      cursorDescription: "Hiển thị con trỏ tại nơi mô hình nhấp, nhập và kéo trên trang",
       askEveryTime: "Hỏi mỗi lần",
       permissionsTitle: "Quyền của tác tử",
-      permissionsDescription:
-        "Đặt giá trị mặc định và ngoại lệ cho từng trang web. Trường mật khẩu và thanh toán không bao giờ được điền.",
+      permissionsDescription: "Đặt giá trị mặc định và ngoại lệ cho từng trang web. Trường mật khẩu và thanh toán không bao giờ được điền.",
       site: "Trang web hoặc mẫu",
       sitePlaceholder: "example.com hoặc *.example.com",
       default: "Mặc định",
@@ -180,8 +170,7 @@ export const vi = {
       cancel: "Hủy",
       removeSite: "Xóa {site}",
       hostOnly: "Chỉ máy chủ này, không gồm tên miền phụ",
-      permissionsNote:
-        "Chỉ những trang web có quyền riêng mới xuất hiện ở đây. Hành động gồm đăng nhập, gửi biểu mẫu và các nút mua, gửi hoặc xóa.",
+      permissionsNote: "Chỉ những trang web có quyền riêng mới xuất hiện ở đây. Hành động gồm đăng nhập, gửi biểu mẫu và các nút mua, gửi hoặc xóa.",
       siteInvalid: "Nhập một trang web như example.com hoặc *.example.com.",
     },
     agent: {
@@ -199,8 +188,7 @@ export const vi = {
         click: "Cho phép Unsloth nhấp vào “{name}” trên {host}?",
         history: "Cho phép Unsloth đọc lịch sử duyệt web của bạn?",
         script: "Cho phép Unsloth chạy tập lệnh này trên {host}?",
-        pointer:
-          "Cho phép Unsloth nhấp vào các phần không có nhãn của {host}, chẳng hạn như canvas?",
+        pointer: "Cho phép Unsloth nhấp vào các phần không có nhãn của {host}, chẳng hạn như canvas?",
       },
       step: {
         open: "Đang mở {detail}",
@@ -241,8 +229,7 @@ export const vi = {
     browserUse: {
       label: "Sử dụng trình duyệt",
       description: "Cho phép mô hình điều khiển trình duyệt tích hợp",
-      unavailable:
-        "Hãy nạp một mô hình có thể gọi công cụ để mô hình sử dụng trình duyệt.",
+      unavailable: "Hãy nạp một mô hình có thể gọi công cụ để mô hình sử dụng trình duyệt.",
     },
     suggested: "Đề xuất",
     suggestedMenu: {
@@ -277,11 +264,9 @@ export const vi = {
       close: "Đóng",
       security: "Bảo mật",
       secureTitle: "Kết nối an toàn",
-      secureDescription:
-        "Thông tin của bạn, như mật khẩu hoặc số thẻ, được giữ riêng tư khi gửi đến trang web này.",
+      secureDescription: "Thông tin của bạn, như mật khẩu hoặc số thẻ, được giữ riêng tư khi gửi đến trang web này.",
       insecureTitle: "Kết nối không an toàn",
-      insecureDescription:
-        "Thông tin bạn gửi đến trang web này, như mật khẩu hoặc số thẻ, có thể bị người khác nhìn thấy.",
+      insecureDescription: "Thông tin bạn gửi đến trang web này, như mật khẩu hoặc số thẻ, có thể bị người khác nhìn thấy.",
       learnMore: "Tìm hiểu thêm",
       certificateValid: "Chứng chỉ hợp lệ",
     },
@@ -301,90 +286,65 @@ export const vi = {
     linksTitle: "Liên kết và tệp",
     addressBarTitle: "Thanh địa chỉ",
     openLinksSetting: "Mở liên kết trong",
-    openLinksSettingDescription:
-      "Nơi mở liên kết trong cuộc trò chuyện: trình duyệt mặc định của bạn hoặc một thẻ trong trình duyệt bên cạnh cuộc trò chuyện. Liên kết đến địa chỉ cục bộ luôn mở trong trình duyệt mặc định của bạn.",
+    openLinksSettingDescription: "Nơi mở liên kết trong cuộc trò chuyện: trình duyệt mặc định của bạn hoặc một thẻ trong trình duyệt bên cạnh cuộc trò chuyện. Liên kết đến địa chỉ cục bộ luôn mở trong trình duyệt mặc định của bạn.",
     linkDestinationDefault: "Trình duyệt mặc định",
     linkDestinationPanel: "Trình duyệt Unsloth",
     openFilesSetting: "Mở tệp trong trình duyệt",
-    openFilesSettingDescription:
-      "Tài liệu bạn đính kèm, như PDF, tệp Office, HTML và văn bản, sẽ mở trong một thẻ trình duyệt bên cạnh cuộc trò chuyện thay vì cửa sổ xem trước.",
+    openFilesSettingDescription: "Tài liệu bạn đính kèm, như PDF, tệp Office, HTML và văn bản, sẽ mở trong một thẻ trình duyệt bên cạnh cuộc trò chuyện thay vì cửa sổ xem trước.",
     searchEngineSetting: "Công cụ tìm kiếm",
-    searchEngineSettingDescription:
-      "Được dùng khi bạn nhập từ khóa thay vì URL vào thanh địa chỉ.",
+    searchEngineSettingDescription: "Được dùng khi bạn nhập từ khóa thay vì URL vào thanh địa chỉ.",
     showFullUrlSetting: "Hiển thị URL đầy đủ",
-    showFullUrlSettingDescription:
-      "Hiển thị cả chuỗi truy vấn và phân đoạn trong thanh địa chỉ, không chỉ trang web và đường dẫn.",
+    showFullUrlSettingDescription: "Hiển thị cả chuỗi truy vấn và phân đoạn trong thanh địa chỉ, không chỉ trang web và đường dẫn.",
     bookmarksTitle: "Dấu trang",
     bookmarksToolbarSetting: "Thanh dấu trang",
-    bookmarksToolbarSettingDescription:
-      "Thời điểm hiển thị các trang đã lưu bên dưới thanh địa chỉ.",
-    bookmarkEditorSettingDescription:
-      "Đặt tên cho dấu trang và chọn vị trí khi lưu.",
-    bookmarksSettingDescription:
-      "Xem, chỉnh sửa và xóa các trang đã lưu trong trình duyệt.",
+    bookmarksToolbarSettingDescription: "Thời điểm hiển thị các trang đã lưu bên dưới thanh địa chỉ.",
+    bookmarkEditorSettingDescription: "Đặt tên cho dấu trang và chọn vị trí khi lưu.",
+    bookmarksSettingDescription: "Xem, chỉnh sửa và xóa các trang đã lưu trong trình duyệt.",
     browsingDataTitle: "Dữ liệu duyệt web",
     historySetting: "Lịch sử duyệt web",
-    historySettingDescription:
-      "Xem và quản lý các trang đã truy cập trong trình duyệt.",
+    historySettingDescription: "Xem và quản lý các trang đã truy cập trong trình duyệt.",
     downloadsSetting: "Lịch sử tải xuống",
-    downloadsSettingDescription:
-      "Xem và quản lý các tệp đã tải xuống từ trình duyệt.",
-    pagesFromChat:
-      "Mở một cuộc trò chuyện để xem nội dung này trong trình duyệt.",
+    downloadsSettingDescription: "Xem và quản lý các tệp đã tải xuống từ trình duyệt.",
+    pagesFromChat: "Mở một cuộc trò chuyện để xem nội dung này trong trình duyệt.",
     tabsTitle: "Thẻ",
     switchToNewTabsSetting: "Chuyển sang thẻ mới ngay lập tức",
-    switchToNewTabsSettingDescription:
-      "Khi bạn mở liên kết trong thẻ mới bằng ⌘ hoặc Ctrl, hiển thị thẻ đó thay vì mở ở chế độ nền.",
-    switchToNewTabsNative:
-      "Trong ứng dụng máy tính, trang luôn mở thẻ mới ở phía trước.",
+    switchToNewTabsSettingDescription: "Khi bạn mở liên kết trong thẻ mới bằng ⌘ hoặc Ctrl, hiển thị thẻ đó thay vì mở ở chế độ nền.",
+    switchToNewTabsNative: "Trong ứng dụng máy tính, trang luôn mở thẻ mới ở phía trước.",
     defaultZoomSetting: "Mức thu phóng mặc định",
-    defaultZoomSettingDescription:
-      "Kích thước hiển thị của trang khi mở. Đặt lại mức thu phóng của trang sẽ trở về giá trị này.",
+    defaultZoomSettingDescription: "Kích thước hiển thị của trang khi mở. Đặt lại mức thu phóng của trang sẽ trở về giá trị này.",
     newTabPageTitle: "Trang thẻ mới",
     showSuggestedSetting: "Hiển thị trang web đề xuất",
-    showSuggestedSettingDescription:
-      "Các trang web bạn thường truy cập, hiển thị dưới dạng lối tắt trên thẻ mới.",
+    showSuggestedSettingDescription: "Các trang web bạn thường truy cập, hiển thị dưới dạng lối tắt trên thẻ mới.",
     showRecentsSetting: "Hiển thị trang gần đây",
-    showRecentsSettingDescription:
-      "Các trang bạn đã truy cập gần đây, liệt kê trên thẻ mới.",
+    showRecentsSettingDescription: "Các trang bạn đã truy cập gần đây, liệt kê trên thẻ mới.",
     hiddenSuggestionsSetting: "Đề xuất đã xóa",
-    hiddenSuggestionsSettingDescription:
-      "Trang web bạn đã xóa khỏi mục Đề xuất: {count}. Khôi phục để chúng hiển thị lại.",
-    hiddenSuggestionsNone:
-      "Các trang web bạn xóa khỏi mục Đề xuất có thể được khôi phục tại đây.",
+    hiddenSuggestionsSettingDescription: "Trang web bạn đã xóa khỏi mục Đề xuất: {count}. Khôi phục để chúng hiển thị lại.",
+    hiddenSuggestionsNone: "Các trang web bạn xóa khỏi mục Đề xuất có thể được khôi phục tại đây.",
     restore: "Khôi phục",
     importBookmarksSetting: "Nhập và xuất",
-    importBookmarksSettingDescription:
-      "Nhập dấu trang từ Chrome, Safari, Firefox hoặc Edge bằng tệp HTML mà trình duyệt đó xuất ra, hoặc lưu dấu trang của bạn thành một tệp như vậy.",
+    importBookmarksSettingDescription: "Nhập dấu trang từ Chrome, Safari, Firefox hoặc Edge bằng tệp HTML mà trình duyệt đó xuất ra, hoặc lưu dấu trang của bạn thành một tệp như vậy.",
     importBookmarks: "Nhập…",
     exportBookmarks: "Xuất",
     importBookmarksDoneOne: "Đã nhập {count} dấu trang.",
     importBookmarksDoneMany: "Đã nhập {count} dấu trang.",
     importBookmarksNone: "Tệp đó không có dấu trang mới nào.",
-    importBookmarksPartial:
-      "Đã nhập {count}, nhưng {leftOut} dấu trang khác không vừa: Unsloth lưu tối đa {max} dấu trang.",
-    importBookmarksFailed:
-      "Không thể đọc tệp đó. Hãy chọn một tệp HTML dấu trang được xuất từ trình duyệt.",
+    importBookmarksPartial: "Đã nhập {count}, nhưng {leftOut} dấu trang khác không vừa: Unsloth lưu tối đa {max} dấu trang.",
+    importBookmarksFailed: "Không thể đọc tệp đó. Hãy chọn một tệp HTML dấu trang được xuất từ trình duyệt.",
     downloadsTitle: "Tải xuống",
     askWhereToSaveSetting: "Hỏi nơi lưu từng tệp",
-    askWhereToSaveSettingDescription:
-      "Hiển thị hộp thoại lưu cho các tệp bạn tải xuống trong trình duyệt.",
-    askWhereToSaveUnsupported:
-      "Trình duyệt web của bạn lưu tệp tải xuống vào thư mục tải xuống riêng của nó.",
+    askWhereToSaveSettingDescription: "Hiển thị hộp thoại lưu cho các tệp bạn tải xuống trong trình duyệt.",
+    askWhereToSaveUnsupported: "Trình duyệt web của bạn lưu tệp tải xuống vào thư mục tải xuống riêng của nó.",
     downloadLocationSetting: "Vị trí",
     downloadLocationDefault: "Thư mục Tải xuống của hệ thống",
     downloadLocationChange: "Thay đổi",
     downloadLocationReset: "Đặt lại",
     askBeforeDownloadingSetting: "Hỏi trước khi tải xuống",
-    askBeforeDownloadingSettingDescription:
-      "Xác nhận tệp từ trang web trước khi lưu.",
+    askBeforeDownloadingSettingDescription: "Xác nhận tệp từ trang web trước khi lưu.",
     askBeforeProgramDownloadsSetting: "Hỏi trước khi tải xuống chương trình",
     askBeforeProgramDownloadsSettingDescription: "Xác nhận các tệp có thể chạy chương trình, như .exe hoặc .dmg, ngay cả khi các lượt tải xuống khác không hỏi.",
     downloadSitesSetting: "Quyền tải xuống của trang web",
-    downloadSitesSettingDescription:
-      "Các trang web bạn đã chọn luôn cho phép hoặc luôn chặn tải xuống.",
-    downloadSitesNone:
-      "Chọn Ghi nhớ cho lần sau khi được hỏi, trang web sẽ xuất hiện ở đây.",
+    downloadSitesSettingDescription: "Các trang web bạn đã chọn luôn cho phép hoặc luôn chặn tải xuống.",
+    downloadSitesNone: "Chọn Ghi nhớ cho lần sau khi được hỏi, trang web sẽ xuất hiện ở đây.",
     downloadSitesFor: "Tải xuống từ {host}",
     downloadSitesRemove: "Quên {host}",
     capture: {
@@ -419,8 +379,7 @@ export const vi = {
     downloadPrompt: {
       title: "Tải xuống tệp này?",
       description: "{host} muốn lưu {name} vào máy tính của bạn.",
-      dangerous:
-        "Những tệp như thế này có thể chạy chương trình trên máy tính của bạn. Chỉ tải xuống nếu bạn tin tưởng {host}.",
+      dangerous: "Những tệp như thế này có thể chạy chương trình trên máy tính của bạn. Chỉ tải xuống nếu bạn tin tưởng {host}.",
       remember: "Ghi nhớ cho lần sau",
       once: "Hỏi vào lần sau",
       site: "Luôn cho {host}",
@@ -432,14 +391,11 @@ export const vi = {
       save: "Lưu",
     },
     saveDownloadHistorySetting: "Giữ lịch sử tải xuống",
-    saveDownloadHistorySettingDescription:
-      "Liệt kê các tệp bạn tải xuống từ trình duyệt trong Lịch sử tải xuống.",
+    saveDownloadHistorySettingDescription: "Liệt kê các tệp bạn tải xuống từ trình duyệt trong Lịch sử tải xuống.",
     saveHistorySetting: "Lưu lịch sử duyệt web",
-    saveHistorySettingDescription:
-      "Ghi nhớ các trang bạn truy cập, dùng cho Lịch sử, Gần đây và Đề xuất.",
+    saveHistorySettingDescription: "Ghi nhớ các trang bạn truy cập, dùng cho Lịch sử, Gần đây và Đề xuất.",
     historyRetentionSetting: "Giữ lịch sử trong",
-    historyRetentionSettingDescription:
-      "Các lượt truy cập cũ hơn thời gian này sẽ tự động bị xóa.",
+    historyRetentionSettingDescription: "Các lượt truy cập cũ hơn thời gian này sẽ tự động bị xóa.",
     retention: {
       forever: "Cho đến khi xóa",
       days90: "3 tháng",
@@ -449,17 +405,13 @@ export const vi = {
     },
     annotationsTitle: "Chú thích",
     annotationScreenshotsSetting: "Ảnh chụp màn hình chú thích",
-    annotationScreenshotsSettingDescription:
-      "Ảnh chụp màn hình trang kèm các đánh dấu của bạn giúp mô hình thị giác hiểu nhận xét của bạn, nhưng tốn nhiều ngữ cảnh hơn.",
-    annotationScreenshotsUnsupported:
-      "Cần ứng dụng máy tính hoặc trình duyệt dựa trên Chromium, như Chrome hoặc Edge.",
-    annotationScreenshotsHint:
-      "Trong trình duyệt web, bạn sẽ được yêu cầu chia sẻ thẻ mỗi lần gửi chú thích.",
+    annotationScreenshotsSettingDescription: "Ảnh chụp màn hình trang kèm các đánh dấu của bạn giúp mô hình thị giác hiểu nhận xét của bạn, nhưng tốn nhiều ngữ cảnh hơn.",
+    annotationScreenshotsUnsupported: "Cần ứng dụng máy tính hoặc trình duyệt dựa trên Chromium, như Chrome hoặc Edge.",
+    annotationScreenshotsHint: "Trong trình duyệt web, bạn sẽ được yêu cầu chia sẻ thẻ mỗi lần gửi chú thích.",
     annotationScreenshotsAlways: "Luôn đính kèm",
     annotationScreenshotsNever: "Không bao giờ đính kèm",
     clearDataSetting: "Xóa dữ liệu duyệt web",
-    clearDataSettingDescription:
-      "Xóa lịch sử duyệt web, lịch sử tải xuống và các trang được lưu trong bộ nhớ đệm. Trang chỉ giữ cookie và dữ liệu trang web cho đến khi Unsloth được tải lại.",
+    clearDataSettingDescription: "Xóa lịch sử duyệt web, lịch sử tải xuống và các trang được lưu trong bộ nhớ đệm. Trang chỉ giữ cookie và dữ liệu trang web cho đến khi Unsloth được tải lại.",
     manage: "Quản lý",
     fullView: {
       enter: "Vào chế độ toàn màn hình",
@@ -552,10 +504,8 @@ export const vi = {
       pathCopied: "Đã sao chép đường dẫn",
       openFailed: "Không thể mở {name}.",
       wrap: "Ngắt dòng",
-      reactNeedsNode:
-        "Bản xem trước React cần Node.js 20.19 trở lên. Hãy cài đặt nếu còn thiếu, rồi chạy lại trình thiết lập Unsloth.",
-      reactFailed:
-        "Không thể chuẩn bị bản xem trước này. Hãy chạy lại để thử lại.",
+      reactNeedsNode: "Bản xem trước React cần Node.js 20.19 trở lên. Hãy cài đặt nếu còn thiếu, rồi chạy lại trình thiết lập Unsloth.",
+      reactFailed: "Không thể chuẩn bị bản xem trước này. Hãy chạy lại để thử lại.",
     },
     video: {
       play: "Phát",
@@ -598,8 +548,7 @@ export const vi = {
       noHistory: "Các trang bạn truy cập trong trình duyệt sẽ xuất hiện ở đây.",
       showMore: "Hiển thị thêm",
       noDownloads: "Các tệp bạn tải xuống từ trình duyệt sẽ xuất hiện ở đây.",
-      noBookmarks:
-        "Các trang bạn đánh dấu bằng biểu tượng ngôi sao trên thanh địa chỉ sẽ xuất hiện ở đây.",
+      noBookmarks: "Các trang bạn đánh dấu bằng biểu tượng ngôi sao trên thanh địa chỉ sẽ xuất hiện ở đây.",
       noMatches: "Không có kết quả nào khớp với tìm kiếm của bạn.",
       fromChat: "Từ cuộc trò chuyện",
       searchHistory: "Tìm trong lịch sử duyệt web",
@@ -637,40 +586,30 @@ export const vi = {
       undo: "Hoàn tác",
       manage: "Quản lý dấu trang",
       more: "Dấu trang khác",
-      toolbarEmpty:
-        "Đánh dấu một trang bằng biểu tượng ngôi sao trên thanh địa chỉ để thêm trang đó vào đây.",
+      toolbarEmpty: "Đánh dấu một trang bằng biểu tượng ngôi sao trên thanh địa chỉ để thêm trang đó vào đây.",
       toolbarAlways: "Luôn hiển thị",
       toolbarNewTab: "Chỉ hiển thị trên thẻ mới",
       toolbarNever: "Không bao giờ hiển thị",
     },
     clearData: {
       title: "Xóa dữ liệu duyệt web?",
-      description:
-        "Thao tác này xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web, khiến bạn bị đăng xuất khỏi các trang web. Các tệp đã tải xuống vẫn được giữ trên máy tính của bạn.",
+      description: "Thao tác này xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web, khiến bạn bị đăng xuất khỏi các trang web. Các tệp đã tải xuống vẫn được giữ trên máy tính của bạn.",
       cancel: "Hủy",
       confirm: "Xóa dữ liệu",
       done: "Đã xóa dữ liệu duyệt web",
     },
     error: {
       title: "Không thể tải trang này",
-      description:
-        "{host} không phản hồi, đã từ chối kết nối hoặc đã chặn yêu cầu.",
+      description: "{host} không phản hồi, đã từ chối kết nối hoặc đã chặn yêu cầu.",
       retry: "Thử lại",
-      botCheckTitle:
-        "Trang web này kiểm tra xem có phải trình duyệt thật không",
-      botCheckDescription:
-        "{host} yêu cầu khách truy cập chứng minh họ là người thật, điều mà chế độ xem trong ứng dụng không thể làm ở đây. Hãy mở trang trong trình duyệt của bạn.",
-      botCheckDescriptionWeb:
-        "{host} yêu cầu khách truy cập chứng minh họ là người thật, điều mà chế độ xem trong ứng dụng không thể làm ở đây. Hãy mở trang trong trình duyệt của bạn hoặc trong {app}, nơi có thể mở trang này.",
+      botCheckTitle: "Trang web này kiểm tra xem có phải trình duyệt thật không",
+      botCheckDescription: "{host} yêu cầu khách truy cập chứng minh họ là người thật, điều mà chế độ xem trong ứng dụng không thể làm ở đây. Hãy mở trang trong trình duyệt của bạn.",
+      botCheckDescriptionWeb: "{host} yêu cầu khách truy cập chứng minh họ là người thật, điều mà chế độ xem trong ứng dụng không thể làm ở đây. Hãy mở trang trong trình duyệt của bạn hoặc trong {app}, nơi có thể mở trang này.",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "Trang này được tạo từ một biểu mẫu. Tải lại trang sẽ gửi lại biểu mẫu, có thể lặp lại thao tác mà biểu mẫu đã thực hiện.",
-      upload:
-        "Không thể tải tệp lên trong chế độ xem này. Hãy mở trang trong trình duyệt hệ thống để gửi tệp.",
-      scriptNavigation:
-        "Trang này đã cố chuyển sang địa chỉ khác bằng tập lệnh, điều mà chế độ xem này không thể theo. Hãy mở trang trong trình duyệt hệ thống.",
-      needsBrowser:
-        "Trang này đã cố dùng một tính năng trình duyệt bị chế độ xem này chặn, nên một số phần có thể không hoạt động. Hãy mở trang trong trình duyệt hệ thống.",
+      resubmit: "Trang này được tạo từ một biểu mẫu. Tải lại trang sẽ gửi lại biểu mẫu, có thể lặp lại thao tác mà biểu mẫu đã thực hiện.",
+      upload: "Không thể tải tệp lên trong chế độ xem này. Hãy mở trang trong trình duyệt hệ thống để gửi tệp.",
+      scriptNavigation: "Trang này đã cố chuyển sang địa chỉ khác bằng tập lệnh, điều mà chế độ xem này không thể theo. Hãy mở trang trong trình duyệt hệ thống.",
+      needsBrowser: "Trang này đã cố dùng một tính năng trình duyệt bị chế độ xem này chặn, nên một số phần có thể không hoạt động. Hãy mở trang trong trình duyệt hệ thống.",
     },
     native: {
       externalPrompt: "{host} muốn mở {url}",
@@ -678,18 +617,12 @@ export const vi = {
       downloading: "Đang tải xuống {name}",
       downloaded: "Đã lưu {name} vào Tải xuống",
       downloadFailed: "Không thể tải xuống {name}",
-      notMarked:
-        "Đã lưu {name} nhưng không thể đánh dấu là tải xuống từ internet, nên hệ thống sẽ không cảnh báo trước khi mở tệp.",
-      blocked:
-        "Không thể mở địa chỉ này trong bảng trình duyệt. Bảng này chỉ mở các trang web công khai.",
-      blockedLocal:
-        "Không thể mở địa chỉ cục bộ này ở đây. Hãy nhập địa chỉ vào thanh địa chỉ để mở.",
-      studioAddress:
-        "Đây là địa chỉ của chính Unsloth, nên không thể mở trong bảng trình duyệt.",
-      clearDataSettingDescription:
-        "Xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web mà các trang lưu giữ, khiến bạn bị đăng xuất khỏi các trang web.",
-      clearDataDescription:
-        "Thao tác này xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web, khiến bạn bị đăng xuất khỏi các trang web. Các tệp đã tải xuống vẫn được giữ trên máy tính của bạn.",
+      notMarked: "Đã lưu {name} nhưng không thể đánh dấu là tải xuống từ internet, nên hệ thống sẽ không cảnh báo trước khi mở tệp.",
+      blocked: "Không thể mở địa chỉ này trong bảng trình duyệt. Bảng này chỉ mở các trang web công khai.",
+      blockedLocal: "Không thể mở địa chỉ cục bộ này ở đây. Hãy nhập địa chỉ vào thanh địa chỉ để mở.",
+      studioAddress: "Đây là địa chỉ của chính Unsloth, nên không thể mở trong bảng trình duyệt.",
+      clearDataSettingDescription: "Xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web mà các trang lưu giữ, khiến bạn bị đăng xuất khỏi các trang web.",
+      clearDataDescription: "Thao tác này xóa lịch sử duyệt web, lịch sử tải xuống, các trang trong bộ nhớ đệm, cùng cookie và dữ liệu trang web, khiến bạn bị đăng xuất khỏi các trang web. Các tệp đã tải xuống vẫn được giữ trên máy tính của bạn.",
       clearDataFailed: "Không thể xóa dữ liệu trang web. Hãy thử lại.",
     },
   },
@@ -756,33 +689,25 @@ export const vi = {
     tensor: "Song song tensor",
     pipeline: "Song song pipeline",
     data: "Bản sao (song song dữ liệu)",
-    pipelineHelp:
-      "Chia các lớp của mô hình cho nhiều GPU. Mỗi GPU phải chứa vừa các lớp của nó và bộ nhớ đệm.",
-    dataHelp:
-      "Phân phối yêu cầu cho nhiều GPU. Mô hình dày đặc phải vừa trên từng GPU; mô hình MoE có thể dùng chung các expert.",
+    pipelineHelp: "Chia các lớp của mô hình cho nhiều GPU. Mỗi GPU phải chứa vừa các lớp của nó và bộ nhớ đệm.",
+    dataHelp: "Phân phối yêu cầu cho nhiều GPU. Mô hình dày đặc phải vừa trên từng GPU; mô hình MoE có thể dùng chung các expert.",
     tensorParallel: "Chia phép tính của từng lớp cho {count} GPU.",
-    inUse:
-      "Hãy gỡ mô hình trước khi sửa chữa, khôi phục hoặc gỡ bỏ công cụ chạy của nó.",
+    inUse: "Hãy gỡ mô hình trước khi sửa chữa, khôi phục hoặc gỡ bỏ công cụ chạy của nó.",
     title: "Công cụ chạy khác",
-    description:
-      "Các công cụ chạy bổ sung cho GPU (Beta). Chúng có thể chạy mô hình nhanh hơn, đặc biệt khi suy luận theo lô. Cài đặt tại đây, rồi chọn trong cài đặt chạy của mô hình.",
+    description: "Các công cụ chạy bổ sung cho GPU (Beta). Chúng có thể chạy mô hình nhanh hơn, đặc biệt khi suy luận theo lô. Cài đặt tại đây, rồi chọn trong cài đặt chạy của mô hình.",
     picker: "Công cụ suy luận",
     precision: "Độ chính xác",
     precisionAuto: "Mặc định của mô hình",
-    precisionHelp:
-      "Mặc định của mô hình giữ nguyên độ chính xác đã lưu. Các tùy chọn khác sẽ chuyển đổi trọng số chưa lượng tử hóa khi nạp.",
+    precisionHelp: "Mặc định của mô hình giữ nguyên độ chính xác đã lưu. Các tùy chọn khác sẽ chuyển đổi trọng số chưa lượng tử hóa khi nạp.",
     kvCache: "Bộ nhớ đệm KV",
     kvCacheFp8: "FP8 (một nửa bộ nhớ)",
-    kvCacheHelp:
-      "FP8 lưu bộ nhớ đệm ngữ cảnh ở 8 bit, chứa được khoảng gấp đôi ngữ cảnh trong cùng dung lượng bộ nhớ. Nếu checkpoint không có hệ số tỷ lệ đã hiệu chỉnh, câu trả lời có thể kém chính xác hơn một chút.",
+    kvCacheHelp: "FP8 lưu bộ nhớ đệm ngữ cảnh ở 8 bit, chứa được khoảng gấp đôi ngữ cảnh trong cùng dung lượng bộ nhớ. Nếu checkpoint không có hệ số tỷ lệ đã hiệu chỉnh, câu trả lời có thể kém chính xác hơn một chút.",
     gpuMemory: "Giới hạn bộ nhớ GPU",
     gpuMemoryAuto: "Tự động",
-    gpuMemoryHelp:
-      "Phần tối đa của mỗi GPU đã chọn mà công cụ chạy có thể sử dụng. Tự động dùng phần còn trống; hãy giảm xuống để chừa chỗ cho các chương trình khác.",
+    gpuMemoryHelp: "Phần tối đa của mỗi GPU đã chọn mà công cụ chạy có thể sử dụng. Tự động dùng phần còn trống; hãy giảm xuống để chừa chỗ cho các chương trình khác.",
     seed: "Seed",
     seedPlaceholder: "Mặc định của công cụ chạy",
-    seedHelp:
-      "Đặt seed ngẫu nhiên của công cụ chạy. Các cuộc trò chuyện đồng thời vẫn có thể làm thay đổi câu trả lời được lấy mẫu.",
+    seedHelp: "Đặt seed ngẫu nhiên của công cụ chạy. Các cuộc trò chuyện đồng thời vẫn có thể làm thay đổi câu trả lời được lấy mẫu.",
     default: "Mặc định",
     installRequired: "cần cài đặt",
     ownerRequired: "Hãy nhờ chủ sở hữu Unsloth cài đặt công cụ chạy này.",
@@ -798,24 +723,18 @@ export const vi = {
     installAndLoad: "Cài đặt và nạp",
     confirm: "Cài đặt {engine} {version}? Có thể cần tải xuống vài GB.",
     confirmSized: "Cài đặt {engine} {version}? Cần tải xuống khoảng {size}.",
-    wslSetup:
-      "Trên Windows, {engine} chạy trong một môi trường WSL2 riêng do Unsloth thiết lập. Bạn sẽ thấy một yêu cầu cấp quyền quản trị viên và có thể cần khởi động lại.",
-    wslReady:
-      "Trên Windows, {engine} chạy bên trong môi trường WSL2 riêng của Unsloth.",
-    wslRestart:
-      "Hãy khởi động lại Windows để hoàn tất việc bật WSL2, rồi nhấp lại vào Cài đặt.",
+    wslSetup: "Trên Windows, {engine} chạy trong một môi trường WSL2 riêng do Unsloth thiết lập. Bạn sẽ thấy một yêu cầu cấp quyền quản trị viên và có thể cần khởi động lại.",
+    wslReady: "Trên Windows, {engine} chạy bên trong môi trường WSL2 riêng của Unsloth.",
+    wslRestart: "Hãy khởi động lại Windows để hoàn tất việc bật WSL2, rồi nhấp lại vào Cài đặt.",
     background: "Cài đặt ở chế độ nền.",
-    failed:
-      "Cài đặt công cụ chạy không thành công. Hãy thử lại hoặc dùng công cụ chạy mặc định.",
+    failed: "Cài đặt công cụ chạy không thành công. Hãy thử lại hoặc dùng công cụ chạy mặc định.",
     details: "Chi tiết kỹ thuật",
     cancelled: "Đã hủy cài đặt. Bạn có thể thử lại.",
-    scope:
-      "Trò chuyện bằng văn bản và hình ảnh trên GPU NVIDIA. Lần nạp đầu tiên có thể lâu hơn.",
+    scope: "Trò chuyện bằng văn bản và hình ảnh trên GPU NVIDIA. Lần nạp đầu tiên có thể lâu hơn.",
   },
   sandboxSetup: {
     levelTitle: "Không có sandbox của hệ điều hành",
-    levelDescription:
-      "Hãy cài đặt để dùng mức Cao, hoặc giữ mức Thấp (sandbox phần mềm).",
+    levelDescription: "Hãy cài đặt để dùng mức Cao, hoặc giữ mức Thấp (sandbox phần mềm).",
     useLow: "Dùng sandbox mức Thấp",
     checking: "Đang kiểm tra sandbox trên máy tính này…",
     install: "Cài đặt sandbox",
@@ -823,33 +742,25 @@ export const vi = {
     copyCommand: "Sao chép lệnh",
     copied: "Đã sao chép lệnh",
     copyFailed: "Không thể sao chép lệnh",
-    copiedRunIt:
-      "Đã sao chép lệnh. Hãy chạy lệnh trong terminal trên máy tính đang chạy Unsloth, rồi chuyển sang mức Cao.",
-    ownerOnly:
-      "Chỉ chủ sở hữu mới có thể cài đặt, từ máy tính đang chạy Unsloth.",
-    windowsNote:
-      "Cần một bước quản trị viên sau mỗi lần khởi động lại. MXC là bản xem trước, không phải ranh giới bảo mật.",
-    running:
-      "Đang thiết lập. Hãy chấp thuận yêu cầu nhập mật khẩu hoặc cấp quyền quản trị viên trên máy tính đang chạy Unsloth…",
+    copiedRunIt: "Đã sao chép lệnh. Hãy chạy lệnh trong terminal trên máy tính đang chạy Unsloth, rồi chuyển sang mức Cao.",
+    ownerOnly: "Chỉ chủ sở hữu mới có thể cài đặt, từ máy tính đang chạy Unsloth.",
+    windowsNote: "Cần một bước quản trị viên sau mỗi lần khởi động lại. MXC là bản xem trước, không phải ranh giới bảo mật.",
+    running: "Đang thiết lập. Hãy chấp thuận yêu cầu nhập mật khẩu hoặc cấp quyền quản trị viên trên máy tính đang chạy Unsloth…",
     succeeded: "Sandbox của hệ điều hành đã sẵn sàng. Sandbox mức Cao đã bật.",
-    stillUnavailable:
-      "Đã thiết lập xong, nhưng sandbox của hệ điều hành vẫn không vượt qua bước kiểm tra.",
-    declined:
-      "Yêu cầu nhập mật khẩu hoặc cấp quyền quản trị viên đã bị từ chối.",
+    stillUnavailable: "Đã thiết lập xong, nhưng sandbox của hệ điều hành vẫn không vượt qua bước kiểm tra.",
+    declined: "Yêu cầu nhập mật khẩu hoặc cấp quyền quản trị viên đã bị từ chối.",
     failed: "Thiết lập không thành công.",
     startError: "Không thể bắt đầu thiết lập sandbox",
     checkFailed: "Không thể kiểm tra sandbox trên máy tính này.",
     retry: "Thử lại",
-    keepsRunning:
-      "Đóng cửa sổ này không dừng quá trình thiết lập. Kết quả sẽ hiển thị trong Cài đặt > Bảo mật.",
+    keepsRunning: "Đóng cửa sổ này không dừng quá trình thiết lập. Kết quả sẽ hiển thị trong Cài đặt > Bảo mật.",
   },
   composerSettings: {
     shareDraft: "Chia sẻ bản nháp giữa các cuộc trò chuyện",
     shareDraftDescription: "Dùng một bản nháp cho các cuộc trò chuyện và chế độ so sánh. Mặc định tắt; mỗi cuộc trò chuyện giữ bản nháp riêng.",
     title: "Khung soạn thảo",
     plainText: "Khung soạn thảo văn bản thuần",
-    plainTextDescription:
-      "Giữ mã, Markdown và liên kết dưới dạng văn bản nguyên bản. Tắt để hiển thị bản xem trước có định dạng.",
+    plainTextDescription: "Giữ mã, Markdown và liên kết dưới dạng văn bản nguyên bản. Tắt để hiển thị bản xem trước có định dạng.",
     richPaste: "Dán văn bản có định dạng",
     richPasteDescription: "Dán liên kết, bảng và định dạng dưới dạng Markdown. {shortcut} dán văn bản thuần. Trình soạn văn bản định dạng đầy đủ sắp ra mắt.",
     showContext: "Mức sử dụng cửa sổ ngữ cảnh",
@@ -857,18 +768,14 @@ export const vi = {
     sendMultiline: "{mod} + Enter cho lời nhắc nhiều dòng",
     sendAlways: "Luôn dùng {mod} + Enter",
     sendEnterDescription: "Enter để gửi. Shift + Enter để xuống dòng.",
-    sendMultilineDescription:
-      "Enter gửi lời nhắc một dòng. Khi lời nhắc có nhiều hơn một dòng, Enter sẽ xuống dòng và {mod} + Enter sẽ gửi.",
+    sendMultilineDescription: "Enter gửi lời nhắc một dòng. Khi lời nhắc có nhiều hơn một dòng, Enter sẽ xuống dòng và {mod} + Enter sẽ gửi.",
     sendAlwaysDescription: "{mod} + Enter để gửi. Enter để xuống dòng.",
     followUp: "Hành vi tin nhắn tiếp theo",
-    followUpDescription:
-      "Điều xảy ra khi bạn gửi trong lúc đang có phản hồi. Nhấn {shortcut} để làm ngược lại một lần.",
-    followUpMultilineShortcut:
-      "{shortcut} ({multiline} trong lời nhắc nhiều dòng)",
+    followUpDescription: "Điều xảy ra khi bạn gửi trong lúc đang có phản hồi. Nhấn {shortcut} để làm ngược lại một lần.",
+    followUpMultilineShortcut: "{shortcut} ({multiline} trong lời nhắc nhiều dòng)",
     queue: "Xếp hàng",
     steer: "Điều hướng",
-    steerDescription:
-      "Điều hướng sẽ dừng phản hồi hiện tại và gửi tin nhắn tiếp theo của bạn ngay sau đó.",
+    steerDescription: "Điều hướng sẽ dừng phản hồi hiện tại và gửi tin nhắn tiếp theo của bạn ngay sau đó.",
     settings: "Cài đặt khung soạn thảo",
     preview: "Bản xem trước có định dạng",
   },
@@ -877,8 +784,7 @@ export const vi = {
     listLabel: "Lời nhắc trong hàng đợi",
     regionLabel: "Hàng đợi lời nhắc, {current} trên {total}",
     itemLabel: "Lời nhắc trong hàng đợi {position} trên {total}: {prompt}",
-    reorderInstructions:
-      "Kéo tay nắm để sắp xếp lại. Khi tay nắm đang được chọn, dùng Lên hoặc Xuống để di chuyển một vị trí, hoặc Home hoặc End để chuyển lên đầu hoặc xuống cuối.",
+    reorderInstructions: "Kéo tay nắm để sắp xếp lại. Khi tay nắm đang được chọn, dùng Lên hoặc Xuống để di chuyển một vị trí, hoặc Home hoặc End để chuyển lên đầu hoặc xuống cuối.",
     dragTooltip: "Kéo để sắp xếp lại",
     reorderLabel: "Sắp xếp lại lời nhắc trong hàng đợi {position} trên {total}",
     paused: "Đã tạm dừng",
@@ -903,23 +809,17 @@ export const vi = {
     sendLabel: "Gửi tin nhắn",
     followUpTooltip: "{action} ({send}) · {opposite} để làm ngược lại",
     announceUpdated: "Đã cập nhật lời nhắc trong hàng đợi.",
-    announceEditFailed:
-      "Không thể chỉnh sửa lời nhắc này nữa vì hàng đợi đã thay đổi.",
+    announceEditFailed: "Không thể chỉnh sửa lời nhắc này nữa vì hàng đợi đã thay đổi.",
     announceRemoved: "Đã xóa lời nhắc khỏi hàng đợi.",
     announceSteered: "Lời nhắc này sẽ điều hướng phản hồi tiếp theo.",
-    announceSteerFailed:
-      "Lời nhắc này không thể điều hướng phản hồi. Hãy kiểm tra hàng đợi và thử lại.",
+    announceSteerFailed: "Lời nhắc này không thể điều hướng phản hồi. Hãy kiểm tra hàng đợi và thử lại.",
     announceCopied: "Đã sao chép lời nhắc.",
     announceCopyFailed: "Không thể sao chép lời nhắc này. Hãy thử lại.",
-    announceQueueingOn:
-      "Các tin nhắn tiếp theo mới sẽ xếp hàng sau phản hồi hiện tại.",
-    announceQueueingOff:
-      "Các tin nhắn tiếp theo mới sẽ điều hướng phản hồi hiện tại.",
+    announceQueueingOn: "Các tin nhắn tiếp theo mới sẽ xếp hàng sau phản hồi hiện tại.",
+    announceQueueingOff: "Các tin nhắn tiếp theo mới sẽ điều hướng phản hồi hiện tại.",
     announceMoved: "Đã chuyển lời nhắc đến vị trí {position} trên {total}.",
-    announceMoveFailed:
-      "Hàng đợi đã thay đổi trước khi có thể chuyển lời nhắc này. Hãy thử lại.",
-    announceDragReset:
-      "Hàng đợi đã thay đổi. Hãy kéo lại để sắp xếp các lời nhắc còn lại.",
+    announceMoveFailed: "Hàng đợi đã thay đổi trước khi có thể chuyển lời nhắc này. Hãy thử lại.",
+    announceDragReset: "Hàng đợi đã thay đổi. Hãy kéo lại để sắp xếp các lời nhắc còn lại.",
     editingHint: "Đang chỉnh sửa tin nhắn",
     queueingOffHint: "Tin nhắn mới sẽ ngắt và chạy tiếp theo.",
     queueingOnHint: "Tin nhắn mới sẽ chờ đến lượt.",
@@ -936,12 +836,10 @@ export const vi = {
     modeConversation: "Chỉ cuộc trò chuyện",
     modeFiles: "Chỉ tệp",
     checkFailed: "Không thể kiểm tra thay đổi của tệp: {error}",
-    summary:
-      "Tệp cần khôi phục: {restore}. Cần xóa: {remove}. Cần tạo lại: {recreate}.",
+    summary: "Tệp cần khôi phục: {restore}. Cần xóa: {remove}. Cần tạo lại: {recreate}.",
     conflicts: "Đã thay đổi kể từ đó, sẽ được bỏ qua",
     untracked: "Không thể khôi phục",
-    scopeNote:
-      "Tệp bao gồm cả mã. Chương trình, gói và các tệp bên ngoài thư mục của cuộc trò chuyện này sẽ không bị thay đổi.",
+    scopeNote: "Tệp bao gồm cả mã. Chương trình, gói và các tệp bên ngoài thư mục của cuộc trò chuyện này sẽ không bị thay đổi.",
     back: "Quay lại",
     cancel: "Hủy",
     confirm: "Tua lại",
@@ -950,8 +848,7 @@ export const vi = {
     restoredMany: "Đã khôi phục {count} tệp",
     nothingRestored: "Không có tệp nào cần khôi phục",
     skippedCount: "Đã bỏ qua {count}",
-    filesNotRestored:
-      "{count} tệp đã thay đổi không thể khôi phục và được giữ nguyên.",
+    filesNotRestored: "{count} tệp đã thay đổi không thể khôi phục và được giữ nguyên.",
     restoreFailed: "Không thể khôi phục tệp",
     undo: "Hoàn tác",
     undone: "Đã hoàn tác việc khôi phục tệp",
@@ -981,8 +878,7 @@ export const vi = {
     addScheduledTask: "Thêm tác vụ đã lên lịch…",
     compact: "Thu gọn cuộc trò chuyện",
     compactEmpty: "Chưa có gì để thu gọn",
-    compactUnsupported:
-      "Cần mô hình GGUF hoặc MLX có hỗ trợ công cụ để thu gọn",
+    compactUnsupported: "Cần mô hình GGUF hoặc MLX có hỗ trợ công cụ để thu gọn",
   },
   welcome: {
     goodToSeeYou: "Rất vui được gặp bạn",
@@ -1001,13 +897,11 @@ export const vi = {
     nightShift: "Ca đêm bắt đầu",
     nightShiftName: "Ca đêm bắt đầu, {name}",
     temporaryChat: "Cuộc trò chuyện tạm thời",
-    temporaryChatDescription:
-      "Cuộc trò chuyện này sẽ không xuất hiện trong lịch sử và không được lưu. Nó sẽ biến mất khi bạn rời đi.",
+    temporaryChatDescription: "Cuộc trò chuyện này sẽ không xuất hiện trong lịch sử và không được lưu. Nó sẽ biến mất khi bạn rời đi.",
   },
   picker: {
     unifiedTightFit: "Sát giới hạn",
-    unifiedTightFitHint:
-      "Có thể được nạp với ngữ cảnh ngắn hơn hoặc chạy chậm hơn trên máy Mac này.",
+    unifiedTightFitHint: "Có thể được nạp với ngữ cảnh ngắn hơn hoặc chạy chậm hơn trên máy Mac này.",
     residentToRun: "để chạy",
     residentToRunHint: "Bộ nhớ GPU mà bước kiểm tra tải yêu cầu khi chạy",
     onDevice: "Trên thiết bị",
@@ -1015,8 +909,7 @@ export const vi = {
     retry: "Thử lại",
     loadMore: "Tải thêm",
     offlineTitle: "Bạn đang ngoại tuyến",
-    offlineBody:
-      "Chuyển sang Thiết bị để dùng {noun} trong bộ nhớ đệm hoặc trên máy.",
+    offlineBody: "Chuyển sang Thiết bị để dùng {noun} trong bộ nhớ đệm hoặc trên máy.",
     offlineSwitchDevice: "Thiết bị",
     searchAriaLabel: "Tìm kiếm {noun}",
     modelSourceAriaLabel: "Nguồn mô hình",
@@ -1025,14 +918,12 @@ export const vi = {
     modelDroppedByProvider: "{provider} · không còn được cung cấp",
     modelDisabled: "Chưa bật",
     modelDisabledByProvider: "{provider} · chưa bật",
-    multipleMatches:
-      "Có nhiều {noun} trùng khớp. Hãy chọn một mục trong danh sách.",
+    multipleMatches: "Có nhiều {noun} trùng khớp. Hãy chọn một mục trong danh sách.",
     rateLimitedTitle: "Đã đạt giới hạn tốc độ của Hugging Face",
     rateLimitedBody: "Hãy đợi một lát, rồi thử tìm kiếm {noun} lại.",
     modelScope: "ModelScope",
     useModelScope: "Dùng ModelScope",
-    useModelScopeHint:
-      "Tìm kiếm và tải xuống từ ModelScope thay thế. Bạn có thể chuyển lại trong Cài đặt.",
+    useModelScopeHint: "Tìm kiếm và tải xuống từ ModelScope thay thế. Bạn có thể chuyển lại trong Cài đặt.",
     useModelScopeFailed: "Không thể chuyển sang ModelScope.",
     updateToken: "Cập nhật token",
     hfToken: {
@@ -1042,8 +933,7 @@ export const vi = {
       savedAriaLabel: "Đã lưu token Hugging Face",
       addAriaLabel: "Đặt token Hugging Face",
       savedHint: "Đã lưu token. Quyền truy cập sẽ được kiểm tra khi bạn dùng.",
-      addHint:
-        "Đặt token để truy cập kho lưu trữ riêng tư và bị giới hạn truy cập.",
+      addHint: "Đặt token để truy cập kho lưu trữ riêng tư và bị giới hạn truy cập.",
     },
   },
   common: {
@@ -1153,8 +1043,7 @@ export const vi = {
       guidedTour: "Hướng dẫn tham quan",
       help: "Trợ giúp",
       logOut: "Đăng xuất",
-      logOutNeedsPassword:
-        "Hãy đặt mật khẩu trong Cài đặt > Từ xa & LAN trước khi đăng xuất để bạn có thể đăng nhập lại.",
+      logOutNeedsPassword: "Hãy đặt mật khẩu trong Cài đặt > Từ xa & LAN trước khi đăng xuất để bạn có thể đăng nhập lại.",
       logOutFailed: "Không thể đăng xuất an toàn. Hãy thử lại sau giây lát.",
       shutdown: "Tắt",
     },
@@ -1215,10 +1104,8 @@ export const vi = {
       unpinProjects: "Bỏ ghim dự án",
       deleteProjects: "Xóa dự án",
       deleteProjectsTitle: "Xóa dự án",
-      deleteProjectsDescription:
-        "{count} dự án và tất cả cuộc trò chuyện của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
-      deleteProjectsFilesDescription:
-        "Thư mục không gian làm việc của từng dự án sẽ bị xóa khỏi ổ đĩa.",
+      deleteProjectsDescription: "{count} dự án và tất cả cuộc trò chuyện của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+      deleteProjectsFilesDescription: "Thư mục không gian làm việc của từng dự án sẽ bị xóa khỏi ổ đĩa.",
       countSelected: "Đã chọn {count}",
       pinChats: "Ghim cuộc trò chuyện",
       unpinChats: "Bỏ ghim cuộc trò chuyện",
@@ -1227,13 +1114,10 @@ export const vi = {
       markRead: "Đánh dấu là đã đọc",
       deleteChats: "Xóa cuộc trò chuyện",
       deleteTitle: "Xóa cuộc trò chuyện",
-      deleteDescription:
-        "{count} cuộc trò chuyện và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
-      deleteFilesDescription:
-        "Thư mục sandbox riêng của từng cuộc trò chuyện sẽ bị xóa khỏi ổ đĩa. Các tệp chúng đã ghi bên trong một dự án vẫn nằm trong không gian làm việc của dự án đó.",
+      deleteDescription: "{count} cuộc trò chuyện và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+      deleteFilesDescription: "Thư mục sandbox riêng của từng cuộc trò chuyện sẽ bị xóa khỏi ổ đĩa. Các tệp chúng đã ghi bên trong một dự án vẫn nằm trong không gian làm việc của dự án đó.",
       deleteFilesLabel: "Xóa tệp và thư mục sandbox",
-      deleteChatFilesDescription:
-        "Thư mục sandbox riêng của cuộc trò chuyện này sẽ bị xóa khỏi ổ đĩa. Các tệp nó đã ghi bên trong một dự án vẫn nằm trong không gian làm việc của dự án đó.",
+      deleteChatFilesDescription: "Thư mục sandbox riêng của cuộc trò chuyện này sẽ bị xóa khỏi ổ đĩa. Các tệp nó đã ghi bên trong một dự án vẫn nằm trong không gian làm việc của dự án đó.",
     },
     organize: {
       sidebarHeading: "Sắp xếp thanh bên",
@@ -1276,8 +1160,7 @@ export const vi = {
     dialog: {
       deleteChat: {
         title: "Xóa cuộc trò chuyện",
-        description:
-          "Cuộc trò chuyện “{name}” và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        description: "Cuộc trò chuyện “{name}” và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
       },
       deleteRun: {
         title: "Xóa lượt huấn luyện",
@@ -1306,12 +1189,10 @@ export const vi = {
       signsInAs: "Đăng nhập với tên {username}",
       signsInAsOwner: "Đăng nhập với tên {alias} hoặc {username}",
       signInName: "Tên đăng nhập của bạn",
-      signInNameDescription:
-        "Tên bạn nhập để đăng nhập khi bản cài đặt này có nhiều tài khoản. Tên unsloth cũng luôn dùng được. Để trống để chỉ dùng unsloth.",
+      signInNameDescription: "Tên bạn nhập để đăng nhập khi bản cài đặt này có nhiều tài khoản. Tên unsloth cũng luôn dùng được. Để trống để chỉ dùng unsloth.",
       signInNameSave: "Lưu tên",
       title: "Tài khoản",
-      description:
-        "Tạo tài khoản Unsloth riêng tư. Người dùng mới đăng nhập bằng mã thiết lập dùng một lần và tự chọn mật khẩu.",
+      description: "Tạo tài khoản Unsloth riêng tư. Người dùng mới đăng nhập bằng mã thiết lập dùng một lần và tự chọn mật khẩu.",
       username: "Tên người dùng",
       create: "Tạo tài khoản",
       createDescription: "Chia sẻ mã thiết lập để họ có thể tự chọn mật khẩu.",
@@ -1321,16 +1202,13 @@ export const vi = {
       noResults: "Không có tài khoản phù hợp",
       created: "Ngày tạo",
       status: "Trạng thái",
-      loginHint:
-        "Đăng nhập với tên {username}, dùng mã này làm mật khẩu, sau đó chọn mật khẩu mới.",
+      loginHint: "Đăng nhập với tên {username}, dùng mã này làm mật khẩu, sau đó chọn mật khẩu mới.",
       privateAccount: "Tài khoản riêng tư",
       modelAccess: "Quyền truy cập mô hình",
       modelAccessTitle: "Quyền truy cập mô hình của {username}",
-      modelAccessDescription:
-        "Chọn những mô hình Hugging Face mà tài khoản này có thể xem, tải xuống, nạp và sử dụng thông qua khóa API của mình.",
+      modelAccessDescription: "Chọn những mô hình Hugging Face mà tài khoản này có thể xem, tải xuống, nạp và sử dụng thông qua khóa API của mình.",
       modelAccessLabel: "Mô hình được phép",
-      modelAccessHint:
-        "Mỗi dòng một mô hình, ví dụ unsloth/Qwen3-4B-GGUF, hoặc unsloth/* cho cả một tổ chức. Để trống để cho phép mọi mô hình.",
+      modelAccessHint: "Mỗi dòng một mô hình, ví dụ unsloth/Qwen3-4B-GGUF, hoặc unsloth/* cho cả một tổ chức. Để trống để cho phép mọi mô hình.",
       modelAccessSave: "Lưu",
       modelAccessLimited: "Quyền truy cập mô hình bị giới hạn",
       rename: "Đổi tên",
@@ -1339,27 +1217,23 @@ export const vi = {
       empty: "Chưa có tài khoản nào khác",
       setupCode: "Mã thiết lập",
       setupFor: "Mã thiết lập cho {username}",
-      shownOnce:
-        "Hãy sao chép mã này ngay và chia sẻ với chủ tài khoản. Mã chỉ hiển thị tại đây và chỉ dùng được một lần trong vòng 60 phút.",
+      shownOnce: "Hãy sao chép mã này ngay và chia sẻ với chủ tài khoản. Mã chỉ hiển thị tại đây và chỉ dùng được một lần trong vòng 60 phút.",
       expires: "Hết hạn {expiry}",
       copy: "Sao chép mã thiết lập",
       copied: "Đã sao chép",
-      copyFailed:
-        "Không thể sao chép. Hãy chọn và sao chép mã thiết lập ở trên.",
+      copyFailed: "Không thể sao chép. Hãy chọn và sao chép mã thiết lập ở trên.",
       dismiss: "Xong",
       owner: "Chủ sở hữu bản cài đặt",
       active: "Đã bật",
       inactive: "Đã tắt",
       regenerate: "Tạo lại mã thiết lập",
       resetTitle: "Đặt lại mật khẩu của {username}?",
-      resetDescription:
-        "Việc tạo lại mã thiết lập sẽ thay thế mật khẩu của {username}, đăng xuất họ và thu hồi các khóa API của họ. Hãy đưa họ mã mới để họ có thể chọn lại mật khẩu.",
+      resetDescription: "Việc tạo lại mã thiết lập sẽ thay thế mật khẩu của {username}, đăng xuất họ và thu hồi các khóa API của họ. Hãy đưa họ mã mới để họ có thể chọn lại mật khẩu.",
       deactivate: "Tắt",
       reactivate: "Bật",
       delete: "Xóa tài khoản",
       deleteTitle: "Xóa {username}?",
-      deleteDescription:
-        "Thao tác này thu hồi các phiên của {username} và hủy công việc của họ. Các cuộc trò chuyện, cài đặt, thông tin xác thực, tệp tải lên, tập dữ liệu, lượt huấn luyện, kết quả đầu ra, bản xuất, thư viện ảnh, sandbox, dự án và tệp tạm thời của họ sẽ bị ngừng sử dụng. Các thư mục được đổi tên và để riêng, không bao giờ bị xóa. Tạo lại tên người dùng này sẽ bắt đầu một tài khoản mới không có dữ liệu nào trong số này.",
+      deleteDescription: "Thao tác này thu hồi các phiên của {username} và hủy công việc của họ. Các cuộc trò chuyện, cài đặt, thông tin xác thực, tệp tải lên, tập dữ liệu, lượt huấn luyện, kết quả đầu ra, bản xuất, thư viện ảnh, sandbox, dự án và tệp tạm thời của họ sẽ bị ngừng sử dụng. Các thư mục được đổi tên và để riêng, không bao giờ bị xóa. Tạo lại tên người dùng này sẽ bắt đầu một tài khoản mới không có dữ liệu nào trong số này.",
       cancel: "Hủy",
       retry: "Làm mới tài khoản",
       failed: "Yêu cầu tài khoản không thành công.",
@@ -1382,21 +1256,18 @@ export const vi = {
       medium: "Vừa",
       large: "Lớn",
       imageLayout: "Thẻ hình ảnh",
-      imageLayoutDescription:
-        "Giữ nguyên hình dạng của từng ảnh, hoặc cắt thành các hình vuông đều nhau.",
+      imageLayoutDescription: "Giữ nguyên hình dạng của từng ảnh, hoặc cắt thành các hình vuông đều nhau.",
       masonry: "Hình dạng gốc",
       square: "Hình vuông",
       showCardDates: "Hiện ngày trên thẻ",
-      showCardDatesDescription:
-        "Hiện thời điểm mỗi tệp được thay đổi lần cuối.",
+      showCardDatesDescription: "Hiện thời điểm mỗi tệp được thay đổi lần cuối.",
       browsingSection: "Duyệt",
       startTab: "Mở tại",
       startTabDescription: "Thẻ được mở đầu tiên khi vào Thư viện.",
       suggested: "Đề xuất",
       all: "Tất cả",
       sort: "Sắp xếp theo",
-      sortDescription:
-        "Thứ tự của tệp và thư mục. Mục Đề xuất luôn hiện những mục gần đây nhất.",
+      sortDescription: "Thứ tự của tệp và thư mục. Mục Đề xuất luôn hiện những mục gần đây nhất.",
       recent: "Mới nhất",
       oldest: "Cũ nhất",
       name: "Tên",
@@ -1405,23 +1276,17 @@ export const vi = {
       tabAuto: "Khi có tệp",
       tabAlways: "Luôn luôn",
       contentSection: "Nội dung",
-      contentDescription:
-        "Chọn nội dung hiển thị trong Thư viện. Tệp bị ẩn không bị xóa.",
+      contentDescription: "Chọn nội dung hiển thị trong Thư viện. Tệp bị ẩn không bị xóa.",
       showChatAttachments: "Tệp đính kèm trong trò chuyện",
-      showChatAttachmentsDescription:
-        "Các tệp bạn đã đính kèm vào cuộc trò chuyện.",
+      showChatAttachmentsDescription: "Các tệp bạn đã đính kèm vào cuộc trò chuyện.",
       showChatToolFiles: "Tệp từ công cụ trò chuyện",
-      showChatToolFilesDescription:
-        "Các tệp do mã và công cụ tạo ra trong cuộc trò chuyện.",
+      showChatToolFilesDescription: "Các tệp do mã và công cụ tạo ra trong cuộc trò chuyện.",
       showGeneratedMedia: "Nội dung đa phương tiện đã tạo",
-      showGeneratedMediaDescription:
-        "Hình ảnh, video và âm thanh từ các trang Hình ảnh, Video và Âm thanh.",
-      showFineTunesDescription:
-        "Các mô hình bạn đã huấn luyện hoặc xuất trong Unsloth.",
+      showGeneratedMediaDescription: "Hình ảnh, video và âm thanh từ các trang Hình ảnh, Video và Âm thanh.",
+      showFineTunesDescription: "Các mô hình bạn đã huấn luyện hoặc xuất trong Unsloth.",
       deletingSection: "Xóa",
       confirmDelete: "Xác nhận trước khi xóa",
-      confirmDeleteDescription:
-        "Hỏi trước khi xóa tệp và thư mục khỏi Thư viện.",
+      confirmDeleteDescription: "Hỏi trước khi xóa tệp và thư mục khỏi Thư viện.",
       reset: "Đặt lại cài đặt Thư viện",
       resetDescription: "Khôi phục mọi tùy chọn ở trên về mặc định.",
       resetButton: "Đặt lại",
@@ -1429,10 +1294,8 @@ export const vi = {
       storageSection: "Dung lượng lưu trữ",
       downloadsSection: "Tải xuống hình ảnh",
       imageInfoStamp: "Dấu thông tin",
-      imageInfoStampDescription:
-        "Hiện mô hình, ngày và seed ở cuối các hình ảnh bạn tải xuống từ trang Hình ảnh. Dù thế nào, cài đặt tạo ảnh vẫn được lưu bên trong tệp.",
-      storageDescription:
-        "Mở một danh mục để xem các tệp theo thứ tự từ lớn nhất, và xóa những gì bạn không còn cần.",
+      imageInfoStampDescription: "Hiện mô hình, ngày và seed ở cuối các hình ảnh bạn tải xuống từ trang Hình ảnh. Dù thế nào, cài đặt tạo ảnh vẫn được lưu bên trong tệp.",
+      storageDescription: "Mở một danh mục để xem các tệp theo thứ tự từ lớn nhất, và xóa những gì bạn không còn cần.",
       storageUsed: "Thư viện đang dùng {size}",
       storageDisk: "Còn trống {free} trên tổng {total} của ổ đĩa này",
       storageEmpty: "Chưa có gì được lưu trong Thư viện.",
@@ -1442,25 +1305,21 @@ export const vi = {
       storageOpen: "Mở",
       storageError: "Không thể đọc dung lượng lưu trữ của Thư viện.",
       locationsSection: "Tệp trên ổ đĩa",
-      locationsDescription:
-        "Nơi Unsloth lưu từng loại tệp. Thư mục trong Thư viện chỉ là nhãn bên trong Unsloth, không phải thư mục trên ổ đĩa. Các mô hình tinh chỉnh và bản xuất được giữ nguyên vị trí, vì quá trình huấn luyện và các cuộc trò chuyện tham chiếu đến chúng theo đường dẫn.",
+      locationsDescription: "Nơi Unsloth lưu từng loại tệp. Thư mục trong Thư viện chỉ là nhãn bên trong Unsloth, không phải thư mục trên ổ đĩa. Các mô hình tinh chỉnh và bản xuất được giữ nguyên vị trí, vì quá trình huấn luyện và các cuộc trò chuyện tham chiếu đến chúng theo đường dẫn.",
       locationUploads: "Tệp tải lên Thư viện",
       locationExports: "Bản xuất",
       revealFailed: "Không thể mở trình quản lý tệp",
       locationReset: "Đặt lại",
       locationMoveTitle: "Di chuyển {name} sang thư mục mới",
-      locationMoveDescription:
-        "Chọn bất kỳ thư mục nào. Nếu thư mục đó đã có tệp, Unsloth sẽ tạo thư mục riêng bên trong. Mọi thứ hiện có ở đây cũng sẽ được di chuyển.",
+      locationMoveDescription: "Chọn bất kỳ thư mục nào. Nếu thư mục đó đã có tệp, Unsloth sẽ tạo thư mục riêng bên trong. Mọi thứ hiện có ở đây cũng sẽ được di chuyển.",
       locationMoveAction: "Di chuyển đến đây",
       locationMoving: "Đang di chuyển {name}…",
       locationMoved: "Đã di chuyển {name}",
       locationMoveFailed: "Không thể di chuyển {name}",
       locationFree: "Còn trống {free} trên ổ đĩa này",
-      locationUnavailable:
-        "Không khả dụng. Hãy kết nối lại ổ đĩa của thư mục này, hoặc đặt lại thư mục.",
+      locationUnavailable: "Không khả dụng. Hãy kết nối lại ổ đĩa của thư mục này, hoặc đặt lại thư mục.",
       locationResetUnavailableTitle: "Đặt lại {name}?",
-      locationResetUnavailableDescription:
-        "Ổ đĩa của vị trí này chưa được kết nối. Các tệp trong {path} vẫn nằm trên ổ đĩa đó và sẽ không hiển thị trong Thư viện cho đến khi bạn chuyển chúng về.",
+      locationResetUnavailableDescription: "Ổ đĩa của vị trí này chưa được kết nối. Các tệp trong {path} vẫn nằm trên ổ đĩa đó và sẽ không hiển thị trong Thư viện cho đến khi bạn chuyển chúng về.",
       locationLeftBehind: "Các tệp trong {path} vẫn nằm trên ổ đĩa đó.",
       dataStorage: "Dung lượng lưu trữ của Thư viện",
       manageStorage: "Quản lý dung lượng",
@@ -1470,8 +1329,7 @@ export const vi = {
       itemCountOne: "1 mục",
       itemCount: "{count} mục",
       tabsSection: "Thẻ",
-      tabsDescription:
-        "Chọn các thẻ mà Thư viện hiển thị. Thẻ bạn mở từ một liên kết vẫn xuất hiện.",
+      tabsDescription: "Chọn các thẻ mà Thư viện hiển thị. Thẻ bạn mở từ một liên kết vẫn xuất hiện.",
       tabHidden: "Đã ẩn",
       lastVisited: "Lần truy cập gần nhất",
     },
@@ -1499,8 +1357,7 @@ export const vi = {
     },
     keyboardShortcuts: {
       title: "Phím tắt",
-      intro:
-        "Để thay đổi một phím tắt, hãy chọn tổ hợp phím rồi nhập các phím mới",
+      intro: "Để thay đổi một phím tắt, hãy chọn tổ hợp phím rồi nhập các phím mới",
       searchPlaceholder: "Tìm kiếm phím tắt…",
       keystrokePlaceholder: "Nhấn phím tắt để tìm kiếm",
       searchByKeystrokes: "Tìm theo tổ hợp phím",
@@ -1508,16 +1365,13 @@ export const vi = {
       noResults: "Không có phím tắt nào khớp với tìm kiếm.",
       unassigned: "không có",
       recording: "Nhấn chuỗi phím",
-      needsModifier:
-        "Thêm ⌘, Ctrl hoặc Alt. Một phím đơn sẽ chặn việc nhập văn bản.",
+      needsModifier: "Thêm ⌘, Ctrl hoặc Alt. Một phím đơn sẽ chặn việc nhập văn bản.",
       conflict: "Cũng được dùng bởi một phím tắt khác",
-      conflictShadowed:
-        "Một phím tắt khác dùng tổ hợp này và sẽ được chạy thay thế",
+      conflictShadowed: "Một phím tắt khác dùng tổ hợp này và sẽ được chạy thay thế",
       edit: "Thay đổi phím tắt",
       reset: "Khôi phục mặc định",
       resetAll: "Khôi phục tất cả mặc định",
-      browserReserved:
-        "Trình duyệt của bạn có thể giữ tổ hợp phím này cho riêng nó. Tổ hợp này hoạt động trong ứng dụng máy tính.",
+      browserReserved: "Trình duyệt của bạn có thể giữ tổ hợp phím này cho riêng nó. Tổ hợp này hoạt động trong ứng dụng máy tính.",
       metaUnsupported: "Không thể dùng phím Windows trong phím tắt.",
       altGraphUnsupported: "Không thể dùng tổ hợp AltGr làm phím tắt.",
       desktopOnly: "Chỉ có trong ứng dụng máy tính",
@@ -1534,13 +1388,11 @@ export const vi = {
         },
         newBrowserTab: {
           label: "Thẻ trình duyệt mới",
-          description:
-            "Mở một thẻ mới trong trình duyệt bên cạnh cuộc trò chuyện",
+          description: "Mở một thẻ mới trong trình duyệt bên cạnh cuộc trò chuyện",
         },
         toggleBrowserFullView: {
           label: "Bật/tắt chế độ xem toàn bộ trình duyệt",
-          description:
-            "Hiển thị trình duyệt trên toàn bộ cửa sổ, với cuộc trò chuyện nổi phía trên",
+          description: "Hiển thị trình duyệt trên toàn bộ cửa sổ, với cuộc trò chuyện nổi phía trên",
         },
         openSettings: {
           label: "Mở cài đặt",
@@ -1588,18 +1440,15 @@ export const vi = {
         },
         archiveChat: {
           label: "Lưu trữ cuộc trò chuyện",
-          description:
-            "Lưu trữ các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại",
+          description: "Lưu trữ các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại",
         },
         markChatUnread: {
           label: "Đánh dấu là chưa đọc",
-          description:
-            "Đánh dấu các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại là chưa đọc",
+          description: "Đánh dấu các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại là chưa đọc",
         },
         togglePinChat: {
           label: "Ghim/bỏ ghim",
-          description:
-            "Ghim hoặc bỏ ghim các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại",
+          description: "Ghim hoặc bỏ ghim các cuộc trò chuyện đã chọn hoặc cuộc trò chuyện hiện tại",
         },
         selectAllChats: {
           label: "Chọn tất cả cuộc trò chuyện",
@@ -1607,8 +1456,7 @@ export const vi = {
         },
         clearChatSelection: {
           label: "Bỏ chọn",
-          description:
-            "Bỏ chọn các cuộc trò chuyện đã chọn. Phím Escape cũng làm được việc này",
+          description: "Bỏ chọn các cuộc trò chuyện đã chọn. Phím Escape cũng làm được việc này",
         },
         deleteSelectedChats: {
           label: "Xóa các cuộc trò chuyện đã chọn",
@@ -1632,8 +1480,7 @@ export const vi = {
         },
         nextChatNeedingAttention: {
           label: "Cuộc trò chuyện cần chú ý tiếp theo",
-          description:
-            "Chuyển sang cuộc trò chuyện tiếp theo đang tạo phản hồi, đang chờ trong hàng đợi hoặc chưa đọc",
+          description: "Chuyển sang cuộc trò chuyện tiếp theo đang tạo phản hồi, đang chờ trong hàng đợi hoặc chưa đọc",
         },
         clearAllUnreads: {
           label: "Xóa tất cả trạng thái chưa đọc",
@@ -1725,8 +1572,7 @@ export const vi = {
         },
         openComposerMenu: {
           label: "Mở menu +",
-          description:
-            "Mở menu + chứa công cụ và tệp đính kèm của khung soạn thảo",
+          description: "Mở menu + chứa công cụ và tệp đính kèm của khung soạn thảo",
         },
         sendMessage: {
           label: "Gửi tin nhắn",
@@ -1762,13 +1608,11 @@ export const vi = {
         },
         forkChat: {
           label: "Tạo nhánh cuộc trò chuyện",
-          description:
-            "Tạo một cuộc trò chuyện mới rẽ nhánh từ tin nhắn mới nhất",
+          description: "Tạo một cuộc trò chuyện mới rẽ nhánh từ tin nhắn mới nhất",
         },
         copyChatAsMarkdown: {
           label: "Sao chép dưới dạng Markdown",
-          description:
-            "Sao chép toàn bộ cuộc trò chuyện vào bảng nhớ tạm dưới dạng Markdown",
+          description: "Sao chép toàn bộ cuộc trò chuyện vào bảng nhớ tạm dưới dạng Markdown",
         },
         copySessionId: {
           label: "Sao chép ID phiên",
@@ -1778,8 +1622,7 @@ export const vi = {
     },
     sandbox: {
       title: "Bảo mật",
-      description:
-        "Lệnh gọi công cụ Python và Terminal có chạy bên trong sandbox của hệ điều hành trên máy tính này hay không.",
+      description: "Lệnh gọi công cụ Python và Terminal có chạy bên trong sandbox của hệ điều hành trên máy tính này hay không.",
       docs: "Tài liệu",
       docsLabel: "Mở tài liệu về sandbox",
       toolsSection: "Máy tính này",
@@ -1788,37 +1631,27 @@ export const vi = {
       terminal: "Terminal",
       osIsolation: "Sandbox hệ điều hành ({backend})",
       softwareSafeguards: "Biện pháp bảo vệ bằng phần mềm",
-      noReason:
-        "Chưa có sandbox hệ điều hành nào hoạt động ở đây, nên Unsloth sẽ kiểm tra từng lệnh gọi thay thế.",
-      runsInCmd:
-        "Chạy trong cmd.exe, vì Git Bash không thể khởi động trong sandbox của Windows.",
+      noReason: "Chưa có sandbox hệ điều hành nào hoạt động ở đây, nên Unsloth sẽ kiểm tra từng lệnh gọi thay thế.",
+      runsInCmd: "Chạy trong cmd.exe, vì Git Bash không thể khởi động trong sandbox của Windows.",
       loadError: "Không thể tải trạng thái sandbox",
       saveError: "Không thể lưu cài đặt sandbox",
       prepareError: "Không thể chuẩn bị máy tính này",
-      unsupported:
-        "Máy chủ Unsloth này chưa báo cáo trạng thái sandbox. Hãy cập nhật Unsloth để quản lý tại đây.",
+      unsupported: "Máy chủ Unsloth này chưa báo cáo trạng thái sandbox. Hãy cập nhật Unsloth để quản lý tại đây.",
       windowsSection: "Sandbox của Windows (bản xem trước)",
-      windowsDescription:
-        "Sandbox MXC của Microsoft. Sandbox này dùng container tích hợp sẵn trong Windows, hoặc một phương án dự phòng trên các phiên bản Windows không có container đó.",
+      windowsDescription: "Sandbox MXC của Microsoft. Sandbox này dùng container tích hợp sẵn trong Windows, hoặc một phương án dự phòng trên các phiên bản Windows không có container đó.",
       builtinLabel: "Container tích hợp sẵn",
-      builtinDescription:
-        "Sandbox của Windows chạy trong container tích hợp sẵn của Windows, không cần bước quản trị viên.",
+      builtinDescription: "Sandbox của Windows chạy trong container tích hợp sẵn của Windows, không cần bước quản trị viên.",
       builtinInUse: "Đang dùng",
       optInLabel: "Dùng sandbox dự phòng",
-      optInDescription:
-        "Dành cho các phiên bản Windows không có container tích hợp sẵn. Khi đó Python và Terminal chỉ có thể thay đổi tệp trong thư mục của cuộc trò chuyện.",
-      optInNotNeeded:
-        "Không cần thiết trên máy tính này, vì container tích hợp sẵn hoạt động.",
-      disclosure:
-        "Phương án dự phòng cần một bước quản trị viên một lần, Chuẩn bị máy tính này, và phải lặp lại sau mỗi lần khởi động lại. Khi một công cụ chạy, Unsloth cấp cho nó quyền truy cập tạm thời vào các thư mục cần thiết. MXC vẫn là bản xem trước, không phải là ranh giới bảo mật.",
+      optInDescription: "Dành cho các phiên bản Windows không có container tích hợp sẵn. Khi đó Python và Terminal chỉ có thể thay đổi tệp trong thư mục của cuộc trò chuyện.",
+      optInNotNeeded: "Không cần thiết trên máy tính này, vì container tích hợp sẵn hoạt động.",
+      disclosure: "Phương án dự phòng cần một bước quản trị viên một lần, Chuẩn bị máy tính này, và phải lặp lại sau mỗi lần khởi động lại. Khi một công cụ chạy, Unsloth cấp cho nó quyền truy cập tạm thời vào các thư mục cần thiết. MXC vẫn là bản xem trước, không phải là ranh giới bảo mật.",
       lockedDacl: "Được đặt bởi UNSLOTH_MXC_ALLOW_DACL_FALLBACK",
       grantsLabel: "Khởi động công cụ nhanh hơn",
-      grantsDescription:
-        "Giữ quyền truy cập chỉ đọc vào các thư mục runtime của chính Unsloth giữa các lệnh gọi. Khi tắt, mỗi lệnh gọi sẽ khởi động chậm hơn vài giây.",
+      grantsDescription: "Giữ quyền truy cập chỉ đọc vào các thư mục runtime của chính Unsloth giữa các lệnh gọi. Khi tắt, mỗi lệnh gọi sẽ khởi động chậm hơn vài giây.",
       lockedGrants: "Được đặt bởi UNSLOTH_MXC_PERSISTENT_READ_GRANTS",
       memoryLabel: "Giới hạn bộ nhớ",
-      memoryDescription:
-        "Lượng bộ nhớ tối đa mà một lệnh gọi Python hoặc Terminal trong sandbox có thể dành riêng. Áp dụng từ lệnh gọi tiếp theo. Mặc định là {defaultSize} GB.",
+      memoryDescription: "Lượng bộ nhớ tối đa mà một lệnh gọi Python hoặc Terminal trong sandbox có thể dành riêng. Áp dụng từ lệnh gọi tiếp theo. Mặc định là {defaultSize} GB.",
       memoryLocked: "Được đặt bởi UNSLOTH_STUDIO_SANDBOX_AS_GB",
       memoryInvalid: "Nhập một số nguyên từ {min} đến {max}.",
       restored: "Đã gỡ quyền truy cập khỏi {count} thư mục.",
@@ -1835,41 +1668,32 @@ export const vi = {
       setupLabel: "Sandbox hệ điều hành",
       setupCommandHint: "Chạy lệnh này trên máy tính đang chạy Unsloth:",
       macosBuiltIn: "macOS có sẵn sandbox tích hợp, nên không cần cài đặt gì.",
-      setupKeywords:
-        "cài đặt thiết lập install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
+      setupKeywords: "cài đặt thiết lập install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
       setupSucceeded: "Sandbox hệ điều hành đã sẵn sàng.",
-      runtimeMissing:
-        "Chưa được cài đặt. Việc cài đặt không cần quyền quản trị viên.",
+      runtimeMissing: "Chưa được cài đặt. Việc cài đặt không cần quyền quản trị viên.",
       runtimeLabel: "Runtime sandbox của Windows",
       installRuntime: "Cài đặt runtime",
       installingRuntime: "Đang cài đặt…",
       installRuntimeFailed: "Cài đặt runtime không thành công.",
       installRuntimeError: "Không thể bắt đầu cài đặt runtime.",
-      unsupportedArch:
-        "Sandbox của Windows (MXC) chỉ chạy trên Windows x64 và ARM64, nên không khả dụng trên máy tính này.",
-      builtinNeedsUpdate:
-        "Container tích hợp sẵn của Windows cần bản dựng {required} trở lên, còn máy tính này đang chạy {current}. Hãy cài đặt bản cập nhật Windows mới nhất để dùng container mà không cần bước quản trị viên, hoặc bật phương án dự phòng bên dưới.",
-      unsupportedBuild:
-        "Sandbox của Windows (MXC) cần Windows 11 24H2 (bản dựng 26100) trở lên, nên không khả dụng trên máy tính này.",
+      unsupportedArch: "Sandbox của Windows (MXC) chỉ chạy trên Windows x64 và ARM64, nên không khả dụng trên máy tính này.",
+      builtinNeedsUpdate: "Container tích hợp sẵn của Windows cần bản dựng {required} trở lên, còn máy tính này đang chạy {current}. Hãy cài đặt bản cập nhật Windows mới nhất để dùng container mà không cần bước quản trị viên, hoặc bật phương án dự phòng bên dưới.",
+      unsupportedBuild: "Sandbox của Windows (MXC) cần Windows 11 24H2 (bản dựng 26100) trở lên, nên không khả dụng trên máy tính này.",
       permissionLabel: "Quyền của công cụ",
       levelRowLabel: "Mức sandbox",
       levelPickerTitle: "Mã nên được chạy trong sandbox như thế nào?",
       levelOff: "Đã tắt",
       levelOffShort: "Toàn quyền truy cập sẽ tắt sandbox",
-      levelHighDetail:
-        "Python và Terminal chạy bên trong sandbox của hệ điều hành (bubblewrap, Seatbelt hoặc MXC), bên cạnh sandbox phần mềm. Nếu không có sandbox hệ điều hành hoạt động, các lệnh gọi rủi ro sẽ hỏi trước.",
-      levelLowDetail:
-        "Python và Terminal chỉ chạy với sandbox phần mềm, bên ngoài sandbox của hệ điều hành. Các lệnh gọi rủi ro sẽ hỏi trước, trừ khi bạn chọn Toàn quyền truy cập.",
+      levelHighDetail: "Python và Terminal chạy bên trong sandbox của hệ điều hành (bubblewrap, Seatbelt hoặc MXC), bên cạnh sandbox phần mềm. Nếu không có sandbox hệ điều hành hoạt động, các lệnh gọi rủi ro sẽ hỏi trước.",
+      levelLowDetail: "Python và Terminal chỉ chạy với sandbox phần mềm, bên ngoài sandbox của hệ điều hành. Các lệnh gọi rủi ro sẽ hỏi trước, trừ khi bạn chọn Toàn quyền truy cập.",
       levelLabel: "Sandbox",
       levelHigh: "Cao",
       levelLow: "Thấp",
       levelHighShort: "Thêm lớp cô lập hệ điều hành cho Python và Terminal",
       levelLowShort: "Chỉ phần mềm. Mã rủi ro sẽ hỏi trước",
-      levelFullAccessNote:
-        "Toàn quyền truy cập sẽ tắt sandbox. Cài đặt này sẽ áp dụng lại khi bạn chọn mức khác.",
+      levelFullAccessNote: "Toàn quyền truy cập sẽ tắt sandbox. Cài đặt này sẽ áp dụng lại khi bạn chọn mức khác.",
       learnMore: "Tìm hiểu thêm",
-      managedNote:
-        "Chủ sở hữu máy chủ Unsloth này thiết lập sandbox hệ điều hành.",
+      managedNote: "Chủ sở hữu máy chủ Unsloth này thiết lập sandbox hệ điều hành.",
       trustedFoldersTitle: "Thư mục tin cậy",
       trustedFoldersLabel: "Chạy không cần hỏi",
       trustedFoldersDescription: "Python và Terminal có thể đọc và chạy tệp trong các thư mục này mà không cần xin phê duyệt, chỉ trong các cuộc trò chuyện của riêng bạn. Ghi vào các thư mục này vẫn cần hỏi. Mỗi dòng một thư mục.",
@@ -1881,8 +1705,7 @@ export const vi = {
       description: "Đọc nhật ký Unsloth mà không cần rời khỏi ứng dụng.",
       logSection: "Tệp nhật ký",
       source: "Tệp nhật ký",
-      sourceHint:
-        "Các trình chạy mô hình ghi nhật ký riêng, nên lỗi nạp hoặc lỗi tạo thường được giải thích ở đó thay vì trong nhật ký máy chủ.",
+      sourceHint: "Các trình chạy mô hình ghi nhật ký riêng, nên lỗi nạp hoặc lỗi tạo thường được giải thích ở đó thay vì trong nhật ký máy chủ.",
       path: "Vị trí",
       pathCopy: "Sao chép đường dẫn",
       currentSession: "Hiện tại",
@@ -1901,64 +1724,49 @@ export const vi = {
       modeInterval: "Mỗi 3 giây",
       modeManual: "Thủ công",
       refreshNow: "Làm mới ngay",
-      privacyNote:
-        "Thông tin xác thực được che trong chế độ xem này. Tệp trên ổ đĩa không được che.",
+      privacyNote: "Thông tin xác thực được che trong chế độ xem này. Tệp trên ổ đĩa không được che.",
       copyVisible: "Sao chép phần nhật ký đang hiển thị",
       empty: "Chưa có gì được ghi nhật ký.",
       disabled: "Ghi nhật ký vào tệp đang tắt (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
       missing: "Không tìm thấy tệp nhật ký.",
       unreadable: "Không thể đọc tệp nhật ký.",
       viewLogs: "Xem nhật ký",
-      timeout:
-        "Yêu cầu nhật ký đã hết thời gian chờ. Có thể không kết nối được với máy chủ.",
-      droppedNotice:
-        "Một số dòng đã bị bỏ qua: nhật ký được ghi nhanh hơn tốc độ đọc.",
-      morePending:
-        "Vẫn đang đọc thêm dòng; chúng sẽ xuất hiện ở lần làm mới tiếp theo.",
-      staleSession:
-        "Ghi nhật ký vào tệp đang tắt, nên đây là một phiên trước đó và sẽ không được cập nhật.",
+      timeout: "Yêu cầu nhật ký đã hết thời gian chờ. Có thể không kết nối được với máy chủ.",
+      droppedNotice: "Một số dòng đã bị bỏ qua: nhật ký được ghi nhanh hơn tốc độ đọc.",
+      morePending: "Vẫn đang đọc thêm dòng; chúng sẽ xuất hiện ở lần làm mới tiếp theo.",
+      staleSession: "Ghi nhật ký vào tệp đang tắt, nên đây là một phiên trước đó và sẽ không được cập nhật.",
       downloadAllLogs: "Tải xuống tất cả nhật ký (.zip)",
       downloadingAllLogs: "Đang đóng gói nhật ký...",
-      exportMaskedNote:
-        "Thông tin xác thực được che trong các tệp đã xuất. Nhật ký rất lớn chỉ giữ lại các dòng gần đây nhất, và một số nhật ký có thể bị bỏ qua hoàn toàn; xem EXPORT_WARNINGS.txt trong tệp nén.",
+      exportMaskedNote: "Thông tin xác thực được che trong các tệp đã xuất. Nhật ký rất lớn chỉ giữ lại các dòng gần đây nhất, và một số nhật ký có thể bị bỏ qua hoàn toàn; xem EXPORT_WARNINGS.txt trong tệp nén.",
       downloadedTo: "Đã lưu vào {path}",
       downloadedToBrowser: "Đã bắt đầu tải xuống.",
       showInFolder: "Hiện trong thư mục",
       openLogsFolder: "Mở thư mục nhật ký",
       openLogsFolderFailed: "Không thể mở thư mục nhật ký.",
       exportFailed: "Không thể tải xuống nhật ký.",
-      exportTooOld:
-        "Backend Unsloth đang chạy quá cũ để xuất nhật ký. Hãy cập nhật backend đó và khởi động lại.",
-      exportForbidden:
-        "Tải xuống tất cả nhật ký cần một phiên Unsloth đã đăng nhập. Khóa API là không đủ.",
-      keywords:
-        "gỡ lỗi nhật ký lỗi sự cố treo khắc phục chẩn đoán thất bại debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed",
+      exportTooOld: "Backend Unsloth đang chạy quá cũ để xuất nhật ký. Hãy cập nhật backend đó và khởi động lại.",
+      exportForbidden: "Tải xuống tất cả nhật ký cần một phiên Unsloth đã đăng nhập. Khóa API là không đủ.",
+      keywords: "gỡ lỗi nhật ký lỗi sự cố treo khắc phục chẩn đoán thất bại debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed",
     },
     voice: {
       title: "Giọng nói",
-      description:
-        "Micrô, đọc chính tả, chuyển giọng nói thành văn bản và đọc to",
+      description: "Micrô, đọc chính tả, chuyển giọng nói thành văn bản và đọc to",
       dictation: {
         audioUploadTitle: "Đọc chính tả bằng bản ghi âm",
-        audioUploadDescription:
-          "Trình duyệt của bạn yêu cầu kết nối bảo mật (HTTPS) để ghi âm trực tiếp trong Unsloth. Trên kết nối HTTP này, hãy dùng ứng dụng ghi âm trên điện thoại hoặc chọn một bản ghi âm đã lưu. Máy chủ Unsloth của bạn sẽ chép lời âm thanh và thêm văn bản vào tin nhắn của bạn.",
+        audioUploadDescription: "Trình duyệt của bạn yêu cầu kết nối bảo mật (HTTPS) để ghi âm trực tiếp trong Unsloth. Trên kết nối HTTP này, hãy dùng ứng dụng ghi âm trên điện thoại hoặc chọn một bản ghi âm đã lưu. Máy chủ Unsloth của bạn sẽ chép lời âm thanh và thêm văn bản vào tin nhắn của bạn.",
         audioUploadChooseFile: "Chọn bản ghi âm",
         audioUploadRecord: "Ghi âm",
-        audioUploadIphoneHint:
-          "Trên iPhone, hãy lưu bản ghi âm từ Ghi âm hoặc một ứng dụng ghi âm khác, rồi chọn bản ghi đó tại đây.",
-        audioUploadServerModelNote:
-          "Bản ghi âm này dùng mô hình cục bộ hiển thị ở trên trên máy chủ Unsloth, ngay cả khi đọc chính tả thông thường dùng công cụ khác.",
+        audioUploadIphoneHint: "Trên iPhone, hãy lưu bản ghi âm từ Ghi âm hoặc một ứng dụng ghi âm khác, rồi chọn bản ghi đó tại đây.",
+        audioUploadServerModelNote: "Bản ghi âm này dùng mô hình cục bộ hiển thị ở trên trên máy chủ Unsloth, ngay cả khi đọc chính tả thông thường dùng công cụ khác.",
         audioUploadAutomatic: "Tự động",
         audioUploadModelReady: "Đã sẵn sàng trên máy chủ Unsloth này",
         audioUploadRetryTitle: "Không thể chép lời {file}",
         audioUploadRetry: "Thử chép lời lại",
-        audioUploadChooseModel:
-          "Chọn một mô hình nhận dạng giọng nói cục bộ trong cài đặt Giọng nói.",
+        audioUploadChooseModel: "Chọn một mô hình nhận dạng giọng nói cục bộ trong cài đặt Giọng nói.",
         audioUploadEmpty: "Bản ghi âm đã chọn bị trống.",
         audioUploadTooLarge: "Chọn bản ghi âm nhỏ hơn {size}.",
         audioUploadVideoUnsupported: "Chọn một bản ghi âm, không phải video.",
-        audioUploadNoSpeech:
-          "Mô hình không nghe thấy giọng nói nào trong bản ghi âm đó.",
+        audioUploadNoSpeech: "Mô hình không nghe thấy giọng nói nào trong bản ghi âm đó.",
         audioUploadFailed: "Không thể chép lời bản ghi âm.",
         audioUploadCancel: "Hủy chép lời",
         audioUploadTranscribing: "Đang chép lời âm thanh…",
@@ -1972,41 +1780,31 @@ export const vi = {
         micRecordForModel: "Ghi âm cho mô hình",
         engineLabel: "Công cụ đọc chính tả",
         engineBrowser: "Trình duyệt",
-        engineBrowserDescription:
-          "Chép lời âm thanh bằng dịch vụ giọng nói của trình duyệt. Chọn “Chép lời cục bộ” để dùng mô hình STT.",
+        engineBrowserDescription: "Chép lời âm thanh bằng dịch vụ giọng nói của trình duyệt. Chọn “Chép lời cục bộ” để dùng mô hình STT.",
         engineModel: "Chép lời cục bộ",
-        engineModelDescription:
-          "Chạy mô hình chuyển giọng nói thành văn bản (STT) cục bộ và hoạt động ngoại tuyến. Tải xuống, nạp, rồi tự gỡ sau một thời gian không hoạt động.",
+        engineModelDescription: "Chạy mô hình chuyển giọng nói thành văn bản (STT) cục bộ và hoạt động ngoại tuyến. Tải xuống, nạp, rồi tự gỡ sau một thời gian không hoạt động.",
         engineCustom: "Endpoint tùy chỉnh",
-        engineCustomDescription:
-          "Gửi âm thanh đã ghi đến một máy chủ STT tương thích OpenAI trong mục Kết nối của bạn.",
+        engineCustomDescription: "Gửi âm thanh đã ghi đến một máy chủ STT tương thích OpenAI trong mục Kết nối của bạn.",
         connectionLabel: "Kết nối",
-        connectionDescription:
-          "Thêm máy chủ tương thích OpenAI và khóa API (không bắt buộc) trong mục Kết nối.",
+        connectionDescription: "Thêm máy chủ tương thích OpenAI và khóa API (không bắt buộc) trong mục Kết nối.",
         connectionPlaceholder: "Chọn một kết nối",
         connectionEmpty: "Không có kết nối nào",
         customModelLabel: "Mô hình",
-        customModelDescription:
-          "Tên mô hình được gửi đến /v1/audio/transcriptions.",
+        customModelDescription: "Tên mô hình được gửi đến /v1/audio/transcriptions.",
         sttModelLabel: "Mô hình nhận dạng giọng nói",
-        sttModelDescription:
-          "Chọn hoặc tìm kiếm một mô hình STT để chạy cục bộ.",
+        sttModelDescription: "Chọn hoặc tìm kiếm một mô hình STT để chạy cục bộ.",
         sttQuantLabel: "Lượng tử hóa",
-        sttQuantDescription:
-          "Chọn hoặc tìm kiếm một mô hình STT để chạy cục bộ, sau đó chọn mức lượng tử hóa.",
+        sttQuantDescription: "Chọn hoặc tìm kiếm một mô hình STT để chạy cục bộ, sau đó chọn mức lượng tử hóa.",
         sttDeviceLabel: "Nạp vào",
         sttContextLabel: "Ngữ cảnh giọng nói",
         sttContextAuto: "Tự động (khuyên dùng)",
-        sttContextAutoDescription:
-          "Tự điều chỉnh theo từng bản ghi, dùng nhiều bộ nhớ hơn cho âm thanh dài hơn. Các runtime cũ có thể cần kích thước cố định để giảm bộ nhớ. Áp dụng cho Qwen3-ASR trong Giọng nói và Chép lời.",
-        sttContextFixedDescription:
-          "Giới hạn nhỏ hơn dùng ít bộ nhớ hơn. Bản ghi không vừa cần giới hạn cao hơn hoặc Tự động. Áp dụng cho Qwen3-ASR trong Giọng nói và Chép lời.",
+        sttContextAutoDescription: "Tự điều chỉnh theo từng bản ghi, dùng nhiều bộ nhớ hơn cho âm thanh dài hơn. Các runtime cũ có thể cần kích thước cố định để giảm bộ nhớ. Áp dụng cho Qwen3-ASR trong Giọng nói và Chép lời.",
+        sttContextFixedDescription: "Giới hạn nhỏ hơn dùng ít bộ nhớ hơn. Bản ghi không vừa cần giới hạn cao hơn hoặc Tự động. Áp dụng cho Qwen3-ASR trong Giọng nói và Chép lời.",
         sttContextTokens: "{count} token",
         sttDeviceAuto: "GPU khi có sẵn",
         sttDeviceCpu: "RAM của CPU",
         sttDeviceAutoDescription: "Dùng GPU nếu có, nếu không thì dùng CPU.",
-        sttDeviceCpuDescription:
-          "Giữ mô hình trong RAM hệ thống. Chép lời chậm hơn, nhưng không dùng bộ nhớ GPU.",
+        sttDeviceCpuDescription: "Giữ mô hình trong RAM hệ thống. Chép lời chậm hơn, nhưng không dùng bộ nhớ GPU.",
         sttModelSearchPlaceholder: "Tìm kiếm bất kỳ mô hình nào trên HF",
         sttModelSearching: "Đang tìm kiếm trên Hugging Face…",
         sttModelValidating: "Đang kiểm tra khả năng tương thích Whisper…",
@@ -2019,18 +1817,15 @@ export const vi = {
         sttLoadingModel: "Đang nạp mô hình…",
         sttReady: "Đã nạp trên {device}",
         sttLoaded: "Đã nạp",
-        sttUnavailable:
-          "Chưa được cài đặt trên máy chủ này. Chạy `unsloth studio update` để bật đọc chính tả cục bộ.",
+        sttUnavailable: "Chưa được cài đặt trên máy chủ này. Chạy `unsloth studio update` để bật đọc chính tả cục bộ.",
         sttRetry: "Thử lại",
         sttDownloadChecking: "Đang kiểm tra trạng thái tải xuống…",
         sttNotDownloaded: "Chưa tải xuống",
         sttDownloadStatusFailed: "Không thể kiểm tra trạng thái tải xuống",
         sttDownload: "Tải xuống",
         sttDownloadConfirmTitle: "Tải xuống {model}?",
-        sttDownloadConfirmBody:
-          "Đọc chính tả cục bộ chạy hoàn toàn ngoại tuyến, nhưng trước tiên cần mô hình giọng nói {model}. Khoảng {size}, chỉ tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
-        sttDownloadConfirmBodyUnsized:
-          "Đọc chính tả cục bộ chạy hoàn toàn ngoại tuyến, nhưng trước tiên cần mô hình giọng nói {model}. Mô hình chỉ được tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
+        sttDownloadConfirmBody: "Đọc chính tả cục bộ chạy hoàn toàn ngoại tuyến, nhưng trước tiên cần mô hình giọng nói {model}. Khoảng {size}, chỉ tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
+        sttDownloadConfirmBodyUnsized: "Đọc chính tả cục bộ chạy hoàn toàn ngoại tuyến, nhưng trước tiên cần mô hình giọng nói {model}. Mô hình chỉ được tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
         sttOpenVoiceSettings: "Mở cài đặt Giọng nói",
         sttDownloadStarted: "Đang tải xuống {model}",
         sttDownloading: "Đang tải xuống… {progress}%",
@@ -2047,17 +1842,12 @@ export const vi = {
         microphoneLabel: "Micrô",
         microphoneFallbackName: "Micrô {index}",
         microphoneDescription: "Dùng để đọc chính tả",
-        microphoneFallbackHint:
-          "Dùng để đọc chính tả. Chuyển về mặc định của hệ thống nếu công cụ giọng nói của trình duyệt không thể dùng thiết bị này",
-        microphoneGrantDescription:
-          "Cho phép truy cập micrô để hiển thị tên thiết bị",
+        microphoneFallbackHint: "Dùng để đọc chính tả. Chuyển về mặc định của hệ thống nếu công cụ giọng nói của trình duyệt không thể dùng thiết bị này",
+        microphoneGrantDescription: "Cho phép truy cập micrô để hiển thị tên thiết bị",
         allowMicrophone: "Cho phép micrô",
-        micAccessBlocked:
-          "Quyền truy cập micrô đã bị chặn. Hãy cho phép truy cập micrô cho trang Unsloth này, rồi thử lại.",
-        micAccessBlockedDesktop:
-          "Quyền truy cập micrô đã bị chặn. Hãy thử lại và chọn Cho phép, hoặc bật micrô trong cài đặt quyền riêng tư của hệ thống.",
-        micAccessUnsupported:
-          "Trình duyệt hoặc ngữ cảnh này không hỗ trợ truy cập micrô.",
+        micAccessBlocked: "Quyền truy cập micrô đã bị chặn. Hãy cho phép truy cập micrô cho trang Unsloth này, rồi thử lại.",
+        micAccessBlockedDesktop: "Quyền truy cập micrô đã bị chặn. Hãy thử lại và chọn Cho phép, hoặc bật micrô trong cài đặt quyền riêng tư của hệ thống.",
+        micAccessUnsupported: "Trình duyệt hoặc ngữ cảnh này không hỗ trợ truy cập micrô.",
         systemDefault: "Mặc định của hệ thống",
         savedMicDisconnected: "Micrô đã lưu (chưa kết nối)",
         languageLabel: "Ngôn ngữ đọc chính tả",
@@ -2067,8 +1857,7 @@ export const vi = {
       },
       dictionary: {
         sectionTitle: "Từ điển đọc chính tả",
-        sectionDescription:
-          "Đặt cách đọc chính tả viết các từ hoặc cụm từ cụ thể",
+        sectionDescription: "Đặt cách đọc chính tả viết các từ hoặc cụm từ cụ thể",
         manageLabel: "Cách viết tùy chỉnh",
         manage: "Quản lý",
         backToVoice: "Quay lại Giọng nói",
@@ -2080,12 +1869,10 @@ export const vi = {
       },
       recents: {
         sectionTitle: "Lịch sử đọc chính tả",
-        sectionDescription:
-          "Mọi lần đọc chính tả đều được lưu ở đây để bạn có thể khôi phục văn bản",
+        sectionDescription: "Mọi lần đọc chính tả đều được lưu ở đây để bạn có thể khôi phục văn bản",
         manageLabel: "Lịch sử đọc chính tả",
         manage: "Quản lý",
-        pageDescription:
-          "Mọi lần đọc chính tả đều được lưu. Xem, sao chép hoặc xóa chúng, hoặc mở cuộc trò chuyện đã dùng lần đọc chính tả đó.",
+        pageDescription: "Mọi lần đọc chính tả đều được lưu. Xem, sao chép hoặc xóa chúng, hoặc mở cuộc trò chuyện đã dùng lần đọc chính tả đó.",
         searchPlaceholder: "Tìm kiếm lần đọc chính tả",
         sortLabel: "Sắp xếp lần đọc chính tả",
         sortNewest: "Mới nhất",
@@ -2104,16 +1891,13 @@ export const vi = {
         copyFailed: "Không thể sao chép vào bảng nhớ tạm",
         delete: "Xóa lần đọc chính tả",
         deleteTitle: "Xóa lần đọc chính tả",
-        deleteDescription:
-          "Xóa lần đọc chính tả đã lưu này? Không thể hoàn tác thao tác này.",
-        deleteLinkedDescription:
-          "Xóa lần đọc chính tả đã lưu này? Bạn cũng có thể xóa cuộc trò chuyện đã dùng nó. Không thể hoàn tác thao tác này.",
+        deleteDescription: "Xóa lần đọc chính tả đã lưu này? Không thể hoàn tác thao tác này.",
+        deleteLinkedDescription: "Xóa lần đọc chính tả đã lưu này? Bạn cũng có thể xóa cuộc trò chuyện đã dùng nó. Không thể hoàn tác thao tác này.",
         deleteWithChat: "Xóa cuộc trò chuyện và lần đọc chính tả",
         deleteWithChatFailed: "Không thể xóa cuộc trò chuyện",
         clear: "Xóa lịch sử",
         clearTitle: "Xóa lịch sử đọc chính tả",
-        clearDescription:
-          "Xóa tất cả các lần đọc chính tả đã lưu? Không thể hoàn tác thao tác này.",
+        clearDescription: "Xóa tất cả các lần đọc chính tả đã lưu? Không thể hoàn tác thao tác này.",
         clearConfirm: "Xóa tất cả",
         showMore: "Hiện thêm ({count})",
         openChat: "Mở cuộc trò chuyện",
@@ -2126,33 +1910,26 @@ export const vi = {
         autoDescription: "Đọc to từng phản hồi ngay khi phản hồi hoàn tất",
         engineLabel: "Công cụ TTS",
         engineSystemDescription: "Giọng nói tích hợp sẵn của thiết bị",
-        engineStudioDescription:
-          "Đọc bằng mô hình đã nạp trong Âm thanh › Chuyển văn bản thành giọng nói",
+        engineStudioDescription: "Đọc bằng mô hình đã nạp trong Âm thanh › Chuyển văn bản thành giọng nói",
         engineSystem: "Giọng nói hệ thống",
         engineStudio: "Mô hình Unsloth",
         engineCustom: "Endpoint tùy chỉnh",
-        engineCustomDescription:
-          "Một máy chủ TTS tương thích OpenAI trong các kết nối của bạn (ví dụ: Kokoro)",
+        engineCustomDescription: "Một máy chủ TTS tương thích OpenAI trong các kết nối của bạn (ví dụ: Kokoro)",
         connectionLabel: "Kết nối",
-        connectionDescription:
-          "Thêm máy chủ tương thích OpenAI trong thẻ Kết nối",
+        connectionDescription: "Thêm máy chủ tương thích OpenAI trong thẻ Kết nối",
         connectionPlaceholder: "Chọn một kết nối",
         customModelLabel: "Mô hình",
-        customVoiceDescription:
-          "Tên giọng nói mà endpoint yêu cầu; mặc định là alloy",
+        customVoiceDescription: "Tên giọng nói mà endpoint yêu cầu; mặc định là alloy",
         modelLabel: "Mô hình TTS",
-        modelDescription:
-          "Chưa nạp mô hình nào. Hãy nạp một mô hình trong Âm thanh › Chuyển văn bản thành giọng nói.",
+        modelDescription: "Chưa nạp mô hình nào. Hãy nạp một mô hình trong Âm thanh › Chuyển văn bản thành giọng nói.",
         modelLoaded: "Đã nạp {model}",
         keepBothLabel: "Giữ mô hình trò chuyện được nạp",
-        keepBothDescription:
-          "“Giữ nhiều mô hình được nạp” đang tắt, nên việc nạp mô hình giọng nói sẽ gỡ mô hình trò chuyện.",
+        keepBothDescription: "“Giữ nhiều mô hình được nạp” đang tắt, nên việc nạp mô hình giọng nói sẽ gỡ mô hình trò chuyện.",
         keepBothAction: "Giữ cả hai được nạp",
         openAudioAction: "Mở Âm thanh",
         voiceLabel: "Giọng nói",
         voiceDescription: "Giọng nói tốt nhất trên thiết bị này",
-        studioVoiceDescription:
-          "Giọng nói đã lưu trong Âm thanh cần mô hình nhân bản giọng nói",
+        studioVoiceDescription: "Giọng nói đã lưu trong Âm thanh cần mô hình nhân bản giọng nói",
         studioVoiceDefault: "Giọng nói riêng của mô hình",
         studioVoiceSaved: "Giọng nói đã lưu",
         speedLabel: "Tốc độ",
@@ -2173,8 +1950,7 @@ export const vi = {
       description: "Tùy chọn chung cho Unsloth.",
       account: "Tài khoản",
       huggingFaceToken: "Token Hugging Face",
-      huggingFaceTokenDescription:
-        "Dùng để nạp các mô hình bị giới hạn truy cập và đẩy tạo phẩm lên.",
+      huggingFaceTokenDescription: "Dùng để nạp các mô hình bị giới hạn truy cập và đẩy tạo phẩm lên.",
       hideToken: "Ẩn token",
       showToken: "Hiện token",
       clearToken: "Xóa",
@@ -2185,12 +1961,10 @@ export const vi = {
       passwordDialog: {
         trigger: "Đổi mật khẩu",
         title: "Đổi mật khẩu",
-        description:
-          "Nhập mật khẩu hiện tại và chọn mật khẩu mới (ít nhất {minLength} ký tự).",
+        description: "Nhập mật khẩu hiện tại và chọn mật khẩu mới (ít nhất {minLength} ký tự).",
         setTrigger: "Đặt mật khẩu từ xa",
         setTitle: "Đặt mật khẩu từ xa",
-        setDescription:
-          "Chọn mật khẩu mà các trình duyệt từ xa dùng để đăng nhập với tên unsloth (ít nhất {minLength} ký tự). Ứng dụng Unsloth Desktop vẫn tự động đăng nhập.",
+        setDescription: "Chọn mật khẩu mà các trình duyệt từ xa dùng để đăng nhập với tên unsloth (ít nhất {minLength} ký tự). Ứng dụng Unsloth Desktop vẫn tự động đăng nhập.",
         setSubmit: "Đặt mật khẩu",
         setting: "Đang đặt...",
         setDone: "Đã đặt mật khẩu.",
@@ -2233,35 +2007,24 @@ export const vi = {
       helperLlm: {
         sectionTitle: "LLM trợ giúp",
         preloadOnStartup: "Lưu sẵn LLM trợ giúp vào bộ nhớ đệm khi khởi động",
-        preloadOnStartupDescription:
-          "Tải xuống mô hình trợ giúp AI Assist ở chế độ nền khi khởi động. Mặc định tắt; AI Assist vẫn có thể tải mô hình khi cần.",
-        disabledByEnv:
-          "Bị tắt bởi UNSLOTH_HELPER_MODEL_DISABLE trong môi trường backend.",
+        preloadOnStartupDescription: "Tải xuống mô hình trợ giúp AI Assist ở chế độ nền khi khởi động. Mặc định tắt; AI Assist vẫn có thể tải mô hình khi cần.",
+        disabledByEnv: "Bị tắt bởi UNSLOTH_HELPER_MODEL_DISABLE trong môi trường backend.",
         loadError: "Không thể tải cài đặt LLM trợ giúp.",
         saveError: "Không thể lưu cài đặt LLM trợ giúp.",
       },
       developerMode: {
         sectionTitle: "Chế độ nhà phát triển",
         videoCpu: "Cho phép tạo video trên CPU (thử nghiệm)",
-        videoCpuDescription:
-          "Cho phép trang Video chạy trên máy không có GPU được hỗ trợ. Mặc định tắt; không được hỗ trợ và rất chậm.",
-        notApplicable:
-          "Không có tác dụng trên máy này: video hoặc đã chạy trên GPU của máy, hoặc bị chặn bởi một vấn đề mà CPU không thể khắc phục.",
-        forcedOnByEnv:
-          "Được bật bởi UNSLOTH_VIDEO_ALLOW_CPU trong môi trường backend.",
-        forcedOffByEnv:
-          "Bị tắt bởi UNSLOTH_VIDEO_ALLOW_CPU trong môi trường backend.",
+        videoCpuDescription: "Cho phép trang Video chạy trên máy không có GPU được hỗ trợ. Mặc định tắt; không được hỗ trợ và rất chậm.",
+        notApplicable: "Không có tác dụng trên máy này: video hoặc đã chạy trên GPU của máy, hoặc bị chặn bởi một vấn đề mà CPU không thể khắc phục.",
+        forcedOnByEnv: "Được bật bởi UNSLOTH_VIDEO_ALLOW_CPU trong môi trường backend.",
+        forcedOffByEnv: "Bị tắt bởi UNSLOTH_VIDEO_ALLOW_CPU trong môi trường backend.",
         confirmTitle: "Bật tạo video trên CPU?",
-        confirmWarning:
-          "Tạo video trên CPU có thể mất hàng giờ, tiêu tốn rất nhiều RAM và có thể làm treo hệ thống của bạn. Bạn tự chịu rủi ro khi tiếp tục.",
-        ramBelowMinimum:
-          "Máy này có {host} GB RAM, thấp hơn mức {min} GB mà mô hình video nhỏ nhất cần khi chạy trên CPU. Việc nạp có thể sẽ thất bại hoặc làm treo hệ thống.",
-        ramOk:
-          "Máy này có {host} GB RAM. Mô hình video nhỏ nhất cần khoảng {min} GB khi chạy trên CPU; các mô hình lớn hơn cần nhiều hơn rất nhiều.",
-        ramUnknown:
-          "Mô hình video nhỏ nhất cần khoảng {min} GB RAM khi chạy trên CPU; các mô hình lớn hơn cần nhiều hơn rất nhiều.",
-        performanceEstimate:
-          "Mỗi bước khử nhiễu có thể mất vài phút: một đoạn 5 khung hình 832x480 từ Wan2.1 1.3B với 3 bước mất khoảng 4 phút trên 16 luồng CPU, và một đoạn đầy đủ với cài đặt mặc định có thể mất hàng giờ.",
+        confirmWarning: "Tạo video trên CPU có thể mất hàng giờ, tiêu tốn rất nhiều RAM và có thể làm treo hệ thống của bạn. Bạn tự chịu rủi ro khi tiếp tục.",
+        ramBelowMinimum: "Máy này có {host} GB RAM, thấp hơn mức {min} GB mà mô hình video nhỏ nhất cần khi chạy trên CPU. Việc nạp có thể sẽ thất bại hoặc làm treo hệ thống.",
+        ramOk: "Máy này có {host} GB RAM. Mô hình video nhỏ nhất cần khoảng {min} GB khi chạy trên CPU; các mô hình lớn hơn cần nhiều hơn rất nhiều.",
+        ramUnknown: "Mô hình video nhỏ nhất cần khoảng {min} GB RAM khi chạy trên CPU; các mô hình lớn hơn cần nhiều hơn rất nhiều.",
+        performanceEstimate: "Mỗi bước khử nhiễu có thể mất vài phút: một đoạn 5 khung hình 832x480 từ Wan2.1 1.3B với 3 bước mất khoảng 4 phút trên 16 luồng CPU, và một đoạn đầy đủ với cài đặt mặc định có thể mất hàng giờ.",
         confirmAction: "Vẫn bật",
         loadError: "Không thể tải cài đặt Chế độ nhà phát triển.",
         saveError: "Không thể lưu cài đặt Chế độ nhà phát triển.",
@@ -2269,26 +2032,18 @@ export const vi = {
       modelAutoSwitch: {
         sectionTitle: "Tự động chuyển mô hình (OpenAI API)",
         enable: "Chuyển mô hình theo yêu cầu",
-        enableDescription:
-          "Nạp mô hình đã tải xuống được chỉ định trong yêu cầu API trước khi phục vụ. Mặc định tắt.",
+        enableDescription: "Nạp mô hình đã tải xuống được chỉ định trong yêu cầu API trước khi phục vụ. Mặc định tắt.",
         autoDownload: "Tải xuống các mô hình còn thiếu",
-        autoDownloadDescription:
-          "Tải về GGUF được chỉ định trong yêu cầu API nếu chưa được tải xuống. Khi đó bất kỳ ai có khóa API đều có thể sử dụng dung lượng ổ đĩa và băng thông.",
+        autoDownloadDescription: "Tải về GGUF được chỉ định trong yêu cầu API nếu chưa được tải xuống. Khi đó bất kỳ ai có khóa API đều có thể sử dụng dung lượng ổ đĩa và băng thông.",
         idleUnload: "Tự động gỡ khi không hoạt động",
-        idleUnloadDescription:
-          "Giải phóng VRAM sau số giây không hoạt động này. 0 giữ mô hình được nạp, tối thiểu 60.",
+        idleUnloadDescription: "Giải phóng VRAM sau số giây không hoạt động này. 0 giữ mô hình được nạp, tối thiểu 60.",
         idleSecondsAriaLabel: "Số giây không hoạt động trước khi tự động gỡ",
         mediaEnable: "Chuyển mô hình hình ảnh và video theo yêu cầu",
-        mediaEnableDescription:
-          "Nạp mô hình hình ảnh hoặc video đã tải xuống được chỉ định trong yêu cầu API trước khi tạo. Tách biệt với việc chuyển mô hình trò chuyện. Mặc định tắt.",
-        mediaIdleUnload:
-          "Tự động gỡ mô hình hình ảnh và video khi không hoạt động",
-        mediaIdleUnloadDescription:
-          "Giải phóng VRAM bằng cách gỡ các mô hình hình ảnh và video sau số giây không hoạt động này. Tách biệt với việc chuyển mô hình trò chuyện. 0 giữ chúng được nạp, tối thiểu 60.",
-        mediaIdleSecondsAriaLabel:
-          "Số giây không hoạt động trước khi tự động gỡ mô hình hình ảnh và video",
-        mediaIdlePaused:
-          "Tạm dừng khi “Giữ mô hình trong bộ nhớ GPU” đang bật.",
+        mediaEnableDescription: "Nạp mô hình hình ảnh hoặc video đã tải xuống được chỉ định trong yêu cầu API trước khi tạo. Tách biệt với việc chuyển mô hình trò chuyện. Mặc định tắt.",
+        mediaIdleUnload: "Tự động gỡ mô hình hình ảnh và video khi không hoạt động",
+        mediaIdleUnloadDescription: "Giải phóng VRAM bằng cách gỡ các mô hình hình ảnh và video sau số giây không hoạt động này. Tách biệt với việc chuyển mô hình trò chuyện. 0 giữ chúng được nạp, tối thiểu 60.",
+        mediaIdleSecondsAriaLabel: "Số giây không hoạt động trước khi tự động gỡ mô hình hình ảnh và video",
+        mediaIdlePaused: "Tạm dừng khi “Giữ mô hình trong bộ nhớ GPU” đang bật.",
         idleNeedsEnable: "Hãy bật “Chuyển mô hình theo yêu cầu” trước.",
         idleActiveViaEnv: "Đang hoạt động qua UNSLOTH_MODEL_IDLE_TTL.",
         loadError: "Không thể tải cài đặt tự động chuyển mô hình.",
@@ -2296,18 +2051,14 @@ export const vi = {
         idleError: "Nhập 0 để giữ mô hình được nạp, hoặc ít nhất 60 giây.",
         idleUnsaved: "Chưa được lưu.",
         keepKv: "Giữ ngữ cảnh trò chuyện qua các lần gỡ",
-        keepKvDescription:
-          "Lưu KV cache trước khi gỡ do không hoạt động, hoặc trước khi một mô hình hình ảnh hay video chiếm GPU, để các cuộc trò chuyện được tiếp tục không phải đọc lại lịch sử. Tối đa 10 GB trên ổ đĩa.",
-        keepKvKeywords:
-          "bộ nhớ đệm ngữ cảnh hoán đổi tiếp tục hình ảnh kv cache context swap resume image video",
+        keepKvDescription: "Lưu KV cache trước khi gỡ do không hoạt động, hoặc trước khi một mô hình hình ảnh hay video chiếm GPU, để các cuộc trò chuyện được tiếp tục không phải đọc lại lịch sử. Tối đa 10 GB trên ổ đĩa.",
+        keepKvKeywords: "bộ nhớ đệm ngữ cảnh hoán đổi tiếp tục hình ảnh kv cache context swap resume image video",
         apiOnly: "Chỉ gỡ các mô hình được nạp bởi API",
-        apiOnlyDescription:
-          "Việc gỡ khi không hoạt động sẽ giữ lại trong bộ nhớ mô hình bạn đã nạp từ Unsloth, và chỉ giải phóng các mô hình do yêu cầu API nạp.",
+        apiOnlyDescription: "Việc gỡ khi không hoạt động sẽ giữ lại trong bộ nhớ mô hình bạn đã nạp từ Unsloth, và chỉ giải phóng các mô hình do yêu cầu API nạp.",
       },
       modelAliases: {
         sectionTitle: "Bí danh mô hình (OpenAI API)",
-        description:
-          "Tên ngắn mà các ứng dụng khách API có thể dùng thay cho tên đầy đủ của mô hình.",
+        description: "Tên ngắn mà các ứng dụng khách API có thể dùng thay cho tên đầy đủ của mô hình.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Tên bí danh",
         modelAriaLabel: "Mô hình mà bí danh trỏ tới",
@@ -2321,24 +2072,20 @@ export const vi = {
         speculativeDecoding: "Giải mã suy đoán",
         savedSetting: "Cài đặt đã lưu",
         loadSettings: "Cài đặt nạp",
-        loadSettingsHint:
-          "Chỉ dành cho mô hình GGUF. Các trường để trống dùng cài đặt đã lưu của mô hình.",
+        loadSettingsHint: "Chỉ dành cho mô hình GGUF. Các trường để trống dùng cài đặt đã lưu của mô hình.",
       },
       previewSharing: {
         sectionTitle: "Chia sẻ bản xem trước",
         enableLabel: "Liên kết xem trước công khai",
-        enableDescription:
-          "Cho phép bất kỳ ai có liên kết đã ký trò chuyện với một mô hình đã hoàn thiện, không cần đăng nhập. Tắt để đưa trang xem trước công khai ngoại tuyến; các liên kết đã chia sẻ sẽ ngừng hoạt động.",
+        enableDescription: "Cho phép bất kỳ ai có liên kết đã ký trò chuyện với một mô hình đã hoàn thiện, không cần đăng nhập. Tắt để đưa trang xem trước công khai ngoại tuyến; các liên kết đã chia sẻ sẽ ngừng hoạt động.",
         loadError: "Không thể tải cài đặt chia sẻ bản xem trước.",
         saveError: "Không thể lưu cài đặt chia sẻ bản xem trước.",
         revokeLabel: "Thu hồi tất cả liên kết xem trước",
-        revokeDescription:
-          "Thay đổi khóa bí mật dùng để ký để mọi liên kết bạn đã chia sẻ ngừng hoạt động. Các liên kết mới sao chép sau đó vẫn hoạt động.",
+        revokeDescription: "Thay đổi khóa bí mật dùng để ký để mọi liên kết bạn đã chia sẻ ngừng hoạt động. Các liên kết mới sao chép sau đó vẫn hoạt động.",
         revokeAction: "Thu hồi liên kết",
         revoking: "Đang thu hồi...",
         revokeConfirmTitle: "Thu hồi tất cả liên kết xem trước?",
-        revokeConfirmDescription:
-          "Mọi liên kết xem trước bạn đã chia sẻ sẽ ngừng hoạt động ngay lập tức. Không thể hoàn tác thao tác này.",
+        revokeConfirmDescription: "Mọi liên kết xem trước bạn đã chia sẻ sẽ ngừng hoạt động ngay lập tức. Không thể hoàn tác thao tác này.",
         revokeConfirmAction: "Thu hồi tất cả liên kết",
         revoked: "Đã thu hồi tất cả liên kết xem trước",
         revokeError: "Không thể thu hồi liên kết xem trước",
@@ -2346,10 +2093,8 @@ export const vi = {
       managedProviderUrls: {
         sectionTitle: "Tài khoản được quản lý",
         enableLabel: "Kết nối cục bộ và mạng",
-        enableDescription:
-          "Cho phép tài khoản được quản lý trỏ kết nối của họ tới các địa chỉ cục bộ hoặc trong mạng, chẳng hạn máy chủ Ollama hoặc llama.cpp trên máy tính này hoặc mạng LAN của bạn. Mặc định tắt, vì tùy chọn này cho phép các tài khoản đó truy cập các dịch vụ đang chạy trên máy tính và mạng của bạn.",
-        lockedByEnvironment:
-          "Được đặt bởi UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 trên máy chủ này, giá trị này từ chối địa chỉ riêng tư cho mọi tài khoản.",
+        enableDescription: "Cho phép tài khoản được quản lý trỏ kết nối của họ tới các địa chỉ cục bộ hoặc trong mạng, chẳng hạn máy chủ Ollama hoặc llama.cpp trên máy tính này hoặc mạng LAN của bạn. Mặc định tắt, vì tùy chọn này cho phép các tài khoản đó truy cập các dịch vụ đang chạy trên máy tính và mạng của bạn.",
+        lockedByEnvironment: "Được đặt bởi UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 trên máy chủ này, giá trị này từ chối địa chỉ riêng tư cho mọi tài khoản.",
         loadError: "Không thể tải cài đặt kết nối của tài khoản được quản lý.",
         saveError: "Không thể lưu cài đặt kết nối của tài khoản được quản lý.",
       },
@@ -2379,8 +2124,7 @@ export const vi = {
       notifications: {
         sectionTitle: "Thông báo",
         showLoadedModels: "Thẻ mô hình đã nạp",
-        showLoadedModelsDescription:
-          "Một thẻ ở góc liệt kê mọi mô hình đã nạp, để gỡ mô hình chỉ bằng một cú nhấp.",
+        showLoadedModelsDescription: "Một thẻ ở góc liệt kê mọi mô hình đã nạp, để gỡ mô hình chỉ bằng một cú nhấp.",
         updateReminders: "Lời nhắc cập nhật",
         updateRemindersDescription: "Tần suất đề xuất phiên bản mới khi đã có.",
         llamaHint: "Mô hình trò chuyện và GGUF",
@@ -2397,77 +2141,57 @@ export const vi = {
       startup: {
         sectionTitle: "Khởi động",
         launchAtLogin: "Chạy Unsloth khi đăng nhập",
-        launchAtLoginDescription:
-          "Khởi động Unsloth ở chế độ nền khi bạn đăng nhập. Ứng dụng ở trên thanh menu hoặc khay hệ thống cho đến khi bạn mở.",
+        launchAtLoginDescription: "Khởi động Unsloth ở chế độ nền khi bạn đăng nhập. Ứng dụng ở trên thanh menu hoặc khay hệ thống cho đến khi bạn mở.",
         closeToTray: "Thu nhỏ vào khay hệ thống khi đóng",
-        closeToTrayDescription:
-          "Giữ Unsloth và máy chủ của nó chạy ở chế độ nền khi bạn đóng cửa sổ chính.",
-        closeToTraySaveError:
-          "Không thể cập nhật cài đặt thu nhỏ vào khay hệ thống khi đóng.",
+        closeToTrayDescription: "Giữ Unsloth và máy chủ của nó chạy ở chế độ nền khi bạn đóng cửa sổ chính.",
+        closeToTraySaveError: "Không thể cập nhật cài đặt thu nhỏ vào khay hệ thống khi đóng.",
         menuBarIcon: "Hiển thị trên thanh menu",
-        menuBarIconDescription:
-          "Hiển thị biểu tượng Unsloth trên thanh menu của macOS. Khi bị ẩn, Unsloth sẽ ở trong Dock, kể cả khi khởi động lúc đăng nhập.",
-        menuBarIconSaveError:
-          "Không thể cập nhật cài đặt biểu tượng trên thanh menu.",
+        menuBarIconDescription: "Hiển thị biểu tượng Unsloth trên thanh menu của macOS. Khi bị ẩn, Unsloth sẽ ở trong Dock, kể cả khi khởi động lúc đăng nhập.",
+        menuBarIconSaveError: "Không thể cập nhật cài đặt biểu tượng trên thanh menu.",
         loadError: "Không thể tải cài đặt khởi chạy khi đăng nhập.",
         saveError: "Không thể cập nhật cài đặt khởi chạy khi đăng nhập.",
       },
       power: {
         sectionTitle: "Nguồn điện",
         keepAwake: "Giữ máy tính luôn thức",
-        keepAwakeDescription:
-          "Ngăn máy tính tự chuyển sang chế độ ngủ khi Unsloth đang chạy. Màn hình vẫn có thể tắt.",
+        keepAwakeDescription: "Ngăn máy tính tự chuyển sang chế độ ngủ khi Unsloth đang chạy. Màn hình vẫn có thể tắt.",
         keepAwakeKeywords: "ngủ tạm ngưng chờ ngủ đông nguồn sleep caffeinate",
         loadError: "Không thể tải cài đặt giữ máy tính luôn thức.",
         saveError: "Không thể cập nhật cài đặt giữ máy tính luôn thức.",
       },
       hub: {
         source: "Nguồn mô hình",
-        sourceDescription:
-          "Nơi Trung tâm mô hình tìm kiếm và tải xuống. Chọn ModelScope nếu Hugging Face bị chặn hoặc chậm trên mạng của bạn.",
-        sourceFallback:
-          "Không thể khởi động ModelScope, nên đang dùng Hugging Face. Hãy kiểm tra nhật ký Unsloth.",
+        sourceDescription: "Nơi Trung tâm mô hình tìm kiếm và tải xuống. Chọn ModelScope nếu Hugging Face bị chặn hoặc chậm trên mạng của bạn.",
+        sourceFallback: "Không thể khởi động ModelScope, nên đang dùng Hugging Face. Hãy kiểm tra nhật ký Unsloth.",
         autoSourceTitle: "Nguồn mô hình đã chuyển sang ModelScope",
-        autoSourceDescription:
-          "Hugging Face thường chậm hoặc bị chặn ở khu vực của bạn, nên Unsloth hiện tải mô hình từ ModelScope.",
+        autoSourceDescription: "Hugging Face thường chậm hoặc bị chặn ở khu vực của bạn, nên Unsloth hiện tải mô hình từ ModelScope.",
         autoSourceAction: "Mở cài đặt Nguồn mô hình",
         sectionTitle: "Trung tâm mô hình",
         endpoint: "Endpoint Hugging Face",
-        endpointDescription:
-          "Nơi tải xuống mô hình và tập dữ liệu. Để trống để dùng huggingface.co, hoặc nhập một máy chủ nhân bản như https://hf-mirror.com.",
+        endpointDescription: "Nơi tải xuống mô hình và tập dữ liệu. Để trống để dùng huggingface.co, hoặc nhập một máy chủ nhân bản như https://hf-mirror.com.",
         datasetsServer: "Dùng cho bản xem trước tập dữ liệu",
-        datasetsServerDescription:
-          "Cũng gửi các yêu cầu xem trước tập dữ liệu (HF_DATASETS_SERVER) đến endpoint này. Chỉ bật nếu máy chủ nhân bản có phục vụ các yêu cầu đó.",
-        invalidEndpoint:
-          "Nhập một URL http(s) không chứa thông tin đăng nhập hoặc chuỗi truy vấn. http thường chỉ hoạt động với địa chỉ cục bộ.",
+        datasetsServerDescription: "Cũng gửi các yêu cầu xem trước tập dữ liệu (HF_DATASETS_SERVER) đến endpoint này. Chỉ bật nếu máy chủ nhân bản có phục vụ các yêu cầu đó.",
+        invalidEndpoint: "Nhập một URL http(s) không chứa thông tin đăng nhập hoặc chuỗi truy vấn. http thường chỉ hoạt động với địa chỉ cục bộ.",
         saveFailed: "Không thể lưu cài đặt Trung tâm mô hình.",
         loadFailed: "Không thể tải cài đặt Trung tâm mô hình.",
       },
       downloads: {
         sectionTitle: "Tải xuống",
         transport: "Phương thức truyền tải xuống",
-        transportDescription:
-          "Cách tải các tệp mô hình và tập dữ liệu từ Hugging Face. HTTPS tiếp tục từ chỗ đã dừng; Xet thường nhanh hơn ở lần tải đầu tiên nhưng sẽ tải lại tệp từ đầu nếu bạn hủy.",
-        transportHint:
-          "HTTPS là TLS thông thường: mọi mạng, proxy và VPN đều cho phép, một lượt truyền bị hủy hoặc gián đoạn sẽ tiếp tục từ các byte đã có trên ổ đĩa, và mức dùng bộ nhớ ổn định. Xet tải các khối đã khử trùng lặp, nên một kho lưu trữ dùng chung dữ liệu với kho bạn đã có có thể tải về nhanh hơn nhiều, nhưng cần hf_xet, dùng nhiều RAM hơn, và việc hủy sẽ bỏ tệp đang tải. Tự động sẽ đánh giá máy này: cân nhắc RAM và việc Xet có bị đứng ở đây hay không, và chuyển về HTTPS khi cần.",
+        transportDescription: "Cách tải các tệp mô hình và tập dữ liệu từ Hugging Face. HTTPS tiếp tục từ chỗ đã dừng; Xet thường nhanh hơn ở lần tải đầu tiên nhưng sẽ tải lại tệp từ đầu nếu bạn hủy.",
+        transportHint: "HTTPS là TLS thông thường: mọi mạng, proxy và VPN đều cho phép, một lượt truyền bị hủy hoặc gián đoạn sẽ tiếp tục từ các byte đã có trên ổ đĩa, và mức dùng bộ nhớ ổn định. Xet tải các khối đã khử trùng lặp, nên một kho lưu trữ dùng chung dữ liệu với kho bạn đã có có thể tải về nhanh hơn nhiều, nhưng cần hf_xet, dùng nhiều RAM hơn, và việc hủy sẽ bỏ tệp đang tải. Tự động sẽ đánh giá máy này: cân nhắc RAM và việc Xet có bị đứng ở đây hay không, và chuyển về HTTPS khi cần.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Tự động",
-        httpsHint:
-          "TLS tiêu chuẩn. Tiếp tục được sau khi hủy, hoạt động trên mọi mạng, mức dùng bộ nhớ ổn định.",
-        transportDescriptionNoResume:
-          "Cách tải các tệp mô hình và tập dữ liệu từ Hugging Face. Trên bản cài đặt này, không phương thức nào có thể tiếp tục tải, nên lượt tải bị hủy sẽ bắt đầu lại; Xet thường nhanh hơn ở lần tải đầu tiên.",
-        httpsHintNoResume:
-          "TLS tiêu chuẩn. Hoạt động trên mọi mạng, mức dùng bộ nhớ ổn định. Bản cài đặt này không thể tiếp tục lượt tải đã bị hủy.",
-        xetHint:
-          "Truyền theo khối đã khử trùng lặp. Thường nhanh hơn ở lần tải mới, tải lại tệp từ đầu nếu bạn hủy, cần nhiều bộ nhớ hơn.",
-        autoHint:
-          "Chọn theo từng máy và chuyển sang HTTPS nếu Xet bị đứng hoặc lỗi ở đây.",
+        httpsHint: "TLS tiêu chuẩn. Tiếp tục được sau khi hủy, hoạt động trên mọi mạng, mức dùng bộ nhớ ổn định.",
+        transportDescriptionNoResume: "Cách tải các tệp mô hình và tập dữ liệu từ Hugging Face. Trên bản cài đặt này, không phương thức nào có thể tiếp tục tải, nên lượt tải bị hủy sẽ bắt đầu lại; Xet thường nhanh hơn ở lần tải đầu tiên.",
+        httpsHintNoResume: "TLS tiêu chuẩn. Hoạt động trên mọi mạng, mức dùng bộ nhớ ổn định. Bản cài đặt này không thể tiếp tục lượt tải đã bị hủy.",
+        xetHint: "Truyền theo khối đã khử trùng lặp. Thường nhanh hơn ở lần tải mới, tải lại tệp từ đầu nếu bạn hủy, cần nhiều bộ nhớ hơn.",
+        autoHint: "Chọn theo từng máy và chuyển sang HTTPS nếu Xet bị đứng hoặc lỗi ở đây.",
         autoCurrently: "Tự động đang dùng {transport} trên máy này.",
         xetMissing: "Xet không khả dụng vì chưa cài đặt hf_xet.",
         speedLimit: "Giới hạn tốc độ tải xuống",
-        speedLimitDescription:
-          "Không giới hạn trừ khi đặt một giá trị. Tải xuống bị giới hạn dùng HTTPS.",
+        speedLimitDescription: "Không giới hạn trừ khi đặt một giá trị. Tải xuống bị giới hạn dùng HTTPS.",
         speedLimitNoLimit: "Không giới hạn",
         speedLimitInvalid: "Nhập một số Mbit/s hoặc để trống.",
         speedLimitUsesHttps: "Khi đặt giới hạn tốc độ, các lượt tải xuống dùng HTTPS. Các tệp trên 50 GB vẫn dùng Xet, không bị giới hạn.",
@@ -2480,21 +2204,15 @@ export const vi = {
       rag: {
         sectionTitle: "Tài liệu & RAG",
         embeddingModel: "Mô hình nhúng",
-        embeddingModelShort:
-          "Chuyển tài liệu của bạn thành vectơ để cuộc trò chuyện có thể tìm kiếm.",
-        embeddingModelDescription:
-          "Mô hình Hugging Face hoặc đường dẫn cục bộ dùng để lập chỉ mục và tìm kiếm tài liệu của bạn. Mặc định là {defaultModel}.",
+        embeddingModelShort: "Chuyển tài liệu của bạn thành vectơ để cuộc trò chuyện có thể tìm kiếm.",
+        embeddingModelDescription: "Mô hình Hugging Face hoặc đường dẫn cục bộ dùng để lập chỉ mục và tìm kiếm tài liệu của bạn. Mặc định là {defaultModel}.",
         searchPlaceholder: "Tìm kiếm bất kỳ mô hình nào trên HF",
-        reindexWarning:
-          "Chỉ ảnh hưởng đến tài liệu được lập chỉ mục mới. Hãy nhúng lại các tài liệu hiện có sau khi đổi mô hình.",
+        reindexWarning: "Chỉ ảnh hưởng đến tài liệu được lập chỉ mục mới. Hãy nhúng lại các tài liệu hiện có sau khi đổi mô hình.",
         reembed: {
           label: "Nhúng lại tài liệu",
-          staleOne:
-            "1 tài liệu đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua tài liệu đó.",
-          staleMany:
-            "{count} tài liệu đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua chúng.",
-          staleArchived:
-            "Lịch sử trò chuyện trước đây đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua phần đó.",
+          staleOne: "1 tài liệu đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua tài liệu đó.",
+          staleMany: "{count} tài liệu đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua chúng.",
+          staleArchived: "Lịch sử trò chuyện trước đây đã được lập chỉ mục bằng một mô hình nhúng khác, nên tìm kiếm ngữ nghĩa sẽ bỏ qua phần đó.",
           running: "Đang nhúng lại: {done} / {total}",
           action: "Nhúng lại",
           stop: "Dừng",
@@ -2518,20 +2236,16 @@ export const vi = {
         unloadFailed: "Không thể gỡ mô hình nhúng",
         ejected: "Đã gỡ mô hình nhúng",
         ejectModel: "Gỡ mô hình",
-        onDeviceHint:
-          "Đã tải xuống máy tính này. Mô hình chỉ được nạp vào bộ nhớ khi tài liệu đang được lập chỉ mục hoặc tìm kiếm, nên không dùng RAM hay VRAM cho đến lúc đó.",
-        loadedHint:
-          "Hiện đang ở trong bộ nhớ, sử dụng RAM hoặc VRAM. Di chuột lên bộ chọn mô hình và nhấp vào biểu tượng màu đỏ để gỡ.",
+        onDeviceHint: "Đã tải xuống máy tính này. Mô hình chỉ được nạp vào bộ nhớ khi tài liệu đang được lập chỉ mục hoặc tìm kiếm, nên không dùng RAM hay VRAM cho đến lúc đó.",
+        loadedHint: "Hiện đang ở trong bộ nhớ, sử dụng RAM hoặc VRAM. Di chuột lên bộ chọn mô hình và nhấp vào biểu tượng màu đỏ để gỡ.",
         notLoaded: "Chưa nạp",
-        notLoadedHint:
-          "Hiện không ở trong bộ nhớ. Mô hình sẽ tự nạp vào lần tiếp theo tài liệu được lập chỉ mục hoặc tìm kiếm, sau đó bạn có thể gỡ nó từ bộ chọn.",
+        notLoadedHint: "Hiện không ở trong bộ nhớ. Mô hình sẽ tự nạp vào lần tiếp theo tài liệu được lập chỉ mục hoặc tìm kiếm, sau đó bạn có thể gỡ nó từ bộ chọn.",
         downloadingStatus: "Đang tải xuống…",
         notDownloaded: "Chưa tải xuống",
         notDownloadedSized: "Chưa tải xuống · {size}",
         loaded: "Đã nạp",
         downloading: "Đang tải xuống {model}",
-        downloadingDescription:
-          "Tiến trình hiển thị trong bảng tải xuống. Việc lập chỉ mục sẽ dùng mô hình khi tải xong.",
+        downloadingDescription: "Tiến trình hiển thị trong bảng tải xuống. Việc lập chỉ mục sẽ dùng mô hình khi tải xong.",
         downloadFailed: "Không thể bắt đầu tải xuống",
         downloadConflict: "Tiếp tục lượt tải này từ Hub",
         downloadBusy: "Đang có một lượt tải xuống",
@@ -2544,17 +2258,14 @@ export const vi = {
         localModel: "Mô hình cục bộ",
         switched: "Đã đặt mô hình nhúng thành {model}",
         switchedNeedsDownload: "{model} chưa được tải xuống",
-        switchedNeedsDownloadDescription:
-          "Hãy tải xuống mô hình trong Cài đặt trước khi lập chỉ mục tệp mới.",
-        switchedUncheckedDescription:
-          "Không thể kiểm tra mô hình đã được tải xuống hay chưa. Hãy kiểm tra trong Cài đặt trước khi lập chỉ mục tệp mới.",
+        switchedNeedsDownloadDescription: "Hãy tải xuống mô hình trong Cài đặt trước khi lập chỉ mục tệp mới.",
+        switchedUncheckedDescription: "Không thể kiểm tra mô hình đã được tải xuống hay chưa. Hãy kiểm tra trong Cài đặt trước khi lập chỉ mục tệp mới.",
         openSettings: "Mở cài đặt",
         switchFailed: "Không thể chuyển mô hình nhúng",
         back: "Quay lại nguồn",
         menuSubtitle: "Hỗ trợ tìm kiếm tệp",
         device: "Thiết bị nhúng",
-        deviceDescription:
-          "Nơi mô hình nhúng chạy, áp dụng cho mọi mô hình. GPU lập chỉ mục bộ tài liệu lớn nhanh hơn nhưng giữ một phần VRAM cho đến khi Unsloth khởi động lại.",
+        deviceDescription: "Nơi mô hình nhúng chạy, áp dụng cho mọi mô hình. GPU lập chỉ mục bộ tài liệu lớn nhanh hơn nhưng giữ một phần VRAM cho đến khi Unsloth khởi động lại.",
         deviceAuto: "Tự động",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2585,41 +2296,31 @@ export const vi = {
       },
       fullInstall: {
         label: "Loại cài đặt",
-        description:
-          "Chỉ trò chuyện (GGUF). Bản cài đặt đầy đủ bổ sung huấn luyện, xuất, video, mô hình safetensors và các tính năng tạo ảnh bổ sung.",
-        descriptionCpu:
-          "Chỉ trò chuyện (GGUF). Không tìm thấy GPU được hỗ trợ, nên bản cài đặt đầy đủ bổ sung huấn luyện trên CPU.",
+        description: "Chỉ trò chuyện (GGUF). Bản cài đặt đầy đủ bổ sung huấn luyện, xuất, video, mô hình safetensors và các tính năng tạo ảnh bổ sung.",
+        descriptionCpu: "Chỉ trò chuyện (GGUF). Không tìm thấy GPU được hỗ trợ, nên bản cài đặt đầy đủ bổ sung huấn luyện trên CPU.",
         action: "Nâng cấp lên bản cài đặt đầy đủ",
         confirmTitle: "Nâng cấp lên bản cài đặt đầy đủ?",
-        confirmDescription:
-          "Bản cài đặt Chỉ trò chuyện này chạy các mô hình GGUF. Bản cài đặt đầy đủ bổ sung PyTorch cho GPU của máy này, cho phép huấn luyện, xuất, video, mô hình safetensors và các tính năng tạo ảnh bổ sung. Quá trình này tải xuống vài gigabyte (cần ít nhất 5 GB dung lượng ổ đĩa) và khởi động lại máy chủ. Cuộc trò chuyện, mô hình và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
-        confirmDescriptionCpu:
-          "Bản cài đặt Chỉ trò chuyện này chạy các mô hình GGUF. Không tìm thấy GPU được hỗ trợ trên máy này, nên bản cài đặt đầy đủ bổ sung PyTorch cho CPU, cho phép huấn luyện trên CPU. Huấn luyện trên CPU chậm hơn nhiều so với trên GPU. Quá trình này cần ít nhất 5 GB dung lượng ổ đĩa và khởi động lại máy chủ. Cuộc trò chuyện, mô hình và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
+        confirmDescription: "Bản cài đặt Chỉ trò chuyện này chạy các mô hình GGUF. Bản cài đặt đầy đủ bổ sung PyTorch cho GPU của máy này, cho phép huấn luyện, xuất, video, mô hình safetensors và các tính năng tạo ảnh bổ sung. Quá trình này tải xuống vài gigabyte (cần ít nhất 5 GB dung lượng ổ đĩa) và khởi động lại máy chủ. Cuộc trò chuyện, mô hình và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
+        confirmDescriptionCpu: "Bản cài đặt Chỉ trò chuyện này chạy các mô hình GGUF. Không tìm thấy GPU được hỗ trợ trên máy này, nên bản cài đặt đầy đủ bổ sung PyTorch cho CPU, cho phép huấn luyện trên CPU. Huấn luyện trên CPU chậm hơn nhiều so với trên GPU. Quá trình này cần ít nhất 5 GB dung lượng ổ đĩa và khởi động lại máy chủ. Cuộc trò chuyện, mô hình và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
         confirmAction: "Nâng cấp",
-        keywords:
-          "cài đặt đầy đủ nâng cấp loại cài đặt chỉ trò chuyện huấn luyện tinh chỉnh xuất tạo ảnh full install upgrade install type chat only gguf add training train fine-tune pytorch torch export video image generation safetensors",
+        keywords: "cài đặt đầy đủ nâng cấp loại cài đặt chỉ trò chuyện huấn luyện tinh chỉnh xuất tạo ảnh full install upgrade install type chat only gguf add training train fine-tune pytorch torch export video image generation safetensors",
       },
       repairInstall: {
         label: "Sửa chữa bản cài đặt",
-        description:
-          "Chạy lại trình cài đặt trên môi trường được quản lý. Dùng tùy chọn này nếu không phát hiện được GPU hoặc ứng dụng không khởi động.",
+        description: "Chạy lại trình cài đặt trên môi trường được quản lý. Dùng tùy chọn này nếu không phát hiện được GPU hoặc ứng dụng không khởi động.",
         action: "Sửa chữa bản cài đặt",
         confirmTitle: "Sửa chữa bản cài đặt này?",
-        confirmDescription:
-          "Dừng máy chủ và chạy lại trình cài đặt, thao tác này sẽ cài đặt lại PyTorch cho GPU của máy này ở phiên bản mới nhất được hỗ trợ. Cuộc trò chuyện và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
-        confirmDescriptionChatOnly:
-          "Dừng máy chủ và chạy lại trình cài đặt. Đây là bản cài đặt Chỉ trò chuyện, nên trình cài đặt cũng sẽ nâng cấp nó lên bản cài đặt đầy đủ với PyTorch, tổng cộng vài gigabyte. Cuộc trò chuyện và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
+        confirmDescription: "Dừng máy chủ và chạy lại trình cài đặt, thao tác này sẽ cài đặt lại PyTorch cho GPU của máy này ở phiên bản mới nhất được hỗ trợ. Cuộc trò chuyện và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
+        confirmDescriptionChatOnly: "Dừng máy chủ và chạy lại trình cài đặt. Đây là bản cài đặt Chỉ trò chuyện, nên trình cài đặt cũng sẽ nâng cấp nó lên bản cài đặt đầy đủ với PyTorch, tổng cộng vài gigabyte. Cuộc trò chuyện và cài đặt được giữ nguyên. Quá trình này có thể mất vài phút.",
         confirmAction: "Sửa chữa ngay",
       },
       resetPreferences: {
         sectionTitle: "Vùng nguy hiểm",
         label: "Đặt lại tất cả tùy chọn cục bộ",
-        description:
-          "Xóa các tùy chọn chỉ lưu cục bộ. Cuộc trò chuyện, quyền truy cập API và các cài đặt lưu trong cơ sở dữ liệu được giữ nguyên.",
+        description: "Xóa các tùy chọn chỉ lưu cục bộ. Cuộc trò chuyện, quyền truy cập API và các cài đặt lưu trong cơ sở dữ liệu được giữ nguyên.",
         action: "Đặt lại tùy chọn",
         confirmTitle: "Đặt lại tất cả tùy chọn cục bộ?",
-        confirmDescription:
-          "Xóa các tùy chọn chỉ lưu cục bộ và tải lại Unsloth. Cuộc trò chuyện, quyền truy cập API và các cài đặt lưu trong cơ sở dữ liệu được giữ nguyên.",
+        confirmDescription: "Xóa các tùy chọn chỉ lưu cục bộ và tải lại Unsloth. Cuộc trò chuyện, quyền truy cập API và các cài đặt lưu trong cơ sở dữ liệu được giữ nguyên.",
         confirmAction: "Đặt lại và tải lại",
       },
     },
@@ -2651,25 +2352,20 @@ export const vi = {
       noneLabel: "Không có",
       nameSaved: "Đã lưu tên hồ sơ",
       namePersistErrorTitle: "Không thể lưu lâu dài tên hồ sơ",
-      namePersistErrorDescription:
-        "Tên đã được cập nhật cho phiên này, nhưng có thể không được giữ lại sau khi tải lại.",
+      namePersistErrorDescription: "Tên đã được cập nhật cho phiên này, nhưng có thể không được giữ lại sau khi tải lại.",
       photoUpdated: "Đã cập nhật ảnh hồ sơ",
       photoPersistErrorTitle: "Không thể lưu lâu dài ảnh hồ sơ",
-      photoPersistErrorDescription:
-        "Ảnh đã được cập nhật cho phiên này, nhưng có thể không được giữ lại sau khi tải lại.",
+      photoPersistErrorDescription: "Ảnh đã được cập nhật cho phiên này, nhưng có thể không được giữ lại sau khi tải lại.",
       photoUpdateErrorTitle: "Không thể cập nhật ảnh hồ sơ",
       imageUseError: "Không thể sử dụng hình ảnh này.",
       stats: {
         title: "Thống kê của bạn",
-        subtitle:
-          "Mọi số liệu bên dưới đều được tính từ lịch sử của chính bạn. Không có gì được thu thập hay gửi đến Unsloth.",
+        subtitle: "Mọi số liệu bên dưới đều được tính từ lịch sử của chính bạn. Không có gì được thu thập hay gửi đến Unsloth.",
         retry: "Thử lại",
         exportCsv: "Xuất CSV",
         exportError: "Không thể xuất mức sử dụng token của bạn",
-        privacyNote:
-          "Thống kê được tính từ lịch sử trò chuyện, mức sử dụng API và huấn luyện cục bộ do bản cài đặt Unsloth của bạn lưu giữ. Lời nhắc, phản hồi và khóa API không bao giờ được lưu cho mục đích thống kê. Không có gì được gửi đến Unsloth hay bất kỳ bên thứ ba nào.",
-        emptyChats:
-          "Chưa có hoạt động trò chuyện hoặc sử dụng API nào. Hãy bắt đầu một cuộc trò chuyện hoặc gửi một yêu cầu API cục bộ đã xác thực, thống kê của bạn sẽ hiển thị tại đây.",
+        privacyNote: "Thống kê được tính từ lịch sử trò chuyện, mức sử dụng API và huấn luyện cục bộ do bản cài đặt Unsloth của bạn lưu giữ. Lời nhắc, phản hồi và khóa API không bao giờ được lưu cho mục đích thống kê. Không có gì được gửi đến Unsloth hay bất kỳ bên thứ ba nào.",
+        emptyChats: "Chưa có hoạt động trò chuyện hoặc sử dụng API nào. Hãy bắt đầu một cuộc trò chuyện hoặc gửi một yêu cầu API cục bộ đã xác thực, thống kê của bạn sẽ hiển thị tại đây.",
         lifetimeTokens: "Tổng số token từ trước đến nay",
         peakTokens: "Ngày cao điểm",
         longestChat: "Cuộc trò chuyện dài nhất",
@@ -2734,22 +2430,16 @@ export const vi = {
       gpuRendering: {
         sectionTitle: "Kết xuất",
         label: "Kết xuất bằng GPU",
-        description:
-          "Vẽ Unsloth bằng card đồ họa của bạn. Tự động chỉ dùng GPU ở những nơi đã biết là hoạt động tốt. Thay đổi có hiệu lực sau khi Unsloth khởi động lại.",
+        description: "Vẽ Unsloth bằng card đồ họa của bạn. Tự động chỉ dùng GPU ở những nơi đã biết là hoạt động tốt. Thay đổi có hiệu lực sau khi Unsloth khởi động lại.",
         auto: "Tự động",
         on: "Bật",
         off: "Tắt",
-        oldWebkitWarning:
-          "WebKitGTK {version} trên Wayland: kết xuất bằng GPU có thể gây sập khi khởi chạy trên NVIDIA với tỷ lệ phóng to lẻ (lỗi WebKit 280210). Nếu xảy ra, Unsloth sẽ tự chuyển về kết xuất bằng CPU. Trên WebKitGTK 2.50.4, tùy chọn này không cho thấy tốc độ cải thiện đo được (8 fps ở cả hai chế độ), nên không khuyến nghị chọn Bật ở đây.",
-        oldDriverWarning:
-          "Trình điều khiển NVIDIA {version} trên X11: Unsloth giữ tắt kết xuất bằng GPU cho đến khi trình điều khiển là bản 610 trở lên. Các trình điều khiển cũ hơn rò rỉ một bộ mô tả tệp mỗi khung hình và cửa sổ sẽ ngừng vẽ trong vài phút.",
-        fallbackNote:
-          "Kết xuất bằng GPU đã gây sập khi khởi chạy trên hệ thống này, nên Unsloth đang dùng kết xuất bằng CPU.",
+        oldWebkitWarning: "WebKitGTK {version} trên Wayland: kết xuất bằng GPU có thể gây sập khi khởi chạy trên NVIDIA với tỷ lệ phóng to lẻ (lỗi WebKit 280210). Nếu xảy ra, Unsloth sẽ tự chuyển về kết xuất bằng CPU. Trên WebKitGTK 2.50.4, tùy chọn này không cho thấy tốc độ cải thiện đo được (8 fps ở cả hai chế độ), nên không khuyến nghị chọn Bật ở đây.",
+        oldDriverWarning: "Trình điều khiển NVIDIA {version} trên X11: Unsloth giữ tắt kết xuất bằng GPU cho đến khi trình điều khiển là bản 610 trở lên. Các trình điều khiển cũ hơn rò rỉ một bộ mô tả tệp mỗi khung hình và cửa sổ sẽ ngừng vẽ trong vài phút.",
+        fallbackNote: "Kết xuất bằng GPU đã gây sập khi khởi chạy trên hệ thống này, nên Unsloth đang dùng kết xuất bằng CPU.",
         tryAgain: "Thử lại GPU",
-        envOverride:
-          "Được đặt bởi biến môi trường {name}. Cài đặt này không có tác dụng cho đến khi biến đó được xóa.",
-        macNote:
-          "macOS luôn kết xuất bằng GPU. WebKit không có tùy chọn được hỗ trợ để tắt tính năng này.",
+        envOverride: "Được đặt bởi biến môi trường {name}. Cài đặt này không có tác dụng cho đến khi biến đó được xóa.",
+        macNote: "macOS luôn kết xuất bằng GPU. WebKit không có tùy chọn được hỗ trợ để tắt tính năng này.",
         restartPending: "Khởi động lại Unsloth để áp dụng.",
         restartNow: "Khởi động lại ngay",
         loadError: "Không thể tải cài đặt kết xuất bằng GPU.",
@@ -2766,8 +2456,7 @@ export const vi = {
       },
       palette: {
         label: "Chủ đề",
-        description:
-          "Màu sắc dùng trong toàn bộ Unsloth, ở chế độ sáng và tối.",
+        description: "Màu sắc dùng trong toàn bộ Unsloth, ở chế độ sáng và tối.",
         standard: "Tiêu chuẩn",
         moreThemes: "Thêm chủ đề",
       },
@@ -2800,8 +2489,7 @@ export const vi = {
         },
         sentAttachments: {
           label: "Tệp đính kèm trong tin nhắn đã gửi",
-          description:
-            "Tiêu chuẩn hiển thị từng tệp kèm loại tệp, thu gọn xếp được nhiều tệp hơn trên mỗi dòng. Tự động chuyển sang thu gọn khi có hơn sáu tệp.",
+          description: "Tiêu chuẩn hiển thị từng tệp kèm loại tệp, thu gọn xếp được nhiều tệp hơn trên mỗi dòng. Tự động chuyển sang thu gọn khi có hơn sáu tệp.",
           auto: "Tự động",
           list: "Tiêu chuẩn",
           chips: "Thu gọn",
@@ -2842,16 +2530,13 @@ export const vi = {
         importFont: {
           upload: "Tải lên",
           scanFolder: "Chọn thư mục",
-          alreadyAvailable:
-            "Phông chữ này đã có sẵn, nên bản hiện có sẽ được dùng.",
+          alreadyAvailable: "Phông chữ này đã có sẵn, nên bản hiện có sẽ được dùng.",
           folderNoFonts: "Không tìm thấy tệp phông chữ nào trong thư mục đó.",
           remove: "Gỡ bỏ",
-          errorInvalidType:
-            "Loại tệp không được hỗ trợ. Hãy dùng .woff2, .woff, .ttf hoặc .otf.",
+          errorInvalidType: "Loại tệp không được hỗ trợ. Hãy dùng .woff2, .woff, .ttf hoặc .otf.",
           errorTooLarge: "Tệp phông chữ quá lớn (tối đa 1.5 MB).",
           errorLimit: "Bạn có thể nhập tối đa 3 phông chữ.",
-          errorStorageFull:
-            "Không đủ bộ nhớ cục bộ cho phông chữ này. Hãy gỡ bỏ một phông chữ đã nhập trước.",
+          errorStorageFull: "Không đủ bộ nhớ cục bộ cho phông chữ này. Hãy gỡ bỏ một phông chữ đã nhập trước.",
           errorFailed: "Không thể tải tệp phông chữ này.",
         },
         interfaceScale: {
@@ -2886,8 +2571,7 @@ export const vi = {
         },
         pointerCursors: {
           label: "Dùng con trỏ bàn tay",
-          description:
-            "Đổi con trỏ thành bàn tay khi di chuột qua các thành phần tương tác.",
+          description: "Đổi con trỏ thành bàn tay khi di chuột qua các thành phần tương tác.",
         },
       },
       language: {
@@ -2903,13 +2587,11 @@ export const vi = {
       layout: {
         title: "Bố cục",
         compactSidebar: "Ghim thanh bên theo mặc định",
-        compactSidebarDescription:
-          "Giữ thanh bên mở rộng thay vì thu gọn thành biểu tượng.",
+        compactSidebarDescription: "Giữ thanh bên mở rộng thay vì thu gọn thành biểu tượng.",
       },
       sidebarNav: {
         title: "Điều hướng thanh bên",
-        description:
-          "Ghim và sắp xếp lại các thẻ trên thanh bên. Thẻ chưa ghim sẽ nằm trong menu Thêm.",
+        description: "Ghim và sắp xếp lại các thẻ trên thanh bên. Thẻ chưa ghim sẽ nằm trong menu Thêm.",
         dragToReorder: "Kéo để sắp xếp lại",
         pinToSidebar: "Ghim {name} vào thanh bên",
         moreHolds: "Thêm ({count})",
@@ -2923,18 +2605,15 @@ export const vi = {
     },
     resources: {
       title: "Hệ thống và công cụ chạy",
-      description:
-        "Theo dõi phần cứng và dung lượng lưu trữ của máy chủ Unsloth này.",
+      description: "Theo dõi phần cứng và dung lượng lưu trữ của máy chủ Unsloth này.",
       liveUpdates: "Cập nhật trực tiếp",
       floatingWindow: "Cửa sổ nổi",
       showFloatingWindow: "Hiển thị cửa sổ nổi",
-      showFloatingWindowDescription:
-        "Luôn hiển thị mức sử dụng CPU, RAM và GPU trên màn hình, phía trên Unsloth.",
+      showFloatingWindowDescription: "Luôn hiển thị mức sử dụng CPU, RAM và GPU trên màn hình, phía trên Unsloth.",
       liveMonitor: {
         title: "Giám sát trực tiếp",
         apiTitle: "Giám sát API",
-        apiDescription:
-          "Xem những gì các ứng dụng khác gửi tới API của máy chủ này ngay khi đến.",
+        apiDescription: "Xem những gì các ứng dụng khác gửi tới API của máy chủ này ngay khi đến.",
         summary: "Yêu cầu trực tiếp, lỗi và mức sử dụng token",
         status: "{active} đang hoạt động · {recent} gần đây · {model}",
         noModelLoaded: "Chưa nạp mô hình",
@@ -2970,8 +2649,7 @@ export const vi = {
         gpuUnusable: "Không dùng được GPU",
         gpuUnusableDetail: "Đã phát hiện nhưng PyTorch không thể sử dụng",
         detailedView: "Chế độ xem chi tiết",
-        detailedViewDescription:
-          "Hiển thị tải, nhiệt độ và công suất của từng GPU trong cửa sổ nổi.",
+        detailedViewDescription: "Hiển thị tải, nhiệt độ và công suất của từng GPU trong cửa sổ nổi.",
         gpuLoad: "Tải GPU",
         temperature: "Nhiệt độ",
         power: "Công suất",
@@ -2987,15 +2665,11 @@ export const vi = {
         unavailable: "không khả dụng",
         detecting: "Đang kiểm tra GPU...",
         unreadable: "Không thể đọc thông tin phần cứng của máy chủ này.",
-        noGpu:
-          "Không phát hiện GPU rời.",
+        noGpu: "Không phát hiện GPU rời.",
         noUsableGpu: "Không có GPU nào trên máy này mà PyTorch có thể sử dụng.",
-        mismatchCpuBuild:
-          "PyTorch là bản dựng chỉ dành cho CPU ({version}), nên không thể dùng các GPU bên dưới. Hãy sửa chữa bản cài đặt để khôi phục hỗ trợ GPU.",
-        mismatchUnavailable:
-          "PyTorch ({version}) không thể khởi tạo các GPU bên dưới, nên không thể sử dụng chúng. Hãy kiểm tra trình điều khiển GPU hoặc sửa chữa bản cài đặt.",
-        driverIdleEvict:
-          "Trình điều khiển AMD {version} có một lỗi đã biết có thể làm Windows bị treo khi GPU AMD ở trạng thái nhàn rỗi, thường gặp nhất khi có nhiều hơn một GPU. Hãy cập nhật lên Adrenalin 26.9.2 trở lên.",
+        mismatchCpuBuild: "PyTorch là bản dựng chỉ dành cho CPU ({version}), nên không thể dùng các GPU bên dưới. Hãy sửa chữa bản cài đặt để khôi phục hỗ trợ GPU.",
+        mismatchUnavailable: "PyTorch ({version}) không thể khởi tạo các GPU bên dưới, nên không thể sử dụng chúng. Hãy kiểm tra trình điều khiển GPU hoặc sửa chữa bản cài đặt.",
+        driverIdleEvict: "Trình điều khiển AMD {version} có một lỗi đã biết có thể làm Windows bị treo khi GPU AMD ở trạng thái nhàn rỗi, thường gặp nhất khi có nhiều hơn một GPU. Hãy cập nhật lên Adrenalin 26.9.2 trở lên.",
         driverIdleEvictDetails: "Chi tiết",
         dismissNotice: "Bỏ qua",
         unusableDevice: "không dùng được",
@@ -3019,27 +2693,21 @@ export const vi = {
         autoWith: "Tự động ({backend})",
         apply: "Áp dụng",
         applying: "Đang cài đặt...",
-        applyHint:
-          "Tải xuống bản dựng mới và khởi động lại llama.cpp. Mô hình đang nạp sẽ bị gỡ.",
-        applyHintWithSize:
-          "Tải xuống {size} và khởi động lại llama.cpp. Mô hình đang nạp sẽ bị gỡ.",
+        applyHint: "Tải xuống bản dựng mới và khởi động lại llama.cpp. Mô hình đang nạp sẽ bị gỡ.",
+        applyHintWithSize: "Tải xuống {size} và khởi động lại llama.cpp. Mô hình đang nạp sẽ bị gỡ.",
         switchedTo: "llama.cpp hiện chạy trên {backend}.",
         switchFailed: "Không thể thay đổi backend của llama.cpp.",
-        switchInterrupted:
-          "Quá trình chuyển đổi bị gián đoạn trước khi hoàn tất.",
-        envLocked:
-          "Được đặt thành {backend} bởi biến môi trường UNSLOTH_LLAMA_CPP_BACKEND, biến này ghi đè cài đặt này.",
+        switchInterrupted: "Quá trình chuyển đổi bị gián đoạn trước khi hoàn tất.",
+        envLocked: "Được đặt thành {backend} bởi biến môi trường UNSLOTH_LLAMA_CPP_BACKEND, biến này ghi đè cài đặt này.",
         customPath: {
           label: "Thư mục llama.cpp tùy chỉnh",
           description: "Dùng bản dựng llama-server của riêng bạn.",
           hint: "Chọn thư mục llama.cpp chứa llama-server, hoặc một bản dựng có llama-server nằm trong build/bin. Môi trường chạy tùy chỉnh được dùng cho trò chuyện GGUF, embedding và các mô hình giọng nói được hỗ trợ. Biến môi trường vẫn được ưu tiên.",
           automatic: "Tự động (đi kèm)",
           bundled: "Dùng môi trường chạy llama.cpp do Unsloth cài đặt.",
-          active:
-            "llama-server tùy chỉnh của bạn sẽ được dùng ở lần nạp mô hình tiếp theo.",
+          active: "llama-server tùy chỉnh của bạn sẽ được dùng ở lần nạp mô hình tiếp theo.",
           environmentManaged: "Được quản lý bởi biến môi trường {variable}.",
-          missingBinary:
-            "llama-server không còn trong thư mục này. Hãy chọn thư mục khác hoặc dùng môi trường chạy đi kèm.",
+          missingBinary: "llama-server không còn trong thư mục này. Hãy chọn thư mục khác hoặc dùng môi trường chạy đi kèm.",
           reloadRequired: "Nạp lại mô hình để dùng llama-server đã chọn.",
           change: "Thay đổi",
           saving: "Đang lưu...",
@@ -3058,75 +2726,51 @@ export const vi = {
           metal: "Metal",
         },
         unsupported: {
-          notInstalled:
-            "Không tìm thấy bản cài đặt llama.cpp được quản lý, nên không có backend nào để chuyển.",
-          localLink:
-            "llama.cpp là một thư mục cục bộ do bạn tự liên kết, nên Unsloth sẽ không thay thế nó.",
-          sourceBuild:
-            "Bản llama.cpp này được dựng từ mã nguồn, nên không thể chuyển backend của nó từ đây.",
-          customPath:
-            "Đã chọn một thư mục llama.cpp tùy chỉnh. Bản dựng của thư mục đó quyết định backend tính toán.",
-          unresolved:
-            "Không thể kiểm tra các backend khả dụng. Hãy kiểm tra kết nối và thử lại.",
-          updateChecksDisabled:
-            "Tính năng kiểm tra cập nhật đã bị tắt (UNSLOTH_DISABLE_UPDATE_CHECK=1), nên không tra cứu các backend khả dụng.",
+          notInstalled: "Không tìm thấy bản cài đặt llama.cpp được quản lý, nên không có backend nào để chuyển.",
+          localLink: "llama.cpp là một thư mục cục bộ do bạn tự liên kết, nên Unsloth sẽ không thay thế nó.",
+          sourceBuild: "Bản llama.cpp này được dựng từ mã nguồn, nên không thể chuyển backend của nó từ đây.",
+          customPath: "Đã chọn một thư mục llama.cpp tùy chỉnh. Bản dựng của thư mục đó quyết định backend tính toán.",
+          unresolved: "Không thể kiểm tra các backend khả dụng. Hãy kiểm tra kết nối và thử lại.",
+          updateChecksDisabled: "Tính năng kiểm tra cập nhật đã bị tắt (UNSLOTH_DISABLE_UPDATE_CHECK=1), nên không tra cứu các backend khả dụng.",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary suy luận tăng tốc chuyển đổi công cụ tùy chỉnh đường dẫn thư mục tệp thực thi",
+        llamaBackendKeywords: "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary suy luận tăng tốc chuyển đổi công cụ tùy chỉnh đường dẫn thư mục tệp thực thi",
       },
       modelMemory: {
         title: "Tải mô hình",
         keepResident: "Giữ mô hình trong bộ nhớ GPU",
         keepResidentDescription: "Giữ trong VRAM giữa các lời nhắc.",
-        keepResidentHint:
-          "Không trả trọng số về RAM hệ thống khi mô hình vẫn đang được nạp. Tắt tính năng tự động gỡ khi nhàn rỗi, và khi trọng số nằm trong RAM của máy chủ (bộ nhớ hợp nhất, hoặc chỉ một phần được chuyển sang GPU) thì cũng truyền --mlock để hệ điều hành không thể đẩy chúng ra bộ nhớ hoán đổi rồi tải lại ở lời nhắc tiếp theo của bạn.",
+        keepResidentHint: "Không trả trọng số về RAM hệ thống khi mô hình vẫn đang được nạp. Tắt tính năng tự động gỡ khi nhàn rỗi, và khi trọng số nằm trong RAM của máy chủ (bộ nhớ hợp nhất, hoặc chỉ một phần được chuyển sang GPU) thì cũng truyền --mlock để hệ điều hành không thể đẩy chúng ra bộ nhớ hoán đổi rồi tải lại ở lời nhắc tiếp theo của bạn.",
         noRamReserve: "Không dành riêng RAM hệ thống cho mô hình",
-        noRamReserveDescription:
-          "Giảm RAM của máy chủ bị giữ cho trọng số mô hình.",
-        noRamReserveHint:
-          "Bỏ qua nạp ánh xạ bộ nhớ trên các bản Windows được hỗ trợ khi mô hình được chuyển hoàn toàn sang GPU, để các trang của nó không bị giữ thường trú. Nếu không, vẫn giữ nạp ánh xạ bộ nhớ. Các bộ đệm CPU bắt buộc vẫn có thể dùng RAM. Bỏ --no-mmap và --mlock.",
+        noRamReserveDescription: "Giảm RAM của máy chủ bị giữ cho trọng số mô hình.",
+        noRamReserveHint: "Bỏ qua nạp ánh xạ bộ nhớ trên các bản Windows được hỗ trợ khi mô hình được chuyển hoàn toàn sang GPU, để các trang của nó không bị giữ thường trú. Nếu không, vẫn giữ nạp ánh xạ bộ nhớ. Các bộ đệm CPU bắt buộc vẫn có thể dùng RAM. Bỏ --no-mmap và --mlock.",
         multiModel: "Giữ nhiều mô hình cùng được nạp",
         openSystemSettings: "Mở trong Hệ thống",
         multiModelOff: "Tắt",
         multiModelFit: "Khi đủ chỗ",
         multiModelAlways: "Luôn luôn",
-        multiModelDescription:
-          "Nạp một mô hình trò chuyện, giọng nói, hình ảnh hoặc video sẽ gỡ các mô hình khác.",
-        multiModelDescriptionFit:
-          "Nạp một mô hình sẽ giữ các mô hình khác nếu đủ chỗ. Nếu không đủ, trước tiên sẽ gỡ các mô hình không dùng, sau đó đến mô hình đang hoạt động.",
-        multiModelDescriptionAlways:
-          "Nạp một mô hình không bao giờ gỡ mô hình khác. Mô hình không đủ chỗ sẽ không được nạp. Tính năng tự động gỡ khi nhàn rỗi và việc huấn luyện vẫn giải phóng bộ nhớ.",
-        multiModelHint:
-          "Áp dụng cho mô hình trò chuyện, giọng nói, hình ảnh và video. Mỗi mô hình trò chuyện đã nạp trả lời các yêu cầu chỉ định nó. Với nhiều GPU, Unsloth cố gắng đặt mô hình mới lên GPU chưa có mô hình nào khác dùng. “Khi đủ chỗ” chừa lại khoảng 1 GB. Mô hình được nạp cạnh các mô hình khác sẽ nhận phần bộ nhớ còn trống, nên có thể bắt đầu với ngữ cảnh ngắn hơn. “Khi đủ chỗ” và “Luôn luôn” không bao giờ gỡ mô hình trên GPU khác.",
+        multiModelDescription: "Nạp một mô hình trò chuyện, giọng nói, hình ảnh hoặc video sẽ gỡ các mô hình khác.",
+        multiModelDescriptionFit: "Nạp một mô hình sẽ giữ các mô hình khác nếu đủ chỗ. Nếu không đủ, trước tiên sẽ gỡ các mô hình không dùng, sau đó đến mô hình đang hoạt động.",
+        multiModelDescriptionAlways: "Nạp một mô hình không bao giờ gỡ mô hình khác. Mô hình không đủ chỗ sẽ không được nạp. Tính năng tự động gỡ khi nhàn rỗi và việc huấn luyện vẫn giải phóng bộ nhớ.",
+        multiModelHint: "Áp dụng cho mô hình trò chuyện, giọng nói, hình ảnh và video. Mỗi mô hình trò chuyện đã nạp trả lời các yêu cầu chỉ định nó. Với nhiều GPU, Unsloth cố gắng đặt mô hình mới lên GPU chưa có mô hình nào khác dùng. “Khi đủ chỗ” chừa lại khoảng 1 GB. Mô hình được nạp cạnh các mô hình khác sẽ nhận phần bộ nhớ còn trống, nên có thể bắt đầu với ngữ cảnh ngắn hơn. “Khi đủ chỗ” và “Luôn luôn” không bao giờ gỡ mô hình trên GPU khác.",
         allowOversizedLoad: "Cho phép nạp mô hình quá cỡ",
-        allowOversizedLoadDescription:
-          "Nạp mô hình hình ảnh và video ngay cả khi kiểm tra bộ nhớ cho biết chúng sẽ không vừa.",
-        allowOversizedLoadHint:
-          "Áp dụng khi CPU và GPU dùng chung một vùng bộ nhớ (Apple Silicon, GPU tích hợp). Unsloth từ chối nạp khi ước tính kích thước trọng số mô hình lớn hơn bộ nhớ còn lại sau khi đã chừa chỗ cho hệ điều hành. Khi bật tùy chọn này, các lần nạp đó vẫn được thử. Ước tính có thể sai theo cả hai hướng: nạp quá cỡ có thể thất bại, dùng hết bộ nhớ, khiến máy tính hoán đổi bộ nhớ nhiều hoặc ngừng phản hồi, hoặc làm Unsloth dừng. Tắt theo mặc định.",
-        mediaIdleUnloadDescription:
-          "Giải phóng VRAM bằng cách gỡ các mô hình hình ảnh và video sau số giây nhàn rỗi này. 0 giữ chúng luôn được nạp, tối thiểu 60.",
-        mlockVetoed:
-          "--mlock vẫn tắt: ghim mô hình cố định sẽ dành riêng RAM cho toàn bộ mô hình. Tính năng tự động gỡ khi nhàn rỗi vẫn bị tắt.",
-        mlockNotApplicable:
-          "Nằm hoàn toàn trên GPU: không có gì trong RAM hệ thống để khóa. Tính năng tự động gỡ khi nhàn rỗi vẫn tắt.",
-        memlockCapped:
-          "Hệ thống này giới hạn bộ nhớ bị khóa ở mức {limit}. Mô hình lớn hơn sẽ không được ghim hoàn toàn; hãy tăng giới hạn bằng ulimit -l.",
+        allowOversizedLoadDescription: "Nạp mô hình hình ảnh và video ngay cả khi kiểm tra bộ nhớ cho biết chúng sẽ không vừa.",
+        allowOversizedLoadHint: "Áp dụng khi CPU và GPU dùng chung một vùng bộ nhớ (Apple Silicon, GPU tích hợp). Unsloth từ chối nạp khi ước tính kích thước trọng số mô hình lớn hơn bộ nhớ còn lại sau khi đã chừa chỗ cho hệ điều hành. Khi bật tùy chọn này, các lần nạp đó vẫn được thử. Ước tính có thể sai theo cả hai hướng: nạp quá cỡ có thể thất bại, dùng hết bộ nhớ, khiến máy tính hoán đổi bộ nhớ nhiều hoặc ngừng phản hồi, hoặc làm Unsloth dừng. Tắt theo mặc định.",
+        mediaIdleUnloadDescription: "Giải phóng VRAM bằng cách gỡ các mô hình hình ảnh và video sau số giây nhàn rỗi này. 0 giữ chúng luôn được nạp, tối thiểu 60.",
+        mlockVetoed: "--mlock vẫn tắt: ghim mô hình cố định sẽ dành riêng RAM cho toàn bộ mô hình. Tính năng tự động gỡ khi nhàn rỗi vẫn bị tắt.",
+        mlockNotApplicable: "Nằm hoàn toàn trên GPU: không có gì trong RAM hệ thống để khóa. Tính năng tự động gỡ khi nhàn rỗi vẫn tắt.",
+        memlockCapped: "Hệ thống này giới hạn bộ nhớ bị khóa ở mức {limit}. Mô hình lớn hơn sẽ không được ghim hoàn toàn; hãy tăng giới hạn bằng ulimit -l.",
         reloadRequired: "Nạp lại mô hình để áp dụng các cờ bộ nhớ mới.",
         loadError: "Không thể tải cài đặt bộ nhớ mô hình",
         saveError: "Không thể lưu cài đặt bộ nhớ mô hình",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging bộ nhớ thường trú ghim khóa giữ nạp gỡ nhàn rỗi hoán đổi",
-        multiModelKeywords:
-          "multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle nhiều mô hình cùng lúc gỡ hình ảnh trò chuyện giọng nói đọc to luôn luôn nhàn rỗi",
-        mediaIdleUnloadKeywords:
-          "image video diffusion idle unload ttl timeout seconds free vram gpu memory hình ảnh nhàn rỗi gỡ thời gian chờ giây giải phóng bộ nhớ",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging bộ nhớ thường trú ghim khóa giữ nạp gỡ nhàn rỗi hoán đổi",
+        multiModelKeywords: "multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle nhiều mô hình cùng lúc gỡ hình ảnh trò chuyện giọng nói đọc to luôn luôn nhàn rỗi",
+        mediaIdleUnloadKeywords: "image video diffusion idle unload ttl timeout seconds free vram gpu memory hình ảnh nhàn rỗi gỡ thời gian chờ giây giải phóng bộ nhớ",
       },
       storage: {
         title: "Lưu trữ",
         systemDisk: "Ổ đĩa hệ thống",
         systemUsed: "Đã dùng {used} / {total} trên ổ đĩa hệ thống",
-        modelsDiskSummary:
-          "Ổ chứa thư mục mô hình: đã dùng {used} / {total}, còn trống {free}",
+        modelsDiskSummary: "Ổ chứa thư mục mô hình: đã dùng {used} / {total}, còn trống {free}",
         segmentModels: "Mô hình",
         segmentCaches: "Bộ nhớ đệm",
         segmentOther: "Khác",
@@ -3137,10 +2781,8 @@ export const vi = {
         diskFree: "Còn trống {free}",
         modelsFolder: "Thư mục mô hình",
         modelsFolderDescription: "Nơi lưu các mô hình đã tải xuống.",
-        modelsFolderHint:
-          "Nơi lưu các mô hình đã tải xuống. Hãy thay đổi để không lưu mô hình trên ổ đĩa hệ thống. Chỉ áp dụng cho các lượt tải xuống mới. Các mô hình bạn đã có vẫn ở nguyên vị trí.",
-        modelsFolderKeywords:
-          "models folder directory path location download downloads cache storage disk drive move relocate hugging face thư mục mô hình đường dẫn vị trí tải xuống bộ nhớ đệm lưu trữ ổ đĩa di chuyển",
+        modelsFolderHint: "Nơi lưu các mô hình đã tải xuống. Hãy thay đổi để không lưu mô hình trên ổ đĩa hệ thống. Chỉ áp dụng cho các lượt tải xuống mới. Các mô hình bạn đã có vẫn ở nguyên vị trí.",
+        modelsFolderKeywords: "models folder directory path location download downloads cache storage disk drive move relocate hugging face thư mục mô hình đường dẫn vị trí tải xuống bộ nhớ đệm lưu trữ ổ đĩa di chuyển",
         futureDownloads: "Chỉ lượt tải xuống mới",
         environmentManaged: "Được quản lý bởi biến môi trường {variable}.",
         locationFree: "Còn trống {free}",
@@ -3158,11 +2800,9 @@ export const vi = {
         copyError: "Không thể sao chép đường dẫn",
         caches: {
           label: "Tệp bộ nhớ đệm",
-          description:
-            "{size} trong bộ nhớ đệm, trong đó có thể xóa ngay {reclaimable}.",
+          description: "{size} trong bộ nhớ đệm, trong đó có thể xóa ngay {reclaimable}.",
           hint: "Các gói đã tải xuống, kernel đã biên dịch và bộ nhớ đệm truyền tải mà Unsloth sẽ dựng lại khi cần. Mô hình đã tải xuống, dự án, cuộc trò chuyện, cài đặt và token Hugging Face của bạn không bao giờ bị xóa ở đây.",
-          keywords:
-            "cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary bộ nhớ đệm xóa dọn dẹp giải phóng dung lượng ổ đĩa đã biên dịch tạm thời",
+          keywords: "cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary bộ nhớ đệm xóa dọn dẹp giải phóng dung lượng ổ đĩa đã biên dịch tạm thời",
           measuring: "Đang đo kích thước bộ nhớ đệm...",
           measureFailed: "Không thể đo bộ nhớ đệm",
           empty: "Không tìm thấy tệp bộ nhớ đệm nào.",
@@ -3171,24 +2811,18 @@ export const vi = {
           hideDetailsAction: "Ẩn chi tiết",
           showFolders: "Hiện thư mục",
           hideFolders: "Ẩn thư mục",
-          previousLocations:
-            "Bao gồm các vị trí trước đây. Nút Xóa chính tác động lên thư mục bộ nhớ đệm hiện tại. Các nút của mô hình chỉ xóa bản sao đã chọn.",
-          clearModelDescription:
-            "Thao tác này chỉ xóa bản sao trong bộ nhớ đệm này. Mô hình sẽ được tải xuống lại khi cần.",
+          previousLocations: "Bao gồm các vị trí trước đây. Nút Xóa chính tác động lên thư mục bộ nhớ đệm hiện tại. Các nút của mô hình chỉ xóa bản sao đã chọn.",
+          clearModelDescription: "Thao tác này chỉ xóa bản sao trong bộ nhớ đệm này. Mô hình sẽ được tải xuống lại khi cần.",
           clearAction: "Xóa bộ nhớ đệm",
           clearOneAction: "Xóa",
           clearingAction: "Đang xóa...",
           confirmTitle: "Xóa các tệp bộ nhớ đệm?",
           confirmDescription: "Thao tác này giải phóng khoảng {size}.",
           confirmOneTitle: "Xóa {name}?",
-          safety:
-            "Unsloth sẽ dựng lại bộ nhớ đệm vào lần tiếp theo cần đến. Mô hình đã tải xuống, dự án, cuộc trò chuyện, cài đặt và token Hugging Face của bạn không bị ảnh hưởng.",
-          hubCost:
-            "Đây là bộ nhớ đệm mô hình. Xóa nó sẽ khiến các mô hình đó được tải xuống lại vào lần tới bạn dùng.",
-          datasetsCost:
-            "Xóa mục này sẽ khiến các tập dữ liệu đó được tải xuống lại vào lần tới bạn dùng.",
-          npuCost:
-            "Đây là các mô hình NPU bạn đã tải xuống. Xóa sẽ gỡ chúng, và bạn cần tải lại từ Hub để dùng.",
+          safety: "Unsloth sẽ dựng lại bộ nhớ đệm vào lần tiếp theo cần đến. Mô hình đã tải xuống, dự án, cuộc trò chuyện, cài đặt và token Hugging Face của bạn không bị ảnh hưởng.",
+          hubCost: "Đây là bộ nhớ đệm mô hình. Xóa nó sẽ khiến các mô hình đó được tải xuống lại vào lần tới bạn dùng.",
+          datasetsCost: "Xóa mục này sẽ khiến các tập dữ liệu đó được tải xuống lại vào lần tới bạn dùng.",
+          npuCost: "Đây là các mô hình NPU bạn đã tải xuống. Xóa sẽ gỡ chúng, và bạn cần tải lại từ Hub để dùng.",
           blocked: "Chưa xóa: {reason}",
           cleared: "Đã xóa {size}",
           partial: "Không thể xóa một số tệp bộ nhớ đệm",
@@ -3216,8 +2850,7 @@ export const vi = {
         lowDisk: {
           title: "Dung lượng ổ đĩa sắp hết",
           criticalTitle: "Dung lượng ổ đĩa còn rất ít",
-          description:
-            "Còn trống {free} / {total}. Xóa bộ nhớ đệm có thể giải phóng dung lượng.",
+          description: "Còn trống {free} / {total}. Xóa bộ nhớ đệm có thể giải phóng dung lượng.",
           action: "Xem lại bộ nhớ đệm",
         },
       },
@@ -3238,14 +2871,10 @@ export const vi = {
     },
     agents: {
       title: "Tác tử",
-      description:
-        "Kết nối các tác tử lập trình như Claude Code và Codex với mô hình cục bộ bằng unsloth start.",
-      agentKeywords:
-        "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex tác tử lập trình",
-      vscodeNote:
-        "VS Code là ngoại lệ: lệnh này thêm mô hình đang phục vụ vào danh sách mô hình Copilot Chat của VS Code (chatLanguageModels.json).",
-      intro:
-        "kết nối Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode và các tác tử khác với một mô hình do Unsloth phục vụ cục bộ, hoàn toàn ngoại tuyến. Lệnh này chạy một máy chủ tương thích OpenAI và không bao giờ đụng đến các tệp cấu hình của tác tử.",
+      description: "Kết nối các tác tử lập trình như Claude Code và Codex với mô hình cục bộ bằng unsloth start.",
+      agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex tác tử lập trình",
+      vscodeNote: "VS Code là ngoại lệ: lệnh này thêm mô hình đang phục vụ vào danh sách mô hình Copilot Chat của VS Code (chatLanguageModels.json).",
+      intro: "kết nối Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode và các tác tử khác với một mô hình do Unsloth phục vụ cục bộ, hoàn toàn ngoại tuyến. Lệnh này chạy một máy chủ tương thích OpenAI và không bao giờ đụng đến các tệp cấu hình của tác tử.",
       readDocs: "Đọc tài liệu",
       copy: "Sao chép",
       copied: "Đã sao chép",
@@ -3255,46 +2884,37 @@ export const vi = {
       model: "Mô hình",
       searchModels: "Tìm mô hình GGUF...",
       noModels: "Không có mô hình GGUF phù hợp.",
-      showingModels:
-        "Đang hiển thị {shown} / {total} kết quả phù hợp. Tiếp tục nhập để thu hẹp danh sách.",
+      showingModels: "Đang hiển thị {shown} / {total} kết quả phù hợp. Tiếp tục nhập để thu hẹp danh sách.",
       quantization: "Lượng tử hóa",
       loadingQuantizations: "Đang tải các mức lượng tử hóa...",
       noQuantizations: "Không có mức lượng tử hóa riêng",
       recommended: "Khuyến nghị",
       downloaded: "Đã tải xuống",
-      quantizationLoadError:
-        "Không thể tải tất cả các mức lượng tử hóa. Lệnh sẽ dùng giá trị mô hình hiện có.",
+      quantizationLoadError: "Không thể tải tất cả các mức lượng tử hóa. Lệnh sẽ dùng giá trị mô hình hiện có.",
       generatedCommand: "Lệnh đã tạo",
       docs: "Tài liệu",
       docsLabel: "Mở tài liệu unsloth start",
       agentDocs: "Mở tài liệu thiết lập {agent}",
       copyGeneratedCommand: "Sao chép lệnh đã tạo",
-      automaticSettingsNote:
-        "Unsloth tự động áp dụng các cài đặt được khuyến nghị cho mô hình nếu bạn chưa đặt cờ nào.",
-      configurationNote:
-        "Bạn cũng có thể điều chỉnh mọi cấu hình. Xem thêm bên dưới hoặc",
+      automaticSettingsNote: "Unsloth tự động áp dụng các cài đặt được khuyến nghị cho mô hình nếu bạn chưa đặt cờ nào.",
+      configurationNote: "Bạn cũng có thể điều chỉnh mọi cấu hình. Xem thêm bên dưới hoặc",
       configurationDocs: "tài liệu",
       configurationFlagsSuffix: "để biết các cờ.",
-      modelNote:
-        "Claude Code và Codex yêu cầu mô hình GGUF do llama-server phục vụ, hoặc mô hình MLX. Các tác tử khác cũng có thể dùng mô hình chạy bằng transformers; bỏ --model để dùng mô hình đã nạp sẵn trong Unsloth.",
+      modelNote: "Claude Code và Codex yêu cầu mô hình GGUF do llama-server phục vụ, hoặc mô hình MLX. Các tác tử khác cũng có thể dùng mô hình chạy bằng transformers; bỏ --model để dùng mô hình đã nạp sẵn trong Unsloth.",
       subagent: {
         title: "Dùng mô hình cục bộ làm tác tử phụ",
-        description:
-          "Giữ {agent} ở mô hình hiện tại và giao các tác vụ được chọn cho mô hình Unsloth cục bộ này.",
+        description: "Giữ {agent} ở mô hình hiện tại và giao các tác vụ được chọn cho mô hình Unsloth cục bộ này.",
         setupCommand: "Lệnh thiết lập",
         copySetupCommand: "Sao chép lệnh thiết lập tác tử phụ",
         usagePrompt: "Sau đó trong {agent}, nhập:",
         copyUsagePrompt: "Sao chép lời nhắc sử dụng tác tử phụ",
         defaultPrompt: "Tạo một tác tử cục bộ để triển khai hàm này.",
-        opencodePrompt:
-          "@unsloth tìm nguyên nhân khiến bài kiểm thử này thất bại",
+        opencodePrompt: "@unsloth tìm nguyên nhân khiến bài kiểm thử này thất bại",
       },
       quickstart: {
         title: "Tạo lệnh",
-        description:
-          "Khởi chạy một tác tử với mô hình hiện đang nạp trong Unsloth. Hãy nạp mô hình trước, sau đó thay claude bằng bất kỳ tác tử được hỗ trợ nào bên dưới.",
-        noneDetected:
-          "Không tìm thấy CLI tác tử được hỗ trợ nào trong PATH của bạn.",
+        description: "Khởi chạy một tác tử với mô hình hiện đang nạp trong Unsloth. Hãy nạp mô hình trước, sau đó thay claude bằng bất kỳ tác tử được hỗ trợ nào bên dưới.",
+        noneDetected: "Không tìm thấy CLI tác tử được hỗ trợ nào trong PATH của bạn.",
         installed: "Đã cài đặt",
       },
       supportedAgents: {
@@ -3304,54 +2924,48 @@ export const vi = {
       },
       models: {
         title: "Chọn mô hình",
-        description:
-          "Truyền --model để chọn mô hình và mức lượng tử hóa, và --context-length để đặt cửa sổ ngữ cảnh. Dùng hậu tố lượng tử hóa hoặc cờ --gguf-variant rõ ràng.",
+        description: "Truyền --model để chọn mô hình và mức lượng tử hóa, và --context-length để đặt cửa sổ ngữ cảnh. Dùng hậu tố lượng tử hóa hoặc cờ --gguf-variant rõ ràng.",
         suffixLabel: "Với hậu tố lượng tử hóa",
         variantLabel: "Với cờ biến thể rõ ràng",
       },
       options: {
         title: "Tùy chọn thường dùng",
-        description:
-          "Các cờ của Unsloth được phân tích trước; mọi thứ Unsloth không nhận ra sẽ được chuyển thẳng đến tác tử.",
-        model:
-          "Chọn mô hình. Nếu không có --model, unsloth start dùng mô hình hiện đang nạp trong Unsloth và báo lỗi nếu chưa nạp mô hình nào.",
-        contextLength:
-          "Đặt độ dài ngữ cảnh yêu cầu (bí danh: --max-seq-length).",
+        description: "Các cờ của Unsloth được phân tích trước; mọi thứ Unsloth không nhận ra sẽ được chuyển thẳng đến tác tử.",
+        model: "Chọn mô hình. Nếu không có --model, unsloth start dùng mô hình hiện đang nạp trong Unsloth và báo lỗi nếu chưa nạp mô hình nào.",
+        contextLength: "Đặt độ dài ngữ cảnh yêu cầu (bí danh: --max-seq-length).",
         ggufVariant: "Chọn biến thể lượng tử hóa GGUF.",
         loadIn4bit: "Bật/tắt nạp 4-bit cho mô hình Hugging Face.",
         tensorParallel: "Bật/tắt song song tensor trên nhiều GPU.",
         serve: "Bật hoặc tắt máy chủ cục bộ tự động.",
         launch: "Khởi chạy tác tử, hoặc chỉ in ra lệnh và biến môi trường.",
         persist: "Giữ dữ liệu tác tử do Unsloth quản lý giữa các lần chạy.",
-        asSubagent:
-          "Giữ tác tử chính ở mô hình hiện tại và đăng ký Unsloth làm tác tử phụ cục bộ (Claude Code, Codex, OpenCode và Pi).",
+        asSubagent: "Giữ tác tử chính ở mô hình hiện tại và đăng ký Unsloth làm tác tử phụ cục bộ (Claude Code, Codex, OpenCode và Pi).",
         apiKey: "Cung cấp khóa API Unsloth của bạn (hoặc đặt UNSLOTH_API_KEY).",
-        reasoning:
-          "Dùng suy luận trong cuộc trò chuyện: on, off hoặc auto. Auto theo mẫu trò chuyện của mô hình, thường có nghĩa là bật.",
-        reasoningEffort:
-          "Mức độ suy luận truyền cho mẫu trò chuyện của mô hình, ví dụ medium. Các mức tùy theo từng mô hình, nên hãy dùng mức mà mô hình đó chấp nhận. Để trống sẽ giữ mức của mẫu.",
+        reasoning: "Dùng suy luận trong cuộc trò chuyện: on, off hoặc auto. Auto theo mẫu trò chuyện của mô hình, thường có nghĩa là bật.",
+        reasoningEffort: "Mức độ suy luận truyền cho mẫu trò chuyện của mô hình, ví dụ medium. Các mức tùy theo từng mô hình, nên hãy dùng mức mà mô hình đó chấp nhận. Để trống sẽ giữ mức của mẫu.",
         yolo: "Bỏ qua lời nhắc phê duyệt. Chỉ dùng trong môi trường đáng tin cậy.",
       },
       remote: {
         title: "Kết nối với Unsloth từ xa",
-        description:
-          "Trỏ unsloth start đến một phiên bản Unsloth đang chạy ở nơi khác bằng cách đặt các biến sau trước khi khởi chạy (hoặc truyền trực tiếp --api-key):",
+        description: "Trỏ unsloth start đến một phiên bản Unsloth đang chạy ở nơi khác bằng cách đặt các biến sau trước khi khởi chạy (hoặc truyền trực tiếp --api-key):",
       },
       passthrough: {
         title: "Truyền đối số cho tác tử",
-        description:
-          "Các đối số sau cờ của Unsloth được chuyển tiếp đến chính tác tử, nên các lệnh gốc như resume vẫn hoạt động:",
+        description: "Các đối số sau cờ của Unsloth được chuyển tiếp đến chính tác tử, nên các lệnh gốc như resume vẫn hoạt động:",
       },
       dryRun: {
         title: "Xem trước mà không khởi chạy",
-        description:
-          "Thêm --no-launch để in ra biến môi trường và lệnh thay vì khởi chạy tác tử. Nếu đã đặt --model, mô hình vẫn có thể được phân giải và nạp.",
+        description: "Thêm --no-launch để in ra biến môi trường và lệnh thay vì khởi chạy tác tử. Nếu đã đặt --model, mô hình vẫn có thể được phân giải và nạp.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Phản hồi" },
-        thinkingTools: { title: "Suy nghĩ và công cụ" },
+        replies: {
+          title: "Phản hồi",
+        },
+        thinkingTools: {
+          title: "Suy nghĩ và công cụ",
+        },
         conversations: {
           title: "Cuộc trò chuyện",
         },
@@ -3374,36 +2988,26 @@ export const vi = {
       },
       library: {
         label: "Quản lý cuộc trò chuyện",
-        description:
-          "Tìm kiếm, sắp xếp và tổ chức cuộc trò chuyện, dự án và mục.",
+        description: "Tìm kiếm, sắp xếp và tổ chức cuộc trò chuyện, dự án và mục.",
         action: "Mở Thư viện",
       },
-      projectAttachmentsHint:
-        "Ghi đè cài đặt này từ menu tệp đính kèm của từng cuộc trò chuyện.",
-      rememberParamsPerModelHint:
-        "Khi tắt, dùng cùng một cài đặt cho mọi mô hình.",
-      autoCompactHint:
-        "Cuộc trò chuyện GGUF và MLX cục bộ: các lượt bị loại ra được lập chỉ mục để mô hình có thể tìm lại, và khi đặt lại, các chỉ dẫn thường trực vừa chỗ sẽ được trích dẫn lại nguyên văn, ưu tiên giữ phần cũ nhất và mới nhất hơn phần giữa. Việc lưu trữ cần một cuộc trò chuyện đã lưu và chỉ mục vector; nếu không có, các lượt cũ hơn sẽ bị loại bỏ. Dùng độ dài ngữ cảnh bạn đặt, không phải VRAM khả dụng. Mô hình API: nhà cung cấp tóm tắt các lượt cũ hơn khi có thể, nếu không thì các lượt cũ nhất bị loại bỏ khi cuộc trò chuyện gần đạt cửa sổ ngữ cảnh công bố của mô hình.",
-      pastedTextShortDescription:
-        "Nội dung dán từ {count} ký tự trở lên sẽ thành tệp đính kèm .txt.",
+      projectAttachmentsHint: "Ghi đè cài đặt này từ menu tệp đính kèm của từng cuộc trò chuyện.",
+      rememberParamsPerModelHint: "Khi tắt, dùng cùng một cài đặt cho mọi mô hình.",
+      autoCompactHint: "Cuộc trò chuyện GGUF và MLX cục bộ: các lượt bị loại ra được lập chỉ mục để mô hình có thể tìm lại, và khi đặt lại, các chỉ dẫn thường trực vừa chỗ sẽ được trích dẫn lại nguyên văn, ưu tiên giữ phần cũ nhất và mới nhất hơn phần giữa. Việc lưu trữ cần một cuộc trò chuyện đã lưu và chỉ mục vector; nếu không có, các lượt cũ hơn sẽ bị loại bỏ. Dùng độ dài ngữ cảnh bạn đặt, không phải VRAM khả dụng. Mô hình API: nhà cung cấp tóm tắt các lượt cũ hơn khi có thể, nếu không thì các lượt cũ nhất bị loại bỏ khi cuộc trò chuyện gần đạt cửa sổ ngữ cảnh công bố của mô hình.",
+      pastedTextShortDescription: "Nội dung dán từ {count} ký tự trở lên sẽ thành tệp đính kèm .txt.",
       pastedTextOffDescription: "Văn bản dán luôn ở lại trong hộp tin nhắn.",
       title: "Trò chuyện",
-      description:
-        "Tùy chỉnh cách hoạt động của tính năng trò chuyện trên thiết bị này.",
+      description: "Tùy chỉnh cách hoạt động của tính năng trò chuyện trên thiết bị này.",
       modelSelection: {
         title: "Chọn mô hình",
         expandQuantizations: "Mở rộng các mức lượng tử hóa",
-        expandQuantizationsDescription:
-          "Hiển thị các mức lượng tử hóa GGUF trong Trên thiết bị mà không cần mở từng mô hình.",
+        expandQuantizationsDescription: "Hiển thị các mức lượng tử hóa GGUF trong Trên thiết bị mà không cần mở từng mô hình.",
         showAllQuantizations: "Tất cả mức lượng tử hóa",
-        showAllQuantizationsDescription:
-          "Bao gồm cả các mức lượng tử hóa chưa tải xuống trong Trên thiết bị.",
+        showAllQuantizationsDescription: "Bao gồm cả các mức lượng tử hóa chưa tải xuống trong Trên thiết bị.",
         showMemoryBar: "Thanh mức dùng VRAM",
-        showMemoryBarDescription:
-          "Hiển thị VRAM ước tính cho trọng số mô hình, ngữ cảnh và giải mã suy đoán.",
+        showMemoryBarDescription: "Hiển thị VRAM ước tính cho trọng số mô hình, ngữ cảnh và giải mã suy đoán.",
         fitOnDeviceOnly: "Chỉ hiện mô hình vừa với máy",
-        fitOnDeviceOnlyDescription:
-          "Ẩn các mô hình quá lớn so với bộ nhớ GPU và RAM của thiết bị này trong trình chọn mô hình và Hub. Mô hình đã tải xuống vẫn hiển thị.",
+        fitOnDeviceOnlyDescription: "Ẩn các mô hình quá lớn so với bộ nhớ GPU và RAM của thiết bị này trong trình chọn mô hình và Hub. Mô hình đã tải xuống vẫn hiển thị.",
         pickerExpandLoaded: "Hiển thị toàn bộ danh sách mô hình",
         pickerExpandLoadedDescription: "Mở trình chọn mô hình ở danh sách đầy đủ khi đã tải một mô hình, thay vì chỉ mô hình đã tải. Mở rộng hoặc thu gọn trình chọn cũng thay đổi cài đặt này.",
         pickerMonochromeIcons: "Biểu tượng mô hình đơn sắc",
@@ -3411,8 +3015,7 @@ export const vi = {
       },
       menu: {
         title: "Menu trò chuyện",
-        description:
-          "Ghim các mục vào menu + của trò chuyện và kéo để sắp xếp lại. Các mục khác chuyển vào “Thêm”.",
+        description: "Ghim các mục vào menu + của trò chuyện và kéo để sắp xếp lại. Các mục khác chuyển vào “Thêm”.",
         deepResearch: "Nghiên cứu chuyên sâu",
         browserUse: "Dùng trình duyệt",
         computerUse: "Dùng máy tính",
@@ -3429,75 +3032,52 @@ export const vi = {
         more: "Thêm",
       },
       pastedTextThreshold: "Thu gọn nội dung dán dài",
-      pastedTextThresholdDescription:
-        "Nhấn {shortcut} để dán trực tiếp vào hộp tin nhắn.",
+      pastedTextThresholdDescription: "Nhấn {shortcut} để dán trực tiếp vào hộp tin nhắn.",
       pastedTextThresholdOff: "Tắt",
       autoScroll: "Cuộn khi đang tạo",
-      autoScrollDescription:
-        "Tự động cuộn giữ văn bản mới trong tầm nhìn. Thủ công giữ nguyên vị trí để bạn đọc từ đầu.",
+      autoScrollDescription: "Tự động cuộn giữ văn bản mới trong tầm nhìn. Thủ công giữ nguyên vị trí để bạn đọc từ đầu.",
       autoScrollAuto: "Tự động cuộn",
       autoScrollManual: "Thủ công",
-      autoScrollKeywords:
-        "scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual cuộn tự động thủ công theo dõi cuối trang đang tạo",
+      autoScrollKeywords: "scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual cuộn tự động thủ công theo dõi cuối trang đang tạo",
       replyNotification: "Thông báo khi trả lời xong",
-      replyNotificationDescription:
-        "Hiển thị thông báo hệ thống khi một câu trả lời hoàn tất trong lúc Unsloth đang thu nhỏ hoặc chạy nền.",
-      replyNotificationBlocked:
-        "Thông báo đang bị chặn. Hãy cho phép thông báo của Unsloth trong cài đặt trình duyệt hoặc hệ thống, rồi thử lại.",
-      replyNotificationKeywords:
-        "notify notification alert done finished complete ready response reply background minimized desktop sound thông báo cảnh báo xong hoàn tất sẵn sàng trả lời chạy nền thu nhỏ âm thanh",
+      replyNotificationDescription: "Hiển thị thông báo hệ thống khi một câu trả lời hoàn tất trong lúc Unsloth đang thu nhỏ hoặc chạy nền.",
+      replyNotificationBlocked: "Thông báo đang bị chặn. Hãy cho phép thông báo của Unsloth trong cài đặt trình duyệt hoặc hệ thống, rồi thử lại.",
+      replyNotificationKeywords: "notify notification alert done finished complete ready response reply background minimized desktop sound thông báo cảnh báo xong hoàn tất sẵn sàng trả lời chạy nền thu nhỏ âm thanh",
       showLinkPreviews: "Xem trước liên kết",
       showLinkPreviewsDescription: "Hiển thị bản xem trước khi di chuột qua liên kết nguồn.",
       showResponseModel: "Mô hình trả lời",
-      showResponseModelDescription:
-        "Hiển thị thông tin mô hình trong câu trả lời của trợ lý.",
+      showResponseModelDescription: "Hiển thị thông tin mô hình trong câu trả lời của trợ lý.",
       showReplyTimes: "Thời điểm trả lời",
-      showReplyTimesDescription:
-        "Hiển thị thời điểm mỗi câu trả lời hoàn tất, bên dưới câu trả lời.",
-      showReplyTimesKeywords:
-        "timestamp time clock date hour when finished arrived reply response message dấu thời gian giờ ngày hoàn tất trả lời tin nhắn",
+      showReplyTimesDescription: "Hiển thị thời điểm mỗi câu trả lời hoàn tất, bên dưới câu trả lời.",
+      showReplyTimesKeywords: "timestamp time clock date hour when finished arrived reply response message dấu thời gian giờ ngày hoàn tất trả lời tin nhắn",
       showGenerationDetails: "Thông tin chi tiết về tốc độ",
-      showGenerationDetailsDescription:
-        "Thêm tốc độ đọc lời nhắc, số token và tỷ lệ chấp nhận bản nháp vào chỉ số trực tiếp.",
-      showGenerationDetailsKeywords:
-        "verbose developer stats speed tok/s prefill decode chi tiết nhà phát triển thống kê tốc độ",
+      showGenerationDetailsDescription: "Thêm tốc độ đọc lời nhắc, số token và tỷ lệ chấp nhận bản nháp vào chỉ số trực tiếp.",
+      showGenerationDetailsKeywords: "verbose developer stats speed tok/s prefill decode chi tiết nhà phát triển thống kê tốc độ",
       generationStatsUpdates: "Thống kê tốc độ và ngữ cảnh",
-      generationStatsUpdatesDescription:
-        "Thời gian thực đếm token mỗi giây và mức dùng ngữ cảnh trong khi phản hồi đang truyền. Khi xong cập nhật chúng khi mỗi phản hồi kết thúc.",
-      generationStatsUpdatesHint:
-        "Thời gian thực làm mới chỉ số token mỗi giây dưới phản hồi và thanh ngữ cảnh ở đầu cuộc trò chuyện vài lần mỗi giây trong khi phản hồi đang được viết. Khi xong cập nhật chúng một lần, sau khi mỗi phản hồi kết thúc. Thời gian thực có thể gây giật hoặc giảm hiệu năng, nhất là trên máy cũ hoặc đang bận.",
+      generationStatsUpdatesDescription: "Thời gian thực đếm token mỗi giây và mức dùng ngữ cảnh trong khi phản hồi đang truyền. Khi xong cập nhật chúng khi mỗi phản hồi kết thúc.",
+      generationStatsUpdatesHint: "Thời gian thực làm mới chỉ số token mỗi giây dưới phản hồi và thanh ngữ cảnh ở đầu cuộc trò chuyện vài lần mỗi giây trong khi phản hồi đang được viết. Khi xong cập nhật chúng một lần, sau khi mỗi phản hồi kết thúc. Thời gian thực có thể gây giật hoặc giảm hiệu năng, nhất là trên máy cũ hoặc đang bận.",
       generationStatsUpdatesSettled: "Khi xong",
       generationStatsUpdatesRealtime: "Thời gian thực",
-      generationStatsUpdatesKeywords:
-        "thời gian thực trực tiếp cập nhật tốc độ ngữ cảnh thống kê realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "thời gian thực trực tiếp cập nhật tốc độ ngữ cảnh thống kê realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Nút Sửa câu trả lời trên câu trả lời",
-      inlineEditResponseDescription:
-        "Giữ nút Sửa câu trả lời trên mọi câu trả lời, thay vì trong menu Thêm.",
+      inlineEditResponseDescription: "Giữ nút Sửa câu trả lời trên mọi câu trả lời, thay vì trong menu Thêm.",
       turnNavigation: "Điều hướng lượt",
       turnNavigationDescription: "Hiển thị tin nhắn của bạn thành một thanh ở mép trái các cuộc trò chuyện dài. Di chuột để xem trước, nhấp để chuyển đến lượt đó và đánh dấu để tìm lại.",
       composerPosition: "Vị trí khung soạn thảo",
       composerPositionDescription: "Vị trí của khung soạn thảo khi bắt đầu cuộc trò chuyện mới, từ đầu trang xuống tận cuối trang.",
       projectAttachments: "Chia sẻ tệp trong cả dự án",
-      projectAttachmentsDescription:
-        "Cho phép mọi cuộc trò chuyện trong dự án dùng các tệp đính kèm mới.",
+      projectAttachmentsDescription: "Cho phép mọi cuộc trò chuyện trong dự án dùng các tệp đính kèm mới.",
       rememberParamsPerModel: "Ghi nhớ cài đặt theo từng mô hình",
-      rememberParamsPerModelDescription:
-        "Khôi phục lời nhắc, nhiệt độ và các cài đặt khác dùng lần gần nhất của từng mô hình.",
+      rememberParamsPerModelDescription: "Khôi phục lời nhắc, nhiệt độ và các cài đặt khác dùng lần gần nhất của từng mô hình.",
       autoCompact: "Tự động thu gọn cuộc trò chuyện dài",
-      autoCompactDescription:
-        "Các lượt cũ hơn được chuyển vào kho lưu trữ có thể tìm kiếm khi cuộc trò chuyện lấp đầy ngữ cảnh.",
-      autoCompactKeywords:
-        "compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search thu gọn ngữ cảnh cửa sổ cắt bớt lưu trữ truy xuất tìm kiếm",
+      autoCompactDescription: "Các lượt cũ hơn được chuyển vào kho lưu trữ có thể tìm kiếm khi cuộc trò chuyện lấp đầy ngữ cảnh.",
+      autoCompactKeywords: "compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search thu gọn ngữ cảnh cửa sổ cắt bớt lưu trữ truy xuất tìm kiếm",
       keepRunningWhenTabClosed: "Tiếp tục chạy sau khi đóng thẻ",
-      keepRunningWhenTabClosedDescription:
-        "Câu trả lời, tìm kiếm trên web và Nghiên cứu chuyên sâu tiếp tục chạy trên máy chủ sau khi đóng thẻ. Tắt để dừng chúng thay vào đó.",
-      keepRunningWhenTabClosedHint:
-        "Mở lại cuộc trò chuyện trên bất kỳ thiết bị nào để tiếp tục một lượt chạy vẫn đang diễn ra. Khi tắt, lượt chạy dừng trong khoảng một phút sau khi thẻ cuối cùng của nó đóng, nên tải lại trang sẽ không làm nó dừng. Áp dụng cho các lượt chạy bắt đầu sau khi bạn thay đổi cài đặt này. Cuộc trò chuyện tạm thời, câu trả lời từ mô hình API hoặc cho tệp đính kèm, và các lượt dùng bảng trình duyệt luôn dừng cùng thẻ của chúng.",
-      keepRunningWhenTabClosedKeywords:
-        "background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone chạy nền thẻ đóng tiếp tục dừng hủy nghiên cứu chuyên sâu tìm kiếm kết nối lại thiết bị điện thoại",
+      keepRunningWhenTabClosedDescription: "Câu trả lời, tìm kiếm trên web và Nghiên cứu chuyên sâu tiếp tục chạy trên máy chủ sau khi đóng thẻ. Tắt để dừng chúng thay vào đó.",
+      keepRunningWhenTabClosedHint: "Mở lại cuộc trò chuyện trên bất kỳ thiết bị nào để tiếp tục một lượt chạy vẫn đang diễn ra. Khi tắt, lượt chạy dừng trong khoảng một phút sau khi thẻ cuối cùng của nó đóng, nên tải lại trang sẽ không làm nó dừng. Áp dụng cho các lượt chạy bắt đầu sau khi bạn thay đổi cài đặt này. Cuộc trò chuyện tạm thời, câu trả lời từ mô hình API hoặc cho tệp đính kèm, và các lượt dùng bảng trình duyệt luôn dừng cùng thẻ của chúng.",
+      keepRunningWhenTabClosedKeywords: "background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone chạy nền thẻ đóng tiếp tục dừng hủy nghiên cứu chuyên sâu tìm kiếm kết nối lại thiết bị điện thoại",
       firstTokenLabel: "Giới hạn chờ token đầu tiên",
-      firstTokenDescription:
-        "Thời gian tối đa các mô hình GGUF cục bộ được chờ mà không có tiến triển xử lý lời nhắc trước khi có token đầu tiên. Áp dụng cho các lần chờ mới của mọi tài khoản. Không giới hạn sẽ tiếp tục chờ cho đến khi bạn dừng.",
+      firstTokenDescription: "Thời gian tối đa các mô hình GGUF cục bộ được chờ mà không có tiến triển xử lý lời nhắc trước khi có token đầu tiên. Áp dụng cho các lần chờ mới của mọi tài khoản. Không giới hạn sẽ tiếp tục chờ cho đến khi bạn dừng.",
       firstTokenDefault: "20 phút (mặc định)",
       firstTokenCustom: "Tùy chỉnh",
       firstTokenUnlimited: "Không giới hạn",
@@ -3507,66 +3087,53 @@ export const vi = {
       firstTokenSaving: "Đang lưu…",
       firstTokenLoadError: "Không thể tải giới hạn chờ token đầu tiên.",
       firstTokenSaveError: "Không thể lưu giới hạn chờ token đầu tiên.",
-      firstTokenKeywords:
-        "timeout first token prefill slow CPU overnight unlimited waiting limit thời gian chờ token đầu tiên chậm qua đêm không giới hạn",
+      firstTokenKeywords: "timeout first token prefill slow CPU overnight unlimited waiting limit thời gian chờ token đầu tiên chậm qua đêm không giới hạn",
       toolResultLimit: "Độ dài đầu ra công cụ",
-      toolResultLimitDescription:
-        "Số ký tự của một kết quả công cụ Python, Terminal hoặc MCP mà mô hình đọc. Mặc định là {count}.",
-      toolResultLimitHint:
-        "Đầu ra Python và Terminal dài hơn được lưu vào một tệp mà mô hình có thể đọc từng phần. Giới hạn cao hơn áp dụng cho các mô hình chạy trong Unsloth, và cửa sổ ngữ cảnh nhỏ vẫn nhận ít hơn. Mô hình API giữ mức mặc định trừ khi bạn hạ thấp.",
+      toolResultLimitDescription: "Số ký tự của một kết quả công cụ Python, Terminal hoặc MCP mà mô hình đọc. Mặc định là {count}.",
+      toolResultLimitHint: "Đầu ra Python và Terminal dài hơn được lưu vào một tệp mà mô hình có thể đọc từng phần. Giới hạn cao hơn áp dụng cho các mô hình chạy trong Unsloth, và cửa sổ ngữ cảnh nhỏ vẫn nhận ít hơn. Mô hình API giữ mức mặc định trừ khi bạn hạ thấp.",
       toolResultLimitDefault: "{count} (mặc định)",
       toolResultLimitLocked: "Được đặt bởi UNSLOTH_TOOL_RESULT_MAX_CHARS",
       toolResultLimitLoadError: "Không thể tải độ dài đầu ra công cụ.",
       toolResultLimitSaveError: "Không thể lưu độ dài đầu ra công cụ.",
-      toolResultLimitKeywords:
-        "tool output result truncate truncated truncation limit cap characters chars length terminal python mcp công cụ đầu ra kết quả cắt bớt giới hạn ký tự độ dài",
+      toolResultLimitKeywords: "tool output result truncate truncated truncation limit cap characters chars length terminal python mcp công cụ đầu ra kết quả cắt bớt giới hạn ký tự độ dài",
       visibility: {
         collapsed: "Thu gọn",
         auto: "Mở rộng khi đang chạy",
         expanded: "Luôn mở rộng",
       },
-      visibilityKeywords:
-        "collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming thu gọn mở rộng suy luận suy nghĩ lệnh gọi công cụ nhóm",
+      visibilityKeywords: "collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming thu gọn mở rộng suy luận suy nghĩ lệnh gọi công cụ nhóm",
       thinking: {
         visibility: "Suy nghĩ",
-        visibilityDescription:
-          "Cách mở phần suy luận. Bạn vẫn có thể tự mở rộng hoặc thu gọn bất kỳ khối nào.",
+        visibilityDescription: "Cách mở phần suy luận. Bạn vẫn có thể tự mở rộng hoặc thu gọn bất kỳ khối nào.",
       },
       memory: {
         title: "Bộ nhớ",
-        description:
-          "Ghi chú mà mọi cuộc trò chuyện đều đọc, cho mọi mô hình, cục bộ hay đám mây. Cuộc trò chuyện trong dự án cũng đọc tệp AGENTS.md của dự án đó.",
+        description: "Ghi chú mà mọi cuộc trò chuyện đều đọc, cho mọi mô hình, cục bộ hay đám mây. Cuộc trò chuyện trong dự án cũng đọc tệp AGENTS.md của dự án đó.",
         enable: "Dùng bộ nhớ trong cuộc trò chuyện",
         enableDescription: "Gửi các ghi chú này kèm mọi cuộc trò chuyện.",
         locked: "Đã bị tắt cho bản cài đặt này bởi UNSLOTH_STUDIO_AGENTS_MD.",
         editor: "Ghi chú bộ nhớ",
-        placeholder:
-          "Ví dụ:\n- Tôi viết Python và dùng uv.\n- Trả lời ngắn gọn.",
+        placeholder: "Ví dụ:\n- Tôi viết Python và dùng uv.\n- Trả lời ngắn gọn.",
         hint: "Đã lưu vào {path}. Bạn cũng có thể sửa tệp đó bằng bất kỳ trình soạn thảo văn bản nào.",
         size: "{used} / {max} KB",
         save: "Lưu",
         saved: "Đã lưu bộ nhớ",
         loadError: "Không thể tải bộ nhớ.",
         saveError: "Không thể lưu bộ nhớ.",
-        keywords:
-          "memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md bộ nhớ ghi nhớ cá nhân hóa hồ sơ tùy chọn ghi chú chỉ dẫn tùy chỉnh về tôi",
+        keywords: "memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md bộ nhớ ghi nhớ cá nhân hóa hồ sơ tùy chọn ghi chú chỉ dẫn tùy chỉnh về tôi",
       },
       currentDate: {
         label: "Cho mô hình biết ngày hôm nay",
-        description:
-          "Thêm ngày hôm nay để tìm kiếm và nghiên cứu tìm được các nguồn gần đây.",
+        description: "Thêm ngày hôm nay để tìm kiếm và nghiên cứu tìm được các nguồn gần đây.",
         loadError: "Không thể tải cài đặt ngày hiện tại",
         saveError: "Không thể cập nhật cài đặt ngày hiện tại",
       },
       tools: {
         visibility: "Lệnh gọi công cụ",
-        visibilityDescription:
-          "Cách mở hoạt động của công cụ. Bạn vẫn có thể tự mở rộng hoặc thu gọn bất kỳ lệnh gọi nào.",
+        visibilityDescription: "Cách mở hoạt động của công cụ. Bạn vẫn có thể tự mở rộng hoặc thu gọn bất kỳ lệnh gọi nào.",
         foldIntoThinking: "Nhóm lệnh gọi công cụ vào Suy nghĩ",
-        foldIntoThinkingDescription:
-          "Hiển thị các lệnh gọi công cụ của một lượt bên trong khối Suy nghĩ của lượt đó thay vì trên các hàng riêng.",
-        foldIntoThinkingBlocked:
-          "Không khả dụng khi lệnh gọi công cụ được đặt là Luôn mở rộng, vì chế độ này giữ chúng trên các hàng riêng.",
+        foldIntoThinkingDescription: "Hiển thị các lệnh gọi công cụ của một lượt bên trong khối Suy nghĩ của lượt đó thay vì trên các hàng riêng.",
+        foldIntoThinkingBlocked: "Không khả dụng khi lệnh gọi công cụ được đặt là Luôn mở rộng, vì chế độ này giữ chúng trên các hàng riêng.",
       },
       webSearch: {
         title: "Tìm kiếm trên web",
@@ -3576,23 +3143,19 @@ export const vi = {
       artifacts: {
         title: "Trang HTML",
         collapseHtmlBlocks: "Thu gọn khối HTML",
-        collapseHtmlBlocksDescription:
-          "Hiển thị tài liệu HTML đầy đủ trong cuộc trò chuyện dưới dạng thẻ mở trong trình duyệt, thay vì dưới dạng mã.",
+        collapseHtmlBlocksDescription: "Hiển thị tài liệu HTML đầy đủ trong cuộc trò chuyện dưới dạng thẻ mở trong trình duyệt, thay vì dưới dạng mã.",
         allowNetworkAccess: "Cho phép trang HTML truy cập mạng",
-        allowNetworkAccessDescription:
-          "Cho phép trang HTML từ cuộc trò chuyện tải script, kiểu dáng, phông chữ và nội dung đa phương tiện bên ngoài. Tắt để xem trước ngoại tuyến.",
+        allowNetworkAccessDescription: "Cho phép trang HTML từ cuộc trò chuyện tải script, kiểu dáng, phông chữ và nội dung đa phương tiện bên ngoài. Tắt để xem trước ngoại tuyến.",
         blockedBanner: "Đã chặn {count} tài nguyên bên ngoài từ {hosts}.",
         blockedBannerPlural: "Đã chặn {count} tài nguyên bên ngoài từ {hosts}.",
         blockedBannerAction: "Cho phép trên trang này",
         blockedTitle: "Quyền truy cập mạng đang tắt cho trang HTML",
-        blockedHint:
-          "Bật “{setting}” trong Cài đặt → Trình duyệt để trang HTML tải được tài nguyên bên ngoài, hoặc chỉ cho phép trên trang này.",
+        blockedHint: "Bật “{setting}” trong Cài đặt → Trình duyệt để trang HTML tải được tài nguyên bên ngoài, hoặc chỉ cho phép trên trang này.",
         blockedSettingsAction: "Mở Cài đặt",
         blockedDismiss: "Bỏ qua",
         errorTitle: "Trang này gặp lỗi",
         errorTitlePlural: "Trang này gặp {count} lỗi",
-        errorHint:
-          "Sửa bằng mô hình sẽ đưa lỗi vào hộp tin nhắn. Không có gì được gửi cho đến khi bạn gửi.",
+        errorHint: "Sửa bằng mô hình sẽ đưa lỗi vào hộp tin nhắn. Không có gì được gửi cho đến khi bạn gửi.",
         errorBannerAction: "Sửa bằng mô hình",
         errorConsoleAction: "Mở bảng điều khiển",
         errorConsoleHideAction: "Ẩn bảng điều khiển",
@@ -3605,36 +3168,29 @@ export const vi = {
         consoleClear: "Xóa bảng điều khiển",
         consoleClose: "Đóng bảng điều khiển",
         consoleEmpty: "Chưa có đầu ra nào trên bảng điều khiển.",
-        consoleCapped:
-          "Chỉ giữ lại {count} mục cuối cùng; đầu ra trước đó đã bị loại bỏ.",
+        consoleCapped: "Chỉ giữ lại {count} mục cuối cùng; đầu ra trước đó đã bị loại bỏ.",
       },
       data: "Dữ liệu",
       exportHistory: "Xuất lịch sử trò chuyện",
-      exportHistoryDescription:
-        "Tải xuống tất cả cuộc trò chuyện và tin nhắn dưới dạng JSON.",
+      exportHistoryDescription: "Tải xuống tất cả cuộc trò chuyện và tin nhắn dưới dạng JSON.",
       exportAction: "Xuất",
       exportingAction: "Đang xuất...",
       exportConversations: "Xuất Gần đây và Dự án",
-      exportConversationsDescription:
-        "Tải xuống Gần đây, hoặc Gần đây cùng cuộc trò chuyện trong dự án, dưới dạng Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML hoặc PDF, gộp chung hoặc theo từng cuộc trò chuyện. Message JSONL chỉ có theo từng cuộc trò chuyện.",
+      exportConversationsDescription: "Tải xuống Gần đây, hoặc Gần đây cùng cuộc trò chuyện trong dự án, dưới dạng Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML hoặc PDF, gộp chung hoặc theo từng cuộc trò chuyện. Message JSONL chỉ có theo từng cuộc trò chuyện.",
       exportConversationsAction: "Xuất",
       exportScopeRecents: "Gần đây",
       exportScopeAll: "Gần đây + Dự án",
       importChats: "Nhập cuộc trò chuyện",
-      importChatsDescription:
-        "Nhập tệp JSON, JSONL, NDJSON, CSV hoặc Markdown vào Gần đây.",
+      importChatsDescription: "Nhập tệp JSON, JSONL, NDJSON, CSV hoặc Markdown vào Gần đây.",
       importChatsAction: "Nhập",
       importNoConversations: "Không tìm thấy cuộc trò chuyện nào trong tệp.",
       importedOneChat: "Đã nhập 1 cuộc trò chuyện vào Gần đây.",
       importedChatCount: "Đã nhập {count} cuộc trò chuyện vào Gần đây.",
-      importingChats:
-        "Đang nhập cuộc trò chuyện: đã xong {count} ({percent}%)...",
-      importedChatCountPartial:
-        "Đã nhập {count} cuộc trò chuyện vào Gần đây; không thể lưu {failed} cuộc trò chuyện.",
+      importingChats: "Đang nhập cuộc trò chuyện: đã xong {count} ({percent}%)...",
+      importedChatCountPartial: "Đã nhập {count} cuộc trò chuyện vào Gần đây; không thể lưu {failed} cuộc trò chuyện.",
       importFailed: "Nhập thất bại.",
       importFromSource: "Nhập từ {source}",
-      importFromSourceDescription:
-        "Sao chép các cuộc trò chuyện {source} của bạn vào Unsloth, được nhóm theo dự án mà chúng thuộc về.",
+      importFromSourceDescription: "Sao chép các cuộc trò chuyện {source} của bạn vào Unsloth, được nhóm theo dự án mà chúng thuộc về.",
       importingAction: "Đang nhập...",
       importedSourceOneChat: "Đã nhập 1 cuộc trò chuyện từ {source}.",
       importedSourceChatCount: "Đã nhập {count} cuộc trò chuyện từ {source}.",
@@ -3645,18 +3201,14 @@ export const vi = {
       clearHistoryDescription: "Xóa lịch sử trò chuyện khỏi thiết bị này.",
       clearAction: "Xóa",
       clearAllChats: "Xóa tất cả cuộc trò chuyện",
-      clearAllChatsDescription:
-        "Xóa vĩnh viễn mọi cuộc trò chuyện trên thiết bị này.",
+      clearAllChatsDescription: "Xóa vĩnh viễn mọi cuộc trò chuyện trên thiết bị này.",
       noChatsToClear: "Không có cuộc trò chuyện nào để xóa.",
-      clearOneChatDescription:
-        "Xóa vĩnh viễn cuộc trò chuyện duy nhất trên thiết bị này.",
-      clearChatCountDescription:
-        "Xóa vĩnh viễn toàn bộ {count} cuộc trò chuyện trên thiết bị này.",
+      clearOneChatDescription: "Xóa vĩnh viễn cuộc trò chuyện duy nhất trên thiết bị này.",
+      clearChatCountDescription: "Xóa vĩnh viễn toàn bộ {count} cuộc trò chuyện trên thiết bị này.",
       clearChatsAction: "Xóa cuộc trò chuyện",
       clearOneChatTitle: "Xóa 1 cuộc trò chuyện?",
       clearChatsTitle: "Xóa {count} cuộc trò chuyện?",
-      clearChatsConfirmDescription:
-        "Xóa vĩnh viễn mọi cuộc trò chuyện trên thiết bị này. Không thể hoàn tác thao tác này.",
+      clearChatsConfirmDescription: "Xóa vĩnh viễn mọi cuộc trò chuyện trên thiết bị này. Không thể hoàn tác thao tác này.",
       clearingAction: "Đang xóa...",
       clearOneChatAction: "Xóa 1 cuộc trò chuyện",
       clearChatCountAction: "Xóa {count} cuộc trò chuyện",
@@ -3664,18 +3216,12 @@ export const vi = {
       clearedOneChat: "Đã xóa 1 cuộc trò chuyện",
       clearedChatCount: "Đã xóa {count} cuộc trò chuyện",
       someChatsCouldNotBeCleared: "Không thể xóa một số cuộc trò chuyện",
-      chatsClearedRemainOne:
-        "Đã xóa {clearedCount} cuộc trò chuyện; còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
-      chatsClearedRemain:
-        "Đã xóa {clearedCount} cuộc trò chuyện; còn lại {remainingCount} cuộc trò chuyện. Vui lòng thử lại.",
-      oneChatClearedRemain:
-        "Đã xóa 1 cuộc trò chuyện; còn lại {remainingCount} cuộc trò chuyện. Vui lòng thử lại.",
-      oneChatClearedRemainOne:
-        "Đã xóa 1 cuộc trò chuyện; còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
-      storageClearFailedOne:
-        "Xóa bộ nhớ lưu trữ thất bại; có thể còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
-      storageClearFailed:
-        "Xóa bộ nhớ lưu trữ thất bại; có thể còn lại {count} cuộc trò chuyện. Vui lòng thử lại.",
+      chatsClearedRemainOne: "Đã xóa {clearedCount} cuộc trò chuyện; còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
+      chatsClearedRemain: "Đã xóa {clearedCount} cuộc trò chuyện; còn lại {remainingCount} cuộc trò chuyện. Vui lòng thử lại.",
+      oneChatClearedRemain: "Đã xóa 1 cuộc trò chuyện; còn lại {remainingCount} cuộc trò chuyện. Vui lòng thử lại.",
+      oneChatClearedRemainOne: "Đã xóa 1 cuộc trò chuyện; còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
+      storageClearFailedOne: "Xóa bộ nhớ lưu trữ thất bại; có thể còn lại 1 cuộc trò chuyện. Vui lòng thử lại.",
+      storageClearFailed: "Xóa bộ nhớ lưu trữ thất bại; có thể còn lại {count} cuộc trò chuyện. Vui lòng thử lại.",
       failedToClearChats: "Không thể xóa cuộc trò chuyện",
     },
     data: {
@@ -3715,24 +3261,18 @@ export const vi = {
         deleteResults: "Xóa các kết quả",
         noChats: "Không có cuộc trò chuyện nào khớp với tìm kiếm của bạn.",
         noArchivedChats: "Không có cuộc trò chuyện nào đã lưu trữ.",
-        noArchivedMatches:
-          "Không có cuộc trò chuyện đã lưu trữ nào khớp với tìm kiếm của bạn.",
+        noArchivedMatches: "Không có cuộc trò chuyện đã lưu trữ nào khớp với tìm kiếm của bạn.",
         noMedia: "Không có mục nào đã lưu trữ.",
-        noMediaMatches:
-          "Không có mục đã lưu trữ nào khớp với tìm kiếm của bạn.",
+        noMediaMatches: "Không có mục đã lưu trữ nào khớp với tìm kiếm của bạn.",
         itemCount: "Mục: {count}",
-        incompleteSearch:
-          "Tìm kiếm chưa hoàn tất. Hãy thử tải lại các mục còn lại.",
-        searchingRemaining:
-          "Đang tìm trong các mục còn lại (đã tải {count})...",
-        noLoadedMatches:
-          "Không có kết quả phù hợp trong các mục đã tải đến giờ.",
+        incompleteSearch: "Tìm kiếm chưa hoàn tất. Hãy thử tải lại các mục còn lại.",
+        searchingRemaining: "Đang tìm trong các mục còn lại (đã tải {count})...",
+        noLoadedMatches: "Không có kết quả phù hợp trong các mục đã tải đến giờ.",
         deleteItem: "Xóa: {title}",
         unarchiveItem: "Bỏ lưu trữ: {title}",
         deleteItemsTitle: "Xóa các mục đã lưu trữ ({count})",
         unarchiveItemsTitle: "Bỏ lưu trữ các mục ({count})",
-        deleteFilesWarning:
-          "Các tệp này sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        deleteFilesWarning: "Các tệp này sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
         restoreWarning: "Các mục này sẽ trở lại thư viện ảnh.",
         working: "Đang xử lý...",
         loadFailed: "Không thể tải các mục đã lưu trữ",
@@ -3757,91 +3297,73 @@ export const vi = {
         movedChatsToRecents: "Đã chuyển cuộc trò chuyện đến Gần đây: {count}",
         moveFailed: "Không thể di chuyển cuộc trò chuyện",
         deleteChatsTitle: "Xóa cuộc trò chuyện ({count})",
-        deleteChatsWarning:
-          "{count} cuộc trò chuyện và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        deleteChatsWarning: "{count} cuộc trò chuyện và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
         deleteArchivedTitle: "Xóa {count} cuộc trò chuyện đã lưu trữ",
-        deleteArchivedWarning:
-          "{count} cuộc trò chuyện đã lưu trữ và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        deleteArchivedWarning: "{count} cuộc trò chuyện đã lưu trữ và các tin nhắn của chúng sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
         deleting: "Đang xóa...",
       },
       title: "Dữ liệu",
       backToData: "Quay lại Dữ liệu",
       exportFailed: "Không thể xuất cuộc trò chuyện",
-      description:
-        "Quản lý lịch sử trò chuyện và các tệp đã tải lên được lưu trên thiết bị này.",
+      description: "Quản lý lịch sử trò chuyện và các tệp đã tải lên được lưu trên thiết bị này.",
       manageFiles: {
         label: "Quản lý tệp",
-        description:
-          "Tìm kiếm, sắp xếp và tổ chức hình ảnh, video, âm thanh và tệp.",
+        description: "Tìm kiếm, sắp xếp và tổ chức hình ảnh, video, âm thanh và tệp.",
         action: "Mở Thư viện",
       },
       archivedChats: "Cuộc trò chuyện đã lưu trữ",
-      archivedChatsDescription:
-        "Xem và quản lý các cuộc trò chuyện bạn đã lưu trữ.",
+      archivedChatsDescription: "Xem và quản lý các cuộc trò chuyện bạn đã lưu trữ.",
       archivedImages: "Hình ảnh đã lưu trữ",
       archivedImagesDescription: "Xem và quản lý các hình ảnh bạn đã lưu trữ.",
       archivedVideos: "Video đã lưu trữ",
       archivedVideosDescription: "Xem và quản lý các video bạn đã lưu trữ.",
       archivedAudio: "Âm thanh đã lưu trữ",
-      archivedAudioDescription:
-        "Xem và quản lý các đoạn âm thanh bạn đã lưu trữ.",
+      archivedAudioDescription: "Xem và quản lý các đoạn âm thanh bạn đã lưu trữ.",
       manageAction: "Quản lý",
       exportArchivedChats: "Xuất",
       exportingArchivedChats: "Đang xuất...",
       exportedOneArchivedChat: "Đã xuất 1 cuộc trò chuyện đã lưu trữ",
       exportedArchivedChatCount: "Đã xuất {count} cuộc trò chuyện đã lưu trữ",
-      noArchivedChatsToExport:
-        "Không có cuộc trò chuyện đã lưu trữ nào để xuất.",
-      failedToExportArchivedChats:
-        "Không thể xuất các cuộc trò chuyện đã lưu trữ",
+      noArchivedChatsToExport: "Không có cuộc trò chuyện đã lưu trữ nào để xuất.",
+      failedToExportArchivedChats: "Không thể xuất các cuộc trò chuyện đã lưu trữ",
       archiveAllChats: "Lưu trữ tất cả cuộc trò chuyện",
-      archiveAllChatsDescription:
-        "Chuyển mọi cuộc trò chuyện trong Gần đây và Dự án vào kho lưu trữ.",
+      archiveAllChatsDescription: "Chuyển mọi cuộc trò chuyện trong Gần đây và Dự án vào kho lưu trữ.",
       noChatsToArchive: "Không có cuộc trò chuyện nào để lưu trữ.",
       archiveAllAction: "Lưu trữ tất cả",
       archivingAction: "Đang lưu trữ...",
       archiveAllChatsTitle: "Lưu trữ tất cả cuộc trò chuyện?",
-      archiveAllChatsConfirmDescription:
-        "Chuyển mọi cuộc trò chuyện trên thiết bị này vào kho lưu trữ. Cuộc trò chuyện đã lưu trữ vẫn khả dụng và có thể bỏ lưu trữ bất cứ lúc nào.",
+      archiveAllChatsConfirmDescription: "Chuyển mọi cuộc trò chuyện trên thiết bị này vào kho lưu trữ. Cuộc trò chuyện đã lưu trữ vẫn khả dụng và có thể bỏ lưu trữ bất cứ lúc nào.",
       archivedAllChats: "Đã lưu trữ tất cả cuộc trò chuyện",
       archivedOneChat: "Đã lưu trữ 1 cuộc trò chuyện",
       archivedChatCount: "Đã lưu trữ {count} cuộc trò chuyện",
       failedToArchiveChats: "Không thể lưu trữ cuộc trò chuyện",
       confirmBeforeDeleting: "Xác nhận trước khi xóa",
-      confirmBeforeDeletingDescription:
-        "Yêu cầu xác nhận trước khi xóa một cuộc trò chuyện. Tắt để xóa ngay lập tức.",
+      confirmBeforeDeletingDescription: "Yêu cầu xác nhận trước khi xóa một cuộc trò chuyện. Tắt để xóa ngay lập tức.",
       alwaysDeleteFiles: "Luôn xóa tệp",
-      alwaysDeleteFilesDescription:
-        "Xóa một cuộc trò chuyện cũng sẽ xóa thư mục sandbox riêng của nó khỏi ổ đĩa. Các tệp nó ghi bên trong một dự án vẫn ở lại trong không gian làm việc của dự án đó.",
+      alwaysDeleteFilesDescription: "Xóa một cuộc trò chuyện cũng sẽ xóa thư mục sandbox riêng của nó khỏi ổ đĩa. Các tệp nó ghi bên trong một dự án vẫn ở lại trong không gian làm việc của dự án đó.",
       chatsSection: "Cuộc trò chuyện và kho lưu trữ",
       transferSection: "Nhập và xuất",
       deletionSection: "Xóa",
       archives: "Kho lưu trữ",
       archiveChatsLabel: "Cuộc trò chuyện",
       archiveVideosLabel: "Video",
-      exportFormatsSummary:
-        "Xuất cuộc trò chuyện trong Gần đây và dự án theo định dạng bạn muốn.",
-      trainingSummary:
-        "Biến cuộc trò chuyện của bạn thành tập dữ liệu tinh chỉnh.",
+      exportFormatsSummary: "Xuất cuộc trò chuyện trong Gần đây và dự án theo định dạng bạn muốn.",
+      trainingSummary: "Biến cuộc trò chuyện của bạn thành tập dữ liệu tinh chỉnh.",
       confirmDeletionSummary: "Hỏi trước khi xóa từng cuộc trò chuyện.",
       sandboxFiles: "Tệp sandbox của cuộc trò chuyện",
       sandboxFilesDescription: "Thao tác mặc định khi xóa một cuộc trò chuyện.",
       keepSandboxFiles: "Giữ tệp sandbox",
       deleteSandboxFiles: "Xóa tệp sandbox",
-      projectFilesKept:
-        "Sandbox là các thư mục được tạo cho từng cuộc trò chuyện. Các tệp lưu trong không gian làm việc của dự án sẽ được giữ lại.",
+      projectFilesKept: "Sandbox là các thư mục được tạo cho từng cuộc trò chuyện. Các tệp lưu trong không gian làm việc của dự án sẽ được giữ lại.",
       deleteAllAction: "Xóa tất cả",
       deleteChatsOnly: "Chỉ xóa cuộc trò chuyện…",
       deleteChatsAndSandboxes: "Xóa cuộc trò chuyện và sandbox…",
-      deleteSandboxFilesDescription:
-        "Đồng thời xóa thư mục sandbox của từng cuộc trò chuyện và các tệp bên trong. Các tệp trong không gian làm việc của dự án sẽ được giữ lại.",
+      deleteSandboxFilesDescription: "Đồng thời xóa thư mục sandbox của từng cuộc trò chuyện và các tệp bên trong. Các tệp trong không gian làm việc của dự án sẽ được giữ lại.",
       filesSection: "Tệp",
       uploadedFiles: "Tệp đã tải lên",
-      uploadedFilesDescription:
-        "Xem và quản lý các tệp đã tải lên cuộc trò chuyện, dự án và cơ sở kiến thức.",
+      uploadedFilesDescription: "Xem và quản lý các tệp đã tải lên cuộc trò chuyện, dự án và cơ sở kiến thức.",
       fineTuneExport: "Dùng cuộc trò chuyện làm dữ liệu huấn luyện",
-      fineTuneExportDescription:
-        "Tạo tập dữ liệu tinh chỉnh JSONL từ các cuộc trò chuyện của bạn. Nạp vào Huấn luyện, tinh chỉnh thêm trong Công thức hoặc xuất ra.",
+      fineTuneExportDescription: "Tạo tập dữ liệu tinh chỉnh JSONL từ các cuộc trò chuyện của bạn. Nạp vào Huấn luyện, tinh chỉnh thêm trong Công thức hoặc xuất ra.",
       fineTuneExportAction: "Xuất JSONL",
       fineTuneRunAction: "Chạy",
       fineTuneExportingAction: "Đang xuất...",
@@ -3859,8 +3381,7 @@ export const vi = {
     },
     remoteLan: {
       title: "Từ xa và LAN",
-      description:
-        "Truy cập Unsloth này từ các thiết bị khác của bạn, qua mạng cục bộ hoặc một URL công khai tạm thời.",
+      description: "Truy cập Unsloth này từ các thiết bị khác của bạn, qua mạng cục bộ hoặc một URL công khai tạm thời.",
     },
     apiKeys: {
       title: "API",
@@ -3897,8 +3418,7 @@ export const vi = {
       copyAccessToken: "Sao chép token truy cập",
       copyNow: "Hãy sao chép ngay - token này sẽ không được hiển thị lại.",
       usageExamples: "API trò chuyện",
-      usageNoModel:
-        "Nạp hoặc tải xuống một mô hình để xem các ví dụ có thể chạy. Máy chủ này chưa có mô hình nào để chỉ định.",
+      usageNoModel: "Nạp hoặc tải xuống một mô hình để xem các ví dụ có thể chạy. Máy chủ này chưa có mô hình nào để chỉ định.",
       usageTools: "Công cụ",
       exampleLanguage: "Ngôn ngữ",
       exampleRequest: "Yêu cầu",
@@ -3910,18 +3430,15 @@ export const vi = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "HTTPS bảo mật",
-      secureHttpsHint:
-        "Cổng 0.0.0.0 vẫn có thể truy cập từ mọi nơi. Để bảo mật hoàn toàn, hãy khởi chạy Unsloth với --secure để chỉ công khai liên kết HTTPS này.",
+      secureHttpsHint: "Cổng 0.0.0.0 vẫn có thể truy cập từ mọi nơi. Để bảo mật hoàn toàn, hãy khởi chạy Unsloth với --secure để chỉ công khai liên kết HTTPS này.",
       copyTunnelUrl: "Sao chép URL đường hầm",
       copySnippet: "Sao chép đoạn mã",
       copy: "Sao chép",
       copied: "Đã sao chép",
       codingAgents: "Tác tử lập trình",
-      codingAgentsHint:
-        "Khởi chạy một tác tử lập trình kết nối với máy chủ này. Tác tử dùng mô hình đã nạp; máy chủ cục bộ tự động tạo khóa API, còn máy chủ từ xa sẽ đưa khóa vào lệnh.",
+      codingAgentsHint: "Khởi chạy một tác tử lập trình kết nối với máy chủ này. Tác tử dùng mô hình đã nạp; máy chủ cục bộ tự động tạo khóa API, còn máy chủ từ xa sẽ đưa khóa vào lệnh.",
       openAgentsTab: "Mở trong Tác tử",
-      codingAgentsSwap:
-        "Thay claude bằng codex, openclaw, opencode hoặc hermes.",
+      codingAgentsSwap: "Thay claude bằng codex, openclaw, opencode hoặc hermes.",
       relativeNever: "không bao giờ",
       relativeJustNow: "vừa xong",
       expired: "đã hết hạn",
@@ -3933,20 +3450,17 @@ export const vi = {
       revokeToken: "Thu hồi token",
       regenerateToken: "Tạo lại token",
       regenerateTitle: "Tạo lại token truy cập “{name}”?",
-      regenerateDescription:
-        "Một token mới có cùng tên và thời hạn sẽ thay thế token này. Các ứng dụng đang dùng token hiện tại sẽ mất quyền truy cập ngay lập tức.",
+      regenerateDescription: "Một token mới có cùng tên và thời hạn sẽ thay thế token này. Các ứng dụng đang dùng token hiện tại sẽ mất quyền truy cập ngay lập tức.",
       regenerateAction: "Tạo lại",
       regenerating: "Đang tạo lại...",
       regenerateError: "Không thể tạo lại token truy cập.",
       revokeTitle: "Thu hồi token truy cập “{name}”?",
-      revokeDescription:
-        "Các ứng dụng đang dùng token này sẽ mất quyền truy cập ngay lập tức. Không thể hoàn tác thao tác này.",
+      revokeDescription: "Các ứng dụng đang dùng token này sẽ mất quyền truy cập ngay lập tức. Không thể hoàn tác thao tác này.",
       revokeAction: "Thu hồi “{name}”",
       revoking: "Đang thu hồi...",
       audioApi: {
         title: "API âm thanh",
-        description:
-          "Giọng nói, nhân bản giọng, chuyển giọng nói thành văn bản và các quy trình của trang Âm thanh.",
+        description: "Giọng nói, nhân bản giọng, chuyển giọng nói thành văn bản và các quy trình của trang Âm thanh.",
         speak: "Đọc",
         clone: "Nhân bản",
         transcribe: "Chép lời",
@@ -3955,51 +3469,38 @@ export const vi = {
         convert: "Chuyển đổi",
         music: "Âm nhạc",
         edit: "Chỉnh sửa",
-        placeholderModel:
-          "Chưa có mô hình đã tải xuống nào chạy được ví dụ này, nên mô hình hiển thị chỉ là mô hình thay thế. Hãy tải xuống một mô hình trên trang Âm thanh trước.",
-        autoSwitchOff:
-          "Mô hình chỉ được nạp theo tên khi Tự động chuyển mô hình đang bật. Hãy bật tính năng này, hoặc nạp mô hình trên trang Âm thanh của nó trước.",
+        placeholderModel: "Chưa có mô hình đã tải xuống nào chạy được ví dụ này, nên mô hình hiển thị chỉ là mô hình thay thế. Hãy tải xuống một mô hình trên trang Âm thanh trước.",
+        autoSwitchOff: "Mô hình chỉ được nạp theo tên khi Tự động chuyển mô hình đang bật. Hãy bật tính năng này, hoặc nạp mô hình trên trang Âm thanh của nó trước.",
         useViaApi: "Dùng qua API",
       },
       mediaApi: {
         title: "API hình ảnh / video",
-        description:
-          "Tạo hình ảnh và video từ mã của riêng bạn bằng các endpoint tương thích OpenAI.",
+        description: "Tạo hình ảnh và video từ mã của riêng bạn bằng các endpoint tương thích OpenAI.",
         images: "Hình ảnh",
         video: "Video",
-        placeholderModel:
-          "Mô hình hiển thị chỉ là ví dụ. Hãy nạp một mô hình trên trang Hình ảnh hoặc Video rồi mở mục này từ nút API của trang đó để điền thông tin.",
-        autoSwitchOff:
-          "Tự động chuyển mô hình đa phương tiện đang tắt, nên các yêu cầu sẽ chạy trên mô hình mà trang đã nạp, bất kể yêu cầu chỉ định mô hình nào.",
+        placeholderModel: "Mô hình hiển thị chỉ là ví dụ. Hãy nạp một mô hình trên trang Hình ảnh hoặc Video rồi mở mục này từ nút API của trang đó để điền thông tin.",
+        autoSwitchOff: "Tự động chuyển mô hình đa phương tiện đang tắt, nên các yêu cầu sẽ chạy trên mô hình mà trang đã nạp, bất kể yêu cầu chỉ định mô hình nào.",
       },
       trainingApi: {
         title: "API huấn luyện",
-        description:
-          "Tinh chỉnh mô hình từ mã của riêng bạn bằng các endpoint tinh chỉnh tương thích OpenAI: tải lên tệp JSONL, tạo tác vụ, theo dõi các sự kiện của tác vụ, rồi trò chuyện với mô hình đã huấn luyện.",
-        placeholder:
-          "Mô hình và cài đặt hiển thị chỉ là ví dụ. Hãy mở mục này từ nút API trên trang Huấn luyện để điền cấu hình hiện tại của bạn.",
-        hubDataset:
-          "Trang Huấn luyện của bạn đang dùng tập dữ liệu Hugging Face hoặc S3. API huấn luyện trên các tệp được tải lên, vì vậy hãy lưu tập dữ liệu dưới dạng JSONL rồi tải tệp đó lên.",
-        batching:
-          "Các tác vụ tương thích đang chờ trong hàng đợi sẽ tự động được huấn luyện cùng nhau.",
-        chatNote:
-          "Để trò chuyện với mô hình đã huấn luyện theo tên, cần bật Tự động chuyển mô hình, hoặc nạp mô hình trên trang Trò chuyện trước.",
+        description: "Tinh chỉnh mô hình từ mã của riêng bạn bằng các endpoint tinh chỉnh tương thích OpenAI: tải lên tệp JSONL, tạo tác vụ, theo dõi các sự kiện của tác vụ, rồi trò chuyện với mô hình đã huấn luyện.",
+        placeholder: "Mô hình và cài đặt hiển thị chỉ là ví dụ. Hãy mở mục này từ nút API trên trang Huấn luyện để điền cấu hình hiện tại của bạn.",
+        hubDataset: "Trang Huấn luyện của bạn đang dùng tập dữ liệu Hugging Face hoặc S3. API huấn luyện trên các tệp được tải lên, vì vậy hãy lưu tập dữ liệu dưới dạng JSONL rồi tải tệp đó lên.",
+        batching: "Các tác vụ tương thích đang chờ trong hàng đợi sẽ tự động được huấn luyện cùng nhau.",
+        chatNote: "Để trò chuyện với mô hình đã huấn luyện theo tên, cần bật Tự động chuyển mô hình, hoặc nạp mô hình trên trang Trò chuyện trước.",
         cancelTitle: "Hủy tác vụ",
-        cancelDescription:
-          "Dừng một tác vụ đang chờ hoặc đang chạy. Không thuộc ví dụ ở trên.",
+        cancelDescription: "Dừng một tác vụ đang chờ hoặc đang chạy. Không thuộc ví dụ ở trên.",
       },
       decisionApi: {
         title: "API quyết định",
         docs: "Tài liệu",
         docsLabel: "Mở tài liệu API quyết định",
-        description:
-          "Trả lời các câu hỏi có/không, trắc nghiệm và chấm điểm về văn bản bằng một mô hình trên máy này hoặc một mô hình quyết định từ Kết nối. Hoạt động với TypeSafe SDK.",
+        description: "Trả lời các câu hỏi có/không, trắc nghiệm và chấm điểm về văn bản bằng một mô hình trên máy này hoặc một mô hình quyết định từ Kết nối. Hoạt động với TypeSafe SDK.",
         codeTitle: "Gọi từ mã",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "Các ứng dụng MCP khác kết nối tại đây bằng cùng một token.",
         enable: "Phục vụ yêu cầu",
-        enableDescription:
-          "Phục vụ /v1/systemone. Khi bật, mô hình sẽ được tải xuống.",
+        enableDescription: "Phục vụ /v1/systemone. Khi bật, mô hình sẽ được tải xuống.",
         enableRemoteDescription: "Phục vụ /v1/systemone.",
         lockedByEnv: "Được đặt bởi {name}.",
         model: "Mô hình",
@@ -4011,16 +3512,13 @@ export const vi = {
         modelClef: "Clef",
         recommended: "Đề xuất",
         device: "Chạy trên",
-        deviceDescription:
-          "GPU trả lời nhanh hơn và giải phóng bộ nhớ khi mô hình được gỡ.",
+        deviceDescription: "GPU trả lời nhanh hơn và giải phóng bộ nhớ khi mô hình được gỡ.",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
         backend: "Môi trường chạy",
         backendAuto: "Tự động",
-        backendDescription:
-          "Chế độ Tự động phục vụ Clef qua llama.cpp khi mô hình có bản GGUF, nếu không thì chuyển sang PyTorch. llama.cpp cũng đọc được hình ảnh.",
-        backendDescriptionMlx:
-          "Chế độ Tự động phục vụ Clef qua MLX trên Apple Silicon và qua llama.cpp khi chỉ có bản GGUF của mô hình được nạp hoặc tải xuống. MLX chỉ đọc hình ảnh với các mô hình Clef. llama.cpp cũng đọc được hình ảnh.",
+        backendDescription: "Chế độ Tự động phục vụ Clef qua llama.cpp khi mô hình có bản GGUF, nếu không thì chuyển sang PyTorch. llama.cpp cũng đọc được hình ảnh.",
+        backendDescriptionMlx: "Chế độ Tự động phục vụ Clef qua MLX trên Apple Silicon và qua llama.cpp khi chỉ có bản GGUF của mô hình được nạp hoặc tải xuống. MLX chỉ đọc hình ảnh với các mô hình Clef. llama.cpp cũng đọc được hình ảnh.",
         backendStatus: "Môi trường chạy: {backend}",
         backendNone: "không khả dụng",
         mediaImages: "Đọc văn bản và hình ảnh.",
@@ -4036,37 +3534,30 @@ export const vi = {
         download: "Tải xuống",
         downloadConfirmTitle: "Tải xuống Laya {model}?",
         downloadConfirmTitleModel: "Tải xuống {model}?",
-        downloadConfirmBody:
-          "API quyết định cần mô hình này để trả lời yêu cầu. Dung lượng khoảng {size}, được tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
+        downloadConfirmBody: "API quyết định cần mô hình này để trả lời yêu cầu. Dung lượng khoảng {size}, được tải một lần vào bộ nhớ đệm Hugging Face của bạn.",
         unload: "Gỡ",
         downloadBusy: "Một mô hình API quyết định đang được tải xuống.",
         downloadFailed: "Không thể bắt đầu tải xuống.",
         saveFailed: "Không thể lưu cài đặt API quyết định.",
         loadError: "Không thể tải cài đặt API quyết định.",
         sendsTo: "Các yêu cầu được gửi tới {provider}.",
-        connectionMissing:
-          "Kết nối này không còn tồn tại hoặc không có mô hình quyết định nào. Hãy chọn mô hình khác.",
-        addConnection:
-          "Để dùng mô hình quyết định lưu trữ trên đám mây, hãy thêm một mô hình trong ",
+        connectionMissing: "Kết nối này không còn tồn tại hoặc không có mô hình quyết định nào. Hãy chọn mô hình khác.",
+        addConnection: "Để dùng mô hình quyết định lưu trữ trên đám mây, hãy thêm một mô hình trong ",
         connectionsLink: "Kết nối",
         addConnectionSuffix: ".",
       },
       mcp: {
         title: "Quyền truy cập của tác tử (MCP)",
-        description:
-          "Cho phép các tác tử lập trình như Claude Code và Codex dùng Unsloth qua MCP.",
+        description: "Cho phép các tác tử lập trình như Claude Code và Codex dùng Unsloth qua MCP.",
         enable: "Cho phép tác tử kết nối",
-        enableDescription:
-          "Phục vụ /mcp/ cho các yêu cầu có kèm khóa API Unsloth.",
+        enableDescription: "Phục vụ /mcp/ cho các yêu cầu có kèm khóa API Unsloth.",
         lockedByEnv: "Được đặt bởi {name}.",
         loadError: "Không thể tải cài đặt quyền truy cập của tác tử.",
         saveError: "Không thể lưu cài đặt quyền truy cập của tác tử.",
         agent: "Tác tử",
-        exportKeyHint:
-          "Đặt {name} thành một khóa API Unsloth trước khi bạn khởi động tác tử.",
+        exportKeyHint: "Đặt {name} thành một khóa API Unsloth trước khi bạn khởi động tác tử.",
         configFileHint: "Thêm nội dung này vào {path}.",
-        keywords:
-          "mcp model context protocol agents claude codex tools giao thức ngữ cảnh mô hình tác tử công cụ",
+        keywords: "mcp model context protocol agents claude codex tools giao thức ngữ cảnh mô hình tác tử công cụ",
       },
     },
     mcp: {
@@ -4081,8 +3572,7 @@ export const vi = {
         allTools: "Tất cả công cụ",
         selectAll: "Chọn tất cả",
         selectNone: "Không chọn gì",
-        description:
-          "Mỗi công cụ bạn bật sẽ thêm vào những gì agent đọc trước khi bắt đầu, vì vậy hãy tắt những công cụ bạn không cần. Agent không bao giờ thấy công cụ đã tắt và các lệnh gọi đến nó bị từ chối. Agent đã kết nối sẽ thấy thay đổi khi kết nối lại.",
+        description: "Mỗi công cụ bạn bật sẽ thêm vào những gì agent đọc trước khi bắt đầu, vì vậy hãy tắt những công cụ bạn không cần. Agent không bao giờ thấy công cụ đã tắt và các lệnh gọi đến nó bị từ chối. Agent đã kết nối sẽ thấy thay đổi khi kết nối lại.",
         saveError: "Không thể lưu cài đặt công cụ Unsloth MCP.",
         chatNote: "Cuộc trò chuyện không bao giờ nhận được {tools}.",
         groups: {
@@ -4154,8 +3644,7 @@ export const vi = {
     },
     about: {
       title: "Giới thiệu",
-      description:
-        "Tài liệu, ghi chú phát hành, phản hồi và thông tin bản dựng.",
+      description: "Tài liệu, ghi chú phát hành, phản hồi và thông tin bản dựng.",
       studioVersion: "Phiên bản Unsloth",
       packageVersion: "Phiên bản gói",
       desktopAppVersion: "Phiên bản ứng dụng máy tính",
@@ -4168,8 +3657,7 @@ export const vi = {
       whisperCppVersion: "Phiên bản whisper.cpp",
       engines: {
         title: "Công cụ chạy",
-        description:
-          "Các môi trường chạy mà Unsloth dùng để chạy mô hình. Bản cập nhật được cài đặt ngầm, không cần khởi động lại.",
+        description: "Các môi trường chạy mà Unsloth dùng để chạy mô hình. Bản cập nhật được cài đặt ngầm, không cần khởi động lại.",
         updatesLabel: "Cập nhật công cụ chạy",
         notInstalled: "Chưa cài đặt",
         available: "Đã có {version}",
@@ -4177,8 +3665,7 @@ export const vi = {
         updatesAvailable: "Có bản cập nhật",
         checking: "Đang kiểm tra bản cập nhật...",
         checkFailed: "Không thể kiểm tra bản cập nhật. Hãy thử lại sau.",
-        unsupported:
-          "Các công cụ chạy của bản cài đặt này được quản lý bên ngoài Unsloth.",
+        unsupported: "Các công cụ chạy của bản cài đặt này được quản lý bên ngoài Unsloth.",
         checkForUpdates: "Kiểm tra bản cập nhật",
         update: "Cập nhật",
         updating: "Đang cập nhật...",
@@ -4209,8 +3696,7 @@ export const vi = {
       },
       dangerZone: "Vùng nguy hiểm",
       shutDownStudio: "Tắt Unsloth",
-      shutDownStudioDescription:
-        "Dừng máy chủ Unsloth và kết thúc phiên của bạn.",
+      shutDownStudioDescription: "Dừng máy chủ Unsloth và kết thúc phiên của bạn.",
       shutDown: "Tắt",
       update: {
         title: "Cập nhật Unsloth",
@@ -4224,29 +3710,21 @@ export const vi = {
         localUpdateHeading: "Cập nhật cục bộ",
         installCommandUnix: "Lệnh cài đặt cho macOS/Linux",
         installCommandWindows: "Lệnh cài đặt cho Windows",
-        localInstallDetected:
-          "Phát hiện bản cài đặt cục bộ. Hãy cập nhật từ bản checkout gốc của bạn để tránh bị thay thế bằng bản PyPI.",
-        pullThenUpdate:
-          "Kéo các thay đổi mới nhất, rồi chạy trình cài đặt cục bộ:",
+        localInstallDetected: "Phát hiện bản cài đặt cục bộ. Hãy cập nhật từ bản checkout gốc của bạn để tránh bị thay thế bằng bản PyPI.",
+        pullThenUpdate: "Kéo các thay đổi mới nhất, rồi chạy trình cài đặt cục bộ:",
         gitPullCommand: "lệnh git pull",
         localInstallerCommand: "lệnh trình cài đặt cục bộ",
-        sourceInstallDetected:
-          "Phát hiện bản cài đặt từ mã nguồn hoặc gói VCS. Hãy cài đặt lại từ đường dẫn cục bộ hoặc URL Git ban đầu.",
-        repoCheckoutFallback:
-          "Nếu bạn vẫn còn bản checkout của kho mã, hãy chạy trình cài đặt cục bộ từ đó:",
+        sourceInstallDetected: "Phát hiện bản cài đặt từ mã nguồn hoặc gói VCS. Hãy cài đặt lại từ đường dẫn cục bộ hoặc URL Git ban đầu.",
+        repoCheckoutFallback: "Nếu bạn vẫn còn bản checkout của kho mã, hãy chạy trình cài đặt cục bộ từ đó:",
         restartAfterUpdate: "Khởi động lại Unsloth sau khi cập nhật.",
         desktopReady: "Cập nhật ứng dụng máy tính",
-        desktopReadyDescription:
-          "Kiểm tra xem có phiên bản ứng dụng máy tính mới hơn không.",
+        desktopReadyDescription: "Kiểm tra xem có phiên bản ứng dụng máy tính mới hơn không.",
         desktopChecking: "Đang kiểm tra bản cập nhật",
         desktopCheckingDescription: "Việc này thường mất vài giây.",
         desktopAvailable: "Đã có ứng dụng máy tính {version}",
-        desktopAvailableDescription:
-          "Cập nhật ngay, ứng dụng máy tính sẽ khởi động lại khi hoàn tất.",
-        desktopExternalServer:
-          "Đang kết nối với một máy chủ Unsloth trên cổng {port} mà ứng dụng này không khởi động, ví dụ `unsloth studio` trong terminal. Hãy dừng máy chủ tại nơi đã khởi động nó, rồi thoát và mở lại ứng dụng để cập nhật.",
-        desktopManualInstall:
-          "Mở trang phát hành để cài đặt gói Linux mới nhất.",
+        desktopAvailableDescription: "Cập nhật ngay, ứng dụng máy tính sẽ khởi động lại khi hoàn tất.",
+        desktopExternalServer: "Đang kết nối với một máy chủ Unsloth trên cổng {port} mà ứng dụng này không khởi động, ví dụ `unsloth studio` trong terminal. Hãy dừng máy chủ tại nơi đã khởi động nó, rồi thoát và mở lại ứng dụng để cập nhật.",
+        desktopManualInstall: "Mở trang phát hành để cài đặt gói Linux mới nhất.",
         desktopCheckFailed: "Không thể kiểm tra bản cập nhật",
         desktopCheckFailedDescription: "Hãy kiểm tra kết nối rồi thử lại.",
         desktopCurrent: "Ứng dụng máy tính đã được cập nhật",
@@ -4257,10 +3735,8 @@ export const vi = {
         checking: "Đang kiểm tra...",
         updateNow: "Cập nhật ngay",
         openReleasePage: "Mở trang phát hành",
-        unknownInstall:
-          "Không thể xác định cách Unsloth được cài đặt. Với bản cài đặt bằng trình cài đặt hoặc PyPI, hãy dùng các lệnh ở trên.",
-        localCheckout:
-          "Với bản cài đặt từ checkout cục bộ, hãy chạy trình cài đặt cục bộ từ bản checkout đó:",
+        unknownInstall: "Không thể xác định cách Unsloth được cài đặt. Với bản cài đặt bằng trình cài đặt hoặc PyPI, hãy dùng các lệnh ở trên.",
+        localCheckout: "Với bản cài đặt từ checkout cục bộ, hãy chạy trình cài đặt cục bộ từ bản checkout đó:",
         docs: "Tài liệu cài đặt:",
         docsInstall: "Cài đặt",
         docsUpdating: "Cập nhật",
@@ -4274,8 +3750,7 @@ export const vi = {
   },
   studio: {
     routeTitle: "Huấn luyện",
-    cpuTrainingNotice:
-      "Không tìm thấy GPU, nên quá trình huấn luyện chạy trên CPU. Việc này chậm hơn nhiều so với huấn luyện trên GPU và chỉ hỗ trợ mô hình văn bản (LoRA hoặc tinh chỉnh toàn bộ).",
+    cpuTrainingNotice: "Không tìm thấy GPU, nên quá trình huấn luyện chạy trên CPU. Việc này chậm hơn nhiều so với huấn luyện trên GPU và chỉ hỗ trợ mô hình văn bản (LoRA hoặc tinh chỉnh toàn bộ).",
     wizard: {
       modelTitle: "Mô hình",
       modelDescription: "Chọn mô hình và phương pháp huấn luyện",
@@ -4288,20 +3763,16 @@ export const vi = {
       modelLabel: "Mô hình",
       modelTooltip: "Mô hình gốc mà bạn muốn tinh chỉnh.",
       methodLabel: "Phương pháp",
-      methodTooltip:
-        "Cách mô hình được huấn luyện. LoRA và QLoRA cập nhật các adapter nhỏ thay vì toàn bộ trọng số.",
+      methodTooltip: "Cách mô hình được huấn luyện. LoRA và QLoRA cập nhật các adapter nhỏ thay vì toàn bộ trọng số.",
       trainAsLabel: "Huấn luyện thành",
-      trainAsTooltip:
-        "Mô hình ngôn ngữ tạo văn bản. Mô hình quyết định chọn một trong các phương án bạn đưa ra, kèm xác suất, và chạy trong API quyết định.",
+      trainAsTooltip: "Mô hình ngôn ngữ tạo văn bản. Mô hình quyết định chọn một trong các phương án bạn đưa ra, kèm xác suất, và chạy trong API quyết định.",
       trainAsLanguage: "Mô hình ngôn ngữ",
       trainAsDecision: "Mô hình quyết định",
       checkpointLabel: "Checkpoint",
-      checkpointTooltip:
-        "Checkpoint Laya để tinh chỉnh. Bản đa ngôn ngữ phù hợp với hầu hết các tập dữ liệu.",
+      checkpointTooltip: "Checkpoint Laya để tinh chỉnh. Bản đa ngôn ngữ phù hợp với hầu hết các tập dữ liệu.",
       datasetLabel: "Tập dữ liệu",
       datasetTooltip: "Dữ liệu huấn luyện dùng để tinh chỉnh mô hình.",
-      hfTokenDescription:
-        "Bắt buộc đối với mô hình và tập dữ liệu bị giới hạn truy cập hoặc riêng tư.",
+      hfTokenDescription: "Bắt buộc đối với mô hình và tập dữ liệu bị giới hạn truy cập hoặc riêng tư.",
       uploadLocalLabel: "Tải lên tệp cục bộ",
       sourceBrowse: "Duyệt",
       releaseToUpload: "Thả để tải lên",
@@ -4309,11 +3780,9 @@ export const vi = {
       saveYaml: "Lưu YAML",
       resetDefaults: "Đặt lại về mặc định",
       cachedModelGoneTitle: "Mô hình trong bộ nhớ đệm không còn khả dụng",
-      cachedModelGoneDescription:
-        "Các tệp mô hình không còn trên thiết bị này, nên quá trình huấn luyện sẽ tải xuống lại.",
+      cachedModelGoneDescription: "Các tệp mô hình không còn trên thiết bị này, nên quá trình huấn luyện sẽ tải xuống lại.",
       cachedDatasetGoneTitle: "Tập dữ liệu trong bộ nhớ đệm không còn khả dụng",
-      cachedDatasetGoneDescription:
-        "Các tệp tập dữ liệu không còn trên thiết bị này, nên quá trình huấn luyện sẽ tải xuống lại.",
+      cachedDatasetGoneDescription: "Các tệp tập dữ liệu không còn trên thiết bị này, nên quá trình huấn luyện sẽ tải xuống lại.",
     },
     preview: {
       title: "Xem trước lượt chạy",
@@ -4349,23 +3818,17 @@ export const vi = {
       dataset: "Tập dữ liệu",
       downloadsOnStart: "Tải xuống khi bắt đầu",
       continuesOnStart: "Tiếp tục khi bắt đầu",
-      noticeModelDownload:
-        "Mô hình này chưa có trên thiết bị. Quá trình huấn luyện sẽ tự động tải xuống.",
-      noticeModelPartial:
-        "Quá trình huấn luyện sẽ hoàn tất phần tải xuống mô hình còn dở trước khi nạp mô hình.",
-      noticeDatasetDownload:
-        "Tập dữ liệu này chưa có trên thiết bị. Quá trình huấn luyện sẽ tự động tải xuống.",
-      noticeDatasetPartial:
-        "Quá trình huấn luyện sẽ hoàn tất phần tải xuống tập dữ liệu còn dở trước khi đọc dữ liệu.",
-      noticeTransformersUpgrade:
-        "Chưa có phiên bản transformers đã cài đặt nào hỗ trợ kiến trúc này. Khi bắt đầu lượt chạy, bạn sẽ được đề nghị cài đặt transformers {version} trước.",
-      noticeSixteenBitOnly:
-        "Kiến trúc này huấn luyện bằng LoRA 16-bit: không hỗ trợ 4-bit, nên lượt chạy cần nhiều VRAM hơn QLoRA rất nhiều.",
-      noticeInstallSwitchesSixteenBit:
-        "Cài đặt bản phát hành đó thay vì giữ mã riêng của mô hình sẽ chuyển lượt chạy này sang LoRA 16-bit, vốn cần nhiều VRAM hơn QLoRA rất nhiều.",
+      noticeModelDownload: "Mô hình này chưa có trên thiết bị. Quá trình huấn luyện sẽ tự động tải xuống.",
+      noticeModelPartial: "Quá trình huấn luyện sẽ hoàn tất phần tải xuống mô hình còn dở trước khi nạp mô hình.",
+      noticeDatasetDownload: "Tập dữ liệu này chưa có trên thiết bị. Quá trình huấn luyện sẽ tự động tải xuống.",
+      noticeDatasetPartial: "Quá trình huấn luyện sẽ hoàn tất phần tải xuống tập dữ liệu còn dở trước khi đọc dữ liệu.",
+      noticeTransformersUpgrade: "Chưa có phiên bản transformers đã cài đặt nào hỗ trợ kiến trúc này. Khi bắt đầu lượt chạy, bạn sẽ được đề nghị cài đặt transformers {version} trước.",
+      noticeSixteenBitOnly: "Kiến trúc này huấn luyện bằng LoRA 16-bit: không hỗ trợ 4-bit, nên lượt chạy cần nhiều VRAM hơn QLoRA rất nhiều.",
+      noticeInstallSwitchesSixteenBit: "Cài đặt bản phát hành đó thay vì giữ mã riêng của mô hình sẽ chuyển lượt chạy này sang LoRA 16-bit, vốn cần nhiều VRAM hơn QLoRA rất nhiều.",
       advancedSettings: "Cài đặt nâng cao",
       defaultAdvancedSettings: "Mặc định",
       nonDefaultAdvancedSettings: "{count} mục khác mặc định",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "tập dữ liệu",
@@ -4377,18 +3840,15 @@ export const vi = {
       scanningLocal: "Đang quét tập dữ liệu trên thiết bị này…",
       couldntScan: "Không thể quét tập dữ liệu cục bộ",
       someLocationsUnscanned: "Không thể quét một số vị trí chứa tập dữ liệu.",
-      noLocalDatasets:
-        "Chưa có gì trên thiết bị này. Hãy tải xuống một tập dữ liệu từ Hub, tạo một tập dữ liệu trong Công thức hoặc tải lên một tệp.",
+      noLocalDatasets: "Chưa có gì trên thiết bị này. Hãy tải xuống một tập dữ liệu từ Hub, tạo một tập dữ liệu trong Công thức hoặc tải lên một tệp.",
       openDataRecipes: "Mở Data Recipes",
       searchingHub: "Đang tìm kiếm trên Hugging Face…",
       noDatasetsFound: "Không tìm thấy tập dữ liệu nào.",
       tokenRejectedTitle: "Token Hugging Face bị từ chối",
-      tokenRejectedBody:
-        "Hãy cập nhật token trong Cài đặt → Chung, rồi thử lại.",
+      tokenRejectedBody: "Hãy cập nhật token trong Cài đặt → Chung, rồi thử lại.",
       hubUnreachable: "Không thể kết nối tới Hugging Face",
       cantUseDataset: "Không thể dùng tập dữ liệu",
-      reasonInvalidHubId:
-        "Hãy nhập ID tập dữ liệu Hugging Face hợp lệ: repo hoặc owner/repo, không có dấu chấm hoặc gạch nối liên tiếp và không có hậu tố .git (tối đa 96 ký tự mỗi phần).",
+      reasonInvalidHubId: "Hãy nhập ID tập dữ liệu Hugging Face hợp lệ: repo hoặc owner/repo, không có dấu chấm hoặc gạch nối liên tiếp và không có hậu tố .git (tối đa 96 ký tự mỗi phần).",
       sourceRecipe: "Công thức",
       sourceUpload: "Tải lên",
       sourceLocal: "Cục bộ",
@@ -4397,8 +3857,7 @@ export const vi = {
       noun: "mô hình",
       selectModel: "Chọn mô hình",
       hubPlaceholder: "Tìm kiếm hoặc dán ID Hugging Face...",
-      devicePlaceholder:
-        "Tìm kiếm mô hình cục bộ hoặc dán đường dẫn thư mục...",
+      devicePlaceholder: "Tìm kiếm mô hình cục bộ hoặc dán đường dẫn thư mục...",
       useAsHubModel: "Dùng làm mô hình Hugging Face",
       useAsLocalPath: "Dùng làm đường dẫn cục bộ",
       hfCacheLabel: "Bộ nhớ đệm HF",
@@ -4406,28 +3865,21 @@ export const vi = {
       couldntScan: "Không thể quét mô hình cục bộ",
       someLocationsUnscanned: "Không thể quét một số vị trí cục bộ.",
       noLocalModels: "Không tìm thấy mô hình cục bộ nào.",
-      noLocalModelsHint:
-        "Dán đường dẫn thư mục ở trên hoặc chuyển sang Hugging Face.",
+      noLocalModelsHint: "Dán đường dẫn thư mục ở trên hoặc chuyển sang Hugging Face.",
       searchingHub: "Đang tìm kiếm trên Hugging Face…",
       noModelsFound: "Không tìm thấy mô hình nào.",
       tokenRejectedTitle: "Token Hugging Face bị từ chối",
-      tokenRejectedBody:
-        "Hãy cập nhật token trong Cài đặt → Chung, rồi thử lại.",
-      tokenRejectedAnonymousBody:
-        "Các mô hình công khai vẫn được hiển thị khi không có token. Hãy cập nhật token trong Cài đặt → Chung để truy cập các mô hình riêng tư và bị giới hạn truy cập.",
+      tokenRejectedBody: "Hãy cập nhật token trong Cài đặt → Chung, rồi thử lại.",
+      tokenRejectedAnonymousBody: "Các mô hình công khai vẫn được hiển thị khi không có token. Hãy cập nhật token trong Cài đặt → Chung để truy cập các mô hình riêng tư và bị giới hạn truy cập.",
       hubUnreachable: "Không thể kết nối tới Hugging Face",
       cantUseModel: "Không thể dùng mô hình để huấn luyện",
-      reasonTypeMismatch:
-        "Mô hình này không khớp với loại huấn luyện đã chọn ở bước trước.",
+      reasonTypeMismatch: "Mô hình này không khớp với loại huấn luyện đã chọn ở bước trước.",
       reasonEmptyId: "Hãy nhập ID mô hình hoặc đường dẫn mô hình cục bộ.",
       reasonGguf: "Không thể dùng mô hình GGUF để huấn luyện.",
-      reasonAdapter:
-        "Không thể dùng đầu ra adapter làm mô hình gốc để huấn luyện.",
+      reasonAdapter: "Không thể dùng đầu ra adapter làm mô hình gốc để huấn luyện.",
       reasonNotTrainable: "Mô hình trên thiết bị này không huấn luyện được.",
-      reasonUnsupportedFormat:
-        "Định dạng mô hình này không được hỗ trợ để huấn luyện.",
-      reasonInvalidHubId:
-        "Hãy nhập ID mô hình Hugging Face hợp lệ: repo hoặc owner/repo, không có dấu chấm hoặc gạch nối liên tiếp và không có hậu tố .git (tối đa 96 ký tự mỗi phần).",
+      reasonUnsupportedFormat: "Định dạng mô hình này không được hỗ trợ để huấn luyện.",
+      reasonInvalidHubId: "Hãy nhập ID mô hình Hugging Face hợp lệ: repo hoặc owner/repo, không có dấu chấm hoặc gạch nối liên tiếp và không có hậu tố .git (tối đa 96 ký tự mỗi phần).",
       sourceModelsFolder: "Thư mục mô hình",
       sourceHfCache: "Bộ nhớ đệm HF",
       sourceLmStudio: "LM Studio",
@@ -4462,17 +3914,29 @@ export const vi = {
         hint: "Tiếp tục tiền huấn luyện cho lĩnh vực hoặc ngôn ngữ mới.",
         note: "tiếp tục",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Cấu hình và bắt đầu huấn luyện",
       trainingInProgress: "Đang huấn luyện",
       viewPastRuns: "Xem các lượt huấn luyện trước",
       viewingPastRun: "Đang xem lượt chạy trước",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Cấu hình",
       currentRun: "Lượt chạy hiện tại",
       history: "Lịch sử",
+      compare: "Compare",
     },
     goToLibrary: "Đi tới Thư viện",
     imageTraining: "Huấn luyện ảnh",
@@ -4487,15 +3951,13 @@ export const vi = {
         trainSplit: "Phần chia huấn luyện",
         trainSplitTooltip: "Chọn phần chia dùng để huấn luyện.",
         evaluationSplit: "Phần chia đánh giá",
-        evaluationSplitTooltip:
-          "Chọn phần chia dùng để đánh giá. “Không có” nghĩa là không đánh giá trong quá trình huấn luyện.",
+        evaluationSplitTooltip: "Chọn phần chia dùng để đánh giá. “Không có” nghĩa là không đánh giá trong quá trình huấn luyện.",
         selectSubset: "Chọn tập con...",
         selectSplit: "Chọn phần chia...",
         none: "Không có",
         loading: "Đang tải cấu hình và phần chia của tập dữ liệu...",
         manualTitle: "Nhập thủ công tùy chọn tập dữ liệu",
-        manualDescription:
-          "Nhập chính xác tên cấu hình và tên phần chia Hugging Face cần dùng.",
+        manualDescription: "Nhập chính xác tên cấu hình và tên phần chia Hugging Face cần dùng.",
         manualSubsetPlaceholder: "Tên cấu hình (không bắt buộc)",
         manualRequired: "Bắt buộc phải có phần chia huấn luyện.",
         manualTooLong: "Dùng tối đa 128 ký tự.",
@@ -4515,86 +3977,65 @@ export const vi = {
       uploading: "Đang tải lên...",
       uploadEvalFile: "Tải lên tệp đánh giá",
       fileTooLarge: "Tệp quá lớn",
-      fileTooLargeDescription:
-        "{file} có dung lượng {size}. Tệp tải lên để huấn luyện được hỗ trợ tối đa {limit}.",
+      fileTooLargeDescription: "{file} có dung lượng {size}. Tệp tải lên để huấn luyện được hỗ trợ tối đa {limit}.",
       documentRedirect: {
         title: "Tệp này cần được chuyển đổi trước",
         genericFile: "Tệp này",
-        description:
-          "{file} là tài liệu nguồn, không phải tập dữ liệu sẵn sàng để huấn luyện. Hãy dùng Data Recipes để chuyển tài liệu thành tập dữ liệu, rồi quay lại đây để tinh chỉnh.",
+        description: "{file} là tài liệu nguồn, không phải tập dữ liệu sẵn sàng để huấn luyện. Hãy dùng Data Recipes để chuyển tài liệu thành tập dữ liệu, rồi quay lại đây để tinh chỉnh.",
         nextStepTitle: "Bước tiếp theo nên làm",
-        nextStepDescription:
-          "Mở Learning Recipes và bắt đầu với một công thức dựa trên tài liệu, chẳng hạn như hỏi đáp dựa trên PDF.",
+        nextStepDescription: "Mở Learning Recipes và bắt đầu với một công thức dựa trên tài liệu, chẳng hạn như hỏi đáp dựa trên PDF.",
         openAction: "Mở Learning Recipes",
       },
-      evalDatasetDescription:
-        "Không bắt buộc. Nếu không cung cấp, một phần nhỏ sẽ được tách ra từ dữ liệu huấn luyện.",
+      evalDatasetDescription: "Không bắt buộc. Nếu không cung cấp, một phần nhỏ sẽ được tách ra từ dữ liệu huấn luyện.",
       advanced: "Nâng cao",
       targetFormat: "Định dạng đích",
-      targetFormatTooltip:
-        "Định dạng dữ liệu huấn luyện của bạn. Tự động phát hiện phù hợp với hầu hết các tập dữ liệu.",
+      targetFormatTooltip: "Định dạng dữ liệu huấn luyện của bạn. Tự động phát hiện phù hợp với hầu hết các tập dữ liệu.",
       streamingInfoAriaLabel: "Thông tin truyền trực tuyến tập dữ liệu",
       streaming: {
         label: "Bật truyền trực tuyến",
-        description:
-          "Truyền trực tuyến tập dữ liệu văn bản Hugging Face thay vì tải xuống.",
+        description: "Truyền trực tuyến tập dữ liệu văn bản Hugging Face thay vì tải xuống.",
         unavailable: "Không thể truyền trực tuyến. Để bật:",
-        completionsUnavailable:
-          "Không khả dụng khi đang bật truyền trực tuyến tập dữ liệu.",
+        completionsUnavailable: "Không khả dụng khi đang bật truyền trực tuyến tập dữ liệu.",
         blockers: {
-          source:
-            "Dùng tập dữ liệu Hugging Face (không phải tệp tải lên cục bộ hay nguồn S3).",
-          maxSteps:
-            "Đặt Số bước tối đa > 0 — tập dữ liệu truyền trực tuyến không có độ dài xác định.",
+          source: "Dùng tập dữ liệu Hugging Face (không phải tệp tải lên cục bộ hay nguồn S3).",
+          maxSteps: "Đặt Số bước tối đa > 0 — tập dữ liệu truyền trực tuyến không có độ dài xác định.",
           trainOnCompletions: "Tắt “Chỉ phần trả lời của trợ lý”.",
-          evalSplit:
-            "Chọn một phần chia đánh giá riêng — tính năng đánh giá đang bật nhưng chưa đặt phần chia đánh giá riêng.",
+          evalSplit: "Chọn một phần chia đánh giá riêng — tính năng đánh giá đang bật nhưng chưa đặt phần chia đánh giá riêng.",
           visionModel: "Mô hình thị giác không hỗ trợ truyền trực tuyến.",
           audioModel: "Mô hình âm thanh không hỗ trợ truyền trực tuyến.",
-          embeddingModel:
-            "Mô hình embedding không hỗ trợ truyền trực tuyến (huấn luyện cần toàn bộ tập dữ liệu).",
-          imageDataset:
-            "Tập dữ liệu này có vẻ là hình ảnh, loại không thể truyền trực tuyến.",
-          audioDataset:
-            "Tập dữ liệu này có vẻ là âm thanh, loại không thể truyền trực tuyến.",
+          embeddingModel: "Mô hình embedding không hỗ trợ truyền trực tuyến (huấn luyện cần toàn bộ tập dữ liệu).",
+          imageDataset: "Tập dữ liệu này có vẻ là hình ảnh, loại không thể truyền trực tuyến.",
+          audioDataset: "Tập dữ liệu này có vẻ là âm thanh, loại không thể truyền trực tuyến.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "chỉ phần trả lời của trợ lý",
           evaluation: "đánh giá (cần phần chia đánh giá riêng)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Đã tắt truyền trực tuyến: truyền trực tuyến cần Số bước tối đa cố định > 0.",
-          adjusted:
-            "Đã điều chỉnh cho truyền trực tuyến. Đã tắt các tùy chọn không tương thích: {options}.",
-          needsMaxSteps:
-            "Truyền trực tuyến cần Số bước tối đa cố định (tập dữ liệu truyền trực tuyến không có độ dài xác định). Hãy đặt Số bước tối đa > 0 trước.",
-          enabledAdjusted:
-            "Đã bật truyền trực tuyến. Đã tắt các tùy chọn không tương thích: {options}.",
-          disabledForDetectedModality:
-            "Đã tắt truyền trực tuyến vì tập dữ liệu hình ảnh và âm thanh cần được tải xuống toàn bộ. Hãy xem lại cài đặt, rồi bắt đầu lại.",
+          turnedOffMaxSteps: "Đã tắt truyền trực tuyến: truyền trực tuyến cần Số bước tối đa cố định > 0.",
+          adjusted: "Đã điều chỉnh cho truyền trực tuyến. Đã tắt các tùy chọn không tương thích: {options}.",
+          needsMaxSteps: "Truyền trực tuyến cần Số bước tối đa cố định (tập dữ liệu truyền trực tuyến không có độ dài xác định). Hãy đặt Số bước tối đa > 0 trước.",
+          enabledAdjusted: "Đã bật truyền trực tuyến. Đã tắt các tùy chọn không tương thích: {options}.",
+          disabledForDetectedModality: "Đã tắt truyền trực tuyến vì tập dữ liệu hình ảnh và âm thanh cần được tải xuống toàn bộ. Hãy xem lại cài đặt, rồi bắt đầu lại.",
         },
       },
       auto: "Tự động",
       rawText: "Văn bản thô",
       trainSplitStart: "Điểm bắt đầu phần chia huấn luyện",
-      trainSplitStartTooltip:
-        "Chỉ huấn luyện trên một phần của phần chia huấn luyện bằng cách chỉ định chỉ số hàng bắt đầu (bao gồm, tính từ 0). Để trống để bắt đầu từ hàng đầu tiên.",
+      trainSplitStartTooltip: "Chỉ huấn luyện trên một phần của phần chia huấn luyện bằng cách chỉ định chỉ số hàng bắt đầu (bao gồm, tính từ 0). Để trống để bắt đầu từ hàng đầu tiên.",
       trainSplitEnd: "Điểm kết thúc phần chia huấn luyện",
-      trainSplitEndTooltip:
-        "Chỉ số hàng cuối cùng được lấy từ phần chia huấn luyện (bao gồm, tính từ 0). Ví dụ: đặt Bắt đầu là 0 và Kết thúc là 99 để huấn luyện trên 100 hàng đầu tiên. Để trống để dùng tất cả các hàng còn lại.",
+      trainSplitEndTooltip: "Chỉ số hàng cuối cùng được lấy từ phần chia huấn luyện (bao gồm, tính từ 0). Ví dụ: đặt Bắt đầu là 0 và Kết thúc là 99 để huấn luyện trên 100 hàng đầu tiên. Để trống để dùng tất cả các hàng còn lại.",
       endPlaceholder: "Kết thúc",
       clear: "Xóa",
       dropFileOrClick: "Thả tệp hoặc nhấp để tải lên",
       uploadDetails: "Chi tiết tải lên",
-      uploadDetailsTooltip:
-        "Tối đa {limit} mỗi tệp. PDF, DOCX và TXT không phải tập dữ liệu sẵn sàng để huấn luyện, vì vậy hãy chuyển đổi chúng trong Learning Recipes trước.",
+      uploadDetailsTooltip: "Tối đa {limit} mỗi tệp. PDF, DOCX và TXT không phải tập dữ liệu sẵn sàng để huấn luyện, vì vậy hãy chuyển đổi chúng trong Learning Recipes trước.",
       viewDataset: "Xem tập dữ liệu",
       previewTokens: "Xem trước token",
       tokenPreview: {
         title: "Xem trước token",
-        description:
-          "Cách {model} tách token dữ liệu này để huấn luyện. Chỉ tokenizer được tải xuống.",
+        description: "Cách {model} tách token dữ liệu này để huấn luyện. Chỉ tokenizer được tải xuống.",
         datasetTab: "Mẫu tập dữ liệu",
         textTab: "Văn bản của bạn",
         trained: "Được huấn luyện",
@@ -4602,10 +4043,8 @@ export const vi = {
         completionsOnly: "Chỉ phần trả lời của trợ lý",
         allTokens: "Huấn luyện tất cả token",
         responseMarker: "Dấu hiệu phản hồi",
-        maskingNotApplied:
-          "Không tìm thấy dấu hiệu trò chuyện, nên mọi token đều được huấn luyện.",
-        loading:
-          "Đang tải tokenizer. Lần xem trước đầu tiên sẽ mất thêm chút thời gian...",
+        maskingNotApplied: "Không tìm thấy dấu hiệu trò chuyện, nên mọi token đều được huấn luyện.",
+        loading: "Đang tải tokenizer. Lần xem trước đầu tiên sẽ mất thêm chút thời gian...",
         shuffle: "Xáo trộn mẫu",
         showIds: "Hiện ID token",
         copyIds: "Sao chép ID",
@@ -4613,19 +4052,15 @@ export const vi = {
         sample: "Mẫu {index}",
         stats: "{tokens} token, {trained} được huấn luyện ({percent}%)",
         truncated: "Bị cắt còn {max}/{full} token do độ dài ngữ cảnh.",
-        noTrained:
-          "Không có token nào trong hàng này được huấn luyện, nên quá trình huấn luyện sẽ bỏ qua hàng này.",
+        noTrained: "Không có token nào trong hàng này được huấn luyện, nên quá trình huấn luyện sẽ bỏ qua hàng này.",
         hiddenTokens: "{count} token khác không được hiển thị",
-        multimodal:
-          "Các hàng hình ảnh và âm thanh không được hiển thị ở đây. Bạn vẫn có thể thử tokenizer trên văn bản của riêng mình.",
+        multimodal: "Các hàng hình ảnh và âm thanh không được hiển thị ở đây. Bạn vẫn có thể thử tokenizer trên văn bản của riêng mình.",
         textPlaceholder: "Nhập hoặc dán văn bản để xem các token...",
-        textHint:
-          "Với chế độ chỉ phần trả lời của trợ lý, chỉ văn bản sau dấu hiệu trợ lý mới được huấn luyện.",
+        textHint: "Với chế độ chỉ phần trả lời của trợ lý, chỉ văn bản sau dấu hiệu trợ lý mới được huấn luyện.",
         insertExample: "Chèn ví dụ trò chuyện",
         vocab: "Từ vựng: {count} token",
         retry: "Thử lại",
-        packing:
-          "Packing đang bật: lượt chạy ghép các hàng thành chuỗi dài bằng độ dài ngữ cảnh, nên vị trí một hàng bị cắt có thể khác với chế độ xem theo từng hàng này.",
+        packing: "Packing đang bật: lượt chạy ghép các hàng thành chuỗi dài bằng độ dài ngữ cảnh, nên vị trí một hàng bị cắt có thể khác với chế độ xem theo từng hàng này.",
       },
       uploadFailed: "Tải lên không thành công",
       unknownError: "Lỗi không xác định",
@@ -4634,10 +4069,8 @@ export const vi = {
       datasetUploaded: "Đã tải lên tập dữ liệu",
       evalDatasetUploaded: "Đã tải lên tập dữ liệu đánh giá",
       uploadOneFileAtATime: "Mỗi lần chỉ tải lên một tệp",
-      uploadSingleFileDescription:
-        "Mục tải lên tập dữ liệu huấn luyện chỉ chấp nhận một tệp.",
-      previewLoadingHuggingFace:
-        "Đang lấy bản xem trước tập dữ liệu từ Hugging Face...",
+      uploadSingleFileDescription: "Mục tải lên tập dữ liệu huấn luyện chỉ chấp nhận một tệp.",
+      previewLoadingHuggingFace: "Đang lấy bản xem trước tập dữ liệu từ Hugging Face...",
       previewLoading: "Đang tải bản xem trước...",
       mappingRequirements: {
         audioAndText: "âm thanh và văn bản",
@@ -4650,17 +4083,13 @@ export const vi = {
         heuristicTitle: "Ánh xạ được phát hiện theo heuristic",
         readyTitle: "Ánh xạ đã sẵn sàng",
         requiredTitle: "Ánh xạ các cột của tập dữ liệu",
-        heuristicDescription:
-          "Chúng tôi đã tự động phát hiện cách ánh xạ cột bên dưới bằng heuristic. Hãy xem lại và điều chỉnh bằng các danh sách thả xuống ở tiêu đề cột, hoặc dùng AI Assist để ánh xạ thông minh hơn.",
-        readyDescription:
-          "Mọi thứ đều ổn. Chúng tôi sẽ tự động chuyển đổi tập dữ liệu này.",
-        requiredDescription:
-          "Gán vai trò cho các cột bằng các danh sách thả xuống ở tiêu đề. Tối thiểu, hãy gán {required}.",
+        heuristicDescription: "Chúng tôi đã tự động phát hiện cách ánh xạ cột bên dưới bằng heuristic. Hãy xem lại và điều chỉnh bằng các danh sách thả xuống ở tiêu đề cột, hoặc dùng AI Assist để ánh xạ thông minh hơn.",
+        readyDescription: "Mọi thứ đều ổn. Chúng tôi sẽ tự động chuyển đổi tập dữ liệu này.",
+        requiredDescription: "Gán vai trò cho các cột bằng các danh sách thả xuống ở tiêu đề. Tối thiểu, hãy gán {required}.",
       },
       s3: {
         title: "Cấu hình S3",
-        description:
-          "Tải tập dữ liệu .parquet, .json, .jsonl hoặc .csv từ Amazon S3",
+        description: "Tải tập dữ liệu .parquet, .json, .jsonl hoặc .csv từ Amazon S3",
         bucket: "Tên bucket",
         bucketPlaceholder: "my-training-data-bucket",
         region: "Vùng AWS",
@@ -4682,23 +4111,19 @@ export const vi = {
       },
       projectName: "Tên dự án",
       optional: "Không bắt buộc",
-      projectNameDescription:
-        "Dùng trong tên thư mục đầu ra huấn luyện, giá trị mặc định khi xuất và lịch sử.",
+      projectNameDescription: "Dùng trong tên thư mục đầu ra huấn luyện, giá trị mặc định khi xuất và lịch sử.",
       loraSettings: "Cài đặt LoRA",
       trainingHyperparameters: "Siêu tham số huấn luyện",
       drafterSettings: "Mô hình nháp cho giải mã suy đoán",
       drafterTrain: "Huấn luyện mô hình nháp cho giải mã suy đoán",
-      drafterTrainTooltip:
-        "Huấn luyện một đầu nháp nhỏ sau khi tinh chỉnh để suy luận chạy nhanh hơn trong llama.cpp và vLLM; đầu ra không thay đổi.",
+      drafterTrainTooltip: "Huấn luyện một đầu nháp nhỏ sau khi tinh chỉnh để suy luận chạy nhanh hơn trong llama.cpp và vLLM; đầu ra không thay đổi.",
       drafterChecking: "Đang kiểm tra mô hình này...",
       drafterUnavailable: "Không khả dụng cho mô hình này: {reason}",
       drafterRetrainMtp: "Huấn luyện lại đầu MTP của mô hình này",
-      drafterEagle3:
-        "Huấn luyện mô hình nháp EAGLE-3 (mô hình này không có đầu MTP)",
+      drafterEagle3: "Huấn luyện mô hình nháp EAGLE-3 (mô hình này không có đầu MTP)",
       drafterDataSource: "Dữ liệu huấn luyện",
       drafterDataSourceDataset: "Câu trả lời trong tập dữ liệu",
-      drafterDataSourceRegenerate:
-        "Câu trả lời của chính mô hình (chậm hơn, tốt hơn)",
+      drafterDataSourceRegenerate: "Câu trả lời của chính mô hình (chậm hơn, tốt hơn)",
       drafterMaxExamples: "Số ví dụ",
       drafterEpochs: "Epoch",
       drafterLearningRate: "Tốc độ học",
@@ -4714,19 +4139,14 @@ export const vi = {
       contextLengthTooltip: "Số token tối đa cho mỗi mẫu huấn luyện.",
       customContextLength: "Nhập giá trị tùy chỉnh",
       learningRate: "Tốc độ học",
-      learningRateTooltip:
-        "Kích thước bước khi cập nhật trọng số. Giá trị thấp hơn huấn luyện chậm hơn nhưng ổn định hơn.",
-      learningRateDescription:
-        "Đề xuất: 2e-4 cho LoRA, 5e-5 cho CPT, 2e-5 cho tinh chỉnh toàn bộ",
+      learningRateTooltip: "Kích thước bước khi cập nhật trọng số. Giá trị thấp hơn huấn luyện chậm hơn nhưng ổn định hơn.",
+      learningRateDescription: "Đề xuất: 2e-4 cho LoRA, 5e-5 cho CPT, 2e-5 cho tinh chỉnh toàn bộ",
       embeddingLearningRate: "Tốc độ học embedding",
-      embeddingLearningRateTooltip:
-        "Chỉ dùng khi CPT huấn luyện embed_tokens. Embedding dễ mất ổn định hơn trọng số LoRA, nên thường cần LR nhỏ hơn. Để trống để dùng lr/10; khoảng giá trị thường dùng nhỏ hơn LR chính từ 2 đến 10 lần. Chỉ tăng giá trị này nếu việc thích ứng từ vựng hoặc token chuyên ngành quá chậm.",
+      embeddingLearningRateTooltip: "Chỉ dùng khi CPT huấn luyện embed_tokens. Embedding dễ mất ổn định hơn trọng số LoRA, nên thường cần LR nhỏ hơn. Để trống để dùng lr/10; khoảng giá trị thường dùng nhỏ hơn LR chính từ 2 đến 10 lần. Chỉ tăng giá trị này nếu việc thích ứng từ vựng hoặc token chuyên ngành quá chậm.",
       rank: "Rank",
-      rankTooltip:
-        "Số chiều của các ma trận hạng thấp. Càng cao = càng nhiều dung lượng biểu diễn.",
+      rankTooltip: "Số chiều của các ma trận hạng thấp. Càng cao = càng nhiều dung lượng biểu diễn.",
       alpha: "Alpha",
-      alphaTooltip:
-        "Hệ số tỷ lệ cho các cập nhật LoRA. Thường bằng 2 lần rank.",
+      alphaTooltip: "Hệ số tỷ lệ cho các cập nhật LoRA. Thường bằng 2 lần rank.",
       dropout: "Dropout",
       dropoutTooltip: "Xác suất dropout cho các lớp LoRA để giảm quá khớp.",
       visionLayers: "Lớp thị giác",
@@ -4745,13 +4165,10 @@ export const vi = {
       schedule: "Lịch trình",
       memory: "Bộ nhớ",
       optimizer: "Trình tối ưu hóa",
-      optimizerTooltip:
-        "Thuật toán tối ưu hóa. Các biến thể 8-bit giảm mức sử dụng bộ nhớ. Nên dùng Fused cho mô hình thị giác.",
-      optimizerTooltipMlx:
-        "Thuật toán tối ưu hóa. AdamW là mặc định. Lion dùng ít bộ nhớ hơn nhưng thường cần tốc độ học thấp hơn.",
+      optimizerTooltip: "Thuật toán tối ưu hóa. Các biến thể 8-bit giảm mức sử dụng bộ nhớ. Nên dùng Fused cho mô hình thị giác.",
+      optimizerTooltipMlx: "Thuật toán tối ưu hóa. AdamW là mặc định. Lion dùng ít bộ nhớ hơn nhưng thường cần tốc độ học thấp hơn.",
       lrScheduler: "Bộ lập lịch LR",
-      lrSchedulerTooltip:
-        "Cách tốc độ học thay đổi trong quá trình huấn luyện. Linear giảm đều; cosine giảm theo đường cong.",
+      lrSchedulerTooltip: "Cách tốc độ học thay đổi trong quá trình huấn luyện. Linear giảm đều; cosine giảm theo đường cong.",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4765,41 +4182,33 @@ export const vi = {
         cosine: "Cosine",
       },
       batchSize: "Kích thước lô",
-      batchSizeTooltip:
-        "Số mẫu được xử lý mỗi bước. Giá trị cao hơn dùng nhiều VRAM hơn.",
+      batchSizeTooltip: "Số mẫu được xử lý mỗi bước. Giá trị cao hơn dùng nhiều VRAM hơn.",
       gradAccum: "Số bước tích lũy gradient",
-      gradAccumTooltip:
-        "Mô phỏng kích thước lô lớn hơn mà không tốn thêm VRAM.",
+      gradAccumTooltip: "Mô phỏng kích thước lô lớn hơn mà không tốn thêm VRAM.",
       weightDecay: "Suy giảm trọng số",
       weightDecayTooltip: "Điều chuẩn L2 để ngăn quá khớp.",
       warmupSteps: "Số bước khởi động",
       warmupStepsTooltip: "Tăng dần LR khi bắt đầu huấn luyện để ổn định.",
-      scheduleEpochsTooltip:
-        "Số lần duyệt toàn bộ tập dữ liệu. Đặt 0 để chạy theo số bước tối đa.",
+      scheduleEpochsTooltip: "Số lần duyệt toàn bộ tập dữ liệu. Đặt 0 để chạy theo số bước tối đa.",
       saveSteps: "Số bước giữa các lần lưu",
       saveStepsTooltip: "Lưu checkpoint sau mỗi N bước. Đặt 0 để tắt.",
       evalSteps: "Số bước giữa các lần đánh giá",
-      evalStepsTooltip:
-        "Tỷ lệ trên tổng số bước huấn luyện giữa các lần đánh giá (0-1). Đặt 0 để tắt đánh giá. Ví dụ: 0.01 = đánh giá sau mỗi 1% số bước.",
+      evalStepsTooltip: "Tỷ lệ trên tổng số bước huấn luyện giữa các lần đánh giá (0-1). Đặt 0 để tắt đánh giá. Ví dụ: 0.01 = đánh giá sau mỗi 1% số bước.",
       earlyStoppingPatience: "Độ kiên nhẫn dừng sớm",
-      earlyStoppingPatienceTooltip:
-        "Dừng huấn luyện sau từng này lần đánh giá liên tiếp mà eval loss không giảm, và giữ trọng số từ lần đánh giá tốt nhất. Cần bật đánh giá (Số bước giữa các lần đánh giá lớn hơn 0). Đặt 0 để tắt.",
+      earlyStoppingPatienceTooltip: "Dừng huấn luyện sau từng này lần đánh giá liên tiếp mà eval loss không giảm, và giữ trọng số từ lần đánh giá tốt nhất. Cần bật đánh giá (Số bước giữa các lần đánh giá lớn hơn 0). Đặt 0 để tắt.",
       seed: "Seed",
       seedTooltip: "Seed ngẫu nhiên để có thể tái lập kết quả.",
       offloadLayers: "Chuyển lớp ra bộ nhớ hệ thống",
-      offloadLayersTooltip:
-        "Giữ các lớp decoder trong RAM hệ thống và truyền từng lớp sang GPU ngay trước khi chạy, để mô hình lớn hơn VRAM của bạn vẫn huấn luyện được với LoRA. Tự động sẽ chuyển ít lớp nhất có thể để vừa; nhập số lượng sẽ chuyển đúng bấy nhiêu lớp. Cần bật gradient checkpointing.",
+      offloadLayersTooltip: "Giữ các lớp decoder trong RAM hệ thống và truyền từng lớp sang GPU ngay trước khi chạy, để mô hình lớn hơn VRAM của bạn vẫn huấn luyện được với LoRA. Tự động sẽ chuyển ít lớp nhất có thể để vừa; nhập số lượng sẽ chuyển đúng bấy nhiêu lớp. Cần bật gradient checkpointing.",
       offloadOff: "Tắt",
       offloadAuto: "Tự động",
       offloadCount: "Số lượng",
       offloadVramBudget: "Ngân sách VRAM (GiB)",
-      offloadVramBudgetTooltip:
-        "Lượng VRAM tối đa mà lượt chạy này được dùng. Tự động sẽ chuyển đủ số lớp để nằm trong giới hạn đó, và hai lượt chạy có thể dùng chung một card, mỗi lượt chiếm một phần. Để trống để dùng toàn bộ card.",
+      offloadVramBudgetTooltip: "Lượng VRAM tối đa mà lượt chạy này được dùng. Tự động sẽ chuyển đủ số lớp để nằm trong giới hạn đó, và hai lượt chạy có thể dùng chung một card, mỗi lượt chiếm một phần. Để trống để dùng toàn bộ card.",
       offloadWholeCard: "toàn bộ card",
       offloadVramBudgetGpu: "Ngân sách VRAM GPU {index} (GiB)",
       prefetchDepth: "Độ sâu tải trước",
-      prefetchDepthTooltip:
-        "Số lớp đã chuyển ra được sao chép trước lớp đang chạy. Tự động bắt đầu từ 1 và chỉ giữ nhóm sâu hơn khi việc đó giảm rõ rệt thời gian chờ sao chép.",
+      prefetchDepthTooltip: "Số lớp đã chuyển ra được sao chép trước lớp đang chạy. Tự động bắt đầu từ 1 và chỉ giữ nhóm sâu hơn khi việc đó giảm rõ rệt thời gian chờ sao chép.",
       offloadPanelTitle: "Các lớp đã chuyển ra",
       offloadPanelGpu: "Trên GPU",
       offloadPanelHost: "Trong RAM hệ thống",
@@ -4811,23 +4220,32 @@ export const vi = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "độ sâu tải trước",
       offloadPanelPinned: "đã ghim",
-      offloadPanelSweepNote:
-        "Cửa sổ chuyển động cho thấy thứ tự các lớp được tải, đã làm chậm lại để dễ quan sát; các con số được đo ở bước gần nhất.",
+      offloadPanelSweepNote: "Cửa sổ chuyển động cho thấy thứ tự các lớp được tải, đã làm chậm lại để dễ quan sát; các con số được đo ở bước gần nhất.",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Card không xác định",
       gradCheckpoint: "Gradient checkpointing",
-      gradCheckpointTooltip:
-        "Đánh đổi tính toán lấy bộ nhớ bằng cách tính lại các activation.",
+      gradCheckpointTooltip: "Đánh đổi tính toán lấy bộ nhớ bằng cách tính lại các activation.",
       none: "Không",
       standard: "Tiêu chuẩn",
       enablePacking: "Bật packing",
       assistantCompletionsOnly: "Chỉ phần trả lời của trợ lý",
       readMore: "Đọc thêm",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Không thể nhân bản lượt chạy",
-      duplicateDraftChanged:
-        "Cài đặt huấn luyện đã thay đổi trong lúc tải. Hãy thử nhân bản lại.",
+      duplicateDraftChanged: "Cài đặt huấn luyện đã thay đổi trong lúc tải. Hãy thử nhân bản lại.",
       duplicateNoModel: "Lượt chạy này không có cấu hình mô hình đã lưu.",
       startTraining: "Bắt đầu huấn luyện",
       starting: "Đang bắt đầu...",
@@ -4837,52 +4255,35 @@ export const vi = {
       chooseDataset: "Chọn tập dữ liệu",
       chooseModelAndDataset: "Chọn mô hình và tập dữ liệu",
       validation: {
-        s3MultimodalUnsupported:
-          "Chưa hỗ trợ tập dữ liệu S3 cho huấn luyện thị giác.",
+        s3MultimodalUnsupported: "Chưa hỗ trợ tập dữ liệu S3 cho huấn luyện thị giác.",
         s3BucketRequired: "Hãy nhập tên bucket S3 trước.",
-        s3CredentialsRequired:
-          "Hãy cung cấp khóa truy cập S3 hoặc bật vai trò IAM.",
+        s3CredentialsRequired: "Hãy cung cấp khóa truy cập S3 hoặc bật vai trò IAM.",
         modelRequired: "Hãy chọn mô hình gốc trước.",
         learningRatePositive: "Hãy nhập tốc độ học lớn hơn 0.",
-        embeddingLearningRateRange:
-          "Hãy nhập tốc độ học embedding lớn hơn 0 và nhỏ hơn 1.",
-        decisionColumnsMissing:
-          "Mô hình quyết định cần các cột state, questions và gold (hoặc answers). Còn thiếu: {columns}.",
-        decisionOwnerOnly:
-          "Chỉ chủ sở hữu Unsloth mới có thể tinh chỉnh mô hình quyết định.",
+        embeddingLearningRateRange: "Hãy nhập tốc độ học embedding lớn hơn 0 và nhỏ hơn 1.",
+        decisionColumnsMissing: "Mô hình quyết định cần các cột state, questions và gold (hoặc answers). Còn thiếu: {columns}.",
+        decisionOwnerOnly: "Chỉ chủ sở hữu Unsloth mới có thể tinh chỉnh mô hình quyết định.",
         hfDatasetRequired: "Hãy chọn tập dữ liệu Hugging Face trước.",
-        hfDatasetSplitRequired:
-          "Hãy chọn hoặc nhập phần chia huấn luyện trước.",
+        hfDatasetSplitRequired: "Hãy chọn hoặc nhập phần chia huấn luyện trước.",
         localDatasetRequired: "Hãy chọn tập dữ liệu cục bộ trước.",
         unsupportedDatasetSource: "Nguồn tập dữ liệu không được hỗ trợ.",
       },
       startFailed: "Không thể bắt đầu huấn luyện",
-      startUnconfirmed:
-        "Unsloth không thể xác nhận quá trình huấn luyện đã bắt đầu hay chưa. Đang kiểm tra trạng thái ở chế độ nền.",
+      startUnconfirmed: "Unsloth không thể xác nhận quá trình huấn luyện đã bắt đầu hay chưa. Đang kiểm tra trạng thái ở chế độ nền.",
       stopFailed: "Không thể dừng huấn luyện",
       trainingStillActiveTitle: "Quá trình huấn luyện vẫn đang chạy",
-      stopBeforeConfig:
-        "Hãy dừng huấn luyện trước, rồi quay lại phần cấu hình.",
+      stopBeforeConfig: "Hãy dừng huấn luyện trước, rồi quay lại phần cấu hình.",
       resumeFailed: "Không thể tiếp tục huấn luyện",
       resumeFailedTitle: "Không thể tiếp tục huấn luyện",
-      resumeUnavailable:
-        "Chỉ có thể tiếp tục các lượt chạy đã dừng hoặc gặp lỗi và có checkpoint đã lưu.",
-      modelUnverified:
-        "Không thể xác minh cài đặt của mô hình này. Hãy kiểm tra kết nối hoặc token Hugging Face, rồi thử lại.",
-      legacyDatasetScriptUnsupported:
-        "Tập dữ liệu trên Hub này dựa vào một tập lệnh tùy chỉnh cũ và không được hỗ trợ trong quy trình huấn luyện này.",
-      hfModelAccessDenied:
-        "Hugging Face đã từ chối quyền truy cập mô hình này. Hãy thêm token Hugging Face hợp lệ có quyền truy cập kho lưu trữ và chấp nhận mọi điều khoản truy cập bắt buộc, rồi thử lại.",
-      hfModelVerificationRateLimited:
-        "Việc xác minh mô hình Hugging Face đang bị giới hạn tần suất. Hãy thử lại sau ít phút.",
-      hfModelVerificationFailed:
-        "Không thể xác minh mô hình Hugging Face. Hãy kiểm tra ID kho lưu trữ và token truy cập của bạn.",
-      hfModelMetadataUnavailable:
-        "Siêu dữ liệu mô hình Hugging Face tạm thời không khả dụng. Hãy thử lại trước khi bắt đầu huấn luyện.",
-      datasetUnverified:
-        "Không thể xác minh tập dữ liệu có tương thích với mô hình này hay không. Hãy kiểm tra kết nối hoặc token Hugging Face — khi bắt đầu huấn luyện, việc kiểm tra sẽ được thực hiện lại.",
-      setupChanged:
-        "Cấu hình huấn luyện đã thay đổi trong lúc đang được kiểm tra. Hãy xem lại và bắt đầu lại.",
+      resumeUnavailable: "Chỉ có thể tiếp tục các lượt chạy đã dừng hoặc gặp lỗi và có checkpoint đã lưu.",
+      modelUnverified: "Không thể xác minh cài đặt của mô hình này. Hãy kiểm tra kết nối hoặc token Hugging Face, rồi thử lại.",
+      legacyDatasetScriptUnsupported: "Tập dữ liệu trên Hub này dựa vào một tập lệnh tùy chỉnh cũ và không được hỗ trợ trong quy trình huấn luyện này.",
+      hfModelAccessDenied: "Hugging Face đã từ chối quyền truy cập mô hình này. Hãy thêm token Hugging Face hợp lệ có quyền truy cập kho lưu trữ và chấp nhận mọi điều khoản truy cập bắt buộc, rồi thử lại.",
+      hfModelVerificationRateLimited: "Việc xác minh mô hình Hugging Face đang bị giới hạn tần suất. Hãy thử lại sau ít phút.",
+      hfModelVerificationFailed: "Không thể xác minh mô hình Hugging Face. Hãy kiểm tra ID kho lưu trữ và token truy cập của bạn.",
+      hfModelMetadataUnavailable: "Siêu dữ liệu mô hình Hugging Face tạm thời không khả dụng. Hãy thử lại trước khi bắt đầu huấn luyện.",
+      datasetUnverified: "Không thể xác minh tập dữ liệu có tương thích với mô hình này hay không. Hãy kiểm tra kết nối hoặc token Hugging Face — khi bắt đầu huấn luyện, việc kiểm tra sẽ được thực hiện lại.",
+      setupChanged: "Cấu hình huấn luyện đã thay đổi trong lúc đang được kiểm tra. Hãy xem lại và bắt đầu lại.",
       uploadConfigTooltip: "Tải cấu hình YAML đã lưu",
       saveConfigTooltip: "Tải xuống cấu hình hiện tại dưới dạng YAML",
       resetConfigTooltip: "Đặt lại về mặc định của mô hình",
@@ -4893,17 +4294,14 @@ export const vi = {
       failedToReadFile: "Không thể đọc tệp",
       failedToSaveConfig: "Không thể lưu cấu hình",
       parametersReset: "Đã đặt lại tham số về mặc định của mô hình",
-      audioIncompatible:
-        "Mô hình này không hỗ trợ âm thanh. Hãy chuyển sang mô hình hỗ trợ âm thanh hoặc chọn tập dữ liệu không chứa âm thanh.",
-      visionIncompatible:
-        "Mô hình văn bản không tương thích với tập dữ liệu đa phương thức. Hãy chuyển sang mô hình thị giác hoặc chọn tập dữ liệu chỉ có văn bản.",
+      audioIncompatible: "Mô hình này không hỗ trợ âm thanh. Hãy chuyển sang mô hình hỗ trợ âm thanh hoặc chọn tập dữ liệu không chứa âm thanh.",
+      visionIncompatible: "Mô hình văn bản không tương thích với tập dữ liệu đa phương thức. Hãy chuyển sang mô hình thị giác hoặc chọn tập dữ liệu chỉ có văn bản.",
       cancelTitle: "Hủy huấn luyện",
       cancelDescription: "Bạn có muốn hủy lượt huấn luyện hiện tại không?",
       continueAction: "Tiếp tục huấn luyện",
       cancelAction: "Hủy huấn luyện",
       stopTitle: "Dừng huấn luyện",
-      stopDescription:
-        "Chọn cách dừng lượt huấn luyện hiện tại. Dừng và lưu sẽ ghi một checkpoint để bạn có thể tiếp tục sau; dừng mà không lưu thì không thể tiếp tục.",
+      stopDescription: "Chọn cách dừng lượt huấn luyện hiện tại. Dừng và lưu sẽ ghi một checkpoint để bạn có thể tiếp tục sau; dừng mà không lưu thì không thể tiếp tục.",
       stopAction: "Dừng",
       stopping: "Đang dừng...",
       stopAndSave: "Dừng và lưu",
@@ -4911,27 +4309,21 @@ export const vi = {
       exportModel: "Xuất mô hình",
       milestone: "Cột mốc",
       halfwayDone: "Đã xong một nửa. Quá trình huấn luyện đã vượt 50%.",
-      doneNextStep:
-        "Đã huấn luyện xong. Bước tiếp theo: so sánh đầu ra của mô hình gốc và mô hình đã tinh chỉnh.",
+      doneNextStep: "Đã huấn luyện xong. Bước tiếp theo: so sánh đầu ra của mô hình gốc và mô hình đã tinh chỉnh.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Lịch sử",
       filesDeleted: "Đã xóa tệp",
       deleteArtifactsLabel: "Đồng thời xóa các tệp adapter trên ổ đĩa",
-      deleteArtifactsDescription:
-        "Xóa thư mục đầu ra của lượt chạy, bao gồm các adapter và checkpoint đã lưu.",
-      deleteArtifactsSharedNote:
-        "Một lượt chạy khác dùng chung thư mục đầu ra này. Các tệp sẽ được giữ lại cho đến khi lượt chạy cuối cùng dùng chúng bị xóa.",
-      artifactsKeptShared:
-        "Đã xóa lượt chạy. Các tệp adapter được giữ lại vì một lượt chạy khác dùng cùng thư mục.",
-      deleteArtifactsActiveError:
-        "Các tệp này đang được lượt huấn luyện đang chạy sử dụng. Hãy dừng huấn luyện trước khi xóa chúng.",
-      deleteArtifactsFailed:
-        "Đã xóa lượt chạy nhưng không thể xóa các tệp của nó.",
-      deleteArtifactsRetainedError:
-        "Không thể xóa các tệp adapter, nên lượt huấn luyện vẫn được giữ trong lịch sử.",
-      emptyDescription:
-        "Chưa có lượt huấn luyện nào. Hãy bắt đầu lượt huấn luyện đầu tiên trong thẻ Cấu hình.",
+      deleteArtifactsDescription: "Xóa thư mục đầu ra của lượt chạy, bao gồm các adapter và checkpoint đã lưu.",
+      deleteArtifactsSharedNote: "Một lượt chạy khác dùng chung thư mục đầu ra này. Các tệp sẽ được giữ lại cho đến khi lượt chạy cuối cùng dùng chúng bị xóa.",
+      artifactsKeptShared: "Đã xóa lượt chạy. Các tệp adapter được giữ lại vì một lượt chạy khác dùng cùng thư mục.",
+      deleteArtifactsActiveError: "Các tệp này đang được lượt huấn luyện đang chạy sử dụng. Hãy dừng huấn luyện trước khi xóa chúng.",
+      deleteArtifactsFailed: "Đã xóa lượt chạy nhưng không thể xóa các tệp của nó.",
+      deleteArtifactsRetainedError: "Không thể xóa các tệp adapter, nên lượt huấn luyện vẫn được giữ trong lịch sử.",
+      emptyDescription: "Chưa có lượt huấn luyện nào. Hãy bắt đầu lượt huấn luyện đầu tiên trong thẻ Cấu hình.",
       loadError: "Không thể tải các lượt huấn luyện",
       deleteError: "Không thể xóa lượt huấn luyện. Hãy thử lại.",
       retry: "Thử lại",
@@ -4940,8 +4332,7 @@ export const vi = {
       loadingRun: "Đang tải lượt huấn luyện...",
       runNotFound: "Không tìm thấy lượt chạy",
       deleteTitle: "Xóa lượt huấn luyện?",
-      deleteDescription:
-        "Thao tác này sẽ xóa vĩnh viễn lượt huấn luyện này cùng toàn bộ chỉ số của nó. Không thể hoàn tác thao tác này.",
+      deleteDescription: "Thao tác này sẽ xóa vĩnh viễn lượt huấn luyện này cùng toàn bộ chỉ số của nó. Không thể hoàn tác thao tác này.",
       resumeTraining: "Tiếp tục huấn luyện",
       resuming: "Đang tiếp tục...",
       deleteRun: "Xóa lượt chạy",
@@ -4965,22 +4356,35 @@ export const vi = {
       copyPreviewLink: "Sao chép liên kết xem trước",
       previewLinkCopied: "Đã sao chép liên kết xem trước",
       previewLinkCopyFailed: "Không thể sao chép liên kết",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Cài đặt biểu đồ",
-      settingsDescription:
-        "Tùy chỉnh cách hiển thị biểu đồ trong khi quá trình huấn luyện vẫn tiếp tục.",
+      settingsDescription: "Tùy chỉnh cách hiển thị biểu đồ trong khi quá trình huấn luyện vẫn tiếp tục.",
       openSettings: "Mở cài đặt biểu đồ",
       viewWindow: "Cửa sổ hiển thị",
-      viewWindowDescription:
-        "Chỉ hiển thị các bước mới nhất hoặc toàn bộ lịch sử.",
+      viewWindowDescription: "Chỉ hiển thị các bước mới nhất hoặc toàn bộ lịch sử.",
       window: "Cửa sổ",
       all: "Tất cả",
       trainingLoss: "Loss huấn luyện",
       trainingLossDescription: "Điều khiển lớp phủ và làm mượt EMA.",
       smoothing: "Làm mượt",
-      smoothingDescription:
-        "Kéo sang phải để làm mượt nhiều hơn. `0` = dữ liệu gốc.",
+      smoothingDescription: "Kéo sang phải để làm mượt nhiều hơn. `0` = dữ liệu gốc.",
       showRawLoss: "Hiện loss gốc",
       showSmoothedLoss: "Hiện loss đã làm mượt",
       showAverageLine: "Hiện đường trung bình",
@@ -5006,8 +4410,7 @@ export const vi = {
       waitingForFirstEvaluationStep: "Đang chờ bước đánh giá đầu tiên...",
       evaluationNotConfigured: "Chưa cấu hình đánh giá",
       evalChartWillAppear: "Biểu đồ sẽ xuất hiện khi đạt tới eval_steps",
-      setEvalDatasetAndSteps:
-        "Đặt tập dữ liệu đánh giá và eval_steps để theo dõi eval loss",
+      setEvalDatasetAndSteps: "Đặt tập dữ liệu đánh giá và eval_steps để theo dõi eval loss",
     },
     progress: {
       title: "Tiến độ huấn luyện",
@@ -5064,6 +4467,9 @@ export const vi = {
         error: "Lỗi",
         stopped: "Đã dừng",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Sẵn sàng",
@@ -5073,34 +4479,147 @@ export const vi = {
       downloaded: "Đã tải xuống {size}",
       terminalStart: "> Unsloth bắt đầu huấn luyện...",
       preparingResources: "> Đang chuẩn bị mô hình và tập dữ liệu...",
-      gettingReady:
-        "> Chúng tôi đang chuẩn bị mọi thứ cho lượt chạy của bạn...",
+      gettingReady: "> Chúng tôi đang chuẩn bị mọi thứ cho lượt chạy của bạn...",
       resumingTraining: "Đang tiếp tục huấn luyện...",
       startingTraining: "đang bắt đầu huấn luyện...",
       dataset: "Tập dữ liệu",
-      datasetStreaming:
-        "Tập dữ liệu: truyền trực tuyến (không tải xuống toàn bộ)",
+      datasetStreaming: "Tập dữ liệu: truyền trực tuyến (không tải xuống toàn bộ)",
       modelWeights: "Trọng số mô hình",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Trọng số {model} + ngữ cảnh {context} = {total} trên {budget} VRAM khả dụng",
-    readoutWithSpec:
-      "Trọng số {model} + KV {kv} + bản nháp MTP {spec} = {total} trên {budget} VRAM khả dụng",
+    readout: "Trọng số {model} + ngữ cảnh {context} = {total} trên {budget} VRAM khả dụng",
+    readoutWithSpec: "Trọng số {model} + KV {kv} + bản nháp MTP {spec} = {total} trên {budget} VRAM khả dụng",
     kvRate: "Đã dành cho KV, ~{rate}/token",
     oomLikely: "Với cài đặt hiện tại, có thể bị OOM",
-    tooLarge:
-      "Lớn hơn VRAM, sẽ chuyển một phần sang CPU. Bản lượng tử hóa nhỏ hơn sẽ chạy nhanh hơn",
+    tooLarge: "Lớn hơn VRAM, sẽ chuyển một phần sang CPU. Bản lượng tử hóa nhỏ hơn sẽ chạy nhanh hơn",
   },
   skills: {
     title: "Kỹ năng",
-    description:
-      "Kỹ năng được tìm thấy từ các thư mục tác tử tiêu chuẩn của bạn. Bật chúng tại đây, rồi gõ @ trong cuộc trò chuyện để nhắc đến một kỹ năng.",
+    description: "Kỹ năng được tìm thấy từ các thư mục tác tử tiêu chuẩn của bạn. Bật chúng tại đây, rồi gõ @ trong cuộc trò chuyện để nhắc đến một kỹ năng.",
     precedence: "~/.agents/skills được ưu tiên hơn ~/.claude/skills.",
     refresh: "Làm mới",
-    empty:
-      "Không tìm thấy kỹ năng nào. Thêm một thư mục chứa SKILL.md vào ~/.agents/skills hoặc ~/.claude/skills, rồi làm mới.",
+    empty: "Không tìm thấy kỹ năng nào. Thêm một thư mục chứa SKILL.md vào ~/.agents/skills hoặc ~/.claude/skills, rồi làm mới.",
     sourceAgents: "Agents",
     sourceClaude: "Claude",
     sourceBundled: "Đi kèm",
@@ -5114,24 +4633,17 @@ export const vi = {
     newSkill: "Kỹ năng mới",
     import: "Nhập",
     delete: "Xóa {name}",
-    createDescription:
-      "Được lưu dưới dạng SKILL.md trong một thư mục mới thuộc ~/.agents/skills và được bật ngay khi tạo xong.",
+    createDescription: "Được lưu dưới dạng SKILL.md trong một thư mục mới thuộc ~/.agents/skills và được bật ngay khi tạo xong.",
     nameLabel: "Tên",
     namePlaceholder: "ví dụ: code-arithmetic",
-    nameHint:
-      "Chữ thường, chữ số và dấu gạch nối đơn. Đây cũng là tên thư mục.",
-    nameInvalid:
-      "Dùng 1-64 chữ thường, chữ số hoặc dấu gạch nối đơn, không bắt đầu hay kết thúc bằng dấu gạch nối.",
+    nameHint: "Chữ thường, chữ số và dấu gạch nối đơn. Đây cũng là tên thư mục.",
+    nameInvalid: "Dùng 1-64 chữ thường, chữ số hoặc dấu gạch nối đơn, không bắt đầu hay kết thúc bằng dấu gạch nối.",
     descriptionLabel: "Mô tả",
-    descriptionPlaceholder:
-      "Dùng khi người dùng yêu cầu tính toán số học. Luôn tính bằng công cụ chạy mã.",
-    descriptionHint:
-      "Dòng mà mô hình thấy trong danh mục kỹ năng. Mô hình dựa vào dòng này để quyết định khi nào đọc kỹ năng.",
+    descriptionPlaceholder: "Dùng khi người dùng yêu cầu tính toán số học. Luôn tính bằng công cụ chạy mã.",
+    descriptionHint: "Dòng mà mô hình thấy trong danh mục kỹ năng. Mô hình dựa vào dòng này để quyết định khi nào đọc kỹ năng.",
     instructionsLabel: "Hướng dẫn",
-    instructionsPlaceholder:
-      "Việc cần làm khi kỹ năng này được áp dụng, viết bằng Markdown.",
-    instructionsHint:
-      "Nội dung của SKILL.md, được đọc toàn bộ khi mô hình chọn kỹ năng.",
+    instructionsPlaceholder: "Việc cần làm khi kỹ năng này được áp dụng, viết bằng Markdown.",
+    instructionsHint: "Nội dung của SKILL.md, được đọc toàn bộ khi mô hình chọn kỹ năng.",
     create: "Tạo kỹ năng",
     save: "Lưu thay đổi",
     created: "Đã tạo {name}",
@@ -5146,16 +4658,13 @@ export const vi = {
     importError: "Không thể nhập kỹ năng",
     exportError: "Không thể xuất kỹ năng",
     deleteTitle: "Xóa kỹ năng",
-    deleteDescription:
-      "Xóa “{name}” và mọi thứ trong thư mục của nó thuộc ~/.agents/skills? Không thể hoàn tác thao tác này.",
+    deleteDescription: "Xóa “{name}” và mọi thứ trong thư mục của nó thuộc ~/.agents/skills? Không thể hoàn tác thao tác này.",
     search: "Tìm kỹ năng theo tên hoặc mô tả…",
     noMatch: "Không có kỹ năng nào khớp với “{query}”",
     clearSearch: "Xóa tìm kiếm",
-    readOnlyClaude:
-      "Chỉ đọc: tìm thấy trong ~/.claude/skills. Hãy sửa tệp tại đó.",
+    readOnlyClaude: "Chỉ đọc: tìm thấy trong ~/.claude/skills. Hãy sửa tệp tại đó.",
     readOnlyBundled: "Chỉ đọc: đi kèm với Unsloth.",
-    readOnlyLinked:
-      "Chỉ đọc: mục này là một liên kết. Hãy sửa tệp tại vị trí gốc của chúng.",
+    readOnlyLinked: "Chỉ đọc: mục này là một liên kết. Hãy sửa tệp tại vị trí gốc của chúng.",
     characters: "{count} ký tự",
     unsaved: "thay đổi chưa lưu",
     revert: "Hoàn nguyên",
@@ -5164,11 +4673,9 @@ export const vi = {
     compatibilityLabel: "Khả năng tương thích",
     allowedToolsLabel: "Công cụ được phép",
     sectionAgents: "Kỹ năng của bạn",
-    sectionAgentsHint:
-      "Lưu trong ~/.agents/skills. Tạo, sửa và xóa chúng tại đây.",
+    sectionAgentsHint: "Lưu trong ~/.agents/skills. Tạo, sửa và xóa chúng tại đây.",
     sectionClaude: "Kỹ năng Claude",
-    sectionClaudeHint:
-      "Tìm thấy trong ~/.claude/skills. Chỉ đọc tại đây; hãy sửa tệp tại đó.",
+    sectionClaudeHint: "Tìm thấy trong ~/.claude/skills. Chỉ đọc tại đây; hãy sửa tệp tại đó.",
     sectionBundled: "Đi kèm",
     sectionBundledHint: "Được cung cấp cùng Unsloth. Chỉ đọc.",
     linked: "Liên kết",
@@ -5183,8 +4690,7 @@ export const vi = {
     disableAll: "Tắt tất cả",
     resetAll: "Đặt lại về mặc định",
     resetTitle: "Đặt lại tất cả kỹ năng?",
-    resetDescription:
-      "Mọi kỹ năng sẽ trở về trạng thái như khi mới cài đặt: kỹ năng của bạn và kỹ năng Claude được bật, kỹ năng đi kèm bị tắt. Các lựa chọn bật và tắt của bạn sẽ bị xóa.",
+    resetDescription: "Mọi kỹ năng sẽ trở về trạng thái như khi mới cài đặt: kỹ năng của bạn và kỹ năng Claude được bật, kỹ năng đi kèm bị tắt. Các lựa chọn bật và tắt của bạn sẽ bị xóa.",
     reset: "Đặt lại",
   },
   translate: {
@@ -5312,8 +4818,7 @@ export const vi = {
     chatMark: "Cuộc trò chuyện từ tác vụ theo lịch",
     taskMissing: "Tác vụ này không còn tồn tại.",
     emptyTitle: "Chưa có tác vụ theo lịch nào",
-    emptyDescription:
-      "Nhận bản tóm tắt hằng ngày, lời nhắc hằng tuần hoặc bất kỳ việc gì bạn muốn thực hiện theo lịch.",
+    emptyDescription: "Nhận bản tóm tắt hằng ngày, lời nhắc hằng tuần hoặc bất kỳ việc gì bạn muốn thực hiện theo lịch.",
     createFirst: "Tạo tác vụ",
     loadFailed: "Không thể tải các tác vụ theo lịch.",
     retry: "Thử lại",
@@ -5372,16 +4877,12 @@ export const vi = {
       model: "Mô hình",
       modelLoaded: "Mô hình bất kỳ đang được nạp",
       modelOnDevice: "Trên thiết bị này",
-      modelNote:
-        "Nếu mô hình này chưa được nạp khi tác vụ chạy, Unsloth sẽ hỏi bạn trước.",
-      modelNoteAllowed:
-        "Chỉ nạp mô hình này khi bạn không dùng Unsloth, sau đó khôi phục lại mô hình bạn đang dùng.",
-      modelEmpty:
-        "Tải xuống một mô hình trong Trung tâm mô hình hoặc thêm kết nối để chọn mô hình khác.",
+      modelNote: "Nếu mô hình này chưa được nạp khi tác vụ chạy, Unsloth sẽ hỏi bạn trước.",
+      modelNoteAllowed: "Chỉ nạp mô hình này khi bạn không dùng Unsloth, sau đó khôi phục lại mô hình bạn đang dùng.",
+      modelEmpty: "Tải xuống một mô hình trong Trung tâm mô hình hoặc thêm kết nối để chọn mô hình khác.",
       modelMissing: "{model} (không có trên thiết bị này)",
       allowLoad: "Tự động chuyển khi tôi không dùng",
-      allowLoadHint:
-        "Khi đến giờ chạy tác vụ và bạn đã không dùng Unsloth trong 5 phút, Unsloth sẽ nạp mô hình này mà không hỏi, chạy tác vụ, rồi chuyển lại mô hình bạn đang dùng. Nếu lúc đó bạn đang dùng Unsloth hoặc đang huấn luyện, lượt chạy sẽ bị bỏ qua và mô hình của bạn được giữ nguyên. Khi tắt, Unsloth sẽ hỏi trước khi nạp.",
+      allowLoadHint: "Khi đến giờ chạy tác vụ và bạn đã không dùng Unsloth trong 5 phút, Unsloth sẽ nạp mô hình này mà không hỏi, chạy tác vụ, rồi chuyển lại mô hình bạn đang dùng. Nếu lúc đó bạn đang dùng Unsloth hoặc đang huấn luyện, lượt chạy sẽ bị bỏ qua và mô hình của bạn được giữ nguyên. Khi tắt, Unsloth sẽ hỏi trước khi nạp.",
       reasoning: "Mức độ suy nghĩ",
       reasoningDefault: "Mặc định",
       reasoningOff: "Tắt",
@@ -5391,20 +4892,14 @@ export const vi = {
     },
     deleteDialog: {
       title: "Xóa tác vụ theo lịch?",
-      description:
-        "“{title}” sẽ ngừng chạy. Các cuộc trò chuyện mà tác vụ đã tạo vẫn được giữ lại.",
+      description: "“{title}” sẽ ngừng chạy. Các cuộc trò chuyện mà tác vụ đã tạo vẫn được giữ lại.",
     },
     errors: {
-      noModel:
-        "Chưa có mô hình nào được nạp. Hãy nạp một mô hình trong Trò chuyện, rồi chạy lại tác vụ.",
-      modelNotLoaded:
-        "Mô hình của tác vụ chưa được nạp. Hãy nạp mô hình đó trong Trò chuyện, rồi chạy lại tác vụ.",
-      modelLoadFailed:
-        "Không thể nạp mô hình của tác vụ. Hãy đảm bảo mô hình vẫn còn được tải xuống trong Trung tâm mô hình.",
-      modelBusy:
-        "Đã bỏ qua vì bạn đang dùng Unsloth, nên mô hình của bạn được giữ nguyên.",
-      connectionUnavailable:
-        "Kết nối của tác vụ bị thiếu hoặc đã bị tắt. Hãy kiểm tra trong Kết nối.",
+      noModel: "Chưa có mô hình nào được nạp. Hãy nạp một mô hình trong Trò chuyện, rồi chạy lại tác vụ.",
+      modelNotLoaded: "Mô hình của tác vụ chưa được nạp. Hãy nạp mô hình đó trong Trò chuyện, rồi chạy lại tác vụ.",
+      modelLoadFailed: "Không thể nạp mô hình của tác vụ. Hãy đảm bảo mô hình vẫn còn được tải xuống trong Trung tâm mô hình.",
+      modelBusy: "Đã bỏ qua vì bạn đang dùng Unsloth, nên mô hình của bạn được giữ nguyên.",
+      connectionUnavailable: "Kết nối của tác vụ bị thiếu hoặc đã bị tắt. Hãy kiểm tra trong Kết nối.",
       timeout: "Mô hình mất quá nhiều thời gian để trả lời.",
       cancelled: "Lượt chạy đã bị dừng trước khi hoàn tất.",
       interrupted: "Unsloth đã đóng trước khi lượt chạy hoàn tất.",
@@ -5417,8 +4912,7 @@ export const vi = {
     },
     loadPrompt: {
       title: "Nạp {model}?",
-      description:
-        "“{title}” chạy trên {model}, mô hình này chưa được nạp. Khi chạy, {model} sẽ được nạp cho đến khi hoàn tất, sau đó khôi phục lại mô hình bạn đang dùng.",
+      description: "“{title}” chạy trên {model}, mô hình này chưa được nạp. Khi chạy, {model} sẽ được nạp cho đến khi hoàn tất, sau đó khôi phục lại mô hình bạn đang dùng.",
       always: "Không hỏi lại. Chỉ chuyển khi tôi không dùng Unsloth.",
       notNow: "Để sau",
       load: "Nạp và chạy",
@@ -5430,8 +4924,7 @@ export const vi = {
       open: "Mở",
       view: "Xem",
     },
-    notificationBody:
-      "Tác vụ theo lịch của bạn đã hoàn tất. Mở Unsloth để đọc câu trả lời.",
+    notificationBody: "Tác vụ theo lịch của bạn đã hoàn tất. Mở Unsloth để đọc câu trả lời.",
   },
   library: {
     tabs: {
@@ -5512,29 +5005,21 @@ export const vi = {
       },
       empty: {
         chatsTitle: "Chưa có cuộc trò chuyện nào",
-        chatsDescription:
-          "Các cuộc trò chuyện của bạn hiển thị tại đây, tách biệt với tệp của bạn.",
+        chatsDescription: "Các cuộc trò chuyện của bạn hiển thị tại đây, tách biệt với tệp của bạn.",
         archivedTitle: "Chưa lưu trữ mục nào",
-        archivedDescription:
-          "Các cuộc trò chuyện bạn lưu trữ sẽ hiển thị tại đây.",
+        archivedDescription: "Các cuộc trò chuyện bạn lưu trữ sẽ hiển thị tại đây.",
         sectionsTitle: "Chưa có mục nào",
-        sectionsDescription:
-          "Mục giúp nhóm cuộc trò chuyện và dự án trong thanh bên theo cách bạn muốn.",
+        sectionsDescription: "Mục giúp nhóm cuộc trò chuyện và dự án trong thanh bên theo cách bạn muốn.",
         sectionTitle: "Mục này chưa có gì",
-        sectionDescription:
-          "Chuyển cuộc trò chuyện vào đây từ menu của chúng, hoặc bắt đầu cuộc trò chuyện mới trong mục này.",
+        sectionDescription: "Chuyển cuộc trò chuyện vào đây từ menu của chúng, hoặc bắt đầu cuộc trò chuyện mới trong mục này.",
       },
       dialog: {
         renameChat: "Đổi tên cuộc trò chuyện",
-        deleteChatDescription:
-          "Cuộc trò chuyện và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
-        deleteProjectDescription:
-          "Dự án và các cuộc trò chuyện của nó ({count}) sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
-        deleteFilesMany:
-          "Đồng thời xóa các tệp và thư mục sandbox mà những cuộc trò chuyện này đã tạo.",
+        deleteChatDescription: "Cuộc trò chuyện và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        deleteProjectDescription: "Dự án và các cuộc trò chuyện của nó ({count}) sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+        deleteFilesMany: "Đồng thời xóa các tệp và thư mục sandbox mà những cuộc trò chuyện này đã tạo.",
         deleteProjectFilesLabel: "Xóa thư mục không gian làm việc của dự án",
-        deleteProjectFiles:
-          "Thư mục không gian làm việc của dự án sẽ bị xóa khỏi ổ đĩa.",
+        deleteProjectFiles: "Thư mục không gian làm việc của dự án sẽ bị xóa khỏi ổ đĩa.",
       },
       toast: {
         projectMoved: "Đã chuyển {project} vào {section}",
@@ -5546,31 +5031,23 @@ export const vi = {
       },
       folder: {
         openChat: "Mở thư mục cuộc trò chuyện",
-        openChatTitle:
-          "Mở thư mục mà các lệnh gọi công cụ của cuộc trò chuyện này đọc và ghi",
+        openChatTitle: "Mở thư mục mà các lệnh gọi công cụ của cuộc trò chuyện này đọc và ghi",
         openProject: "Mở thư mục dự án",
-        openProjectTitle:
-          "Mở thư mục mà các cuộc trò chuyện của dự án này đọc và ghi",
-        chatHint:
-          "Chỉ ứng dụng máy tính mới mở được thư mục tệp của cuộc trò chuyện. Trong trình duyệt, hãy tải xuống tệp từ kết quả công cụ đã ghi tệp đó.",
-        projectHint:
-          "Chỉ ứng dụng máy tính mới mở được thư mục của dự án. Trong trình duyệt, hãy tải xuống tệp từ các kết quả công cụ đã ghi chúng.",
+        openProjectTitle: "Mở thư mục mà các cuộc trò chuyện của dự án này đọc và ghi",
+        chatHint: "Chỉ ứng dụng máy tính mới mở được thư mục tệp của cuộc trò chuyện. Trong trình duyệt, hãy tải xuống tệp từ kết quả công cụ đã ghi tệp đó.",
+        projectHint: "Chỉ ứng dụng máy tính mới mở được thư mục của dự án. Trong trình duyệt, hãy tải xuống tệp từ các kết quả công cụ đã ghi chúng.",
         manyFolders: "Cuộc trò chuyện này đã ghi vào nhiều thư mục.",
-        manyFoldersDescription:
-          "Cuộc trò chuyện đã chạy công cụ ở cả trước và sau khi di chuyển, vì vậy hãy mở thư mục từ thẻ công cụ.",
+        manyFoldersDescription: "Cuộc trò chuyện đã chạy công cụ ở cả trước và sau khi di chuyển, vì vậy hãy mở thư mục từ thẻ công cụ.",
         chatFailed: "Không thể mở thư mục cuộc trò chuyện.",
         projectFailed: "Không thể mở thư mục dự án.",
         chatMissing: "Cuộc trò chuyện này chưa có thư mục.",
         projectMissing: "Dự án này chưa có thư mục.",
-        missingDescription:
-          "Thư mục được tạo vào lần đầu tiên một công cụ ghi tệp.",
+        missingDescription: "Thư mục được tạo vào lần đầu tiên một công cụ ghi tệp.",
         upload: "Tải lên thư mục cuộc trò chuyện",
-        uploadTitle:
-          "Thêm tệp vào thư mục mà các lệnh gọi công cụ của cuộc trò chuyện này đọc và ghi",
+        uploadTitle: "Thêm tệp vào thư mục mà các lệnh gọi công cụ của cuộc trò chuyện này đọc và ghi",
         uploaded: "Đã thêm {name} vào thư mục cuộc trò chuyện",
         uploadedMany: "Đã thêm {count} tệp vào thư mục cuộc trò chuyện",
-        uploadedDescription:
-          "Giờ đây các công cụ trong cuộc trò chuyện này có thể mở chúng. Chúng không được thêm vào cuộc trò chuyện.",
+        uploadedDescription: "Giờ đây các công cụ trong cuộc trò chuyện này có thể mở chúng. Chúng không được thêm vào cuộc trò chuyện.",
         uploadExists: "{name} đã có trong thư mục cuộc trò chuyện",
         uploadExistsMany: "{count} tệp đã có trong thư mục cuộc trò chuyện",
         replace: "Thay thế",
@@ -5579,24 +5056,19 @@ export const vi = {
     },
     empty: {
       suggestedTitle: "Thư viện của bạn đang trống",
-      suggestedDescription:
-        "Các tệp bạn tải lên hoặc tạo trong cuộc trò chuyện sẽ hiển thị tại đây.",
+      suggestedDescription: "Các tệp bạn tải lên hoặc tạo trong cuộc trò chuyện sẽ hiển thị tại đây.",
       favoritesTitle: "Chưa có mục yêu thích nào",
-      favoritesDescription:
-        "Thêm tệp vào mục yêu thích để nhanh chóng tìm thấy chúng tại đây.",
+      favoritesDescription: "Thêm tệp vào mục yêu thích để nhanh chóng tìm thấy chúng tại đây.",
       foldersTitle: "Tạo thư mục đầu tiên của bạn",
-      foldersDescription:
-        "Tạo thư mục để sắp xếp các mục trong thư viện của bạn.",
+      foldersDescription: "Tạo thư mục để sắp xếp các mục trong thư viện của bạn.",
       imagesTitle: "Chưa có hình ảnh nào",
       imagesDescription: "Hình ảnh bạn tải lên hoặc tạo sẽ hiển thị tại đây.",
       videosTitle: "Chưa có video nào",
       videosDescription: "Video bạn tải lên hoặc tạo sẽ hiển thị tại đây.",
       audioTitle: "Chưa có âm thanh nào",
-      audioDescription:
-        "Giọng nói, nhạc và các stem bạn tạo trên trang Âm thanh sẽ hiển thị tại đây.",
+      audioDescription: "Giọng nói, nhạc và các stem bạn tạo trên trang Âm thanh sẽ hiển thị tại đây.",
       modelsTitle: "Chưa có mô hình tinh chỉnh nào",
-      modelsDescription:
-        "Các mô hình bạn huấn luyện hoặc xuất trong Unsloth sẽ hiển thị tại đây.",
+      modelsDescription: "Các mô hình bạn huấn luyện hoặc xuất trong Unsloth sẽ hiển thị tại đây.",
       createFolder: "Tạo thư mục",
       generateImage: "Tạo hình ảnh",
       generateVideo: "Tạo video",
@@ -5719,23 +5191,18 @@ export const vi = {
       renameFile: "Đổi tên tệp",
       deleteTitle: "Xóa “{name}”?",
       deleteManyTitle: "Xóa {count} mục?",
-      deleteManyDescription:
-        "Các tệp sẽ bị xóa khỏi vị trí lưu trữ của chúng. Mọi thứ bên trong thư mục bị xóa sẽ được chuyển lên một cấp.",
-      deleteFolderIntoParent:
-        "Mọi thứ bên trong sẽ được chuyển vào “{folder}”. Không có tệp nào bị xóa.",
-      deleteFolderIntoLibrary:
-        "Mọi thứ bên trong sẽ được chuyển vào Thư viện của bạn. Không có tệp nào bị xóa.",
+      deleteManyDescription: "Các tệp sẽ bị xóa khỏi vị trí lưu trữ của chúng. Mọi thứ bên trong thư mục bị xóa sẽ được chuyển lên một cấp.",
+      deleteFolderIntoParent: "Mọi thứ bên trong sẽ được chuyển vào “{folder}”. Không có tệp nào bị xóa.",
+      deleteFolderIntoLibrary: "Mọi thứ bên trong sẽ được chuyển vào Thư viện của bạn. Không có tệp nào bị xóa.",
       deleteUpload: "Thao tác này sẽ xóa vĩnh viễn tệp.",
-      deleteAttachment:
-        "Tệp cũng sẽ bị xóa khỏi cuộc trò chuyện mà nó được đính kèm.",
+      deleteAttachment: "Tệp cũng sẽ bị xóa khỏi cuộc trò chuyện mà nó được đính kèm.",
       deleteImage: "Tệp cũng sẽ bị xóa khỏi thư viện Hình ảnh của bạn.",
       deleteVideo: "Tệp cũng sẽ bị xóa khỏi thư viện Video của bạn.",
       deleteAudio: "Tệp cũng sẽ bị xóa khỏi thư viện Âm thanh của bạn.",
       deleteSandbox: "Tệp cũng sẽ bị xóa khỏi cuộc trò chuyện đã tạo ra nó.",
       deleteModel: "Thao tác này sẽ xóa vĩnh viễn mô hình khỏi ổ đĩa.",
       unsavedTitle: "Các thay đổi của bạn chưa được lưu",
-      unsavedDescription:
-        "{reason} Hãy thử lại, hoặc hủy bỏ thay đổi để đóng tệp.",
+      unsavedDescription: "{reason} Hãy thử lại, hoặc hủy bỏ thay đổi để đóng tệp.",
       keepEditing: "Tiếp tục chỉnh sửa",
       discardChanges: "Hủy bỏ thay đổi",
     },
@@ -5752,21 +5219,17 @@ export const vi = {
       sheetTruncated: "Đang hiển thị một phần của trang tính này",
       documentTruncated: "Đang hiển thị phần đầu của tài liệu này",
       emptyDocument: "Tệp này trống.",
-      cannotPreview:
-        "Không thể xem trước tệp này tại đây. Hãy tải xuống để mở.",
+      cannotPreview: "Không thể xem trước tệp này tại đây. Hãy tải xuống để mở.",
       noPreview: "Không có bản xem trước cho loại tệp này.",
-      tooLargeToPreview:
-        "Tệp này quá lớn để xem trước tại đây. Hãy tải xuống để mở.",
+      tooLargeToPreview: "Tệp này quá lớn để xem trước tại đây. Hãy tải xuống để mở.",
       startWriting: "Bắt đầu viết…",
       type: "Loại",
       baseModel: "Mô hình gốc",
       size: "Kích thước",
       location: "Vị trí",
       unknown: "Không xác định",
-      readOnlyUtf16:
-        "Tệp này không phải văn bản UTF-16 hợp lệ, nên được mở ở chế độ chỉ đọc tại đây.",
-      readOnlyNotUtf8:
-        "Tệp này không phải văn bản UTF-8, nên được mở ở chế độ chỉ đọc tại đây. Một số ký tự có thể không hiển thị đúng.",
+      readOnlyUtf16: "Tệp này không phải văn bản UTF-16 hợp lệ, nên được mở ở chế độ chỉ đọc tại đây.",
+      readOnlyNotUtf8: "Tệp này không phải văn bản UTF-8, nên được mở ở chế độ chỉ đọc tại đây. Một số ký tự có thể không hiển thị đúng.",
     },
     viewer: {
       scale: "Tỷ lệ",
@@ -5818,8 +5281,7 @@ export const vi = {
       createFolderFailed: "Không thể tạo thư mục",
       signedOutBeforeFolder: "Đã đăng xuất trước khi thư mục được tạo.",
       signedOutBeforeSave: "Đã đăng xuất trước khi thay đổi được lưu.",
-      signedOutBeforeUpload:
-        "Đã đăng xuất trước khi quá trình tải lên hoàn tất.",
+      signedOutBeforeUpload: "Đã đăng xuất trước khi quá trình tải lên hoàn tất.",
       deleteFailed: "Không thể xóa một số mục",
       saveFailed: "Không thể lưu",
       saveNoteFirst: "Hãy lưu ghi chú trước.",
@@ -5827,8 +5289,7 @@ export const vi = {
       downloadFailed: "Không thể tải xuống {name}",
       downloadManyFailed: "Không thể tải xuống các tệp",
       downloadingMany: "Đang tải xuống {count} tệp",
-      downloadingManyDescription:
-        "Nếu trình duyệt hỏi, hãy cho phép trang web này tải xuống nhiều tệp.",
+      downloadingManyDescription: "Nếu trình duyệt hỏi, hãy cho phép trang web này tải xuống nhiều tệp.",
       preparingMany: "Đang chuẩn bị {count} tệp…",
       zipFileName: "Tệp thư viện",
       nothingToChat: "Chưa có gì để trò chuyện",
@@ -5839,21 +5300,18 @@ export const vi = {
       attachedMany: "Đã đính kèm {count} tệp",
       skippedTooLarge: "{count} tệp quá lớn để đính kèm.",
       skippedOverLimit: "{count} tệp khác vượt quá giới hạn {limit} tệp.",
-      chatFilesWaiting:
-        "{count} tệp sẽ được đính kèm khi một mô hình đọc được chúng được nạp.",
+      chatFilesWaiting: "{count} tệp sẽ được đính kèm khi một mô hình đọc được chúng được nạp.",
       openFilesFailed: "Không thể mở các tệp",
       editImageFailed: "Không thể mở hình ảnh để chỉnh sửa",
       speechModel: "{name} là mô hình giọng nói",
-      speechModelDescription:
-        "Hãy chọn mô hình này từ menu mô hình trên trang Âm thanh.",
+      speechModelDescription: "Hãy chọn mô hình này từ menu mô hình trên trang Âm thanh.",
       noMediaLink: "Máy chủ không trả về liên kết để phát tệp này.",
       imageNotFound: "Không tìm thấy hình ảnh này",
       clipNotFound: "Không tìm thấy đoạn âm thanh này",
       notFoundDescription: "Có thể mục này đã được lưu trữ hoặc đã bị xóa.",
       imageTooLarge: "Hình ảnh này quá lớn để đính kèm",
       videoTooLarge: "Video này quá lớn để đính kèm",
-      attachmentLimit:
-        "Tệp đính kèm trong cuộc trò chuyện bị giới hạn ở {size} MB.",
+      attachmentLimit: "Tệp đính kèm trong cuộc trò chuyện bị giới hạn ở {size} MB.",
       attachingImage: "Đang đính kèm hình ảnh…",
       attachingVideo: "Đang đính kèm video…",
       readImageFailed: "Không thể đọc hình ảnh ({status}).",
@@ -5869,10 +5327,8 @@ export const vi = {
   },
   exportDecision: {
     title: "Mô hình quyết định",
-    description:
-      "Mô hình quyết định {layout} được xuất sang GGUF cho máy chủ quyết định của llama.cpp. Chọn một hoặc nhiều mức lượng tử hóa.",
-    adapterNote:
-      "Checkpoint này chứa adapter LoRA; chúng sẽ được hợp nhất trước khi chuyển đổi.",
+    description: "Mô hình quyết định {layout} được xuất sang GGUF cho máy chủ quyết định của llama.cpp. Chọn một hoặc nhiều mức lượng tử hóa.",
+    adapterNote: "Checkpoint này chứa adapter LoRA; chúng sẽ được hợp nhất trước khi chuyển đổi.",
     notEligibleTitle: "Không thể xuất GGUF",
     ggufOnly: "Mô hình quyết định chỉ xuất được sang GGUF",
     existing: "Đã xuất: {quantizations}",
@@ -5889,8 +5345,7 @@ export const vi = {
     typeChoice: "Lựa chọn",
     typeScore: "Điểm",
     aboutNoul: "Trả lời có hoặc không, kèm xác suất của câu trả lời có.",
-    aboutChoice:
-      "Chọn một phương án từ danh sách, kèm xác suất cho từng phương án.",
+    aboutChoice: "Chọn một phương án từ danh sách, kèm xác suất cho từng phương án.",
     aboutScore: "Đánh giá trạng thái theo thang mức độ, từ thấp nhất trở lên.",
     model: "Mô hình quyết định",
     defaultModel: "Mặc định ({model})",
@@ -5899,8 +5354,7 @@ export const vi = {
     modelReady: "Sẵn sàng",
     modelLoading: "Đang nạp",
     modelNotLoaded: "Nạp ở lần chạy đầu tiên",
-    connectionNotDefault:
-      "Trước tiên, hãy đặt mô hình này làm mô hình của API quyết định trong Cài đặt > API.",
+    connectionNotDefault: "Trước tiên, hãy đặt mô hình này làm mô hình của API quyết định trong Cài đặt > API.",
     question: "Câu hỏi",
     questionHelp: "Điều mà mô hình cần quyết định.",
     result: "Kết quả",
@@ -5910,10 +5364,8 @@ export const vi = {
     state: "Trạng thái",
     stateHelp: "Văn bản cần đưa ra quyết định. Văn bản thuần hoặc JSON.",
     criteria: "Tiêu chí",
-    criteriaNoulHelp:
-      "Không bắt buộc. Điều gì được tính là có và điều gì được tính là không.",
-    criteriaChoiceHelp:
-      "Các phương án để chọn, mỗi phương án kèm một mô tả ngắn.",
+    criteriaNoulHelp: "Không bắt buộc. Điều gì được tính là có và điều gì được tính là không.",
+    criteriaChoiceHelp: "Các phương án để chọn, mỗi phương án kèm một mô tả ngắn.",
     criteriaScoreHelp: "Các mức của thang đo, từ thấp nhất trở lên.",
     yesWhen: "Có khi",
     noWhen: "Không khi",
@@ -5977,21 +5429,16 @@ export const vi = {
       noneLoaded: "Chưa nạp mô hình nào",
       noneLoadedDetail: "Các mô hình bạn nạp sẽ hiển thị tại đây.",
       otherAccount: "Đang được tài khoản khác sử dụng",
-      otherAccountDetail:
-        "Bộ nhớ đang bị chiếm bởi một mô hình mà bạn không thể thấy",
-      toastStillResident:
-        "“{model}” đã được nạp trong lúc gỡ, nên vẫn đang dùng bộ nhớ. Hãy gỡ lại để giải phóng.",
-      toastUnverified:
-        "Đã yêu cầu gỡ {model}, nhưng runtime của mô hình chưa xác nhận. Hãy kiểm tra lại thẻ sau giây lát.",
+      otherAccountDetail: "Bộ nhớ đang bị chiếm bởi một mô hình mà bạn không thể thấy",
+      toastStillResident: "“{model}” đã được nạp trong lúc gỡ, nên vẫn đang dùng bộ nhớ. Hãy gỡ lại để giải phóng.",
+      toastUnverified: "Đã yêu cầu gỡ {model}, nhưng runtime của mô hình chưa xác nhận. Hãy kiểm tra lại thẻ sau giây lát.",
       toastAlreadyFree: "{model} đã không còn được nạp.",
-      toastReplaced:
-        "{model} không còn được nạp. “{resident}” đã thế chỗ và được giữ nguyên.",
+      toastReplaced: "{model} không còn được nạp. “{resident}” đã thế chỗ và được giữ nguyên.",
       toastEjected: "Đã gỡ {model}",
       toastFailed: "Không thể gỡ {model}",
     },
     monitor: {
-      dragHandleLabel:
-        "Di chuyển bảng giám sát trực tiếp. Phím mũi tên để dịch chuyển nhẹ, nhấp đúp để đặt lại.",
+      dragHandleLabel: "Di chuyển bảng giám sát trực tiếp. Phím mũi tên để dịch chuyển nhẹ, nhấp đúp để đặt lại.",
       resizeHint: "Kéo một cạnh hoặc góc để đổi chiều rộng. Nhấp đúp để đặt lại.",
       reconnecting: "Đang kết nối lại...",
     },
@@ -6012,8 +5459,7 @@ export const vi = {
     oldestFirst: "Cũ nhất trước",
     today: "Hôm nay",
     yesterday: "Hôm qua",
-    emptyDescription:
-      "Dự án giúp gom các cuộc trò chuyện liên quan lại với nhau, với hướng dẫn và nguồn dùng chung mà mọi cuộc trò chuyện trong đó đều có thể sử dụng.",
+    emptyDescription: "Dự án giúp gom các cuộc trò chuyện liên quan lại với nhau, với hướng dẫn và nguồn dùng chung mà mọi cuộc trò chuyện trong đó đều có thể sử dụng.",
     createFirst: "Tạo dự án đầu tiên của bạn",
     noMatches: "Không có dự án nào khớp với tìm kiếm của bạn.",
     clearSearch: "Xóa tìm kiếm",
@@ -6035,18 +5481,15 @@ export const vi = {
     renameChat: "Đổi tên cuộc trò chuyện",
     chatName: "Tên cuộc trò chuyện",
     deleteChat: "Xóa cuộc trò chuyện",
-    deleteChatDescription:
-      "Cuộc trò chuyện “{name}” và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+    deleteChatDescription: "Cuộc trò chuyện “{name}” và các tin nhắn của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
     importChats: "Nhập cuộc trò chuyện",
     importDestination: "Chọn nơi để nhập {name}:",
     selectDestination: "Chọn đích đến",
     recents: "Gần đây",
     import: "Nhập",
     deleteProject: "Xóa dự án",
-    deleteProjectDescription:
-      "Dự án “{name}” và tất cả cuộc trò chuyện của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
-    deleteProjectFiles:
-      "Thư mục không gian làm việc của dự án sẽ bị xóa khỏi ổ đĩa.",
+    deleteProjectDescription: "Dự án “{name}” và tất cả cuộc trò chuyện của nó sẽ bị xóa vĩnh viễn. Không thể hoàn tác thao tác này.",
+    deleteProjectFiles: "Thư mục không gian làm việc của dự án sẽ bị xóa khỏi ổ đĩa.",
     deleteAll: "Xóa tất cả",
     projectFallback: "dự án",
     importFailed: "Nhập thất bại.",
@@ -6071,37 +5514,29 @@ export const vi = {
     currentPassword: "Mật khẩu hiện tại",
     newPassword: "Mật khẩu mới",
     confirmPassword: "Xác nhận mật khẩu",
-    setupCodeHint:
-      "Đăng nhập lần đầu? Hãy dán mã thiết lập mà quản trị viên đã cung cấp vào ô mật khẩu.",
-    ownerHint:
-      "Bạn là chủ sở hữu bản cài đặt? Hãy đăng nhập bằng unsloth, hoặc tên đăng nhập hiển thị trong Cài đặt > Tài khoản.",
-    currentSetupCodeHint:
-      "Dán mã thiết lập bạn vừa dùng để đăng nhập vào ô mật khẩu hiện tại.",
+    setupCodeHint: "Đăng nhập lần đầu? Hãy dán mã thiết lập mà quản trị viên đã cung cấp vào ô mật khẩu.",
+    ownerHint: "Bạn là chủ sở hữu bản cài đặt? Hãy đăng nhập bằng unsloth, hoặc tên đăng nhập hiển thị trong Cài đặt > Tài khoản.",
+    currentSetupCodeHint: "Dán mã thiết lập bạn vừa dùng để đăng nhập vào ô mật khẩu hiện tại.",
     minLength: "Phải có ít nhất 8 ký tự.",
     ensureMatch: "Hãy đảm bảo mật khẩu khớp nhau.",
     noSpaces: "Mật khẩu mới không được chứa dấu cách.",
     currentTooShort: "Mật khẩu hiện tại phải có ít nhất 8 ký tự.",
-    setupInitFailed:
-      "Không thể khởi tạo quá trình thiết lập. Hãy tải lại trang và thử lại.",
+    setupInitFailed: "Không thể khởi tạo quá trình thiết lập. Hãy tải lại trang và thử lại.",
     newTooShort: "Mật khẩu mới phải có ít nhất 8 ký tự.",
     mismatch: "Mật khẩu không khớp.",
     mustDiffer: "Mật khẩu mới phải khác mật khẩu hiện tại của bạn.",
     pleaseWait: "Vui lòng chờ...",
     continueAsOwner: "Tiếp tục với tư cách chủ sở hữu",
     signInWithUsername: "Đăng nhập bằng tên người dùng và mật khẩu của bạn.",
-    bootstrapping:
-      "Hệ thống xác thực vẫn đang khởi tạo tài khoản quản trị mặc định.",
-    signInToChange:
-      "Đăng nhập một lần bằng thông tin đăng nhập được tạo sẵn để đổi mật khẩu.",
+    bootstrapping: "Hệ thống xác thực vẫn đang khởi tạo tài khoản quản trị mặc định.",
+    signInToChange: "Đăng nhập một lần bằng thông tin đăng nhập được tạo sẵn để đổi mật khẩu.",
     alreadyUpdated: "Mật khẩu đã được cập nhật. Hãy dùng màn hình đăng nhập.",
     busy: "Unsloth đang bận. Hãy thử lại sau giây lát.",
     updateFailed: "Cập nhật mật khẩu thất bại.",
     loadFailed: "Không thể tải.",
     failed: "Xác thực thất bại.",
-    shuttingDown:
-      "Phiên bản này đang tắt: nó có thể truy cập được qua mạng và mật khẩu mặc định chưa bao giờ được thay đổi.",
-    shutdownCountdown:
-      "Phiên bản này có thể truy cập được qua mạng và vẫn dùng mật khẩu mặc định, nên sẽ tắt sau {time}. Đặt mật khẩu tại đây để giữ cho nó tiếp tục chạy.",
+    shuttingDown: "Phiên bản này đang tắt: nó có thể truy cập được qua mạng và mật khẩu mặc định chưa bao giờ được thay đổi.",
+    shutdownCountdown: "Phiên bản này có thể truy cập được qua mạng và vẫn dùng mật khẩu mặc định, nên sẽ tắt sau {time}. Đặt mật khẩu tại đây để giữ cho nó tiếp tục chạy.",
   },
   routes: {
     chat: "Trò chuyện",
@@ -6115,23 +5550,15 @@ export const vi = {
     blockedTitle: "Đã chặn mã tùy chỉnh",
     enableTitle: "Bật mã tùy chỉnh cho mô hình này?",
     thisModel: "Mô hình này",
-    unsafeBody:
-      "{model} chứa các tệp bị trình quét bảo mật của Hugging Face đánh dấu là không an toàn (ví dụ: một tệp pickle độc hại sẽ chạy mã khi mô hình được nạp). Không thể nạp mô hình này. Các tệp bị đánh dấu chưa bao giờ được tải xuống.",
-    unsafeBodyFromProvider:
-      "{model} từ {provider} chứa các tệp bị trình quét bảo mật của Hugging Face đánh dấu là không an toàn (ví dụ: một tệp pickle độc hại sẽ chạy mã khi mô hình được nạp). Không thể nạp mô hình này. Các tệp bị đánh dấu chưa bao giờ được tải xuống.",
-    customCode:
-      "{model} khai báo mã Python tùy chỉnh trong kho lưu trữ của mình. {note}",
-    customCodeFromProvider:
-      "{model} từ {provider} khai báo mã Python tùy chỉnh trong kho lưu trữ của mình. {note}",
-    blockedNote:
-      "Trình quét bảo mật đã phát hiện các vấn đề NGHIÊM TRỌNG, nên không thể bật.",
-    reviewNote:
-      "Hãy xem kết quả quét bảo mật bên dưới. Chỉ tiếp tục nếu bạn tin tưởng nguồn của mô hình.",
+    unsafeBody: "{model} chứa các tệp bị trình quét bảo mật của Hugging Face đánh dấu là không an toàn (ví dụ: một tệp pickle độc hại sẽ chạy mã khi mô hình được nạp). Không thể nạp mô hình này. Các tệp bị đánh dấu chưa bao giờ được tải xuống.",
+    unsafeBodyFromProvider: "{model} từ {provider} chứa các tệp bị trình quét bảo mật của Hugging Face đánh dấu là không an toàn (ví dụ: một tệp pickle độc hại sẽ chạy mã khi mô hình được nạp). Không thể nạp mô hình này. Các tệp bị đánh dấu chưa bao giờ được tải xuống.",
+    customCode: "{model} khai báo mã Python tùy chỉnh trong kho lưu trữ của mình. {note}",
+    customCodeFromProvider: "{model} từ {provider} khai báo mã Python tùy chỉnh trong kho lưu trữ của mình. {note}",
+    blockedNote: "Trình quét bảo mật đã phát hiện các vấn đề NGHIÊM TRỌNG, nên không thể bật.",
+    reviewNote: "Hãy xem kết quả quét bảo mật bên dưới. Chỉ tiếp tục nếu bạn tin tưởng nguồn của mô hình.",
     trustNote: "Chỉ tiếp tục nếu bạn tin tưởng nguồn của mô hình.",
-    flaggedIntro:
-      "Trình quét tự động của chúng tôi đã phát hiện các vấn đề, bao gồm:",
-    nothingFlagged:
-      "Trình quét tự động của chúng tôi không phát hiện tệp đáng lo ngại nào, nhưng vui lòng kiểm tra lại.",
+    flaggedIntro: "Trình quét tự động của chúng tôi đã phát hiện các vấn đề, bao gồm:",
+    nothingFlagged: "Trình quét tự động của chúng tôi không phát hiện tệp đáng lo ngại nào, nhưng vui lòng kiểm tra lại.",
     unscannedTitle: "Không thể quét các tệp mô hình",
     unscannedBody: "{model} có trọng số pickle, loại tệp có thể chạy mã khi tải, và không có kết quả quét phần mềm độc hại cho chúng nên không thể tải. {note}",
     unscannedIntro: "Các tệp không thể quét:",
@@ -6162,15 +5589,12 @@ export const vi = {
     openChangelog: "Mở nhật ký thay đổi",
     retry: "Thử lại",
     loadingChanges: "Đang tải các thay đổi mới...",
-    customLlamaRepo:
-      "Bản cài đặt này theo dõi một kho llama.cpp tùy chỉnh, nên không thể so sánh các thay đổi.",
-    noItemisedNotes:
-      "Bản dựng này có trước khi ghi chú phát hành được liệt kê theo từng mục, nên không thể so sánh các thay đổi.",
+    customLlamaRepo: "Bản cài đặt này theo dõi một kho llama.cpp tùy chỉnh, nên không thể so sánh các thay đổi.",
+    noItemisedNotes: "Bản dựng này có trước khi ghi chú phát hành được liệt kê theo từng mục, nên không thể so sánh các thay đổi.",
     compareFailed: "Không thể so sánh các bản phát hành này.",
     llamaChangesLabel: "Các thay đổi mới của llama.cpp từ {from} đến {to}",
     showingChanges: "Đang hiển thị {shown} trên {total} thay đổi",
-    noCarriedChanges:
-      "Không có thay đổi bổ sung mới nào được liệt kê cho bản dựng này.",
+    noCarriedChanges: "Không có thay đổi bổ sung mới nào được liệt kê cho bản dựng này.",
     notesFor: "Ghi chú phát hành cho {release}",
     notesForVersion: "Ghi chú phát hành cho phiên bản {version}",
     notesTruncated: "Ghi chú đã bị cắt bớt. Xem ghi chú phát hành đầy đủ.",
@@ -6191,8 +5615,7 @@ export const vi = {
     useDefaultLocation: "Dùng mặc định",
     longPaths: {
       title: "Windows sẽ yêu cầu cấp quyền",
-      approve:
-        "Phê duyệt {tool} một lần để bật đường dẫn tệp dài cho các kernel đã biên dịch.",
+      approve: "Phê duyệt {tool} một lần để bật đường dẫn tệp dài cho các kernel đã biên dịch.",
       waiting: "Đang chờ Windows cấp quyền...",
     },
     skip: "Bỏ qua",
@@ -6221,8 +5644,7 @@ export const vi = {
     repair: {
       upgrading: "Đang nâng cấp lên bản cài đặt đầy đủ...",
       gettingReady: "Đang chuẩn bị...",
-      upgradingDetail:
-        "Đang tải xuống PyTorch và các thư viện của nó cho GPU của máy này. Quá trình này có thể mất vài phút.",
+      upgradingDetail: "Đang tải xuống PyTorch và các thư viện của nó cho GPU của máy này. Quá trình này có thể mất vài phút.",
       wontTakeLong: "Sẽ không mất nhiều thời gian.",
       upgradeFailed: "Không thể nâng cấp lên bản cài đặt đầy đủ",
       updateFailed: "Cập nhật thất bại",
@@ -6249,8 +5671,7 @@ export const vi = {
     diagnostics: {
       copy: "Sao chép thông tin chẩn đoán",
       copying: "Đang sao chép...",
-      clipboardFailed:
-        "Không thể sao chép vào bộ nhớ tạm. Hãy chọn và sao chép thông tin chẩn đoán bên dưới.",
+      clipboardFailed: "Không thể sao chép vào bộ nhớ tạm. Hãy chọn và sao chép thông tin chẩn đoán bên dưới.",
       copyFailed: "Không thể sao chép thông tin chẩn đoán: {error}",
     },
   },
@@ -6260,8 +5681,7 @@ export const vi = {
     installing: "Đang cài đặt bản cập nhật...",
     failed: "Cập nhật thất bại",
     updating: "Đang cập nhật...",
-    updatingBackendDetail:
-      "Quá trình này có thể mất vài phút. Không đóng ứng dụng.",
+    updatingBackendDetail: "Quá trình này có thể mất vài phút. Không đóng ứng dụng.",
     percentDownloaded: "Đã tải xuống {percent}%",
     restartShortly: "Ứng dụng sẽ sớm khởi động lại.",
     failedDetail: "Đã xảy ra lỗi trong quá trình cập nhật.",
@@ -6272,8 +5692,7 @@ export const vi = {
       dismiss: "Đóng thông báo cập nhật ứng dụng",
       failedTitle: "Cập nhật ứng dụng thất bại",
       newVersion: "Phiên bản Unsloth mới",
-      backendRecovered:
-        "Backend đã khôi phục. Thông tin chẩn đoán vẫn còn khả dụng.",
+      backendRecovered: "Backend đã khôi phục. Thông tin chẩn đoán vẫn còn khả dụng.",
       linuxManual: "Mở trang phát hành trên GitHub để cài đặt gói Linux",
       available: "Đã có bản cập nhật ứng dụng mới",
       showNotes: "Hiện ghi chú phát hành",
@@ -6386,4 +5805,4 @@ export const vi = {
       inRam: "{amount} trong RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

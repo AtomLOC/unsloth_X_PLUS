@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const ptBR = {
   turns: {
     label: "Turno {number}",
@@ -85,7 +82,6 @@ export const ptBR = {
     lensMagnify: "Ampliar",
     lensShrink: "Reduzir",
   },
-
   linkMenu: {
     openInBrowser: "Abrir no navegador do Unsloth",
     openExternal: "Abrir no navegador externo",
@@ -876,7 +872,6 @@ export const ptBR = {
     showPrompt: "Mostrar prompt",
     hidePrompt: "Ocultar prompt",
   },
-  // The chat header's "…" menu.
   chatMenu: {
     more: "Opções do chat",
     copy: "Copiar",
@@ -902,8 +897,7 @@ export const ptBR = {
     nightShift: "Começa o turno da noite",
     nightShiftName: "Começa o turno da noite, {name}",
     temporaryChat: "Chat temporário",
-    temporaryChatDescription:
-      "Este chat não aparecerá no seu histórico e não será salvo. Ele desaparece quando você sair.",
+    temporaryChatDescription: "Este chat não aparecerá no seu histórico e não será salvo. Ele desaparece quando você sair.",
   },
   picker: {
     unifiedTightFit: "Ajuste apertado",
@@ -915,8 +909,7 @@ export const ptBR = {
     retry: "Tentar novamente",
     loadMore: "Carregar mais",
     offlineTitle: "Você está offline",
-    offlineBody:
-      "Mude para Dispositivo para usar {noun} locais ou em cache.",
+    offlineBody: "Mude para Dispositivo para usar {noun} locais ou em cache.",
     offlineSwitchDevice: "Dispositivo",
     searchAriaLabel: "Buscar {noun}",
     modelSourceAriaLabel: "Origem do modelo",
@@ -925,11 +918,9 @@ export const ptBR = {
     modelDroppedByProvider: "{provider} · não é mais oferecido",
     modelDisabled: "Não ativado",
     modelDisabledByProvider: "{provider} · não ativado",
-    multipleMatches:
-      "Há vários {noun} correspondentes. Escolha uma opção na lista.",
+    multipleMatches: "Há vários {noun} correspondentes. Escolha uma opção na lista.",
     rateLimitedTitle: "Limite de requisições do Hugging Face atingido",
-    rateLimitedBody:
-      "Aguarde um momento e tente buscar {noun} novamente.",
+    rateLimitedBody: "Aguarde um momento e tente buscar {noun} novamente.",
     modelScope: "ModelScope",
     useModelScope: "Usar ModelScope",
     useModelScopeHint: "Pesquise e baixe pelo ModelScope. Você pode voltar nas Configurações.",
@@ -942,8 +933,7 @@ export const ptBR = {
       savedAriaLabel: "Token do Hugging Face salvo",
       addAriaLabel: "Definir token do Hugging Face",
       savedHint: "Token salvo. O acesso será verificado quando ele for usado.",
-      addHint:
-        "Defina um token para acessar repositórios privados e restritos.",
+      addHint: "Defina um token para acessar repositórios privados e restritos.",
     },
   },
   common: {
@@ -1114,10 +1104,8 @@ export const ptBR = {
       unpinProjects: "Desafixar projetos",
       deleteProjects: "Excluir projetos",
       deleteProjectsTitle: "Excluir projetos",
-      deleteProjectsDescription:
-        "{count} projetos e todos os seus chats serão excluídos permanentemente. Essa ação não pode ser desfeita.",
-      deleteProjectsFilesDescription:
-        "A pasta do espaço de trabalho de cada projeto é removida do disco.",
+      deleteProjectsDescription: "{count} projetos e todos os seus chats serão excluídos permanentemente. Essa ação não pode ser desfeita.",
+      deleteProjectsFilesDescription: "A pasta do espaço de trabalho de cada projeto é removida do disco.",
       countSelected: "{count} selecionadas",
       pinChats: "Fixar conversas",
       unpinChats: "Desafixar conversas",
@@ -1127,11 +1115,9 @@ export const ptBR = {
       deleteChats: "Excluir conversas",
       deleteTitle: "Excluir conversas",
       deleteDescription: "{count} chats e suas mensagens serão excluídos permanentemente. Essa ação não pode ser desfeita.",
-      deleteFilesDescription:
-        "A pasta de sandbox de cada conversa é removida do disco. Os arquivos escritos dentro de um projeto permanecem no espaço de trabalho desse projeto.",
+      deleteFilesDescription: "A pasta de sandbox de cada conversa é removida do disco. Os arquivos escritos dentro de um projeto permanecem no espaço de trabalho desse projeto.",
       deleteFilesLabel: "Excluir arquivos e pasta de sandbox",
-      deleteChatFilesDescription:
-        "A pasta de sandbox deste chat é removida do disco. Os arquivos que ele gravou dentro de um projeto permanecem no espaço de trabalho do projeto.",
+      deleteChatFilesDescription: "A pasta de sandbox deste chat é removida do disco. Os arquivos que ele gravou dentro de um projeto permanecem no espaço de trabalho do projeto.",
     },
     organize: {
       sidebarHeading: "Organizar a barra lateral",
@@ -1174,11 +1160,11 @@ export const ptBR = {
     dialog: {
       deleteChat: {
         title: "Excluir chat",
-        description: 'O chat "{name}" e suas mensagens serão excluídos permanentemente. Essa ação não pode ser desfeita.',
+        description: "O chat \"{name}\" e suas mensagens serão excluídos permanentemente. Essa ação não pode ser desfeita.",
       },
       deleteRun: {
         title: "Excluir execução de treino",
-        description: 'Tem certeza de que deseja excluir esta execução "{name}"?',
+        description: "Tem certeza de que deseja excluir esta execução \"{name}\"?",
       },
       renameChat: {
         title: "Renomear chat",
@@ -1385,8 +1371,7 @@ export const ptBR = {
       edit: "Alterar atalho",
       reset: "Restaurar o padrão",
       resetAll: "Redefinir tudo para o padrão",
-      browserReserved:
-        "Seu navegador pode reservar essa combinação. No app para desktop ela funciona.",
+      browserReserved: "Seu navegador pode reservar essa combinação. No app para desktop ela funciona.",
       metaUnsupported: "A tecla Windows não pode ser usada em atalhos.",
       altGraphUnsupported: "Combinações com AltGr não podem ser usadas como atalhos.",
       desktopOnly: "Somente no app para desktop",
@@ -1768,24 +1753,19 @@ export const ptBR = {
       description: "Microfone, ditado, conversão de fala em texto e leitura em voz alta",
       dictation: {
         audioUploadTitle: "Ditar com uma gravação",
-        audioUploadDescription:
-          "Seu navegador exige uma conexão segura (HTTPS) para gravar diretamente no Unsloth. Nesta conexão HTTP, use o gravador do celular ou escolha uma gravação salva. Seu servidor do Unsloth transcreverá o áudio e adicionará o texto à sua mensagem.",
+        audioUploadDescription: "Seu navegador exige uma conexão segura (HTTPS) para gravar diretamente no Unsloth. Nesta conexão HTTP, use o gravador do celular ou escolha uma gravação salva. Seu servidor do Unsloth transcreverá o áudio e adicionará o texto à sua mensagem.",
         audioUploadChooseFile: "Escolher gravação",
         audioUploadRecord: "Gravar áudio",
-        audioUploadIphoneHint:
-          "No iPhone, salve uma gravação do Gravador ou de outro aplicativo de gravação e escolha-a aqui.",
-        audioUploadServerModelNote:
-          "Esta gravação usa o modelo local mostrado acima no servidor do Unsloth, mesmo que o ditado normal use outro mecanismo.",
+        audioUploadIphoneHint: "No iPhone, salve uma gravação do Gravador ou de outro aplicativo de gravação e escolha-a aqui.",
+        audioUploadServerModelNote: "Esta gravação usa o modelo local mostrado acima no servidor do Unsloth, mesmo que o ditado normal use outro mecanismo.",
         audioUploadAutomatic: "Automático",
         audioUploadModelReady: "Pronto neste servidor do Unsloth",
         audioUploadRetryTitle: "Não foi possível transcrever {file}",
         audioUploadRetry: "Tentar transcrever novamente",
-        audioUploadChooseModel:
-          "Escolha um modelo local de reconhecimento de fala nas configurações de Voz.",
+        audioUploadChooseModel: "Escolha um modelo local de reconhecimento de fala nas configurações de Voz.",
         audioUploadEmpty: "A gravação selecionada está vazia.",
         audioUploadTooLarge: "Escolha uma gravação menor que {size}.",
-        audioUploadVideoUnsupported:
-          "Escolha uma gravação de áudio, não um vídeo.",
+        audioUploadVideoUnsupported: "Escolha uma gravação de áudio, não um vídeo.",
         audioUploadNoSpeech: "O modelo não detectou fala nessa gravação.",
         audioUploadFailed: "Não foi possível transcrever a gravação.",
         audioUploadCancel: "Cancelar transcrição",
@@ -1800,42 +1780,31 @@ export const ptBR = {
         micRecordForModel: "Gravar áudio para o modelo",
         engineLabel: "Mecanismo de ditado",
         engineBrowser: "Navegador",
-        engineBrowserDescription:
-          "Transcreve o áudio usando o serviço de fala do seu navegador. Selecione 'Transcrição local' para usar um modelo STT.",
+        engineBrowserDescription: "Transcreve o áudio usando o serviço de fala do seu navegador. Selecione 'Transcrição local' para usar um modelo STT.",
         engineModel: "Transcrição local",
-        engineModelDescription:
-          "Executa um modelo de conversão de fala em texto (STT) localmente e funciona offline. Baixe e carregue o modelo; ele é descarregado após um período sem uso.",
+        engineModelDescription: "Executa um modelo de conversão de fala em texto (STT) localmente e funciona offline. Baixe e carregue o modelo; ele é descarregado após um período sem uso.",
         engineCustom: "Endpoint personalizado",
-        engineCustomDescription:
-          "Envia o áudio gravado a um servidor STT compatível com OpenAI das suas conexões.",
+        engineCustomDescription: "Envia o áudio gravado a um servidor STT compatível com OpenAI das suas conexões.",
         connectionLabel: "Conexão",
-        connectionDescription:
-          "Adicione um servidor compatível com OpenAI e uma chave de API opcional em Conexões.",
+        connectionDescription: "Adicione um servidor compatível com OpenAI e uma chave de API opcional em Conexões.",
         connectionPlaceholder: "Selecione uma conexão",
         connectionEmpty: "Nenhuma conexão disponível",
         customModelLabel: "Modelo",
-        customModelDescription:
-          "Nome do modelo enviado para /v1/audio/transcriptions.",
+        customModelDescription: "Nome do modelo enviado para /v1/audio/transcriptions.",
         sttModelLabel: "Modelo de reconhecimento de fala",
-        sttModelDescription:
-          "Escolha ou busque um modelo STT para executar localmente.",
+        sttModelDescription: "Escolha ou busque um modelo STT para executar localmente.",
         sttQuantLabel: "Quantização",
-        sttQuantDescription:
-          "Escolha ou busque um modelo STT para executar localmente e depois sua quantização.",
+        sttQuantDescription: "Escolha ou busque um modelo STT para executar localmente e depois sua quantização.",
         sttDeviceLabel: "Carregar em",
         sttContextLabel: "Contexto de voz",
         sttContextAuto: "Auto (recomendado)",
-        sttContextAutoDescription:
-          "Adapta-se a cada gravação, usando mais memória para áudios mais longos. Ambientes de execução antigos podem precisar de um tamanho fixo para reduzir o uso de memória. Aplica-se ao Qwen3-ASR em Voz e Transcrever.",
-        sttContextFixedDescription:
-          "Limites menores usam menos memória. Gravações que ultrapassam o limite precisam de um limite maior ou do modo Auto. Aplica-se ao Qwen3-ASR em Voz e Transcrever.",
+        sttContextAutoDescription: "Adapta-se a cada gravação, usando mais memória para áudios mais longos. Ambientes de execução antigos podem precisar de um tamanho fixo para reduzir o uso de memória. Aplica-se ao Qwen3-ASR em Voz e Transcrever.",
+        sttContextFixedDescription: "Limites menores usam menos memória. Gravações que ultrapassam o limite precisam de um limite maior ou do modo Auto. Aplica-se ao Qwen3-ASR em Voz e Transcrever.",
         sttContextTokens: "{count} tokens",
         sttDeviceAuto: "GPU quando disponível",
         sttDeviceCpu: "RAM da CPU",
-        sttDeviceAutoDescription:
-          "Usar a GPU quando houver uma e, caso contrário, a CPU.",
-        sttDeviceCpuDescription:
-          "Manter o modelo na RAM do sistema. A transcrição fica mais lenta, mas não usa memória da GPU.",
+        sttDeviceAutoDescription: "Usar a GPU quando houver uma e, caso contrário, a CPU.",
+        sttDeviceCpuDescription: "Manter o modelo na RAM do sistema. A transcrição fica mais lenta, mas não usa memória da GPU.",
         sttModelSearchPlaceholder: "Buscar modelo",
         sttModelSearching: "Buscando no Hugging Face…",
         sttModelValidating: "Verificando a compatibilidade com o Whisper…",
@@ -1848,18 +1817,15 @@ export const ptBR = {
         sttLoadingModel: "Carregando o modelo…",
         sttReady: "Carregado em {device}",
         sttLoaded: "Carregado",
-        sttUnavailable:
-          "Não instalado neste servidor. Execute `unsloth studio update` para habilitar o ditado local.",
+        sttUnavailable: "Não instalado neste servidor. Execute `unsloth studio update` para habilitar o ditado local.",
         sttRetry: "Tentar novamente",
         sttDownloadChecking: "Verificando o status do download…",
         sttNotDownloaded: "Não baixado",
         sttDownloadStatusFailed: "Não foi possível verificar o status do download",
         sttDownload: "Baixar",
         sttDownloadConfirmTitle: "Baixar {model}?",
-        sttDownloadConfirmBody:
-          "O ditado local funciona totalmente offline, mas antes precisa do modelo de fala {model}. Cerca de {size}, baixado uma única vez para o cache do Hugging Face.",
-        sttDownloadConfirmBodyUnsized:
-          "O ditado local funciona totalmente offline, mas antes precisa do modelo de fala {model}. Ele é baixado uma única vez para o cache do Hugging Face.",
+        sttDownloadConfirmBody: "O ditado local funciona totalmente offline, mas antes precisa do modelo de fala {model}. Cerca de {size}, baixado uma única vez para o cache do Hugging Face.",
+        sttDownloadConfirmBodyUnsized: "O ditado local funciona totalmente offline, mas antes precisa do modelo de fala {model}. Ele é baixado uma única vez para o cache do Hugging Face.",
         sttOpenVoiceSettings: "Abrir as configurações de Voz",
         sttDownloadStarted: "Baixando {model}",
         sttDownloading: "Baixando… {progress}%",
@@ -1869,25 +1835,19 @@ export const ptBR = {
         sttDownloadComplete: "Modelo de reconhecimento de fala baixado",
         sttModelReady: "O modelo {model} está pronto para o ditado",
         sttRecommended: "Recomendado",
-        sttDownloadFailed:
-          "Não foi possível baixar o modelo de reconhecimento de fala",
+        sttDownloadFailed: "Não foi possível baixar o modelo de reconhecimento de fala",
         sttLoad: "Carregar",
         sttUnload: "Descarregar",
         sttUnloading: "Descarregando…",
         microphoneLabel: "Microfone",
         microphoneFallbackName: "Microfone {index}",
         microphoneDescription: "Usado para ditado",
-        microphoneFallbackHint:
-          "Usado para ditado. Usa o dispositivo padrão do sistema se o mecanismo de fala do navegador não conseguir usar este dispositivo",
-        microphoneGrantDescription:
-          "Permita o acesso ao microfone para ver os nomes dos dispositivos",
+        microphoneFallbackHint: "Usado para ditado. Usa o dispositivo padrão do sistema se o mecanismo de fala do navegador não conseguir usar este dispositivo",
+        microphoneGrantDescription: "Permita o acesso ao microfone para ver os nomes dos dispositivos",
         allowMicrophone: "Permitir acesso ao microfone",
-        micAccessBlocked:
-          "O acesso ao microfone foi bloqueado. Permita o acesso ao microfone nesta página do Unsloth e tente novamente.",
-        micAccessBlockedDesktop:
-          "O acesso ao microfone foi bloqueado. Tente novamente e escolha Permitir, ou ative o microfone nas configurações de privacidade do sistema.",
-        micAccessUnsupported:
-          "O acesso ao microfone não é suportado neste navegador ou contexto.",
+        micAccessBlocked: "O acesso ao microfone foi bloqueado. Permita o acesso ao microfone nesta página do Unsloth e tente novamente.",
+        micAccessBlockedDesktop: "O acesso ao microfone foi bloqueado. Tente novamente e escolha Permitir, ou ative o microfone nas configurações de privacidade do sistema.",
+        micAccessUnsupported: "O acesso ao microfone não é suportado neste navegador ou contexto.",
         systemDefault: "Padrão do sistema",
         savedMicDisconnected: "Microfone salvo (não conectado)",
         languageLabel: "Idioma do ditado",
@@ -1897,8 +1857,7 @@ export const ptBR = {
       },
       dictionary: {
         sectionTitle: "Dicionário de ditado",
-        sectionDescription:
-          "Defina como o ditado escreve palavras ou frases específicas",
+        sectionDescription: "Defina como o ditado escreve palavras ou frases específicas",
         manageLabel: "Grafias personalizadas",
         manage: "Gerenciar",
         backToVoice: "Voltar para Voz",
@@ -1910,12 +1869,10 @@ export const ptBR = {
       },
       recents: {
         sectionTitle: "Histórico de ditados",
-        sectionDescription:
-          "Todo ditado é salvo aqui para você recuperar o texto",
+        sectionDescription: "Todo ditado é salvo aqui para você recuperar o texto",
         manageLabel: "Histórico de ditados",
         manage: "Gerenciar",
-        pageDescription:
-          "Todo ditado é salvo. Veja, copie ou exclua os ditados, ou abra o chat em que um deles foi usado.",
+        pageDescription: "Todo ditado é salvo. Veja, copie ou exclua os ditados, ou abra o chat em que um deles foi usado.",
         searchPlaceholder: "Buscar ditados",
         sortLabel: "Ordenar ditados",
         sortNewest: "Mais recentes",
@@ -1934,16 +1891,13 @@ export const ptBR = {
         copyFailed: "Não foi possível copiar para a área de transferência",
         delete: "Excluir ditado",
         deleteTitle: "Excluir ditado",
-        deleteDescription:
-          "Excluir este ditado salvo? Esta ação não pode ser desfeita.",
-        deleteLinkedDescription:
-          "Excluir este ditado salvo? Você também pode excluir o chat em que ele foi usado. Esta ação não pode ser desfeita.",
+        deleteDescription: "Excluir este ditado salvo? Esta ação não pode ser desfeita.",
+        deleteLinkedDescription: "Excluir este ditado salvo? Você também pode excluir o chat em que ele foi usado. Esta ação não pode ser desfeita.",
         deleteWithChat: "Excluir chat e ditado",
         deleteWithChatFailed: "Não foi possível excluir o chat",
         clear: "Limpar histórico",
         clearTitle: "Limpar histórico de ditados",
-        clearDescription:
-          "Excluir todos os ditados salvos? Esta ação não pode ser desfeita.",
+        clearDescription: "Excluir todos os ditados salvos? Esta ação não pode ser desfeita.",
         clearConfirm: "Limpar tudo",
         showMore: "Mostrar mais ({count})",
         openChat: "Abrir chat",
@@ -1960,15 +1914,12 @@ export const ptBR = {
         engineSystem: "Vozes do sistema",
         engineStudio: "Modelo do Unsloth",
         engineCustom: "Endpoint personalizado",
-        engineCustomDescription:
-          "Um servidor TTS compatível com OpenAI das suas conexões (ex.: Kokoro)",
+        engineCustomDescription: "Um servidor TTS compatível com OpenAI das suas conexões (ex.: Kokoro)",
         connectionLabel: "Conexão",
-        connectionDescription:
-          "Adicione um servidor compatível com OpenAI na aba Conexões",
+        connectionDescription: "Adicione um servidor compatível com OpenAI na aba Conexões",
         connectionPlaceholder: "Selecione uma conexão",
         customModelLabel: "Modelo",
-        customVoiceDescription:
-          "Nome da voz esperado pelo endpoint; o padrão é alloy",
+        customVoiceDescription: "Nome da voz esperado pelo endpoint; o padrão é alloy",
         modelLabel: "Modelo de TTS",
         modelDescription: "Nenhum carregado. Carregue um em Áudio › Conversão de texto em fala.",
         modelLoaded: "{model} está carregado",
@@ -1978,8 +1929,7 @@ export const ptBR = {
         openAudioAction: "Abrir Áudio",
         voiceLabel: "Voz",
         voiceDescription: "As melhores vozes deste dispositivo",
-        studioVoiceDescription:
-          "Vozes salvas em Áudio exigem um modelo de clonagem",
+        studioVoiceDescription: "Vozes salvas em Áudio exigem um modelo de clonagem",
         studioVoiceDefault: "Voz própria do modelo",
         studioVoiceSaved: "Voz salva",
         speedLabel: "Velocidade",
@@ -2000,8 +1950,7 @@ export const ptBR = {
       description: "Preferências globais do Unsloth.",
       account: "Conta",
       huggingFaceToken: "Token do Hugging Face",
-      huggingFaceTokenDescription:
-        "Usado para carregar modelos restritos e enviar artefatos.",
+      huggingFaceTokenDescription: "Usado para carregar modelos restritos e enviar artefatos.",
       tokenValidated: "Token validado",
       hideToken: "Ocultar token",
       showToken: "Mostrar token",
@@ -2012,24 +1961,20 @@ export const ptBR = {
       passwordDialog: {
         trigger: "Alterar senha",
         title: "Alterar senha",
-        description:
-          "Insira sua senha atual e escolha uma nova (no mínimo {minLength} caracteres).",
+        description: "Insira sua senha atual e escolha uma nova (no mínimo {minLength} caracteres).",
         setTrigger: "Definir senha remota",
         setTitle: "Definir senha remota",
-        setDescription:
-          "Escolha a senha que os navegadores remotos usam para entrar como unsloth (no mínimo {minLength} caracteres). O aplicativo de desktop da Unsloth continua entrando automaticamente.",
+        setDescription: "Escolha a senha que os navegadores remotos usam para entrar como unsloth (no mínimo {minLength} caracteres). O aplicativo de desktop da Unsloth continua entrando automaticamente.",
         setSubmit: "Definir senha",
         setting: "Definindo...",
         setDone: "Senha definida.",
         currentPassword: "Senha atual",
         newPassword: "Nova senha",
         confirmPassword: "Confirmar nova senha",
-        currentTooShort:
-          "A senha atual deve ter no mínimo {minLength} caracteres.",
+        currentTooShort: "A senha atual deve ter no mínimo {minLength} caracteres.",
         newTooShort: "A nova senha deve ter no mínimo {minLength} caracteres.",
         mismatch: "As senhas não coincidem.",
-        samePassword:
-          "A nova senha deve ser diferente da senha atual.",
+        samePassword: "A nova senha deve ser diferente da senha atual.",
         update: "Atualizar senha",
         updating: "Atualizando...",
         updated: "Senha atualizada.",
@@ -2038,8 +1983,7 @@ export const ptBR = {
       },
       chatDefaults: "Padrões do chat",
       autoTitleNewChats: "Gerar título automático para novos chats",
-      autoTitleNewChatsDescription:
-        "Gera um título curto a partir da primeira mensagem.",
+      autoTitleNewChatsDescription: "Gera um título curto a partir da primeira mensagem.",
       mlWarmup: {
         sectionTitle: "Desempenho na inicialização",
         description: "Prepare os recursos selecionados para acelerar o primeiro uso. Todos vêm desativados por padrão. Essas opções podem carregar dependências compartilhadas e aumentar o uso de RAM enquanto o aplicativo estiver ocioso.",
@@ -2063,10 +2007,8 @@ export const ptBR = {
       helperLlm: {
         sectionTitle: "LLM auxiliar",
         preloadOnStartup: "Armazenar o LLM auxiliar em cache na inicialização",
-        preloadOnStartupDescription:
-          "Baixa o modelo auxiliar do AI Assist em segundo plano na inicialização. Desativado por padrão; o AI Assist ainda pode baixá-lo sob demanda.",
-        disabledByEnv:
-          "Desativado por UNSLOTH_HELPER_MODEL_DISABLE no ambiente de backend.",
+        preloadOnStartupDescription: "Baixa o modelo auxiliar do AI Assist em segundo plano na inicialização. Desativado por padrão; o AI Assist ainda pode baixá-lo sob demanda.",
+        disabledByEnv: "Desativado por UNSLOTH_HELPER_MODEL_DISABLE no ambiente de backend.",
         loadError: "Falha ao carregar as configurações do LLM Auxiliar.",
         saveError: "Falha ao salvar as configurações do LLM Auxiliar.",
       },
@@ -2090,24 +2032,16 @@ export const ptBR = {
       modelAutoSwitch: {
         sectionTitle: "Troca automática de modelo (API OpenAI)",
         enable: "Trocar de modelo por requisição",
-        enableDescription:
-          "Carrega, antes de responder, um modelo baixado indicado em uma requisição da API. Desativado por padrão.",
+        enableDescription: "Carrega, antes de responder, um modelo baixado indicado em uma requisição da API. Desativado por padrão.",
         idleUnload: "Descarregamento automático por inatividade",
-        idleUnloadDescription:
-          "Libera a VRAM após esta quantidade de segundos de inatividade. 0 mantém o modelo carregado; o mínimo é 60.",
-        idleSecondsAriaLabel:
-          "Segundos até o descarregamento automático por inatividade",
+        idleUnloadDescription: "Libera a VRAM após esta quantidade de segundos de inatividade. 0 mantém o modelo carregado; o mínimo é 60.",
+        idleSecondsAriaLabel: "Segundos até o descarregamento automático por inatividade",
         mediaEnable: "Trocar de modelo de imagem e vídeo por requisição",
-        mediaEnableDescription:
-          "Carrega, antes de gerar, um modelo de imagem ou vídeo baixado indicado em uma requisição da API. É uma configuração própria: a de cima vale apenas para o modelo de chat. Desativado por padrão.",
-        mediaIdleUnload:
-          "Descarregamento automático por inatividade de imagem e vídeo",
-        mediaIdleUnloadDescription:
-          "Libera a VRAM descarregando os modelos de imagem e vídeo após esta quantidade de segundos de inatividade. É uma configuração própria: a de cima cobre apenas o modelo de chat. 0 os mantém carregados; o mínimo é 60.",
-        mediaIdleSecondsAriaLabel:
-          "Segundos até o descarregamento automático por inatividade de imagem e vídeo",
-        mediaIdlePaused:
-          "Pausado enquanto “Manter o modelo na memória da GPU” estiver ativado.",
+        mediaEnableDescription: "Carrega, antes de gerar, um modelo de imagem ou vídeo baixado indicado em uma requisição da API. É uma configuração própria: a de cima vale apenas para o modelo de chat. Desativado por padrão.",
+        mediaIdleUnload: "Descarregamento automático por inatividade de imagem e vídeo",
+        mediaIdleUnloadDescription: "Libera a VRAM descarregando os modelos de imagem e vídeo após esta quantidade de segundos de inatividade. É uma configuração própria: a de cima cobre apenas o modelo de chat. 0 os mantém carregados; o mínimo é 60.",
+        mediaIdleSecondsAriaLabel: "Segundos até o descarregamento automático por inatividade de imagem e vídeo",
+        mediaIdlePaused: "Pausado enquanto “Manter o modelo na memória da GPU” estiver ativado.",
         idleNeedsEnable: "Primeiro, ative Trocar de modelo por requisição.",
         idleActiveViaEnv: "Ativo por meio de UNSLOTH_MODEL_IDLE_TTL.",
         loadError: "Falha ao carregar as configurações de troca automática de modelo.",
@@ -2115,20 +2049,16 @@ export const ptBR = {
         idleError: "Insira 0 para manter o modelo carregado, ou pelo menos 60 segundos.",
         idleUnsaved: "Ainda não salvo.",
         autoDownload: "Baixar modelos ausentes",
-        autoDownloadDescription:
-          "Busca um GGUF indicado em uma requisição da API que ainda não foi baixado. Com isso, qualquer pessoa com uma chave de API pode consumir disco e largura de banda.",
+        autoDownloadDescription: "Busca um GGUF indicado em uma requisição da API que ainda não foi baixado. Com isso, qualquer pessoa com uma chave de API pode consumir disco e largura de banda.",
         keepKv: "Manter o contexto do chat entre descarregamentos",
-        keepKvDescription:
-          "Salva o cache KV antes de um descarregamento por inatividade, ou antes que um modelo de imagem ou vídeo ocupe a GPU, para que chats retomados não releiam o histórico. Até 10 GB em disco.",
+        keepKvDescription: "Salva o cache KV antes de um descarregamento por inatividade, ou antes que um modelo de imagem ou vídeo ocupe a GPU, para que chats retomados não releiam o histórico. Até 10 GB em disco.",
         keepKvKeywords: "kv cache contexto troca retomar imagem video",
         apiOnly: "Descarregar apenas modelos carregados pela API",
-        apiOnlyDescription:
-          "O descarregamento por inatividade mantém na memória o modelo que você carregou pelo Unsloth e libera apenas os que uma requisição da API carregou.",
+        apiOnlyDescription: "O descarregamento por inatividade mantém na memória o modelo que você carregou pelo Unsloth e libera apenas os que uma requisição da API carregou.",
       },
       modelAliases: {
         sectionTitle: "Aliases de modelos (OpenAI API)",
-        description:
-          "Nomes curtos que os clientes da API podem usar no lugar do nome completo do modelo.",
+        description: "Nomes curtos que os clientes da API podem usar no lugar do nome completo do modelo.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Nome do alias",
         modelAriaLabel: "Modelo para o qual o alias aponta",
@@ -2142,24 +2072,20 @@ export const ptBR = {
         speculativeDecoding: "Decodificação especulativa",
         savedSetting: "Configuração salva",
         loadSettings: "Configurações de carregamento",
-        loadSettingsHint:
-          "Apenas para modelos GGUF. Campos em branco usam as configurações salvas do modelo.",
+        loadSettingsHint: "Apenas para modelos GGUF. Campos em branco usam as configurações salvas do modelo.",
       },
       previewSharing: {
         sectionTitle: "Compartilhamento de pré-visualização",
         enableLabel: "Links públicos de pré-visualização",
-        enableDescription:
-          "Permite que qualquer pessoa com um link assinado converse com um modelo concluído, sem necessidade de login. Desative para tirar a superfície de pré-visualização pública do ar; os links compartilhados param de funcionar.",
+        enableDescription: "Permite que qualquer pessoa com um link assinado converse com um modelo concluído, sem necessidade de login. Desative para tirar a superfície de pré-visualização pública do ar; os links compartilhados param de funcionar.",
         loadError: "Falha ao carregar as configurações de compartilhamento de pré-visualização.",
         saveError: "Falha ao salvar as configurações de compartilhamento de pré-visualização.",
         revokeLabel: "Revogar todos os links de pré-visualização",
-        revokeDescription:
-          "Rotaciona o segredo de assinatura para que todos os links que você compartilhou parem de funcionar. Links copiados recentemente continuam funcionando.",
+        revokeDescription: "Rotaciona o segredo de assinatura para que todos os links que você compartilhou parem de funcionar. Links copiados recentemente continuam funcionando.",
         revokeAction: "Revogar links",
         revoking: "Revogando...",
         revokeConfirmTitle: "Revogar todos os links de pré-visualização?",
-        revokeConfirmDescription:
-          "Todos os links de pré-visualização que você compartilhou pararão de funcionar imediatamente. Isso não pode ser desfeito.",
+        revokeConfirmDescription: "Todos os links de pré-visualização que você compartilhou pararão de funcionar imediatamente. Isso não pode ser desfeito.",
         revokeConfirmAction: "Revogar todos os links",
         revoked: "Todos os links de pré-visualização foram revogados",
         revokeError: "Não foi possível revogar os links de pré-visualização",
@@ -2167,14 +2093,10 @@ export const ptBR = {
       managedProviderUrls: {
         sectionTitle: "Contas gerenciadas",
         enableLabel: "Conexões locais e de rede",
-        enableDescription:
-          "Permite que contas gerenciadas apontem suas conexões para endereços locais ou de rede, como um servidor Ollama ou llama.cpp neste computador ou na sua rede local. Desativado por padrão, porque permite que essas contas alcancem serviços em execução no seu computador e na sua rede.",
-        lockedByEnvironment:
-          "Definido por UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 neste servidor, que recusa endereços privados para todas as contas.",
-        loadError:
-          "Não foi possível carregar as configurações de conexão das contas gerenciadas.",
-        saveError:
-          "Não foi possível salvar as configurações de conexão das contas gerenciadas.",
+        enableDescription: "Permite que contas gerenciadas apontem suas conexões para endereços locais ou de rede, como um servidor Ollama ou llama.cpp neste computador ou na sua rede local. Desativado por padrão, porque permite que essas contas alcancem serviços em execução no seu computador e na sua rede.",
+        lockedByEnvironment: "Definido por UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 neste servidor, que recusa endereços privados para todas as contas.",
+        loadError: "Não foi possível carregar as configurações de conexão das contas gerenciadas.",
+        saveError: "Não foi possível salvar as configurações de conexão das contas gerenciadas.",
       },
       display: {
         title: "Exibição",
@@ -2204,30 +2126,20 @@ export const ptBR = {
       startup: {
         sectionTitle: "Inicialização",
         launchAtLogin: "Executar o Unsloth ao fazer login",
-        launchAtLoginDescription:
-          "Inicia o Unsloth em segundo plano quando você faz login. Ele permanece na barra de menus ou na bandeja do sistema até você abri-lo.",
-
+        launchAtLoginDescription: "Inicia o Unsloth em segundo plano quando você faz login. Ele permanece na barra de menus ou na bandeja do sistema até você abri-lo.",
         closeToTray: "Fechar para a bandeja do sistema",
-        closeToTrayDescription:
-          "Mantém o Unsloth e seu servidor em execução em segundo plano ao fechar a janela principal.",
-        closeToTraySaveError:
-          "Não foi possível atualizar a configuração de fechar para a bandeja do sistema.",
-
+        closeToTrayDescription: "Mantém o Unsloth e seu servidor em execução em segundo plano ao fechar a janela principal.",
+        closeToTraySaveError: "Não foi possível atualizar a configuração de fechar para a bandeja do sistema.",
         menuBarIcon: "Mostrar na barra de menus",
-        menuBarIconDescription:
-          "Mostra o ícone do Unsloth na barra de menus do macOS. Quando oculto, o Unsloth permanece no Dock, inclusive quando é iniciado no login.",
-        menuBarIconSaveError:
-          "Não foi possível atualizar a configuração do ícone da barra de menus.",
-        loadError:
-          "Não foi possível carregar a configuração de inicialização no login.",
-        saveError:
-          "Não foi possível atualizar a configuração de inicialização no login.",
+        menuBarIconDescription: "Mostra o ícone do Unsloth na barra de menus do macOS. Quando oculto, o Unsloth permanece no Dock, inclusive quando é iniciado no login.",
+        menuBarIconSaveError: "Não foi possível atualizar a configuração do ícone da barra de menus.",
+        loadError: "Não foi possível carregar a configuração de inicialização no login.",
+        saveError: "Não foi possível atualizar a configuração de inicialização no login.",
       },
       power: {
         sectionTitle: "Energia",
         keepAwake: "Manter o computador ativo",
-        keepAwakeDescription:
-          "Impede que este computador entre em suspensão sozinho enquanto o Unsloth estiver em execução. A tela ainda pode se apagar.",
+        keepAwakeDescription: "Impede que este computador entre em suspensão sozinho enquanto o Unsloth estiver em execução. A tela ainda pode se apagar.",
         keepAwakeKeywords: "suspensão repouso hibernar energia sleep caffeinate",
         loadError: "Não foi possível carregar a configuração de manter o computador ativo.",
         saveError: "Não foi possível atualizar a configuração de manter o computador ativo.",
@@ -2251,28 +2163,20 @@ export const ptBR = {
       downloads: {
         sectionTitle: "Downloads",
         transport: "Transporte de download",
-        transportDescription:
-          "Como os arquivos de modelos e datasets chegam do Hugging Face. HTTPS continua de onde parou; Xet costuma ser mais rápido no primeiro download, mas reinicia o arquivo se você cancelar.",
-        transportHint:
-          "HTTPS é TLS comum: qualquer rede, proxy e VPN permite, uma transferência cancelada ou interrompida continua dos bytes já gravados e o uso de memória fica estável. O Xet busca blocos deduplicados, então um repositório que compartilha dados com outro que você já tem pode chegar muito mais rápido, mas ele exige hf_xet, usa mais RAM e um cancelamento descarta o arquivo em andamento. Auto decide por máquina: pesa a RAM e se o Xet tem travado aqui, e recorre ao HTTPS.",
+        transportDescription: "Como os arquivos de modelos e datasets chegam do Hugging Face. HTTPS continua de onde parou; Xet costuma ser mais rápido no primeiro download, mas reinicia o arquivo se você cancelar.",
+        transportHint: "HTTPS é TLS comum: qualquer rede, proxy e VPN permite, uma transferência cancelada ou interrompida continua dos bytes já gravados e o uso de memória fica estável. O Xet busca blocos deduplicados, então um repositório que compartilha dados com outro que você já tem pode chegar muito mais rápido, mas ele exige hf_xet, usa mais RAM e um cancelamento descarta o arquivo em andamento. Auto decide por máquina: pesa a RAM e se o Xet tem travado aqui, e recorre ao HTTPS.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Auto",
-        httpsHint:
-          "TLS padrão. Continua após um cancelamento, funciona em qualquer rede, memória estável.",
-        transportDescriptionNoResume:
-          "Como os arquivos de modelos e conjuntos de dados são baixados do Hugging Face. Nesta instalação nenhum transporte pode retomar, então um download cancelado recomeça; o Xet costuma ser mais rápido no primeiro download.",
-        httpsHintNoResume:
-          "TLS padrão. Funciona em qualquer rede, uso de memória estável. Esta instalação não consegue retomar um download cancelado.",
-        xetHint:
-          "Transferência por blocos deduplicados. Costuma ser mais rápida num download novo, reinicia o arquivo se você cancelar, precisa de mais memória.",
-        autoHint:
-          "Escolhe por máquina e muda para HTTPS se o Xet travar ou falhar aqui.",
+        httpsHint: "TLS padrão. Continua após um cancelamento, funciona em qualquer rede, memória estável.",
+        transportDescriptionNoResume: "Como os arquivos de modelos e conjuntos de dados são baixados do Hugging Face. Nesta instalação nenhum transporte pode retomar, então um download cancelado recomeça; o Xet costuma ser mais rápido no primeiro download.",
+        httpsHintNoResume: "TLS padrão. Funciona em qualquer rede, uso de memória estável. Esta instalação não consegue retomar um download cancelado.",
+        xetHint: "Transferência por blocos deduplicados. Costuma ser mais rápida num download novo, reinicia o arquivo se você cancelar, precisa de mais memória.",
+        autoHint: "Escolhe por máquina e muda para HTTPS se o Xet travar ou falhar aqui.",
         autoCurrently: "O Auto está usando {transport} nesta máquina.",
         xetMissing: "O Xet está indisponível porque o hf_xet não está instalado.",
         speedLimit: "Limite de velocidade de download",
-        speedLimitDescription:
-          "Sem limite até que um valor seja definido. Um download limitado usa HTTPS.",
+        speedLimitDescription: "Sem limite até que um valor seja definido. Um download limitado usa HTTPS.",
         speedLimitNoLimit: "Sem limite",
         speedLimitInvalid: "Digite um número em Mbit/s ou deixe o campo vazio.",
         speedLimitUsesHttps: "Os downloads usam HTTPS enquanto houver um limite de velocidade. Arquivos acima de 50 GB continuam usando Xet, sem o limite.",
@@ -2280,26 +2184,20 @@ export const ptBR = {
       uploads: {
         sectionTitle: "Uploads",
         maxUploadSize: "Limite de upload do dataset de treino",
-        maxUploadSizeDescription:
-          "O padrão é {defaultSize} MB.",
+        maxUploadSizeDescription: "O padrão é {defaultSize} MB.",
       },
       rag: {
         sectionTitle: "Documentos e RAG",
         embeddingModel: "Modelo de embedding",
         embeddingModelShort: "Transforma seus documentos em vetores para que o chat possa pesquisá-los.",
-        embeddingModelDescription:
-          "Modelo do Hugging Face ou caminho local usado para indexar e buscar seus documentos. O padrão é {defaultModel}.",
+        embeddingModelDescription: "Modelo do Hugging Face ou caminho local usado para indexar e buscar seus documentos. O padrão é {defaultModel}.",
         searchPlaceholder: "Buscar qualquer modelo no HF",
-        reindexWarning:
-          "Afeta apenas documentos recém-indexados. Reincorpore os documentos existentes após alterar o modelo.",
+        reindexWarning: "Afeta apenas documentos recém-indexados. Reincorpore os documentos existentes após alterar o modelo.",
         reembed: {
           label: "Reincorporar documentos",
-          staleOne:
-            "1 documento foi indexado com outro modelo de embedding, então a busca semântica o ignora.",
-          staleMany:
-            "{count} documentos foram indexados com outro modelo de embedding, então a busca semântica os ignora.",
-          staleArchived:
-            "O histórico de chat anterior foi indexado com outro modelo de embedding, então a busca semântica o ignora.",
+          staleOne: "1 documento foi indexado com outro modelo de embedding, então a busca semântica o ignora.",
+          staleMany: "{count} documentos foram indexados com outro modelo de embedding, então a busca semântica os ignora.",
+          staleArchived: "O histórico de chat anterior foi indexado com outro modelo de embedding, então a busca semântica o ignora.",
           running: "Reincorporando: {done} de {total}",
           action: "Reincorporar",
           stop: "Parar",
@@ -2332,8 +2230,7 @@ export const ptBR = {
         notDownloadedSized: "Não baixado · {size}",
         loaded: "Carregado",
         downloading: "Baixando {model}",
-        downloadingDescription:
-          "O progresso aparece no painel de downloads. A indexação vai usá-lo quando terminar.",
+        downloadingDescription: "O progresso aparece no painel de downloads. A indexação vai usá-lo quando terminar.",
         downloadFailed: "Não foi possível iniciar o download",
         downloadConflict: "Retome este download pelo Hub",
         downloadBusy: "Download já em andamento",
@@ -2353,8 +2250,7 @@ export const ptBR = {
         back: "Voltar às fontes",
         menuSubtitle: "Para busca em arquivos",
         device: "Dispositivo de embeddings",
-        deviceDescription:
-          "Onde o modelo de embeddings é executado, para todos os modelos. A GPU indexa grandes conjuntos de documentos mais rápido, mas mantém um pouco de VRAM em uso até o Unsloth reiniciar.",
+        deviceDescription: "Onde o modelo de embeddings é executado, para todos os modelos. A GPU indexa grandes conjuntos de documentos mais rápido, mas mantém um pouco de VRAM em uso até o Unsloth reiniciar.",
         deviceAuto: "Automático",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2376,8 +2272,7 @@ export const ptBR = {
       storage: {
         sectionTitle: "Armazenamento",
         modelsFolder: "Pasta de modelos",
-        modelsFolderDescription:
-          "Onde os modelos baixados são armazenados.",
+        modelsFolderDescription: "Onde os modelos baixados são armazenados.",
         openAction: "Abrir",
         copyAction: "Copiar caminho",
         copied: "Caminho copiado",
@@ -2386,41 +2281,31 @@ export const ptBR = {
       },
       fullInstall: {
         label: "Tipo de instalação",
-        description:
-          "Somente chat (GGUF). A instalação completa adiciona treinamento, exportação, vídeo, modelos safetensors e mais recursos de geração de imagens.",
-        descriptionCpu:
-          "Somente chat (GGUF). Nenhuma GPU compatível foi encontrada, então a instalação completa adiciona treinamento na CPU.",
+        description: "Somente chat (GGUF). A instalação completa adiciona treinamento, exportação, vídeo, modelos safetensors e mais recursos de geração de imagens.",
+        descriptionCpu: "Somente chat (GGUF). Nenhuma GPU compatível foi encontrada, então a instalação completa adiciona treinamento na CPU.",
         action: "Atualizar para a instalação completa",
         confirmTitle: "Atualizar para a instalação completa?",
-        confirmDescription:
-          "Esta instalação somente chat executa modelos GGUF. A instalação completa adiciona o PyTorch para a GPU desta máquina, o que habilita treinamento, exportação, vídeo, modelos safetensors e mais recursos de geração de imagens. Ela baixa vários gigabytes (pelo menos 5 GB de espaço em disco) e reinicia o servidor. As conversas, os modelos e as configurações são mantidos. Isso pode levar alguns minutos.",
-        confirmDescriptionCpu:
-          "Esta instalação somente chat executa modelos GGUF. Nenhuma GPU compatível foi encontrada nesta máquina, então a instalação completa adiciona o PyTorch para a CPU, o que habilita o treinamento na CPU. Treinar na CPU é muito mais lento do que na GPU. Ela precisa de pelo menos 5 GB de espaço em disco e reinicia o servidor. As conversas, os modelos e as configurações são mantidos. Isso pode levar alguns minutos.",
+        confirmDescription: "Esta instalação somente chat executa modelos GGUF. A instalação completa adiciona o PyTorch para a GPU desta máquina, o que habilita treinamento, exportação, vídeo, modelos safetensors e mais recursos de geração de imagens. Ela baixa vários gigabytes (pelo menos 5 GB de espaço em disco) e reinicia o servidor. As conversas, os modelos e as configurações são mantidos. Isso pode levar alguns minutos.",
+        confirmDescriptionCpu: "Esta instalação somente chat executa modelos GGUF. Nenhuma GPU compatível foi encontrada nesta máquina, então a instalação completa adiciona o PyTorch para a CPU, o que habilita o treinamento na CPU. Treinar na CPU é muito mais lento do que na GPU. Ela precisa de pelo menos 5 GB de espaço em disco e reinicia o servidor. As conversas, os modelos e as configurações são mantidos. Isso pode levar alguns minutos.",
         confirmAction: "Atualizar",
-        keywords:
-          "full install upgrade tipo de instalação instalação completa atualizar somente chat chat only gguf add training treinamento treinar train fine-tune pytorch torch exportação vídeo geração de imagens safetensors",
+        keywords: "full install upgrade tipo de instalação instalação completa atualizar somente chat chat only gguf add training treinamento treinar train fine-tune pytorch torch exportação vídeo geração de imagens safetensors",
       },
       repairInstall: {
         label: "Reparar a instalação",
-        description:
-          "Executa o instalador novamente sobre o ambiente gerenciado. Útil se a GPU não for detectada ou se o aplicativo não iniciar.",
+        description: "Executa o instalador novamente sobre o ambiente gerenciado. Útil se a GPU não for detectada ou se o aplicativo não iniciar.",
         action: "Reparar instalação",
         confirmTitle: "Reparar esta instalação?",
-        confirmDescription:
-          "Para o servidor e executa o instalador novamente, que reinstala o PyTorch para a GPU desta máquina. As conversas e as configurações são mantidas. Isso pode levar alguns minutos.",
-        confirmDescriptionChatOnly:
-          "Para o servidor e executa o instalador novamente. Esta é uma instalação somente chat, então o instalador também a atualiza para a instalação completa com o PyTorch, vários gigabytes no total. As conversas e as configurações são mantidas. Isso pode levar alguns minutos.",
+        confirmDescription: "Para o servidor e executa o instalador novamente, que reinstala o PyTorch para a GPU desta máquina. As conversas e as configurações são mantidas. Isso pode levar alguns minutos.",
+        confirmDescriptionChatOnly: "Para o servidor e executa o instalador novamente. Esta é uma instalação somente chat, então o instalador também a atualiza para a instalação completa com o PyTorch, vários gigabytes no total. As conversas e as configurações são mantidas. Isso pode levar alguns minutos.",
         confirmAction: "Reparar agora",
       },
       resetPreferences: {
         sectionTitle: "Zona de perigo",
         label: "Redefinir todas as preferências locais",
-        description:
-          "Limpa apenas as preferências locais. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
+        description: "Limpa apenas as preferências locais. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
         action: "Redefinir preferências",
         confirmTitle: "Redefinir todas as preferências locais?",
-        confirmDescription:
-          "Limpa as preferências locais e recarrega o Unsloth. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
+        confirmDescription: "Limpa as preferências locais e recarrega o Unsloth. Chats, acesso à API e configurações salvas no banco de dados são mantidos.",
         confirmAction: "Redefinir e recarregar",
       },
       permissions: {
@@ -2432,14 +2317,10 @@ export const ptBR = {
           full: "Acesso total",
         },
         details: {
-          ask:
-            "Pede aprovação antes de cada chamada de ferramenta, incluindo código de terminal e Python, buscas na web, edição de arquivos e ferramentas MCP. Ferramentas executadas por um provedor externo não são pausadas.",
-          auto:
-            "Executa sozinho as chamadas comuns e só pergunta quando uma ação parece arriscada, como ler credenciais, elevar privilégios ou executar comandos destrutivos.",
-          off:
-            "Executa todas as chamadas de ferramentas sem perguntar. O código de Python e terminal continua rodando no sandbox, que limita quais arquivos do seu computador ele pode acessar. Sem um sandbox do sistema funcionando, chamadas arriscadas perguntam antes.",
-          full:
-            "Executa todas as chamadas de ferramentas sem perguntar e desativa o sandbox de código, assim o código de Python e terminal pode ler e alterar qualquer arquivo que sua conta acessa.",
+          ask: "Pede aprovação antes de cada chamada de ferramenta, incluindo código de terminal e Python, buscas na web, edição de arquivos e ferramentas MCP. Ferramentas executadas por um provedor externo não são pausadas.",
+          auto: "Executa sozinho as chamadas comuns e só pergunta quando uma ação parece arriscada, como ler credenciais, elevar privilégios ou executar comandos destrutivos.",
+          off: "Executa todas as chamadas de ferramentas sem perguntar. O código de Python e terminal continua rodando no sandbox, que limita quais arquivos do seu computador ele pode acessar. Sem um sandbox do sistema funcionando, chamadas arriscadas perguntam antes.",
+          full: "Executa todas as chamadas de ferramentas sem perguntar e desativa o sandbox de código, assim o código de Python e terminal pode ler e alterar qualquer arquivo que sua conta acessa.",
         },
       },
     },
@@ -2468,12 +2349,10 @@ export const ptBR = {
       noneLabel: "Nenhuma",
       nameSaved: "Nome de perfil salvo",
       namePersistErrorTitle: "Não foi possível salvar o nome do perfil",
-      namePersistErrorDescription:
-        "O nome foi atualizado nesta sessão, mas talvez não seja mantido após recarregar a página.",
+      namePersistErrorDescription: "O nome foi atualizado nesta sessão, mas talvez não seja mantido após recarregar a página.",
       photoUpdated: "Foto de perfil atualizada",
       photoPersistErrorTitle: "Não foi possível salvar a foto do perfil",
-      photoPersistErrorDescription:
-        "A foto foi atualizada nesta sessão, mas talvez não seja mantida após recarregar a página.",
+      photoPersistErrorDescription: "A foto foi atualizada nesta sessão, mas talvez não seja mantida após recarregar a página.",
       photoUpdateErrorTitle: "Não foi possível atualizar a foto de perfil",
       imageUseError: "Não foi possível usar esta imagem.",
       uploadPhoto: "Enviar foto",
@@ -2481,15 +2360,12 @@ export const ptBR = {
       pictureOptions: "Opções da foto de perfil",
       stats: {
         title: "Suas estatísticas",
-        subtitle:
-          "Tudo abaixo é calculado a partir do seu próprio histórico. Nada é coletado nem enviado ao Unsloth.",
+        subtitle: "Tudo abaixo é calculado a partir do seu próprio histórico. Nada é coletado nem enviado ao Unsloth.",
         retry: "Tentar novamente",
         exportCsv: "Exportar CSV",
         exportError: "Não foi possível exportar o uso de tokens",
-        privacyNote:
-          "As estatísticas são calculadas a partir do histórico local de chats, uso da API e treinos da sua instalação do Unsloth. Prompts, respostas e chaves da API nunca são salvos para as estatísticas. Nada é enviado ao Unsloth ou a terceiros.",
-        emptyChats:
-          "Ainda não há uso de chat ou API. Comece uma conversa ou faça uma solicitação autenticada à API local.",
+        privacyNote: "As estatísticas são calculadas a partir do histórico local de chats, uso da API e treinos da sua instalação do Unsloth. Prompts, respostas e chaves da API nunca são salvos para as estatísticas. Nada é enviado ao Unsloth ou a terceiros.",
+        emptyChats: "Ainda não há uso de chat ou API. Comece uma conversa ou faça uma solicitação autenticada à API local.",
         lifetimeTokens: "Tokens acumulados",
         peakTokens: "Dia de pico",
         longestChat: "Chat mais longo",
@@ -2613,8 +2489,7 @@ export const ptBR = {
         },
         sentAttachments: {
           label: "Anexos nas mensagens enviadas",
-          description:
-            "Padrão mostra cada arquivo com seu tipo e Compacto cabe mais em cada linha. O modo automático muda para compacto com mais de seis arquivos.",
+          description: "Padrão mostra cada arquivo com seu tipo e Compacto cabe mais em cada linha. O modo automático muda para compacto com mais de seis arquivos.",
           auto: "Automático",
           list: "Padrão",
           chips: "Compacto",
@@ -2658,8 +2533,7 @@ export const ptBR = {
           alreadyAvailable: "Esta fonte já está disponível, então a cópia existente será usada.",
           folderNoFonts: "Nenhum arquivo de fonte encontrado nessa pasta.",
           remove: "Remover",
-          errorInvalidType:
-            "Tipo de arquivo não suportado. Use .woff2, .woff, .ttf ou .otf.",
+          errorInvalidType: "Tipo de arquivo não suportado. Use .woff2, .woff, .ttf ou .otf.",
           errorTooLarge: "O arquivo de fonte é muito grande (máx. 1,5 MB).",
           errorLimit: "Você pode importar até 3 fontes.",
           errorStorageFull: "Sem espaço de armazenamento local para esta fonte. Remova uma fonte importada primeiro.",
@@ -2697,8 +2571,7 @@ export const ptBR = {
         },
         pointerCursors: {
           label: "Usar cursor de ponteiro",
-          description:
-            "Muda o cursor para ponteiro ao passar sobre elementos interativos.",
+          description: "Muda o cursor para ponteiro ao passar sobre elementos interativos.",
         },
       },
       language: {
@@ -2714,21 +2587,18 @@ export const ptBR = {
       layout: {
         title: "Layout",
         compactSidebar: "Fixar barra lateral por padrão",
-        compactSidebarDescription:
-          "Mantém a barra lateral expandida em vez de recolhê-la em ícones.",
+        compactSidebarDescription: "Mantém a barra lateral expandida em vez de recolhê-la em ícones.",
       },
       sidebarNav: {
         title: "Navegação da barra lateral",
-        description:
-          "Fixe e reordene as abas da barra lateral. As não fixadas vão para o menu Mais.",
+        description: "Fixe e reordene as abas da barra lateral. As não fixadas vão para o menu Mais.",
         dragToReorder: "Arraste para reordenar",
         pinToSidebar: "Fixar {name} na barra lateral",
         moreHolds: "Mais ({count})",
       },
       sidebarMenu: {
         title: "Menu da barra lateral",
-        description:
-          "Escolha e reordene os atalhos do menu de perfil.",
+        description: "Escolha e reordene os atalhos do menu de perfil.",
         darkModeToggle: "Alternador de modo escuro",
         dragToReorder: "Arraste para reordenar",
       },
@@ -2748,8 +2618,7 @@ export const ptBR = {
         status: "{active} ativas · {recent} recentes · {model}",
         noModelLoaded: "Nenhum modelo carregado",
         autoOpen: "Mostrar o monitor flutuante automaticamente",
-        autoOpenDescription:
-          "Abre um pequeno painel quando chega tráfego da API.",
+        autoOpenDescription: "Abre um pequeno painel quando chega tráfego da API.",
         cpu: "CPU",
         ram: "RAM",
         disk: "Disco",
@@ -2765,8 +2634,7 @@ export const ptBR = {
         gpuUnusable: "GPU inutilizável",
         gpuUnusableDetail: "Detectada, mas o PyTorch não consegue usá-la",
         detailedView: "Visualização detalhada",
-        detailedViewDescription:
-          "Mostra a carga, temperatura e consumo de cada GPU na janela flutuante.",
+        detailedViewDescription: "Mostra a carga, temperatura e consumo de cada GPU na janela flutuante.",
         gpuLoad: "Carga da GPU",
         temperature: "Temperatura",
         power: "Consumo",
@@ -2799,12 +2667,9 @@ export const ptBR = {
         unreadable: "Não foi possível ler o hardware deste servidor.",
         noGpu: "Nenhuma GPU dedicada detectada.",
         noUsableGpu: "Nenhuma GPU desta máquina pode ser usada pelo PyTorch.",
-        mismatchCpuBuild:
-          "O PyTorch é uma compilação somente CPU ({version}), então as GPUs abaixo não podem ser usadas. Repare a instalação para restaurar o suporte a GPU.",
-        mismatchUnavailable:
-          "O PyTorch ({version}) não consegue inicializar as GPUs abaixo, então elas não podem ser usadas. Verifique o driver da GPU ou repare a instalação.",
-        driverIdleEvict:
-          "O driver AMD {version} tem um bug conhecido que pode congelar o Windows quando uma GPU AMD fica ociosa, principalmente com mais de uma GPU. Atualize para o Adrenalin 26.9.2 ou posterior.",
+        mismatchCpuBuild: "O PyTorch é uma compilação somente CPU ({version}), então as GPUs abaixo não podem ser usadas. Repare a instalação para restaurar o suporte a GPU.",
+        mismatchUnavailable: "O PyTorch ({version}) não consegue inicializar as GPUs abaixo, então elas não podem ser usadas. Verifique o driver da GPU ou repare a instalação.",
+        driverIdleEvict: "O driver AMD {version} tem um bug conhecido que pode congelar o Windows quando uma GPU AMD fica ociosa, principalmente com mais de uma GPU. Atualize para o Adrenalin 26.9.2 ou posterior.",
         driverIdleEvictDetails: "Detalhes",
         dismissNotice: "Dispensar",
         unusableDevice: "inutilizável",
@@ -2866,11 +2731,9 @@ export const ptBR = {
           sourceBuild: "Este llama.cpp foi compilado a partir do código-fonte, então o backend dele não pode ser trocado aqui.",
           customPath: "Uma pasta personalizada do llama.cpp está selecionada. A compilação dela determina o backend de computação.",
           unresolved: "Não foi possível verificar os backends disponíveis. Verifique sua conexão e tente novamente.",
-          updateChecksDisabled:
-            "As verificações de atualização estão desativadas (UNSLOTH_DISABLE_UPDATE_CHECK=1), então os backends disponíveis não são consultados.",
+          updateChecksDisabled: "As verificações de atualização estão desativadas (UNSLOTH_DISABLE_UPDATE_CHECK=1), então os backends disponíveis não são consultados.",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine",
+        llamaBackendKeywords: "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine",
       },
       modelMemory: {
         title: "Carregamento do modelo",
@@ -2886,28 +2749,22 @@ export const ptBR = {
         multiModelFit: "Quando couberem",
         multiModelAlways: "Sempre",
         multiModelDescription: "Carregar um modelo de chat, fala, imagem ou vídeo descarrega os outros.",
-        multiModelDescriptionFit:
-          "Carregar um modelo mantém os outros quando eles cabem. Quando não cabem, descarrega primeiro os que não estão em uso e depois o ativo.",
-        multiModelDescriptionAlways:
-          "Carregar um modelo nunca descarrega outro. Um modelo que não cabe não é carregado. A descarga automática por inatividade e o treinamento ainda liberam memória.",
+        multiModelDescriptionFit: "Carregar um modelo mantém os outros quando eles cabem. Quando não cabem, descarrega primeiro os que não estão em uso e depois o ativo.",
+        multiModelDescriptionAlways: "Carregar um modelo nunca descarrega outro. Um modelo que não cabe não é carregado. A descarga automática por inatividade e o treinamento ainda liberam memória.",
         multiModelHint: "Vale para modelos de chat, fala, imagem e vídeo. Cada modelo de chat carregado responde às solicitações que o nomeiam. Com várias GPUs, o Unsloth tenta colocar um novo modelo em uma GPU que nenhum outro modelo usa. “Quando couberem” deixa cerca de 1 GB livre. “Quando couberem” e “Sempre” nunca descarregam um modelo em outra GPU.",
         allowOversizedLoad: "Permitir carregar modelos grandes demais",
         allowOversizedLoadDescription: "Carregar modelos de imagem e vídeo mesmo quando a verificação de memória indica que eles não cabem.",
         allowOversizedLoadHint: "Vale quando a CPU e a GPU compartilham uma única memória (Apple Silicon, GPUs integradas). O Unsloth recusa o carregamento quando a estimativa dos pesos do modelo é maior que a memória que sobra depois de reservar espaço para o sistema operacional. Com esta opção ativada, o carregamento é tentado mesmo assim. A estimativa pode errar para os dois lados: um carregamento grande demais pode falhar, esgotar a memória, fazer o computador usar muito a memória de troca ou travar, ou encerrar o Unsloth. Desativado por padrão.",
-        mediaIdleUnloadDescription:
-          "Libera a VRAM descarregando os modelos de imagem e vídeo após esta quantidade de segundos de inatividade. 0 os mantém carregados; o mínimo é 60.",
+        mediaIdleUnloadDescription: "Libera a VRAM descarregando os modelos de imagem e vídeo após esta quantidade de segundos de inatividade. 0 os mantém carregados; o mínimo é 60.",
         mlockVetoed: "--mlock continua desativado: fixar o modelo reservaria RAM para todo ele. A descarga automática por inatividade continua desativada.",
         mlockNotApplicable: "Totalmente na GPU: nada para bloquear na RAM do sistema. A descarga automática por inatividade continua desativada.",
         memlockCapped: "Este sistema limita a memória bloqueada a {limit}. Um modelo maior não será totalmente fixado; aumente o limite com ulimit -l.",
         reloadRequired: "Recarregue o modelo para aplicar as novas opções de memória.",
         loadError: "Falha ao carregar as configurações de memória do modelo",
         saveError: "Falha ao salvar as configurações de memória do modelo",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu memoria ram residente fixar travar manter carregado descarregar ocioso mmap no-mmap load-mode paginacao swap",
-        multiModelKeywords:
-          "varios multiplos modelos juntos simultaneos trocar caber descarregar remover vram gpu imagem video chat sempre ocioso fala voz tts ler em voz alta",
-        mediaIdleUnloadKeywords:
-          "imagem video difusao ocioso descarregar ttl tempo limite segundos liberar vram gpu memoria",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu memoria ram residente fixar travar manter carregado descarregar ocioso mmap no-mmap load-mode paginacao swap",
+        multiModelKeywords: "varios multiplos modelos juntos simultaneos trocar caber descarregar remover vram gpu imagem video chat sempre ocioso fala voz tts ler em voz alta",
+        mediaIdleUnloadKeywords: "imagem video difusao ocioso descarregar ttl tempo limite segundos liberar vram gpu memoria",
       },
       storage: {
         title: "Armazenamento",
@@ -2923,8 +2780,7 @@ export const ptBR = {
         diskUsage: "{used} usados / {total}",
         diskFree: "{free} livres",
         modelsFolder: "Pasta de modelos",
-        modelsFolderKeywords:
-          "modelos pasta diretorio diretório caminho local localizacao localização downloads baixar cache armazenamento disco unidade mover alterar models folder path hugging face",
+        modelsFolderKeywords: "modelos pasta diretorio diretório caminho local localizacao localização downloads baixar cache armazenamento disco unidade mover alterar models folder path hugging face",
         modelsFolderDescription: "Onde os modelos baixados são armazenados.",
         modelsFolderHint: "Onde os modelos baixados são armazenados. Altere para manter os modelos fora da sua unidade de sistema. Vale apenas para novos downloads. Os modelos que você já tem permanecem onde estão.",
         openAction: "Abrir",
@@ -2934,11 +2790,9 @@ export const ptBR = {
         copyError: "Não foi possível copiar o caminho",
         caches: {
           label: "Arquivos de cache",
-          description:
-            "{size} em caches, dos quais {reclaimable} podem ser limpos agora.",
+          description: "{size} em caches, dos quais {reclaimable} podem ser limpos agora.",
           hint: "Downloads de pacotes, kernels compilados e caches de transferência que o Unsloth recria quando precisa deles. Modelos baixados, projetos, conversas, configurações e o seu token do Hugging Face nunca são limpos aqui.",
-          keywords:
-            "cache caches limpar apagar esvaziar liberar espaço disco temporário compilado cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
+          keywords: "cache caches limpar apagar esvaziar liberar espaço disco temporário compilado cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
           measuring: "Medindo o tamanho dos caches...",
           measureFailed: "Não foi possível medir os caches",
           empty: "Nenhum arquivo de cache encontrado.",
@@ -2955,14 +2809,10 @@ export const ptBR = {
           confirmTitle: "Limpar os arquivos em cache?",
           confirmDescription: "Isso libera cerca de {size}.",
           confirmOneTitle: "Limpar {name}?",
-          safety:
-            "O Unsloth recria um cache na próxima vez que precisar dele. Modelos baixados, projetos, conversas, configurações e o seu token do Hugging Face não são afetados.",
-          hubCost:
-            "Este é o cache de modelos. Ao limpá-lo, esses modelos serão baixados novamente na próxima vez que você usá-los.",
-          datasetsCost:
-            "Ao limpar isso, esses conjuntos de dados serão baixados novamente na próxima vez que você usá-los.",
-          npuCost:
-            "Estes são seus modelos NPU baixados. Limpar os exclui, e você precisa baixá-los de novo pelo Hub para usá-los.",
+          safety: "O Unsloth recria um cache na próxima vez que precisar dele. Modelos baixados, projetos, conversas, configurações e o seu token do Hugging Face não são afetados.",
+          hubCost: "Este é o cache de modelos. Ao limpá-lo, esses modelos serão baixados novamente na próxima vez que você usá-los.",
+          datasetsCost: "Ao limpar isso, esses conjuntos de dados serão baixados novamente na próxima vez que você usá-los.",
+          npuCost: "Estes são seus modelos NPU baixados. Limpar os exclui, e você precisa baixá-los de novo pelo Hub para usá-los.",
           blocked: "Não foi limpo: {reason}",
           cleared: "{size} liberados",
           partial: "Não foi possível remover alguns arquivos de cache",
@@ -2990,8 +2840,7 @@ export const ptBR = {
         lowDisk: {
           title: "O espaço em disco está acabando",
           criticalTitle: "O espaço em disco está criticamente baixo",
-          description:
-            "{free} livres de {total}. Limpar os caches pode liberar espaço.",
+          description: "{free} livres de {total}. Limpar os caches pode liberar espaço.",
           action: "Ver caches",
         },
         futureDownloads: "Apenas novos downloads",
@@ -3002,8 +2851,7 @@ export const ptBR = {
         chooseTitle: "Escolher o local de download dos modelos",
         chooseAction: "Usar para downloads futuros",
         cacheSaved: "Local de download dos modelos atualizado",
-        cacheSaveError:
-          "Não foi possível atualizar o local de download dos modelos",
+        cacheSaveError: "Não foi possível atualizar o local de download dos modelos",
         cachePickerError: "Não foi possível abrir o seletor de pastas",
       },
       environment: {
@@ -3023,13 +2871,10 @@ export const ptBR = {
     },
     agents: {
       title: "Agentes",
-      description:
-        "Conecte agentes de código como Claude Code e Codex a um modelo local com unsloth start.",
+      description: "Conecte agentes de código como Claude Code e Codex a um modelo local com unsloth start.",
       agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
-      vscodeNote:
-        "O VS Code é a exceção: este comando adiciona o modelo servido à lista de modelos do Copilot Chat no VS Code (chatLanguageModels.json).",
-      intro:
-        "conecta Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode e outros agentes a um modelo servido localmente pelo Unsloth, totalmente offline. Ele executa um servidor compatível com a API da OpenAI e nunca altera os arquivos de configuração do seu agente.",
+      vscodeNote: "O VS Code é a exceção: este comando adiciona o modelo servido à lista de modelos do Copilot Chat no VS Code (chatLanguageModels.json).",
+      intro: "conecta Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode e outros agentes a um modelo servido localmente pelo Unsloth, totalmente offline. Ele executa um servidor compatível com a API da OpenAI e nunca altera os arquivos de configuração do seu agente.",
       readDocs: "Ler a documentação",
       copy: "Copiar",
       copied: "Copiado",
@@ -3039,15 +2884,13 @@ export const ptBR = {
       model: "Modelo",
       searchModels: "Buscar modelos GGUF...",
       noModels: "Nenhum modelo GGUF correspondente.",
-      showingModels:
-        "Mostrando {shown} de {total} resultados. Continue digitando para refinar a lista.",
+      showingModels: "Mostrando {shown} de {total} resultados. Continue digitando para refinar a lista.",
       quantization: "Quantização",
       loadingQuantizations: "Carregando quantizações...",
       noQuantizations: "Sem quantização separada",
       recommended: "Recomendado",
       downloaded: "Baixado",
-      quantizationLoadError:
-        "Não foi possível carregar todas as quantizações. O comando usará o valor de modelo disponível.",
+      quantizationLoadError: "Não foi possível carregar todas as quantizações. O comando usará o valor de modelo disponível.",
       generatedCommand: "Comando gerado",
       docs: "Documentação",
       docsLabel: "Abrir a documentação do unsloth start",
@@ -3057,12 +2900,10 @@ export const ptBR = {
       configurationNote: "Você também pode ajustar qualquer configuração. Veja mais abaixo ou consulte a",
       configurationDocs: "documentação",
       configurationFlagsSuffix: "para ver as flags.",
-      modelNote:
-        "O Claude Code e o Codex exigem um modelo GGUF servido pelo llama-server ou um modelo MLX. Outros agentes também podem usar modelos baseados em transformers; remova --model para usar o modelo já carregado no Unsloth.",
+      modelNote: "O Claude Code e o Codex exigem um modelo GGUF servido pelo llama-server ou um modelo MLX. Outros agentes também podem usar modelos baseados em transformers; remova --model para usar o modelo já carregado no Unsloth.",
       subagent: {
         title: "Usar um modelo local como subagente",
-        description:
-          "Mantenha o {agent} no modelo atual e delegue tarefas selecionadas a este modelo local do Unsloth.",
+        description: "Mantenha o {agent} no modelo atual e delegue tarefas selecionadas a este modelo local do Unsloth.",
         setupCommand: "Comando de configuração",
         copySetupCommand: "Copiar comando de configuração do subagente",
         usagePrompt: "Depois, no {agent}, digite:",
@@ -3072,10 +2913,8 @@ export const ptBR = {
       },
       quickstart: {
         title: "Montar um comando",
-        description:
-          "Inicie um agente com o modelo carregado no Unsloth. Carregue um modelo primeiro e depois troque claude por qualquer agente compatível abaixo.",
-        noneDetected:
-          "Nenhuma CLI de agente compatível foi encontrada no seu PATH.",
+        description: "Inicie um agente com o modelo carregado no Unsloth. Carregue um modelo primeiro e depois troque claude por qualquer agente compatível abaixo.",
+        noneDetected: "Nenhuma CLI de agente compatível foi encontrada no seu PATH.",
         installed: "Instalado",
       },
       supportedAgents: {
@@ -3085,64 +2924,66 @@ export const ptBR = {
       },
       models: {
         title: "Escolher um modelo",
-        description:
-          "Use --model para escolher um modelo e a quantização, e --context-length para definir a janela. Use um sufixo de quantização ou a flag explícita --gguf-variant.",
+        description: "Use --model para escolher um modelo e a quantização, e --context-length para definir a janela. Use um sufixo de quantização ou a flag explícita --gguf-variant.",
         suffixLabel: "Com sufixo de quantização",
         variantLabel: "Com a flag explícita de variante",
       },
       options: {
         title: "Opções comuns",
-        description:
-          "As flags do Unsloth são interpretadas primeiro; tudo o que ele não reconhecer é repassado direto ao agente.",
-        model:
-          "Seleciona um modelo. Sem --model, o unsloth start usa o modelo carregado no Unsloth e retorna erro se não houver nenhum.",
-        contextLength:
-          "Define o tamanho de contexto solicitado (alias: --max-seq-length).",
+        description: "As flags do Unsloth são interpretadas primeiro; tudo o que ele não reconhecer é repassado direto ao agente.",
+        model: "Seleciona um modelo. Sem --model, o unsloth start usa o modelo carregado no Unsloth e retorna erro se não houver nenhum.",
+        contextLength: "Define o tamanho de contexto solicitado (alias: --max-seq-length).",
         ggufVariant: "Escolhe a variante de quantização GGUF.",
-        loadIn4bit:
-          "Ativa ou desativa o carregamento em 4 bits para modelos do Hugging Face.",
-        tensorParallel:
-          "Ativa ou desativa o paralelismo de tensores entre várias GPUs.",
+        loadIn4bit: "Ativa ou desativa o carregamento em 4 bits para modelos do Hugging Face.",
+        tensorParallel: "Ativa ou desativa o paralelismo de tensores entre várias GPUs.",
         serve: "Ativa ou desativa o servidor local automático.",
         launch: "Inicia o agente ou apenas exibe o comando e o ambiente.",
-        persist:
-          "Mantém entre execuções o armazenamento de agentes gerenciado pelo Unsloth.",
-        asSubagent:
-          "Mantém o agente principal no modelo atual e registra o Unsloth como subagente local (Claude Code, Codex, OpenCode e Pi).",
-        apiKey:
-          "Informa sua chave de API do Unsloth (ou defina UNSLOTH_API_KEY).",
-        reasoning:
-          "Usar raciocínio no chat: on, off ou auto. Auto segue o chat template do modelo, o que normalmente significa on.",
-        reasoningEffort:
-          "Esforço de raciocínio passado ao chat template do modelo, por exemplo medium. Os níveis dependem do modelo, então use um que ele aceite. Sem valor, vale o do template.",
+        persist: "Mantém entre execuções o armazenamento de agentes gerenciado pelo Unsloth.",
+        asSubagent: "Mantém o agente principal no modelo atual e registra o Unsloth como subagente local (Claude Code, Codex, OpenCode e Pi).",
+        apiKey: "Informa sua chave de API do Unsloth (ou defina UNSLOTH_API_KEY).",
+        reasoning: "Usar raciocínio no chat: on, off ou auto. Auto segue o chat template do modelo, o que normalmente significa on.",
+        reasoningEffort: "Esforço de raciocínio passado ao chat template do modelo, por exemplo medium. Os níveis dependem do modelo, então use um que ele aceite. Sem valor, vale o do template.",
         yolo: "Pula os pedidos de aprovação. Use apenas em ambientes confiáveis.",
       },
       remote: {
         title: "Conectar a um Unsloth remoto",
-        description:
-          "Aponte o unsloth start para um Unsloth em execução em outro lugar, definindo estas variáveis antes de iniciar (ou passe --api-key diretamente):",
+        description: "Aponte o unsloth start para um Unsloth em execução em outro lugar, definindo estas variáveis antes de iniciar (ou passe --api-key diretamente):",
       },
       passthrough: {
         title: "Repassar argumentos ao agente",
-        description:
-          "Os argumentos após as flags do Unsloth são encaminhados ao próprio agente, então comandos nativos como resume continuam funcionando:",
+        description: "Os argumentos após as flags do Unsloth são encaminhados ao próprio agente, então comandos nativos como resume continuam funcionando:",
       },
       dryRun: {
         title: "Visualizar sem iniciar",
-        description:
-          "Adicione --no-launch para exibir o ambiente e o comando em vez de iniciar o agente. Se --model estiver definido, o modelo ainda pode ser resolvido e carregado.",
+        description: "Adicione --no-launch para exibir o ambiente e o comando em vez de iniciar o agente. Se --model estiver definido, o modelo ainda pode ser resolvido e carregado.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Respostas" },
-        thinkingTools: { title: "Raciocínio e ferramentas" },
-        conversations: { title: "Conversas" },
-        files: { title: "Arquivos e colagem" },
-        display: { title: "Exibição" },
-        composer: { title: "Caixa de mensagem" },
-        menu: { title: "Menu do chat" },
-        advanced: { title: "Avançado" },
+        replies: {
+          title: "Respostas",
+        },
+        thinkingTools: {
+          title: "Raciocínio e ferramentas",
+        },
+        conversations: {
+          title: "Conversas",
+        },
+        files: {
+          title: "Arquivos e colagem",
+        },
+        display: {
+          title: "Exibição",
+        },
+        composer: {
+          title: "Caixa de mensagem",
+        },
+        menu: {
+          title: "Menu do chat",
+        },
+        advanced: {
+          title: "Avançado",
+        },
         contextTitle: "Contexto",
       },
       library: {
@@ -3150,14 +2991,11 @@ export const ptBR = {
         description: "Pesquise, ordene e organize chats, projetos e seções.",
         action: "Abrir Biblioteca",
       },
-      projectAttachmentsHint:
-        "Altere esta configuração para cada chat pelo menu de anexos.",
-      rememberParamsPerModelHint:
-        "Quando desativado, todos os modelos usam as mesmas configurações.",
+      projectAttachmentsHint: "Altere esta configuração para cada chat pelo menu de anexos.",
+      rememberParamsPerModelHint: "Quando desativado, todos os modelos usam as mesmas configurações.",
       autoCompactHint: "Chats GGUF e MLX locais: Os turnos removidos são indexados para que o modelo possa buscá-los de volta, e uma reinicialização cita palavra por palavra as instruções permanentes que couberem, priorizando as mais antigas e as mais recentes em vez das intermediárias. Arquivar exige um chat salvo e o índice vetorial; sem eles, os turnos antigos são descartados. Usa o tamanho de contexto definido, não a VRAM disponível. Modelos de API: o provedor resume os turnos antigos quando oferece suporte; caso contrário, os mais antigos são descartados quando o chat se aproxima da janela de contexto publicada do modelo.",
       pastedTextShortDescription: "Textos colados com {count} caracteres ou mais viram anexos .txt.",
-      pastedTextOffDescription:
-        "Todo o texto colado fica na caixa de mensagem, independentemente do tamanho.",
+      pastedTextOffDescription: "Todo o texto colado fica na caixa de mensagem, independentemente do tamanho.",
       title: "Chat",
       description: "Personalize o funcionamento do chat neste dispositivo.",
       modelSelection: {
@@ -3165,14 +3003,11 @@ export const ptBR = {
         expandQuantizations: "Expandir quantizações",
         expandQuantizationsDescription: "Mostra as quantizações GGUF em “No dispositivo” sem abrir cada modelo.",
         showAllQuantizations: "Mostrar todas as quantizações",
-        showAllQuantizationsDescription:
-          "Ativado: lista todas as quantizações em “On Device”, inclusive as que não foram baixadas. Desativado: mostra apenas as quantizações baixadas.",
+        showAllQuantizationsDescription: "Ativado: lista todas as quantizações em “On Device”, inclusive as que não foram baixadas. Desativado: mostra apenas as quantizações baixadas.",
         showMemoryBar: "Mostrar barra de uso de VRAM",
-        showMemoryBarDescription:
-          "Mostra abaixo da linha de cada modelo baixado o uso estimado de VRAM: pesos, cache KV no comprimento de contexto com que será carregado e qualquer reserva de rascunho especulativo.",
+        showMemoryBarDescription: "Mostra abaixo da linha de cada modelo baixado o uso estimado de VRAM: pesos, cache KV no comprimento de contexto com que será carregado e qualquer reserva de rascunho especulativo.",
         fitOnDeviceOnly: "Mostrar apenas modelos que cabem",
-        fitOnDeviceOnlyDescription:
-          "Oculta no seletor de modelos e no Hub os modelos grandes demais para a memória da GPU e a RAM deste dispositivo. Os modelos baixados continuam visíveis.",
+        fitOnDeviceOnlyDescription: "Oculta no seletor de modelos e no Hub os modelos grandes demais para a memória da GPU e a RAM deste dispositivo. Os modelos baixados continuam visíveis.",
         pickerExpandLoaded: "Mostrar a lista completa de modelos",
         pickerExpandLoadedDescription: "Abre o seletor de modelos na lista completa enquanto um modelo está carregado, em vez de apenas o modelo carregado. Expandir ou recolher o seletor também altera esta configuração.",
         pickerMonochromeIcons: "Ícones de modelos monocromáticos",
@@ -3197,46 +3032,33 @@ export const ptBR = {
         more: "Mais",
       },
       pastedTextThreshold: "Condensar colagens longas",
-      pastedTextThresholdDescription:
-        "Pressione {shortcut} para colar diretamente na caixa de mensagem.",
+      pastedTextThresholdDescription: "Pressione {shortcut} para colar diretamente na caixa de mensagem.",
       pastedTextThresholdOff: "Desativado",
       autoScroll: "Rolagem durante a geração",
-      autoScrollDescription:
-        "A rolagem automática mantém o texto novo à vista. Manual fica parado para ler desde o início.",
+      autoScrollDescription: "A rolagem automática mantém o texto novo à vista. Manual fica parado para ler desde o início.",
       autoScrollAuto: "Rolagem automática",
       autoScrollManual: "Manual",
-      autoScrollKeywords:
-        "rolagem rolar automática acompanhar fim pular streaming gerar visualização travar scroll autoscroll follow",
+      autoScrollKeywords: "rolagem rolar automática acompanhar fim pular streaming gerar visualização travar scroll autoscroll follow",
       replyNotification: "Avisar quando uma resposta terminar",
-      replyNotificationDescription:
-        "Mostra uma notificação do sistema quando uma resposta termina enquanto o Unsloth está minimizado ou em segundo plano.",
-      replyNotificationBlocked:
-        "As notificações estão bloqueadas. Permita-as para o Unsloth nas configurações do navegador ou do sistema e tente novamente.",
-      replyNotificationKeywords:
-        "notificação avisar alerta terminou concluído pronto resposta segundo plano minimizado notify notification alert done finished reply background",
+      replyNotificationDescription: "Mostra uma notificação do sistema quando uma resposta termina enquanto o Unsloth está minimizado ou em segundo plano.",
+      replyNotificationBlocked: "As notificações estão bloqueadas. Permita-as para o Unsloth nas configurações do navegador ou do sistema e tente novamente.",
+      replyNotificationKeywords: "notificação avisar alerta terminou concluído pronto resposta segundo plano minimizado notify notification alert done finished reply background",
       showLinkPreviews: "Prévias de links",
       showLinkPreviewsDescription: "Mostrar prévias ao passar o cursor sobre os links das fontes.",
       showResponseModel: "Mostrar o modelo da resposta",
-      showResponseModelDescription:
-        "Mostra os metadados do modelo nas respostas do assistente.",
+      showResponseModelDescription: "Mostra os metadados do modelo nas respostas do assistente.",
       showReplyTimes: "Horário das respostas",
       showReplyTimesDescription: "Mostrar abaixo de cada resposta quando ela terminou.",
-      showReplyTimesKeywords:
-        "carimbo de data hora data quando terminou resposta mensagem timestamp time clock date reply",
+      showReplyTimesKeywords: "carimbo de data hora data quando terminou resposta mensagem timestamp time clock date reply",
       showGenerationDetails: "Informações detalhadas de velocidade",
-      showGenerationDetailsDescription:
-        "Adiciona às leituras ao vivo a velocidade de leitura do prompt, a contagem de tokens e a aceitação de rascunhos.",
-      showGenerationDetailsKeywords:
-        "detalhes geração velocidade tokens estatísticas desenvolvedor verbose developer stats speed tok/s prefill decode",
+      showGenerationDetailsDescription: "Adiciona às leituras ao vivo a velocidade de leitura do prompt, a contagem de tokens e a aceitação de rascunhos.",
+      showGenerationDetailsKeywords: "detalhes geração velocidade tokens estatísticas desenvolvedor verbose developer stats speed tok/s prefill decode",
       generationStatsUpdates: "Estatísticas de velocidade e contexto",
-      generationStatsUpdatesDescription:
-        "Em tempo real conta tokens por segundo e uso do contexto enquanto uma resposta é transmitida. Ao terminar atualiza quando cada resposta termina.",
-      generationStatsUpdatesHint:
-        "Em tempo real atualiza o indicador de tokens por segundo abaixo de uma resposta e a barra de contexto no topo do chat algumas vezes por segundo enquanto a resposta é escrita. Ao terminar atualiza uma vez, quando cada resposta termina. O modo em tempo real pode causar lentidão ou queda de desempenho, principalmente em máquinas antigas ou ocupadas.",
+      generationStatsUpdatesDescription: "Em tempo real conta tokens por segundo e uso do contexto enquanto uma resposta é transmitida. Ao terminar atualiza quando cada resposta termina.",
+      generationStatsUpdatesHint: "Em tempo real atualiza o indicador de tokens por segundo abaixo de uma resposta e a barra de contexto no topo do chat algumas vezes por segundo enquanto a resposta é escrita. Ao terminar atualiza uma vez, quando cada resposta termina. O modo em tempo real pode causar lentidão ou queda de desempenho, principalmente em máquinas antigas ou ocupadas.",
       generationStatsUpdatesSettled: "Ao terminar",
       generationStatsUpdatesRealtime: "Em tempo real",
-      generationStatsUpdatesKeywords:
-        "tempo real ao vivo atualizar velocidade contexto estatísticas realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "tempo real ao vivo atualizar velocidade contexto estatísticas realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Editar resposta nas respostas",
       inlineEditResponseDescription: "Mostrar Editar resposta em cada resposta, em vez de no menu Mais.",
       turnNavigation: "Navegação por turnos",
@@ -3244,23 +3066,16 @@ export const ptBR = {
       composerPosition: "Posição da caixa de texto",
       composerPositionDescription: "Onde a caixa de texto fica ao começar uma nova conversa, do topo da página até embaixo.",
       projectAttachments: "Compartilhar arquivos em todo o projeto",
-      projectAttachmentsDescription:
-        "Disponibiliza novos anexos para todos os chats do projeto.",
+      projectAttachmentsDescription: "Disponibiliza novos anexos para todos os chats do projeto.",
       rememberParamsPerModel: "Lembrar as configurações por modelo",
-      rememberParamsPerModelDescription:
-        "Restaura o último prompt, a temperatura e as outras configurações usadas com cada modelo.",
+      rememberParamsPerModelDescription: "Restaura o último prompt, a temperatura e as outras configurações usadas com cada modelo.",
       autoCompact: "Compactar automaticamente chats longos",
-      autoCompactDescription:
-        "Os turnos antigos vão para um arquivo pesquisável quando um chat enche o contexto.",
-      autoCompactKeywords:
-        "compactação compactar automaticamente contexto janela truncar deslizante checkpoint margem arquivo recuperação busca compaction rolling headroom archive retrieval rag",
+      autoCompactDescription: "Os turnos antigos vão para um arquivo pesquisável quando um chat enche o contexto.",
+      autoCompactKeywords: "compactação compactar automaticamente contexto janela truncar deslizante checkpoint margem arquivo recuperação busca compaction rolling headroom archive retrieval rag",
       keepRunningWhenTabClosed: "Continuar após fechar a aba",
-      keepRunningWhenTabClosedDescription:
-        "Respostas, pesquisa na web e Deep Research continuam no servidor depois que a aba é fechada. Desative para pará-las.",
-      keepRunningWhenTabClosedHint:
-        "Reabra o chat em qualquer dispositivo para retomar uma execução que continuou. Desativado, uma execução para cerca de um minuto depois que sua última aba é fechada, então recarregar não a interrompe. Vale para execuções iniciadas depois da mudança. Chats temporários, respostas de modelos de API ou a anexos e turnos que usam o painel do navegador sempre param com a aba.",
-      keepRunningWhenTabClosedKeywords:
-        "segundo plano aba fechar fechada sair continuar parar cancelar pesquisa web dispositivo celular background tab close keep running continue stop cancel deep research web search resume",
+      keepRunningWhenTabClosedDescription: "Respostas, pesquisa na web e Deep Research continuam no servidor depois que a aba é fechada. Desative para pará-las.",
+      keepRunningWhenTabClosedHint: "Reabra o chat em qualquer dispositivo para retomar uma execução que continuou. Desativado, uma execução para cerca de um minuto depois que sua última aba é fechada, então recarregar não a interrompe. Vale para execuções iniciadas depois da mudança. Chats temporários, respostas de modelos de API ou a anexos e turnos que usam o painel do navegador sempre param com a aba.",
+      keepRunningWhenTabClosedKeywords: "segundo plano aba fechar fechada sair continuar parar cancelar pesquisa web dispositivo celular background tab close keep running continue stop cancel deep research web search resume",
       firstTokenLabel: "Limite de espera do primeiro token",
       firstTokenDescription: "Por quanto tempo os modelos GGUF locais podem esperar o primeiro token sem progresso no processamento do prompt. Vale para as novas esperas de todas as contas. Com “Ilimitado”, a espera continua até você parar.",
       firstTokenDefault: "20 min (padrão)",
@@ -3280,19 +3095,16 @@ export const ptBR = {
       toolResultLimitLocked: "Definido por UNSLOTH_TOOL_RESULT_MAX_CHARS",
       toolResultLimitLoadError: "Não foi possível carregar o tamanho da saída das ferramentas.",
       toolResultLimitSaveError: "Não foi possível salvar o tamanho da saída das ferramentas.",
-      toolResultLimitKeywords:
-        "saída resultado truncar cortado limite caracteres tamanho tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
+      toolResultLimitKeywords: "saída resultado truncar cortado limite caracteres tamanho tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
       visibility: {
         collapsed: "Recolhido",
         auto: "Expandir durante a execução",
         expanded: "Sempre expandido",
       },
-      visibilityKeywords:
-        "recolher recolhido expandir expandido aberto fechado raciocínio pensamento chamadas de ferramentas atividade agrupar streaming",
+      visibilityKeywords: "recolher recolhido expandir expandido aberto fechado raciocínio pensamento chamadas de ferramentas atividade agrupar streaming",
       thinking: {
         visibility: "Raciocínio",
-        visibilityDescription:
-          "Como o raciocínio abre. Você ainda pode expandir ou recolher qualquer bloco.",
+        visibilityDescription: "Como o raciocínio abre. Você ainda pode expandir ou recolher qualquer bloco.",
       },
       memory: {
         title: "Memória",
@@ -3312,26 +3124,21 @@ export const ptBR = {
       },
       currentDate: {
         label: "Informar a data de hoje ao modelo",
-        description:
-          "Adiciona a data atual ao prompt para que a busca na web e o Deep Research procurem fontes recentes em vez de assumir a data de corte do treinamento do modelo.",
+        description: "Adiciona a data atual ao prompt para que a busca na web e o Deep Research procurem fontes recentes em vez de assumir a data de corte do treinamento do modelo.",
         loadError: "Não foi possível carregar as configurações de data atual",
         saveError: "Não foi possível atualizar as configurações de data atual",
       },
       tools: {
         visibility: "Chamadas de ferramentas",
-        visibilityDescription:
-          "Como a atividade de ferramentas abre. Você ainda pode expandir ou recolher qualquer chamada.",
+        visibilityDescription: "Como a atividade de ferramentas abre. Você ainda pode expandir ou recolher qualquer chamada.",
         foldIntoThinking: "Agrupar chamadas de ferramentas no Raciocínio",
-        foldIntoThinkingDescription:
-          "Mostra as chamadas de ferramentas de um turno dentro do bloco de Raciocínio em vez de em linhas próprias.",
-        foldIntoThinkingBlocked:
-          "Indisponível enquanto as chamadas de ferramentas estiverem em «Sempre expandido», que as mantém em linhas próprias.",
+        foldIntoThinkingDescription: "Mostra as chamadas de ferramentas de um turno dentro do bloco de Raciocínio em vez de em linhas próprias.",
+        foldIntoThinkingBlocked: "Indisponível enquanto as chamadas de ferramentas estiverem em «Sempre expandido», que as mantém em linhas próprias.",
       },
       webSearch: {
         title: "Busca na web",
         images: "Mostrar imagens da busca na web",
-        imagesDescription:
-          "Inclui imagens nos resultados de busca.",
+        imagesDescription: "Inclui imagens nos resultados de busca.",
       },
       artifacts: {
         collapseHtmlBlocks: "Recolher blocos HTML",
@@ -3365,19 +3172,16 @@ export const ptBR = {
       },
       data: "Dados",
       exportHistory: "Exportar histórico de chat",
-      exportHistoryDescription:
-        "Baixe todos os chats e mensagens em formato JSON.",
+      exportHistoryDescription: "Baixe todos os chats e mensagens em formato JSON.",
       exportAction: "Exportar",
       exportingAction: "Exportando...",
       exportConversations: "Exportar Recentes e Projetos",
-      exportConversationsDescription:
-        "Baixe os chats de Recentes ou de Recentes e Projetos como Training JSONL, CSV, JSONL do ShareGPT, Markdown, HTML ou PDF, em um arquivo combinado ou em arquivos separados por chat. Message JSONL está disponível apenas por chat.",
+      exportConversationsDescription: "Baixe os chats de Recentes ou de Recentes e Projetos como Training JSONL, CSV, JSONL do ShareGPT, Markdown, HTML ou PDF, em um arquivo combinado ou em arquivos separados por chat. Message JSONL está disponível apenas por chat.",
       exportConversationsAction: "Exportar",
       exportScopeRecents: "Recentes",
       exportScopeAll: "Recentes + Projetos",
       importChats: "Importar chats",
-      importChatsDescription:
-        "Importe arquivos JSON, JSONL, NDJSON, CSV ou Markdown para Recentes.",
+      importChatsDescription: "Importe arquivos JSON, JSONL, NDJSON, CSV ou Markdown para Recentes.",
       importChatsAction: "Importar",
       importNoConversations: "Nenhuma conversa encontrada no arquivo.",
       importedOneChat: "1 conversa foi importada para Recentes.",
@@ -3386,12 +3190,10 @@ export const ptBR = {
       importedChatCountPartial: "{count} conversas importadas para Recentes; {failed} não puderam ser salvas.",
       importFailed: "Falha na importação.",
       importFromSource: "Importar do {source}",
-      importFromSourceDescription:
-        "Copie suas conversas do {source} para o Unsloth, agrupadas por projeto.",
+      importFromSourceDescription: "Copie suas conversas do {source} para o Unsloth, agrupadas por projeto.",
       importingAction: "Importando...",
       importedSourceOneChat: "1 conversa importada do {source}.",
-      importedSourceChatCount:
-        "{count} conversas importadas do {source}.",
+      importedSourceChatCount: "{count} conversas importadas do {source}.",
       sourceUpdated: "{count} novas mensagens adicionadas do {source}.",
       sourceUpToDate: "As conversas do {source} já estão atualizadas.",
       importedSourcePartial: "Algumas conversas do {source} não puderam ser importadas.",
@@ -3401,15 +3203,12 @@ export const ptBR = {
       clearAllChats: "Limpar todos os chats",
       clearAllChatsDescription: "Exclui permanentemente todos os chats deste dispositivo.",
       noChatsToClear: "Nenhum chat para limpar.",
-      clearOneChatDescription:
-        "Exclui permanentemente o único chat deste dispositivo.",
-      clearChatCountDescription:
-        "Exclui permanentemente todos os {count} chats deste dispositivo.",
+      clearOneChatDescription: "Exclui permanentemente o único chat deste dispositivo.",
+      clearChatCountDescription: "Exclui permanentemente todos os {count} chats deste dispositivo.",
       clearChatsAction: "Limpar chats",
       clearOneChatTitle: "Limpar 1 chat?",
       clearChatsTitle: "Limpar {count} chats?",
-      clearChatsConfirmDescription:
-        "Exclui permanentemente todos os chats deste dispositivo. Esta ação não pode ser desfeita.",
+      clearChatsConfirmDescription: "Exclui permanentemente todos os chats deste dispositivo. Esta ação não pode ser desfeita.",
       clearingAction: "Limpando...",
       clearOneChatAction: "Limpar 1 chat",
       clearChatCountAction: "Limpar {count} chats",
@@ -3417,17 +3216,12 @@ export const ptBR = {
       clearedOneChat: "1 chat foi limpo",
       clearedChatCount: "{count} chats foram limpos",
       someChatsCouldNotBeCleared: "Não foi possível limpar alguns chats",
-      chatsClearedRemainOne:
-        "{clearedCount} chats limpos; 1 chat restante. Por favor, tente novamente.",
-      chatsClearedRemain:
-        "{clearedCount} chats limpos; {remainingCount} chats restantes. Por favor, tente novamente.",
-      oneChatClearedRemain:
-        "1 chat limpo; {remainingCount} chats restantes. Por favor, tente novamente.",
+      chatsClearedRemainOne: "{clearedCount} chats limpos; 1 chat restante. Por favor, tente novamente.",
+      chatsClearedRemain: "{clearedCount} chats limpos; {remainingCount} chats restantes. Por favor, tente novamente.",
+      oneChatClearedRemain: "1 chat limpo; {remainingCount} chats restantes. Por favor, tente novamente.",
       oneChatClearedRemainOne: "1 chat limpo; 1 chat restante. Por favor, tente novamente.",
-      storageClearFailedOne:
-        "Falha ao limpar o armazenamento; 1 chat pode ter restado. Por favor, tente novamente.",
-      storageClearFailed:
-        "Falha ao limpar o armazenamento; {count} chats podem ter restado. Por favor, tente novamente.",
+      storageClearFailedOne: "Falha ao limpar o armazenamento; 1 chat pode ter restado. Por favor, tente novamente.",
+      storageClearFailed: "Falha ao limpar o armazenamento; {count} chats podem ter restado. Por favor, tente novamente.",
       failedToClearChats: "Falha ao limpar os chats",
     },
     data: {
@@ -3511,8 +3305,7 @@ export const ptBR = {
       title: "Dados",
       backToData: "Voltar para Dados",
       exportFailed: "Não foi possível exportar os chats",
-      description:
-        "Gerencie o histórico de chats e os arquivos enviados que ficam armazenados neste dispositivo.",
+      description: "Gerencie o histórico de chats e os arquivos enviados que ficam armazenados neste dispositivo.",
       manageFiles: {
         label: "Gerenciar arquivos",
         description: "Pesquise, ordene e organize imagens, vídeos, áudios e arquivos.",
@@ -3534,52 +3327,43 @@ export const ptBR = {
       noArchivedChatsToExport: "Nenhum chat arquivado para exportar.",
       failedToExportArchivedChats: "Falha ao exportar os chats arquivados",
       archiveAllChats: "Arquivar todos os chats",
-      archiveAllChatsDescription:
-        "Arquiva todos os chats de Recentes e Projetos.",
+      archiveAllChatsDescription: "Arquiva todos os chats de Recentes e Projetos.",
       noChatsToArchive: "Nenhum chat para arquivar.",
       archiveAllAction: "Arquivar todos",
       archivingAction: "Arquivando...",
       archiveAllChatsTitle: "Arquivar todos os chats?",
-      archiveAllChatsConfirmDescription:
-        "Arquiva todos os chats deste dispositivo. Os chats arquivados continuam disponíveis e podem ser desarquivados a qualquer momento.",
+      archiveAllChatsConfirmDescription: "Arquiva todos os chats deste dispositivo. Os chats arquivados continuam disponíveis e podem ser desarquivados a qualquer momento.",
       archivedAllChats: "Todos os chats foram arquivados",
       archivedOneChat: "1 chat arquivado",
       archivedChatCount: "{count} chats arquivados",
       failedToArchiveChats: "Falha ao arquivar os chats",
       confirmBeforeDeleting: "Confirmar antes de excluir",
-      confirmBeforeDeletingDescription:
-        "Pede confirmação antes de excluir um chat. Desative para excluir imediatamente.",
+      confirmBeforeDeletingDescription: "Pede confirmação antes de excluir um chat. Desative para excluir imediatamente.",
       alwaysDeleteFiles: "Sempre excluir os arquivos",
-      alwaysDeleteFilesDescription:
-        "Excluir uma conversa também remove do disco a pasta de sandbox dela. Os arquivos escritos dentro de um projeto permanecem no espaço de trabalho desse projeto.",
+      alwaysDeleteFilesDescription: "Excluir uma conversa também remove do disco a pasta de sandbox dela. Os arquivos escritos dentro de um projeto permanecem no espaço de trabalho desse projeto.",
       chatsSection: "Chats e arquivos",
       transferSection: "Importação e exportação",
       deletionSection: "Exclusão",
       archives: "Arquivados",
       archiveChatsLabel: "Chats",
       archiveVideosLabel: "Vídeos",
-      exportFormatsSummary:
-        "Exporte os chats de Recentes e dos projetos no formato que preferir.",
+      exportFormatsSummary: "Exporte os chats de Recentes e dos projetos no formato que preferir.",
       trainingSummary: "Transforme seus chats em um conjunto de dados para ajuste fino.",
       confirmDeletionSummary: "Pedir confirmação antes de excluir chats individuais.",
       sandboxFiles: "Arquivos da sandbox dos chats",
       sandboxFilesDescription: "Ação padrão ao excluir um chat.",
       keepSandboxFiles: "Manter arquivos da sandbox",
       deleteSandboxFiles: "Excluir arquivos da sandbox",
-      projectFilesKept:
-        "Sandboxes são pastas criadas para cada chat. Os arquivos salvos nos espaços de trabalho dos projetos são mantidos.",
+      projectFilesKept: "Sandboxes são pastas criadas para cada chat. Os arquivos salvos nos espaços de trabalho dos projetos são mantidos.",
       deleteAllAction: "Excluir tudo",
       deleteChatsOnly: "Excluir apenas os chats…",
       deleteChatsAndSandboxes: "Excluir chats e sandboxes…",
-      deleteSandboxFilesDescription:
-        "Exclui também a pasta da sandbox de cada chat e os arquivos nela. Os arquivos nos espaços de trabalho dos projetos são mantidos.",
+      deleteSandboxFilesDescription: "Exclui também a pasta da sandbox de cada chat e os arquivos nela. Os arquivos nos espaços de trabalho dos projetos são mantidos.",
       filesSection: "Arquivos",
       uploadedFiles: "Arquivos enviados",
-      uploadedFilesDescription:
-        "Veja e gerencie os arquivos enviados a chats, projetos e bases de conhecimento.",
+      uploadedFilesDescription: "Veja e gerencie os arquivos enviados a chats, projetos e bases de conhecimento.",
       fineTuneExport: "Usar chats como dados de treino",
-      fineTuneExportDescription:
-        "Crie um dataset JSONL de fine-tuning a partir dos seus chats. Carregue-o em Treinar, refine-o em Receitas ou exporte-o.",
+      fineTuneExportDescription: "Crie um dataset JSONL de fine-tuning a partir dos seus chats. Carregue-o em Treinar, refine-o em Receitas ou exporte-o.",
       fineTuneExportAction: "Exportar JSONL",
       fineTuneRunAction: "Executar",
       fineTuneExportingAction: "Exportando...",
@@ -3597,8 +3381,7 @@ export const ptBR = {
     },
     remoteLan: {
       title: "Remoto e LAN",
-      description:
-        "Acesse este Unsloth dos seus outros dispositivos, pela rede local ou por uma URL pública temporária.",
+      description: "Acesse este Unsloth dos seus outros dispositivos, pela rede local ou por uma URL pública temporária.",
     },
     mcp: {
       title: "Unsloth MCP",
@@ -3612,8 +3395,7 @@ export const ptBR = {
         allTools: "Todas as ferramentas",
         selectAll: "Selecionar tudo",
         selectNone: "Não selecionar nenhuma",
-        description:
-          "Cada ferramenta ativada aumenta o que os agentes leem antes de começar, então desative as que você não usa. Os agentes nunca veem uma ferramenta desativada, e as chamadas a ela são recusadas. Agentes já conectados veem a mudança quando se reconectam.",
+        description: "Cada ferramenta ativada aumenta o que os agentes leem antes de começar, então desative as que você não usa. Os agentes nunca veem uma ferramenta desativada, e as chamadas a ela são recusadas. Agentes já conectados veem a mudança quando se reconectam.",
         saveError: "Não foi possível salvar a configuração da ferramenta do Unsloth MCP.",
         groups: {
           models: "Modelos",
@@ -3685,8 +3467,7 @@ export const ptBR = {
     },
     apiKeys: {
       title: "API",
-      description:
-        "Acesse o Unsloth por meio da API compatível com OpenAI.",
+      description: "Acesse o Unsloth por meio da API compatível com OpenAI.",
       readDocs: "Leia a documentação da API",
       noAccess: "Nenhum acesso à API ainda.",
       accessTokens: "Tokens de acesso",
@@ -3711,7 +3492,7 @@ export const ptBR = {
       accessInferenceHint: "Pode conversar com os modelos carregados e listá-los, mas não pode carregar, descarregar ou baixar modelos nem alterar configurações",
       accessInferenceBadge: "Inferência",
       accessError: "Não foi possível alterar o acesso desta chave",
-      createTokenHint: 'Criar um token chamado "{name}"',
+      createTokenHint: "Criar um token chamado \"{name}\"",
       defaultTokenName: "Novo token {n}",
       creating: "Criando...",
       newTokenCreated: "Novo token de acesso criado",
@@ -3730,15 +3511,13 @@ export const ptBR = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "HTTPS seguro",
-      secureHttpsHint:
-        "O endereço 0.0.0.0 ainda está acessível globalmente. Para segurança total, inicie o Unsloth com --secure para expor apenas este link HTTPS.",
+      secureHttpsHint: "O endereço 0.0.0.0 ainda está acessível globalmente. Para segurança total, inicie o Unsloth com --secure para expor apenas este link HTTPS.",
       copyTunnelUrl: "Copiar URL do túnel",
       copySnippet: "Copiar trecho de código",
       copy: "Copiar",
       copied: "Copiado",
       codingAgents: "Agentes de código",
-      codingAgentsHint:
-        "Inicie um agente de código conectado a este servidor. Ele usa o modelo carregado; um servidor local gera uma chave de API automaticamente, um remoto a inclui no comando.",
+      codingAgentsHint: "Inicie um agente de código conectado a este servidor. Ele usa o modelo carregado; um servidor local gera uma chave de API automaticamente, um remoto a inclui no comando.",
       openAgentsTab: "Abrir em Agentes",
       codingAgentsSwap: "Troque claude por codex, openclaw, opencode ou hermes.",
       relativeNever: "nunca",
@@ -3751,15 +3530,14 @@ export const ptBR = {
       copyFailed: "Não foi possível copiar",
       revokeToken: "Revogar token",
       regenerateToken: "Gerar novo token",
-      regenerateTitle: 'Gerar novamente o token de acesso "{name}"?',
+      regenerateTitle: "Gerar novamente o token de acesso \"{name}\"?",
       regenerateDescription: "Um novo token com o mesmo nome e período de validade substitui este. Apps que usam o token atual perdem o acesso imediatamente.",
       regenerateAction: "Gerar novamente",
       regenerating: "Gerando...",
       regenerateError: "Não foi possível gerar novamente o token de acesso.",
-      revokeTitle: 'Revogar token de acesso "{name}"?',
-      revokeDescription:
-        "Aplicativos que usam este token perderão o acesso imediatamente. Esta ação não pode ser desfeita.",
-      revokeAction: 'Revogar "{name}"',
+      revokeTitle: "Revogar token de acesso \"{name}\"?",
+      revokeDescription: "Aplicativos que usam este token perderão o acesso imediatamente. Esta ação não pode ser desfeita.",
+      revokeAction: "Revogar \"{name}\"",
       revoking: "Revogando...",
       audioApi: {
         title: "API de áudio",
@@ -3773,8 +3551,7 @@ export const ptBR = {
         music: "Música",
         edit: "Editar",
         placeholderModel: "Nenhum modelo baixado consegue rodar este exemplo ainda, então o modelo mostrado é só ilustrativo. Baixe um antes na página Áudio.",
-        autoSwitchOff:
-          "O modelo só é carregado pelo nome com a troca automática de modelo ativada. Ative-a ou carregue antes o modelo na página de Áudio dele.",
+        autoSwitchOff: "O modelo só é carregado pelo nome com a troca automática de modelo ativada. Ative-a ou carregue antes o modelo na página de Áudio dele.",
         useViaApi: "Usar via API",
       },
       mediaApi: {
@@ -3821,10 +3598,8 @@ export const ptBR = {
         deviceGpu: "GPU",
         backend: "Runtime",
         backendAuto: "Automático",
-        backendDescription:
-          "O automático serve o Clef pelo llama.cpp quando o modelo tem uma versão GGUF e recorre ao PyTorch caso contrário. O llama.cpp também lê imagens.",
-        backendDescriptionMlx:
-          "O automático serve o Clef pelo MLX no Apple Silicon e pelo llama.cpp quando apenas a versão GGUF do modelo está carregada ou baixada. O MLX lê imagens apenas com modelos Clef; o llama.cpp também lê imagens.",
+        backendDescription: "O automático serve o Clef pelo llama.cpp quando o modelo tem uma versão GGUF e recorre ao PyTorch caso contrário. O llama.cpp também lê imagens.",
+        backendDescriptionMlx: "O automático serve o Clef pelo MLX no Apple Silicon e pelo llama.cpp quando apenas a versão GGUF do modelo está carregada ou baixada. O MLX lê imagens apenas com modelos Clef; o llama.cpp também lê imagens.",
         backendStatus: "Runtime: {backend}",
         backendNone: "indisponível",
         mediaImages: "Lê texto e imagens.",
@@ -3840,8 +3615,7 @@ export const ptBR = {
         download: "Baixar",
         downloadConfirmTitle: "Baixar Laya {model}?",
         downloadConfirmTitleModel: "Baixar {model}?",
-        downloadConfirmBody:
-          "A API de decisão precisa deste modelo para responder às solicitações. Cerca de {size}, baixado uma única vez no seu cache do Hugging Face.",
+        downloadConfirmBody: "A API de decisão precisa deste modelo para responder às solicitações. Cerca de {size}, baixado uma única vez no seu cache do Hugging Face.",
         unload: "Descarregar",
         downloadBusy: "Um modelo da API de decisões já está sendo baixado.",
         downloadFailed: "Não foi possível iniciar o download.",
@@ -3866,13 +3640,11 @@ export const ptBR = {
         configFileHint: "Adicione isto a {path}.",
         keywords: "mcp model context protocol agents claude codex tools agentes agente ferramentas protocolo de contexto de modelo",
       },
-      usageNoModel:
-        "Carregue ou baixe um modelo para ver exemplos executáveis. Este servidor ainda não tem nenhum modelo para indicar.",
+      usageNoModel: "Carregue ou baixe um modelo para ver exemplos executáveis. Este servidor ainda não tem nenhum modelo para indicar.",
     },
     about: {
       title: "Sobre",
-      description:
-        "Documentação, notas de lançamento, feedback e informações da compilação.",
+      description: "Documentação, notas de lançamento, feedback e informações da compilação.",
       studioVersion: "Versão do Unsloth",
       packageVersion: "Versão do pacote",
       desktopAppVersion: "Versão do aplicativo de desktop",
@@ -3917,16 +3689,14 @@ export const ptBR = {
         sectionTitle: "Licença",
         studioLabel: "Unsloth",
         studioLicense: "AGPL-3.0",
-        studioDescription:
-          "Código aberto sob a licença GNU AGPL v3.0.",
+        studioDescription: "Código aberto sob a licença GNU AGPL v3.0.",
         libraryLabel: "Unsloth Core",
         libraryLicense: "Apache-2.0",
         libraryDescription: "Licenciado sob a licença Apache 2.0.",
       },
       dangerZone: "Zona de perigo",
       shutDownStudio: "Desligar o Unsloth",
-      shutDownStudioDescription:
-        "Interrompe o servidor Unsloth e encerra sua sessão.",
+      shutDownStudioDescription: "Interrompe o servidor Unsloth e encerra sua sessão.",
       shutDown: "Desligar",
       update: {
         title: "Atualizar Unsloth",
@@ -3940,46 +3710,33 @@ export const ptBR = {
         localUpdateHeading: "Atualização local",
         installCommandUnix: "Comando de instalação para macOS/Linux",
         installCommandWindows: "Comando de instalação para Windows",
-        localInstallDetected:
-          "Instalação local detectada. Atualize a partir da cópia de trabalho original para evitar substituí-la por uma instalação do PyPI.",
-        pullThenUpdate:
-          "Obtenha as alterações mais recentes e depois execute o instalador local:",
+        localInstallDetected: "Instalação local detectada. Atualize a partir da cópia de trabalho original para evitar substituí-la por uma instalação do PyPI.",
+        pullThenUpdate: "Obtenha as alterações mais recentes e depois execute o instalador local:",
         gitPullCommand: "comando git pull",
         localInstallerCommand: "comando do instalador local",
-        sourceInstallDetected:
-          "Foi detectada uma instalação do pacote via código-fonte ou VCS. Reinstale a partir do caminho local original ou da URL do Git.",
-        repoCheckoutFallback:
-          "Se você ainda tiver a cópia local do repositório, execute o instalador local a partir dela:",
+        sourceInstallDetected: "Foi detectada uma instalação do pacote via código-fonte ou VCS. Reinstale a partir do caminho local original ou da URL do Git.",
+        repoCheckoutFallback: "Se você ainda tiver a cópia local do repositório, execute o instalador local a partir dela:",
         restartAfterUpdate: "Reinicie o Unsloth após a atualização.",
         desktopReady: "Atualizações do aplicativo de desktop",
-        desktopReadyDescription:
-          "Verifique se há uma versão mais recente do aplicativo de desktop.",
+        desktopReadyDescription: "Verifique se há uma versão mais recente do aplicativo de desktop.",
         desktopChecking: "Verificando se há atualizações",
         desktopCheckingDescription: "Isso costuma levar alguns segundos.",
-        desktopAvailable:
-          "A versão {version} do aplicativo de desktop está disponível",
-        desktopAvailableDescription:
-          "Atualize agora. O aplicativo de desktop será reiniciado quando a atualização terminar.",
-        desktopExternalServer:
-          "Conectado a um servidor Unsloth na porta {port} que este aplicativo não iniciou, como o `unsloth studio` em um terminal. Pare-o onde ele foi iniciado e depois feche e reabra o aplicativo para atualizar.",
-        desktopManualInstall:
-          "Abra a página de lançamentos para instalar o pacote mais recente para Linux.",
+        desktopAvailable: "A versão {version} do aplicativo de desktop está disponível",
+        desktopAvailableDescription: "Atualize agora. O aplicativo de desktop será reiniciado quando a atualização terminar.",
+        desktopExternalServer: "Conectado a um servidor Unsloth na porta {port} que este aplicativo não iniciou, como o `unsloth studio` em um terminal. Pare-o onde ele foi iniciado e depois feche e reabra o aplicativo para atualizar.",
+        desktopManualInstall: "Abra a página de lançamentos para instalar o pacote mais recente para Linux.",
         desktopCheckFailed: "Não foi possível verificar se há atualizações",
-        desktopCheckFailedDescription:
-          "Verifique sua conexão e tente novamente.",
+        desktopCheckFailedDescription: "Verifique sua conexão e tente novamente.",
         desktopCurrent: "O aplicativo de desktop está atualizado",
-        desktopCurrentDescription:
-          "O Unsloth continuará verificando automaticamente.",
+        desktopCurrentDescription: "O Unsloth continuará verificando automaticamente.",
         checkForUpdates: "Verificar se há atualizações",
         checkAgain: "Verificar novamente",
         retryCheck: "Tentar novamente",
         checking: "Verificando...",
         updateNow: "Atualizar agora",
         openReleasePage: "Abrir página de lançamentos",
-        unknownInstall:
-          "Não foi possível detectar como o Unsloth foi instalado. Para instalações via instalador ou PyPI, use os comandos acima.",
-        localCheckout:
-          "Para instalações feitas a partir de uma cópia local do repositório, execute o instalador local nesse diretório:",
+        unknownInstall: "Não foi possível detectar como o Unsloth foi instalado. Para instalações via instalador ou PyPI, use os comandos acima.",
+        localCheckout: "Para instalações feitas a partir de uma cópia local do repositório, execute o instalador local nesse diretório:",
         docs: "Docs de instalação:",
         docsInstall: "Instalação",
         docsUpdating: "Atualização",
@@ -3996,8 +3753,7 @@ export const ptBR = {
     imageTraining: "Treino de imagem",
     goToImageTraining: "Treinar LoRAs de imagem",
     routeTitle: "Treinar",
-    cpuTrainingNotice:
-      "Nenhuma GPU foi encontrada, então o treinamento roda na CPU. Ele é muito mais lento do que na GPU e só suporta modelos de texto (LoRA ou ajuste fino completo).",
+    cpuTrainingNotice: "Nenhuma GPU foi encontrada, então o treinamento roda na CPU. Ele é muito mais lento do que na GPU e só suporta modelos de texto (LoRA ou ajuste fino completo).",
     wizard: {
       modelTitle: "Modelo",
       modelDescription: "Escolha um modelo e um método de treinamento",
@@ -4013,16 +3769,13 @@ export const ptBR = {
       modelTooltip: "O modelo base que você quer ajustar.",
       methodTooltip: "Como o modelo é treinado. LoRA e QLoRA atualizam adaptadores pequenos em vez de todos os pesos.",
       trainAsLabel: "Treinar como",
-      trainAsTooltip:
-        "Um modelo de linguagem escreve texto. Um modelo de decisão escolhe uma das opções que você fornece, com uma probabilidade, e funciona na Decision API.",
+      trainAsTooltip: "Um modelo de linguagem escreve texto. Um modelo de decisão escolhe uma das opções que você fornece, com uma probabilidade, e funciona na Decision API.",
       trainAsLanguage: "Modelo de linguagem",
       trainAsDecision: "Modelo de decisão",
       checkpointLabel: "Checkpoint",
-      checkpointTooltip:
-        "O checkpoint do Laya que será ajustado. Multilíngue serve para a maioria dos conjuntos de dados.",
+      checkpointTooltip: "O checkpoint do Laya que será ajustado. Multilíngue serve para a maioria dos conjuntos de dados.",
       datasetTooltip: "Os dados de treinamento usados para ajustar o modelo.",
-      hfTokenDescription:
-        "Necessário para modelos e conjuntos de dados restritos ou privados.",
+      hfTokenDescription: "Necessário para modelos e conjuntos de dados restritos ou privados.",
       uploadLocalLabel: "Envie um arquivo local",
       sourceBrowse: "Procurar",
       releaseToUpload: "Solte para enviar",
@@ -4030,11 +3783,9 @@ export const ptBR = {
       saveYaml: "Salvar YAML",
       resetDefaults: "Restaurar padrões",
       cachedModelGoneTitle: "O modelo em cache não está mais disponível",
-      cachedModelGoneDescription:
-        "Os arquivos do modelo não estão mais neste dispositivo. Eles serão baixados novamente quando o treinamento começar.",
+      cachedModelGoneDescription: "Os arquivos do modelo não estão mais neste dispositivo. Eles serão baixados novamente quando o treinamento começar.",
       cachedDatasetGoneTitle: "O dataset em cache não está mais disponível",
-      cachedDatasetGoneDescription:
-        "Os arquivos do dataset não estão mais neste dispositivo. Eles serão baixados novamente quando o treinamento começar.",
+      cachedDatasetGoneDescription: "Os arquivos do dataset não estão mais neste dispositivo. Eles serão baixados novamente quando o treinamento começar.",
     },
     preview: {
       title: "Prévia da execução",
@@ -4070,23 +3821,17 @@ export const ptBR = {
       dataset: "Dataset",
       downloadsOnStart: "Será baixado ao iniciar",
       continuesOnStart: "Continuará ao iniciar",
-      noticeModelDownload:
-        "Este modelo ainda não está no dispositivo. Ele será baixado automaticamente quando o treinamento começar.",
-      noticeModelPartial:
-        "O download incompleto do modelo será concluído antes do carregamento.",
-      noticeDatasetDownload:
-        "Este dataset ainda não está no dispositivo. Ele será baixado automaticamente quando o treinamento começar.",
-      noticeDatasetPartial:
-        "O download incompleto do dataset será concluído antes da leitura.",
-      noticeTransformersUpgrade:
-        "Nenhuma versão instalada do transformers suporta esta arquitetura ainda. Ao iniciar a execução, será oferecida a instalação do transformers {version} antes.",
-      noticeSixteenBitOnly:
-        "Esta arquitetura treina em LoRA de 16 bits: 4 bits não está disponível, então a execução precisa de muito mais VRAM que QLoRA.",
-      noticeInstallSwitchesSixteenBit:
-        "Instalar essa versão em vez de manter o código do próprio modelo muda esta execução para LoRA de 16 bits, que precisa de muito mais VRAM que QLoRA.",
+      noticeModelDownload: "Este modelo ainda não está no dispositivo. Ele será baixado automaticamente quando o treinamento começar.",
+      noticeModelPartial: "O download incompleto do modelo será concluído antes do carregamento.",
+      noticeDatasetDownload: "Este dataset ainda não está no dispositivo. Ele será baixado automaticamente quando o treinamento começar.",
+      noticeDatasetPartial: "O download incompleto do dataset será concluído antes da leitura.",
+      noticeTransformersUpgrade: "Nenhuma versão instalada do transformers suporta esta arquitetura ainda. Ao iniciar a execução, será oferecida a instalação do transformers {version} antes.",
+      noticeSixteenBitOnly: "Esta arquitetura treina em LoRA de 16 bits: 4 bits não está disponível, então a execução precisa de muito mais VRAM que QLoRA.",
+      noticeInstallSwitchesSixteenBit: "Instalar essa versão em vez de manter o código do próprio modelo muda esta execução para LoRA de 16 bits, que precisa de muito mais VRAM que QLoRA.",
       advancedSettings: "Configurações avançadas",
       defaultAdvancedSettings: "Padrões",
       nonDefaultAdvancedSettings: "{count} fora do padrão",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "datasets",
@@ -4097,20 +3842,16 @@ export const ptBR = {
       hfCacheLabel: "Cache do HF",
       scanningLocal: "Procurando datasets neste dispositivo…",
       couldntScan: "Não foi possível procurar datasets locais",
-      someLocationsUnscanned:
-        "Não foi possível verificar alguns locais de datasets.",
-      noLocalDatasets:
-        "Ainda não há nada neste dispositivo. Baixe um dataset do Hub, crie um em Receitas ou envie um arquivo.",
+      someLocationsUnscanned: "Não foi possível verificar alguns locais de datasets.",
+      noLocalDatasets: "Ainda não há nada neste dispositivo. Baixe um dataset do Hub, crie um em Receitas ou envie um arquivo.",
       openDataRecipes: "Abrir Receitas de Dados",
       searchingHub: "Buscando no Hugging Face…",
       noDatasetsFound: "Nenhum dataset encontrado.",
       tokenRejectedTitle: "Token do Hugging Face rejeitado",
-      tokenRejectedBody:
-        "Atualize seu token em Configurações → Geral e tente novamente.",
+      tokenRejectedBody: "Atualize seu token em Configurações → Geral e tente novamente.",
       hubUnreachable: "Não foi possível acessar o Hugging Face",
       cantUseDataset: "Não é possível usar o dataset",
-      reasonInvalidHubId:
-        "Insira um ID válido de dataset do Hugging Face: repositório ou proprietário/repositório, sem pontos ou hifens consecutivos e sem o sufixo .git (no máximo 96 caracteres por parte).",
+      reasonInvalidHubId: "Insira um ID válido de dataset do Hugging Face: repositório ou proprietário/repositório, sem pontos ou hifens consecutivos e sem o sufixo .git (no máximo 96 caracteres por parte).",
       sourceRecipe: "Receita",
       sourceUpload: "Envio",
       sourceLocal: "Local",
@@ -4125,32 +3866,23 @@ export const ptBR = {
       hfCacheLabel: "Cache do HF",
       scanningLocal: "Procurando modelos locais…",
       couldntScan: "Não foi possível procurar modelos locais",
-      someLocationsUnscanned:
-        "Não foi possível verificar alguns locais deste dispositivo.",
+      someLocationsUnscanned: "Não foi possível verificar alguns locais deste dispositivo.",
       noLocalModels: "Nenhum modelo local encontrado.",
-      noLocalModelsHint:
-        "Cole o caminho de uma pasta acima ou mude para o Hugging Face.",
+      noLocalModelsHint: "Cole o caminho de uma pasta acima ou mude para o Hugging Face.",
       searchingHub: "Buscando no Hugging Face…",
       noModelsFound: "Nenhum modelo encontrado.",
       tokenRejectedTitle: "Token do Hugging Face rejeitado",
-      tokenRejectedBody:
-        "Atualize seu token em Configurações → Geral e tente novamente.",
-      tokenRejectedAnonymousBody:
-        "Os modelos públicos são exibidos sem ele. Atualize seu token em Configurações → Geral para acessar modelos privados e restritos.",
+      tokenRejectedBody: "Atualize seu token em Configurações → Geral e tente novamente.",
+      tokenRejectedAnonymousBody: "Os modelos públicos são exibidos sem ele. Atualize seu token em Configurações → Geral para acessar modelos privados e restritos.",
       hubUnreachable: "Não foi possível acessar o Hugging Face",
       cantUseModel: "Não é possível usar o modelo para treinamento",
-      reasonTypeMismatch:
-        "Este modelo não corresponde ao tipo de treinamento selecionado na etapa anterior.",
+      reasonTypeMismatch: "Este modelo não corresponde ao tipo de treinamento selecionado na etapa anterior.",
       reasonEmptyId: "Informe um ID de modelo ou um caminho de modelo local.",
-      reasonInvalidHubId:
-        "Insira um ID válido de modelo do Hugging Face: repositório ou proprietário/repositório, sem pontos ou hifens consecutivos e sem o sufixo .git (no máximo 96 caracteres por parte).",
+      reasonInvalidHubId: "Insira um ID válido de modelo do Hugging Face: repositório ou proprietário/repositório, sem pontos ou hifens consecutivos e sem o sufixo .git (no máximo 96 caracteres por parte).",
       reasonGguf: "Modelos GGUF não podem ser treinados.",
-      reasonAdapter:
-        "Saídas de adaptadores não podem ser usadas como modelos base para treinamento.",
-      reasonNotTrainable:
-        "Este modelo no dispositivo não pode ser treinado.",
-      reasonUnsupportedFormat:
-        "Este formato de modelo não é compatível com treinamento.",
+      reasonAdapter: "Saídas de adaptadores não podem ser usadas como modelos base para treinamento.",
+      reasonNotTrainable: "Este modelo no dispositivo não pode ser treinado.",
+      reasonUnsupportedFormat: "Este formato de modelo não é compatível com treinamento.",
       vramNeeds: "Precisa de ~{est} GB de VRAM (GPU: {total} GiB)",
       vramTight: "~{est} GB de VRAM (no limite de {total} GiB)",
       vramApprox: "~{est} GB de VRAM",
@@ -4185,17 +3917,29 @@ export const ptBR = {
         hint: "Pré-treinamento contínuo para novos domínios ou idiomas.",
         note: "contínuo",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Configure e inicie o treinamento",
       trainingInProgress: "Treinamento em andamento",
       viewPastRuns: "Visualizar execuções de treino anteriores",
       viewingPastRun: "Visualizando execução anterior",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Configurar",
       currentRun: "Execução Atual",
       history: "Histórico",
+      compare: "Compare",
     },
     loadingRuntime: "Carregando ambiente de execução de treino...",
     checkingSupport: "Verificando se esta máquina oferece suporte a treino...",
@@ -4203,20 +3947,17 @@ export const ptBR = {
     dataset: {
       selectors: {
         subset: "Subconjunto",
-        subsetTooltip:
-          "Selecione qual subconjunto (configuração) do dataset usar.",
+        subsetTooltip: "Selecione qual subconjunto (configuração) do dataset usar.",
         trainSplit: "Divisão de treino",
         trainSplitTooltip: "Selecione qual divisão usar para o treinamento.",
         evaluationSplit: "Divisão de avaliação",
-        evaluationSplitTooltip:
-          "Selecione qual divisão usar para a avaliação. Nenhuma significa que não haverá avaliação durante o treinamento.",
+        evaluationSplitTooltip: "Selecione qual divisão usar para a avaliação. Nenhuma significa que não haverá avaliação durante o treinamento.",
         selectSubset: "Selecione um subconjunto...",
         selectSplit: "Selecione uma divisão...",
         none: "Nenhuma",
         loading: "Carregando configurações e divisões do dataset...",
         manualTitle: "Insira as opções do dataset manualmente",
-        manualDescription:
-          "Insira os nomes exatos da configuração e das divisões do Hugging Face que serão usados.",
+        manualDescription: "Insira os nomes exatos da configuração e das divisões do Hugging Face que serão usados.",
         manualSubsetPlaceholder: "Nome de configuração opcional",
         manualRequired: "Uma divisão de treino é obrigatória.",
         manualTooLong: "Use no máximo 128 caracteres.",
@@ -4236,82 +3977,60 @@ export const ptBR = {
       uploading: "Enviando...",
       uploadEvalFile: "Enviar arquivo de validação",
       fileTooLarge: "Arquivo muito grande",
-      fileTooLargeDescription:
-        "{file} tem {size}. Os uploads de treinamento aceitam até {limit}.",
+      fileTooLargeDescription: "{file} tem {size}. Os uploads de treinamento aceitam até {limit}.",
       documentRedirect: {
         title: "Este arquivo precisa ser convertido primeiro",
         genericFile: "Este arquivo",
-        description:
-          "{file} é material de origem, não um dataset pronto para treinamento. Use Data Recipes para transformar o documento em um dataset e depois volte aqui para fazer o ajuste fino.",
+        description: "{file} é material de origem, não um dataset pronto para treinamento. Use Data Recipes para transformar o documento em um dataset e depois volte aqui para fazer o ajuste fino.",
         nextStepTitle: "Melhor próximo passo",
-        nextStepDescription:
-          "Abra Learning Recipes e comece com uma receita baseada em documento, como PDF grounded QA.",
+        nextStepDescription: "Abra Learning Recipes e comece com uma receita baseada em documento, como PDF grounded QA.",
         openAction: "Abrir Learning Recipes",
       },
-      evalDatasetDescription:
-        "Opcional. Se não for fornecido, uma pequena parte dos dados de treinamento será separada para validação.",
+      evalDatasetDescription: "Opcional. Se não for fornecido, uma pequena parte dos dados de treinamento será separada para validação.",
       advanced: "Avançado",
       targetFormat: "Formato de Destino",
-      targetFormatTooltip:
-        "Formato dos seus dados de treinamento. A detecção automática funciona para a maioria dos datasets.",
+      targetFormatTooltip: "Formato dos seus dados de treinamento. A detecção automática funciona para a maioria dos datasets.",
       streamingInfoAriaLabel: "Informações sobre o streaming do dataset",
       streaming: {
         label: "Ativar streaming",
-        description:
-          "Use datasets de texto do Hugging Face em streaming em vez de baixá-los.",
+        description: "Use datasets de texto do Hugging Face em streaming em vez de baixá-los.",
         unavailable: "Streaming indisponível. Para ativar:",
-        completionsUnavailable:
-          "Indisponível enquanto o streaming do dataset estiver ativado.",
+        completionsUnavailable: "Indisponível enquanto o streaming do dataset estiver ativado.",
         blockers: {
-          source:
-            "Use um dataset do Hugging Face (não um upload local nem uma origem S3).",
-          maxSteps:
-            "Defina Passos Máximos > 0 — datasets em streaming não têm comprimento conhecido.",
-          trainOnCompletions:
-            'Desative "Apenas respostas do assistente".',
-          evalSplit:
-            "Escolha uma divisão de validação separada — a validação está ativada, mas não há uma divisão distinta definida.",
+          source: "Use um dataset do Hugging Face (não um upload local nem uma origem S3).",
+          maxSteps: "Defina Passos Máximos > 0 — datasets em streaming não têm comprimento conhecido.",
+          trainOnCompletions: "Desative \"Apenas respostas do assistente\".",
+          evalSplit: "Escolha uma divisão de validação separada — a validação está ativada, mas não há uma divisão distinta definida.",
           visionModel: "Modelos de visão não oferecem suporte a streaming.",
           audioModel: "Modelos de áudio não oferecem suporte a streaming.",
-          embeddingModel:
-            "Modelos de embeddings não oferecem suporte a streaming (o treinamento precisa do dataset completo).",
-          imageDataset:
-            "Este dataset parece conter imagens e não pode ser usado em streaming.",
-          audioDataset:
-            "Este dataset parece conter áudio e não pode ser usado em streaming.",
+          embeddingModel: "Modelos de embeddings não oferecem suporte a streaming (o treinamento precisa do dataset completo).",
+          imageDataset: "Este dataset parece conter imagens e não pode ser usado em streaming.",
+          audioDataset: "Este dataset parece conter áudio e não pode ser usado em streaming.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "apenas respostas do assistente",
-          evaluation:
-            "validação (precisa de uma divisão de validação separada)",
+          evaluation: "validação (precisa de uma divisão de validação separada)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Streaming desativado: é necessário um valor fixo de Passos Máximos > 0.",
-          adjusted:
-            "Ajustado para streaming. Opções incompatíveis desativadas: {options}.",
-          needsMaxSteps:
-            "O streaming precisa de um valor fixo de Passos Máximos (datasets em streaming não têm comprimento conhecido). Primeiro, defina Passos Máximos > 0.",
-          enabledAdjusted:
-            "Streaming ativado. Opções incompatíveis desativadas: {options}.",
-          disabledForDetectedModality:
-            "O streaming foi desativado porque datasets de imagem e áudio precisam ser baixados por completo. Revise a configuração e inicie o treinamento novamente.",
+          turnedOffMaxSteps: "Streaming desativado: é necessário um valor fixo de Passos Máximos > 0.",
+          adjusted: "Ajustado para streaming. Opções incompatíveis desativadas: {options}.",
+          needsMaxSteps: "O streaming precisa de um valor fixo de Passos Máximos (datasets em streaming não têm comprimento conhecido). Primeiro, defina Passos Máximos > 0.",
+          enabledAdjusted: "Streaming ativado. Opções incompatíveis desativadas: {options}.",
+          disabledForDetectedModality: "O streaming foi desativado porque datasets de imagem e áudio precisam ser baixados por completo. Revise a configuração e inicie o treinamento novamente.",
         },
       },
       auto: "Auto",
       rawText: "Texto Bruto",
       trainSplitStart: "Início da Divisão de Treino",
-      trainSplitStartTooltip:
-        "Treine apenas em um subconjunto da sua divisão de treino especificando um índice de linha inicial (inclusivo, baseado em 0). Deixe em branco para começar da primeira linha.",
+      trainSplitStartTooltip: "Treine apenas em um subconjunto da sua divisão de treino especificando um índice de linha inicial (inclusivo, baseado em 0). Deixe em branco para começar da primeira linha.",
       trainSplitEnd: "Fim da Divisão de Treino",
-      trainSplitEndTooltip:
-        "Último índice de linha a ser incluído da divisão de treino (inclusivo, baseado em 0). Por exemplo, defina o Início como 0 e o Fim como 99 para treinar nas primeiras 100 linhas. Deixe em branco para usar todas as linhas restantes.",
+      trainSplitEndTooltip: "Último índice de linha a ser incluído da divisão de treino (inclusivo, baseado em 0). Por exemplo, defina o Início como 0 e o Fim como 99 para treinar nas primeiras 100 linhas. Deixe em branco para usar todas as linhas restantes.",
       endPlaceholder: "Fim",
       clear: "Limpar",
       dropFileOrClick: "Solte 1 arquivo aqui ou clique para fazer upload",
       uploadDetails: "Detalhes do upload",
-      uploadDetailsTooltip:
-        "Até {limit} por arquivo. PDF, DOCX e TXT não são datasets prontos para treinamento; converta-os primeiro em Receitas.",
+      uploadDetailsTooltip: "Até {limit} por arquivo. PDF, DOCX e TXT não são datasets prontos para treinamento; converta-os primeiro em Receitas.",
       viewDataset: "Visualizar dataset",
       previewTokens: "Ver tokens",
       tokenPreview: {
@@ -4350,10 +4069,8 @@ export const ptBR = {
       datasetUploaded: "Dataset enviado",
       evalDatasetUploaded: "Dataset de validação enviado",
       uploadOneFileAtATime: "Envie um arquivo por vez",
-      uploadSingleFileDescription:
-        "O upload do dataset de treinamento aceita apenas um único arquivo.",
-      previewLoadingHuggingFace:
-        "Buscando a pré-visualização do dataset no Hugging Face...",
+      uploadSingleFileDescription: "O upload do dataset de treinamento aceita apenas um único arquivo.",
+      previewLoadingHuggingFace: "Buscando a pré-visualização do dataset no Hugging Face...",
       previewLoading: "Carregando pré-visualização...",
       mappingRequirements: {
         audioAndText: "áudio e texto",
@@ -4366,12 +4083,9 @@ export const ptBR = {
         heuristicTitle: "Mapeamento detectado por heurística",
         readyTitle: "Mapeamento pronto",
         requiredTitle: "Mapear colunas do dataset",
-        heuristicDescription:
-          "Detectamos automaticamente o mapeamento de colunas abaixo usando heurísticas. Revise e ajuste pelos menus nos cabeçalhos das colunas ou use a assistência de IA para um mapeamento mais preciso.",
-        readyDescription:
-          "Tudo certo. Converteremos este dataset automaticamente.",
-        requiredDescription:
-          "Atribua funções às colunas usando os menus nos cabeçalhos. Atribua pelo menos {required}.",
+        heuristicDescription: "Detectamos automaticamente o mapeamento de colunas abaixo usando heurísticas. Revise e ajuste pelos menus nos cabeçalhos das colunas ou use a assistência de IA para um mapeamento mais preciso.",
+        readyDescription: "Tudo certo. Converteremos este dataset automaticamente.",
+        requiredDescription: "Atribua funções às colunas usando os menus nos cabeçalhos. Atribua pelo menos {required}.",
       },
       s3: {
         title: "Configuração do S3",
@@ -4397,8 +4111,7 @@ export const ptBR = {
       },
       projectName: "Nome do Projeto",
       optional: "Opcional",
-      projectNameDescription:
-        "Usado nos nomes das pastas de saída do treinamento, nos padrões de exportação e no histórico.",
+      projectNameDescription: "Usado nos nomes das pastas de saída do treinamento, nos padrões de exportação e no histórico.",
       loraSettings: "Configurações do LoRA",
       trainingHyperparameters: "Hiperparâmetros de Treinamento",
       drafterSettings: "Drafter de decodificação especulativa",
@@ -4426,21 +4139,16 @@ export const ptBR = {
       contextLengthTooltip: "Número máximo de tokens por amostra de treinamento.",
       customContextLength: "Insira um valor personalizado",
       learningRate: "Taxa de Aprendizado (Learning Rate)",
-      learningRateTooltip:
-        "Tamanho do passo para atualizações de peso. Valores menores treinam mais lentamente, mas com mais estabilidade.",
-      learningRateDescription:
-        "Recomendado: 2e-4 para LoRA, 5e-5 para CPT, 2e-5 para fine-tune completo",
+      learningRateTooltip: "Tamanho do passo para atualizações de peso. Valores menores treinam mais lentamente, mas com mais estabilidade.",
+      learningRateDescription: "Recomendado: 2e-4 para LoRA, 5e-5 para CPT, 2e-5 para fine-tune completo",
       embeddingLearningRate: "Taxa de Aprendizado do Embedding",
-      embeddingLearningRateTooltip:
-        "Usado apenas quando o CPT está treinando embed_tokens. Os embeddings são mais fáceis de desestabilizar do que os pesos LoRA, por isso geralmente precisam de um LR menor. Deixe em branco para usar lr/10; a faixa típica de funcionamento é de 2x a 10x menor que o LR principal. Aumente apenas se a adaptação de vocabulário ou de tokens de domínio estiver muito lenta.",
+      embeddingLearningRateTooltip: "Usado apenas quando o CPT está treinando embed_tokens. Os embeddings são mais fáceis de desestabilizar do que os pesos LoRA, por isso geralmente precisam de um LR menor. Deixe em branco para usar lr/10; a faixa típica de funcionamento é de 2x a 10x menor que o LR principal. Aumente apenas se a adaptação de vocabulário ou de tokens de domínio estiver muito lenta.",
       rank: "Rank",
-      rankTooltip:
-        "Dimensão das matrizes de baixo rank. Maior = mais capacidade.",
+      rankTooltip: "Dimensão das matrizes de baixo rank. Maior = mais capacidade.",
       alpha: "Alpha",
       alphaTooltip: "Fator de escala para atualizações LoRA. Geralmente o dobro do rank.",
       dropout: "Dropout",
-      dropoutTooltip:
-        "Probabilidade de dropout para as camadas LoRA para reduzir o overfitting.",
+      dropoutTooltip: "Probabilidade de dropout para as camadas LoRA para reduzir o overfitting.",
       visionLayers: "Camadas de visão",
       languageLayers: "Camadas de linguagem",
       attentionModules: "Módulos de atenção",
@@ -4457,13 +4165,10 @@ export const ptBR = {
       schedule: "Cronograma",
       memory: "Memória",
       optimizer: "Otimizador",
-      optimizerTooltip:
-        "Algoritmo de otimização. Variantes de 8 bits reduzem o uso de memória. Fused é recomendado para modelos de visão.",
-      optimizerTooltipMlx:
-        "Algoritmo de otimização. AdamW é o padrão. Lion usa menos memória, mas normalmente requer uma taxa de aprendizado menor.",
+      optimizerTooltip: "Algoritmo de otimização. Variantes de 8 bits reduzem o uso de memória. Fused é recomendado para modelos de visão.",
+      optimizerTooltipMlx: "Algoritmo de otimização. AdamW é o padrão. Lion usa menos memória, mas normalmente requer uma taxa de aprendizado menor.",
       lrScheduler: "Agendador de LR",
-      lrSchedulerTooltip:
-        "Como a taxa de aprendizado muda ao longo do treino. Linear decai de forma constante; cosine decai em curva.",
+      lrSchedulerTooltip: "Como a taxa de aprendizado muda ao longo do treino. Linear decai de forma constante; cosine decai em curva.",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4483,18 +4188,14 @@ export const ptBR = {
       weightDecay: "Decaimento de Peso",
       weightDecayTooltip: "Regularização L2 para evitar overfitting.",
       warmupSteps: "Passos de Aquecimento (Warmup)",
-      warmupStepsTooltip:
-        "Aumenta gradualmente a LR no início do treino para garantir estabilidade.",
-      scheduleEpochsTooltip:
-        "Número de passagens completas pelo dataset. Defina 0 para rodar por passos máximos.",
+      warmupStepsTooltip: "Aumenta gradualmente a LR no início do treino para garantir estabilidade.",
+      scheduleEpochsTooltip: "Número de passagens completas pelo dataset. Defina 0 para rodar por passos máximos.",
       saveSteps: "Passos para Salvar",
       saveStepsTooltip: "Salva um checkpoint a cada N passos. 0 para desativar.",
       evalSteps: "Passos de Validação",
-      evalStepsTooltip:
-        "Fração dos passos totais de treino entre as validações (0-1). Defina como 0 para desativar. Ex: 0.01 = valida a cada 1% dos passos.",
+      evalStepsTooltip: "Fração dos passos totais de treino entre as validações (0-1). Defina como 0 para desativar. Ex: 0.01 = valida a cada 1% dos passos.",
       earlyStoppingPatience: "Paciência de parada antecipada",
-      earlyStoppingPatienceTooltip:
-        "Interrompe o treinamento após este número de validações seguidas sem uma perda de validação menor e mantém os pesos da melhor validação. Requer validação (Passos de Validação acima de 0). 0 para desativar.",
+      earlyStoppingPatienceTooltip: "Interrompe o treinamento após este número de validações seguidas sem uma perda de validação menor e mantém os pesos da melhor validação. Requer validação (Passos de Validação acima de 0). 0 para desativar.",
       seed: "Seed",
       seedTooltip: "Semente aleatória para reprodutibilidade.",
       offloadLayers: "Descarregar camadas",
@@ -4523,20 +4224,29 @@ export const ptBR = {
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Placa desconhecida",
       gradCheckpoint: "Checkpoint de gradiente",
-      gradCheckpointTooltip:
-        "Reduz o uso de memória ao recalcular as ativações, em troca de maior custo computacional.",
+      gradCheckpointTooltip: "Reduz o uso de memória ao recalcular as ativações, em troca de maior custo computacional.",
       none: "Nenhum",
       standard: "Padrão",
       enablePacking: "Ativar empacotamento (packing)",
       assistantCompletionsOnly: "Apenas respostas do assistente",
       readMore: "Leia mais",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Não foi possível duplicar a execução",
-      duplicateDraftChanged:
-        "As configurações de treinamento mudaram durante o carregamento. Tente duplicar novamente.",
-      duplicateNoModel:
-        "Esta execução não tem uma configuração de modelo salva.",
+      duplicateDraftChanged: "As configurações de treinamento mudaram durante o carregamento. Tente duplicar novamente.",
+      duplicateNoModel: "Esta execução não tem uma configuração de modelo salva.",
       startTraining: "Iniciar Treinamento",
       starting: "Iniciando...",
       loadingModel: "Carregando modelo...",
@@ -4544,75 +4254,54 @@ export const ptBR = {
       chooseModel: "Escolher modelo",
       chooseDataset: "Escolher dataset",
       chooseModelAndDataset: "Escolher modelo e dataset",
-      modelUnverified:
-        "Não foi possível verificar os parâmetros deste modelo. Verifique sua conexão ou seu token do Hugging Face e tente novamente.",
-      legacyDatasetScriptUnsupported:
-        "Este dataset do Hub depende de um script personalizado legado e não é compatível com este fluxo de treinamento.",
-      hfModelAccessDenied:
-        "O Hugging Face negou o acesso a este modelo. Adicione um token válido do Hugging Face com acesso ao repositório, aceite os termos de acesso necessários e tente novamente.",
-      hfModelVerificationRateLimited:
-        "A verificação do modelo do Hugging Face está com limite de solicitações. Tente novamente em instantes.",
-      hfModelVerificationFailed:
-        "Não foi possível verificar o modelo do Hugging Face. Confira o ID do repositório e seu token de acesso.",
-      hfModelMetadataUnavailable:
-        "Os metadados do modelo do Hugging Face estão temporariamente indisponíveis. Tente novamente antes de iniciar o treinamento.",
-      datasetUnverified:
-        "Não foi possível verificar se o dataset é compatível com este modelo. Verifique sua conexão ou seu token do Hugging Face; o início do treinamento tentará verificar novamente.",
-      setupChanged:
-        "A configuração de treinamento mudou durante a verificação. Revise-a e inicie o treinamento novamente.",
+      modelUnverified: "Não foi possível verificar os parâmetros deste modelo. Verifique sua conexão ou seu token do Hugging Face e tente novamente.",
+      legacyDatasetScriptUnsupported: "Este dataset do Hub depende de um script personalizado legado e não é compatível com este fluxo de treinamento.",
+      hfModelAccessDenied: "O Hugging Face negou o acesso a este modelo. Adicione um token válido do Hugging Face com acesso ao repositório, aceite os termos de acesso necessários e tente novamente.",
+      hfModelVerificationRateLimited: "A verificação do modelo do Hugging Face está com limite de solicitações. Tente novamente em instantes.",
+      hfModelVerificationFailed: "Não foi possível verificar o modelo do Hugging Face. Confira o ID do repositório e seu token de acesso.",
+      hfModelMetadataUnavailable: "Os metadados do modelo do Hugging Face estão temporariamente indisponíveis. Tente novamente antes de iniciar o treinamento.",
+      datasetUnverified: "Não foi possível verificar se o dataset é compatível com este modelo. Verifique sua conexão ou seu token do Hugging Face; o início do treinamento tentará verificar novamente.",
+      setupChanged: "A configuração de treinamento mudou durante a verificação. Revise-a e inicie o treinamento novamente.",
       validation: {
-        s3MultimodalUnsupported:
-          "Datasets do S3 ainda não são compatíveis com treinamento de visão.",
+        s3MultimodalUnsupported: "Datasets do S3 ainda não são compatíveis com treinamento de visão.",
         s3BucketRequired: "Insira primeiro o nome de um bucket do S3.",
-        s3CredentialsRequired:
-          "Forneça as chaves de acesso do S3 ou ative a função do IAM.",
+        s3CredentialsRequired: "Forneça as chaves de acesso do S3 ou ative a função do IAM.",
         modelRequired: "Selecione primeiro um modelo base.",
         learningRatePositive: "Insira uma taxa de aprendizado maior que zero.",
-        embeddingLearningRateRange:
-          "Insira uma taxa de aprendizado do embedding maior que 0 e menor que 1.",
-        decisionColumnsMissing:
-          "Modelos de decisão precisam das colunas state, questions e gold (ou answers). Faltando: {columns}.",
-        decisionOwnerOnly:
-          "Só o proprietário do Unsloth pode ajustar modelos de decisão.",
+        embeddingLearningRateRange: "Insira uma taxa de aprendizado do embedding maior que 0 e menor que 1.",
+        decisionColumnsMissing: "Modelos de decisão precisam das colunas state, questions e gold (ou answers). Faltando: {columns}.",
+        decisionOwnerOnly: "Só o proprietário do Unsloth pode ajustar modelos de decisão.",
         hfDatasetRequired: "Selecione primeiro um dataset do Hugging Face.",
-        hfDatasetSplitRequired:
-          "Selecione ou insira primeiro uma divisão de treino.",
+        hfDatasetSplitRequired: "Selecione ou insira primeiro uma divisão de treino.",
         localDatasetRequired: "Selecione primeiro um dataset local.",
         unsupportedDatasetSource: "Fonte de dataset não compatível.",
       },
       startFailed: "Falha ao iniciar o treinamento",
-      startUnconfirmed:
-        "O Unsloth não conseguiu confirmar se o treinamento foi iniciado. O status está sendo verificado em segundo plano.",
+      startUnconfirmed: "O Unsloth não conseguiu confirmar se o treinamento foi iniciado. O status está sendo verificado em segundo plano.",
       stopFailed: "Falha ao interromper o treinamento",
       trainingStillActiveTitle: "O treinamento ainda está ativo",
-      stopBeforeConfig:
-        "Interrompa o treinamento primeiro e depois volte à configuração.",
+      stopBeforeConfig: "Interrompa o treinamento primeiro e depois volte à configuração.",
       resumeFailed: "Falha ao retomar o treinamento",
       resumeFailedTitle: "Não foi possível retomar o treinamento",
-      resumeUnavailable:
-        "Somente execuções de treinamento interrompidas ou com erro e que tenham um checkpoint salvo podem ser retomadas.",
+      resumeUnavailable: "Somente execuções de treinamento interrompidas ou com erro e que tenham um checkpoint salvo podem ser retomadas.",
       uploadConfigTooltip: "Carregar uma configuração YAML salva",
       saveConfigTooltip: "Baixar configuração atual como YAML",
       resetConfigTooltip: "Redefinir para os padrões do modelo",
       configLoaded: "Configuração carregada",
       failedToLoadConfig: "Falha ao carregar a configuração",
       invalidYamlFile: "Arquivo YAML inválido",
-      configTooLarge:
-        "O arquivo de configuração de treinamento é muito grande (máximo de 1 MiB).",
+      configTooLarge: "O arquivo de configuração de treinamento é muito grande (máximo de 1 MiB).",
       failedToReadFile: "Falha ao ler o arquivo",
       failedToSaveConfig: "Falha ao salvar a configuração",
       parametersReset: "Parâmetros redefinidos para os padrões do modelo",
-      audioIncompatible:
-        "Este modelo não suporta áudio. Mude para um modelo compatível com áudio ou escolha um dataset sem áudio.",
-      visionIncompatible:
-        "O modelo de texto não é compatível com um dataset multimodal. Mude para um modelo de visão ou escolha um dataset apenas de texto.",
+      audioIncompatible: "Este modelo não suporta áudio. Mude para um modelo compatível com áudio ou escolha um dataset sem áudio.",
+      visionIncompatible: "O modelo de texto não é compatível com um dataset multimodal. Mude para um modelo de visão ou escolha um dataset apenas de texto.",
       cancelTitle: "Cancelar Treinamento",
       cancelDescription: "Deseja cancelar a execução de treino atual?",
       continueAction: "Continuar Treinamento",
       cancelAction: "Cancelar Treinamento",
       stopTitle: "Interromper Treinamento",
-      stopDescription:
-        "Escolha como interromper a execução de treino atual. Interromper e Salvar cria um checkpoint que poderá ser retomado mais tarde; se interromper sem salvar, não será possível retomar o treino.",
+      stopDescription: "Escolha como interromper a execução de treino atual. Interromper e Salvar cria um checkpoint que poderá ser retomado mais tarde; se interromper sem salvar, não será possível retomar o treino.",
       stopAction: "Interromper",
       stopping: "Interrompendo...",
       stopAndSave: "Interromper e Salvar",
@@ -4620,13 +4309,13 @@ export const ptBR = {
       exportModel: "Exportar Modelo",
       milestone: "Marco",
       halfwayDone: "Metade concluída. O treinamento passou de 50%.",
-      doneNextStep:
-        "Treinamento concluído. Próximo passo: compare as saídas do modelo base com as do modelo ajustado.",
+      doneNextStep: "Treinamento concluído. Próximo passo: compare as saídas do modelo base com as do modelo ajustado.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Histórico",
-      emptyDescription:
-        "Nenhuma execução de treino ainda. Inicie sua primeira execução na aba Configurar.",
+      emptyDescription: "Nenhuma execução de treino ainda. Inicie sua primeira execução na aba Configurar.",
       loadError: "Falha ao carregar as execuções de treino",
       deleteError: "Falha ao excluir a execução de treino. Por favor, tente novamente.",
       retry: "Tentar novamente",
@@ -4635,23 +4324,15 @@ export const ptBR = {
       loadingRun: "Carregando execução de treino...",
       runNotFound: "Execução não encontrada",
       deleteTitle: "Excluir execução de treino?",
-      deleteDescription:
-        "Isso excluirá permanentemente esta execução de treino e todas as suas métricas. Esta ação não pode ser desfeita.",
+      deleteDescription: "Isso excluirá permanentemente esta execução de treino e todas as suas métricas. Esta ação não pode ser desfeita.",
       filesDeleted: "Arquivos excluídos",
-      deleteArtifactsLabel:
-        "Excluir também do disco os arquivos do adaptador",
-      deleteArtifactsDescription:
-        "Exclui a pasta de saída da execução, incluindo adaptadores e checkpoints salvos.",
-      deleteArtifactsSharedNote:
-        "Outra execução compartilha esta pasta de saída. Os arquivos serão mantidos até que a última execução que os utiliza seja excluída.",
-      artifactsKeptShared:
-        "Execução excluída. Os arquivos do adaptador foram mantidos porque outra execução usa a mesma pasta.",
-      deleteArtifactsActiveError:
-        "Esses arquivos estão sendo usados pelo treinamento atual. Interrompa o treinamento antes de excluí-los.",
-      deleteArtifactsFailed:
-        "A execução foi excluída, mas não foi possível apagar seus arquivos.",
-      deleteArtifactsRetainedError:
-        "Não foi possível remover os arquivos do adaptador, então a execução foi mantida no histórico.",
+      deleteArtifactsLabel: "Excluir também do disco os arquivos do adaptador",
+      deleteArtifactsDescription: "Exclui a pasta de saída da execução, incluindo adaptadores e checkpoints salvos.",
+      deleteArtifactsSharedNote: "Outra execução compartilha esta pasta de saída. Os arquivos serão mantidos até que a última execução que os utiliza seja excluída.",
+      artifactsKeptShared: "Execução excluída. Os arquivos do adaptador foram mantidos porque outra execução usa a mesma pasta.",
+      deleteArtifactsActiveError: "Esses arquivos estão sendo usados pelo treinamento atual. Interrompa o treinamento antes de excluí-los.",
+      deleteArtifactsFailed: "A execução foi excluída, mas não foi possível apagar seus arquivos.",
+      deleteArtifactsRetainedError: "Não foi possível remover os arquivos do adaptador, então a execução foi mantida no histórico.",
       resumeTraining: "Retomar treinamento",
       resuming: "Retomando...",
       deleteRun: "Excluir execução",
@@ -4675,11 +4356,26 @@ export const ptBR = {
       copyPreviewLink: "Copiar link de pré-visualização",
       previewLinkCopied: "Link de pré-visualização copiado",
       previewLinkCopyFailed: "Não foi possível copiar o link",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Configurações do Gráfico",
-      settingsDescription:
-        "Ajuste a apresentação do gráfico enquanto o treinamento continua rodando.",
+      settingsDescription: "Ajuste a apresentação do gráfico enquanto o treinamento continua rodando.",
       openSettings: "Abrir configurações do gráfico",
       viewWindow: "Janela de visualização",
       viewWindowDescription: "Mostra apenas os passos mais recentes ou o histórico completo.",
@@ -4714,8 +4410,7 @@ export const ptBR = {
       waitingForFirstEvaluationStep: "Aguardando o primeiro passo de validação...",
       evaluationNotConfigured: "Validação não configurada",
       evalChartWillAppear: "O gráfico aparecerá assim que o eval_steps for alcançado",
-      setEvalDatasetAndSteps:
-        "Defina o dataset de validação e eval_steps para acompanhar a loss de validação",
+      setEvalDatasetAndSteps: "Defina o dataset de validação e eval_steps para acompanhar a loss de validação",
     },
     progress: {
       title: "Progresso do Treinamento",
@@ -4723,8 +4418,7 @@ export const ptBR = {
       exportGguf: "Exportar para GGUF",
       useInDecisionApi: "Usar na API de decisões",
       decisionApiEnabled: "A API de decisões agora usa {name}.",
-      decisionApiFailed:
-        "Não foi possível trocar a API de decisões para este modelo.",
+      decisionApiFailed: "Não foi possível trocar a API de decisões para este modelo.",
       openConfig: "Abrir configuração de treino",
       configLabel: "Configuração de Treino",
       hyperparams: "Hiperparâmetros",
@@ -4773,6 +4467,9 @@ export const ptBR = {
         error: "Erro",
         stopped: "Interrompido",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Pronto",
@@ -4788,13 +4485,131 @@ export const ptBR = {
       dataset: "Dataset",
       datasetStreaming: "Dataset: streaming (sem download completo)",
       modelWeights: "Pesos do modelo",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Pesos {model} + contexto {context} = {total} de {budget} de VRAM utilizável",
-    readoutWithSpec:
-      "Pesos {model} + KV {kv} + rascunho MTP {spec} = {total} de {budget} de VRAM utilizável",
+    readout: "Pesos {model} + contexto {context} = {total} de {budget} de VRAM utilizável",
+    readoutWithSpec: "Pesos {model} + KV {kv} + rascunho MTP {spec} = {total} de {budget} de VRAM utilizável",
     kvRate: "KV reservado, ~{rate}/token",
     oomLikely: "Com as configurações atuais, é provável um erro de memória",
     tooLarge: "Maior que a VRAM, será descarregado para a CPU. Uma quantização menor roda mais rápido",
@@ -4843,7 +4658,7 @@ export const ptBR = {
     importError: "Não foi possível importar a habilidade",
     exportError: "Não foi possível exportar a habilidade",
     deleteTitle: "Excluir habilidade",
-    deleteDescription: 'Excluir "{name}" e tudo o que está na pasta dela em ~/.agents/skills? Isso não pode ser desfeito.',
+    deleteDescription: "Excluir \"{name}\" e tudo o que está na pasta dela em ~/.agents/skills? Isso não pode ser desfeito.",
     search: "Buscar habilidades por nome ou descrição…",
     noMatch: "Nenhuma habilidade corresponde a “{query}”",
     clearSearch: "Limpar busca",
@@ -5067,8 +4882,7 @@ export const ptBR = {
       modelEmpty: "Baixe um modelo no Model Hub ou adicione uma conexão para escolher outro.",
       modelMissing: "{model} (não está neste dispositivo)",
       allowLoad: "Trocar automaticamente quando eu estiver fora",
-      allowLoadHint:
-        "Quando esta tarefa vence e você não usa o Unsloth há 5 minutos, ela carrega este modelo sem perguntar, executa a tarefa e depois volta para o modelo que você tinha. Se você estiver usando o Unsloth ou treinando nesse momento, a execução é pulada e seu modelo fica como está. Desativado, o Unsloth pergunta antes de carregar.",
+      allowLoadHint: "Quando esta tarefa vence e você não usa o Unsloth há 5 minutos, ela carrega este modelo sem perguntar, executa a tarefa e depois volta para o modelo que você tinha. Se você estiver usando o Unsloth ou treinando nesse momento, a execução é pulada e seu modelo fica como está. Desativado, o Unsloth pergunta antes de carregar.",
       reasoning: "Esforço de raciocínio",
       reasoningDefault: "Padrão",
       reasoningOff: "Desligado",
@@ -5275,7 +5089,7 @@ export const ptBR = {
     searchLibrary: "Buscar na biblioteca",
     searchFolder: "Buscar na pasta",
     dropToUpload: "Solte para enviar",
-    dropToUploadInto: 'Solte para enviar para "{folder}"',
+    dropToUploadInto: "Solte para enviar para \"{folder}\"",
     itemCountOne: "{count} item",
     itemCount: "{count} itens",
     selectItem: "Selecionar {name}",
@@ -5375,10 +5189,10 @@ export const ptBR = {
       create: "Criar",
       renameFolder: "Renomear pasta",
       renameFile: "Renomear arquivo",
-      deleteTitle: 'Excluir "{name}"?',
+      deleteTitle: "Excluir \"{name}\"?",
       deleteManyTitle: "Excluir {count} itens?",
       deleteManyDescription: "Os arquivos são excluídos de onde estão armazenados. O conteúdo de uma pasta excluída sobe um nível.",
-      deleteFolderIntoParent: 'Todo o conteúdo é movido para "{folder}". Nenhum arquivo é excluído.',
+      deleteFolderIntoParent: "Todo o conteúdo é movido para \"{folder}\". Nenhum arquivo é excluído.",
       deleteFolderIntoLibrary: "Todo o conteúdo é movido para sua Biblioteca. Nenhum arquivo é excluído.",
       deleteUpload: "Isso exclui o arquivo permanentemente.",
       deleteAttachment: "Ele também é removido do chat ao qual estava anexado.",
@@ -5667,14 +5481,14 @@ export const ptBR = {
     renameChat: "Renomear chat",
     chatName: "Nome do chat",
     deleteChat: "Excluir chat",
-    deleteChatDescription: 'O chat "{name}" e suas mensagens serão excluídos permanentemente. Essa ação não pode ser desfeita.',
+    deleteChatDescription: "O chat \"{name}\" e suas mensagens serão excluídos permanentemente. Essa ação não pode ser desfeita.",
     importChats: "Importar chats",
     importDestination: "Escolha onde importar {name}:",
     selectDestination: "Selecionar destino",
     recents: "Recentes",
     import: "Importar",
     deleteProject: "Excluir projeto",
-    deleteProjectDescription: 'O projeto "{name}" e todos os seus chats serão excluídos permanentemente. Essa ação não pode ser desfeita.',
+    deleteProjectDescription: "O projeto \"{name}\" e todos os seus chats serão excluídos permanentemente. Essa ação não pode ser desfeita.",
     deleteProjectFiles: "A pasta de trabalho do projeto será removida do disco.",
     deleteAll: "Excluir tudo",
     projectFallback: "projeto",
@@ -5700,12 +5514,9 @@ export const ptBR = {
     currentPassword: "Senha atual",
     newPassword: "Nova senha",
     confirmPassword: "Confirmar senha",
-    setupCodeHint:
-      "Primeiro acesso? Cole como senha o código de configuração que o administrador passou para você.",
-    ownerHint:
-      "Proprietário da instalação? Entre como unsloth ou com o nome de login exibido em Configurações > Contas.",
-    currentSetupCodeHint:
-      "Cole como senha atual o código de configuração que você acabou de usar para entrar.",
+    setupCodeHint: "Primeiro acesso? Cole como senha o código de configuração que o administrador passou para você.",
+    ownerHint: "Proprietário da instalação? Entre como unsloth ou com o nome de login exibido em Configurações > Contas.",
+    currentSetupCodeHint: "Cole como senha atual o código de configuração que você acabou de usar para entrar.",
     minLength: "Deve ter pelo menos 8 caracteres.",
     ensureMatch: "Verifique se as senhas coincidem.",
     noSpaces: "A nova senha não pode conter espaços.",
@@ -5718,17 +5529,14 @@ export const ptBR = {
     continueAsOwner: "Continuar como proprietário",
     signInWithUsername: "Entre com seu nome de usuário e senha.",
     bootstrapping: "A autenticação ainda está inicializando a conta de administrador padrão.",
-    signInToChange:
-      "Entre uma vez com as credenciais padrão para alterar a senha.",
+    signInToChange: "Entre uma vez com as credenciais padrão para alterar a senha.",
     alreadyUpdated: "A senha já foi atualizada. Use a tela de login.",
     busy: "O Unsloth está ocupado. Tente novamente em instantes.",
     updateFailed: "Falha ao atualizar a senha.",
     loadFailed: "Falha ao carregar.",
     failed: "Falha na autenticação.",
-    shuttingDown:
-      "Esta instância está sendo encerrada: ela estava acessível na rede e a senha padrão nunca foi alterada.",
-    shutdownCountdown:
-      "Esta instância está acessível na rede e ainda usa a senha padrão, então será encerrada em {time}. Definir uma senha aqui a mantém em execução.",
+    shuttingDown: "Esta instância está sendo encerrada: ela estava acessível na rede e a senha padrão nunca foi alterada.",
+    shutdownCountdown: "Esta instância está acessível na rede e ainda usa a senha padrão, então será encerrada em {time}. Definir uma senha aqui a mantém em execução.",
   },
   routes: {
     chat: "Chat",
@@ -5742,21 +5550,15 @@ export const ptBR = {
     blockedTitle: "Código personalizado bloqueado",
     enableTitle: "Ativar código personalizado para este modelo?",
     thisModel: "Este modelo",
-    unsafeBody:
-      "{model} contém arquivos que a verificação de segurança do Hugging Face marcou como não seguros (por exemplo, um pickle malicioso que executaria código ao carregar o modelo). Ele não pode ser carregado. Os arquivos marcados nunca foram baixados.",
-    unsafeBodyFromProvider:
-      "{model} de {provider} contém arquivos que a verificação de segurança do Hugging Face marcou como não seguros (por exemplo, um pickle malicioso que executaria código ao carregar o modelo). Ele não pode ser carregado. Os arquivos marcados nunca foram baixados.",
+    unsafeBody: "{model} contém arquivos que a verificação de segurança do Hugging Face marcou como não seguros (por exemplo, um pickle malicioso que executaria código ao carregar o modelo). Ele não pode ser carregado. Os arquivos marcados nunca foram baixados.",
+    unsafeBodyFromProvider: "{model} de {provider} contém arquivos que a verificação de segurança do Hugging Face marcou como não seguros (por exemplo, um pickle malicioso que executaria código ao carregar o modelo). Ele não pode ser carregado. Os arquivos marcados nunca foram baixados.",
     customCode: "{model} declara código Python personalizado no repositório. {note}",
-    customCodeFromProvider:
-      "{model} de {provider} declara código Python personalizado no repositório. {note}",
-    blockedNote:
-      "Uma verificação de segurança encontrou problemas CRITICAL, então ele não pode ser ativado.",
-    reviewNote:
-      "Revise a verificação de segurança abaixo. Continue apenas se confiar na origem do modelo.",
+    customCodeFromProvider: "{model} de {provider} declara código Python personalizado no repositório. {note}",
+    blockedNote: "Uma verificação de segurança encontrou problemas CRITICAL, então ele não pode ser ativado.",
+    reviewNote: "Revise a verificação de segurança abaixo. Continue apenas se confiar na origem do modelo.",
     trustNote: "Continue apenas se confiar na origem do modelo.",
     flaggedIntro: "Nosso verificador automático encontrou problemas, incluindo:",
-    nothingFlagged:
-      "Nosso verificador automático não encontrou arquivos preocupantes, mas confira mesmo assim.",
+    nothingFlagged: "Nosso verificador automático não encontrou arquivos preocupantes, mas confira mesmo assim.",
     unscannedTitle: "Não foi possível verificar os arquivos do modelo",
     unscannedBody: "{model} inclui pesos pickle, que podem executar código ao carregar, e não há verificação de malware disponível para eles, então não pode ser carregado. {note}",
     unscannedIntro: "Arquivos que não puderam ser verificados:",
@@ -5787,10 +5589,8 @@ export const ptBR = {
     openChangelog: "Abrir changelog",
     retry: "Tentar novamente",
     loadingChanges: "Carregando novas alterações...",
-    customLlamaRepo:
-      "Esta instalação acompanha um repositório llama.cpp personalizado, então não é possível comparar as alterações.",
-    noItemisedNotes:
-      "Esta build é anterior às notas de lançamento detalhadas, então não é possível comparar as alterações.",
+    customLlamaRepo: "Esta instalação acompanha um repositório llama.cpp personalizado, então não é possível comparar as alterações.",
+    noItemisedNotes: "Esta build é anterior às notas de lançamento detalhadas, então não é possível comparar as alterações.",
     compareFailed: "Não foi possível comparar estes lançamentos.",
     llamaChangesLabel: "Novas alterações do llama.cpp de {from} para {to}",
     showingChanges: "Mostrando {shown} de {total} alterações",
@@ -5815,8 +5615,7 @@ export const ptBR = {
     useDefaultLocation: "Usar padrão",
     longPaths: {
       title: "O Windows vai pedir permissão",
-      approve:
-        "Aprove o {tool} uma vez para ativar caminhos de arquivo longos para kernels compilados.",
+      approve: "Aprove o {tool} uma vez para ativar caminhos de arquivo longos para kernels compilados.",
       waiting: "Aguardando permissão do Windows...",
     },
     skip: "Pular",
@@ -5845,8 +5644,7 @@ export const ptBR = {
     repair: {
       upgrading: "Atualizando para a instalação completa...",
       gettingReady: "Preparando tudo...",
-      upgradingDetail:
-        "Baixando o PyTorch e suas bibliotecas para a GPU desta máquina. Isso pode levar vários minutos.",
+      upgradingDetail: "Baixando o PyTorch e suas bibliotecas para a GPU desta máquina. Isso pode levar vários minutos.",
       wontTakeLong: "Isso não vai demorar.",
       upgradeFailed: "Não foi possível atualizar para a instalação completa",
       updateFailed: "Falha na atualização",
@@ -5873,8 +5671,7 @@ export const ptBR = {
     diagnostics: {
       copy: "Copiar diagnóstico",
       copying: "Copiando...",
-      clipboardFailed:
-        "Falha ao copiar para a área de transferência. Selecione e copie o diagnóstico abaixo.",
+      clipboardFailed: "Falha ao copiar para a área de transferência. Selecione e copie o diagnóstico abaixo.",
       copyFailed: "Falha ao copiar o diagnóstico: {error}",
     },
   },
@@ -6008,4 +5805,4 @@ export const ptBR = {
       inRam: "{amount} na RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

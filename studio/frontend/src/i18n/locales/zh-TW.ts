@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const zhTW = {
   turns: {
     label: "第 {number} 輪",
@@ -132,8 +129,7 @@ export const zhTW = {
   browser: {
     drafts: {
       title: "要卸載含有已輸入文字的頁面嗎？",
-      description:
-        "為了讓聊天保持流暢，只有三個含已輸入文字的隱藏頁面會持續執行。繼續將卸載 {pages}，未儲存的文字可能會遺失。按「取消」會回到上一個分頁。",
+      description: "為了讓聊天保持流暢，只有三個含已輸入文字的隱藏頁面會持續執行。繼續將卸載 {pages}，未儲存的文字可能會遺失。按「取消」會回到上一個分頁。",
       confirm: "卸載並繼續",
     },
     agentSettings: {
@@ -141,16 +137,14 @@ export const zhTW = {
       docs: "說明文件",
       docsLabel: "開啟瀏覽器操作說明文件",
       enable: "允許模型使用瀏覽器",
-      enableDescription:
-        "模型會在自己的瀏覽器分頁中開啟頁面、閱讀內容，並代為點按與輸入。也可從輸入框的 + 選單使用。",
+      enableDescription: "模型會在自己的瀏覽器分頁中開啟頁面、閱讀內容，並代為點按與輸入。也可從輸入框的 + 選單使用。",
       history: "瀏覽記錄",
       historyDescription: "完整存取權會略過核准；「永不」仍會封鎖存取",
       alwaysAsk: "一律詢問",
       alwaysAllow: "一律允許",
       never: "永不",
       scripts: "執行指令碼",
-      scriptsDescription:
-        "選擇模型是否可在頁面上執行指令碼。每個指令碼執行前都會先讓您查看",
+      scriptsDescription: "選擇模型是否可在頁面上執行指令碼。每個指令碼執行前都會先讓您查看",
       scriptsAllowDescription: "模型會在任何頁面上直接執行指令碼，不再詢問。指令碼可以讀取和變更頁面上的任何內容",
       scriptsConfirmTitle: "允許所有指令碼？",
       scriptsConfirmDescription: "模型會在任何頁面上執行指令碼，而不會先向你顯示。指令碼可以讀取和變更頁面上的任何內容，包括你已登入的頁面。只有在你信任所使用的模型時才開啟此選項。",
@@ -159,8 +153,7 @@ export const zhTW = {
       cursorDescription: "在模型於頁面上點按、輸入和拖曳的位置顯示指標",
       askEveryTime: "每次都詢問",
       permissionsTitle: "代理程式權限",
-      permissionsDescription:
-        "設定預設值與個別網站的例外。絕不會填寫密碼和付款欄位。",
+      permissionsDescription: "設定預設值與個別網站的例外。絕不會填寫密碼和付款欄位。",
       site: "網站或模式",
       sitePlaceholder: "example.com 或 *.example.com",
       default: "預設",
@@ -177,8 +170,7 @@ export const zhTW = {
       cancel: "取消",
       removeSite: "移除 {site}",
       hostOnly: "僅此主機，不含其子網域",
-      permissionsNote:
-        "這裡只會列出設有專屬權限的網站。「動作」指登入、表單送出，以及購買、傳送或刪除用的按鈕。",
+      permissionsNote: "這裡只會列出設有專屬權限的網站。「動作」指登入、表單送出，以及購買、傳送或刪除用的按鈕。",
       siteInvalid: "請輸入網站，例如 example.com 或 *.example.com。",
     },
     agent: {
@@ -274,8 +266,7 @@ export const zhTW = {
       secureTitle: "連線安全",
       secureDescription: "您傳送到這個網站的資訊（例如密碼或卡號）會保持私密。",
       insecureTitle: "連線不安全",
-      insecureDescription:
-        "您傳送到這個網站的資訊（例如密碼或卡號）可能會被他人看見。",
+      insecureDescription: "您傳送到這個網站的資訊（例如密碼或卡號）可能會被他人看見。",
       learnMore: "瞭解詳情",
       certificateValid: "憑證有效",
     },
@@ -295,18 +286,15 @@ export const zhTW = {
     linksTitle: "連結和檔案",
     addressBarTitle: "網址列",
     openLinksSetting: "連結開啟位置",
-    openLinksSettingDescription:
-      "聊天中的連結要在哪裡開啟：您的預設瀏覽器，或對話旁瀏覽器中的分頁。指向本機位址的連結一律在預設瀏覽器中開啟。",
+    openLinksSettingDescription: "聊天中的連結要在哪裡開啟：您的預設瀏覽器，或對話旁瀏覽器中的分頁。指向本機位址的連結一律在預設瀏覽器中開啟。",
     linkDestinationDefault: "預設瀏覽器",
     linkDestinationPanel: "Unsloth 瀏覽器",
     openFilesSetting: "在瀏覽器中開啟檔案",
-    openFilesSettingDescription:
-      "您附加的文件（例如 PDF、Office 檔案、HTML 和文字檔）會在對話旁的瀏覽器分頁中開啟，而不是在預覽視窗中。",
+    openFilesSettingDescription: "您附加的文件（例如 PDF、Office 檔案、HTML 和文字檔）會在對話旁的瀏覽器分頁中開啟，而不是在預覽視窗中。",
     searchEngineSetting: "搜尋引擎",
     searchEngineSettingDescription: "當網址列收到的是文字而非 URL 時使用。",
     showFullUrlSetting: "顯示完整 URL",
-    showFullUrlSettingDescription:
-      "在網址列中顯示查詢字串和片段，而不只是網站和路徑。",
+    showFullUrlSettingDescription: "在網址列中顯示查詢字串和片段，而不只是網站和路徑。",
     bookmarksTitle: "書籤",
     bookmarksToolbarSetting: "書籤列",
     bookmarksToolbarSettingDescription: "何時在網址列下方顯示您儲存的頁面。",
@@ -320,40 +308,32 @@ export const zhTW = {
     pagesFromChat: "請開啟聊天，以在瀏覽器中檢視此內容。",
     tabsTitle: "分頁",
     switchToNewTabsSetting: "立即切換到新分頁",
-    switchToNewTabsSettingDescription:
-      "用 ⌘ 或 Ctrl 在新分頁中開啟連結時，直接顯示該分頁，而不是在背景開啟。",
+    switchToNewTabsSettingDescription: "用 ⌘ 或 Ctrl 在新分頁中開啟連結時，直接顯示該分頁，而不是在背景開啟。",
     switchToNewTabsNative: "桌面版應用程式中的頁面一律會在前景開啟新分頁。",
     defaultZoomSetting: "預設縮放",
-    defaultZoomSettingDescription:
-      "頁面開啟時的顯示大小。重設頁面縮放後會回到這個值。",
+    defaultZoomSettingDescription: "頁面開啟時的顯示大小。重設頁面縮放後會回到這個值。",
     newTabPageTitle: "新分頁頁面",
     showSuggestedSetting: "顯示建議網站",
-    showSuggestedSettingDescription:
-      "將您常造訪的網站以捷徑形式顯示在新分頁上。",
+    showSuggestedSettingDescription: "將您常造訪的網站以捷徑形式顯示在新分頁上。",
     showRecentsSetting: "顯示最近的頁面",
     showRecentsSettingDescription: "在新分頁上列出最近造訪過的頁面。",
     hiddenSuggestionsSetting: "已移除的建議",
-    hiddenSuggestionsSettingDescription:
-      "從「建議」中移除的網站：{count} 個。還原後即可再次顯示。",
+    hiddenSuggestionsSettingDescription: "從「建議」中移除的網站：{count} 個。還原後即可再次顯示。",
     hiddenSuggestionsNone: "從「建議」中移除的網站可以在這裡還原。",
     restore: "還原",
     importBookmarksSetting: "匯入和匯出",
-    importBookmarksSettingDescription:
-      "使用 Chrome、Safari、Firefox 或 Edge 匯出的 HTML 檔案匯入書籤，或將您的書籤儲存為這種檔案。",
+    importBookmarksSettingDescription: "使用 Chrome、Safari、Firefox 或 Edge 匯出的 HTML 檔案匯入書籤，或將您的書籤儲存為這種檔案。",
     importBookmarks: "匯入…",
     exportBookmarks: "匯出",
     importBookmarksDoneOne: "已匯入 {count} 個書籤。",
     importBookmarksDoneMany: "已匯入 {count} 個書籤。",
     importBookmarksNone: "該檔案中沒有新書籤。",
-    importBookmarksPartial:
-      "已匯入 {count} 個，但另有 {leftOut} 個超出上限：Unsloth 最多保留 {max} 個書籤。",
-    importBookmarksFailed:
-      "無法讀取該檔案。請選擇從瀏覽器匯出的書籤 HTML 檔案。",
+    importBookmarksPartial: "已匯入 {count} 個，但另有 {leftOut} 個超出上限：Unsloth 最多保留 {max} 個書籤。",
+    importBookmarksFailed: "無法讀取該檔案。請選擇從瀏覽器匯出的書籤 HTML 檔案。",
     downloadsTitle: "下載",
     askWhereToSaveSetting: "每次詢問檔案儲存位置",
     askWhereToSaveSettingDescription: "在瀏覽器中下載檔案時顯示儲存對話框。",
-    askWhereToSaveUnsupported:
-      "您的網頁瀏覽器會將下載內容儲存到它自己的下載資料夾。",
+    askWhereToSaveUnsupported: "您的網頁瀏覽器會將下載內容儲存到它自己的下載資料夾。",
     downloadLocationSetting: "位置",
     downloadLocationDefault: "系統的「下載」資料夾",
     downloadLocationChange: "變更",
@@ -364,8 +344,7 @@ export const zhTW = {
     askBeforeProgramDownloadsSettingDescription: "對可執行程式的檔案（例如 .exe 或 .dmg）進行確認，即使其他下載不詢問。",
     downloadSitesSetting: "網站下載權限",
     downloadSitesSettingDescription: "您選擇一律允許或一律封鎖下載的網站。",
-    downloadSitesNone:
-      "在詢問時勾選「下次記住這個選擇」，該網站就會出現在這裡。",
+    downloadSitesNone: "在詢問時勾選「下次記住這個選擇」，該網站就會出現在這裡。",
     downloadSitesFor: "來自 {host} 的下載",
     downloadSitesRemove: "忘記 {host}",
     capture: {
@@ -400,8 +379,7 @@ export const zhTW = {
     downloadPrompt: {
       title: "要下載這個檔案嗎？",
       description: "{host} 想要將 {name} 儲存到您的電腦。",
-      dangerous:
-        "這類檔案可以在您的電腦上執行程式。只有在您信任 {host} 時才下載。",
+      dangerous: "這類檔案可以在您的電腦上執行程式。只有在您信任 {host} 時才下載。",
       remember: "下次記住這個選擇",
       once: "下次再詢問",
       site: "對 {host} 一律如此",
@@ -413,11 +391,9 @@ export const zhTW = {
       save: "儲存",
     },
     saveDownloadHistorySetting: "保留下載記錄",
-    saveDownloadHistorySettingDescription:
-      "在「下載記錄」中列出您從瀏覽器下載的檔案。",
+    saveDownloadHistorySettingDescription: "在「下載記錄」中列出您從瀏覽器下載的檔案。",
     saveHistorySetting: "儲存瀏覽記錄",
-    saveHistorySettingDescription:
-      "記住您造訪的頁面，用於「記錄」、「最近項目」和「建議」。",
+    saveHistorySettingDescription: "記住您造訪的頁面，用於「記錄」、「最近項目」和「建議」。",
     historyRetentionSetting: "記錄保留期間",
     historyRetentionSettingDescription: "早於此期間的造訪記錄會自動刪除。",
     retention: {
@@ -429,17 +405,13 @@ export const zhTW = {
     },
     annotationsTitle: "註解",
     annotationScreenshotsSetting: "註解螢幕截圖",
-    annotationScreenshotsSettingDescription:
-      "附上含有您標記的頁面截圖，有助於視覺模型理解您的意見，但會佔用更多上下文。",
-    annotationScreenshotsUnsupported:
-      "需要桌面版應用程式或 Chromium 架構的瀏覽器，例如 Chrome 或 Edge。",
-    annotationScreenshotsHint:
-      "在網頁瀏覽器中，每次傳送註解時都會要求您分享分頁。",
+    annotationScreenshotsSettingDescription: "附上含有您標記的頁面截圖，有助於視覺模型理解您的意見，但會佔用更多上下文。",
+    annotationScreenshotsUnsupported: "需要桌面版應用程式或 Chromium 架構的瀏覽器，例如 Chrome 或 Edge。",
+    annotationScreenshotsHint: "在網頁瀏覽器中，每次傳送註解時都會要求您分享分頁。",
     annotationScreenshotsAlways: "一律附上",
     annotationScreenshotsNever: "一律不附上",
     clearDataSetting: "清除瀏覽資料",
-    clearDataSettingDescription:
-      "清除瀏覽記錄、下載記錄和快取的頁面。頁面的 Cookie 和網站資料只會保留到 Unsloth 重新載入為止。",
+    clearDataSettingDescription: "清除瀏覽記錄、下載記錄和快取的頁面。頁面的 Cookie 和網站資料只會保留到 Unsloth 重新載入為止。",
     manage: "管理",
     fullView: {
       enter: "進入完整檢視",
@@ -532,8 +504,7 @@ export const zhTW = {
       pathCopied: "已複製路徑",
       openFailed: "無法開啟 {name}。",
       wrap: "自動換行",
-      reactNeedsNode:
-        "React 預覽需要 Node.js 20.19 或更新版本。若尚未安裝請先安裝，然後重新執行 Unsloth 設定程序。",
+      reactNeedsNode: "React 預覽需要 Node.js 20.19 或更新版本。若尚未安裝請先安裝，然後重新執行 Unsloth 設定程序。",
       reactFailed: "無法準備此預覽。請重新執行以重試。",
     },
     video: {
@@ -622,8 +593,7 @@ export const zhTW = {
     },
     clearData: {
       title: "要清除瀏覽資料嗎？",
-      description:
-        "這會清除您的瀏覽記錄、下載記錄、快取的頁面，以及網站 Cookie 和資料，並讓您登出各個網站。已下載的檔案會保留在您的電腦上。",
+      description: "這會清除您的瀏覽記錄、下載記錄、快取的頁面，以及網站 Cookie 和資料，並讓您登出各個網站。已下載的檔案會保留在您的電腦上。",
       cancel: "取消",
       confirm: "清除資料",
       done: "已清除瀏覽資料",
@@ -633,18 +603,13 @@ export const zhTW = {
       description: "{host} 沒有回應、拒絕連線，或封鎖了這個請求。",
       retry: "再試一次",
       botCheckTitle: "這個網站會檢查是否為真實瀏覽器",
-      botCheckDescription:
-        "{host} 要求訪客證明自己是真人，但應用程式內的檢視無法在此完成驗證。請改在您的瀏覽器中開啟。",
-      botCheckDescriptionWeb:
-        "{host} 要求訪客證明自己是真人，但應用程式內的檢視無法在此完成驗證。請在您的瀏覽器中開啟，或使用能開啟它的 {app}。",
+      botCheckDescription: "{host} 要求訪客證明自己是真人，但應用程式內的檢視無法在此完成驗證。請改在您的瀏覽器中開啟。",
+      botCheckDescriptionWeb: "{host} 要求訪客證明自己是真人，但應用程式內的檢視無法在此完成驗證。請在您的瀏覽器中開啟，或使用能開啟它的 {app}。",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "這個頁面來自表單。重新載入會再次送出表單，可能會重複執行原本的動作。",
+      resubmit: "這個頁面來自表單。重新載入會再次送出表單，可能會重複執行原本的動作。",
       upload: "這個檢視無法上傳檔案。請在系統瀏覽器中開啟頁面來傳送。",
-      scriptNavigation:
-        "這個頁面嘗試透過指令碼前往其他網址，但這個檢視無法跟隨。請改在系統瀏覽器中開啟。",
-      needsBrowser:
-        "這個頁面嘗試使用此檢視封鎖的瀏覽器功能，因此部分內容可能無法運作。請改在系統瀏覽器中開啟。",
+      scriptNavigation: "這個頁面嘗試透過指令碼前往其他網址，但這個檢視無法跟隨。請改在系統瀏覽器中開啟。",
+      needsBrowser: "這個頁面嘗試使用此檢視封鎖的瀏覽器功能，因此部分內容可能無法運作。請改在系統瀏覽器中開啟。",
     },
     native: {
       externalPrompt: "{host} 想要開啟 {url}",
@@ -652,15 +617,12 @@ export const zhTW = {
       downloading: "正在下載 {name}",
       downloaded: "已將 {name} 儲存到「下載」",
       downloadFailed: "無法下載 {name}",
-      notMarked:
-        "{name} 已儲存，但無法標示為從網際網路下載，因此系統在開啟前不會發出警告。",
+      notMarked: "{name} 已儲存，但無法標示為從網際網路下載，因此系統在開啟前不會發出警告。",
       blocked: "這個網址無法在瀏覽器面板中開啟。瀏覽器面板只能開啟公開網站。",
       blockedLocal: "這個本機網址無法在這裡開啟。請在網址列中輸入它來開啟。",
       studioAddress: "這是 Unsloth 本身的網址，因此無法在瀏覽器面板中開啟。",
-      clearDataSettingDescription:
-        "清除瀏覽記錄、下載記錄、快取的頁面，以及頁面保存的 Cookie 和網站資料，並讓您登出各個網站。",
-      clearDataDescription:
-        "這會清除您的瀏覽記錄、下載記錄、快取的頁面，以及網站 Cookie 和資料，並讓您登出各個網站。已下載的檔案會保留在您的電腦上。",
+      clearDataSettingDescription: "清除瀏覽記錄、下載記錄、快取的頁面，以及頁面保存的 Cookie 和網站資料，並讓您登出各個網站。",
+      clearDataDescription: "這會清除您的瀏覽記錄、下載記錄、快取的頁面，以及網站 Cookie 和資料，並讓您登出各個網站。已下載的檔案會保留在您的電腦上。",
       clearDataFailed: "無法清除網站資料。請再試一次。",
     },
   },
@@ -727,28 +689,22 @@ export const zhTW = {
     tensor: "張量平行",
     pipeline: "管線平行",
     data: "副本（資料平行）",
-    pipelineHelp:
-      "將模型層分散到多個 GPU。每個 GPU 都必須容納其負責的層和快取。",
-    dataHelp:
-      "將請求分散到多個 GPU。密集模型必須能放入每個 GPU；MoE 模型可共用專家。",
+    pipelineHelp: "將模型層分散到多個 GPU。每個 GPU 都必須容納其負責的層和快取。",
+    dataHelp: "將請求分散到多個 GPU。密集模型必須能放入每個 GPU；MoE 模型可共用專家。",
     tensorParallel: "將每層的運算分散到 {count} 個 GPU。",
     inUse: "修復、還原或移除引擎前，請先卸載模型。",
     title: "更多引擎",
-    description:
-      "適用於 GPU 的額外引擎（Beta）。執行模型的速度可能更快，尤其是批次推論。請在這裡安裝，然後在模型的執行設定中選擇。",
+    description: "適用於 GPU 的額外引擎（Beta）。執行模型的速度可能更快，尤其是批次推論。請在這裡安裝，然後在模型的執行設定中選擇。",
     picker: "推論引擎",
     precision: "精確度",
     precisionAuto: "模型預設",
-    precisionHelp:
-      "「模型預設」會保留儲存時的精確度。其他選項會在載入時轉換未量化的權重。",
+    precisionHelp: "「模型預設」會保留儲存時的精確度。其他選項會在載入時轉換未量化的權重。",
     kvCache: "KV 快取",
     kvCacheFp8: "FP8（記憶體減半）",
-    kvCacheHelp:
-      "FP8 以 8 位元儲存上下文快取，相同記憶體可容納約兩倍的上下文。若檢查點中沒有校準過的縮放係數，回答的準確度可能會略為下降。",
+    kvCacheHelp: "FP8 以 8 位元儲存上下文快取，相同記憶體可容納約兩倍的上下文。若檢查點中沒有校準過的縮放係數，回答的準確度可能會略為下降。",
     gpuMemory: "GPU 記憶體上限",
     gpuMemoryAuto: "自動",
-    gpuMemoryHelp:
-      "引擎在每個所選 GPU 上最多可使用的量。「自動」會使用目前可用的記憶體；調低可為其他程式保留空間。",
+    gpuMemoryHelp: "引擎在每個所選 GPU 上最多可使用的量。「自動」會使用目前可用的記憶體；調低可為其他程式保留空間。",
     seed: "隨機種子",
     seedPlaceholder: "引擎預設",
     seedHelp: "設定引擎的隨機種子。同時進行的聊天仍可能改變取樣的回覆。",
@@ -767,8 +723,7 @@ export const zhTW = {
     installAndLoad: "安裝並載入",
     confirm: "要安裝 {engine} {version} 嗎？這可能需要下載數 GB 的資料。",
     confirmSized: "要安裝 {engine} {version} 嗎？約需下載 {size}。",
-    wslSetup:
-      "在 Windows 上，{engine} 會在 Unsloth 設定的私人 WSL2 環境中執行。過程中會要求一次系統管理員權限，且可能需要重新啟動。",
+    wslSetup: "在 Windows 上，{engine} 會在 Unsloth 設定的私人 WSL2 環境中執行。過程中會要求一次系統管理員權限，且可能需要重新啟動。",
     wslReady: "在 Windows 上，{engine} 會在 Unsloth 的私人 WSL2 環境中執行。",
     wslRestart: "請重新啟動 Windows 以完成啟用 WSL2，然後再按一次「安裝」。",
     background: "會在背景安裝。",
@@ -787,11 +742,9 @@ export const zhTW = {
     copyCommand: "複製指令",
     copied: "已複製指令",
     copyFailed: "無法複製指令",
-    copiedRunIt:
-      "已複製指令。請在執行 Unsloth 的電腦上於終端機中執行，然後切換到「高」。",
+    copiedRunIt: "已複製指令。請在執行 Unsloth 的電腦上於終端機中執行，然後切換到「高」。",
     ownerOnly: "只有擁有者能在執行 Unsloth 的電腦上安裝。",
-    windowsNote:
-      "每次重新啟動後都需要一個系統管理員步驟。MXC 為預覽版，並非安全邊界。",
+    windowsNote: "每次重新啟動後都需要一個系統管理員步驟。MXC 為預覽版，並非安全邊界。",
     running: "正在設定。請在執行 Unsloth 的電腦上核准密碼或系統管理員權限要求…",
     succeeded: "作業系統沙箱已就緒。沙箱「高」已開啟。",
     stillUnavailable: "設定已完成，但作業系統沙箱仍未通過檢查。",
@@ -807,8 +760,7 @@ export const zhTW = {
     shareDraftDescription: "在聊天和比較中使用同一份草稿。預設關閉；每個聊天保留各自的草稿。",
     title: "輸入框",
     plainText: "純文字輸入框",
-    plainTextDescription:
-      "將程式碼、Markdown 和連結保留為原始文字。關閉後會顯示格式化預覽。",
+    plainTextDescription: "將程式碼、Markdown 和連結保留為原始文字。關閉後會顯示格式化預覽。",
     richPaste: "貼上豐富文字",
     richPasteDescription: "將連結、表格和格式貼上為 Markdown。{shortcut} 貼上純文字。完整的富文字輸入框即將推出。",
     showContext: "上下文視窗用量",
@@ -816,12 +768,10 @@ export const zhTW = {
     sendMultiline: "多行提示詞使用 {mod} + Enter",
     sendAlways: "一律使用 {mod} + Enter",
     sendEnterDescription: "按 Enter 傳送。按 Shift + Enter 換行。",
-    sendMultilineDescription:
-      "單行提示詞按 Enter 即傳送。超過一行後，按 Enter 會換行，按 {mod} + Enter 才傳送。",
+    sendMultilineDescription: "單行提示詞按 Enter 即傳送。超過一行後，按 Enter 會換行，按 {mod} + Enter 才傳送。",
     sendAlwaysDescription: "按 {mod} + Enter 傳送。按 Enter 換行。",
     followUp: "後續訊息行為",
-    followUpDescription:
-      "在回應進行中傳送訊息時的處理方式。按 {shortcut} 可單次執行相反的動作。",
+    followUpDescription: "在回應進行中傳送訊息時的處理方式。按 {shortcut} 可單次執行相反的動作。",
     followUpMultilineShortcut: "{shortcut}（多行提示詞中為 {multiline}）",
     queue: "排入佇列",
     steer: "引導",
@@ -834,8 +784,7 @@ export const zhTW = {
     listLabel: "佇列中的提示詞",
     regionLabel: "提示詞佇列，第 {current} 個，共 {total} 個",
     itemLabel: "佇列中的提示詞第 {position} 個，共 {total} 個：{prompt}",
-    reorderInstructions:
-      "拖曳控點以重新排序。控點取得焦點時，按上或下鍵可移動一個位置，按 Home 或 End 可移到最前面或最後面。",
+    reorderInstructions: "拖曳控點以重新排序。控點取得焦點時，按上或下鍵可移動一個位置，按 Home 或 End 可移到最前面或最後面。",
     dragTooltip: "拖曳以重新排序",
     reorderLabel: "重新排序佇列中的提示詞第 {position} 個，共 {total} 個",
     paused: "已暫停",
@@ -887,8 +836,7 @@ export const zhTW = {
     modeConversation: "僅對話",
     modeFiles: "僅檔案",
     checkFailed: "無法檢查檔案變更：{error}",
-    summary:
-      "要還原的檔案：{restore}。要移除：{remove}。要重新建立：{recreate}。",
+    summary: "要還原的檔案：{restore}。要移除：{remove}。要重新建立：{recreate}。",
     conflicts: "之後已變更，將略過",
     untracked: "無法還原",
     scopeNote: "檔案包含程式碼。程式、套件以及此聊天資料夾以外的檔案不會變更。",
@@ -949,13 +897,11 @@ export const zhTW = {
     nightShift: "夜班開始了",
     nightShiftName: "夜班開始了，{name}",
     temporaryChat: "臨時聊天",
-    temporaryChatDescription:
-      "這個聊天不會出現在您的記錄中，也不會被儲存。離開後就會消失。",
+    temporaryChatDescription: "這個聊天不會出現在您的記錄中，也不會被儲存。離開後就會消失。",
   },
   picker: {
     unifiedTightFit: "勉強可容納",
-    unifiedTightFitHint:
-      "在這台 Mac 上可能會以較短的上下文載入，或執行速度較慢。",
+    unifiedTightFitHint: "在這台 Mac 上可能會以較短的上下文載入，或執行速度較慢。",
     residentToRun: "執行所需",
     residentToRunHint: "載入檢查要求的執行時 GPU 記憶體",
     onDevice: "裝置上",
@@ -977,8 +923,7 @@ export const zhTW = {
     rateLimitedBody: "請稍候片刻，再重新搜尋{noun}。",
     modelScope: "ModelScope",
     useModelScope: "使用 ModelScope",
-    useModelScopeHint:
-      "改從 ModelScope 搜尋和下載。您可以在「設定」中切換回來。",
+    useModelScopeHint: "改從 ModelScope 搜尋和下載。您可以在「設定」中切換回來。",
     useModelScopeFailed: "無法切換到 ModelScope。",
     updateToken: "更新權杖",
     hfToken: {
@@ -1098,8 +1043,7 @@ export const zhTW = {
       guidedTour: "導覽",
       help: "說明",
       logOut: "登出",
-      logOutNeedsPassword:
-        "登出前請先在「設定 > 遠端與區域網路」中設定密碼，以便之後重新登入。",
+      logOutNeedsPassword: "登出前請先在「設定 > 遠端與區域網路」中設定密碼，以便之後重新登入。",
       logOutFailed: "無法安全登出。請稍後再試。",
       shutdown: "關閉",
     },
@@ -1160,10 +1104,8 @@ export const zhTW = {
       unpinProjects: "取消釘選專案",
       deleteProjects: "刪除專案",
       deleteProjectsTitle: "刪除專案",
-      deleteProjectsDescription:
-        "{count} 個專案及其所有聊天將被永久刪除。此動作無法復原。",
-      deleteProjectsFilesDescription:
-        "每個專案的工作區資料夾都會從磁碟中移除。",
+      deleteProjectsDescription: "{count} 個專案及其所有聊天將被永久刪除。此動作無法復原。",
+      deleteProjectsFilesDescription: "每個專案的工作區資料夾都會從磁碟中移除。",
       countSelected: "已選取 {count} 個",
       pinChats: "釘選聊天",
       unpinChats: "取消釘選聊天",
@@ -1173,11 +1115,9 @@ export const zhTW = {
       deleteChats: "刪除聊天",
       deleteTitle: "刪除聊天",
       deleteDescription: "{count} 個聊天及其訊息將被永久刪除。此動作無法復原。",
-      deleteFilesDescription:
-        "每個聊天專屬的沙箱資料夾都會從磁碟中移除。它們在專案中寫入的檔案會保留在該專案的工作區。",
+      deleteFilesDescription: "每個聊天專屬的沙箱資料夾都會從磁碟中移除。它們在專案中寫入的檔案會保留在該專案的工作區。",
       deleteFilesLabel: "刪除檔案與沙箱資料夾",
-      deleteChatFilesDescription:
-        "此聊天專屬的沙箱資料夾會從磁碟中移除。它在專案中寫入的檔案會保留在該專案的工作區。",
+      deleteChatFilesDescription: "此聊天專屬的沙箱資料夾會從磁碟中移除。它在專案中寫入的檔案會保留在該專案的工作區。",
     },
     organize: {
       sidebarHeading: "整理側邊欄",
@@ -1249,12 +1189,10 @@ export const zhTW = {
       signsInAs: "以 {username} 登入",
       signsInAsOwner: "以 {alias} 或 {username} 登入",
       signInName: "您的登入名稱",
-      signInNameDescription:
-        "此安裝有多個帳號時，登入所輸入的名稱。unsloth 也一律可以使用。留空則只使用 unsloth。",
+      signInNameDescription: "此安裝有多個帳號時，登入所輸入的名稱。unsloth 也一律可以使用。留空則只使用 unsloth。",
       signInNameSave: "儲存名稱",
       title: "帳號",
-      description:
-        "建立私人 Unsloth 帳號。新使用者以一次性設定碼登入，並自行設定密碼。",
+      description: "建立私人 Unsloth 帳號。新使用者以一次性設定碼登入，並自行設定密碼。",
       username: "使用者名稱",
       create: "建立帳號",
       createDescription: "分享設定碼，讓對方自行設定密碼。",
@@ -1268,11 +1206,9 @@ export const zhTW = {
       privateAccount: "私人帳號",
       modelAccess: "模型存取權",
       modelAccessTitle: "{username} 的模型存取權",
-      modelAccessDescription:
-        "選擇此帳號可以查看、下載、載入，以及透過其 API 金鑰使用哪些 Hugging Face 模型。",
+      modelAccessDescription: "選擇此帳號可以查看、下載、載入，以及透過其 API 金鑰使用哪些 Hugging Face 模型。",
       modelAccessLabel: "允許的模型",
-      modelAccessHint:
-        "每行一個模型，例如 unsloth/Qwen3-4B-GGUF，或以 unsloth/* 表示整個組織。留空則允許所有模型。",
+      modelAccessHint: "每行一個模型，例如 unsloth/Qwen3-4B-GGUF，或以 unsloth/* 表示整個組織。留空則允許所有模型。",
       modelAccessSave: "儲存",
       modelAccessLimited: "模型存取權受限",
       rename: "重新命名",
@@ -1281,8 +1217,7 @@ export const zhTW = {
       empty: "目前還沒有其他帳號",
       setupCode: "設定碼",
       setupFor: "{username} 的設定碼",
-      shownOnce:
-        "請立即複製此設定碼並分享給帳號持有人。此碼只會在這裡顯示，且只能在 60 分鐘內使用一次。",
+      shownOnce: "請立即複製此設定碼並分享給帳號持有人。此碼只會在這裡顯示，且只能在 60 分鐘內使用一次。",
       expires: "{expiry} 到期",
       copy: "複製設定碼",
       copied: "已複製",
@@ -1293,14 +1228,12 @@ export const zhTW = {
       inactive: "已停用",
       regenerate: "重新產生設定碼",
       resetTitle: "要重設 {username} 的密碼嗎？",
-      resetDescription:
-        "重新產生設定碼會取代 {username} 的密碼、將其登出，並撤銷其 API 金鑰。請將新設定碼交給對方，讓對方重新設定密碼。",
+      resetDescription: "重新產生設定碼會取代 {username} 的密碼、將其登出，並撤銷其 API 金鑰。請將新設定碼交給對方，讓對方重新設定密碼。",
       deactivate: "停用",
       reactivate: "啟用",
       delete: "刪除帳號",
       deleteTitle: "要刪除 {username} 嗎？",
-      deleteDescription:
-        "這會撤銷 {username} 的工作階段並取消其工作。其聊天、設定、憑證、上傳內容、資料集、訓練執行作業、輸出、匯出項目、圖庫、沙箱、專案與暫存檔案都會被停用封存。目錄只會改名移到一旁，絕不會被刪除。日後再次建立此使用者名稱，將會是一個不含上述任何資料的全新帳號。",
+      deleteDescription: "這會撤銷 {username} 的工作階段並取消其工作。其聊天、設定、憑證、上傳內容、資料集、訓練執行作業、輸出、匯出項目、圖庫、沙箱、專案與暫存檔案都會被停用封存。目錄只會改名移到一旁，絕不會被刪除。日後再次建立此使用者名稱，將會是一個不含上述任何資料的全新帳號。",
       cancel: "取消",
       retry: "重新整理帳號",
       failed: "帳號請求失敗。",
@@ -1349,8 +1282,7 @@ export const zhTW = {
       showChatToolFiles: "聊天工具產生的檔案",
       showChatToolFilesDescription: "聊天期間由程式碼與工具建立的檔案。",
       showGeneratedMedia: "生成的媒體",
-      showGeneratedMediaDescription:
-        "來自「圖片」、「影片」與「音訊」頁面的圖片、影片與音訊。",
+      showGeneratedMediaDescription: "來自「圖片」、「影片」與「音訊」頁面的圖片、影片與音訊。",
       showFineTunesDescription: "您在 Unsloth 中訓練或匯出的模型。",
       deletingSection: "刪除",
       confirmDelete: "刪除前先確認",
@@ -1362,10 +1294,8 @@ export const zhTW = {
       storageSection: "儲存空間",
       downloadsSection: "圖片下載",
       imageInfoStamp: "資訊標記",
-      imageInfoStampDescription:
-        "在您從「圖片」頁面下載的圖片底部顯示模型、日期與種子。無論是否開啟，生成設定都會儲存在檔案中。",
-      storageDescription:
-        "開啟類別即可依大小由大到小查看其中的檔案，並刪除不再需要的項目。",
+      imageInfoStampDescription: "在您從「圖片」頁面下載的圖片底部顯示模型、日期與種子。無論是否開啟，生成設定都會儲存在檔案中。",
+      storageDescription: "開啟類別即可依大小由大到小查看其中的檔案，並刪除不再需要的項目。",
       storageUsed: "檔案庫已使用 {size}",
       storageDisk: "此磁碟共 {total}，可用 {free}",
       storageEmpty: "檔案庫中尚未儲存任何內容。",
@@ -1375,15 +1305,13 @@ export const zhTW = {
       storageOpen: "開啟",
       storageError: "無法讀取檔案庫儲存空間。",
       locationsSection: "磁碟上的檔案",
-      locationsDescription:
-        "Unsloth 存放各類檔案的位置。檔案庫資料夾只是 Unsloth 內的標籤，並不是磁碟上的資料夾。微調模型與匯出項目會保留在原處，因為訓練與聊天會依路徑參照它們。",
+      locationsDescription: "Unsloth 存放各類檔案的位置。檔案庫資料夾只是 Unsloth 內的標籤，並不是磁碟上的資料夾。微調模型與匯出項目會保留在原處，因為訓練與聊天會依路徑參照它們。",
       locationUploads: "檔案庫上傳內容",
       locationExports: "匯出項目",
       revealFailed: "無法開啟檔案管理員",
       locationReset: "重設",
       locationMoveTitle: "將 {name} 移至新資料夾",
-      locationMoveDescription:
-        "選擇任一資料夾。如果其中已有檔案，Unsloth 會在裡面建立自己的資料夾。目前位於此處的所有內容也會一併移動。",
+      locationMoveDescription: "選擇任一資料夾。如果其中已有檔案，Unsloth 會在裡面建立自己的資料夾。目前位於此處的所有內容也會一併移動。",
       locationMoveAction: "移至此處",
       locationMoving: "正在移動 {name}…",
       locationMoved: "已移動 {name}",
@@ -1391,8 +1319,7 @@ export const zhTW = {
       locationFree: "此磁碟機可用 {free}",
       locationUnavailable: "無法使用。請重新連接其磁碟機，或重設資料夾。",
       locationResetUnavailableTitle: "要重設 {name} 嗎？",
-      locationResetUnavailableDescription:
-        "其磁碟機未連接。{path} 中的檔案會留在該磁碟機上，在您將它們移回之前不會顯示在檔案庫中。",
+      locationResetUnavailableDescription: "其磁碟機未連接。{path} 中的檔案會留在該磁碟機上，在您將它們移回之前不會顯示在檔案庫中。",
       locationLeftBehind: "{path} 中的檔案會留在該磁碟機上。",
       dataStorage: "檔案庫儲存空間",
       manageStorage: "管理儲存空間",
@@ -1444,8 +1371,7 @@ export const zhTW = {
       edit: "變更快速鍵",
       reset: "還原預設值",
       resetAll: "全部還原為預設值",
-      browserReserved:
-        "瀏覽器可能會保留此組合鍵自用。在桌面應用程式中可正常使用。",
+      browserReserved: "瀏覽器可能會保留此組合鍵自用。在桌面應用程式中可正常使用。",
       metaUnsupported: "Windows 鍵無法用於快速鍵。",
       altGraphUnsupported: "AltGr 組合鍵無法用作快速鍵。",
       desktopOnly: "僅限桌面應用程式",
@@ -1705,35 +1631,27 @@ export const zhTW = {
       terminal: "終端機",
       osIsolation: "作業系統沙箱（{backend}）",
       softwareSafeguards: "軟體防護措施",
-      noReason:
-        "這裡目前沒有可用的作業系統沙箱，因此 Unsloth 會改為逐一檢查每次呼叫。",
+      noReason: "這裡目前沒有可用的作業系統沙箱，因此 Unsloth 會改為逐一檢查每次呼叫。",
       runsInCmd: "在 cmd.exe 中執行，因為 Git Bash 無法在 Windows 沙箱中啟動。",
       loadError: "無法載入沙箱狀態",
       saveError: "無法儲存沙箱設定",
       prepareError: "無法準備這部電腦",
-      unsupported:
-        "此 Unsloth 伺服器尚未回報沙箱狀態。請更新 Unsloth 以在這裡管理。",
+      unsupported: "此 Unsloth 伺服器尚未回報沙箱狀態。請更新 Unsloth 以在這裡管理。",
       windowsSection: "Windows 沙箱（預覽版）",
-      windowsDescription:
-        "Microsoft 的 MXC 沙箱。它會使用 Windows 內建的容器；在沒有內建容器的 Windows 版本上則使用備援方案。",
+      windowsDescription: "Microsoft 的 MXC 沙箱。它會使用 Windows 內建的容器；在沒有內建容器的 Windows 版本上則使用備援方案。",
       builtinLabel: "內建容器",
-      builtinDescription:
-        "Windows 沙箱在 Windows 內建的容器中執行，不需要系統管理員步驟。",
+      builtinDescription: "Windows 沙箱在 Windows 內建的容器中執行，不需要系統管理員步驟。",
       builtinInUse: "使用中",
       optInLabel: "使用備援沙箱",
-      optInDescription:
-        "適用於沒有內建容器的 Windows 版本。啟用後，Python 與終端機只能變更聊天資料夾中的檔案。",
+      optInDescription: "適用於沒有內建容器的 Windows 版本。啟用後，Python 與終端機只能變更聊天資料夾中的檔案。",
       optInNotNeeded: "這部電腦不需要，因為內建容器可正常運作。",
-      disclosure:
-        "備援沙箱需要執行一次系統管理員步驟「準備這部電腦」，且每次重新開機後都必須重複執行。工具執行期間，Unsloth 會暫時授予它所需資料夾的存取權。MXC 仍為預覽版，並非安全邊界。",
+      disclosure: "備援沙箱需要執行一次系統管理員步驟「準備這部電腦」，且每次重新開機後都必須重複執行。工具執行期間，Unsloth 會暫時授予它所需資料夾的存取權。MXC 仍為預覽版，並非安全邊界。",
       lockedDacl: "由 UNSLOTH_MXC_ALLOW_DACL_FALLBACK 設定",
       grantsLabel: "加快工具啟動",
-      grantsDescription:
-        "在多次呼叫之間保留 Unsloth 自身執行階段資料夾的唯讀存取權。關閉時，每次呼叫的啟動會慢幾秒。",
+      grantsDescription: "在多次呼叫之間保留 Unsloth 自身執行階段資料夾的唯讀存取權。關閉時，每次呼叫的啟動會慢幾秒。",
       lockedGrants: "由 UNSLOTH_MXC_PERSISTENT_READ_GRANTS 設定",
       memoryLabel: "記憶體上限",
-      memoryDescription:
-        "單次沙箱化 Python 或終端機呼叫可保留的記憶體上限。從下一次呼叫開始生效。預設值為 {defaultSize} GB。",
+      memoryDescription: "單次沙箱化 Python 或終端機呼叫可保留的記憶體上限。從下一次呼叫開始生效。預設值為 {defaultSize} GB。",
       memoryLocked: "由 UNSLOTH_STUDIO_SANDBOX_AS_GB 設定",
       memoryInvalid: "請輸入 {min} 到 {max} 之間的整數。",
       restored: "已移除 {count} 個資料夾的存取權。",
@@ -1750,8 +1668,7 @@ export const zhTW = {
       setupLabel: "作業系統沙箱",
       setupCommandHint: "在執行 Unsloth 的電腦上執行此命令：",
       macosBuiltIn: "macOS 內建沙箱，因此不需要安裝任何東西。",
-      setupKeywords:
-        "安裝 設定 沙箱 install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
+      setupKeywords: "安裝 設定 沙箱 install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
       setupSucceeded: "作業系統沙箱已準備就緒。",
       runtimeMissing: "尚未安裝。安裝時不需要系統管理員權限。",
       runtimeLabel: "Windows 沙箱執行階段",
@@ -1759,28 +1676,22 @@ export const zhTW = {
       installingRuntime: "正在安裝…",
       installRuntimeFailed: "執行階段安裝失敗。",
       installRuntimeError: "無法開始安裝執行階段。",
-      unsupportedArch:
-        "Windows 沙箱（MXC）僅能在 x64 與 ARM64 版 Windows 上執行，因此這部電腦無法使用。",
-      builtinNeedsUpdate:
-        "Windows 內建容器需要組建 {required} 或更新版本，而這部電腦執行的是 {current}。請安裝最新的 Windows 更新，即可在不需系統管理員步驟的情況下使用，或開啟下方的備援方案。",
-      unsupportedBuild:
-        "Windows 沙箱（MXC）需要 Windows 11 24H2（組建 26100）或更新版本，因此這部電腦無法使用。",
+      unsupportedArch: "Windows 沙箱（MXC）僅能在 x64 與 ARM64 版 Windows 上執行，因此這部電腦無法使用。",
+      builtinNeedsUpdate: "Windows 內建容器需要組建 {required} 或更新版本，而這部電腦執行的是 {current}。請安裝最新的 Windows 更新，即可在不需系統管理員步驟的情況下使用，或開啟下方的備援方案。",
+      unsupportedBuild: "Windows 沙箱（MXC）需要 Windows 11 24H2（組建 26100）或更新版本，因此這部電腦無法使用。",
       permissionLabel: "工具權限",
       levelRowLabel: "沙箱等級",
       levelPickerTitle: "程式碼要如何以沙箱隔離？",
       levelOff: "已停用",
       levelOffShort: "完整存取權會關閉沙箱",
-      levelHighDetail:
-        "Python 與終端機除了軟體沙箱外，還會在作業系統沙箱（bubblewrap、Seatbelt 或 MXC）中執行。若沒有可用的作業系統沙箱，有風險的呼叫會先詢問。",
-      levelLowDetail:
-        "Python 與終端機只使用軟體沙箱，在作業系統沙箱之外執行。除非您選擇了完整存取權，否則有風險的呼叫會先詢問。",
+      levelHighDetail: "Python 與終端機除了軟體沙箱外，還會在作業系統沙箱（bubblewrap、Seatbelt 或 MXC）中執行。若沒有可用的作業系統沙箱，有風險的呼叫會先詢問。",
+      levelLowDetail: "Python 與終端機只使用軟體沙箱，在作業系統沙箱之外執行。除非您選擇了完整存取權，否則有風險的呼叫會先詢問。",
       levelLabel: "沙箱",
       levelHigh: "高",
       levelLow: "低",
       levelHighShort: "為 Python 與終端機加上作業系統隔離",
       levelLowShort: "僅限軟體。有風險的程式碼會先詢問",
-      levelFullAccessNote:
-        "完整存取權會關閉沙箱。當您選擇其他等級時，此設定會再次生效。",
+      levelFullAccessNote: "完整存取權會關閉沙箱。當您選擇其他等級時，此設定會再次生效。",
       learnMore: "瞭解詳情",
       managedNote: "作業系統沙箱由此 Unsloth 伺服器的擁有者設定。",
       trustedFoldersTitle: "受信任的資料夾",
@@ -1794,8 +1705,7 @@ export const zhTW = {
       description: "不必離開應用程式即可閱讀 Unsloth 記錄檔。",
       logSection: "記錄檔",
       source: "記錄檔",
-      sourceHint:
-        "模型執行器會寫入各自的記錄檔，因此載入或生成失敗的原因通常會記錄在那裡，而不是在伺服器記錄檔中。",
+      sourceHint: "模型執行器會寫入各自的記錄檔，因此載入或生成失敗的原因通常會記錄在那裡，而不是在伺服器記錄檔中。",
       path: "位置",
       pathCopy: "複製路徑",
       currentSession: "目前",
@@ -1827,34 +1737,27 @@ export const zhTW = {
       staleSession: "檔案記錄已關閉，因此這是較早的工作階段，不會更新。",
       downloadAllLogs: "下載所有記錄檔（.zip）",
       downloadingAllLogs: "正在打包記錄檔...",
-      exportMaskedNote:
-        "匯出檔案中的憑證已遮蔽。非常大的記錄檔只會保留最近的行，部分記錄檔可能會被完全略過；詳情請參閱封存檔中的 EXPORT_WARNINGS.txt。",
+      exportMaskedNote: "匯出檔案中的憑證已遮蔽。非常大的記錄檔只會保留最近的行，部分記錄檔可能會被完全略過；詳情請參閱封存檔中的 EXPORT_WARNINGS.txt。",
       downloadedTo: "已儲存至 {path}",
       downloadedToBrowser: "已開始下載。",
       showInFolder: "在資料夾中顯示",
       openLogsFolder: "開啟記錄檔資料夾",
       openLogsFolderFailed: "無法開啟記錄檔資料夾。",
       exportFailed: "無法下載記錄檔。",
-      exportTooOld:
-        "執行中的 Unsloth 後端版本過舊，無法匯出記錄檔。請更新該後端並重新啟動。",
-      exportForbidden:
-        "下載所有記錄檔需要已登入的 Unsloth 工作階段，僅有 API 金鑰並不足夠。",
-      keywords:
-        "偵錯 記錄 記錄檔 錯誤 當機 追蹤 疑難排解 診斷 失敗 debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed",
+      exportTooOld: "執行中的 Unsloth 後端版本過舊，無法匯出記錄檔。請更新該後端並重新啟動。",
+      exportForbidden: "下載所有記錄檔需要已登入的 Unsloth 工作階段，僅有 API 金鑰並不足夠。",
+      keywords: "偵錯 記錄 記錄檔 錯誤 當機 追蹤 疑難排解 診斷 失敗 debug debugging log logs error errors crash traceback stack trace troubleshoot diagnostics failed",
     },
     voice: {
       title: "語音",
       description: "麥克風、聽寫、語音轉文字與朗讀",
       dictation: {
         audioUploadTitle: "以錄音聽寫",
-        audioUploadDescription:
-          "瀏覽器需要安全連線（HTTPS）才能直接在 Unsloth 中錄音。在此 HTTP 連線上，請改用手機的錄音程式，或選擇已儲存的錄音。Unsloth 伺服器會將音訊轉錄，並把文字加入您的訊息。",
+        audioUploadDescription: "瀏覽器需要安全連線（HTTPS）才能直接在 Unsloth 中錄音。在此 HTTP 連線上，請改用手機的錄音程式，或選擇已儲存的錄音。Unsloth 伺服器會將音訊轉錄，並把文字加入您的訊息。",
         audioUploadChooseFile: "選擇錄音",
         audioUploadRecord: "錄製音訊",
-        audioUploadIphoneHint:
-          "在 iPhone 上，請先從「語音備忘錄」或其他錄音 App 儲存錄音，再於這裡選擇。",
-        audioUploadServerModelNote:
-          "即使一般聽寫使用其他引擎，此錄音仍會使用上方所示、位於 Unsloth 伺服器上的本機模型。",
+        audioUploadIphoneHint: "在 iPhone 上，請先從「語音備忘錄」或其他錄音 App 儲存錄音，再於這裡選擇。",
+        audioUploadServerModelNote: "即使一般聽寫使用其他引擎，此錄音仍會使用上方所示、位於 Unsloth 伺服器上的本機模型。",
         audioUploadAutomatic: "自動",
         audioUploadModelReady: "已在此 Unsloth 伺服器上準備就緒",
         audioUploadRetryTitle: "無法轉錄 {file}",
@@ -1877,17 +1780,13 @@ export const zhTW = {
         micRecordForModel: "為模型錄製音訊",
         engineLabel: "聽寫引擎",
         engineBrowser: "瀏覽器",
-        engineBrowserDescription:
-          "使用瀏覽器的語音服務轉錄音訊。選擇「本機轉錄」即可使用 STT 模型。",
+        engineBrowserDescription: "使用瀏覽器的語音服務轉錄音訊。選擇「本機轉錄」即可使用 STT 模型。",
         engineModel: "本機轉錄",
-        engineModelDescription:
-          "在本機執行語音轉文字（STT）模型，可離線使用。下載並載入後，閒置一段時間會自動卸載。",
+        engineModelDescription: "在本機執行語音轉文字（STT）模型，可離線使用。下載並載入後，閒置一段時間會自動卸載。",
         engineCustom: "自訂端點",
-        engineCustomDescription:
-          "將錄製的音訊傳送到「連線」中的 OpenAI 相容 STT 伺服器。",
+        engineCustomDescription: "將錄製的音訊傳送到「連線」中的 OpenAI 相容 STT 伺服器。",
         connectionLabel: "連線",
-        connectionDescription:
-          "在「連線」中新增 OpenAI 相容伺服器與選用的 API 金鑰。",
+        connectionDescription: "在「連線」中新增 OpenAI 相容伺服器與選用的 API 金鑰。",
         connectionPlaceholder: "選擇連線",
         connectionEmpty: "沒有可用的連線",
         customModelLabel: "模型",
@@ -1895,21 +1794,17 @@ export const zhTW = {
         sttModelLabel: "語音辨識模型",
         sttModelDescription: "選擇或搜尋要在本機執行的 STT 模型。",
         sttQuantLabel: "量化",
-        sttQuantDescription:
-          "選擇或搜尋要在本機執行的 STT 模型，再選擇其量化版本。",
+        sttQuantDescription: "選擇或搜尋要在本機執行的 STT 模型，再選擇其量化版本。",
         sttDeviceLabel: "載入至",
         sttContextLabel: "語音上下文",
         sttContextAuto: "自動（建議）",
-        sttContextAutoDescription:
-          "依每段錄音調整，較長的音訊會使用較多記憶體。較舊的執行環境可能需要固定大小以減少記憶體用量。適用於「語音」與「轉錄」中的 Qwen3-ASR。",
-        sttContextFixedDescription:
-          "較小的上限使用較少記憶體。無法容納的錄音需要較高的上限或自動。適用於「語音」與「轉錄」中的 Qwen3-ASR。",
+        sttContextAutoDescription: "依每段錄音調整，較長的音訊會使用較多記憶體。較舊的執行環境可能需要固定大小以減少記憶體用量。適用於「語音」與「轉錄」中的 Qwen3-ASR。",
+        sttContextFixedDescription: "較小的上限使用較少記憶體。無法容納的錄音需要較高的上限或自動。適用於「語音」與「轉錄」中的 Qwen3-ASR。",
         sttContextTokens: "{count} 個 token",
         sttDeviceAuto: "有 GPU 時使用 GPU",
         sttDeviceCpu: "CPU RAM",
         sttDeviceAutoDescription: "有 GPU 時使用 GPU，否則使用 CPU。",
-        sttDeviceCpuDescription:
-          "將模型保留在系統 RAM 中。轉錄速度較慢，但不會使用 GPU 記憶體。",
+        sttDeviceCpuDescription: "將模型保留在系統 RAM 中。轉錄速度較慢，但不會使用 GPU 記憶體。",
         sttModelSearchPlaceholder: "搜尋 HF 上的任何模型",
         sttModelSearching: "正在搜尋 Hugging Face…",
         sttModelValidating: "正在檢查 Whisper 相容性…",
@@ -1922,18 +1817,15 @@ export const zhTW = {
         sttLoadingModel: "正在載入模型…",
         sttReady: "已載入至 {device}",
         sttLoaded: "已載入",
-        sttUnavailable:
-          "此伺服器尚未安裝。執行 `unsloth studio update` 以啟用本機聽寫。",
+        sttUnavailable: "此伺服器尚未安裝。執行 `unsloth studio update` 以啟用本機聽寫。",
         sttRetry: "重試",
         sttDownloadChecking: "正在檢查下載狀態…",
         sttNotDownloaded: "尚未下載",
         sttDownloadStatusFailed: "無法檢查下載狀態",
         sttDownload: "下載",
         sttDownloadConfirmTitle: "要下載 {model} 嗎？",
-        sttDownloadConfirmBody:
-          "本機聽寫完全離線執行，但需要先取得 {model} 語音模型。大小約 {size}，只會下載一次至您的 Hugging Face 快取。",
-        sttDownloadConfirmBodyUnsized:
-          "本機聽寫完全離線執行，但需要先取得 {model} 語音模型。只會下載一次至您的 Hugging Face 快取。",
+        sttDownloadConfirmBody: "本機聽寫完全離線執行，但需要先取得 {model} 語音模型。大小約 {size}，只會下載一次至您的 Hugging Face 快取。",
+        sttDownloadConfirmBodyUnsized: "本機聽寫完全離線執行，但需要先取得 {model} 語音模型。只會下載一次至您的 Hugging Face 快取。",
         sttOpenVoiceSettings: "開啟語音設定",
         sttDownloadStarted: "正在下載 {model}",
         sttDownloading: "正在下載… {progress}%",
@@ -1950,14 +1842,11 @@ export const zhTW = {
         microphoneLabel: "麥克風",
         microphoneFallbackName: "麥克風 {index}",
         microphoneDescription: "用於聽寫",
-        microphoneFallbackHint:
-          "用於聽寫。若瀏覽器語音引擎無法使用此裝置，將改用系統預設值",
+        microphoneFallbackHint: "用於聽寫。若瀏覽器語音引擎無法使用此裝置，將改用系統預設值",
         microphoneGrantDescription: "允許存取麥克風以顯示裝置名稱",
         allowMicrophone: "允許使用麥克風",
-        micAccessBlocked:
-          "麥克風存取已遭封鎖。請允許此 Unsloth 頁面存取麥克風，然後再試一次。",
-        micAccessBlockedDesktop:
-          "麥克風存取已遭封鎖。請再試一次並選擇「允許」，或在系統隱私權設定中啟用麥克風。",
+        micAccessBlocked: "麥克風存取已遭封鎖。請允許此 Unsloth 頁面存取麥克風，然後再試一次。",
+        micAccessBlockedDesktop: "麥克風存取已遭封鎖。請再試一次並選擇「允許」，或在系統隱私權設定中啟用麥克風。",
         micAccessUnsupported: "此瀏覽器或環境不支援麥克風存取。",
         systemDefault: "系統預設值",
         savedMicDisconnected: "已儲存的麥克風（未連接）",
@@ -1983,8 +1872,7 @@ export const zhTW = {
         sectionDescription: "每次聽寫都會儲存在這裡，方便您找回文字",
         manageLabel: "聽寫記錄",
         manage: "管理",
-        pageDescription:
-          "每次聽寫都會被儲存。您可以檢視、複製或刪除，或開啟使用該聽寫的聊天。",
+        pageDescription: "每次聽寫都會被儲存。您可以檢視、複製或刪除，或開啟使用該聽寫的聊天。",
         searchPlaceholder: "搜尋聽寫",
         sortLabel: "排序聽寫",
         sortNewest: "最新",
@@ -2004,8 +1892,7 @@ export const zhTW = {
         delete: "刪除聽寫",
         deleteTitle: "刪除聽寫",
         deleteDescription: "要刪除這筆已儲存的聽寫嗎？此動作無法復原。",
-        deleteLinkedDescription:
-          "要刪除這筆已儲存的聽寫嗎？您也可以一併刪除使用該聽寫的聊天。此動作無法復原。",
+        deleteLinkedDescription: "要刪除這筆已儲存的聽寫嗎？您也可以一併刪除使用該聽寫的聊天。此動作無法復原。",
         deleteWithChat: "刪除聊天與聽寫",
         deleteWithChatFailed: "無法刪除聊天",
         clear: "清除記錄",
@@ -2027,8 +1914,7 @@ export const zhTW = {
         engineSystem: "系統語音",
         engineStudio: "Unsloth 模型",
         engineCustom: "自訂端點",
-        engineCustomDescription:
-          "來自您的連線的 OpenAI 相容 TTS 伺服器（例如 Kokoro）",
+        engineCustomDescription: "來自您的連線的 OpenAI 相容 TTS 伺服器（例如 Kokoro）",
         connectionLabel: "連線",
         connectionDescription: "在「連線」分頁中新增 OpenAI 相容伺服器",
         connectionPlaceholder: "選擇連線",
@@ -2038,8 +1924,7 @@ export const zhTW = {
         modelDescription: "尚未載入。請在「音訊 › 文字轉語音」中載入模型。",
         modelLoaded: "已載入 {model}",
         keepBothLabel: "保持聊天模型載入",
-        keepBothDescription:
-          "「同時保持載入多個模型」已關閉，因此載入語音模型時會卸載聊天模型。",
+        keepBothDescription: "「同時保持載入多個模型」已關閉，因此載入語音模型時會卸載聊天模型。",
         keepBothAction: "兩者都保持載入",
         openAudioAction: "開啟音訊",
         voiceLabel: "語音",
@@ -2079,8 +1964,7 @@ export const zhTW = {
         description: "輸入目前的密碼並設定新密碼（至少 {minLength} 個字元）。",
         setTrigger: "設定遠端密碼",
         setTitle: "設定遠端密碼",
-        setDescription:
-          "設定遠端瀏覽器以 unsloth 身分登入時使用的密碼（至少 {minLength} 個字元）。Unsloth 桌面應用程式仍會自動登入。",
+        setDescription: "設定遠端瀏覽器以 unsloth 身分登入時使用的密碼（至少 {minLength} 個字元）。Unsloth 桌面應用程式仍會自動登入。",
         setSubmit: "設定密碼",
         setting: "正在設定...",
         setDone: "已設定密碼。",
@@ -2123,8 +2007,7 @@ export const zhTW = {
       helperLlm: {
         sectionTitle: "輔助 LLM",
         preloadOnStartup: "啟動時預先快取輔助 LLM",
-        preloadOnStartupDescription:
-          "啟動時在背景下載 AI 輔助所用的輔助模型。預設為關閉；AI 輔助仍可在需要時下載。",
+        preloadOnStartupDescription: "啟動時在背景下載 AI 輔助所用的輔助模型。預設為關閉；AI 輔助仍可在需要時下載。",
         disabledByEnv: "已由後端環境中的 UNSLOTH_HELPER_MODEL_DISABLE 停用。",
         loadError: "無法載入輔助 LLM 設定。",
         saveError: "無法儲存輔助 LLM 設定。",
@@ -2132,23 +2015,16 @@ export const zhTW = {
       developerMode: {
         sectionTitle: "開發人員模式",
         videoCpu: "允許在 CPU 上生成影片（實驗性）",
-        videoCpuDescription:
-          "讓「影片」頁面可在沒有支援之 GPU 的主機上執行。預設為關閉；不受支援且速度非常慢。",
-        notApplicable:
-          "在這部電腦上沒有作用：影片已在其 GPU 上執行，或是被 CPU 無法解決的問題所阻擋。",
+        videoCpuDescription: "讓「影片」頁面可在沒有支援之 GPU 的主機上執行。預設為關閉；不受支援且速度非常慢。",
+        notApplicable: "在這部電腦上沒有作用：影片已在其 GPU 上執行，或是被 CPU 無法解決的問題所阻擋。",
         forcedOnByEnv: "已由後端環境中的 UNSLOTH_VIDEO_ALLOW_CPU 開啟。",
         forcedOffByEnv: "已由後端環境中的 UNSLOTH_VIDEO_ALLOW_CPU 關閉。",
         confirmTitle: "要啟用 CPU 影片生成嗎？",
-        confirmWarning:
-          "CPU 影片生成可能需要數小時、佔用大量 RAM，並可能導致系統當機。繼續操作的風險需自行承擔。",
-        ramBelowMinimum:
-          "這部電腦有 {host} GB 的 RAM，低於最小影片模型在 CPU 上所需的 {min} GB。載入很可能會失敗或導致系統當機。",
-        ramOk:
-          "這部電腦有 {host} GB 的 RAM。最小的影片模型在 CPU 上約需 {min} GB；較大的模型則需要更多。",
-        ramUnknown:
-          "最小的影片模型在 CPU 上約需 {min} GB 的 RAM；較大的模型則需要更多。",
-        performanceEstimate:
-          "每個去噪步驟預計需要數分鐘：以 16 個 CPU 執行緒、Wan2.1 1.3B 生成 5 格 832x480 的短片，3 個步驟約需 4 分鐘；以預設設定生成完整長度的短片可能需要數小時。",
+        confirmWarning: "CPU 影片生成可能需要數小時、佔用大量 RAM，並可能導致系統當機。繼續操作的風險需自行承擔。",
+        ramBelowMinimum: "這部電腦有 {host} GB 的 RAM，低於最小影片模型在 CPU 上所需的 {min} GB。載入很可能會失敗或導致系統當機。",
+        ramOk: "這部電腦有 {host} GB 的 RAM。最小的影片模型在 CPU 上約需 {min} GB；較大的模型則需要更多。",
+        ramUnknown: "最小的影片模型在 CPU 上約需 {min} GB 的 RAM；較大的模型則需要更多。",
+        performanceEstimate: "每個去噪步驟預計需要數分鐘：以 16 個 CPU 執行緒、Wan2.1 1.3B 生成 5 格 832x480 的短片，3 個步驟約需 4 分鐘；以預設設定生成完整長度的短片可能需要數小時。",
         confirmAction: "仍要啟用",
         loadError: "無法載入開發人員模式設定。",
         saveError: "無法儲存開發人員模式設定。",
@@ -2156,21 +2032,16 @@ export const zhTW = {
       modelAutoSwitch: {
         sectionTitle: "模型自動切換（OpenAI API）",
         enable: "依請求切換模型",
-        enableDescription:
-          "在提供服務前，載入 API 請求中指定的已下載模型。預設為關閉。",
+        enableDescription: "在提供服務前，載入 API 請求中指定的已下載模型。預設為關閉。",
         autoDownload: "下載缺少的模型",
-        autoDownloadDescription:
-          "下載 API 請求中指定、但尚未下載的 GGUF。如此一來，任何擁有 API 金鑰的人都能使用磁碟空間與頻寬。",
+        autoDownloadDescription: "下載 API 請求中指定、但尚未下載的 GGUF。如此一來，任何擁有 API 金鑰的人都能使用磁碟空間與頻寬。",
         idleUnload: "閒置時自動卸載",
-        idleUnloadDescription:
-          "閒置達指定秒數後釋放 VRAM。0 表示保持載入，最小值為 60。",
+        idleUnloadDescription: "閒置達指定秒數後釋放 VRAM。0 表示保持載入，最小值為 60。",
         idleSecondsAriaLabel: "閒置自動卸載秒數",
         mediaEnable: "依請求切換圖片與影片模型",
-        mediaEnableDescription:
-          "在生成前，載入 API 請求中指定的已下載圖片或影片模型。與聊天模型切換分開設定。預設為關閉。",
+        mediaEnableDescription: "在生成前，載入 API 請求中指定的已下載圖片或影片模型。與聊天模型切換分開設定。預設為關閉。",
         mediaIdleUnload: "圖片與影片閒置時自動卸載",
-        mediaIdleUnloadDescription:
-          "閒置達指定秒數後卸載圖片與影片模型以釋放 VRAM。與聊天模型切換分開設定。0 表示保持載入，最小值為 60。",
+        mediaIdleUnloadDescription: "閒置達指定秒數後卸載圖片與影片模型以釋放 VRAM。與聊天模型切換分開設定。0 表示保持載入，最小值為 60。",
         mediaIdleSecondsAriaLabel: "圖片與影片閒置自動卸載秒數",
         mediaIdlePaused: "「將模型保留在 GPU 記憶體中」開啟時暫停。",
         idleNeedsEnable: "請先開啟「依請求切換模型」。",
@@ -2180,13 +2051,10 @@ export const zhTW = {
         idleError: "輸入 0 以保持模型載入，或輸入至少 60 秒。",
         idleUnsaved: "尚未儲存。",
         keepKv: "卸載後保留聊天上下文",
-        keepKvDescription:
-          "在閒置卸載前，或在圖片或影片模型佔用 GPU 前儲存 KV 快取，讓恢復的聊天不必重新讀取記錄。最多佔用 10 GB 磁碟空間。",
-        keepKvKeywords:
-          "KV 快取 上下文 交換 恢復 圖片 影片 kv cache context swap resume image video",
+        keepKvDescription: "在閒置卸載前，或在圖片或影片模型佔用 GPU 前儲存 KV 快取，讓恢復的聊天不必重新讀取記錄。最多佔用 10 GB 磁碟空間。",
+        keepKvKeywords: "KV 快取 上下文 交換 恢復 圖片 影片 kv cache context swap resume image video",
         apiOnly: "只卸載由 API 載入的模型",
-        apiOnlyDescription:
-          "閒置卸載會將您從 Unsloth 載入的模型保留在記憶體中，只釋放由 API 請求載入的模型。",
+        apiOnlyDescription: "閒置卸載會將您從 Unsloth 載入的模型保留在記憶體中，只釋放由 API 請求載入的模型。",
       },
       modelAliases: {
         sectionTitle: "模型別名（OpenAI API）",
@@ -2209,18 +2077,15 @@ export const zhTW = {
       previewSharing: {
         sectionTitle: "預覽分享",
         enableLabel: "公開預覽連結",
-        enableDescription:
-          "讓任何擁有已簽署連結的人都能與完成的模型聊天，不需登入。關閉後會讓公開預覽介面離線；已分享的連結將停止運作。",
+        enableDescription: "讓任何擁有已簽署連結的人都能與完成的模型聊天，不需登入。關閉後會讓公開預覽介面離線；已分享的連結將停止運作。",
         loadError: "無法載入預覽分享設定。",
         saveError: "無法儲存預覽分享設定。",
         revokeLabel: "撤銷所有預覽連結",
-        revokeDescription:
-          "更換簽署密鑰，讓您分享過的所有連結停止運作。之後新複製的連結仍可正常運作。",
+        revokeDescription: "更換簽署密鑰，讓您分享過的所有連結停止運作。之後新複製的連結仍可正常運作。",
         revokeAction: "撤銷連結",
         revoking: "正在撤銷...",
         revokeConfirmTitle: "要撤銷所有預覽連結嗎？",
-        revokeConfirmDescription:
-          "您分享過的每個預覽連結都會立即停止運作。此動作無法復原。",
+        revokeConfirmDescription: "您分享過的每個預覽連結都會立即停止運作。此動作無法復原。",
         revokeConfirmAction: "撤銷所有連結",
         revoked: "已撤銷所有預覽連結",
         revokeError: "無法撤銷預覽連結",
@@ -2228,10 +2093,8 @@ export const zhTW = {
       managedProviderUrls: {
         sectionTitle: "受管理帳號",
         enableLabel: "本機與網路連線",
-        enableDescription:
-          "允許受管理帳號將連線指向本機或網路位址，例如這部電腦或區域網路上的 Ollama 或 llama.cpp 伺服器。預設為關閉，因為這會讓這些帳號能存取您電腦和網路上執行的服務。",
-        lockedByEnvironment:
-          "由此伺服器上的 UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 設定，所有帳號都會被拒絕使用私人位址。",
+        enableDescription: "允許受管理帳號將連線指向本機或網路位址，例如這部電腦或區域網路上的 Ollama 或 llama.cpp 伺服器。預設為關閉，因為這會讓這些帳號能存取您電腦和網路上執行的服務。",
+        lockedByEnvironment: "由此伺服器上的 UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 設定，所有帳號都會被拒絕使用私人位址。",
         loadError: "無法載入受管理帳號的連線設定。",
         saveError: "無法儲存受管理帳號的連線設定。",
       },
@@ -2261,8 +2124,7 @@ export const zhTW = {
       notifications: {
         sectionTitle: "通知",
         showLoadedModels: "已載入模型卡片",
-        showLoadedModelsDescription:
-          "顯示所有已載入模型的角落卡片，按一下即可卸載。",
+        showLoadedModelsDescription: "顯示所有已載入模型的角落卡片，按一下即可卸載。",
         updateReminders: "更新提醒",
         updateRemindersDescription: "有新版本可用時提醒的頻率。",
         llamaHint: "聊天與 GGUF 模型",
@@ -2279,15 +2141,12 @@ export const zhTW = {
       startup: {
         sectionTitle: "啟動",
         launchAtLogin: "登入時執行 Unsloth",
-        launchAtLoginDescription:
-          "登入時在背景啟動 Unsloth。在您開啟之前，它會留在選單列或系統匣中。",
+        launchAtLoginDescription: "登入時在背景啟動 Unsloth。在您開啟之前，它會留在選單列或系統匣中。",
         closeToTray: "關閉時縮小至系統匣",
-        closeToTrayDescription:
-          "關閉主視窗時，讓 Unsloth 及其伺服器繼續在背景執行。",
+        closeToTrayDescription: "關閉主視窗時，讓 Unsloth 及其伺服器繼續在背景執行。",
         closeToTraySaveError: "無法更新「關閉時縮小至系統匣」設定。",
         menuBarIcon: "顯示在選單列",
-        menuBarIconDescription:
-          "在 macOS 選單列中顯示 Unsloth 圖示。隱藏時，Unsloth 會改為保留在 Dock 中，包括登入時自動啟動的情況。",
+        menuBarIconDescription: "在 macOS 選單列中顯示 Unsloth 圖示。隱藏時，Unsloth 會改為保留在 Dock 中，包括登入時自動啟動的情況。",
         menuBarIconSaveError: "無法更新選單列圖示設定。",
         loadError: "無法載入「登入時啟動」設定。",
         saveError: "無法更新「登入時啟動」設定。",
@@ -2295,58 +2154,44 @@ export const zhTW = {
       power: {
         sectionTitle: "電源",
         keepAwake: "讓電腦保持喚醒",
-        keepAwakeDescription:
-          "在 Unsloth 執行期間防止這台電腦自動進入睡眠。螢幕仍可關閉。",
+        keepAwakeDescription: "在 Unsloth 執行期間防止這台電腦自動進入睡眠。螢幕仍可關閉。",
         keepAwakeKeywords: "睡眠 休眠 待機 暫停 電源 sleep caffeinate",
         loadError: "無法載入讓電腦保持喚醒設定。",
         saveError: "無法更新讓電腦保持喚醒設定。",
       },
       hub: {
         source: "模型來源",
-        sourceDescription:
-          "模型中心搜尋與下載的來源。若 Hugging Face 在您的網路上遭封鎖或速度緩慢，請選擇 ModelScope。",
-        sourceFallback:
-          "無法啟動 ModelScope，因此目前使用 Hugging Face。請查看 Unsloth 記錄檔。",
+        sourceDescription: "模型中心搜尋與下載的來源。若 Hugging Face 在您的網路上遭封鎖或速度緩慢，請選擇 ModelScope。",
+        sourceFallback: "無法啟動 ModelScope，因此目前使用 Hugging Face。請查看 Unsloth 記錄檔。",
         autoSourceTitle: "模型來源已切換為 ModelScope",
-        autoSourceDescription:
-          "Hugging Face 在您所在的地區經常速度緩慢或遭封鎖，因此 Unsloth 現在改從 ModelScope 下載模型。",
+        autoSourceDescription: "Hugging Face 在您所在的地區經常速度緩慢或遭封鎖，因此 Unsloth 現在改從 ModelScope 下載模型。",
         autoSourceAction: "開啟模型來源設定",
         sectionTitle: "模型中心",
         endpoint: "Hugging Face 端點",
-        endpointDescription:
-          "模型與資料集的下載來源。留空即使用 huggingface.co，或輸入鏡像站，例如 https://hf-mirror.com。",
+        endpointDescription: "模型與資料集的下載來源。留空即使用 huggingface.co，或輸入鏡像站，例如 https://hf-mirror.com。",
         datasetsServer: "也用於資料集預覽",
-        datasetsServerDescription:
-          "同時將資料集預覽請求（HF_DATASETS_SERVER）傳送至此端點。僅在鏡像站提供此服務時才開啟。",
-        invalidEndpoint:
-          "請輸入不含登入資訊或查詢字串的 http(s) URL。純 http 僅適用於本機位址。",
+        datasetsServerDescription: "同時將資料集預覽請求（HF_DATASETS_SERVER）傳送至此端點。僅在鏡像站提供此服務時才開啟。",
+        invalidEndpoint: "請輸入不含登入資訊或查詢字串的 http(s) URL。純 http 僅適用於本機位址。",
         saveFailed: "無法儲存模型中心設定。",
         loadFailed: "無法載入模型中心設定。",
       },
       downloads: {
         sectionTitle: "下載",
         transport: "下載傳輸方式",
-        transportDescription:
-          "從 Hugging Face 下載模型與資料集檔案的方式。HTTPS 可從中斷處繼續下載；Xet 首次下載通常較快，但取消後會重新下載該檔案。",
-        transportHint:
-          "HTTPS 是一般的 TLS：所有網路、Proxy 和 VPN 都允許，取消或中斷的傳輸會從磁碟上已下載的位元組繼續，記憶體用量也維持穩定。Xet 會擷取去除重複的區塊，因此若存放庫與您已有的資料共用內容，下載可能快很多，但需要 hf_xet、占用較多 RAM，且取消時會捨棄傳輸中的檔案。「自動」會依這台電腦判斷：考量 RAM 以及 Xet 在此是否曾停滯，必要時改用 HTTPS。",
+        transportDescription: "從 Hugging Face 下載模型與資料集檔案的方式。HTTPS 可從中斷處繼續下載；Xet 首次下載通常較快，但取消後會重新下載該檔案。",
+        transportHint: "HTTPS 是一般的 TLS：所有網路、Proxy 和 VPN 都允許，取消或中斷的傳輸會從磁碟上已下載的位元組繼續，記憶體用量也維持穩定。Xet 會擷取去除重複的區塊，因此若存放庫與您已有的資料共用內容，下載可能快很多，但需要 hf_xet、占用較多 RAM，且取消時會捨棄傳輸中的檔案。「自動」會依這台電腦判斷：考量 RAM 以及 Xet 在此是否曾停滯，必要時改用 HTTPS。",
         https: "HTTPS",
         xet: "Xet",
         auto: "自動",
-        httpsHint:
-          "標準 TLS。取消後可繼續下載，適用於任何網路，記憶體用量穩定。",
-        transportDescriptionNoResume:
-          "從 Hugging Face 下載模型與資料集檔案的方式。此安裝的兩種傳輸方式都無法繼續下載，因此取消的下載會重新開始；Xet 首次下載通常較快。",
-        httpsHintNoResume:
-          "標準 TLS。適用於任何網路，記憶體用量穩定。此安裝無法繼續已取消的下載。",
-        xetHint:
-          "去除重複的區塊傳輸。全新下載時通常較快，取消後會重新下載檔案，需要較多記憶體。",
+        httpsHint: "標準 TLS。取消後可繼續下載，適用於任何網路，記憶體用量穩定。",
+        transportDescriptionNoResume: "從 Hugging Face 下載模型與資料集檔案的方式。此安裝的兩種傳輸方式都無法繼續下載，因此取消的下載會重新開始；Xet 首次下載通常較快。",
+        httpsHintNoResume: "標準 TLS。適用於任何網路，記憶體用量穩定。此安裝無法繼續已取消的下載。",
+        xetHint: "去除重複的區塊傳輸。全新下載時通常較快，取消後會重新下載檔案，需要較多記憶體。",
         autoHint: "依每台電腦自動選擇，若 Xet 在此停滯或失敗則改用 HTTPS。",
         autoCurrently: "「自動」在這台電腦上使用 {transport}。",
         xetMissing: "由於未安裝 hf_xet，無法使用 Xet。",
         speedLimit: "下載速度限制",
-        speedLimitDescription:
-          "未設定數值時不限速。限速下載使用 HTTPS。",
+        speedLimitDescription: "未設定數值時不限速。限速下載使用 HTTPS。",
         speedLimitNoLimit: "不限速",
         speedLimitInvalid: "請輸入 Mbit/s 數值，或留空。",
         speedLimitUsesHttps: "設定速度限制時，下載會使用 HTTPS。超過 50 GB 的檔案仍使用 Xet，不受限制。",
@@ -2360,19 +2205,14 @@ export const zhTW = {
         sectionTitle: "文件與 RAG",
         embeddingModel: "嵌入模型",
         embeddingModelShort: "將您的文件轉換為向量，讓聊天可以搜尋這些文件。",
-        embeddingModelDescription:
-          "用於索引及搜尋文件的 Hugging Face 模型或本機路徑。預設為 {defaultModel}。",
+        embeddingModelDescription: "用於索引及搜尋文件的 Hugging Face 模型或本機路徑。預設為 {defaultModel}。",
         searchPlaceholder: "搜尋 HF 上的任何模型",
-        reindexWarning:
-          "只會影響新建立索引的文件。變更模型後，請重新嵌入現有文件。",
+        reindexWarning: "只會影響新建立索引的文件。變更模型後，請重新嵌入現有文件。",
         reembed: {
           label: "重新嵌入文件",
-          staleOne:
-            "有 1 份文件是以不同的嵌入模型建立索引，因此語意搜尋會略過它。",
-          staleMany:
-            "有 {count} 份文件是以不同的嵌入模型建立索引，因此語意搜尋會略過它們。",
-          staleArchived:
-            "較早的聊天記錄是以不同的嵌入模型建立索引，因此語意搜尋會略過這些記錄。",
+          staleOne: "有 1 份文件是以不同的嵌入模型建立索引，因此語意搜尋會略過它。",
+          staleMany: "有 {count} 份文件是以不同的嵌入模型建立索引，因此語意搜尋會略過它們。",
+          staleArchived: "較早的聊天記錄是以不同的嵌入模型建立索引，因此語意搜尋會略過這些記錄。",
           running: "正在重新嵌入：{done}/{total}",
           action: "重新嵌入",
           stop: "停止",
@@ -2396,20 +2236,16 @@ export const zhTW = {
         unloadFailed: "無法退出嵌入模型",
         ejected: "已退出嵌入模型",
         ejectModel: "退出模型",
-        onDeviceHint:
-          "已下載到這台電腦。只有在為文件建立索引或搜尋時才會載入記憶體，在此之前不會占用 RAM 或 VRAM。",
-        loadedHint:
-          "目前在記憶體中，正在占用 RAM 或 VRAM。將游標移到模型選擇器上並按一下紅色圖示即可退出。",
+        onDeviceHint: "已下載到這台電腦。只有在為文件建立索引或搜尋時才會載入記憶體，在此之前不會占用 RAM 或 VRAM。",
+        loadedHint: "目前在記憶體中，正在占用 RAM 或 VRAM。將游標移到模型選擇器上並按一下紅色圖示即可退出。",
         notLoaded: "未載入",
-        notLoadedHint:
-          "目前不在記憶體中。下次為文件建立索引或搜尋時會自動載入，之後即可從選擇器中退出。",
+        notLoadedHint: "目前不在記憶體中。下次為文件建立索引或搜尋時會自動載入，之後即可從選擇器中退出。",
         downloadingStatus: "下載中…",
         notDownloaded: "未下載",
         notDownloadedSized: "未下載 · {size}",
         loaded: "已載入",
         downloading: "正在下載 {model}",
-        downloadingDescription:
-          "進度顯示在下載面板中。下載完成後即會用於建立索引。",
+        downloadingDescription: "進度顯示在下載面板中。下載完成後即會用於建立索引。",
         downloadFailed: "無法開始下載",
         downloadConflict: "從模型中心繼續此下載",
         downloadBusy: "下載已在進行中",
@@ -2422,17 +2258,14 @@ export const zhTW = {
         localModel: "本機模型",
         switched: "嵌入模型已設為 {model}",
         switchedNeedsDownload: "{model} 尚未下載",
-        switchedNeedsDownloadDescription:
-          "請先在「設定」中下載，再為新檔案建立索引。",
-        switchedUncheckedDescription:
-          "無法檢查是否已下載。請先在「設定」中確認，再為新檔案建立索引。",
+        switchedNeedsDownloadDescription: "請先在「設定」中下載，再為新檔案建立索引。",
+        switchedUncheckedDescription: "無法檢查是否已下載。請先在「設定」中確認，再為新檔案建立索引。",
         openSettings: "開啟設定",
         switchFailed: "無法切換嵌入模型",
         back: "返回來源",
         menuSubtitle: "用於檔案搜尋",
         device: "嵌入裝置",
-        deviceDescription:
-          "嵌入模型的執行位置，適用於所有模型。GPU 為大量文件建立索引的速度較快，但在 Unsloth 重新啟動前會持續占用部分 VRAM。",
+        deviceDescription: "嵌入模型的執行位置，適用於所有模型。GPU 為大量文件建立索引的速度較快，但在 Unsloth 重新啟動前會持續占用部分 VRAM。",
         deviceAuto: "自動",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2463,41 +2296,31 @@ export const zhTW = {
       },
       fullInstall: {
         label: "安裝類型",
-        description:
-          "僅聊天（GGUF）。完整安裝會加入訓練、匯出、影片、safetensors 模型及更多圖片生成功能。",
-        descriptionCpu:
-          "僅聊天（GGUF）。找不到支援的 GPU，因此完整安裝會加入 CPU 訓練。",
+        description: "僅聊天（GGUF）。完整安裝會加入訓練、匯出、影片、safetensors 模型及更多圖片生成功能。",
+        descriptionCpu: "僅聊天（GGUF）。找不到支援的 GPU，因此完整安裝會加入 CPU 訓練。",
         action: "升級為完整安裝",
         confirmTitle: "要升級為完整安裝嗎？",
-        confirmDescription:
-          "此「僅聊天」安裝可執行 GGUF 模型。完整安裝會為這台電腦的 GPU 加入 PyTorch，以啟用訓練、匯出、影片、safetensors 模型及更多圖片生成功能。這會下載數 GB 的資料（至少需要 5 GB 磁碟空間）並重新啟動伺服器。聊天、模型和設定都會保留。此程序可能需要幾分鐘。",
-        confirmDescriptionCpu:
-          "此「僅聊天」安裝可執行 GGUF 模型。這台電腦找不到支援的 GPU，因此完整安裝會加入 CPU 版的 PyTorch，以啟用 CPU 訓練。CPU 訓練比 GPU 訓練慢得多。這需要至少 5 GB 磁碟空間，並會重新啟動伺服器。聊天、模型和設定都會保留。此程序可能需要幾分鐘。",
+        confirmDescription: "此「僅聊天」安裝可執行 GGUF 模型。完整安裝會為這台電腦的 GPU 加入 PyTorch，以啟用訓練、匯出、影片、safetensors 模型及更多圖片生成功能。這會下載數 GB 的資料（至少需要 5 GB 磁碟空間）並重新啟動伺服器。聊天、模型和設定都會保留。此程序可能需要幾分鐘。",
+        confirmDescriptionCpu: "此「僅聊天」安裝可執行 GGUF 模型。這台電腦找不到支援的 GPU，因此完整安裝會加入 CPU 版的 PyTorch，以啟用 CPU 訓練。CPU 訓練比 GPU 訓練慢得多。這需要至少 5 GB 磁碟空間，並會重新啟動伺服器。聊天、模型和設定都會保留。此程序可能需要幾分鐘。",
         confirmAction: "升級",
-        keywords:
-          "完整安裝 升級 安裝類型 僅聊天 gguf 加入訓練 訓練 微調 pytorch torch 匯出 影片 圖片生成 safetensors full install upgrade chat only training fine-tune export video image generation",
+        keywords: "完整安裝 升級 安裝類型 僅聊天 gguf 加入訓練 訓練 微調 pytorch torch 匯出 影片 圖片生成 safetensors full install upgrade chat only training fine-tune export video image generation",
       },
       repairInstall: {
         label: "修復安裝",
-        description:
-          "在受管理的環境上重新執行安裝程式。若偵測不到 GPU 或應用程式無法啟動，請使用此功能。",
+        description: "在受管理的環境上重新執行安裝程式。若偵測不到 GPU 或應用程式無法啟動，請使用此功能。",
         action: "修復安裝",
         confirmTitle: "要修復此安裝嗎？",
-        confirmDescription:
-          "停止伺服器並重新執行安裝程式，這會為這台電腦的 GPU 重新安裝最新支援版本的 PyTorch。聊天和設定都會保留。此程序可能需要幾分鐘。",
-        confirmDescriptionChatOnly:
-          "停止伺服器並重新執行安裝程式。由於這是「僅聊天」安裝，安裝程式也會將其升級為含 PyTorch 的完整安裝，總共需要下載數 GB 的資料。聊天和設定都會保留。此程序可能需要幾分鐘。",
+        confirmDescription: "停止伺服器並重新執行安裝程式，這會為這台電腦的 GPU 重新安裝最新支援版本的 PyTorch。聊天和設定都會保留。此程序可能需要幾分鐘。",
+        confirmDescriptionChatOnly: "停止伺服器並重新執行安裝程式。由於這是「僅聊天」安裝，安裝程式也會將其升級為含 PyTorch 的完整安裝，總共需要下載數 GB 的資料。聊天和設定都會保留。此程序可能需要幾分鐘。",
         confirmAction: "立即修復",
       },
       resetPreferences: {
         sectionTitle: "危險區域",
         label: "重設所有本機偏好設定",
-        description:
-          "清除僅存於本機的偏好設定。聊天、API 存取權及儲存在資料庫中的設定都會保留。",
+        description: "清除僅存於本機的偏好設定。聊天、API 存取權及儲存在資料庫中的設定都會保留。",
         action: "重設偏好設定",
         confirmTitle: "要重設所有本機偏好設定嗎？",
-        confirmDescription:
-          "清除僅存於本機的偏好設定，並重新載入 Unsloth。聊天、API 存取權及儲存在資料庫中的設定都會保留。",
+        confirmDescription: "清除僅存於本機的偏好設定，並重新載入 Unsloth。聊天、API 存取權及儲存在資料庫中的設定都會保留。",
         confirmAction: "重設並重新載入",
       },
     },
@@ -2529,25 +2352,20 @@ export const zhTW = {
       noneLabel: "無",
       nameSaved: "已儲存個人檔案名稱",
       namePersistErrorTitle: "無法永久儲存個人檔案名稱",
-      namePersistErrorDescription:
-        "名稱已在此工作階段更新，但重新載入後可能不會保留。",
+      namePersistErrorDescription: "名稱已在此工作階段更新，但重新載入後可能不會保留。",
       photoUpdated: "已更新個人檔案相片",
       photoPersistErrorTitle: "無法永久儲存個人檔案相片",
-      photoPersistErrorDescription:
-        "相片已在此工作階段更新，但重新載入後可能不會保留。",
+      photoPersistErrorDescription: "相片已在此工作階段更新，但重新載入後可能不會保留。",
       photoUpdateErrorTitle: "無法更新個人檔案相片",
       imageUseError: "無法使用此圖片。",
       stats: {
         title: "您的統計資料",
-        subtitle:
-          "以下所有數據都是根據您自己的記錄計算。不會收集任何資料，也不會傳送給 Unsloth。",
+        subtitle: "以下所有數據都是根據您自己的記錄計算。不會收集任何資料，也不會傳送給 Unsloth。",
         retry: "再試一次",
         exportCsv: "匯出 CSV",
         exportError: "無法匯出您的 token 用量",
-        privacyNote:
-          "統計資料是根據您的 Unsloth 安裝所保存的本機聊天、API 用量和訓練記錄計算而來。API 提示詞、回應和金鑰絕不會為了統計而儲存。不會傳送任何資料給 Unsloth 或任何第三方。",
-        emptyChats:
-          "尚無聊天或 API 用量。開始一段對話，或發出經過驗證的本機 API 請求，您的統計資料就會顯示在這裡。",
+        privacyNote: "統計資料是根據您的 Unsloth 安裝所保存的本機聊天、API 用量和訓練記錄計算而來。API 提示詞、回應和金鑰絕不會為了統計而儲存。不會傳送任何資料給 Unsloth 或任何第三方。",
+        emptyChats: "尚無聊天或 API 用量。開始一段對話，或發出經過驗證的本機 API 請求，您的統計資料就會顯示在這裡。",
         lifetimeTokens: "累計 token 數",
         peakTokens: "最高峰的一天",
         longestChat: "最長的聊天",
@@ -2612,21 +2430,16 @@ export const zhTW = {
       gpuRendering: {
         sectionTitle: "繪製",
         label: "GPU 繪製",
-        description:
-          "使用顯示卡繪製 Unsloth。「自動」只會在已知可正常運作的環境中使用。變更會在 Unsloth 重新啟動後生效。",
+        description: "使用顯示卡繪製 Unsloth。「自動」只會在已知可正常運作的環境中使用。變更會在 Unsloth 重新啟動後生效。",
         auto: "自動",
         on: "開啟",
         off: "關閉",
-        oldWebkitWarning:
-          "Wayland 上的 WebKitGTK {version}：在使用分數縮放的 NVIDIA 環境中，GPU 繪製可能會在啟動時當機（WebKit 錯誤 280210）。若發生此情況，Unsloth 會自動切換回 CPU 繪製。在 WebKitGTK 2.50.4 上實測沒有加速效果（兩者皆為 8 fps），因此不建議在此選擇「開啟」。",
-        oldDriverWarning:
-          "X11 上的 NVIDIA 驅動程式 {version}：在驅動程式更新至 610 或更新版本之前，Unsloth 會保持關閉 GPU 繪製。較舊的驅動程式每繪製一個影格就會洩漏一個檔案描述元，視窗會在幾分鐘內停止繪製。",
-        fallbackNote:
-          "GPU 繪製在此系統啟動時當機，因此 Unsloth 目前使用 CPU 繪製。",
+        oldWebkitWarning: "Wayland 上的 WebKitGTK {version}：在使用分數縮放的 NVIDIA 環境中，GPU 繪製可能會在啟動時當機（WebKit 錯誤 280210）。若發生此情況，Unsloth 會自動切換回 CPU 繪製。在 WebKitGTK 2.50.4 上實測沒有加速效果（兩者皆為 8 fps），因此不建議在此選擇「開啟」。",
+        oldDriverWarning: "X11 上的 NVIDIA 驅動程式 {version}：在驅動程式更新至 610 或更新版本之前，Unsloth 會保持關閉 GPU 繪製。較舊的驅動程式每繪製一個影格就會洩漏一個檔案描述元，視窗會在幾分鐘內停止繪製。",
+        fallbackNote: "GPU 繪製在此系統啟動時當機，因此 Unsloth 目前使用 CPU 繪製。",
         tryAgain: "再試一次 GPU",
         envOverride: "由環境變數 {name} 設定。移除該變數之前，此設定不會生效。",
-        macNote:
-          "macOS 一律使用 GPU 繪製。WebKit 沒有可關閉此功能的受支援開關。",
+        macNote: "macOS 一律使用 GPU 繪製。WebKit 沒有可關閉此功能的受支援開關。",
         restartPending: "重新啟動 Unsloth 以套用。",
         restartNow: "立即重新啟動",
         loadError: "無法載入 GPU 繪製設定。",
@@ -2676,8 +2489,7 @@ export const zhTW = {
         },
         sentAttachments: {
           label: "已傳送訊息中的附件",
-          description:
-            "「標準」會顯示每個檔案及其類型，「精簡」可在每一行放入更多檔案。「自動」在超過六個檔案時切換為精簡。",
+          description: "「標準」會顯示每個檔案及其類型，「精簡」可在每一行放入更多檔案。「自動」在超過六個檔案時切換為精簡。",
           auto: "自動",
           list: "標準",
           chips: "精簡",
@@ -2721,12 +2533,10 @@ export const zhTW = {
           alreadyAvailable: "此字型已可使用，因此會使用現有的副本。",
           folderNoFonts: "該資料夾中找不到字型檔案。",
           remove: "移除",
-          errorInvalidType:
-            "不支援的檔案類型。請使用 .woff2、.woff、.ttf 或 .otf。",
+          errorInvalidType: "不支援的檔案類型。請使用 .woff2、.woff、.ttf 或 .otf。",
           errorTooLarge: "字型檔案過大（上限 1.5 MB）。",
           errorLimit: "最多可匯入 3 個字型。",
-          errorStorageFull:
-            "本機儲存空間不足，無法存放此字型。請先移除一個已匯入的字型。",
+          errorStorageFull: "本機儲存空間不足，無法存放此字型。請先移除一個已匯入的字型。",
           errorFailed: "無法載入此字型檔案。",
         },
         interfaceScale: {
@@ -2781,8 +2591,7 @@ export const zhTW = {
       },
       sidebarNav: {
         title: "側邊欄導覽",
-        description:
-          "釘選並重新排列側邊欄分頁。未釘選的分頁會移到「更多」選單。",
+        description: "釘選並重新排列側邊欄分頁。未釘選的分頁會移到「更多」選單。",
         dragToReorder: "拖曳以重新排序",
         pinToSidebar: "將 {name} 釘選到側邊欄",
         moreHolds: "更多（{count}）",
@@ -2800,8 +2609,7 @@ export const zhTW = {
       liveUpdates: "即時更新",
       floatingWindow: "浮動視窗",
       showFloatingWindow: "顯示浮動視窗",
-      showFloatingWindowDescription:
-        "在 Unsloth 上方持續顯示 CPU、RAM 和 GPU 使用量。",
+      showFloatingWindowDescription: "在 Unsloth 上方持續顯示 CPU、RAM 和 GPU 使用量。",
       liveMonitor: {
         title: "即時監控",
         apiTitle: "API 監控",
@@ -2841,8 +2649,7 @@ export const zhTW = {
         gpuUnusable: "GPU 無法使用",
         gpuUnusableDetail: "已偵測到，但 PyTorch 無法使用",
         detailedView: "詳細檢視",
-        detailedViewDescription:
-          "在浮動視窗中顯示每個 GPU 的負載、溫度和功耗。",
+        detailedViewDescription: "在浮動視窗中顯示每個 GPU 的負載、溫度和功耗。",
         gpuLoad: "GPU 負載",
         temperature: "溫度",
         power: "功耗",
@@ -2860,12 +2667,9 @@ export const zhTW = {
         unreadable: "無法讀取此伺服器的硬體資訊。",
         noGpu: "未偵測到獨立 GPU。",
         noUsableGpu: "這台電腦上沒有 PyTorch 可使用的 GPU。",
-        mismatchCpuBuild:
-          "PyTorch 是僅支援 CPU 的版本（{version}），因此無法使用下列 GPU。請修復安裝以恢復 GPU 支援。",
-        mismatchUnavailable:
-          "PyTorch（{version}）無法初始化下列 GPU，因此無法使用。請檢查 GPU 驅動程式，或修復安裝。",
-        driverIdleEvict:
-          "AMD 驅動程式 {version} 有已知錯誤，可能在 AMD GPU 閒置時造成 Windows 當機，最常發生在多 GPU 的情況。請更新至 Adrenalin 26.9.2 或更新版本。",
+        mismatchCpuBuild: "PyTorch 是僅支援 CPU 的版本（{version}），因此無法使用下列 GPU。請修復安裝以恢復 GPU 支援。",
+        mismatchUnavailable: "PyTorch（{version}）無法初始化下列 GPU，因此無法使用。請檢查 GPU 驅動程式，或修復安裝。",
+        driverIdleEvict: "AMD 驅動程式 {version} 有已知錯誤，可能在 AMD GPU 閒置時造成 Windows 當機，最常發生在多 GPU 的情況。請更新至 Adrenalin 26.9.2 或更新版本。",
         driverIdleEvictDetails: "詳細資料",
         dismissNotice: "關閉",
         unusableDevice: "無法使用",
@@ -2890,13 +2694,11 @@ export const zhTW = {
         apply: "套用",
         applying: "安裝中...",
         applyHint: "下載新版本並重新啟動 llama.cpp。已載入的模型將會卸載。",
-        applyHintWithSize:
-          "下載 {size} 並重新啟動 llama.cpp。已載入的模型將會卸載。",
+        applyHintWithSize: "下載 {size} 並重新啟動 llama.cpp。已載入的模型將會卸載。",
         switchedTo: "llama.cpp 現在在 {backend} 上執行。",
         switchFailed: "無法變更 llama.cpp 後端。",
         switchInterrupted: "切換在完成前中斷。",
-        envLocked:
-          "已由環境變數 UNSLOTH_LLAMA_CPP_BACKEND 設為 {backend}，此變數會覆寫這項設定。",
+        envLocked: "已由環境變數 UNSLOTH_LLAMA_CPP_BACKEND 設為 {backend}，此變數會覆寫這項設定。",
         customPath: {
           label: "自訂 llama.cpp 資料夾",
           description: "使用您自己建置的 llama-server。",
@@ -2905,8 +2707,7 @@ export const zhTW = {
           bundled: "使用 Unsloth 安裝的 llama.cpp 執行環境。",
           active: "下次載入模型時將使用您自訂的 llama-server。",
           environmentManaged: "由環境變數 {variable} 管理。",
-          missingBinary:
-            "此資料夾中已找不到 llama-server。請選擇其他資料夾，或使用內建的執行環境。",
+          missingBinary: "此資料夾中已找不到 llama-server。請選擇其他資料夾，或使用內建的執行環境。",
           reloadRequired: "重新載入模型以使用選取的 llama-server。",
           change: "變更",
           saving: "儲存中...",
@@ -2926,69 +2727,50 @@ export const zhTW = {
         },
         unsupported: {
           notInstalled: "找不到受管理的 llama.cpp 安裝，因此沒有可切換的後端。",
-          localLink:
-            "llama.cpp 是您自行連結的本機目錄，因此 Unsloth 不會取代它。",
+          localLink: "llama.cpp 是您自行連結的本機目錄，因此 Unsloth 不會取代它。",
           sourceBuild: "此 llama.cpp 是從原始碼建置，因此無法在此切換其後端。",
           customPath: "已選取自訂 llama.cpp 資料夾。運算後端由其建置版本決定。",
           unresolved: "無法檢查可用的後端。請檢查網路連線後再試一次。",
-          updateChecksDisabled:
-            "已停用更新檢查（UNSLOTH_DISABLE_UPDATE_CHECK=1），因此不會查詢可用的後端。",
+          updateChecksDisabled: "已停用更新檢查（UNSLOTH_DISABLE_UPDATE_CHECK=1），因此不會查詢可用的後端。",
         },
-        llamaBackendKeywords:
-          "llama.cpp 後端 推論 引擎 加速器 預先建置 切換 自訂 路徑 資料夾 目錄 執行檔 backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary",
+        llamaBackendKeywords: "llama.cpp 後端 推論 引擎 加速器 預先建置 切換 自訂 路徑 資料夾 目錄 執行檔 backend gguf inference cuda rocm hip vulkan metal cpu gpu accelerator prebuilt switch engine custom path folder directory llama-server executable binary",
       },
       modelMemory: {
         title: "模型載入",
         keepResident: "將模型保留在 GPU 記憶體中",
         keepResidentDescription: "在提示詞之間持續保留在 VRAM 中。",
-        keepResidentHint:
-          "模型保持載入期間，不會將權重交還給系統 RAM。這會關閉閒置自動卸載；若權重確實位於主機 RAM 中（統一記憶體或部分 GPU 卸載），還會傳入 --mlock，讓作業系統無法將其分頁置換出去，並在您下次送出提示詞時重新上傳。",
+        keepResidentHint: "模型保持載入期間，不會將權重交還給系統 RAM。這會關閉閒置自動卸載；若權重確實位於主機 RAM 中（統一記憶體或部分 GPU 卸載），還會傳入 --mlock，讓作業系統無法將其分頁置換出去，並在您下次送出提示詞時重新上傳。",
         noRamReserve: "不為模型保留系統 RAM",
         noRamReserveDescription: "減少為模型權重保留的主機 RAM。",
-        noRamReserveHint:
-          "在支援的 Windows 版本上，當模型完全卸載至 GPU 時，會略過記憶體對應載入，因此其分頁不會常駐在記憶體中。否則仍維持記憶體對應載入。必要的 CPU 緩衝區仍可能使用 RAM。會移除 --no-mmap 和 --mlock。",
+        noRamReserveHint: "在支援的 Windows 版本上，當模型完全卸載至 GPU 時，會略過記憶體對應載入，因此其分頁不會常駐在記憶體中。否則仍維持記憶體對應載入。必要的 CPU 緩衝區仍可能使用 RAM。會移除 --no-mmap 和 --mlock。",
         multiModel: "同時保持載入多個模型",
         openSystemSettings: "在「系統」中開啟",
         multiModelOff: "關閉",
         multiModelFit: "空間足夠時",
         multiModelAlways: "一律",
-        multiModelDescription:
-          "載入聊天、語音、圖片或影片模型時，會卸載其他模型。",
-        multiModelDescriptionFit:
-          "載入模型時，若空間足夠會保留其他模型。若空間不足，會先卸載未使用的模型，再卸載使用中的模型。",
-        multiModelDescriptionAlways:
-          "載入模型時絕不會卸載其他模型。空間不足的模型不會載入。閒置自動卸載和訓練仍會釋放記憶體。",
-        multiModelHint:
-          "適用於聊天、語音、圖片和影片模型。每個已載入的聊天模型會回應指定該模型的請求。有多個 GPU 時，Unsloth 會嘗試將新模型放在沒有其他模型使用的 GPU 上。「空間足夠時」會保留約 1 GB 的餘裕。與其他模型一起載入的模型只能使用其他模型剩下的記憶體，因此啟動時的上下文可能較短。「空間足夠時」和「一律」絕不會卸載其他 GPU 上的模型。",
+        multiModelDescription: "載入聊天、語音、圖片或影片模型時，會卸載其他模型。",
+        multiModelDescriptionFit: "載入模型時，若空間足夠會保留其他模型。若空間不足，會先卸載未使用的模型，再卸載使用中的模型。",
+        multiModelDescriptionAlways: "載入模型時絕不會卸載其他模型。空間不足的模型不會載入。閒置自動卸載和訓練仍會釋放記憶體。",
+        multiModelHint: "適用於聊天、語音、圖片和影片模型。每個已載入的聊天模型會回應指定該模型的請求。有多個 GPU 時，Unsloth 會嘗試將新模型放在沒有其他模型使用的 GPU 上。「空間足夠時」會保留約 1 GB 的餘裕。與其他模型一起載入的模型只能使用其他模型剩下的記憶體，因此啟動時的上下文可能較短。「空間足夠時」和「一律」絕不會卸載其他 GPU 上的模型。",
         allowOversizedLoad: "允許載入超出記憶體的模型",
-        allowOversizedLoadDescription:
-          "即使記憶體檢查顯示空間不足，仍載入圖片和影片模型。",
-        allowOversizedLoadHint:
-          "適用於 CPU 與 GPU 共用同一記憶體集區的情況（Apple Silicon、內建顯示晶片）。當 Unsloth 估計的模型權重大小超過為作業系統保留空間後剩餘的記憶體時，會拒絕載入。開啟此選項後，仍會嘗試載入這些模型。估計值可能偏高或偏低：超出記憶體的載入可能失敗、耗盡所有記憶體、導致電腦大量使用置換空間或停止回應，或使 Unsloth 停止運作。預設為關閉。",
-        mediaIdleUnloadDescription:
-          "閒置達此秒數後卸載圖片和影片模型以釋放 VRAM。0 表示保持載入，最小值為 60。",
-        mlockVetoed:
-          "--mlock 維持關閉：將模型固定在記憶體中會為整個模型保留 RAM。閒置自動卸載仍為停用。",
-        mlockNotApplicable:
-          "完全位於 GPU 上：系統 RAM 中沒有需要鎖定的內容。閒置自動卸載維持關閉。",
-        memlockCapped:
-          "此系統將鎖定記憶體上限設為 {limit}。較大的模型將無法完全固定；請使用 ulimit -l 提高上限。",
+        allowOversizedLoadDescription: "即使記憶體檢查顯示空間不足，仍載入圖片和影片模型。",
+        allowOversizedLoadHint: "適用於 CPU 與 GPU 共用同一記憶體集區的情況（Apple Silicon、內建顯示晶片）。當 Unsloth 估計的模型權重大小超過為作業系統保留空間後剩餘的記憶體時，會拒絕載入。開啟此選項後，仍會嘗試載入這些模型。估計值可能偏高或偏低：超出記憶體的載入可能失敗、耗盡所有記憶體、導致電腦大量使用置換空間或停止回應，或使 Unsloth 停止運作。預設為關閉。",
+        mediaIdleUnloadDescription: "閒置達此秒數後卸載圖片和影片模型以釋放 VRAM。0 表示保持載入，最小值為 60。",
+        mlockVetoed: "--mlock 維持關閉：將模型固定在記憶體中會為整個模型保留 RAM。閒置自動卸載仍為停用。",
+        mlockNotApplicable: "完全位於 GPU 上：系統 RAM 中沒有需要鎖定的內容。閒置自動卸載維持關閉。",
+        memlockCapped: "此系統將鎖定記憶體上限設為 {limit}。較大的模型將無法完全固定；請使用 ulimit -l 提高上限。",
         reloadRequired: "重新載入模型以套用新的記憶體旗標。",
         loadError: "無法載入模型記憶體設定",
         saveError: "無法儲存模型記憶體設定",
-        modelMemoryKeywords:
-          "記憶體 常駐 固定 鎖定 分頁 保持載入 卸載 閒置 置換 mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging",
-        multiModelKeywords:
-          "多個 模型 同時 並存 置換 空間 卸載 圖片 影片 聊天 語音 朗讀 一律 閒置 multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle",
-        mediaIdleUnloadKeywords:
-          "圖片 影片 擴散 閒置 卸載 逾時 秒 釋放 記憶體 image video diffusion idle unload ttl timeout seconds free vram gpu memory",
+        modelMemoryKeywords: "記憶體 常駐 固定 鎖定 分頁 保持載入 卸載 閒置 置換 mlock memlock ulimit vram gpu memory ram resident residency pin pinned page lock locked keep loaded unload idle mmap no-mmap load-mode swap paging",
+        multiModelKeywords: "多個 模型 同時 並存 置換 空間 卸載 圖片 影片 聊天 語音 朗讀 一律 閒置 multiple several models together alongside swap fit unload evict vram gpu image video chat speech tts voice read aloud always idle",
+        mediaIdleUnloadKeywords: "圖片 影片 擴散 閒置 卸載 逾時 秒 釋放 記憶體 image video diffusion idle unload ttl timeout seconds free vram gpu memory",
       },
       storage: {
         title: "儲存空間",
         systemDisk: "系統磁碟",
         systemUsed: "系統磁碟已使用 {used}，共 {total}",
-        modelsDiskSummary:
-          "模型資料夾所在磁碟：已使用 {used}，共 {total}，可用 {free}",
+        modelsDiskSummary: "模型資料夾所在磁碟：已使用 {used}，共 {total}，可用 {free}",
         segmentModels: "模型",
         segmentCaches: "快取",
         segmentOther: "其他",
@@ -2999,10 +2781,8 @@ export const zhTW = {
         diskFree: "可用 {free}",
         modelsFolder: "模型資料夾",
         modelsFolderDescription: "下載的模型存放的位置。",
-        modelsFolderHint:
-          "下載的模型存放的位置。變更此位置可避免將模型存放在系統磁碟上。僅適用於新的下載，已有的模型會保留在原位置。",
-        modelsFolderKeywords:
-          "模型 資料夾 目錄 路徑 位置 下載 快取 儲存空間 磁碟 移動 搬移 models folder directory path location download downloads cache storage disk drive move relocate hugging face",
+        modelsFolderHint: "下載的模型存放的位置。變更此位置可避免將模型存放在系統磁碟上。僅適用於新的下載，已有的模型會保留在原位置。",
+        modelsFolderKeywords: "模型 資料夾 目錄 路徑 位置 下載 快取 儲存空間 磁碟 移動 搬移 models folder directory path location download downloads cache storage disk drive move relocate hugging face",
         futureDownloads: "僅限新的下載",
         environmentManaged: "由環境變數 {variable} 管理。",
         locationFree: "可用 {free}",
@@ -3022,8 +2802,7 @@ export const zhTW = {
           label: "快取檔案",
           description: "快取共占用 {size}，其中 {reclaimable} 可立即清除。",
           hint: "Unsloth 會在需要時重新建立的套件下載、已編譯核心和傳輸快取。下載的模型、專案、聊天、設定以及您的 Hugging Face 權杖絕不會在此清除。",
-          keywords:
-            "快取 清除 清理 釋放 空間 磁碟 已編譯 暫存 cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
+          keywords: "快取 清除 清理 釋放 空間 磁碟 已編譯 暫存 cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
           measuring: "正在計算快取大小...",
           measureFailed: "無法計算快取大小",
           empty: "找不到快取檔案。",
@@ -3032,8 +2811,7 @@ export const zhTW = {
           hideDetailsAction: "隱藏詳細資料",
           showFolders: "顯示資料夾",
           hideFolders: "隱藏資料夾",
-          previousLocations:
-            "包含先前的位置。主要的「清除」按鈕只會影響目前的快取資料夾。模型按鈕只會清除所選的副本。",
+          previousLocations: "包含先前的位置。主要的「清除」按鈕只會影響目前的快取資料夾。模型按鈕只會清除所選的副本。",
           clearModelDescription: "這只會移除此快取副本。需要時會重新下載。",
           clearAction: "清除快取",
           clearOneAction: "清除",
@@ -3041,12 +2819,10 @@ export const zhTW = {
           confirmTitle: "要清除快取檔案嗎？",
           confirmDescription: "這將釋放約 {size}。",
           confirmOneTitle: "要清除 {name} 嗎？",
-          safety:
-            "Unsloth 會在下次需要時重新建立快取。下載的模型、專案、聊天、設定以及您的 Hugging Face 權杖都不會受到影響。",
+          safety: "Unsloth 會在下次需要時重新建立快取。下載的模型、專案、聊天、設定以及您的 Hugging Face 權杖都不會受到影響。",
           hubCost: "這是模型快取。清除後，下次使用這些模型時會重新下載。",
           datasetsCost: "清除後，下次使用這些資料集時會重新下載。",
-          npuCost:
-            "這些是你已下載的 NPU 模型。清除會刪除它們，要使用需從 Hub 重新下載。",
+          npuCost: "這些是你已下載的 NPU 模型。清除會刪除它們，要使用需從 Hub 重新下載。",
           blocked: "未清除：{reason}",
           cleared: "已清除 {size}",
           partial: "部分快取檔案無法移除",
@@ -3095,14 +2871,10 @@ export const zhTW = {
     },
     agents: {
       title: "代理程式",
-      description:
-        "使用 unsloth start 將 Claude Code、Codex 等程式設計代理程式連接到本機模型。",
-      agentKeywords:
-        "代理程式 程式設計 vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
-      vscodeNote:
-        "VS Code 是例外：此指令會將提供的模型加入 VS Code 的 Copilot Chat 模型清單（chatLanguageModels.json）。",
-      intro:
-        "可將 Claude Code、Codex、DeepSeek Harness、Hermes、OpenClaw、OpenCode 及其他代理程式連接到由 Unsloth 在本機提供的模型，完全離線運作。它會執行與 OpenAI 相容的伺服器，且絕不會更動代理程式的設定檔。",
+      description: "使用 unsloth start 將 Claude Code、Codex 等程式設計代理程式連接到本機模型。",
+      agentKeywords: "代理程式 程式設計 vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
+      vscodeNote: "VS Code 是例外：此指令會將提供的模型加入 VS Code 的 Copilot Chat 模型清單（chatLanguageModels.json）。",
+      intro: "可將 Claude Code、Codex、DeepSeek Harness、Hermes、OpenClaw、OpenCode 及其他代理程式連接到由 Unsloth 在本機提供的模型，完全離線運作。它會執行與 OpenAI 相容的伺服器，且絕不會更動代理程式的設定檔。",
       readDocs: "閱讀說明文件",
       copy: "複製",
       copied: "已複製",
@@ -3112,8 +2884,7 @@ export const zhTW = {
       model: "模型",
       searchModels: "搜尋 GGUF 模型...",
       noModels: "沒有符合的 GGUF 模型。",
-      showingModels:
-        "顯示 {total} 個符合項目中的 {shown} 個。繼續輸入以縮小範圍。",
+      showingModels: "顯示 {total} 個符合項目中的 {shown} 個。繼續輸入以縮小範圍。",
       quantization: "量化",
       loadingQuantizations: "正在載入量化版本...",
       noQuantizations: "沒有個別的量化版本",
@@ -3125,17 +2896,14 @@ export const zhTW = {
       docsLabel: "開啟 unsloth start 說明文件",
       agentDocs: "開啟 {agent} 設定說明文件",
       copyGeneratedCommand: "複製產生的指令",
-      automaticSettingsNote:
-        "若您未設定任何旗標，Unsloth 會自動套用模型的建議設定。",
+      automaticSettingsNote: "若您未設定任何旗標，Unsloth 會自動套用模型的建議設定。",
       configurationNote: "您也可以調整任何設定。請參閱下方或",
       configurationDocs: "說明文件",
       configurationFlagsSuffix: "以了解可用旗標。",
-      modelNote:
-        "Claude Code 和 Codex 需要由 llama-server 提供的 GGUF 模型，或 MLX 模型。其他代理程式也可以使用以 Transformers 為後端的模型；移除 --model 即可使用 Unsloth 中已載入的模型。",
+      modelNote: "Claude Code 和 Codex 需要由 llama-server 提供的 GGUF 模型，或 MLX 模型。其他代理程式也可以使用以 Transformers 為後端的模型；移除 --model 即可使用 Unsloth 中已載入的模型。",
       subagent: {
         title: "將本機模型用作子代理程式",
-        description:
-          "讓 {agent} 繼續使用目前的模型，並將選定的任務委派給這個本機 Unsloth 模型。",
+        description: "讓 {agent} 繼續使用目前的模型，並將選定的任務委派給這個本機 Unsloth 模型。",
         setupCommand: "設定指令",
         copySetupCommand: "複製子代理程式設定指令",
         usagePrompt: "接著在 {agent} 中輸入：",
@@ -3145,8 +2913,7 @@ export const zhTW = {
       },
       quickstart: {
         title: "建立指令",
-        description:
-          "針對 Unsloth 中目前載入的模型啟動代理程式。請先載入模型，再將 claude 換成下方任一支援的代理程式。",
+        description: "針對 Unsloth 中目前載入的模型啟動代理程式。請先載入模型，再將 claude 換成下方任一支援的代理程式。",
         noneDetected: "在您的 PATH 中找不到支援的代理程式 CLI。",
         installed: "已安裝",
       },
@@ -3157,17 +2924,14 @@ export const zhTW = {
       },
       models: {
         title: "選擇模型",
-        description:
-          "傳入 --model 以選擇模型和量化版本，傳入 --context-length 以設定上下文視窗。可使用量化後綴，或明確的 --gguf-variant 旗標。",
+        description: "傳入 --model 以選擇模型和量化版本，傳入 --context-length 以設定上下文視窗。可使用量化後綴，或明確的 --gguf-variant 旗標。",
         suffixLabel: "使用量化後綴",
         variantLabel: "使用明確的變體旗標",
       },
       options: {
         title: "常用選項",
-        description:
-          "Unsloth 會先解析自己的旗標；無法辨識的參數會直接傳遞給代理程式。",
-        model:
-          "選擇模型。若未指定 --model，unsloth start 會使用 Unsloth 中目前載入的模型，若未載入任何模型則會發生錯誤。",
+        description: "Unsloth 會先解析自己的旗標；無法辨識的參數會直接傳遞給代理程式。",
+        model: "選擇模型。若未指定 --model，unsloth start 會使用 Unsloth 中目前載入的模型，若未載入任何模型則會發生錯誤。",
         contextLength: "設定要求的上下文視窗（別名：--max-seq-length）。",
         ggufVariant: "選擇 GGUF 量化變體。",
         loadIn4bit: "切換 Hugging Face 模型的 4 位元載入。",
@@ -3175,35 +2939,33 @@ export const zhTW = {
         serve: "啟用或停用自動本機伺服器。",
         launch: "啟動代理程式，或只列印指令和環境變數。",
         persist: "在每次執行之間保留由 Unsloth 管理的代理程式儲存資料。",
-        asSubagent:
-          "讓上層代理程式繼續使用目前的模型，並將 Unsloth 註冊為本機子代理程式（Claude Code、Codex、OpenCode 和 Pi）。",
+        asSubagent: "讓上層代理程式繼續使用目前的模型，並將 Unsloth 註冊為本機子代理程式（Claude Code、Codex、OpenCode 和 Pi）。",
         apiKey: "提供您的 Unsloth API 金鑰（或設定 UNSLOTH_API_KEY）。",
-        reasoning:
-          "在聊天中使用推理：on、off 或 auto。auto 會依照模型的聊天範本，通常代表開啟。",
-        reasoningEffort:
-          "傳遞給模型聊天範本的推理強度，例如 medium。可用等級依模型而異，請使用該模型接受的等級。未設定時會沿用範本本身的設定。",
+        reasoning: "在聊天中使用推理：on、off 或 auto。auto 會依照模型的聊天範本，通常代表開啟。",
+        reasoningEffort: "傳遞給模型聊天範本的推理強度，例如 medium。可用等級依模型而異，請使用該模型接受的等級。未設定時會沿用範本本身的設定。",
         yolo: "略過核准提示。僅限在受信任的環境中使用。",
       },
       remote: {
         title: "連線至遠端 Unsloth",
-        description:
-          "在啟動前設定以下變數，即可讓 unsloth start 指向在其他位置執行的 Unsloth 執行個體（或直接傳入 --api-key）：",
+        description: "在啟動前設定以下變數，即可讓 unsloth start 指向在其他位置執行的 Unsloth 執行個體（或直接傳入 --api-key）：",
       },
       passthrough: {
         title: "傳遞代理程式參數",
-        description:
-          "Unsloth 旗標之後的參數會轉送給代理程式本身，因此 resume 等原生指令仍可正常使用：",
+        description: "Unsloth 旗標之後的參數會轉送給代理程式本身，因此 resume 等原生指令仍可正常使用：",
       },
       dryRun: {
         title: "預覽而不啟動",
-        description:
-          "加上 --no-launch 即可列印環境變數和指令，而不啟動代理程式。若已設定 --model，仍可能會解析並載入模型。",
+        description: "加上 --no-launch 即可列印環境變數和指令，而不啟動代理程式。若已設定 --model，仍可能會解析並載入模型。",
       },
     },
     chat: {
       groups: {
-        replies: { title: "回覆" },
-        thinkingTools: { title: "思考與工具" },
+        replies: {
+          title: "回覆",
+        },
+        thinkingTools: {
+          title: "思考與工具",
+        },
         conversations: {
           title: "對話",
         },
@@ -3231,27 +2993,21 @@ export const zhTW = {
       },
       projectAttachmentsHint: "可在每個聊天的附件選單中覆寫此設定。",
       rememberParamsPerModelHint: "關閉時，所有模型都使用相同的設定。",
-      autoCompactHint:
-        "本機 GGUF 與 MLX 聊天：被移出的對話回合會建立索引，讓模型可以再搜尋回來；重設時會逐字引用放得下的常駐指示，優先保留最舊與最新的部分，而非中間部分。封存需要已儲存的聊天和向量索引；若缺少這些，較舊的回合會被捨棄。使用您設定的上下文長度，而非可用的 VRAM。API 模型：供應商會盡可能摘要較舊的回合，否則在聊天接近模型公布的上下文視窗時，會捨棄最舊的回合。",
-      pastedTextShortDescription:
-        "貼上 {count} 個字元以上的內容時，會轉為 .txt 附件。",
+      autoCompactHint: "本機 GGUF 與 MLX 聊天：被移出的對話回合會建立索引，讓模型可以再搜尋回來；重設時會逐字引用放得下的常駐指示，優先保留最舊與最新的部分，而非中間部分。封存需要已儲存的聊天和向量索引；若缺少這些，較舊的回合會被捨棄。使用您設定的上下文長度，而非可用的 VRAM。API 模型：供應商會盡可能摘要較舊的回合，否則在聊天接近模型公布的上下文視窗時，會捨棄最舊的回合。",
+      pastedTextShortDescription: "貼上 {count} 個字元以上的內容時，會轉為 .txt 附件。",
       pastedTextOffDescription: "貼上的文字一律保留在訊息輸入框中。",
       title: "聊天",
       description: "自訂聊天在此裝置上的運作方式。",
       modelSelection: {
         title: "模型選擇",
         expandQuantizations: "展開量化版本",
-        expandQuantizationsDescription:
-          "在「裝置上」顯示 GGUF 量化版本，不必逐一開啟每個模型。",
+        expandQuantizationsDescription: "在「裝置上」顯示 GGUF 量化版本，不必逐一開啟每個模型。",
         showAllQuantizations: "所有量化版本",
-        showAllQuantizationsDescription:
-          "在「裝置上」也列出尚未下載的量化版本。",
+        showAllQuantizationsDescription: "在「裝置上」也列出尚未下載的量化版本。",
         showMemoryBar: "VRAM 用量列",
-        showMemoryBarDescription:
-          "顯示模型權重、上下文和推測解碼的估計 VRAM 用量。",
+        showMemoryBarDescription: "顯示模型權重、上下文和推測解碼的估計 VRAM 用量。",
         fitOnDeviceOnly: "僅顯示放得下的模型",
-        fitOnDeviceOnlyDescription:
-          "在模型選擇器和模型中心中，隱藏超出此裝置 GPU 記憶體和 RAM 的模型。已下載的模型仍會顯示。",
+        fitOnDeviceOnlyDescription: "在模型選擇器和模型中心中，隱藏超出此裝置 GPU 記憶體和 RAM 的模型。已下載的模型仍會顯示。",
         pickerExpandLoaded: "顯示完整模型清單",
         pickerExpandLoadedDescription: "載入模型後，模型選擇器開啟時顯示完整清單，而非只顯示已載入的模型。展開或收合選擇器也會變更此設定。",
         pickerMonochromeIcons: "單色模型圖示",
@@ -3259,8 +3015,7 @@ export const zhTW = {
       },
       menu: {
         title: "聊天選單",
-        description:
-          "將項目釘選到聊天的 + 選單，並拖曳以重新排序。其他項目會移到「更多」中。",
+        description: "將項目釘選到聊天的 + 選單，並拖曳以重新排序。其他項目會移到「更多」中。",
         deepResearch: "深度研究",
         browserUse: "瀏覽器操作",
         computerUse: "電腦操作",
@@ -3277,48 +3032,35 @@ export const zhTW = {
         more: "更多",
       },
       pastedTextThreshold: "壓縮長篇貼上內容",
-      pastedTextThresholdDescription:
-        "按下 {shortcut} 即可直接貼到訊息輸入框中。",
+      pastedTextThresholdDescription: "按下 {shortcut} 即可直接貼到訊息輸入框中。",
       pastedTextThresholdOff: "關閉",
       autoScroll: "產生時捲動",
-      autoScrollDescription:
-        "「自動捲動」會讓新文字保持在畫面中。「手動」則停在原處，方便您從頭閱讀。",
+      autoScrollDescription: "「自動捲動」會讓新文字保持在畫面中。「手動」則停在原處，方便您從頭閱讀。",
       autoScrollAuto: "自動捲動",
       autoScrollManual: "手動",
-      autoScrollKeywords:
-        "捲動 自動捲動 跟隨 底部 跳轉 串流 產生 鎖定 自動 手動 scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual",
+      autoScrollKeywords: "捲動 自動捲動 跟隨 底部 跳轉 串流 產生 鎖定 自動 手動 scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual",
       replyNotification: "回覆完成時通知",
-      replyNotificationDescription:
-        "當 Unsloth 縮到最小或在背景執行時，回覆完成後顯示系統通知。",
-      replyNotificationBlocked:
-        "通知已遭封鎖。請在瀏覽器或系統設定中允許 Unsloth 傳送通知，然後再試一次。",
-      replyNotificationKeywords:
-        "通知 提醒 完成 就緒 回應 回覆 背景 最小化 桌面 音效 notify notification alert done finished complete ready response reply background minimized desktop sound",
+      replyNotificationDescription: "當 Unsloth 縮到最小或在背景執行時，回覆完成後顯示系統通知。",
+      replyNotificationBlocked: "通知已遭封鎖。請在瀏覽器或系統設定中允許 Unsloth 傳送通知，然後再試一次。",
+      replyNotificationKeywords: "通知 提醒 完成 就緒 回應 回覆 背景 最小化 桌面 音效 notify notification alert done finished complete ready response reply background minimized desktop sound",
       showLinkPreviews: "連結預覽",
       showLinkPreviewsDescription: "將滑鼠游標停留在來源連結上時顯示預覽。",
       showResponseModel: "回應模型",
       showResponseModelDescription: "在助理回應中顯示模型詳細資料。",
       showReplyTimes: "回覆時間",
       showReplyTimesDescription: "在每則回覆下方顯示其完成時間。",
-      showReplyTimesKeywords:
-        "時間戳記 時間 時鐘 日期 小時 完成 抵達 回覆 回應 訊息 timestamp time clock date hour when finished arrived reply response message",
+      showReplyTimesKeywords: "時間戳記 時間 時鐘 日期 小時 完成 抵達 回覆 回應 訊息 timestamp time clock date hour when finished arrived reply response message",
       showGenerationDetails: "詳細速度資訊",
-      showGenerationDetailsDescription:
-        "在即時讀數中加入提示詞讀取速度、token 數和草稿採用率。",
-      showGenerationDetailsKeywords:
-        "詳細 開發人員 統計 速度 預填 解碼 verbose developer stats speed tok/s prefill decode",
+      showGenerationDetailsDescription: "在即時讀數中加入提示詞讀取速度、token 數和草稿採用率。",
+      showGenerationDetailsKeywords: "詳細 開發人員 統計 速度 預填 解碼 verbose developer stats speed tok/s prefill decode",
       generationStatsUpdates: "速度與上下文統計",
-      generationStatsUpdatesDescription:
-        "即時模式在回覆串流輸出時統計每秒 token 數和上下文用量。完成後模式在每則回覆結束時更新。",
-      generationStatsUpdatesHint:
-        "即時模式會在回覆產生期間，每秒數次重新整理回覆下方的每秒 token 數讀數和聊天頂端的上下文列。完成後模式會在每則回覆結束後更新一次。即時模式可能造成卡頓或效能下降，在較舊或忙碌的電腦上尤其明顯。",
+      generationStatsUpdatesDescription: "即時模式在回覆串流輸出時統計每秒 token 數和上下文用量。完成後模式在每則回覆結束時更新。",
+      generationStatsUpdatesHint: "即時模式會在回覆產生期間，每秒數次重新整理回覆下方的每秒 token 數讀數和聊天頂端的上下文列。完成後模式會在每則回覆結束後更新一次。即時模式可能造成卡頓或效能下降，在較舊或忙碌的電腦上尤其明顯。",
       generationStatsUpdatesSettled: "完成後",
       generationStatsUpdatesRealtime: "即時",
-      generationStatsUpdatesKeywords:
-        "即時 動態 更新 速度 上下文 統計 realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "即時 動態 更新 速度 上下文 統計 realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "在回應上顯示「編輯回應」",
-      inlineEditResponseDescription:
-        "在每則回應上保留「編輯回應」，而不是放在「更多」選單中。",
+      inlineEditResponseDescription: "在每則回應上保留「編輯回應」，而不是放在「更多」選單中。",
       turnNavigation: "輪次導覽",
       turnNavigationDescription: "在長對話的左側邊緣以導軌形式顯示你的訊息。懸停可預覽某一輪，點擊可跳轉，並可加書籤以便再次找到。",
       composerPosition: "輸入框位置",
@@ -3326,23 +3068,16 @@ export const zhTW = {
       projectAttachments: "在專案中共用檔案",
       projectAttachmentsDescription: "讓新的聊天附件可供專案中的每個聊天使用。",
       rememberParamsPerModel: "依模型記住設定",
-      rememberParamsPerModelDescription:
-        "還原每個模型上次使用的提示詞、溫度及其他設定。",
+      rememberParamsPerModelDescription: "還原每個模型上次使用的提示詞、溫度及其他設定。",
       autoCompact: "自動壓縮長篇聊天",
-      autoCompactDescription:
-        "當聊天占滿上下文時，較舊的回合會移至可搜尋的封存中。",
-      autoCompactKeywords:
-        "壓縮 自動壓縮 上下文視窗 截斷 滾動 檢查點 餘裕 封存 擷取 回想 搜尋 compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search",
+      autoCompactDescription: "當聊天占滿上下文時，較舊的回合會移至可搜尋的封存中。",
+      autoCompactKeywords: "壓縮 自動壓縮 上下文視窗 截斷 滾動 檢查點 餘裕 封存 擷取 回想 搜尋 compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search",
       keepRunningWhenTabClosed: "關閉分頁後繼續執行",
-      keepRunningWhenTabClosedDescription:
-        "關閉分頁後，回覆、網頁搜尋和深度研究會在伺服器上繼續進行。關閉此選項則會改為停止它們。",
-      keepRunningWhenTabClosedHint:
-        "在任何裝置上重新開啟聊天，即可接續仍在進行的執行。關閉此選項時，執行會在最後一個分頁關閉後約一分鐘內停止，因此重新載入不會使其停止。僅適用於變更此設定後才開始的執行。暫時聊天、API 模型的回覆或針對附件的回覆，以及使用瀏覽器面板的回合，一律會隨分頁關閉而停止。",
-      keepRunningWhenTabClosedKeywords:
-        "背景 分頁 關閉 離開 繼續執行 繼續 停止 取消 深度研究 網頁搜尋 接續 重新連線 裝置 手機 background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone",
+      keepRunningWhenTabClosedDescription: "關閉分頁後，回覆、網頁搜尋和深度研究會在伺服器上繼續進行。關閉此選項則會改為停止它們。",
+      keepRunningWhenTabClosedHint: "在任何裝置上重新開啟聊天，即可接續仍在進行的執行。關閉此選項時，執行會在最後一個分頁關閉後約一分鐘內停止，因此重新載入不會使其停止。僅適用於變更此設定後才開始的執行。暫時聊天、API 模型的回覆或針對附件的回覆，以及使用瀏覽器面板的回合，一律會隨分頁關閉而停止。",
+      keepRunningWhenTabClosedKeywords: "背景 分頁 關閉 離開 繼續執行 繼續 停止 取消 深度研究 網頁搜尋 接續 重新連線 裝置 手機 background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone",
       firstTokenLabel: "首個 token 等待上限",
-      firstTokenDescription:
-        "本機 GGUF 模型在提示詞處理沒有進度的情況下，等待首個 token 的最長時間。適用於所有帳號的新等待。「無限制」會持續等待，直到您停止為止。",
+      firstTokenDescription: "本機 GGUF 模型在提示詞處理沒有進度的情況下，等待首個 token 的最長時間。適用於所有帳號的新等待。「無限制」會持續等待，直到您停止為止。",
       firstTokenDefault: "20 分鐘（預設）",
       firstTokenCustom: "自訂",
       firstTokenUnlimited: "無限制",
@@ -3352,35 +3087,28 @@ export const zhTW = {
       firstTokenSaving: "儲存中…",
       firstTokenLoadError: "無法載入首個 token 等待上限。",
       firstTokenSaveError: "無法儲存首個 token 等待上限。",
-      firstTokenKeywords:
-        "逾時 首個 token 預填 緩慢 CPU 整夜 無限制 等待 上限 timeout first token prefill slow overnight unlimited waiting limit",
+      firstTokenKeywords: "逾時 首個 token 預填 緩慢 CPU 整夜 無限制 等待 上限 timeout first token prefill slow overnight unlimited waiting limit",
       toolResultLimit: "工具輸出長度",
-      toolResultLimitDescription:
-        "模型讀取單一 Python、終端機或 MCP 工具結果的字元數。預設為 {count}。",
-      toolResultLimitHint:
-        "較長的 Python 和終端機輸出會儲存為檔案，供模型分段讀取。較高的上限適用於在 Unsloth 中執行的模型，上下文視窗較小的模型仍會取得較少內容。除非您調低，否則 API 模型會維持預設值。",
+      toolResultLimitDescription: "模型讀取單一 Python、終端機或 MCP 工具結果的字元數。預設為 {count}。",
+      toolResultLimitHint: "較長的 Python 和終端機輸出會儲存為檔案，供模型分段讀取。較高的上限適用於在 Unsloth 中執行的模型，上下文視窗較小的模型仍會取得較少內容。除非您調低，否則 API 模型會維持預設值。",
       toolResultLimitDefault: "{count}（預設）",
       toolResultLimitLocked: "由 UNSLOTH_TOOL_RESULT_MAX_CHARS 設定",
       toolResultLimitLoadError: "無法載入工具輸出長度。",
       toolResultLimitSaveError: "無法儲存工具輸出長度。",
-      toolResultLimitKeywords:
-        "工具 輸出 結果 截斷 上限 字元 長度 終端機 tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
+      toolResultLimitKeywords: "工具 輸出 結果 截斷 上限 字元 長度 終端機 tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
       visibility: {
         collapsed: "收合",
         auto: "執行時展開",
         expanded: "一律展開",
       },
-      visibilityKeywords:
-        "收合 展開 開啟 關閉 推理 思考 工具呼叫 工具活動 摺疊 群組 串流 collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming",
+      visibilityKeywords: "收合 展開 開啟 關閉 推理 思考 工具呼叫 工具活動 摺疊 群組 串流 collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming",
       thinking: {
         visibility: "思考",
-        visibilityDescription:
-          "推理內容的展開方式。您仍可自行展開或收合任何區塊。",
+        visibilityDescription: "推理內容的展開方式。您仍可自行展開或收合任何區塊。",
       },
       memory: {
         title: "記憶",
-        description:
-          "每個聊天都會讀取的筆記，適用於所有本機或雲端模型。專案中的聊天也會讀取該專案的 AGENTS.md。",
+        description: "每個聊天都會讀取的筆記，適用於所有本機或雲端模型。專案中的聊天也會讀取該專案的 AGENTS.md。",
         enable: "在聊天中使用記憶",
         enableDescription: "每次聊天都傳送這些筆記。",
         locked: "已由 UNSLOTH_STUDIO_AGENTS_MD 為此安裝關閉。",
@@ -3392,8 +3120,7 @@ export const zhTW = {
         saved: "已儲存記憶",
         loadError: "無法載入記憶。",
         saveError: "無法儲存記憶。",
-        keywords:
-          "記憶 記住 個人化 個人檔案 偏好設定 筆記 事實 自訂指示 關於我 memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md",
+        keywords: "記憶 記住 個人化 個人檔案 偏好設定 筆記 事實 自訂指示 關於我 memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md",
       },
       currentDate: {
         label: "告知模型今天的日期",
@@ -3403,13 +3130,10 @@ export const zhTW = {
       },
       tools: {
         visibility: "工具呼叫",
-        visibilityDescription:
-          "工具活動的展開方式。您仍可自行展開或收合任何呼叫。",
+        visibilityDescription: "工具活動的展開方式。您仍可自行展開或收合任何呼叫。",
         foldIntoThinking: "將工具呼叫歸入「思考」之下",
-        foldIntoThinkingDescription:
-          "將一個回合的工具呼叫顯示在其「思考」區塊內，而不是各自獨立成列。",
-        foldIntoThinkingBlocked:
-          "工具呼叫設為「一律展開」時無法使用，該設定會讓工具呼叫各自獨立成列。",
+        foldIntoThinkingDescription: "將一個回合的工具呼叫顯示在其「思考」區塊內，而不是各自獨立成列。",
+        foldIntoThinkingBlocked: "工具呼叫設為「一律展開」時無法使用，該設定會讓工具呼叫各自獨立成列。",
       },
       webSearch: {
         title: "網頁搜尋",
@@ -3419,23 +3143,19 @@ export const zhTW = {
       artifacts: {
         title: "HTML 頁面",
         collapseHtmlBlocks: "收合 HTML 區塊",
-        collapseHtmlBlocksDescription:
-          "將聊天中的完整 HTML 文件顯示為可在瀏覽器中開啟的卡片，而不是程式碼。",
+        collapseHtmlBlocksDescription: "將聊天中的完整 HTML 文件顯示為可在瀏覽器中開啟的卡片，而不是程式碼。",
         allowNetworkAccess: "允許 HTML 頁面存取網路",
-        allowNetworkAccessDescription:
-          "讓聊天中的 HTML 頁面載入外部指令碼、樣式、字型和媒體。若要離線預覽，請關閉此選項。",
+        allowNetworkAccessDescription: "讓聊天中的 HTML 頁面載入外部指令碼、樣式、字型和媒體。若要離線預覽，請關閉此選項。",
         blockedBanner: "已封鎖來自 {hosts} 的 {count} 個外部資源。",
         blockedBannerPlural: "已封鎖來自 {hosts} 的 {count} 個外部資源。",
         blockedBannerAction: "允許此頁面",
         blockedTitle: "HTML 頁面的網路存取已關閉",
-        blockedHint:
-          "在「設定 → 瀏覽器」中開啟「{setting}」，讓 HTML 頁面載入外部資源，或僅允許此頁面。",
+        blockedHint: "在「設定 → 瀏覽器」中開啟「{setting}」，讓 HTML 頁面載入外部資源，或僅允許此頁面。",
         blockedSettingsAction: "開啟設定",
         blockedDismiss: "關閉",
         errorTitle: "此頁面發生錯誤",
         errorTitlePlural: "此頁面發生 {count} 個錯誤",
-        errorHint:
-          "「交由模型修正」會將錯誤放入訊息輸入框。在您送出之前，不會傳送任何內容。",
+        errorHint: "「交由模型修正」會將錯誤放入訊息輸入框。在您送出之前，不會傳送任何內容。",
         errorBannerAction: "交由模型修正",
         errorConsoleAction: "開啟主控台",
         errorConsoleHideAction: "隱藏主控台",
@@ -3456,25 +3176,21 @@ export const zhTW = {
       exportAction: "匯出",
       exportingAction: "匯出中...",
       exportConversations: "匯出最近項目和專案",
-      exportConversationsDescription:
-        "將最近項目，或最近項目加上專案聊天，下載為 Training JSONL、CSV、ShareGPT JSONL、Markdown、HTML 或 PDF，可合併為一個檔案或每個聊天各一個檔案。Message JSONL 僅提供每個聊天各一個檔案。",
+      exportConversationsDescription: "將最近項目，或最近項目加上專案聊天，下載為 Training JSONL、CSV、ShareGPT JSONL、Markdown、HTML 或 PDF，可合併為一個檔案或每個聊天各一個檔案。Message JSONL 僅提供每個聊天各一個檔案。",
       exportConversationsAction: "匯出",
       exportScopeRecents: "最近項目",
       exportScopeAll: "最近項目 + 專案",
       importChats: "匯入聊天",
-      importChatsDescription:
-        "將 JSON、JSONL、NDJSON、CSV 或 Markdown 檔案匯入「最近項目」。",
+      importChatsDescription: "將 JSON、JSONL、NDJSON、CSV 或 Markdown 檔案匯入「最近項目」。",
       importChatsAction: "匯入",
       importNoConversations: "檔案中找不到任何對話。",
       importedOneChat: "已將 1 個對話匯入「最近項目」。",
       importedChatCount: "已將 {count} 個對話匯入「最近項目」。",
       importingChats: "正在匯入聊天：目前已匯入 {count} 個（{percent}%）...",
-      importedChatCountPartial:
-        "已將 {count} 個對話匯入「最近項目」；{failed} 個無法儲存。",
+      importedChatCountPartial: "已將 {count} 個對話匯入「最近項目」；{failed} 個無法儲存。",
       importFailed: "匯入失敗。",
       importFromSource: "從 {source} 匯入",
-      importFromSourceDescription:
-        "將您的 {source} 對話複製到 Unsloth，並依所屬專案分組。",
+      importFromSourceDescription: "將您的 {source} 對話複製到 Unsloth，並依所屬專案分組。",
       importingAction: "正在匯入...",
       importedSourceOneChat: "已從 {source} 匯入 1 個對話。",
       importedSourceChatCount: "已從 {source} 匯入 {count} 個對話。",
@@ -3492,8 +3208,7 @@ export const zhTW = {
       clearChatsAction: "清除聊天",
       clearOneChatTitle: "要清除 1 個聊天嗎？",
       clearChatsTitle: "要清除 {count} 個聊天嗎？",
-      clearChatsConfirmDescription:
-        "將永久刪除此裝置上的所有聊天。此動作無法復原。",
+      clearChatsConfirmDescription: "將永久刪除此裝置上的所有聊天。此動作無法復原。",
       clearingAction: "正在清除...",
       clearOneChatAction: "清除 1 個聊天",
       clearChatCountAction: "清除 {count} 個聊天",
@@ -3501,16 +3216,12 @@ export const zhTW = {
       clearedOneChat: "已清除 1 個聊天",
       clearedChatCount: "已清除 {count} 個聊天",
       someChatsCouldNotBeCleared: "部分聊天無法清除",
-      chatsClearedRemainOne:
-        "已清除 {clearedCount} 個聊天；仍剩下 1 個聊天。請重試。",
-      chatsClearedRemain:
-        "已清除 {clearedCount} 個聊天；仍剩下 {remainingCount} 個聊天。請重試。",
-      oneChatClearedRemain:
-        "已清除 1 個聊天；仍剩下 {remainingCount} 個聊天。請重試。",
+      chatsClearedRemainOne: "已清除 {clearedCount} 個聊天；仍剩下 1 個聊天。請重試。",
+      chatsClearedRemain: "已清除 {clearedCount} 個聊天；仍剩下 {remainingCount} 個聊天。請重試。",
+      oneChatClearedRemain: "已清除 1 個聊天；仍剩下 {remainingCount} 個聊天。請重試。",
       oneChatClearedRemainOne: "已清除 1 個聊天；仍剩下 1 個聊天。請重試。",
       storageClearFailedOne: "清除儲存空間失敗；可能仍剩下 1 個聊天。請重試。",
-      storageClearFailed:
-        "清除儲存空間失敗；可能仍剩下 {count} 個聊天。請重試。",
+      storageClearFailed: "清除儲存空間失敗；可能仍剩下 {count} 個聊天。請重試。",
       failedToClearChats: "無法清除聊天",
     },
     data: {
@@ -3588,8 +3299,7 @@ export const zhTW = {
         deleteChatsTitle: "刪除聊天（{count}）",
         deleteChatsWarning: "{count} 個聊天及其訊息將被永久刪除。此動作無法復原。",
         deleteArchivedTitle: "刪除 {count} 個已封存的聊天",
-        deleteArchivedWarning:
-          "{count} 個已封存聊天及其訊息將被永久刪除。此動作無法復原。",
+        deleteArchivedWarning: "{count} 個已封存聊天及其訊息將被永久刪除。此動作無法復原。",
         deleting: "正在刪除...",
       },
       title: "資料",
@@ -3617,24 +3327,20 @@ export const zhTW = {
       noArchivedChatsToExport: "沒有可匯出的已封存聊天。",
       failedToExportArchivedChats: "無法匯出已封存的聊天",
       archiveAllChats: "封存所有聊天",
-      archiveAllChatsDescription:
-        "將「最近項目」和「專案」中的所有聊天移至封存。",
+      archiveAllChatsDescription: "將「最近項目」和「專案」中的所有聊天移至封存。",
       noChatsToArchive: "沒有可封存的聊天。",
       archiveAllAction: "全部封存",
       archivingAction: "正在封存...",
       archiveAllChatsTitle: "要封存所有聊天嗎？",
-      archiveAllChatsConfirmDescription:
-        "將此裝置上的所有聊天移至封存。已封存的聊天仍可使用，並可隨時取消封存。",
+      archiveAllChatsConfirmDescription: "將此裝置上的所有聊天移至封存。已封存的聊天仍可使用，並可隨時取消封存。",
       archivedAllChats: "已封存所有聊天",
       archivedOneChat: "已封存 1 個聊天",
       archivedChatCount: "已封存 {count} 個聊天",
       failedToArchiveChats: "無法封存聊天",
       confirmBeforeDeleting: "刪除前先確認",
-      confirmBeforeDeletingDescription:
-        "刪除聊天前要求確認。關閉後將立即刪除。",
+      confirmBeforeDeletingDescription: "刪除聊天前要求確認。關閉後將立即刪除。",
       alwaysDeleteFiles: "一律刪除檔案",
-      alwaysDeleteFilesDescription:
-        "刪除聊天時，也會從磁碟移除該聊天專屬的沙箱資料夾。聊天在專案中寫入的檔案會保留在該專案工作區。",
+      alwaysDeleteFilesDescription: "刪除聊天時，也會從磁碟移除該聊天專屬的沙箱資料夾。聊天在專案中寫入的檔案會保留在該專案工作區。",
       chatsSection: "聊天與封存",
       transferSection: "匯入與匯出",
       deletionSection: "刪除",
@@ -3648,19 +3354,16 @@ export const zhTW = {
       sandboxFilesDescription: "刪除聊天時的預設動作。",
       keepSandboxFiles: "保留沙箱檔案",
       deleteSandboxFiles: "刪除沙箱檔案",
-      projectFilesKept:
-        "沙箱是為個別聊天建立的資料夾。儲存在專案工作區中的檔案會保留。",
+      projectFilesKept: "沙箱是為個別聊天建立的資料夾。儲存在專案工作區中的檔案會保留。",
       deleteAllAction: "全部刪除",
       deleteChatsOnly: "僅刪除聊天…",
       deleteChatsAndSandboxes: "刪除聊天與沙箱…",
-      deleteSandboxFilesDescription:
-        "同時刪除每個聊天的沙箱資料夾及其中的檔案。專案工作區中的檔案會保留。",
+      deleteSandboxFilesDescription: "同時刪除每個聊天的沙箱資料夾及其中的檔案。專案工作區中的檔案會保留。",
       filesSection: "檔案",
       uploadedFiles: "上傳的檔案",
       uploadedFilesDescription: "檢視及管理上傳到聊天、專案與知識庫的檔案。",
       fineTuneExport: "將聊天用作訓練資料",
-      fineTuneExportDescription:
-        "從您的聊天建立微調用的 JSONL 資料集。可在「訓練」中載入、在「配方」中調整，或將其匯出。",
+      fineTuneExportDescription: "從您的聊天建立微調用的 JSONL 資料集。可在「訓練」中載入、在「配方」中調整，或將其匯出。",
       fineTuneExportAction: "匯出 JSONL",
       fineTuneRunAction: "執行",
       fineTuneExportingAction: "正在匯出...",
@@ -3715,8 +3418,7 @@ export const zhTW = {
       copyAccessToken: "複製存取權杖",
       copyNow: "請立即複製，此權杖不會再次顯示。",
       usageExamples: "聊天 API",
-      usageNoModel:
-        "載入或下載模型即可查看可執行的範例。此伺服器目前還沒有可指定的模型。",
+      usageNoModel: "載入或下載模型即可查看可執行的範例。此伺服器目前還沒有可指定的模型。",
       usageTools: "工具",
       exampleLanguage: "語言",
       exampleRequest: "請求",
@@ -3728,18 +3430,15 @@ export const zhTW = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "安全 HTTPS",
-      secureHttpsHint:
-        "0.0.0.0 連接埠仍可從任何地方存取。若要完整的安全性，請使用 --secure 啟動 Unsloth，僅公開此 HTTPS 連結。",
+      secureHttpsHint: "0.0.0.0 連接埠仍可從任何地方存取。若要完整的安全性，請使用 --secure 啟動 Unsloth，僅公開此 HTTPS 連結。",
       copyTunnelUrl: "複製通道 URL",
       copySnippet: "複製程式碼片段",
       copy: "複製",
       copied: "已複製",
       codingAgents: "程式設計代理程式",
-      codingAgentsHint:
-        "針對此伺服器啟動程式設計代理程式。它會使用已載入的模型；本機伺服器會自動產生 API 金鑰，遠端伺服器則會將金鑰包含在指令中。",
+      codingAgentsHint: "針對此伺服器啟動程式設計代理程式。它會使用已載入的模型；本機伺服器會自動產生 API 金鑰，遠端伺服器則會將金鑰包含在指令中。",
       openAgentsTab: "在「代理程式」中開啟",
-      codingAgentsSwap:
-        "可將 claude 替換為 codex、openclaw、opencode 或 hermes。",
+      codingAgentsSwap: "可將 claude 替換為 codex、openclaw、opencode 或 hermes。",
       relativeNever: "從未",
       relativeJustNow: "剛剛",
       expired: "已到期",
@@ -3751,14 +3450,12 @@ export const zhTW = {
       revokeToken: "撤銷權杖",
       regenerateToken: "重新產生權杖",
       regenerateTitle: "要重新產生存取權杖「{name}」嗎？",
-      regenerateDescription:
-        "名稱與有效期限相同的新權杖將取代此權杖。使用目前權杖的應用程式會立即失去存取權。",
+      regenerateDescription: "名稱與有效期限相同的新權杖將取代此權杖。使用目前權杖的應用程式會立即失去存取權。",
       regenerateAction: "重新產生",
       regenerating: "正在重新產生...",
       regenerateError: "無法重新產生存取權杖。",
       revokeTitle: "要撤銷存取權杖「{name}」嗎？",
-      revokeDescription:
-        "使用此權杖的應用程式會立即失去存取權。此動作無法復原。",
+      revokeDescription: "使用此權杖的應用程式會立即失去存取權。此動作無法復原。",
       revokeAction: "撤銷「{name}」",
       revoking: "正在撤銷...",
       audioApi: {
@@ -3772,44 +3469,33 @@ export const zhTW = {
         convert: "轉換",
         music: "音樂",
         edit: "編輯",
-        placeholderModel:
-          "目前沒有已下載的模型可以執行此範例，因此顯示的是替代模型。請先在「音訊」頁面下載模型。",
-        autoSwitchOff:
-          "只有在開啟「模型自動切換」時，才會依名稱載入模型。請開啟該選項，或先在模型的「音訊」頁面載入模型。",
+        placeholderModel: "目前沒有已下載的模型可以執行此範例，因此顯示的是替代模型。請先在「音訊」頁面下載模型。",
+        autoSwitchOff: "只有在開啟「模型自動切換」時，才會依名稱載入模型。請開啟該選項，或先在模型的「音訊」頁面載入模型。",
         useViaApi: "透過 API 使用",
       },
       mediaApi: {
         title: "圖片 / 影片 API",
-        description:
-          "使用與 OpenAI 相容的端點，從您自己的程式碼產生圖片和影片。",
+        description: "使用與 OpenAI 相容的端點，從您自己的程式碼產生圖片和影片。",
         images: "圖片",
         video: "影片",
-        placeholderModel:
-          "顯示的模型僅為範例。請在「圖片」或「影片」頁面載入模型，再從該頁面的 API 按鈕開啟此處以自動填入。",
-        autoSwitchOff:
-          "「媒體自動切換」已關閉，因此無論請求指定哪個模型，都會在頁面已載入的模型上執行。",
+        placeholderModel: "顯示的模型僅為範例。請在「圖片」或「影片」頁面載入模型，再從該頁面的 API 按鈕開啟此處以自動填入。",
+        autoSwitchOff: "「媒體自動切換」已關閉，因此無論請求指定哪個模型，都會在頁面已載入的模型上執行。",
       },
       trainingApi: {
         title: "訓練 API",
-        description:
-          "使用與 OpenAI 相容的微調端點，從您自己的程式碼微調模型：上傳 JSONL 檔案、建立工作、追蹤其事件，然後與訓練好的模型聊天。",
-        placeholder:
-          "顯示的模型和設定僅為範例。請從「訓練」頁面的 API 按鈕開啟此處，以填入您目前的設定。",
-        hubDataset:
-          "您的「訓練」頁面使用 Hugging Face 或 S3 資料集。API 只能使用上傳的檔案進行訓練，因此請將資料集儲存為 JSONL 並上傳。",
+        description: "使用與 OpenAI 相容的微調端點，從您自己的程式碼微調模型：上傳 JSONL 檔案、建立工作、追蹤其事件，然後與訓練好的模型聊天。",
+        placeholder: "顯示的模型和設定僅為範例。請從「訓練」頁面的 API 按鈕開啟此處，以填入您目前的設定。",
+        hubDataset: "您的「訓練」頁面使用 Hugging Face 或 S3 資料集。API 只能使用上傳的檔案進行訓練，因此請將資料集儲存為 JSONL 並上傳。",
         batching: "佇列中相容的工作會自動一起訓練。",
-        chatNote:
-          "若要依名稱與訓練好的模型聊天，需開啟「模型自動切換」，或先在「聊天」頁面載入該模型。",
+        chatNote: "若要依名稱與訓練好的模型聊天，需開啟「模型自動切換」，或先在「聊天」頁面載入該模型。",
         cancelTitle: "取消工作",
-        cancelDescription:
-          "停止排入佇列或執行中的工作。不屬於上方範例的一部分。",
+        cancelDescription: "停止排入佇列或執行中的工作。不屬於上方範例的一部分。",
       },
       decisionApi: {
         title: "決策 API",
         docs: "文件",
         docsLabel: "開啟決策 API 文件",
-        description:
-          "使用此電腦上的模型或「連線」中的決策模型，回答與文字相關的是非題、選擇題和評分題。可搭配 TypeSafe SDK 使用。",
+        description: "使用此電腦上的模型或「連線」中的決策模型，回答與文字相關的是非題、選擇題和評分題。可搭配 TypeSafe SDK 使用。",
         codeTitle: "透過程式碼呼叫",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "其他 MCP 用戶端使用同一權杖連線到此處。",
@@ -3831,10 +3517,8 @@ export const zhTW = {
         deviceGpu: "GPU",
         backend: "執行環境",
         backendAuto: "自動",
-        backendDescription:
-          "「自動」會在模型有 GGUF 版本時透過 llama.cpp 提供 Clef，否則改用 PyTorch。llama.cpp 也能讀取圖片。",
-        backendDescriptionMlx:
-          "「自動」在 Apple Silicon 上會透過 MLX 提供 Clef；若只載入或下載了模型的 GGUF 版本，則透過 llama.cpp 提供。MLX 僅能為 Clef 模型讀取圖片。llama.cpp 也能讀取圖片。",
+        backendDescription: "「自動」會在模型有 GGUF 版本時透過 llama.cpp 提供 Clef，否則改用 PyTorch。llama.cpp 也能讀取圖片。",
+        backendDescriptionMlx: "「自動」在 Apple Silicon 上會透過 MLX 提供 Clef；若只載入或下載了模型的 GGUF 版本，則透過 llama.cpp 提供。MLX 僅能為 Clef 模型讀取圖片。llama.cpp 也能讀取圖片。",
         backendStatus: "執行環境：{backend}",
         backendNone: "無法使用",
         mediaImages: "可讀取文字和圖片。",
@@ -3850,8 +3534,7 @@ export const zhTW = {
         download: "下載",
         downloadConfirmTitle: "要下載 Laya {model} 嗎？",
         downloadConfirmTitleModel: "要下載 {model} 嗎？",
-        downloadConfirmBody:
-          "決策 API 需要此模型才能回應請求。大小約 {size}，只會下載一次並存放於您的 Hugging Face 快取。",
+        downloadConfirmBody: "決策 API 需要此模型才能回應請求。大小約 {size}，只會下載一次並存放於您的 Hugging Face 快取。",
         unload: "卸載",
         downloadBusy: "已有決策 API 模型正在下載。",
         downloadFailed: "無法開始下載。",
@@ -3865,19 +3548,16 @@ export const zhTW = {
       },
       mcp: {
         title: "代理程式存取（MCP）",
-        description:
-          "讓 Claude Code 和 Codex 等程式設計代理程式透過 MCP 使用 Unsloth。",
+        description: "讓 Claude Code 和 Codex 等程式設計代理程式透過 MCP 使用 Unsloth。",
         enable: "允許代理程式連線",
         enableDescription: "為帶有 Unsloth API 金鑰的請求提供 /mcp/ 服務。",
         lockedByEnv: "由 {name} 設定。",
         loadError: "無法載入代理程式存取設定。",
         saveError: "無法儲存代理程式存取設定。",
         agent: "代理程式",
-        exportKeyHint:
-          "啟動代理程式前，請將 {name} 設為 Unsloth API 金鑰。",
+        exportKeyHint: "啟動代理程式前，請將 {name} 設為 Unsloth API 金鑰。",
         configFileHint: "將此內容加入 {path}。",
-        keywords:
-          "mcp model context protocol 模型上下文協定 agents 代理程式 claude codex tools 工具",
+        keywords: "mcp model context protocol 模型上下文協定 agents 代理程式 claude codex tools 工具",
       },
     },
     mcp: {
@@ -3892,8 +3572,7 @@ export const zhTW = {
         allTools: "所有工具",
         selectAll: "全選",
         selectNone: "全不選",
-        description:
-          "每個開啟的工具都會增加代理程式開始前要讀取的內容，所以請關閉不需要的工具。代理程式永遠看不到已關閉的工具，對它的呼叫會被拒絕。已連線的代理程式在重新連線後才會看到變更。",
+        description: "每個開啟的工具都會增加代理程式開始前要讀取的內容，所以請關閉不需要的工具。代理程式永遠看不到已關閉的工具，對它的呼叫會被拒絕。已連線的代理程式在重新連線後才會看到變更。",
         saveError: "無法儲存 Unsloth MCP 工具設定。",
         chatNote: "聊天永遠不會取得 {tools}。",
         groups: {
@@ -3978,8 +3657,7 @@ export const zhTW = {
       whisperCppVersion: "whisper.cpp 版本",
       engines: {
         title: "引擎",
-        description:
-          "Unsloth 用來執行模型的執行環境。更新會在背景安裝，不需重新啟動。",
+        description: "Unsloth 用來執行模型的執行環境。更新會在背景安裝，不需重新啟動。",
         updatesLabel: "引擎更新",
         notInstalled: "未安裝",
         available: "{version} 可供使用",
@@ -4032,15 +3710,12 @@ export const zhTW = {
         localUpdateHeading: "本機更新",
         installCommandUnix: "macOS/Linux 安裝指令",
         installCommandWindows: "Windows 安裝指令",
-        localInstallDetected:
-          "偵測到本機安裝。請從您原本的 checkout 更新，以免被 PyPI 版本取代。",
+        localInstallDetected: "偵測到本機安裝。請從您原本的 checkout 更新，以免被 PyPI 版本取代。",
         pullThenUpdate: "拉取最新變更，然後執行本機安裝程式：",
         gitPullCommand: "git pull 指令",
         localInstallerCommand: "本機安裝程式指令",
-        sourceInstallDetected:
-          "偵測到從原始碼或 VCS 套件安裝。請從原本的本機路徑或 Git URL 重新安裝。",
-        repoCheckoutFallback:
-          "如果您仍保有存放庫的 checkout，請從中執行本機安裝程式：",
+        sourceInstallDetected: "偵測到從原始碼或 VCS 套件安裝。請從原本的本機路徑或 Git URL 重新安裝。",
+        repoCheckoutFallback: "如果您仍保有存放庫的 checkout，請從中執行本機安裝程式：",
         restartAfterUpdate: "更新後請重新啟動 Unsloth。",
         desktopReady: "桌面應用程式更新",
         desktopReadyDescription: "檢查是否有較新的桌面應用程式版本。",
@@ -4048,8 +3723,7 @@ export const zhTW = {
         desktopCheckingDescription: "這通常只需要幾秒鐘。",
         desktopAvailable: "桌面應用程式 {version} 已推出",
         desktopAvailableDescription: "立即更新，完成後桌面應用程式將重新啟動。",
-        desktopExternalServer:
-          "已連線到連接埠 {port} 上並非由此應用程式啟動的 Unsloth 伺服器，例如在終端機中執行的 `unsloth studio`。請在啟動它的地方停止它，然後結束並重新開啟應用程式以進行更新。",
+        desktopExternalServer: "已連線到連接埠 {port} 上並非由此應用程式啟動的 Unsloth 伺服器，例如在終端機中執行的 `unsloth studio`。請在啟動它的地方停止它，然後結束並重新開啟應用程式以進行更新。",
         desktopManualInstall: "開啟發行頁面以安裝最新的 Linux 套件。",
         desktopCheckFailed: "無法檢查更新",
         desktopCheckFailedDescription: "請檢查您的網路連線，然後再試一次。",
@@ -4061,10 +3735,8 @@ export const zhTW = {
         checking: "正在檢查...",
         updateNow: "立即更新",
         openReleasePage: "開啟發行頁面",
-        unknownInstall:
-          "無法偵測 Unsloth 的安裝方式。若是透過安裝程式或 PyPI 安裝，請使用上方的指令。",
-        localCheckout:
-          "若是從本機 checkout 安裝，請從該 checkout 執行本機安裝程式：",
+        unknownInstall: "無法偵測 Unsloth 的安裝方式。若是透過安裝程式或 PyPI 安裝，請使用上方的指令。",
+        localCheckout: "若是從本機 checkout 安裝，請從該 checkout 執行本機安裝程式：",
         docs: "安裝文件：",
         docsInstall: "安裝",
         docsUpdating: "更新",
@@ -4078,8 +3750,7 @@ export const zhTW = {
   },
   studio: {
     routeTitle: "訓練",
-    cpuTrainingNotice:
-      "找不到 GPU，因此訓練會在 CPU 上執行。它比 GPU 訓練慢得多，且僅支援文字模型（LoRA 或完整微調）。",
+    cpuTrainingNotice: "找不到 GPU，因此訓練會在 CPU 上執行。它比 GPU 訓練慢得多，且僅支援文字模型（LoRA 或完整微調）。",
     wizard: {
       modelTitle: "模型",
       modelDescription: "選取模型與訓練方法",
@@ -4092,11 +3763,9 @@ export const zhTW = {
       modelLabel: "模型",
       modelTooltip: "您要微調的基礎模型。",
       methodLabel: "方法",
-      methodTooltip:
-        "模型的訓練方式。LoRA 和 QLoRA 只會更新小型配接器，而非所有權重。",
+      methodTooltip: "模型的訓練方式。LoRA 和 QLoRA 只會更新小型配接器，而非所有權重。",
       trainAsLabel: "訓練為",
-      trainAsTooltip:
-        "語言模型會撰寫文字。決策模型會從您提供的選項中選出一個並附上機率，並在決策 API 中執行。",
+      trainAsTooltip: "語言模型會撰寫文字。決策模型會從您提供的選項中選出一個並附上機率，並在決策 API 中執行。",
       trainAsLanguage: "語言模型",
       trainAsDecision: "決策模型",
       checkpointLabel: "檢查點",
@@ -4111,11 +3780,9 @@ export const zhTW = {
       saveYaml: "儲存 YAML",
       resetDefaults: "重設為預設值",
       cachedModelGoneTitle: "已快取的模型已無法使用",
-      cachedModelGoneDescription:
-        "模型檔案已不在此裝置上，因此訓練時會重新下載。",
+      cachedModelGoneDescription: "模型檔案已不在此裝置上，因此訓練時會重新下載。",
       cachedDatasetGoneTitle: "已快取的資料集已無法使用",
-      cachedDatasetGoneDescription:
-        "資料集檔案已不在此裝置上，因此訓練時會重新下載。",
+      cachedDatasetGoneDescription: "資料集檔案已不在此裝置上，因此訓練時會重新下載。",
     },
     preview: {
       title: "執行作業預覽",
@@ -4155,15 +3822,13 @@ export const zhTW = {
       noticeModelPartial: "訓練會先完成未下載完的模型，再將其載入。",
       noticeDatasetDownload: "此資料集尚未存在於此裝置上。訓練時會自動下載。",
       noticeDatasetPartial: "訓練會先完成未下載完的資料集，再讀取它。",
-      noticeTransformersUpgrade:
-        "目前安裝的 transformers 都還不支援此架構。開始執行時會先提示安裝 transformers {version}。",
-      noticeSixteenBitOnly:
-        "此架構以 16-bit LoRA 訓練：它不支援 4-bit，因此這次執行所需的 VRAM 會遠多於 QLoRA。",
-      noticeInstallSwitchesSixteenBit:
-        "若安裝該版本而不保留模型本身的程式碼，這次執行會改用 16-bit LoRA，所需的 VRAM 遠多於 QLoRA。",
+      noticeTransformersUpgrade: "目前安裝的 transformers 都還不支援此架構。開始執行時會先提示安裝 transformers {version}。",
+      noticeSixteenBitOnly: "此架構以 16-bit LoRA 訓練：它不支援 4-bit，因此這次執行所需的 VRAM 會遠多於 QLoRA。",
+      noticeInstallSwitchesSixteenBit: "若安裝該版本而不保留模型本身的程式碼，這次執行會改用 16-bit LoRA，所需的 VRAM 遠多於 QLoRA。",
       advancedSettings: "進階設定",
       defaultAdvancedSettings: "預設值",
       nonDefaultAdvancedSettings: "{count} 項非預設值",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "資料集",
@@ -4175,8 +3840,7 @@ export const zhTW = {
       scanningLocal: "正在掃描此裝置上的資料集…",
       couldntScan: "無法掃描本機資料集",
       someLocationsUnscanned: "部分資料集位置無法掃描。",
-      noLocalDatasets:
-        "此裝置上還沒有任何資料集。請從 Hub 下載資料集、在「配方」中建立，或上傳檔案。",
+      noLocalDatasets: "此裝置上還沒有任何資料集。請從 Hub 下載資料集、在「配方」中建立，或上傳檔案。",
       openDataRecipes: "開啟資料配方",
       searchingHub: "正在搜尋 Hugging Face…",
       noDatasetsFound: "找不到資料集。",
@@ -4184,8 +3848,7 @@ export const zhTW = {
       tokenRejectedBody: "請在「設定 → 一般」中更新您的權杖，然後重試。",
       hubUnreachable: "無法連線至 Hugging Face",
       cantUseDataset: "無法使用資料集",
-      reasonInvalidHubId:
-        "請輸入有效的 Hugging Face 資料集 ID：repo 或 owner/repo，不可有連續的句點或連字號，也不可以 .git 結尾（每個部分最多 96 個字元）。",
+      reasonInvalidHubId: "請輸入有效的 Hugging Face 資料集 ID：repo 或 owner/repo，不可有連續的句點或連字號，也不可以 .git 結尾（每個部分最多 96 個字元）。",
       sourceRecipe: "配方",
       sourceUpload: "上傳",
       sourceLocal: "本機",
@@ -4207,8 +3870,7 @@ export const zhTW = {
       noModelsFound: "找不到模型。",
       tokenRejectedTitle: "Hugging Face 權杖遭拒",
       tokenRejectedBody: "請在「設定 → 一般」中更新您的權杖，然後重試。",
-      tokenRejectedAnonymousBody:
-        "目前不使用權杖顯示公開模型。請在「設定 → 一般」中更新您的權杖，以存取私人和受限的模型。",
+      tokenRejectedAnonymousBody: "目前不使用權杖顯示公開模型。請在「設定 → 一般」中更新您的權杖，以存取私人和受限的模型。",
       hubUnreachable: "無法連線至 Hugging Face",
       cantUseModel: "無法使用此模型進行訓練",
       reasonTypeMismatch: "此模型與上一步選取的訓練類型不符。",
@@ -4217,8 +3879,7 @@ export const zhTW = {
       reasonAdapter: "配接器輸出無法作為訓練用的基礎模型。",
       reasonNotTrainable: "此裝置上的模型無法訓練。",
       reasonUnsupportedFormat: "不支援以此模型格式進行訓練。",
-      reasonInvalidHubId:
-        "請輸入有效的 Hugging Face 模型 ID：repo 或 owner/repo，不可有連續的句點或連字號，也不可以 .git 結尾（每個部分最多 96 個字元）。",
+      reasonInvalidHubId: "請輸入有效的 Hugging Face 模型 ID：repo 或 owner/repo，不可有連續的句點或連字號，也不可以 .git 結尾（每個部分最多 96 個字元）。",
       sourceModelsFolder: "模型資料夾",
       sourceHfCache: "HF 快取",
       sourceLmStudio: "LM Studio",
@@ -4253,17 +3914,29 @@ export const zhTW = {
         hint: "針對新領域或新語言進行持續預訓練。",
         note: "持續",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "設定並開始訓練",
       trainingInProgress: "訓練進行中",
       viewPastRuns: "檢視過去的訓練執行作業",
       viewingPastRun: "正在檢視過去的執行作業",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "設定",
       currentRun: "目前執行作業",
       history: "記錄",
+      compare: "Compare",
     },
     goToLibrary: "前往檔案庫",
     imageTraining: "圖片訓練",
@@ -4278,8 +3951,7 @@ export const zhTW = {
         trainSplit: "訓練分割",
         trainSplitTooltip: "選取用於訓練的分割。",
         evaluationSplit: "評估分割",
-        evaluationSplitTooltip:
-          "選取用於評估的分割。選擇「無」表示訓練期間不進行評估。",
+        evaluationSplitTooltip: "選取用於評估的分割。選擇「無」表示訓練期間不進行評估。",
         selectSubset: "選取子集...",
         selectSplit: "選取分割...",
         none: "無",
@@ -4305,16 +3977,13 @@ export const zhTW = {
       uploading: "正在上傳...",
       uploadEvalFile: "上傳評估檔案",
       fileTooLarge: "檔案過大",
-      fileTooLargeDescription:
-        "{file} 的大小為 {size}。訓練上傳最多支援 {limit}。",
+      fileTooLargeDescription: "{file} 的大小為 {size}。訓練上傳最多支援 {limit}。",
       documentRedirect: {
         title: "此檔案需要先轉換",
         genericFile: "此檔案",
-        description:
-          "{file} 是原始素材，而非可直接訓練的資料集。請使用資料配方將文件轉換為資料集，然後回到這裡進行微調。",
+        description: "{file} 是原始素材，而非可直接訓練的資料集。請使用資料配方將文件轉換為資料集，然後回到這裡進行微調。",
         nextStepTitle: "建議的下一步",
-        nextStepDescription:
-          "開啟「學習配方」，並從以文件為基礎的配方（例如 PDF 文件問答）開始。",
+        nextStepDescription: "開啟「學習配方」，並從以文件為基礎的配方（例如 PDF 文件問答）開始。",
         openAction: "開啟學習配方",
       },
       evalDatasetDescription: "選填。若未提供，將從訓練資料中切分一小部分。",
@@ -4331,49 +4000,42 @@ export const zhTW = {
           source: "使用 Hugging Face 資料集（而非本機上傳或 S3 來源）。",
           maxSteps: "將「最大步數」設為大於 0：串流資料集的長度未知。",
           trainOnCompletions: "關閉「僅訓練助理回覆」。",
-          evalSplit:
-            "選擇獨立的評估分割：已開啟評估，但尚未設定獨立的評估分割。",
+          evalSplit: "選擇獨立的評估分割：已開啟評估，但尚未設定獨立的評估分割。",
           visionModel: "視覺模型不支援串流。",
           audioModel: "音訊模型不支援串流。",
           embeddingModel: "嵌入模型不支援串流（訓練需要完整的資料集）。",
           imageDataset: "此資料集看起來是圖片，無法串流。",
           audioDataset: "此資料集看起來是音訊，無法串流。",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "僅訓練助理回覆",
           evaluation: "評估（需要獨立的評估分割）",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "已關閉串流：串流需要固定且大於 0 的「最大步數」。",
+          turnedOffMaxSteps: "已關閉串流：串流需要固定且大於 0 的「最大步數」。",
           adjusted: "已為串流進行調整。已停用不相容的選項：{options}。",
-          needsMaxSteps:
-            "串流需要固定的「最大步數」（串流資料集的長度未知）。請先將「最大步數」設為大於 0。",
+          needsMaxSteps: "串流需要固定的「最大步數」（串流資料集的長度未知）。請先將「最大步數」設為大於 0。",
           enabledAdjusted: "已啟用串流。已停用不相容的選項：{options}。",
-          disabledForDetectedModality:
-            "由於圖片和音訊資料集需要完整下載，串流已關閉。請檢查設定，然後重新開始。",
+          disabledForDetectedModality: "由於圖片和音訊資料集需要完整下載，串流已關閉。請檢查設定，然後重新開始。",
         },
       },
       auto: "自動",
       rawText: "純文字",
       trainSplitStart: "訓練分割起點",
-      trainSplitStartTooltip:
-        "指定起始列索引（包含該列，從 0 起算），只使用訓練分割的一部分進行訓練。留空則從第一列開始。",
+      trainSplitStartTooltip: "指定起始列索引（包含該列，從 0 起算），只使用訓練分割的一部分進行訓練。留空則從第一列開始。",
       trainSplitEnd: "訓練分割終點",
-      trainSplitEndTooltip:
-        "訓練分割中要納入的最後一列索引（包含該列，從 0 起算）。例如將起點設為 0、終點設為 99，即可使用前 100 列進行訓練。留空則使用其餘所有列。",
+      trainSplitEndTooltip: "訓練分割中要納入的最後一列索引（包含該列，從 0 起算）。例如將起點設為 0、終點設為 99，即可使用前 100 列進行訓練。留空則使用其餘所有列。",
       endPlaceholder: "終點",
       clear: "清除",
       dropFileOrClick: "拖放檔案或按一下以上傳",
       uploadDetails: "上傳詳細資料",
-      uploadDetailsTooltip:
-        "每個檔案最大 {limit}。PDF、DOCX 和 TXT 並非可直接訓練的資料集，請先在「學習配方」中轉換。",
+      uploadDetailsTooltip: "每個檔案最大 {limit}。PDF、DOCX 和 TXT 並非可直接訓練的資料集，請先在「學習配方」中轉換。",
       viewDataset: "檢視資料集",
       previewTokens: "預覽 token",
       tokenPreview: {
         title: "Token 預覽",
-        description:
-          "{model} 在訓練時如何將這些資料切分為 token。只會下載 tokenizer。",
+        description: "{model} 在訓練時如何將這些資料切分為 token。只會下載 tokenizer。",
         datasetTab: "資料集樣本",
         textTab: "您的文字",
         trained: "已訓練",
@@ -4392,15 +4054,13 @@ export const zhTW = {
         truncated: "因上下文長度限制，已從 {full} 個 token 截斷為 {max} 個。",
         noTrained: "此列沒有任何要訓練的 token，因此訓練時會略過。",
         hiddenTokens: "另有 {count} 個 token 未顯示",
-        multimodal:
-          "此處不顯示圖片和音訊列。您仍可用自己的文字試用 tokenizer。",
+        multimodal: "此處不顯示圖片和音訊列。您仍可用自己的文字試用 tokenizer。",
         textPlaceholder: "輸入或貼上文字以查看其 token...",
         textHint: "開啟「僅訓練助理回覆」時，只會訓練助理標記之後的文字。",
         insertExample: "插入聊天範例",
         vocab: "詞彙表：{count} 個 token",
         retry: "再試一次",
-        packing:
-          "已開啟封裝：執行時會將多列合併為上下文長度的序列，因此實際截斷位置可能與此逐列檢視不同。",
+        packing: "已開啟封裝：執行時會將多列合併為上下文長度的序列，因此實際截斷位置可能與此逐列檢視不同。",
       },
       uploadFailed: "上傳失敗",
       unknownError: "未知的錯誤",
@@ -4423,11 +4083,9 @@ export const zhTW = {
         heuristicTitle: "以啟發式偵測的對應",
         readyTitle: "對應已就緒",
         requiredTitle: "對應資料集欄",
-        heuristicDescription:
-          "已使用啟發式方法自動偵測下方的欄對應。請檢查並使用欄標題中的下拉式選單調整，或使用 AI Assist 取得更精確的對應。",
+        heuristicDescription: "已使用啟發式方法自動偵測下方的欄對應。請檢查並使用欄標題中的下拉式選單調整，或使用 AI Assist 取得更精確的對應。",
         readyDescription: "看起來沒問題。系統會自動轉換此資料集。",
-        requiredDescription:
-          "使用標題中的下拉式選單為各欄指派角色。至少需指派{required}。",
+        requiredDescription: "使用標題中的下拉式選單為各欄指派角色。至少需指派{required}。",
       },
       s3: {
         title: "S3 組態",
@@ -4458,8 +4116,7 @@ export const zhTW = {
       trainingHyperparameters: "訓練超參數",
       drafterSettings: "推測解碼草稿模型",
       drafterTrain: "訓練推測解碼草稿模型",
-      drafterTrainTooltip:
-        "在微調後訓練一個小型草稿頭，讓 llama.cpp 與 vLLM 中的推論更快；輸出結果不變。",
+      drafterTrainTooltip: "在微調後訓練一個小型草稿頭，讓 llama.cpp 與 vLLM 中的推論更快；輸出結果不變。",
       drafterChecking: "正在檢查此模型...",
       drafterUnavailable: "此模型無法使用：{reason}",
       drafterRetrainMtp: "重新訓練此模型的 MTP 頭",
@@ -4483,11 +4140,9 @@ export const zhTW = {
       customContextLength: "輸入自訂值",
       learningRate: "學習率",
       learningRateTooltip: "權重更新的步幅。值越低，訓練越慢但越穩定。",
-      learningRateDescription:
-        "建議值：LoRA 為 2e-4，CPT 為 5e-5，完整微調為 2e-5",
+      learningRateDescription: "建議值：LoRA 為 2e-4，CPT 為 5e-5，完整微調為 2e-5",
       embeddingLearningRate: "嵌入學習率",
-      embeddingLearningRateTooltip:
-        "僅在 CPT 訓練 embed_tokens 時使用。嵌入比 LoRA 權重更容易變得不穩定，因此通常需要較小的學習率。留空則使用 lr/10；常見的有效範圍是比主要學習率小 2 到 10 倍。只有在詞彙或領域 token 的適應速度太慢時才調高。",
+      embeddingLearningRateTooltip: "僅在 CPT 訓練 embed_tokens 時使用。嵌入比 LoRA 權重更容易變得不穩定，因此通常需要較小的學習率。留空則使用 lr/10；常見的有效範圍是比主要學習率小 2 到 10 倍。只有在詞彙或領域 token 的適應速度太慢時才調高。",
       rank: "秩（Rank）",
       rankTooltip: "低秩矩陣的維度。數值越高，容量越大。",
       alpha: "Alpha",
@@ -4510,13 +4165,10 @@ export const zhTW = {
       schedule: "排程",
       memory: "記憶體",
       optimizer: "最佳化器",
-      optimizerTooltip:
-        "最佳化演算法。8-bit 版本可減少記憶體用量。視覺模型建議使用 Fused。",
-      optimizerTooltipMlx:
-        "最佳化演算法。AdamW 為預設值。Lion 使用的記憶體較少，但通常需要較低的學習率。",
+      optimizerTooltip: "最佳化演算法。8-bit 版本可減少記憶體用量。視覺模型建議使用 Fused。",
+      optimizerTooltipMlx: "最佳化演算法。AdamW 為預設值。Lion 使用的記憶體較少，但通常需要較低的學習率。",
       lrScheduler: "學習率排程器",
-      lrSchedulerTooltip:
-        "學習率在訓練過程中的變化方式。「線性」會穩定遞減；「餘弦」會以曲線方式遞減。",
+      lrSchedulerTooltip: "學習率在訓練過程中的變化方式。「線性」會穩定遞減；「餘弦」會以曲線方式遞減。",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4541,27 +4193,22 @@ export const zhTW = {
       saveSteps: "儲存間隔步數",
       saveStepsTooltip: "每 N 個步驟儲存一個檢查點。設為 0 即停用。",
       evalSteps: "評估間隔",
-      evalStepsTooltip:
-        "兩次評估之間占總訓練步數的比例（0-1）。設為 0 即停用評估。例如 0.01 = 每 1% 的步數評估一次。",
+      evalStepsTooltip: "兩次評估之間占總訓練步數的比例（0-1）。設為 0 即停用評估。例如 0.01 = 每 1% 的步數評估一次。",
       earlyStoppingPatience: "提前停止耐心值",
-      earlyStoppingPatienceTooltip:
-        "連續這麼多次評估的評估損失都沒有降低時就停止訓練，並保留最佳評估時的權重。需要啟用評估（評估間隔大於 0）。設為 0 即停用。",
+      earlyStoppingPatienceTooltip: "連續這麼多次評估的評估損失都沒有降低時就停止訓練，並保留最佳評估時的權重。需要啟用評估（評估間隔大於 0）。設為 0 即停用。",
       seed: "隨機種子",
       seedTooltip: "用於確保結果可重現的隨機種子。",
       offloadLayers: "卸載層",
-      offloadLayersTooltip:
-        "將解碼器層保留在系統 RAM 中，並在每一層執行前才串流至 GPU，讓大於 VRAM 的模型也能以 LoRA 訓練。「自動」會盡量少卸載，只要放得下即可；指定數量則精確卸載該數量的層。需要啟用梯度檢查點。",
+      offloadLayersTooltip: "將解碼器層保留在系統 RAM 中，並在每一層執行前才串流至 GPU，讓大於 VRAM 的模型也能以 LoRA 訓練。「自動」會盡量少卸載，只要放得下即可；指定數量則精確卸載該數量的層。需要啟用梯度檢查點。",
       offloadOff: "關閉",
       offloadAuto: "自動",
       offloadCount: "數量",
       offloadVramBudget: "VRAM 預算（GiB）",
-      offloadVramBudgetTooltip:
-        "此執行作業最多可使用的 VRAM。「自動」會卸載足夠的層以維持在此值以下，兩個執行作業也能各取一部分來共用同一張顯示卡。留空則使用整張顯示卡。",
+      offloadVramBudgetTooltip: "此執行作業最多可使用的 VRAM。「自動」會卸載足夠的層以維持在此值以下，兩個執行作業也能各取一部分來共用同一張顯示卡。留空則使用整張顯示卡。",
       offloadWholeCard: "整張顯示卡",
       offloadVramBudgetGpu: "GPU {index} VRAM 預算（GiB）",
       prefetchDepth: "預先擷取深度",
-      prefetchDepthTooltip:
-        "在執行中的層之前預先複製多少個已卸載的層。「自動」從 1 開始，只有在明顯減少等待複製的時間時才維持較深的緩衝池。",
+      prefetchDepthTooltip: "在執行中的層之前預先複製多少個已卸載的層。「自動」從 1 開始，只有在明顯減少等待複製的時間時才維持較深的緩衝池。",
       offloadPanelTitle: "已卸載的層",
       offloadPanelGpu: "在 GPU 上",
       offloadPanelHost: "在系統 RAM 中",
@@ -4573,8 +4220,7 @@ export const zhTW = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "預先擷取深度",
       offloadPanelPinned: "已鎖定",
-      offloadPanelSweepNote:
-        "移動的視窗會以放慢的速度顯示各層的擷取順序；數值為最後一個步驟的實測結果。",
+      offloadPanelSweepNote: "移動的視窗會以放慢的速度顯示各層的擷取順序；數值為最後一個步驟的實測結果。",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "未知的顯示卡",
       gradCheckpoint: "梯度檢查點",
@@ -4584,6 +4230,18 @@ export const zhTW = {
       enablePacking: "啟用封裝",
       assistantCompletionsOnly: "僅訓練助理回覆",
       readMore: "閱讀更多",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "無法建立執行作業副本",
@@ -4603,8 +4261,7 @@ export const zhTW = {
         modelRequired: "請先選取基礎模型。",
         learningRatePositive: "請輸入大於零的學習率。",
         embeddingLearningRateRange: "請輸入大於 0 且小於 1 的嵌入學習率。",
-        decisionColumnsMissing:
-          "決策模型需要 state、questions 和 gold（或 answers）欄。缺少：{columns}。",
+        decisionColumnsMissing: "決策模型需要 state、questions 和 gold（或 answers）欄。缺少：{columns}。",
         decisionOwnerOnly: "只有 Unsloth 擁有者可以微調決策模型。",
         hfDatasetRequired: "請先選取 Hugging Face 資料集。",
         hfDatasetSplitRequired: "請先選取或輸入訓練分割。",
@@ -4618,22 +4275,14 @@ export const zhTW = {
       stopBeforeConfig: "請先停止訓練，再返回設定。",
       resumeFailed: "無法繼續訓練",
       resumeFailedTitle: "無法繼續訓練",
-      resumeUnavailable:
-        "只有已停止或發生錯誤且具有已儲存檢查點的執行作業才能繼續。",
-      modelUnverified:
-        "無法驗證此模型的設定。請檢查網路連線或 Hugging Face 權杖，然後重試。",
-      legacyDatasetScriptUnsupported:
-        "此 Hub 資料集依賴舊版自訂指令碼，此訓練流程不支援。",
-      hfModelAccessDenied:
-        "Hugging Face 拒絕存取此模型。請新增具有存放庫存取權的有效 Hugging Face 權杖，並接受所有必要的存取條款，然後再試一次。",
-      hfModelVerificationRateLimited:
-        "Hugging Face 模型驗證已達速率限制。請稍後重試。",
-      hfModelVerificationFailed:
-        "無法驗證 Hugging Face 模型。請檢查存放庫 ID 和存取權杖。",
-      hfModelMetadataUnavailable:
-        "暫時無法取得 Hugging Face 模型中繼資料。請在開始訓練前重試。",
-      datasetUnverified:
-        "無法驗證資料集是否與此模型相容。請檢查網路連線或 Hugging Face 權杖；開始訓練時會重新檢查。",
+      resumeUnavailable: "只有已停止或發生錯誤且具有已儲存檢查點的執行作業才能繼續。",
+      modelUnverified: "無法驗證此模型的設定。請檢查網路連線或 Hugging Face 權杖，然後重試。",
+      legacyDatasetScriptUnsupported: "此 Hub 資料集依賴舊版自訂指令碼，此訓練流程不支援。",
+      hfModelAccessDenied: "Hugging Face 拒絕存取此模型。請新增具有存放庫存取權的有效 Hugging Face 權杖，並接受所有必要的存取條款，然後再試一次。",
+      hfModelVerificationRateLimited: "Hugging Face 模型驗證已達速率限制。請稍後重試。",
+      hfModelVerificationFailed: "無法驗證 Hugging Face 模型。請檢查存放庫 ID 和存取權杖。",
+      hfModelMetadataUnavailable: "暫時無法取得 Hugging Face 模型中繼資料。請在開始訓練前重試。",
+      datasetUnverified: "無法驗證資料集是否與此模型相容。請檢查網路連線或 Hugging Face 權杖；開始訓練時會重新檢查。",
       setupChanged: "檢查期間訓練設定已變更。請確認後重新開始。",
       uploadConfigTooltip: "載入已儲存的 YAML 設定",
       saveConfigTooltip: "將目前設定下載為 YAML",
@@ -4645,17 +4294,14 @@ export const zhTW = {
       failedToReadFile: "無法讀取檔案",
       failedToSaveConfig: "無法儲存設定",
       parametersReset: "參數已重設為模型預設值",
-      audioIncompatible:
-        "此模型不支援音訊。請改用支援音訊的模型，或選擇不含音訊的資料集。",
-      visionIncompatible:
-        "文字模型與多模態資料集不相容。請改用視覺模型，或選擇純文字資料集。",
+      audioIncompatible: "此模型不支援音訊。請改用支援音訊的模型，或選擇不含音訊的資料集。",
+      visionIncompatible: "文字模型與多模態資料集不相容。請改用視覺模型，或選擇純文字資料集。",
       cancelTitle: "取消訓練",
       cancelDescription: "要取消目前的訓練執行作業嗎？",
       continueAction: "繼續訓練",
       cancelAction: "取消訓練",
       stopTitle: "停止訓練",
-      stopDescription:
-        "選擇要如何停止目前的訓練執行作業。「停止並儲存」會寫入檢查點，之後可從該處繼續；不儲存就停止則無法繼續。",
+      stopDescription: "選擇要如何停止目前的訓練執行作業。「停止並儲存」會寫入檢查點，之後可從該處繼續；不儲存就停止則無法繼續。",
       stopAction: "停止",
       stopping: "正在停止…",
       stopAndSave: "停止並儲存",
@@ -4664,22 +4310,19 @@ export const zhTW = {
       milestone: "里程碑",
       halfwayDone: "已完成一半。訓練進度已超過 50%。",
       doneNextStep: "訓練完成。下一步：比較基礎模型與微調後模型的輸出。",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "記錄",
       filesDeleted: "已刪除檔案",
       deleteArtifactsLabel: "同時刪除磁碟上的配接器檔案",
-      deleteArtifactsDescription:
-        "移除此執行作業的輸出資料夾，包括已儲存的配接器和檢查點。",
-      deleteArtifactsSharedNote:
-        "另一個執行作業也使用此輸出資料夾。檔案會保留，直到最後一個使用它們的執行作業被刪除為止。",
-      artifactsKeptShared:
-        "已刪除執行作業。由於另一個執行作業使用相同的資料夾，因此保留了配接器檔案。",
-      deleteArtifactsActiveError:
-        "這些檔案正由進行中的訓練執行作業使用。請先停止訓練再刪除。",
+      deleteArtifactsDescription: "移除此執行作業的輸出資料夾，包括已儲存的配接器和檢查點。",
+      deleteArtifactsSharedNote: "另一個執行作業也使用此輸出資料夾。檔案會保留，直到最後一個使用它們的執行作業被刪除為止。",
+      artifactsKeptShared: "已刪除執行作業。由於另一個執行作業使用相同的資料夾，因此保留了配接器檔案。",
+      deleteArtifactsActiveError: "這些檔案正由進行中的訓練執行作業使用。請先停止訓練再刪除。",
       deleteArtifactsFailed: "已刪除執行作業，但無法移除其檔案。",
-      deleteArtifactsRetainedError:
-        "無法移除配接器檔案，因此訓練執行作業仍保留在記錄中。",
+      deleteArtifactsRetainedError: "無法移除配接器檔案，因此訓練執行作業仍保留在記錄中。",
       emptyDescription: "尚無訓練執行作業。請在「設定」分頁中開始第一次訓練。",
       loadError: "無法載入訓練執行作業",
       deleteError: "無法刪除訓練執行作業。請再試一次。",
@@ -4689,8 +4332,7 @@ export const zhTW = {
       loadingRun: "正在載入訓練執行作業…",
       runNotFound: "找不到執行作業",
       deleteTitle: "要刪除訓練執行作業嗎？",
-      deleteDescription:
-        "這會永久刪除此訓練執行作業及其所有指標。此動作無法復原。",
+      deleteDescription: "這會永久刪除此訓練執行作業及其所有指標。此動作無法復原。",
       resumeTraining: "繼續訓練",
       resuming: "正在繼續…",
       deleteRun: "刪除執行作業",
@@ -4714,6 +4356,22 @@ export const zhTW = {
       copyPreviewLink: "複製預覽連結",
       previewLinkCopied: "已複製預覽連結",
       previewLinkCopyFailed: "無法複製連結",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "圖表設定",
@@ -4809,6 +4467,9 @@ export const zhTW = {
         error: "錯誤",
         stopped: "已停止",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "就緒",
@@ -4824,24 +4485,141 @@ export const zhTW = {
       dataset: "資料集",
       datasetStreaming: "資料集：串流（不會完整下載）",
       modelWeights: "模型權重",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
     readout: "權重 {model} + 上下文 {context} = {total}（可用 VRAM {budget}）",
-    readoutWithSpec:
-      "權重 {model} + KV {kv} + MTP 草稿 {spec} = {total}（可用 VRAM {budget}）",
+    readoutWithSpec: "權重 {model} + KV {kv} + MTP 草稿 {spec} = {total}（可用 VRAM {budget}）",
     kvRate: "已預留 KV，約 {rate}/token",
     oomLikely: "以目前設定可能會記憶體不足（OOM）",
     tooLarge: "大於 VRAM，將卸載至 CPU。較小的量化版本執行速度較快",
   },
   skills: {
     title: "技能",
-    description:
-      "技能會從標準代理程式資料夾中自動探索。在此啟用後，在聊天中輸入 @ 即可提及。",
+    description: "技能會從標準代理程式資料夾中自動探索。在此啟用後，在聊天中輸入 @ 即可提及。",
     precedence: "~/.agents/skills 的優先順序高於 ~/.claude/skills。",
     refresh: "重新整理",
-    empty:
-      "找不到技能。請在 ~/.agents/skills 或 ~/.claude/skills 下新增含 SKILL.md 的資料夾，然後重新整理。",
+    empty: "找不到技能。請在 ~/.agents/skills 或 ~/.claude/skills 下新增含 SKILL.md 的資料夾，然後重新整理。",
     sourceAgents: "代理程式",
     sourceClaude: "Claude",
     sourceBundled: "內建",
@@ -4855,18 +4633,14 @@ export const zhTW = {
     newSkill: "新增技能",
     import: "匯入",
     delete: "刪除 {name}",
-    createDescription:
-      "會以 SKILL.md 儲存在 ~/.agents/skills 下的新資料夾中，建立後立即啟用。",
+    createDescription: "會以 SKILL.md 儲存在 ~/.agents/skills 下的新資料夾中，建立後立即啟用。",
     nameLabel: "名稱",
     namePlaceholder: "例如 code-arithmetic",
     nameHint: "小寫字母、數字和單一連字號。這也會作為資料夾名稱。",
-    nameInvalid:
-      "請使用 1-64 個小寫字母、數字或單一連字號，且開頭和結尾不可為連字號。",
+    nameInvalid: "請使用 1-64 個小寫字母、數字或單一連字號，且開頭和結尾不可為連字號。",
     descriptionLabel: "說明",
-    descriptionPlaceholder:
-      "當使用者要求進行算術時使用。一律以程式碼工具計算。",
-    descriptionHint:
-      "模型在技能目錄中看到的那一行。模型會依此決定何時讀取此技能。",
+    descriptionPlaceholder: "當使用者要求進行算術時使用。一律以程式碼工具計算。",
+    descriptionHint: "模型在技能目錄中看到的那一行。模型會依此決定何時讀取此技能。",
     instructionsLabel: "指示",
     instructionsPlaceholder: "套用此技能時要做什麼，以 Markdown 撰寫。",
     instructionsHint: "SKILL.md 的內文，模型選用此技能後會完整讀取。",
@@ -4884,8 +4658,7 @@ export const zhTW = {
     importError: "無法匯入技能",
     exportError: "無法匯出技能",
     deleteTitle: "刪除技能",
-    deleteDescription:
-      "要刪除「{name}」及其在 ~/.agents/skills 下資料夾中的所有內容嗎？此動作無法復原。",
+    deleteDescription: "要刪除「{name}」及其在 ~/.agents/skills 下資料夾中的所有內容嗎？此動作無法復原。",
     search: "依名稱或說明搜尋技能…",
     noMatch: "沒有符合「{query}」的技能",
     clearSearch: "清除搜尋",
@@ -4917,8 +4690,7 @@ export const zhTW = {
     disableAll: "全部停用",
     resetAll: "重設為預設值",
     resetTitle: "要重設所有技能嗎？",
-    resetDescription:
-      "所有技能都會恢復為全新安裝時的狀態：您的技能和 Claude 技能開啟，內建技能關閉。您的開啟與關閉選擇將被清除。",
+    resetDescription: "所有技能都會恢復為全新安裝時的狀態：您的技能和 Claude 技能開啟，內建技能關閉。您的開啟與關閉選擇將被清除。",
     reset: "重設",
   },
   translate: {
@@ -5106,13 +4878,11 @@ export const zhTW = {
       modelLoaded: "目前載入的任何模型",
       modelOnDevice: "在此裝置上",
       modelNote: "如果任務執行時尚未載入此模型，Unsloth 會先詢問。",
-      modelNoteAllowed:
-        "只在您離開 Unsloth 時載入此模型，之後再換回原本的模型。",
+      modelNoteAllowed: "只在您離開 Unsloth 時載入此模型，之後再換回原本的模型。",
       modelEmpty: "在模型中心下載模型或新增連線，即可選擇其他模型。",
       modelMissing: "{model}（不在此裝置上）",
       allowLoad: "我離開時自動切換",
-      allowLoadHint:
-        "當此任務到期且您已 5 分鐘未使用 Unsloth 時，會直接載入此模型、執行任務，然後切換回原本的模型。如果當時您正在使用 Unsloth 或正在訓練，就會略過這次執行，不會更動您的模型。關閉時，Unsloth 會在載入前先詢問。",
+      allowLoadHint: "當此任務到期且您已 5 分鐘未使用 Unsloth 時，會直接載入此模型、執行任務，然後切換回原本的模型。如果當時您正在使用 Unsloth 或正在訓練，就會略過這次執行，不會更動您的模型。關閉時，Unsloth 會在載入前先詢問。",
       reasoning: "思考強度",
       reasoningDefault: "預設",
       reasoningOff: "關閉",
@@ -5126,8 +4896,7 @@ export const zhTW = {
     },
     errors: {
       noModel: "未載入任何模型。請在「聊天」中載入模型，然後再次執行任務。",
-      modelNotLoaded:
-        "未載入此任務的模型。請在「聊天」中載入，然後再次執行任務。",
+      modelNotLoaded: "未載入此任務的模型。請在「聊天」中載入，然後再次執行任務。",
       modelLoadFailed: "無法載入此任務的模型。請確認模型仍已下載於模型中心。",
       modelBusy: "您當時正在使用 Unsloth，因此已略過，未更動您的模型。",
       connectionUnavailable: "此任務的連線遺失或已關閉。請在「連線」中檢查。",
@@ -5143,8 +4912,7 @@ export const zhTW = {
     },
     loadPrompt: {
       title: "要載入 {model} 嗎？",
-      description:
-        "「{title}」使用 {model} 執行，但該模型尚未載入。執行時會載入 {model} 直到完成，之後再換回原本的模型。",
+      description: "「{title}」使用 {model} 執行，但該模型尚未載入。執行時會載入 {model} 直到完成，之後再換回原本的模型。",
       always: "不再詢問。只在我離開 Unsloth 時切換。",
       notNow: "暫時不要",
       load: "載入並執行",
@@ -5243,14 +5011,12 @@ export const zhTW = {
         sectionsTitle: "尚無區段",
         sectionsDescription: "區段可依您的喜好在側邊欄中將聊天和專案分組。",
         sectionTitle: "此區段中尚無任何項目",
-        sectionDescription:
-          "從聊天的選單將其移到這裡，或在此區段中開始新聊天。",
+        sectionDescription: "從聊天的選單將其移到這裡，或在此區段中開始新聊天。",
       },
       dialog: {
         renameChat: "重新命名聊天",
         deleteChatDescription: "此聊天及其訊息將被永久刪除。此動作無法復原。",
-        deleteProjectDescription:
-          "此專案及其聊天（{count} 個）將被永久刪除。此動作無法復原。",
+        deleteProjectDescription: "此專案及其聊天（{count} 個）將被永久刪除。此動作無法復原。",
         deleteFilesMany: "同時移除這些聊天建立的檔案和沙箱資料夾。",
         deleteProjectFilesLabel: "刪除專案工作區資料夾",
         deleteProjectFiles: "專案工作區資料夾將從磁碟中移除。",
@@ -5268,13 +5034,10 @@ export const zhTW = {
         openChatTitle: "開啟此聊天的工具呼叫所讀寫的資料夾",
         openProject: "開啟專案資料夾",
         openProjectTitle: "開啟此專案的聊天所讀寫的資料夾",
-        chatHint:
-          "只有桌面應用程式能開啟聊天的檔案資料夾。在瀏覽器中，請從寫入該檔案的工具結果下載檔案。",
-        projectHint:
-          "只有桌面應用程式能開啟專案的資料夾。在瀏覽器中，請從寫入這些檔案的工具結果下載檔案。",
+        chatHint: "只有桌面應用程式能開啟聊天的檔案資料夾。在瀏覽器中，請從寫入該檔案的工具結果下載檔案。",
+        projectHint: "只有桌面應用程式能開啟專案的資料夾。在瀏覽器中，請從寫入這些檔案的工具結果下載檔案。",
         manyFolders: "此聊天寫入了多個資料夾。",
-        manyFoldersDescription:
-          "它在移動前後都執行了工具，因此請改從工具卡片開啟資料夾。",
+        manyFoldersDescription: "它在移動前後都執行了工具，因此請改從工具卡片開啟資料夾。",
         chatFailed: "無法開啟聊天資料夾。",
         projectFailed: "無法開啟專案資料夾。",
         chatMissing: "此聊天尚無資料夾。",
@@ -5284,8 +5047,7 @@ export const zhTW = {
         uploadTitle: "將檔案加入此聊天的工具呼叫所讀寫的資料夾",
         uploaded: "已將 {name} 加入聊天資料夾",
         uploadedMany: "已將 {count} 個檔案加入聊天資料夾",
-        uploadedDescription:
-          "此聊天中的工具現在可以開啟這些檔案。它們不會加入對話中。",
+        uploadedDescription: "此聊天中的工具現在可以開啟這些檔案。它們不會加入對話中。",
         uploadExists: "{name} 已在聊天資料夾中",
         uploadExistsMany: "{count} 個檔案已在聊天資料夾中",
         replace: "取代",
@@ -5429,10 +5191,8 @@ export const zhTW = {
       renameFile: "重新命名檔案",
       deleteTitle: "要刪除「{name}」嗎？",
       deleteManyTitle: "要刪除 {count} 個項目嗎？",
-      deleteManyDescription:
-        "檔案會從其所在位置刪除。已刪除資料夾內的所有項目會移至上一層。",
-      deleteFolderIntoParent:
-        "其中所有項目都會移至「{folder}」。不會刪除任何檔案。",
+      deleteManyDescription: "檔案會從其所在位置刪除。已刪除資料夾內的所有項目會移至上一層。",
+      deleteFolderIntoParent: "其中所有項目都會移至「{folder}」。不會刪除任何檔案。",
       deleteFolderIntoLibrary: "其中所有項目都會移至檔案庫。不會刪除任何檔案。",
       deleteUpload: "這會永久刪除此檔案。",
       deleteAttachment: "它也會從所附加的聊天中移除。",
@@ -5469,8 +5229,7 @@ export const zhTW = {
       location: "位置",
       unknown: "未知",
       readOnlyUtf16: "此檔案不是有效的 UTF-16 文字，因此在此以唯讀模式開啟。",
-      readOnlyNotUtf8:
-        "此檔案不是 UTF-8 文字，因此在此以唯讀模式開啟。部分字元可能無法正確顯示。",
+      readOnlyNotUtf8: "此檔案不是 UTF-8 文字，因此在此以唯讀模式開啟。部分字元可能無法正確顯示。",
     },
     viewer: {
       scale: "縮放",
@@ -5568,8 +5327,7 @@ export const zhTW = {
   },
   exportDecision: {
     title: "決策模型",
-    description:
-      "{layout} 決策模型會匯出為 GGUF，供 llama.cpp 的決策伺服器使用。請選擇一或多種量化。",
+    description: "{layout} 決策模型會匯出為 GGUF，供 llama.cpp 的決策伺服器使用。請選擇一或多種量化。",
     adapterNote: "此檢查點包含 LoRA 配接器，轉換前會先合併。",
     notEligibleTitle: "無法匯出 GGUF",
     ggufOnly: "決策模型只能匯出為 GGUF",
@@ -5672,13 +5430,10 @@ export const zhTW = {
       noneLoadedDetail: "您載入的模型會顯示在這裡。",
       otherAccount: "正由其他帳號使用",
       otherAccountDetail: "記憶體正被您無法查看的模型佔用",
-      toastStillResident:
-        "「{model}」在退出期間被載入，因此仍在使用記憶體。請再次退出以釋放記憶體。",
-      toastUnverified:
-        "已要求卸載 {model}，但其執行環境未確認。請稍後查看卡片。",
+      toastStillResident: "「{model}」在退出期間被載入，因此仍在使用記憶體。請再次退出以釋放記憶體。",
+      toastUnverified: "已要求卸載 {model}，但其執行環境未確認。請稍後查看卡片。",
       toastAlreadyFree: "{model} 已不在載入狀態。",
-      toastReplaced:
-        "{model} 已不在載入狀態。「{resident}」已取代其位置，並保持不變。",
+      toastReplaced: "{model} 已不在載入狀態。「{resident}」已取代其位置，並保持不變。",
       toastEjected: "已退出 {model}",
       toastFailed: "無法退出 {model}",
     },
@@ -5704,8 +5459,7 @@ export const zhTW = {
     oldestFirst: "最舊的優先",
     today: "今天",
     yesterday: "昨天",
-    emptyDescription:
-      "專案可將相關聊天集中在一起，並提供共用的指示與來源，讓其中每個聊天都能使用。",
+    emptyDescription: "專案可將相關聊天集中在一起，並提供共用的指示與來源，讓其中每個聊天都能使用。",
     createFirst: "建立您的第一個專案",
     noMatches: "沒有符合搜尋條件的專案。",
     clearSearch: "清除搜尋",
@@ -5761,8 +5515,7 @@ export const zhTW = {
     newPassword: "新密碼",
     confirmPassword: "確認密碼",
     setupCodeHint: "第一次登入？請將管理員提供的設定碼貼上作為密碼。",
-    ownerHint:
-      "安裝擁有者？請以 unsloth 或「設定 > 帳號」中顯示的登入名稱登入。",
+    ownerHint: "安裝擁有者？請以 unsloth 或「設定 > 帳號」中顯示的登入名稱登入。",
     currentSetupCodeHint: "請將剛才用來登入的設定碼貼上作為目前的密碼。",
     minLength: "至少須有 8 個字元。",
     ensureMatch: "請確認兩次輸入的密碼相符。",
@@ -5783,8 +5536,7 @@ export const zhTW = {
     loadFailed: "載入失敗。",
     failed: "驗證失敗。",
     shuttingDown: "此執行個體正在關閉：它可從網路存取，且從未變更預設密碼。",
-    shutdownCountdown:
-      "此執行個體可從網路存取，且仍在使用預設密碼，因此將在 {time} 後關閉。在此設定密碼即可讓它繼續執行。",
+    shutdownCountdown: "此執行個體可從網路存取，且仍在使用預設密碼，因此將在 {time} 後關閉。在此設定密碼即可讓它繼續執行。",
   },
   routes: {
     chat: "聊天",
@@ -5798,13 +5550,10 @@ export const zhTW = {
     blockedTitle: "已封鎖自訂程式碼",
     enableTitle: "要為此模型啟用自訂程式碼嗎？",
     thisModel: "此模型",
-    unsafeBody:
-      "{model} 包含被 Hugging Face 安全掃描標記為不安全的檔案（例如會在模型載入時執行程式碼的惡意 pickle）。此模型無法載入。被標記的檔案從未下載。",
-    unsafeBodyFromProvider:
-      "來自 {provider} 的 {model} 包含被 Hugging Face 安全掃描標記為不安全的檔案（例如會在模型載入時執行程式碼的惡意 pickle）。此模型無法載入。被標記的檔案從未下載。",
+    unsafeBody: "{model} 包含被 Hugging Face 安全掃描標記為不安全的檔案（例如會在模型載入時執行程式碼的惡意 pickle）。此模型無法載入。被標記的檔案從未下載。",
+    unsafeBodyFromProvider: "來自 {provider} 的 {model} 包含被 Hugging Face 安全掃描標記為不安全的檔案（例如會在模型載入時執行程式碼的惡意 pickle）。此模型無法載入。被標記的檔案從未下載。",
     customCode: "{model} 在其存放庫中宣告了自訂 Python 程式碼。{note}",
-    customCodeFromProvider:
-      "來自 {provider} 的 {model} 在其存放庫中宣告了自訂 Python 程式碼。{note}",
+    customCodeFromProvider: "來自 {provider} 的 {model} 在其存放庫中宣告了自訂 Python 程式碼。{note}",
     blockedNote: "安全掃描標記出 CRITICAL（嚴重）等級的問題，因此無法啟用。",
     reviewNote: "請檢閱下方的安全掃描結果。只有在您信任此模型來源時才繼續。",
     trustNote: "只有在您信任此模型來源時才繼續。",
@@ -5840,8 +5589,7 @@ export const zhTW = {
     openChangelog: "開啟變更記錄",
     retry: "重試",
     loadingChanges: "正在載入新變更…",
-    customLlamaRepo:
-      "此安裝追蹤的是自訂的 llama.cpp 存放庫，因此無法比較其變更。",
+    customLlamaRepo: "此安裝追蹤的是自訂的 llama.cpp 存放庫，因此無法比較其變更。",
     noItemisedNotes: "此組建早於逐項列出的版本說明，因此無法比較其變更。",
     compareFailed: "無法比較這些版本。",
     llamaChangesLabel: "llama.cpp 從 {from} 到 {to} 的新變更",
@@ -5896,8 +5644,7 @@ export const zhTW = {
     repair: {
       upgrading: "正在升級為完整安裝…",
       gettingReady: "正在準備…",
-      upgradingDetail:
-        "正在為這台電腦的 GPU 下載 PyTorch 及其程式庫。這可能需要數分鐘。",
+      upgradingDetail: "正在為這台電腦的 GPU 下載 PyTorch 及其程式庫。這可能需要數分鐘。",
       wontTakeLong: "很快就好。",
       upgradeFailed: "無法升級為完整安裝",
       updateFailed: "更新失敗",
@@ -6058,4 +5805,4 @@ export const zhTW = {
       inRam: "{amount} 位於 RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

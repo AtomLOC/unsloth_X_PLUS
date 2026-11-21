@@ -26,6 +26,7 @@ export function DatasetAdvancedSettingsSection() {
     isEmbeddingModel,
     isDecisionModel,
     isVisionModel,
+    evalDataset,
     maxSteps,
     setDatasetFormat,
     setDatasetSliceEnd,
@@ -52,12 +53,14 @@ export function DatasetAdvancedSettingsSection() {
       setDatasetFormat: state.setDatasetFormat,
       setDatasetSliceEnd: state.setDatasetSliceEnd,
       setDatasetSliceStart: state.setDatasetSliceStart,
+      evalDataset: state.evalDataset,
       setDatasetStreaming: state.setDatasetStreaming,
       trainOnCompletions: state.trainOnCompletions,
     })),
   );
   const streamingBlockers = getDatasetStreamingBlockers({
     datasetEvalSplit,
+    evalDataset,
     datasetSource,
     datasetSplit,
     evalSteps,

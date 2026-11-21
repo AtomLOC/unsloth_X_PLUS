@@ -1,9 +1,5 @@
 // SPDX-License-Identifier: AGPL-3.0-only
-// Copyright 2026-present the Unsloth AI Inc. team. All rights reserved.
-// See /studio/LICENSE.AGPL-3.0
-
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
+// Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
 export const ja = {
   turns: {
@@ -86,7 +82,6 @@ export const ja = {
     lensMagnify: "拡大",
     lensShrink: "縮小",
   },
-
   linkMenu: {
     openInBrowser: "Unsloth ブラウザで開く",
     openExternal: "外部ブラウザで開く",
@@ -877,7 +872,6 @@ export const ja = {
     showPrompt: "プロンプトを表示",
     hidePrompt: "プロンプトを隠す",
   },
-  // The chat header's "…" menu.
   chatMenu: {
     more: "チャットのオプション",
     copy: "コピー",
@@ -915,8 +909,7 @@ export const ja = {
     retry: "再試行",
     loadMore: "さらに読み込む",
     offlineTitle: "オフラインです",
-    offlineBody:
-      "キャッシュ済みまたはローカルの{noun}を使用するには、「デバイス」に切り替えてください。",
+    offlineBody: "キャッシュ済みまたはローカルの{noun}を使用するには、「デバイス」に切り替えてください。",
     offlineSwitchDevice: "デバイス",
     searchAriaLabel: "{noun}を検索",
     modelSourceAriaLabel: "モデルのソース",
@@ -925,8 +918,7 @@ export const ja = {
     modelDroppedByProvider: "{provider} · 提供終了",
     modelDisabled: "無効",
     modelDisabledByProvider: "{provider} · 無効",
-    multipleMatches:
-      "一致する{noun}が複数あります。リストから1つ選択してください。",
+    multipleMatches: "一致する{noun}が複数あります。リストから1つ選択してください。",
     rateLimitedTitle: "Hugging Face のレート制限に達しました",
     rateLimitedBody: "しばらく待ってから、{noun}の検索を再試行してください。",
     modelScope: "ModelScope",
@@ -941,8 +933,7 @@ export const ja = {
       savedAriaLabel: "Hugging Face トークンは保存済みです",
       addAriaLabel: "Hugging Face トークンを設定",
       savedHint: "トークンは保存済みです。使用時にアクセス権を確認します。",
-      addHint:
-        "プライベートまたはアクセス制限付きリポジトリを利用するには、トークンを設定してください。",
+      addHint: "プライベートまたはアクセス制限付きリポジトリを利用するには、トークンを設定してください。",
     },
   },
   common: {
@@ -1113,10 +1104,8 @@ export const ja = {
       unpinProjects: "ピン留めを解除",
       deleteProjects: "プロジェクトを削除",
       deleteProjectsTitle: "プロジェクトを削除",
-      deleteProjectsDescription:
-        "{count} 件のプロジェクトとそのすべてのチャットは完全に削除されます。この操作は取り消せません。",
-      deleteProjectsFilesDescription:
-        "各プロジェクトのワークスペースフォルダーがディスクから削除されます。",
+      deleteProjectsDescription: "{count} 件のプロジェクトとそのすべてのチャットは完全に削除されます。この操作は取り消せません。",
+      deleteProjectsFilesDescription: "各プロジェクトのワークスペースフォルダーがディスクから削除されます。",
       countSelected: "{count} 件選択中",
       pinChats: "チャットをピン留め",
       unpinChats: "ピン留めを解除",
@@ -1126,11 +1115,9 @@ export const ja = {
       deleteChats: "チャットを削除",
       deleteTitle: "チャットを削除",
       deleteDescription: "{count} 件のチャットとそのメッセージは完全に削除されます。この操作は取り消せません。",
-      deleteFilesDescription:
-        "各チャット専用のサンドボックスフォルダーがディスクから削除されます。プロジェクト内で作成したファイルは、そのプロジェクトのワークスペースに残ります。",
+      deleteFilesDescription: "各チャット専用のサンドボックスフォルダーがディスクから削除されます。プロジェクト内で作成したファイルは、そのプロジェクトのワークスペースに残ります。",
       deleteFilesLabel: "ファイルとサンドボックスフォルダーを削除",
-      deleteChatFilesDescription:
-        "このチャット専用のサンドボックスフォルダーがディスクから削除されます。プロジェクト内に書き込んだファイルは、そのプロジェクトのワークスペースに残ります。",
+      deleteChatFilesDescription: "このチャット専用のサンドボックスフォルダーがディスクから削除されます。プロジェクト内に書き込んだファイルは、そのプロジェクトのワークスペースに残ります。",
     },
     organize: {
       sidebarHeading: "サイドバーの整理",
@@ -1384,8 +1371,7 @@ export const ja = {
       edit: "ショートカットを変更",
       reset: "既定値に戻す",
       resetAll: "すべて既定値に戻す",
-      browserReserved:
-        "ブラウザがこのキーを使う場合があります。デスクトップアプリでは動作します。",
+      browserReserved: "ブラウザがこのキーを使う場合があります。デスクトップアプリでは動作します。",
       metaUnsupported: "Windows キーはショートカットに使用できません。",
       altGraphUnsupported: "AltGr の組み合わせはショートカットに使用できません。",
       desktopOnly: "デスクトップアプリのみ",
@@ -1691,8 +1677,7 @@ export const ja = {
       installRuntimeFailed: "ランタイムのインストールに失敗しました。",
       installRuntimeError: "ランタイムのインストールを開始できませんでした。",
       unsupportedArch: "Windows サンドボックス (MXC) は x64 版および ARM64 版 Windows でのみ動作するため、この PC では使用できません。",
-      builtinNeedsUpdate:
-        "Windows の組み込みコンテナーにはビルド {required} 以降が必要ですが、この PC は {current} です。管理者の手順なしで使うには最新の Windows Update をインストールするか、下のフォールバック サンドボックスをオンにしてください。",
+      builtinNeedsUpdate: "Windows の組み込みコンテナーにはビルド {required} 以降が必要ですが、この PC は {current} です。管理者の手順なしで使うには最新の Windows Update をインストールするか、下のフォールバック サンドボックスをオンにしてください。",
       unsupportedBuild: "Windows サンドボックス (MXC) には Windows 11 24H2 (ビルド 26100) 以降が必要なため、この PC では使用できません。",
       permissionLabel: "ツールの権限",
       levelRowLabel: "サンドボックスのレベル",
@@ -1768,24 +1753,19 @@ export const ja = {
       description: "マイク、音声入力、音声認識、読み上げ",
       dictation: {
         audioUploadTitle: "録音を使って音声入力",
-        audioUploadDescription:
-          "Unsloth で直接録音するには、ブラウザーでセキュア接続 (HTTPS) が必要です。この HTTP 接続では、代わりにスマートフォンのレコーダーを使うか、保存済みの録音を選択してください。Unsloth サーバーが音声を文字起こしし、テキストをメッセージに追加します。",
+        audioUploadDescription: "Unsloth で直接録音するには、ブラウザーでセキュア接続 (HTTPS) が必要です。この HTTP 接続では、代わりにスマートフォンのレコーダーを使うか、保存済みの録音を選択してください。Unsloth サーバーが音声を文字起こしし、テキストをメッセージに追加します。",
         audioUploadChooseFile: "録音を選択",
         audioUploadRecord: "音声を録音",
-        audioUploadIphoneHint:
-          "iPhone では、Voice Memos または別の録音アプリで録音を保存してから、ここで選択してください。",
-        audioUploadServerModelNote:
-          "この録音では、通常の音声入力に別のエンジンを使用している場合でも、Unsloth サーバー上で上に表示されているローカルモデルを使用します。",
+        audioUploadIphoneHint: "iPhone では、Voice Memos または別の録音アプリで録音を保存してから、ここで選択してください。",
+        audioUploadServerModelNote: "この録音では、通常の音声入力に別のエンジンを使用している場合でも、Unsloth サーバー上で上に表示されているローカルモデルを使用します。",
         audioUploadAutomatic: "自動",
         audioUploadModelReady: "この Unsloth サーバーで使用可能",
         audioUploadRetryTitle: "{file} を文字起こしできませんでした",
         audioUploadRetry: "文字起こしを再試行",
-        audioUploadChooseModel:
-          "音声設定でローカル音声認識モデルを選択してください。",
+        audioUploadChooseModel: "音声設定でローカル音声認識モデルを選択してください。",
         audioUploadEmpty: "選択した録音は空です。",
         audioUploadTooLarge: "{size} 未満の録音を選択してください。",
-        audioUploadVideoUnsupported:
-          "動画ではなく、音声録音を選択してください。",
+        audioUploadVideoUnsupported: "動画ではなく、音声録音を選択してください。",
         audioUploadNoSpeech: "この録音から音声を検出できませんでした。",
         audioUploadFailed: "録音を文字起こしできませんでした。",
         audioUploadCancel: "文字起こしをキャンセル",
@@ -1800,42 +1780,31 @@ export const ja = {
         micRecordForModel: "モデル用に音声を録音",
         engineLabel: "音声入力エンジン",
         engineBrowser: "ブラウザー",
-        engineBrowserDescription:
-          "ブラウザーの音声サービスで文字起こしします。STT モデルを使うには「ローカル文字起こし」を選択してください。",
+        engineBrowserDescription: "ブラウザーの音声サービスで文字起こしします。STT モデルを使うには「ローカル文字起こし」を選択してください。",
         engineModel: "ローカル文字起こし",
-        engineModelDescription:
-          "音声認識 (STT) モデルをローカルで実行し、オフラインでも動作します。ダウンロードして読み込むと、一定時間使わなければアンロードされます。",
+        engineModelDescription: "音声認識 (STT) モデルをローカルで実行し、オフラインでも動作します。ダウンロードして読み込むと、一定時間使わなければアンロードされます。",
         engineCustom: "カスタムエンドポイント",
-        engineCustomDescription:
-          "接続に登録した OpenAI 互換 STT サーバーへ録音音声を送信します。",
+        engineCustomDescription: "接続に登録した OpenAI 互換 STT サーバーへ録音音声を送信します。",
         connectionLabel: "接続",
-        connectionDescription:
-          "接続で OpenAI 互換サーバーと任意の API キーを追加してください。",
+        connectionDescription: "接続で OpenAI 互換サーバーと任意の API キーを追加してください。",
         connectionPlaceholder: "接続を選択",
         connectionEmpty: "利用可能な接続はありません",
         customModelLabel: "モデル",
-        customModelDescription:
-          "/v1/audio/transcriptions に送信するモデル名です。",
+        customModelDescription: "/v1/audio/transcriptions に送信するモデル名です。",
         sttModelLabel: "音声認識モデル",
-        sttModelDescription:
-          "ローカルで実行する STT モデルを選択または検索します。",
+        sttModelDescription: "ローカルで実行する STT モデルを選択または検索します。",
         sttQuantLabel: "量子化",
-        sttQuantDescription:
-          "ローカルで実行する STT モデルを選択または検索し、量子化を選びます。",
+        sttQuantDescription: "ローカルで実行する STT モデルを選択または検索し、量子化を選びます。",
         sttDeviceLabel: "読み込み先",
         sttContextLabel: "音声コンテキスト",
         sttContextAuto: "自動（推奨）",
-        sttContextAutoDescription:
-          "録音ごとにコンテキスト長を調整します。長い音声ほど多くのメモリを使用します。古いランタイムでは、メモリ使用量を減らすために固定サイズの指定が必要な場合があります。「音声」と「文字起こし」の Qwen3-ASR に適用されます。",
-        sttContextFixedDescription:
-          "上限が小さいほどメモリ使用量を抑えられます。録音が上限に収まらない場合は、上限を増やすか「自動」を選択してください。「音声」と「文字起こし」の Qwen3-ASR に適用されます。",
+        sttContextAutoDescription: "録音ごとにコンテキスト長を調整します。長い音声ほど多くのメモリを使用します。古いランタイムでは、メモリ使用量を減らすために固定サイズの指定が必要な場合があります。「音声」と「文字起こし」の Qwen3-ASR に適用されます。",
+        sttContextFixedDescription: "上限が小さいほどメモリ使用量を抑えられます。録音が上限に収まらない場合は、上限を増やすか「自動」を選択してください。「音声」と「文字起こし」の Qwen3-ASR に適用されます。",
         sttContextTokens: "{count} トークン",
         sttDeviceAuto: "GPU（利用できる場合）",
         sttDeviceCpu: "CPU メモリ",
-        sttDeviceAutoDescription:
-          "GPU があれば GPU を、なければ CPU を使用します。",
-        sttDeviceCpuDescription:
-          "モデルをシステムメモリに保持します。文字起こしは遅くなりますが、GPU メモリを使いません。",
+        sttDeviceAutoDescription: "GPU があれば GPU を、なければ CPU を使用します。",
+        sttDeviceCpuDescription: "モデルをシステムメモリに保持します。文字起こしは遅くなりますが、GPU メモリを使いません。",
         sttModelSearchPlaceholder: "モデルを検索",
         sttModelSearching: "Hugging Face を検索中…",
         sttModelValidating: "Whisper との互換性を確認中…",
@@ -1848,18 +1817,15 @@ export const ja = {
         sttLoadingModel: "モデルを読み込み中…",
         sttReady: "{device} に読み込み済み",
         sttLoaded: "読み込み済み",
-        sttUnavailable:
-          "このサーバーにはインストールされていません。ローカルの音声入力を有効にするには `unsloth studio update` を実行してください。",
+        sttUnavailable: "このサーバーにはインストールされていません。ローカルの音声入力を有効にするには `unsloth studio update` を実行してください。",
         sttRetry: "再試行",
         sttDownloadChecking: "ダウンロード状況を確認中…",
         sttNotDownloaded: "未ダウンロード",
         sttDownloadStatusFailed: "ダウンロード状況を確認できませんでした",
         sttDownload: "ダウンロード",
         sttDownloadConfirmTitle: "{model} をダウンロードしますか？",
-        sttDownloadConfirmBody:
-          "ローカルの音声入力は完全にオフラインで動作しますが、先に {model} 音声モデルが必要です。サイズは約 {size} で、初回のみ Hugging Face キャッシュにダウンロードされます。",
-        sttDownloadConfirmBodyUnsized:
-          "ローカルの音声入力は完全にオフラインで動作しますが、先に {model} 音声モデルが必要です。初回のみ Hugging Face キャッシュにダウンロードされます。",
+        sttDownloadConfirmBody: "ローカルの音声入力は完全にオフラインで動作しますが、先に {model} 音声モデルが必要です。サイズは約 {size} で、初回のみ Hugging Face キャッシュにダウンロードされます。",
+        sttDownloadConfirmBodyUnsized: "ローカルの音声入力は完全にオフラインで動作しますが、先に {model} 音声モデルが必要です。初回のみ Hugging Face キャッシュにダウンロードされます。",
         sttOpenVoiceSettings: "音声設定を開く",
         sttDownloadStarted: "{model} をダウンロードしています",
         sttDownloading: "ダウンロード中… {progress}%",
@@ -1876,17 +1842,12 @@ export const ja = {
         microphoneLabel: "マイク",
         microphoneFallbackName: "マイク {index}",
         microphoneDescription: "音声入力に使用します",
-        microphoneFallbackHint:
-          "音声入力に使用します。ブラウザーの音声エンジンがこのデバイスを使用できない場合は、システムのデフォルトに切り替わります",
-        microphoneGrantDescription:
-          "デバイス名を表示するにはマイクへのアクセスを許可してください",
+        microphoneFallbackHint: "音声入力に使用します。ブラウザーの音声エンジンがこのデバイスを使用できない場合は、システムのデフォルトに切り替わります",
+        microphoneGrantDescription: "デバイス名を表示するにはマイクへのアクセスを許可してください",
         allowMicrophone: "マイクへのアクセスを許可",
-        micAccessBlocked:
-          "マイクへのアクセスがブロックされました。この Unsloth のページでマイクへのアクセスを許可してから、もう一度お試しください。",
-        micAccessBlockedDesktop:
-          "マイクへのアクセスがブロックされました。もう一度お試しになり「許可」を選択するか、システムのプライバシー設定でマイクを有効にしてください。",
-        micAccessUnsupported:
-          "このブラウザーまたはコンテキストではマイクへのアクセスに対応していません。",
+        micAccessBlocked: "マイクへのアクセスがブロックされました。この Unsloth のページでマイクへのアクセスを許可してから、もう一度お試しください。",
+        micAccessBlockedDesktop: "マイクへのアクセスがブロックされました。もう一度お試しになり「許可」を選択するか、システムのプライバシー設定でマイクを有効にしてください。",
+        micAccessUnsupported: "このブラウザーまたはコンテキストではマイクへのアクセスに対応していません。",
         systemDefault: "システムのデフォルト",
         savedMicDisconnected: "保存済みのマイク (未接続)",
         languageLabel: "音声入力の言語",
@@ -1908,12 +1869,10 @@ export const ja = {
       },
       recents: {
         sectionTitle: "音声入力の履歴",
-        sectionDescription:
-          "音声入力はすべてここに保存され、テキストを復元できます",
+        sectionDescription: "音声入力はすべてここに保存され、テキストを復元できます",
         manageLabel: "音声入力の履歴",
         manage: "管理",
-        pageDescription:
-          "音声入力はすべて保存されます。表示、コピー、削除できるほか、その音声入力を使ったチャットを開くこともできます。",
+        pageDescription: "音声入力はすべて保存されます。表示、コピー、削除できるほか、その音声入力を使ったチャットを開くこともできます。",
         searchPlaceholder: "音声入力を検索",
         sortLabel: "音声入力を並べ替え",
         sortNewest: "新しい順",
@@ -1932,16 +1891,13 @@ export const ja = {
         copyFailed: "クリップボードにコピーできませんでした",
         delete: "音声入力を削除",
         deleteTitle: "音声入力を削除",
-        deleteDescription:
-          "この保存された音声入力を削除しますか？元に戻せません。",
-        deleteLinkedDescription:
-          "この保存済みの音声入力を削除しますか？この音声入力を使用したチャットも同時に削除できます。この操作は元に戻せません。",
+        deleteDescription: "この保存された音声入力を削除しますか？元に戻せません。",
+        deleteLinkedDescription: "この保存済みの音声入力を削除しますか？この音声入力を使用したチャットも同時に削除できます。この操作は元に戻せません。",
         deleteWithChat: "チャットと音声入力を削除",
         deleteWithChatFailed: "チャットを削除できませんでした",
         clear: "履歴を消去",
         clearTitle: "音声入力の履歴を消去",
-        clearDescription:
-          "保存された音声入力をすべて削除しますか？元に戻せません。",
+        clearDescription: "保存された音声入力をすべて削除しますか？元に戻せません。",
         clearConfirm: "すべて消去",
         showMore: "さらに表示 ({count})",
         openChat: "チャットを開く",
@@ -1958,11 +1914,9 @@ export const ja = {
         engineSystem: "システムの音声",
         engineStudio: "Unsloth モデル",
         engineCustom: "カスタムエンドポイント",
-        engineCustomDescription:
-          "接続に登録した OpenAI 互換の TTS サーバー（例: Kokoro）",
+        engineCustomDescription: "接続に登録した OpenAI 互換の TTS サーバー（例: Kokoro）",
         connectionLabel: "接続",
-        connectionDescription:
-          "OpenAI 互換サーバーは「接続」タブで追加できます",
+        connectionDescription: "OpenAI 互換サーバーは「接続」タブで追加できます",
         connectionPlaceholder: "接続を選択",
         customModelLabel: "モデル",
         customVoiceDescription: "エンドポイントが期待する音声名（デフォルトは alloy）",
@@ -2078,22 +2032,16 @@ export const ja = {
       modelAutoSwitch: {
         sectionTitle: "モデル自動切り替え (OpenAI API)",
         enable: "リクエストごとにモデルを切り替え",
-        enableDescription:
-          "API リクエストで指定されたダウンロード済みのモデルを、応答前に読み込みます。デフォルトではオフです。",
+        enableDescription: "API リクエストで指定されたダウンロード済みのモデルを、応答前に読み込みます。デフォルトではオフです。",
         idleUnload: "アイドル時の自動アンロード",
-        idleUnloadDescription:
-          "指定した秒数だけアイドル状態が続くと、モデルをアンロードして VRAM を解放します。0 にすると読み込んだままになります。最小値は 60 秒です。",
+        idleUnloadDescription: "指定した秒数だけアイドル状態が続くと、モデルをアンロードして VRAM を解放します。0 にすると読み込んだままになります。最小値は 60 秒です。",
         idleSecondsAriaLabel: "アイドル時の自動アンロードまでの秒数",
         mediaEnable: "リクエストごとに画像・動画モデルを切り替え",
-        mediaEnableDescription:
-          "API リクエストで指定されたダウンロード済みの画像・動画モデルを、生成前に読み込みます。上の設定はチャットモデルのみが対象で、これは独立した設定です。デフォルトではオフです。",
+        mediaEnableDescription: "API リクエストで指定されたダウンロード済みの画像・動画モデルを、生成前に読み込みます。上の設定はチャットモデルのみが対象で、これは独立した設定です。デフォルトではオフです。",
         mediaIdleUnload: "画像と動画のアイドル時の自動アンロード",
-        mediaIdleUnloadDescription:
-          "指定した秒数だけアイドル状態が続くと、画像モデルと動画モデルをアンロードして VRAM を解放します。これは独立した設定です。上の設定はチャットモデルのみが対象です。0 にすると読み込んだままになります。最小値は 60 秒です。",
-        mediaIdleSecondsAriaLabel:
-          "画像と動画のアイドル時の自動アンロードまでの秒数",
-        mediaIdlePaused:
-          "「モデルを GPU メモリに保持」がオンの間は一時停止します。",
+        mediaIdleUnloadDescription: "指定した秒数だけアイドル状態が続くと、画像モデルと動画モデルをアンロードして VRAM を解放します。これは独立した設定です。上の設定はチャットモデルのみが対象です。0 にすると読み込んだままになります。最小値は 60 秒です。",
+        mediaIdleSecondsAriaLabel: "画像と動画のアイドル時の自動アンロードまでの秒数",
+        mediaIdlePaused: "「モデルを GPU メモリに保持」がオンの間は一時停止します。",
         idleNeedsEnable: "アンロードされたモデルが次回使用時に再読み込みされるように、「リクエストごとにモデルを切り替え」をオンにしてください。",
         idleActiveViaEnv: "アイドル時の自動アンロードは UNSLOTH_MODEL_IDLE_TTL 環境変数によって有効になっています。",
         loadError: "モデル自動切り替え設定の読み込みに失敗しました。",
@@ -2101,15 +2049,12 @@ export const ja = {
         idleError: "モデルを読み込んだままにするには 0 を、それ以外は 60 秒以上を入力してください。",
         idleUnsaved: "まだ保存されていません。",
         autoDownload: "不足しているモデルをダウンロード",
-        autoDownloadDescription:
-          "API リクエストで指定された未ダウンロードの GGUF を取得します。API キーを持つ人なら誰でもディスクと帯域を消費できるようになります。",
+        autoDownloadDescription: "API リクエストで指定された未ダウンロードの GGUF を取得します。API キーを持つ人なら誰でもディスクと帯域を消費できるようになります。",
         keepKv: "アンロードをまたいでチャットのコンテキストを保持",
-        keepKvDescription:
-          "アイドル時の自動アンロードの前、または画像や動画のモデルが GPU を使う前に KV キャッシュを保存し、再開したチャットが履歴を読み直さずに済むようにします。ディスク使用量は最大 10 GB です。",
+        keepKvDescription: "アイドル時の自動アンロードの前、または画像や動画のモデルが GPU を使う前に KV キャッシュを保存し、再開したチャットが履歴を読み直さずに済むようにします。ディスク使用量は最大 10 GB です。",
         keepKvKeywords: "kv キャッシュ コンテキスト 切り替え 再開 画像 動画",
         apiOnly: "API が読み込んだモデルのみアンロード",
-        apiOnlyDescription:
-          "アイドル時の自動アンロードでは、Unsloth から自分で読み込んだモデルはメモリに残し、API リクエストが読み込んだモデルだけを解放します。",
+        apiOnlyDescription: "アイドル時の自動アンロードでは、Unsloth から自分で読み込んだモデルはメモリに残し、API リクエストが読み込んだモデルだけを解放します。",
       },
       modelAliases: {
         sectionTitle: "モデルエイリアス (OpenAI API)",
@@ -2132,13 +2077,11 @@ export const ja = {
       previewSharing: {
         sectionTitle: "プレビュー共有",
         enableLabel: "公開プレビューリンク",
-        enableDescription:
-          "署名付きリンクを持つ人なら誰でも、ログインせずにトレーニングが完了したモデルとチャットできます。オフにすると公開プレビューが利用できなくなり、共有済みのリンクも機能しなくなります。",
+        enableDescription: "署名付きリンクを持つ人なら誰でも、ログインせずにトレーニングが完了したモデルとチャットできます。オフにすると公開プレビューが利用できなくなり、共有済みのリンクも機能しなくなります。",
         loadError: "プレビュー共有設定の読み込みに失敗しました。",
         saveError: "プレビュー共有設定の保存に失敗しました。",
         revokeLabel: "すべてのプレビューリンクを失効",
-        revokeDescription:
-          "署名用シークレットを更新し、これまでに共有したすべてのリンクを無効にします。今後新たにコピーするリンクは引き続き使用できます。",
+        revokeDescription: "署名用シークレットを更新し、これまでに共有したすべてのリンクを無効にします。今後新たにコピーするリンクは引き続き使用できます。",
         revokeAction: "リンクを失効",
         revoking: "失効中...",
         revokeConfirmTitle: "すべてのプレビューリンクを失効させますか？",
@@ -2150,10 +2093,8 @@ export const ja = {
       managedProviderUrls: {
         sectionTitle: "管理対象アカウント",
         enableLabel: "ローカルおよびネットワーク接続",
-        enableDescription:
-          "管理対象アカウントが、このコンピューターや LAN 上の Ollama や llama.cpp サーバーなど、ローカルまたはネットワークのアドレスに接続を向けられるようにします。既定ではオフです。オンにすると、これらのアカウントがお使いのコンピューターやネットワークで動作しているサービスに到達できるようになるためです。",
-        lockedByEnvironment:
-          "このサーバーの UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 によって決まります。すべてのアカウントでプライベートアドレスが拒否されます。",
+        enableDescription: "管理対象アカウントが、このコンピューターや LAN 上の Ollama や llama.cpp サーバーなど、ローカルまたはネットワークのアドレスに接続を向けられるようにします。既定ではオフです。オンにすると、これらのアカウントがお使いのコンピューターやネットワークで動作しているサービスに到達できるようになるためです。",
+        lockedByEnvironment: "このサーバーの UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 によって決まります。すべてのアカウントでプライベートアドレスが拒否されます。",
         loadError: "管理対象アカウントの接続設定を読み込めませんでした。",
         saveError: "管理対象アカウントの接続設定を保存できませんでした。",
       },
@@ -2185,17 +2126,12 @@ export const ja = {
       startup: {
         sectionTitle: "起動",
         launchAtLogin: "ログイン時に Unsloth を起動",
-        launchAtLoginDescription:
-          "ログイン時に Unsloth をバックグラウンドで起動します。開くまでメニューバーまたはシステムトレイに常駐します。",
-
+        launchAtLoginDescription: "ログイン時に Unsloth をバックグラウンドで起動します。開くまでメニューバーまたはシステムトレイに常駐します。",
         closeToTray: "システムトレイに格納して閉じる",
-        closeToTrayDescription:
-          "メインウィンドウを閉じても、Unsloth とサーバーをバックグラウンドで実行し続けます。",
+        closeToTrayDescription: "メインウィンドウを閉じても、Unsloth とサーバーをバックグラウンドで実行し続けます。",
         closeToTraySaveError: "システムトレイに格納する設定を更新できませんでした。",
-
         menuBarIcon: "メニューバーに表示",
-        menuBarIconDescription:
-          "macOS のメニューバーに Unsloth のアイコンを表示します。非表示にすると、ログイン時に起動した場合を含め、Unsloth は Dock に残ります。",
+        menuBarIconDescription: "macOS のメニューバーに Unsloth のアイコンを表示します。非表示にすると、ログイン時に起動した場合を含め、Unsloth は Dock に残ります。",
         menuBarIconSaveError: "メニューバーアイコンの設定を更新できませんでした。",
         loadError: "ログイン時起動の設定を読み込めませんでした。",
         saveError: "ログイン時起動の設定を更新できませんでした。",
@@ -2203,8 +2139,7 @@ export const ja = {
       power: {
         sectionTitle: "電源",
         keepAwake: "コンピューターをスリープさせない",
-        keepAwakeDescription:
-          "Unsloth の実行中は、このコンピューターが自動でスリープしないようにします。ディスプレイはオフになる場合があります。",
+        keepAwakeDescription: "Unsloth の実行中は、このコンピューターが自動でスリープしないようにします。ディスプレイはオフになる場合があります。",
         keepAwakeKeywords: "スリープ サスペンド 休止 スタンバイ 電源 sleep caffeinate",
         loadError: "スリープ防止の設定を読み込めませんでした。",
         saveError: "スリープ防止の設定を更新できませんでした。",
@@ -2228,28 +2163,20 @@ export const ja = {
       downloads: {
         sectionTitle: "ダウンロード",
         transport: "ダウンロード方式",
-        transportDescription:
-          "Hugging Face からモデルやデータセットのファイルを取得する方法です。HTTPS は中断した位置から再開します。Xet は初回ダウンロードでは速いことが多い一方、キャンセルするとそのファイルを最初からやり直します。",
-        transportHint:
-          "HTTPS は通常の TLS です。あらゆるネットワーク、プロキシ、VPN が許可し、キャンセルや切断があってもディスク上のバイト列から再開でき、メモリ使用量も一定です。Xet は重複排除されたチャンクを取得するため、既に持っているリポジトリとデータを共有する場合は大幅に速く届きますが、hf_xet が必要で RAM を多く使い、キャンセルすると転送中のファイルは破棄されます。Auto はこのマシンに合わせて判断し、RAM や Xet がここで停滞していないかを見て、必要なら HTTPS に切り替えます。",
+        transportDescription: "Hugging Face からモデルやデータセットのファイルを取得する方法です。HTTPS は中断した位置から再開します。Xet は初回ダウンロードでは速いことが多い一方、キャンセルするとそのファイルを最初からやり直します。",
+        transportHint: "HTTPS は通常の TLS です。あらゆるネットワーク、プロキシ、VPN が許可し、キャンセルや切断があってもディスク上のバイト列から再開でき、メモリ使用量も一定です。Xet は重複排除されたチャンクを取得するため、既に持っているリポジトリとデータを共有する場合は大幅に速く届きますが、hf_xet が必要で RAM を多く使い、キャンセルすると転送中のファイルは破棄されます。Auto はこのマシンに合わせて判断し、RAM や Xet がここで停滞していないかを見て、必要なら HTTPS に切り替えます。",
         https: "HTTPS",
         xet: "Xet",
         auto: "Auto",
-        httpsHint:
-          "標準の TLS。キャンセル後も再開でき、どのネットワークでも動作し、メモリ使用量が安定します。",
-        transportDescriptionNoResume:
-          "モデルやデータセットのファイルを Hugging Face から取得する方法です。このインストールではどちらの転送方式も再開できないため、キャンセルしたダウンロードは最初からやり直しになります。Xet は初回のダウンロードが速いことが多いです。",
-        httpsHintNoResume:
-          "標準の TLS。どのネットワークでも動作し、メモリ使用量は安定しています。このインストールではキャンセルしたダウンロードを再開できません。",
-        xetHint:
-          "重複排除チャンク転送。新規ダウンロードでは速いことが多く、キャンセルするとファイルをやり直し、メモリを多く使います。",
-        autoHint:
-          "マシンごとに選び、ここで Xet が停滞または失敗した場合は HTTPS に切り替えます。",
+        httpsHint: "標準の TLS。キャンセル後も再開でき、どのネットワークでも動作し、メモリ使用量が安定します。",
+        transportDescriptionNoResume: "モデルやデータセットのファイルを Hugging Face から取得する方法です。このインストールではどちらの転送方式も再開できないため、キャンセルしたダウンロードは最初からやり直しになります。Xet は初回のダウンロードが速いことが多いです。",
+        httpsHintNoResume: "標準の TLS。どのネットワークでも動作し、メモリ使用量は安定しています。このインストールではキャンセルしたダウンロードを再開できません。",
+        xetHint: "重複排除チャンク転送。新規ダウンロードでは速いことが多く、キャンセルするとファイルをやり直し、メモリを多く使います。",
+        autoHint: "マシンごとに選び、ここで Xet が停滞または失敗した場合は HTTPS に切り替えます。",
         autoCurrently: "このマシンでは Auto は {transport} を使用しています。",
         xetMissing: "hf_xet がインストールされていないため Xet は利用できません。",
         speedLimit: "ダウンロード速度制限",
-        speedLimitDescription:
-          "値を設定しない限り制限はありません。制限中のダウンロードは HTTPS を使用します。",
+        speedLimitDescription: "値を設定しない限り制限はありません。制限中のダウンロードは HTTPS を使用します。",
         speedLimitNoLimit: "制限なし",
         speedLimitInvalid: "Mbit/s の数値を入力するか、空欄のままにしてください。",
         speedLimitUsesHttps: "速度制限が設定されている間、ダウンロードは HTTPS を使用します。50 GB を超えるファイルは引き続き Xet を使用し、制限は適用されません。",
@@ -2323,8 +2250,7 @@ export const ja = {
         back: "ソースに戻る",
         menuSubtitle: "ファイル検索に使用",
         device: "埋め込みデバイス",
-        deviceDescription:
-          "すべてのモデルで埋め込みモデルを実行する場所です。GPU は大量のドキュメントをより速くインデックスしますが、Unsloth を再起動するまで一部の VRAM を使用し続けます。",
+        deviceDescription: "すべてのモデルで埋め込みモデルを実行する場所です。GPU は大量のドキュメントをより速くインデックスしますが、Unsloth を再起動するまで一部の VRAM を使用し続けます。",
         deviceAuto: "自動",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2355,30 +2281,22 @@ export const ja = {
       },
       fullInstall: {
         label: "インストールの種類",
-        description:
-          "チャット専用 (GGUF)。フルインストールでは、トレーニング、エクスポート、動画、safetensors モデル、その他の画像生成機能が追加されます。",
-        descriptionCpu:
-          "チャット専用 (GGUF)。対応 GPU が見つからないため、フルインストールでは CPU でのトレーニングが追加されます。",
+        description: "チャット専用 (GGUF)。フルインストールでは、トレーニング、エクスポート、動画、safetensors モデル、その他の画像生成機能が追加されます。",
+        descriptionCpu: "チャット専用 (GGUF)。対応 GPU が見つからないため、フルインストールでは CPU でのトレーニングが追加されます。",
         action: "フルインストールにアップグレード",
         confirmTitle: "フルインストールにアップグレードしますか？",
-        confirmDescription:
-          "このチャット専用インストールは GGUF モデルを実行します。フルインストールでは、このマシンの GPU 向けの PyTorch が追加され、トレーニング、エクスポート、動画、safetensors モデル、その他の画像生成機能が使えるようになります。数 GB（5 GB 以上のディスク容量）をダウンロードしてサーバーを再起動します。チャット、モデル、設定は保持されます。数分かかる場合があります。",
-        confirmDescriptionCpu:
-          "このチャット専用インストールは GGUF モデルを実行します。このマシンには対応 GPU が見つからないため、フルインストールでは CPU 向けの PyTorch が追加され、CPU でのトレーニングが使えるようになります。CPU でのトレーニングは GPU よりも大幅に遅くなります。5 GB 以上のディスク容量が必要で、サーバーを再起動します。チャット、モデル、設定は保持されます。数分かかる場合があります。",
+        confirmDescription: "このチャット専用インストールは GGUF モデルを実行します。フルインストールでは、このマシンの GPU 向けの PyTorch が追加され、トレーニング、エクスポート、動画、safetensors モデル、その他の画像生成機能が使えるようになります。数 GB（5 GB 以上のディスク容量）をダウンロードしてサーバーを再起動します。チャット、モデル、設定は保持されます。数分かかる場合があります。",
+        confirmDescriptionCpu: "このチャット専用インストールは GGUF モデルを実行します。このマシンには対応 GPU が見つからないため、フルインストールでは CPU 向けの PyTorch が追加され、CPU でのトレーニングが使えるようになります。CPU でのトレーニングは GPU よりも大幅に遅くなります。5 GB 以上のディスク容量が必要で、サーバーを再起動します。チャット、モデル、設定は保持されます。数分かかる場合があります。",
         confirmAction: "アップグレード",
-        keywords:
-          "full install upgrade インストールの種類 フルインストール アップグレード チャット専用 chat only gguf add training トレーニング 学習 train fine-tune pytorch torch エクスポート 動画 画像生成 safetensors",
+        keywords: "full install upgrade インストールの種類 フルインストール アップグレード チャット専用 chat only gguf add training トレーニング 学習 train fine-tune pytorch torch エクスポート 動画 画像生成 safetensors",
       },
       repairInstall: {
         label: "インストールを修復",
-        description:
-          "管理環境に対してインストーラーを再実行します。GPU が検出されない場合やアプリが起動しない場合に使用します。",
+        description: "管理環境に対してインストーラーを再実行します。GPU が検出されない場合やアプリが起動しない場合に使用します。",
         action: "インストールを修復",
         confirmTitle: "このインストールを修復しますか？",
-        confirmDescription:
-          "サーバーを停止してインストーラーを再実行し、このマシンの GPU に合わせて PyTorch を再インストールします。チャットと設定は保持されます。数分かかる場合があります。",
-        confirmDescriptionChatOnly:
-          "サーバーを停止してインストーラーを再実行します。これはチャット専用インストールのため、インストーラーは PyTorch を含むフルインストールにもアップグレードします (合計数 GB)。チャットと設定は保持されます。数分かかる場合があります。",
+        confirmDescription: "サーバーを停止してインストーラーを再実行し、このマシンの GPU に合わせて PyTorch を再インストールします。チャットと設定は保持されます。数分かかる場合があります。",
+        confirmDescriptionChatOnly: "サーバーを停止してインストーラーを再実行します。これはチャット専用インストールのため、インストーラーは PyTorch を含むフルインストールにもアップグレードします (合計数 GB)。チャットと設定は保持されます。数分かかる場合があります。",
         confirmAction: "今すぐ修復",
       },
       resetPreferences: {
@@ -2399,14 +2317,10 @@ export const ja = {
           full: "フルアクセス",
         },
         details: {
-          ask:
-            "ターミナルや Python のコード、ウェブ検索、ファイル編集、MCP ツールを含め、すべてのツール呼び出しの前に確認します。外部プロバイダーが実行するツールは一時停止されません。",
-          auto:
-            "通常のツール呼び出しは自動で実行し、認証情報の読み取り、権限昇格、破壊的なコマンドなど、危険そうな操作のときだけ確認します。",
-          off:
-            "すべてのツール呼び出しを確認なしで実行します。Python とターミナルのコードは引き続きサンドボックス内で実行され、コンピューター上でアクセスできるファイルが制限されます。OS サンドボックスが動作しない場合、危険な呼び出しは先に確認します。",
-          full:
-            "すべてのツール呼び出しを確認なしで実行し、コードサンドボックスをオフにします。Python とターミナルのコードは、アカウントがアクセスできる任意のファイルを読み取り、変更できます。",
+          ask: "ターミナルや Python のコード、ウェブ検索、ファイル編集、MCP ツールを含め、すべてのツール呼び出しの前に確認します。外部プロバイダーが実行するツールは一時停止されません。",
+          auto: "通常のツール呼び出しは自動で実行し、認証情報の読み取り、権限昇格、破壊的なコマンドなど、危険そうな操作のときだけ確認します。",
+          off: "すべてのツール呼び出しを確認なしで実行します。Python とターミナルのコードは引き続きサンドボックス内で実行され、コンピューター上でアクセスできるファイルが制限されます。OS サンドボックスが動作しない場合、危険な呼び出しは先に確認します。",
+          full: "すべてのツール呼び出しを確認なしで実行し、コードサンドボックスをオフにします。Python とターミナルのコードは、アカウントがアクセスできる任意のファイルを読み取り、変更できます。",
         },
       },
     },
@@ -2446,15 +2360,12 @@ export const ja = {
       pictureOptions: "プロフィール写真のオプション",
       stats: {
         title: "あなたの統計",
-        subtitle:
-          "以下はすべてご自身の履歴から集計しています。収集も Unsloth への送信も行いません。",
+        subtitle: "以下はすべてご自身の履歴から集計しています。収集も Unsloth への送信も行いません。",
         retry: "再試行",
         exportCsv: "CSV をエクスポート",
         exportError: "トークン使用量をエクスポートできませんでした",
-        privacyNote:
-          "統計は、お使いの Unsloth にあるローカルのチャット、API 利用、トレーニング履歴から計算されます。統計用に API のプロンプト、応答、キーを保存することはありません。Unsloth や第三者への送信も行いません。",
-        emptyChats:
-          "チャットまたは API の利用履歴がまだありません。会話を始めるか、認証済みのローカル API リクエストを実行してください。",
+        privacyNote: "統計は、お使いの Unsloth にあるローカルのチャット、API 利用、トレーニング履歴から計算されます。統計用に API のプロンプト、応答、キーを保存することはありません。Unsloth や第三者への送信も行いません。",
+        emptyChats: "チャットまたは API の利用履歴がまだありません。会話を始めるか、認証済みのローカル API リクエストを実行してください。",
         lifetimeTokens: "累計トークン",
         peakTokens: "トークン最多の日",
         longestChat: "最長のチャット",
@@ -2524,8 +2435,7 @@ export const ja = {
         on: "オン",
         off: "オフ",
         oldWebkitWarning: "Wayland 上の WebKitGTK {version}: 分数スケーリングを使う NVIDIA 環境では、GPU レンダリングが起動時にクラッシュすることがあります (WebKit bug 280210)。その場合、Unsloth は自動的に CPU レンダリングに戻ります。WebKitGTK 2.50.4 では測定できる高速化はなかった (どちらも 8 fps) ため、ここではオンはおすすめしません。",
-        oldDriverWarning:
-          "X11 上の NVIDIA ドライバー {version}: ドライバーが 610 以降になるまで、Unsloth は GPU レンダリングをオフのままにします。古いドライバーはフレームごとにファイル記述子をリークし、数分でウィンドウが描画されなくなります。",
+        oldDriverWarning: "X11 上の NVIDIA ドライバー {version}: ドライバーが 610 以降になるまで、Unsloth は GPU レンダリングをオフのままにします。古いドライバーはフレームごとにファイル記述子をリークし、数分でウィンドウが描画されなくなります。",
         fallbackNote: "このシステムでは GPU レンダリングが起動時にクラッシュしたため、Unsloth は CPU レンダリングを使用しています。",
         tryAgain: "GPU をもう一度試す",
         envOverride: "環境変数 {name} で設定されています。これを削除するまで、この設定は効果がありません。",
@@ -2579,8 +2489,7 @@ export const ja = {
         },
         sentAttachments: {
           label: "送信済みメッセージの添付ファイル",
-          description:
-            "標準では各ファイルを種類付きで表示し、コンパクトでは 1 行により多く表示します。自動では 7 件以上でコンパクトに切り替わります。",
+          description: "標準では各ファイルを種類付きで表示し、コンパクトでは 1 行により多く表示します。自動では 7 件以上でコンパクトに切り替わります。",
           auto: "自動",
           list: "標準",
           chips: "コンパクト",
@@ -2624,8 +2533,7 @@ export const ja = {
           alreadyAvailable: "このフォントは既に利用可能なため、既存のものを使用します。",
           folderNoFonts: "そのフォルダにフォントファイルが見つかりませんでした。",
           remove: "削除",
-          errorInvalidType:
-            "サポートされていないファイル形式です。.woff2、.woff、.ttf、.otf を使用してください。",
+          errorInvalidType: "サポートされていないファイル形式です。.woff2、.woff、.ttf、.otf を使用してください。",
           errorTooLarge: "フォントファイルが大きすぎます（最大 1.5 MB）。",
           errorLimit: "インポートできるフォントは最大 3 つです。",
           errorStorageFull: "ローカルストレージの空き容量が足りません。先にインポート済みフォントを削除してください。",
@@ -2663,8 +2571,7 @@ export const ja = {
         },
         pointerCursors: {
           label: "ポインターカーソルを使用",
-          description:
-            "操作可能な要素にカーソルを合わせたときにポインターに変更します。",
+          description: "操作可能な要素にカーソルを合わせたときにポインターに変更します。",
         },
       },
       language: {
@@ -2684,16 +2591,14 @@ export const ja = {
       },
       sidebarNav: {
         title: "サイドバーナビゲーション",
-        description:
-          "サイドバーのタブを固定して並べ替えます。固定していないタブは「その他」メニューに入ります。",
+        description: "サイドバーのタブを固定して並べ替えます。固定していないタブは「その他」メニューに入ります。",
         dragToReorder: "ドラッグして並べ替え",
         pinToSidebar: "{name} をサイドバーに固定",
         moreHolds: "その他 ({count})",
       },
       sidebarMenu: {
         title: "サイドバーメニュー",
-        description:
-          "プロフィールメニューのショートカットを選んで並べ替えます。",
+        description: "プロフィールメニューのショートカットを選んで並べ替えます。",
         darkModeToggle: "ダークモード切り替え",
         dragToReorder: "ドラッグして並べ替え",
       },
@@ -2713,8 +2618,7 @@ export const ja = {
         status: "処理中 {active} 件 · 最近 {recent} 件 · {model}",
         noModelLoaded: "モデル未読み込み",
         autoOpen: "フローティングモニターを自動表示",
-        autoOpenDescription:
-          "API トラフィックを受信すると小さなパネルを開きます。",
+        autoOpenDescription: "API トラフィックを受信すると小さなパネルを開きます。",
         cpu: "CPU",
         ram: "RAM",
         disk: "ディスク",
@@ -2730,8 +2634,7 @@ export const ja = {
         gpuUnusable: "GPU を利用できません",
         gpuUnusableDetail: "検出されましたが、PyTorch から利用できません",
         detailedView: "詳細表示",
-        detailedViewDescription:
-          "フローティングウィンドウに、各 GPU の負荷、温度、消費電力を表示します。",
+        detailedViewDescription: "フローティングウィンドウに、各 GPU の負荷、温度、消費電力を表示します。",
         gpuLoad: "GPU 負荷",
         temperature: "温度",
         power: "消費電力",
@@ -2762,15 +2665,11 @@ export const ja = {
         unavailable: "利用不可",
         detecting: "GPU を確認しています...",
         unreadable: "このサーバーのハードウェアを読み取れませんでした。",
-        noGpu:
-          "専用 GPU は検出されませんでした。",
+        noGpu: "専用 GPU は検出されませんでした。",
         noUsableGpu: "このマシンの GPU はいずれも PyTorch から利用できません。",
-        mismatchCpuBuild:
-          "PyTorch は CPU 専用ビルド ({version}) のため、下の GPU は利用できません。インストールを修復すると GPU サポートが復元されます。",
-        mismatchUnavailable:
-          "PyTorch ({version}) は下の GPU を初期化できないため、利用できません。GPU ドライバーを確認するか、インストールを修復してください。",
-        driverIdleEvict:
-          "AMD ドライバー {version} には、AMD GPU がアイドル状態のときに Windows がフリーズすることがある既知の不具合があります。特に GPU が複数ある環境で発生しやすくなります。Adrenalin 26.9.2 以降に更新してください。",
+        mismatchCpuBuild: "PyTorch は CPU 専用ビルド ({version}) のため、下の GPU は利用できません。インストールを修復すると GPU サポートが復元されます。",
+        mismatchUnavailable: "PyTorch ({version}) は下の GPU を初期化できないため、利用できません。GPU ドライバーを確認するか、インストールを修復してください。",
+        driverIdleEvict: "AMD ドライバー {version} には、AMD GPU がアイドル状態のときに Windows がフリーズすることがある既知の不具合があります。特に GPU が複数ある環境で発生しやすくなります。Adrenalin 26.9.2 以降に更新してください。",
         driverIdleEvictDetails: "詳細",
         dismissNotice: "閉じる",
         unusableDevice: "利用不可",
@@ -2832,11 +2731,9 @@ export const ja = {
           sourceBuild: "この llama.cpp はソースからビルドされているため、ここではバックエンドを切り替えられません。",
           customPath: "カスタム llama.cpp フォルダーが選択されています。そのビルドによって計算バックエンドが決まります。",
           unresolved: "利用可能なバックエンドを確認できませんでした。接続を確認して再試行してください。",
-          updateChecksDisabled:
-            "更新チェックが無効になっているため (UNSLOTH_DISABLE_UPDATE_CHECK=1)、利用可能なバックエンドは確認されません。",
+          updateChecksDisabled: "更新チェックが無効になっているため (UNSLOTH_DISABLE_UPDATE_CHECK=1)、利用可能なバックエンドは確認されません。",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf 推論 cuda rocm hip vulkan metal cpu gpu アクセラレータ prebuilt 切り替え エンジン",
+        llamaBackendKeywords: "llama.cpp backend gguf 推論 cuda rocm hip vulkan metal cpu gpu アクセラレータ prebuilt 切り替え エンジン",
       },
       modelMemory: {
         title: "モデルの読み込み",
@@ -2852,28 +2749,22 @@ export const ja = {
         multiModelFit: "収まる場合",
         multiModelAlways: "常に",
         multiModelDescription: "チャット、音声、画像、動画のモデルを読み込むと、他のモデルはアンロードされます。",
-        multiModelDescriptionFit:
-          "モデルを読み込んでも、収まる場合は他のモデルを残します。収まらない場合は、使用中でないモデルを先にアンロードし、次にアクティブなモデルをアンロードします。",
-        multiModelDescriptionAlways:
-          "モデルを読み込んでも、他のモデルはアンロードされません。収まらないモデルは読み込まれません。アイドル時の自動アンロードとトレーニングでは引き続きメモリが解放されます。",
+        multiModelDescriptionFit: "モデルを読み込んでも、収まる場合は他のモデルを残します。収まらない場合は、使用中でないモデルを先にアンロードし、次にアクティブなモデルをアンロードします。",
+        multiModelDescriptionAlways: "モデルを読み込んでも、他のモデルはアンロードされません。収まらないモデルは読み込まれません。アイドル時の自動アンロードとトレーニングでは引き続きメモリが解放されます。",
         multiModelHint: "チャット、音声、画像、動画のモデルが対象です。読み込まれた各チャットモデルは、そのモデルを指定したリクエストに応答します。複数の GPU がある場合、Unsloth は新しいモデルを他のモデルが使っていない GPU に配置しようとします。「収まる場合」は約 1 GB の空きを残します。「収まる場合」と「常に」は、別の GPU 上のモデルをアンロードしません。",
         allowOversizedLoad: "大きすぎるモデルの読み込みを許可",
         allowOversizedLoadDescription: "メモリチェックで収まらないと判定された場合でも、画像と動画のモデルを読み込みます。",
         allowOversizedLoadHint: "CPU と GPU が 1 つのメモリを共有する環境 (Apple Silicon、内蔵 GPU) に適用されます。モデルの重みの推定値が、オペレーティングシステム用の領域を確保した後の残りメモリを超えると、Unsloth は読み込みを拒否します。オンにすると、その場合でも読み込みを試みます。推定はどちらの方向にも外れることがあり、大きすぎる読み込みは失敗する、メモリを使い切る、激しいスワップや応答停止を起こす、または Unsloth を停止させることがあります。既定ではオフです。",
-        mediaIdleUnloadDescription:
-          "指定した秒数だけアイドル状態が続くと、画像モデルと動画モデルをアンロードして VRAM を解放します。0 にすると読み込んだままになります。最小値は 60 秒です。",
+        mediaIdleUnloadDescription: "指定した秒数だけアイドル状態が続くと、画像モデルと動画モデルをアンロードして VRAM を解放します。0 にすると読み込んだままになります。最小値は 60 秒です。",
         mlockVetoed: "--mlock は無効のままです。モデルを固定するとモデル全体分の RAM を確保することになります。アイドル時の自動アンロードは引き続き無効です。",
         mlockNotApplicable: "すべて GPU 上にあるため、システム RAM に固定するものはありません。アイドル時の自動アンロードは無効のままです。",
         memlockCapped: "このシステムはロック可能なメモリを {limit} に制限しています。これより大きいモデルは完全には固定されません。ulimit -l で上限を引き上げてください。",
         reloadRequired: "新しいメモリ設定を適用するにはモデルを再読み込みしてください。",
         loadError: "モデルメモリ設定の読み込みに失敗しました",
         saveError: "モデルメモリ設定の保存に失敗しました",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu メモリ ram 常駐 固定 ロック 保持 ロード済み アンロード アイドル mmap no-mmap load-mode スワップ ページング",
-        multiModelKeywords:
-          "複数 モデル 同時 併用 切り替え 収まる アンロード 退避 vram gpu 画像 動画 チャット 常に アイドル 音声 読み上げ 音声合成 tts",
-        mediaIdleUnloadKeywords:
-          "画像 動画 拡散 アイドル アンロード ttl タイムアウト 秒 解放 vram gpu メモリ",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu メモリ ram 常駐 固定 ロック 保持 ロード済み アンロード アイドル mmap no-mmap load-mode スワップ ページング",
+        multiModelKeywords: "複数 モデル 同時 併用 切り替え 収まる アンロード 退避 vram gpu 画像 動画 チャット 常に アイドル 音声 読み上げ 音声合成 tts",
+        mediaIdleUnloadKeywords: "画像 動画 拡散 アイドル アンロード ttl タイムアウト 秒 解放 vram gpu メモリ",
       },
       storage: {
         title: "ストレージ",
@@ -2889,8 +2780,7 @@ export const ja = {
         diskUsage: "{used} 使用中 / {total}",
         diskFree: "{free} 空き",
         modelsFolder: "モデルフォルダ",
-        modelsFolderKeywords:
-          "モデル フォルダ ディレクトリ パス 保存先 場所 ダウンロード キャッシュ ストレージ ディスク ドライブ 移動 変更 models folder path hugging face",
+        modelsFolderKeywords: "モデル フォルダ ディレクトリ パス 保存先 場所 ダウンロード キャッシュ ストレージ ディスク ドライブ 移動 変更 models folder path hugging face",
         modelsFolderDescription: "ダウンロードしたモデルの保存場所です。",
         modelsFolderHint: "ダウンロードしたモデルの保存場所です。システムドライブを圧迫しないよう変更できます。新規ダウンロードにのみ適用され、既存のモデルはそのままの場所に残ります。",
         openAction: "開く",
@@ -2900,11 +2790,9 @@ export const ja = {
         copyError: "パスをコピーできませんでした",
         caches: {
           label: "キャッシュファイル",
-          description:
-            "キャッシュの合計は{size}で、そのうち{reclaimable}を今すぐ削除できます。",
+          description: "キャッシュの合計は{size}で、そのうち{reclaimable}を今すぐ削除できます。",
           hint: "パッケージのダウンロード、コンパイル済みカーネル、転送キャッシュなど、必要になったときにUnslothが再作成するものです。ダウンロード済みのモデル、プロジェクト、チャット、設定、Hugging Faceトークンがここで削除されることはありません。",
-          keywords:
-            "キャッシュ 削除 消去 クリア 掃除 空き容量 ディスク 一時 コンパイル cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
+          keywords: "キャッシュ 削除 消去 クリア 掃除 空き容量 ディスク 一時 コンパイル cache caches purge prune clear clean free space disk uv pip npm bun triton inductor cuda numba matplotlib vllm compiled xet temporary",
           measuring: "キャッシュサイズを計測しています...",
           measureFailed: "キャッシュを計測できませんでした",
           empty: "キャッシュファイルは見つかりませんでした。",
@@ -2921,14 +2809,10 @@ export const ja = {
           confirmTitle: "キャッシュファイルを削除しますか?",
           confirmDescription: "約{size}の空き容量ができます。",
           confirmOneTitle: "{name}を削除しますか?",
-          safety:
-            "Unslothは次に必要になったときにキャッシュを再作成します。ダウンロード済みのモデル、プロジェクト、チャット、設定、Hugging Faceトークンは変更されません。",
-          hubCost:
-            "これはモデルキャッシュです。削除すると、次に使うときにそれらのモデルを再ダウンロードします。",
-          datasetsCost:
-            "削除すると、次に使うときにそれらのデータセットを再ダウンロードします。",
-          npuCost:
-            "ダウンロード済みの NPU モデルです。削除すると消去され、使うには Hub から再ダウンロードが必要です。",
+          safety: "Unslothは次に必要になったときにキャッシュを再作成します。ダウンロード済みのモデル、プロジェクト、チャット、設定、Hugging Faceトークンは変更されません。",
+          hubCost: "これはモデルキャッシュです。削除すると、次に使うときにそれらのモデルを再ダウンロードします。",
+          datasetsCost: "削除すると、次に使うときにそれらのデータセットを再ダウンロードします。",
+          npuCost: "ダウンロード済みの NPU モデルです。削除すると消去され、使うには Hub から再ダウンロードが必要です。",
           blocked: "削除されませんでした: {reason}",
           cleared: "{size}を削除しました",
           partial: "一部のキャッシュファイルを削除できませんでした",
@@ -2956,8 +2840,7 @@ export const ja = {
         lowDisk: {
           title: "ディスクの空き容量が少なくなっています",
           criticalTitle: "ディスクの空き容量が非常に少なくなっています",
-          description:
-            "{total}中{free}が空きです。キャッシュを削除すると空き容量を増やせます。",
+          description: "{total}中{free}が空きです。キャッシュを削除すると空き容量を増やせます。",
           action: "キャッシュを確認",
         },
         futureDownloads: "新規ダウンロードのみ",
@@ -2988,13 +2871,10 @@ export const ja = {
     },
     agents: {
       title: "エージェント",
-      description:
-        "unsloth start で Claude Code や Codex などのコーディングエージェントをローカルモデルに接続します。",
+      description: "unsloth start で Claude Code や Codex などのコーディングエージェントをローカルモデルに接続します。",
       agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
-      vscodeNote:
-        "VS Code は例外です。このコマンドは、提供中のモデルを VS Code の Copilot Chat のモデル一覧（chatLanguageModels.json）に追加します。",
-      intro:
-        "は Claude Code、Codex、DeepSeek Harness、Hermes、OpenClaw、OpenCode などのエージェントを、Unsloth がローカルで提供するモデルに完全オフラインで接続します。OpenAI 互換サーバーを起動し、エージェントの設定ファイルには一切手を加えません。",
+      vscodeNote: "VS Code は例外です。このコマンドは、提供中のモデルを VS Code の Copilot Chat のモデル一覧（chatLanguageModels.json）に追加します。",
+      intro: "は Claude Code、Codex、DeepSeek Harness、Hermes、OpenClaw、OpenCode などのエージェントを、Unsloth がローカルで提供するモデルに完全オフラインで接続します。OpenAI 互換サーバーを起動し、エージェントの設定ファイルには一切手を加えません。",
       readDocs: "ドキュメントを読む",
       copy: "コピー",
       copied: "コピーしました",
@@ -3004,46 +2884,37 @@ export const ja = {
       model: "モデル",
       searchModels: "GGUF モデルを検索...",
       noModels: "一致する GGUF モデルはありません。",
-      showingModels:
-        "{total} 件中 {shown} 件を表示しています。入力を続けると絞り込めます。",
+      showingModels: "{total} 件中 {shown} 件を表示しています。入力を続けると絞り込めます。",
       quantization: "量子化",
       loadingQuantizations: "量子化を読み込み中...",
       noQuantizations: "個別の量子化なし",
       recommended: "推奨",
       downloaded: "ダウンロード済み",
-      quantizationLoadError:
-        "すべての量子化を読み込めませんでした。コマンドには取得できたモデル名を使用します。",
+      quantizationLoadError: "すべての量子化を読み込めませんでした。コマンドには取得できたモデル名を使用します。",
       generatedCommand: "生成されたコマンド",
       docs: "ドキュメント",
       docsLabel: "unsloth start のドキュメントを開く",
       agentDocs: "{agent} のセットアップドキュメントを開く",
       copyGeneratedCommand: "生成されたコマンドをコピー",
-      automaticSettingsNote:
-        "フラグを何も設定していない場合、Unsloth はモデルの推奨設定を自動的に適用します。",
-      configurationNote:
-        "任意の設定を調整することもできます。フラグについては、下記または",
+      automaticSettingsNote: "フラグを何も設定していない場合、Unsloth はモデルの推奨設定を自動的に適用します。",
+      configurationNote: "任意の設定を調整することもできます。フラグについては、下記または",
       configurationDocs: "ドキュメント",
       configurationFlagsSuffix: "を参照してください。",
-      modelNote:
-        "Claude Code と Codex には、llama-server が提供する GGUF モデルか MLX モデルが必要です。他のエージェントは transformers ベースのモデルも利用できます。Unsloth に読み込み済みのモデルを使うには --model を外してください。",
+      modelNote: "Claude Code と Codex には、llama-server が提供する GGUF モデルか MLX モデルが必要です。他のエージェントは transformers ベースのモデルも利用できます。Unsloth に読み込み済みのモデルを使うには --model を外してください。",
       subagent: {
         title: "ローカルモデルをサブエージェントとして使う",
-        description:
-          "{agent} は現在のモデルのまま、選んだタスクだけをこのローカルの Unsloth モデルに委任します。",
+        description: "{agent} は現在のモデルのまま、選んだタスクだけをこのローカルの Unsloth モデルに委任します。",
         setupCommand: "セットアップコマンド",
         copySetupCommand: "サブエージェントのセットアップコマンドをコピー",
         usagePrompt: "続いて {agent} で次のように入力します:",
         copyUsagePrompt: "サブエージェントの利用プロンプトをコピー",
-        defaultPrompt:
-          "ローカルエージェントを起動して、この関数を実装してください。",
+        defaultPrompt: "ローカルエージェントを起動して、この関数を実装してください。",
         opencodePrompt: "@unsloth このテスト失敗の原因を調べて",
       },
       quickstart: {
         title: "コマンドを組み立てる",
-        description:
-          "Unsloth に読み込み済みのモデルでエージェントを起動します。先にモデルを読み込み、claude を下記の対応エージェントに置き換えてください。",
-        noneDetected:
-          "対応するエージェントの CLI が PATH 上に見つかりませんでした。",
+        description: "Unsloth に読み込み済みのモデルでエージェントを起動します。先にモデルを読み込み、claude を下記の対応エージェントに置き換えてください。",
+        noneDetected: "対応するエージェントの CLI が PATH 上に見つかりませんでした。",
         installed: "インストール済み",
       },
       supportedAgents: {
@@ -3053,65 +2924,66 @@ export const ja = {
       },
       models: {
         title: "モデルの選び方",
-        description:
-          "--model でモデルと量子化を指定し、--context-length でコンテキスト長を設定します。量子化サフィックスか、明示的な --gguf-variant フラグを使用してください。",
+        description: "--model でモデルと量子化を指定し、--context-length でコンテキスト長を設定します。量子化サフィックスか、明示的な --gguf-variant フラグを使用してください。",
         suffixLabel: "量子化サフィックスを使う場合",
         variantLabel: "明示的なバリアントフラグを使う場合",
       },
       options: {
         title: "主なオプション",
-        description:
-          "Unsloth のフラグが先に解釈され、認識されなかったものはそのままエージェントへ渡されます。",
-        model:
-          "モデルを選択します。--model がない場合、unsloth start は Unsloth に読み込み済みのモデルを使用し、未読み込みならエラーになります。",
-        contextLength:
-          "要求するコンテキスト長を設定します (エイリアス: --max-seq-length)。",
+        description: "Unsloth のフラグが先に解釈され、認識されなかったものはそのままエージェントへ渡されます。",
+        model: "モデルを選択します。--model がない場合、unsloth start は Unsloth に読み込み済みのモデルを使用し、未読み込みならエラーになります。",
+        contextLength: "要求するコンテキスト長を設定します (エイリアス: --max-seq-length)。",
         ggufVariant: "GGUF の量子化バリアントを選択します。",
-        loadIn4bit:
-          "Hugging Face モデルの 4bit 読み込みを切り替えます。",
+        loadIn4bit: "Hugging Face モデルの 4bit 読み込みを切り替えます。",
         tensorParallel: "複数 GPU でのテンソル並列を切り替えます。",
         serve: "自動ローカルサーバーの有効・無効を切り替えます。",
-        launch:
-          "エージェントを起動するか、コマンドと環境変数の表示だけを行います。",
-        persist:
-          "Unsloth が管理するエージェントのストレージを実行間で保持します。",
-        asSubagent:
-          "親エージェントを現在のモデルのままにし、Unsloth をローカルのサブエージェントとして登録します (Claude Code、Codex、OpenCode、Pi)。",
-        apiKey:
-          "Unsloth の API キーを指定します (または UNSLOTH_API_KEY を設定)。",
-        reasoning:
-          "チャットで推論を使うかどうか: on、off、auto。auto はモデルのチャットテンプレートに従い、通常は on になります。",
-        reasoningEffort:
-          "モデルのチャットテンプレートに渡す推論の強さ (例: medium)。指定できる値はモデルごとに異なるため、そのモデルが受け付ける値を渡してください。未指定ならテンプレートの値が使われます。",
-        yolo:
-          "承認の確認をスキップします。信頼できる環境でのみ使用してください。",
+        launch: "エージェントを起動するか、コマンドと環境変数の表示だけを行います。",
+        persist: "Unsloth が管理するエージェントのストレージを実行間で保持します。",
+        asSubagent: "親エージェントを現在のモデルのままにし、Unsloth をローカルのサブエージェントとして登録します (Claude Code、Codex、OpenCode、Pi)。",
+        apiKey: "Unsloth の API キーを指定します (または UNSLOTH_API_KEY を設定)。",
+        reasoning: "チャットで推論を使うかどうか: on、off、auto。auto はモデルのチャットテンプレートに従い、通常は on になります。",
+        reasoningEffort: "モデルのチャットテンプレートに渡す推論の強さ (例: medium)。指定できる値はモデルごとに異なるため、そのモデルが受け付ける値を渡してください。未指定ならテンプレートの値が使われます。",
+        yolo: "承認の確認をスキップします。信頼できる環境でのみ使用してください。",
       },
       remote: {
         title: "リモートの Unsloth に接続する",
-        description:
-          "起動前に次を設定すると、unsloth start を別の場所で動作している Unsloth に向けられます (--api-key を直接渡すことも可能です):",
+        description: "起動前に次を設定すると、unsloth start を別の場所で動作している Unsloth に向けられます (--api-key を直接渡すことも可能です):",
       },
       passthrough: {
         title: "エージェントへの引数の受け渡し",
-        description:
-          "Unsloth のフラグより後ろの引数はエージェント自身へ転送されるため、resume のようなネイティブコマンドもそのまま使えます:",
+        description: "Unsloth のフラグより後ろの引数はエージェント自身へ転送されるため、resume のようなネイティブコマンドもそのまま使えます:",
       },
       dryRun: {
         title: "起動せずに内容を確認する",
-        description:
-          "--no-launch を付けると、エージェントを起動する代わりに環境変数とコマンドを表示します。--model を指定している場合、モデルの解決と読み込みは行われることがあります。",
+        description: "--no-launch を付けると、エージェントを起動する代わりに環境変数とコマンドを表示します。--model を指定している場合、モデルの解決と読み込みは行われることがあります。",
       },
     },
     chat: {
       groups: {
-        replies: { title: "応答" },
-        thinkingTools: { title: "思考とツール" },
-        conversations: { title: "会話" },
-        files: { title: "ファイルと貼り付け" },
-        display: { title: "表示" },
-        composer: { title: "メッセージ入力欄" },
-        menu: { title: "チャットメニュー" },
-        advanced: { title: "詳細設定" },
+        replies: {
+          title: "応答",
+        },
+        thinkingTools: {
+          title: "思考とツール",
+        },
+        conversations: {
+          title: "会話",
+        },
+        files: {
+          title: "ファイルと貼り付け",
+        },
+        display: {
+          title: "表示",
+        },
+        composer: {
+          title: "メッセージ入力欄",
+        },
+        menu: {
+          title: "チャットメニュー",
+        },
+        advanced: {
+          title: "詳細設定",
+        },
         contextTitle: "コンテキスト",
       },
       library: {
@@ -3120,29 +2992,22 @@ export const ja = {
         action: "ライブラリを開く",
       },
       projectAttachmentsHint: "各チャットの添付メニューで個別に変更できます。",
-      rememberParamsPerModelHint:
-        "オフの場合、すべてのモデルで同じ設定を使います。",
+      rememberParamsPerModelHint: "オフの場合、すべてのモデルで同じ設定を使います。",
       autoCompactHint: "ローカルの GGUF と MLX チャット：文脈から外れたターンは索引化され、モデルが検索して取り出せます。リセットでは、収まる範囲の継続的な指示がそのままの文言で引き継がれ、途中のものより最も古いものと最も新しいものが優先されます。アーカイブには保存済みのチャットとベクトル索引が必要で、それらがない場合、古いターンは破棄されます。空きVRAMではなく、設定したコンテキスト長を基準にします。API モデル：対応していればプロバイダーが古いターンを要約し、そうでなければチャットがモデルの公開コンテキスト長に近づいたときに最も古いターンが破棄されます。",
-      pastedTextShortDescription:
-        "{count}文字以上の貼り付けテキストは .txt 添付ファイルになります。",
-      pastedTextOffDescription:
-        "長さに関係なく、貼り付けたテキストはすべて入力欄に残ります。",
+      pastedTextShortDescription: "{count}文字以上の貼り付けテキストは .txt 添付ファイルになります。",
+      pastedTextOffDescription: "長さに関係なく、貼り付けたテキストはすべて入力欄に残ります。",
       title: "チャット",
       description: "このデバイスでのチャットの動作をカスタマイズします。",
       modelSelection: {
         title: "モデル選択の設定",
         expandQuantizations: "量子化オプションを展開",
-        expandQuantizationsDescription:
-          "各モデルを開かなくても、「デバイス上」に GGUF の量子化を表示します。",
+        expandQuantizationsDescription: "各モデルを開かなくても、「デバイス上」に GGUF の量子化を表示します。",
         showAllQuantizations: "すべての量子化オプションを表示",
-        showAllQuantizationsDescription:
-          "オン: 「On Device」にあるすべての量子化オプションを、未ダウンロードのものも含めて一覧表示します。オフ: ダウンロード済みの量子化オプションのみを表示します。",
+        showAllQuantizationsDescription: "オン: 「On Device」にあるすべての量子化オプションを、未ダウンロードのものも含めて一覧表示します。オフ: ダウンロード済みの量子化オプションのみを表示します。",
         showMemoryBar: "VRAM 使用量バーを表示",
-        showMemoryBarDescription:
-          "ダウンロード済みモデルの行の下に、推定 VRAM 使用量を表示します。内訳は重み、実際に読み込まれるコンテキスト長での KV キャッシュ、および投機的デコードの下書き用に確保される領域です。",
+        showMemoryBarDescription: "ダウンロード済みモデルの行の下に、推定 VRAM 使用量を表示します。内訳は重み、実際に読み込まれるコンテキスト長での KV キャッシュ、および投機的デコードの下書き用に確保される領域です。",
         fitOnDeviceOnly: "収まるモデルのみ表示",
-        fitOnDeviceOnlyDescription:
-          "このデバイスの GPU メモリと RAM に収まらないモデルを、モデル選択と Hub で非表示にします。ダウンロード済みのモデルは引き続き表示されます。",
+        fitOnDeviceOnlyDescription: "このデバイスの GPU メモリと RAM に収まらないモデルを、モデル選択と Hub で非表示にします。ダウンロード済みのモデルは引き続き表示されます。",
         pickerExpandLoaded: "モデル一覧をすべて表示",
         pickerExpandLoadedDescription: "モデルが読み込まれているときは、読み込み済みのモデルだけでなく全一覧でモデル選択を開きます。モデル選択を展開または折りたたむと、この設定も変わります。",
         pickerMonochromeIcons: "モノクロのモデルアイコン",
@@ -3167,46 +3032,33 @@ export const ja = {
         more: "その他",
       },
       pastedTextThreshold: "長い貼り付けを圧縮",
-      pastedTextThresholdDescription:
-        "{shortcut} を押すと、入力欄に直接貼り付けられます。",
+      pastedTextThresholdDescription: "{shortcut} を押すと、入力欄に直接貼り付けられます。",
       pastedTextThresholdOff: "オフ",
       autoScroll: "生成中のスクロール",
-      autoScrollDescription:
-        "自動スクロールは新しいテキストを表示し続けます。手動は位置を保ち、最初から読めます。",
+      autoScrollDescription: "自動スクロールは新しいテキストを表示し続けます。手動は位置を保ち、最初から読めます。",
       autoScrollAuto: "自動スクロール",
       autoScrollManual: "手動",
-      autoScrollKeywords:
-        "スクロール 自動スクロール 追従 下 ジャンプ ストリーミング 生成 固定 scroll autoscroll follow",
+      autoScrollKeywords: "スクロール 自動スクロール 追従 下 ジャンプ ストリーミング 生成 固定 scroll autoscroll follow",
       replyNotification: "応答完了時に通知",
-      replyNotificationDescription:
-        "Unsloth が最小化またはバックグラウンドにあるときに応答が完了すると、システム通知を表示します。",
-      replyNotificationBlocked:
-        "通知がブロックされています。ブラウザーまたはシステムの設定で Unsloth の通知を許可してから、もう一度お試しください。",
-      replyNotificationKeywords:
-        "通知 アラート 完了 終了 準備完了 応答 バックグラウンド 最小化 notify notification alert done finished reply background",
+      replyNotificationDescription: "Unsloth が最小化またはバックグラウンドにあるときに応答が完了すると、システム通知を表示します。",
+      replyNotificationBlocked: "通知がブロックされています。ブラウザーまたはシステムの設定で Unsloth の通知を許可してから、もう一度お試しください。",
+      replyNotificationKeywords: "通知 アラート 完了 終了 準備完了 応答 バックグラウンド 最小化 notify notification alert done finished reply background",
       showLinkPreviews: "リンクのプレビュー",
       showLinkPreviewsDescription: "ソースのリンクにカーソルを合わせるとプレビューを表示します。",
       showResponseModel: "応答モデルを表示",
-      showResponseModelDescription:
-        "アシスタントの応答にモデルのメタデータを表示します。",
+      showResponseModelDescription: "アシスタントの応答にモデルのメタデータを表示します。",
       showReplyTimes: "応答の時刻",
       showReplyTimesDescription: "各応答の下に、完了した時刻を表示します。",
-      showReplyTimesKeywords:
-        "タイムスタンプ 時刻 時間 日付 完了 応答 メッセージ timestamp time clock date reply",
+      showReplyTimesKeywords: "タイムスタンプ 時刻 時間 日付 完了 応答 メッセージ timestamp time clock date reply",
       showGenerationDetails: "速度の詳細情報",
-      showGenerationDetailsDescription:
-        "ライブ表示にプロンプトの読み取り速度、トークン数、ドラフトの採用率を追加します。",
-      showGenerationDetailsKeywords:
-        "詳細 速度 トークン 統計 verbose developer stats speed tok/s prefill decode",
+      showGenerationDetailsDescription: "ライブ表示にプロンプトの読み取り速度、トークン数、ドラフトの採用率を追加します。",
+      showGenerationDetailsKeywords: "詳細 速度 トークン 統計 verbose developer stats speed tok/s prefill decode",
       generationStatsUpdates: "速度とコンテキストの統計",
-      generationStatsUpdatesDescription:
-        "リアルタイムでは、応答のストリーミング中に毎秒トークン数とコンテキスト使用量を数えます。完了時は各応答の終了時に更新します。",
-      generationStatsUpdatesHint:
-        "リアルタイムでは、応答の生成中に応答の下の毎秒トークン数表示とチャット上部のコンテキストバーを毎秒数回更新します。完了時は各応答が終わった後に一度だけ更新します。リアルタイムは、特に古いマシンや負荷の高いマシンで動作の遅れやパフォーマンス低下を招くことがあります。",
+      generationStatsUpdatesDescription: "リアルタイムでは、応答のストリーミング中に毎秒トークン数とコンテキスト使用量を数えます。完了時は各応答の終了時に更新します。",
+      generationStatsUpdatesHint: "リアルタイムでは、応答の生成中に応答の下の毎秒トークン数表示とチャット上部のコンテキストバーを毎秒数回更新します。完了時は各応答が終わった後に一度だけ更新します。リアルタイムは、特に古いマシンや負荷の高いマシンで動作の遅れやパフォーマンス低下を招くことがあります。",
       generationStatsUpdatesSettled: "完了時",
       generationStatsUpdatesRealtime: "リアルタイム",
-      generationStatsUpdatesKeywords:
-        "リアルタイム ライブ 更新 速度 コンテキスト 統計 realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "リアルタイム ライブ 更新 速度 コンテキスト 統計 realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "応答に応答の編集を表示",
       inlineEditResponseDescription: "応答の編集を「その他」メニューではなく、各応答に表示します。",
       turnNavigation: "ターンナビゲーション",
@@ -3214,23 +3066,16 @@ export const ja = {
       composerPosition: "入力欄の位置",
       composerPositionDescription: "新しいチャットを始めるときの入力欄の位置を、ページ上部から下部まで調整します。",
       projectAttachments: "プロジェクト全体でファイルを共有",
-      projectAttachmentsDescription:
-        "新しく添付したファイルをプロジェクト内のすべてのチャットで利用できるようにします。",
+      projectAttachmentsDescription: "新しく添付したファイルをプロジェクト内のすべてのチャットで利用できるようにします。",
       rememberParamsPerModel: "モデルごとに設定を記憶",
-      rememberParamsPerModelDescription:
-        "各モデルで最後に使ったプロンプト、温度、その他の設定を復元します。",
+      rememberParamsPerModelDescription: "各モデルで最後に使ったプロンプト、温度、その他の設定を復元します。",
       autoCompact: "長いチャットを自動圧縮",
-      autoCompactDescription:
-        "チャットの文脈が満杯になると、古いターンは検索可能なアーカイブに移ります。",
-      autoCompactKeywords:
-        "圧縮 自動圧縮 コンテキスト ウィンドウ 切り詰め スライディング チェックポイント 余裕 アーカイブ 検索 取得 compaction rolling headroom archive retrieval rag",
+      autoCompactDescription: "チャットの文脈が満杯になると、古いターンは検索可能なアーカイブに移ります。",
+      autoCompactKeywords: "圧縮 自動圧縮 コンテキスト ウィンドウ 切り詰め スライディング チェックポイント 余裕 アーカイブ 検索 取得 compaction rolling headroom archive retrieval rag",
       keepRunningWhenTabClosed: "タブを閉じた後も実行を続ける",
-      keepRunningWhenTabClosedDescription:
-        "タブを閉じた後も、応答、ウェブ検索、Deep Research はサーバーで続行されます。オフにすると代わりに停止します。",
-      keepRunningWhenTabClosedHint:
-        "続行された実行は、どのデバイスでもチャットを開き直すと確認できます。オフの場合、最後のタブが閉じてから約 1 分以内に実行が停止するため、再読み込みでは停止しません。変更後に開始した実行に適用されます。一時チャット、API モデルからの応答や添付ファイルへの応答、ブラウザーパネルを使うターンは常にタブと一緒に停止します。",
-      keepRunningWhenTabClosedKeywords:
-        "バックグラウンド タブ 閉じる 離れる 実行を続ける 継続 停止 キャンセル ウェブ検索 デバイス スマートフォン background tab close keep running continue stop cancel deep research web search resume",
+      keepRunningWhenTabClosedDescription: "タブを閉じた後も、応答、ウェブ検索、Deep Research はサーバーで続行されます。オフにすると代わりに停止します。",
+      keepRunningWhenTabClosedHint: "続行された実行は、どのデバイスでもチャットを開き直すと確認できます。オフの場合、最後のタブが閉じてから約 1 分以内に実行が停止するため、再読み込みでは停止しません。変更後に開始した実行に適用されます。一時チャット、API モデルからの応答や添付ファイルへの応答、ブラウザーパネルを使うターンは常にタブと一緒に停止します。",
+      keepRunningWhenTabClosedKeywords: "バックグラウンド タブ 閉じる 離れる 実行を続ける 継続 停止 キャンセル ウェブ検索 デバイス スマートフォン background tab close keep running continue stop cancel deep research web search resume",
       firstTokenLabel: "最初のトークンの待機上限",
       firstTokenDescription: "ローカル GGUF モデルが、プロンプト処理の進捗がないまま最初のトークンを待てる時間です。すべてのアカウントの新しい待機に適用されます。「無制限」では停止するまで待ち続けます。",
       firstTokenDefault: "20 分（既定）",
@@ -3250,19 +3095,16 @@ export const ja = {
       toolResultLimitLocked: "UNSLOTH_TOOL_RESULT_MAX_CHARS で設定されています",
       toolResultLimitLoadError: "ツール出力の長さを読み込めませんでした。",
       toolResultLimitSaveError: "ツール出力の長さを保存できませんでした。",
-      toolResultLimitKeywords:
-        "出力 結果 切り詰め 上限 文字数 長さ tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
+      toolResultLimitKeywords: "出力 結果 切り詰め 上限 文字数 長さ tool output result truncate truncated truncation limit cap characters chars length terminal python mcp",
       visibility: {
         collapsed: "折りたたむ",
         auto: "実行中は展開",
         expanded: "常に展開",
       },
-      visibilityKeywords:
-        "折りたたむ 展開 開く 閉じる 思考 推論 ツール呼び出し ツールの動作 グループ ストリーミング",
+      visibilityKeywords: "折りたたむ 展開 開く 閉じる 思考 推論 ツール呼び出し ツールの動作 グループ ストリーミング",
       thinking: {
         visibility: "思考",
-        visibilityDescription:
-          "思考の開き方。個々のブロックは手動で展開・折りたたみできます。",
+        visibilityDescription: "思考の開き方。個々のブロックは手動で展開・折りたたみできます。",
       },
       memory: {
         title: "メモリー",
@@ -3282,26 +3124,21 @@ export const ja = {
       },
       currentDate: {
         label: "今日の日付をモデルに伝える",
-        description:
-          "現在の日付をプロンプトに追加し、ウェブ検索や Deep Research がモデルの学習データの締め切りを前提とせず、最新の情報源を探すようにします。",
+        description: "現在の日付をプロンプトに追加し、ウェブ検索や Deep Research がモデルの学習データの締め切りを前提とせず、最新の情報源を探すようにします。",
         loadError: "現在の日付の設定を読み込めませんでした",
         saveError: "現在の日付の設定を更新できませんでした",
       },
       tools: {
         visibility: "ツール呼び出し",
-        visibilityDescription:
-          "ツールの動作の開き方。個々の呼び出しは手動で展開・折りたたみできます。",
+        visibilityDescription: "ツールの動作の開き方。個々の呼び出しは手動で展開・折りたたみできます。",
         foldIntoThinking: "ツール呼び出しを思考にまとめる",
-        foldIntoThinkingDescription:
-          "そのターンのツール呼び出しを独立した行ではなく思考ブロック内に表示します。",
-        foldIntoThinkingBlocked:
-          "ツール呼び出しが「常に展開」の間は使えません。その設定では独立した行に表示されます。",
+        foldIntoThinkingDescription: "そのターンのツール呼び出しを独立した行ではなく思考ブロック内に表示します。",
+        foldIntoThinkingBlocked: "ツール呼び出しが「常に展開」の間は使えません。その設定では独立した行に表示されます。",
       },
       webSearch: {
         title: "ウェブ検索",
         images: "ウェブ検索の画像を表示",
-        imagesDescription:
-          "検索結果に画像を含めます。",
+        imagesDescription: "検索結果に画像を含めます。",
       },
       artifacts: {
         collapseHtmlBlocks: "HTMLブロックを折りたたむ",
@@ -3339,8 +3176,7 @@ export const ja = {
       exportAction: "エクスポート",
       exportingAction: "エクスポート中...",
       exportConversations: "履歴とプロジェクトをエクスポート",
-      exportConversationsDescription:
-        "履歴、または履歴とプロジェクトのチャットを、Training JSONL、CSV、ShareGPT JSONL、Markdown、HTML、PDF のいずれかで、一括またはチャットごとにダウンロードします。Message JSONL はチャットごとのみ利用できます。",
+      exportConversationsDescription: "履歴、または履歴とプロジェクトのチャットを、Training JSONL、CSV、ShareGPT JSONL、Markdown、HTML、PDF のいずれかで、一括またはチャットごとにダウンロードします。Message JSONL はチャットごとのみ利用できます。",
       exportConversationsAction: "エクスポート",
       exportScopeRecents: "履歴",
       exportScopeAll: "履歴 + プロジェクト",
@@ -3354,12 +3190,10 @@ export const ja = {
       importedChatCountPartial: "{count} 件の会話を最近のチャットにインポートしました。{failed} 件は保存できませんでした。",
       importFailed: "インポートに失敗しました。",
       importFromSource: "{source} からインポート",
-      importFromSourceDescription:
-        "{source} の会話をプロジェクトごとにまとめて Unsloth にコピーします。",
+      importFromSourceDescription: "{source} の会話をプロジェクトごとにまとめて Unsloth にコピーします。",
       importingAction: "インポート中...",
       importedSourceOneChat: "{source} から 1 件の会話をインポートしました。",
-      importedSourceChatCount:
-        "{source} から {count} 件の会話をインポートしました。",
+      importedSourceChatCount: "{source} から {count} 件の会話をインポートしました。",
       sourceUpdated: "{source} から {count} 件の新しいメッセージを追加しました。",
       sourceUpToDate: "{source} の会話はすでに最新です。",
       importedSourcePartial: "一部の {source} の会話をインポートできませんでした。",
@@ -3471,8 +3305,7 @@ export const ja = {
       title: "データ",
       backToData: "データに戻る",
       exportFailed: "チャットをエクスポートできませんでした",
-      description:
-        "このデバイスに保存されているチャット履歴とアップロード済みファイルを管理します。",
+      description: "このデバイスに保存されているチャット履歴とアップロード済みファイルを管理します。",
       manageFiles: {
         label: "ファイルを管理",
         description: "画像、動画、音声、ファイルを検索、並べ替え、整理します。",
@@ -3490,30 +3323,24 @@ export const ja = {
       exportArchivedChats: "エクスポート",
       exportingArchivedChats: "エクスポート中...",
       exportedOneArchivedChat: "アーカイブ済みチャット 1 件をエクスポートしました",
-      exportedArchivedChatCount:
-        "アーカイブ済みチャット {count} 件をエクスポートしました",
+      exportedArchivedChatCount: "アーカイブ済みチャット {count} 件をエクスポートしました",
       noArchivedChatsToExport: "エクスポートできるアーカイブ済みチャットはありません。",
-      failedToExportArchivedChats:
-        "アーカイブ済みチャットをエクスポートできませんでした",
+      failedToExportArchivedChats: "アーカイブ済みチャットをエクスポートできませんでした",
       archiveAllChats: "すべてのチャットをアーカイブ",
-      archiveAllChatsDescription:
-        "履歴とプロジェクトにあるすべてのチャットをアーカイブに移動します。",
+      archiveAllChatsDescription: "履歴とプロジェクトにあるすべてのチャットをアーカイブに移動します。",
       noChatsToArchive: "アーカイブできるチャットはありません。",
       archiveAllAction: "すべてアーカイブ",
       archivingAction: "アーカイブ中...",
       archiveAllChatsTitle: "すべてのチャットをアーカイブしますか？",
-      archiveAllChatsConfirmDescription:
-        "このデバイスのすべてのチャットをアーカイブに移動します。アーカイブ済みのチャットは引き続き利用でき、いつでもアーカイブから戻せます。",
+      archiveAllChatsConfirmDescription: "このデバイスのすべてのチャットをアーカイブに移動します。アーカイブ済みのチャットは引き続き利用でき、いつでもアーカイブから戻せます。",
       archivedAllChats: "すべてのチャットをアーカイブしました",
       archivedOneChat: "チャット 1 件をアーカイブしました",
       archivedChatCount: "チャット {count} 件をアーカイブしました",
       failedToArchiveChats: "チャットをアーカイブできませんでした",
       confirmBeforeDeleting: "削除前に確認する",
-      confirmBeforeDeletingDescription:
-        "チャットを削除する前に確認を求めます。オフにすると即座に削除します。",
+      confirmBeforeDeletingDescription: "チャットを削除する前に確認を求めます。オフにすると即座に削除します。",
       alwaysDeleteFiles: "常にファイルを削除",
-      alwaysDeleteFilesDescription:
-        "チャットを削除すると、そのチャット専用のサンドボックスフォルダーもディスクから削除されます。プロジェクト内で作成したファイルは、そのプロジェクトのワークスペースに残ります。",
+      alwaysDeleteFilesDescription: "チャットを削除すると、そのチャット専用のサンドボックスフォルダーもディスクから削除されます。プロジェクト内で作成したファイルは、そのプロジェクトのワークスペースに残ります。",
       chatsSection: "チャットとアーカイブ",
       transferSection: "インポートとエクスポート",
       deletionSection: "削除",
@@ -3531,15 +3358,12 @@ export const ja = {
       deleteAllAction: "すべて削除",
       deleteChatsOnly: "チャットのみ削除…",
       deleteChatsAndSandboxes: "チャットとサンドボックスを削除…",
-      deleteSandboxFilesDescription:
-        "各チャットのサンドボックスフォルダーとその中のファイルも削除します。プロジェクトのワークスペース内のファイルは保持されます。",
+      deleteSandboxFilesDescription: "各チャットのサンドボックスフォルダーとその中のファイルも削除します。プロジェクトのワークスペース内のファイルは保持されます。",
       filesSection: "ファイル",
       uploadedFiles: "アップロード済みファイル",
-      uploadedFilesDescription:
-        "チャット、プロジェクト、ナレッジベースにアップロードしたファイルを表示・管理します。",
+      uploadedFilesDescription: "チャット、プロジェクト、ナレッジベースにアップロードしたファイルを表示・管理します。",
       fineTuneExport: "チャットを学習データとして使う",
-      fineTuneExportDescription:
-        "チャットからファインチューニング用の JSONL データセットを作成します。トレーニングで読み込む、レシピで調整する、そのままエクスポートする、のいずれも可能です。",
+      fineTuneExportDescription: "チャットからファインチューニング用の JSONL データセットを作成します。トレーニングで読み込む、レシピで調整する、そのままエクスポートする、のいずれも可能です。",
       fineTuneExportAction: "JSONL をエクスポート",
       fineTuneRunAction: "実行",
       fineTuneExportingAction: "エクスポート中...",
@@ -3549,8 +3373,7 @@ export const ja = {
       fineTuneTrainingAction: "読み込み中...",
       fineTuneExportFailed: "学習データをエクスポートできませんでした",
       fineTuneRecipeFailed: "チャットをレシピで開けませんでした",
-      fineTuneTrainFailed:
-        "トレーニングタブにデータセットを読み込めませんでした",
+      fineTuneTrainFailed: "トレーニングタブにデータセットを読み込めませんでした",
     },
     connections: {
       title: "接続",
@@ -3558,8 +3381,7 @@ export const ja = {
     },
     remoteLan: {
       title: "リモートとLAN",
-      description:
-        "ローカルネットワークまたは一時的な公開URLを介して、他のデバイスからこのUnslothにアクセスできます。",
+      description: "ローカルネットワークまたは一時的な公開URLを介して、他のデバイスからこのUnslothにアクセスできます。",
     },
     mcp: {
       title: "Unsloth MCP",
@@ -3573,8 +3395,7 @@ export const ja = {
         allTools: "すべてのツール",
         selectAll: "すべて選択",
         selectNone: "選択なし",
-        description:
-          "オンにしたツールはすべて、エージェントが開始前に読む内容に加わります。使わないものはオフにしてください。オフのツールはエージェントに見えず、呼び出しも拒否されます。接続済みのエージェントには再接続時に反映されます。",
+        description: "オンにしたツールはすべて、エージェントが開始前に読む内容に加わります。使わないものはオフにしてください。オフのツールはエージェントに見えず、呼び出しも拒否されます。接続済みのエージェントには再接続時に反映されます。",
         saveError: "Unsloth MCP のツール設定を保存できませんでした。",
         groups: {
           models: "モデル",
@@ -3714,9 +3535,9 @@ export const ja = {
       regenerateAction: "再生成",
       regenerating: "再生成中...",
       regenerateError: "アクセストークンを再生成できませんでした。",
-      revokeTitle: 'アクセストークン "{name}" を失効させますか？',
+      revokeTitle: "アクセストークン \"{name}\" を失効させますか？",
       revokeDescription: "このトークンを使用しているアプリはすぐにアクセスできなくなります。この操作は取り消せません。",
-      revokeAction: '"{name}" を失効',
+      revokeAction: "\"{name}\" を失効",
       revoking: "失効中...",
       audioApi: {
         title: "オーディオ API",
@@ -3730,8 +3551,7 @@ export const ja = {
         music: "音楽",
         edit: "編集",
         placeholderModel: "この例を実行できるダウンロード済みモデルがまだないため、表示中のモデルは仮のものです。先にオーディオページでモデルをダウンロードしてください。",
-        autoSwitchOff:
-          "モデルの自動切り替えがオンのときだけ、名前でモデルが読み込まれます。オンにするか、先にそのモデルをオーディオページで読み込んでください。",
+        autoSwitchOff: "モデルの自動切り替えがオンのときだけ、名前でモデルが読み込まれます。オンにするか、先にそのモデルをオーディオページで読み込んでください。",
         useViaApi: "API で使う",
       },
       mediaApi: {
@@ -3778,10 +3598,8 @@ export const ja = {
         deviceGpu: "GPU",
         backend: "ランタイム",
         backendAuto: "自動",
-        backendDescription:
-          "自動では、モデルに GGUF ビルドがあれば Clef を llama.cpp で提供し、なければ PyTorch に切り替えます。llama.cpp は画像も読み取れます。",
-        backendDescriptionMlx:
-          "自動では、Apple Silicon 上で Clef を MLX で提供し、モデルの GGUF ビルドだけが読み込み済みまたはダウンロード済みの場合は llama.cpp で提供します。MLX は Clef モデルでのみ画像を読み取り、llama.cpp は画像も読み取れます。",
+        backendDescription: "自動では、モデルに GGUF ビルドがあれば Clef を llama.cpp で提供し、なければ PyTorch に切り替えます。llama.cpp は画像も読み取れます。",
+        backendDescriptionMlx: "自動では、Apple Silicon 上で Clef を MLX で提供し、モデルの GGUF ビルドだけが読み込み済みまたはダウンロード済みの場合は llama.cpp で提供します。MLX は Clef モデルでのみ画像を読み取り、llama.cpp は画像も読み取れます。",
         backendStatus: "ランタイム: {backend}",
         backendNone: "利用不可",
         mediaImages: "テキストと画像を読み取ります。",
@@ -3797,8 +3615,7 @@ export const ja = {
         download: "ダウンロード",
         downloadConfirmTitle: "Laya {model} をダウンロードしますか？",
         downloadConfirmTitleModel: "{model} をダウンロードしますか？",
-        downloadConfirmBody:
-          "Decision API がリクエストに応答するにはこのモデルが必要です。約 {size}、Hugging Face キャッシュに一度だけダウンロードされます。",
+        downloadConfirmBody: "Decision API がリクエストに応答するにはこのモデルが必要です。約 {size}、Hugging Face キャッシュに一度だけダウンロードされます。",
         unload: "アンロード",
         downloadBusy: "判定 API のモデルはすでにダウンロード中です。",
         downloadFailed: "ダウンロードを開始できませんでした。",
@@ -3823,8 +3640,7 @@ export const ja = {
         configFileHint: "これを {path} に追加してください。",
         keywords: "mcp model context protocol agents claude codex tools エージェント ツール モデルコンテキストプロトコル",
       },
-      usageNoModel:
-        "モデルを読み込むかダウンロードすると、実行できる例が表示されます。このサーバーにはまだ指定できるモデルがありません。",
+      usageNoModel: "モデルを読み込むかダウンロードすると、実行できる例が表示されます。このサーバーにはまだ指定できるモデルがありません。",
     },
     about: {
       title: "情報",
@@ -3898,28 +3714,21 @@ export const ja = {
         pullThenUpdate: "最新の変更をプルしてから、ローカルインストーラーを実行してください:",
         gitPullCommand: "git pull コマンド",
         localInstallerCommand: "ローカルインストーラーコマンド",
-        sourceInstallDetected:
-          "ソースまたは VCS パッケージからのインストールが検出されました。元のローカルパスまたは Git URL から再インストールしてください。",
+        sourceInstallDetected: "ソースまたは VCS パッケージからのインストールが検出されました。元のローカルパスまたは Git URL から再インストールしてください。",
         repoCheckoutFallback: "リポジトリが手元に残っている場合は、そこからローカルインストーラーを実行してください:",
         restartAfterUpdate: "アップデート後に Unsloth を再起動してください。",
         desktopReady: "デスクトップアプリのアップデート",
-        desktopReadyDescription:
-          "新しいバージョンのデスクトップアプリが利用可能か確認します。",
+        desktopReadyDescription: "新しいバージョンのデスクトップアプリが利用可能か確認します。",
         desktopChecking: "アップデートを確認中",
         desktopCheckingDescription: "通常は数秒で完了します。",
         desktopAvailable: "デスクトップアプリ {version} を利用できます",
-        desktopAvailableDescription:
-          "今すぐアップデートします。完了するとデスクトップアプリが再起動します。",
-        desktopExternalServer:
-          "このアプリが起動していないポート {port} の Unsloth サーバー（ターミナルで実行した `unsloth studio` など）に接続しています。起動した場所で停止してから、アプリを終了して再度開き、更新してください。",
-        desktopManualInstall:
-          "リリースページを開き、最新の Linux パッケージをインストールしてください。",
+        desktopAvailableDescription: "今すぐアップデートします。完了するとデスクトップアプリが再起動します。",
+        desktopExternalServer: "このアプリが起動していないポート {port} の Unsloth サーバー（ターミナルで実行した `unsloth studio` など）に接続しています。起動した場所で停止してから、アプリを終了して再度開き、更新してください。",
+        desktopManualInstall: "リリースページを開き、最新の Linux パッケージをインストールしてください。",
         desktopCheckFailed: "アップデートを確認できませんでした",
-        desktopCheckFailedDescription:
-          "接続を確認して、もう一度お試しください。",
+        desktopCheckFailedDescription: "接続を確認して、もう一度お試しください。",
         desktopCurrent: "デスクトップアプリは最新です",
-        desktopCurrentDescription:
-          "Unsloth は今後も自動的にアップデートを確認します。",
+        desktopCurrentDescription: "Unsloth は今後も自動的にアップデートを確認します。",
         checkForUpdates: "アップデートを確認",
         checkAgain: "もう一度確認",
         retryCheck: "再試行",
@@ -3927,8 +3736,7 @@ export const ja = {
         updateNow: "今すぐアップデート",
         openReleasePage: "リリースページを開く",
         unknownInstall: "Unsloth がどのようにインストールされたか検出できませんでした。インストーラーまたは PyPI インストールの場合は、上記のコマンドを使用してください。",
-        localCheckout:
-          "ローカルチェックアウトからインストールした場合は、そのチェックアウトでローカルインストーラーを実行してください:",
+        localCheckout: "ローカルチェックアウトからインストールした場合は、そのチェックアウトでローカルインストーラーを実行してください:",
         docs: "インストールガイド:",
         docsInstall: "インストール",
         docsUpdating: "アップデート方法",
@@ -3945,8 +3753,7 @@ export const ja = {
     imageTraining: "画像トレーニング",
     goToImageTraining: "画像 LoRA をトレーニング",
     routeTitle: "トレーニング",
-    cpuTrainingNotice:
-      "GPU が見つからないため、トレーニングは CPU で実行されます。GPU でのトレーニングよりも大幅に遅く、テキストモデル (LoRA またはフルファインチューニング) のみに対応しています。",
+    cpuTrainingNotice: "GPU が見つからないため、トレーニングは CPU で実行されます。GPU でのトレーニングよりも大幅に遅く、テキストモデル (LoRA またはフルファインチューニング) のみに対応しています。",
     wizard: {
       modelTitle: "モデル",
       modelDescription: "モデルとトレーニング方法を選択",
@@ -3962,16 +3769,13 @@ export const ja = {
       modelTooltip: "ファインチューニングするベースモデルです。",
       methodTooltip: "モデルの学習方法です。LoRA と QLoRA はすべての重みではなく小さなアダプターを更新します。",
       trainAsLabel: "学習タイプ",
-      trainAsTooltip:
-        "言語モデルはテキストを生成します。意思決定モデルは指定した選択肢から確率付きで1つを選び、Decision API で動作します。",
+      trainAsTooltip: "言語モデルはテキストを生成します。意思決定モデルは指定した選択肢から確率付きで1つを選び、Decision API で動作します。",
       trainAsLanguage: "言語モデル",
       trainAsDecision: "意思決定モデル",
       checkpointLabel: "チェックポイント",
-      checkpointTooltip:
-        "ファインチューニングする Laya のチェックポイントです。多くのデータセットには多言語が適しています。",
+      checkpointTooltip: "ファインチューニングする Laya のチェックポイントです。多くのデータセットには多言語が適しています。",
       datasetTooltip: "モデルのファインチューニングに使う学習データです。",
-      hfTokenDescription:
-        "アクセス制限付きまたは非公開のモデルとデータセットに必要です。",
+      hfTokenDescription: "アクセス制限付きまたは非公開のモデルとデータセットに必要です。",
       uploadLocalLabel: "ローカルファイルをアップロード",
       sourceBrowse: "参照",
       releaseToUpload: "ドロップしてアップロード",
@@ -3979,11 +3783,9 @@ export const ja = {
       saveYaml: "YAML を保存",
       resetDefaults: "デフォルトに戻す",
       cachedModelGoneTitle: "キャッシュ済みモデルを利用できません",
-      cachedModelGoneDescription:
-        "モデルファイルがこのデバイス上に存在しないため、トレーニング時に再度ダウンロードします。",
+      cachedModelGoneDescription: "モデルファイルがこのデバイス上に存在しないため、トレーニング時に再度ダウンロードします。",
       cachedDatasetGoneTitle: "キャッシュ済みデータセットを利用できません",
-      cachedDatasetGoneDescription:
-        "データセットファイルがこのデバイス上に存在しないため、トレーニング時に再度ダウンロードします。",
+      cachedDatasetGoneDescription: "データセットファイルがこのデバイス上に存在しないため、トレーニング時に再度ダウンロードします。",
     },
     preview: {
       title: "実行プレビュー",
@@ -4019,23 +3821,17 @@ export const ja = {
       dataset: "データセット",
       downloadsOnStart: "開始時にダウンロード",
       continuesOnStart: "開始時にダウンロードを再開",
-      noticeModelDownload:
-        "このモデルはまだデバイス上にありません。トレーニング時に自動でダウンロードします。",
-      noticeModelPartial:
-        "トレーニングでは、モデルを読み込む前に未完了のダウンロードを完了します。",
-      noticeDatasetDownload:
-        "このデータセットはまだデバイス上にありません。トレーニング時に自動でダウンロードします。",
-      noticeDatasetPartial:
-        "トレーニングでは、データセットを読み込む前に未完了のダウンロードを完了します。",
-      noticeTransformersUpgrade:
-        "インストール済みの transformers はこのアーキテクチャに未対応です。実行を開始すると、まず transformers {version} のインストールを確認します。",
-      noticeSixteenBitOnly:
-        "このアーキテクチャは 16 ビット LoRA で学習します。4 ビットは利用できないため、QLoRA より大幅に多い VRAM が必要です。",
-      noticeInstallSwitchesSixteenBit:
-        "モデル独自のコードを使う代わりにそのリリースをインストールすると、この実行は 16 ビット LoRA に切り替わり、QLoRA より大幅に多い VRAM が必要になります。",
+      noticeModelDownload: "このモデルはまだデバイス上にありません。トレーニング時に自動でダウンロードします。",
+      noticeModelPartial: "トレーニングでは、モデルを読み込む前に未完了のダウンロードを完了します。",
+      noticeDatasetDownload: "このデータセットはまだデバイス上にありません。トレーニング時に自動でダウンロードします。",
+      noticeDatasetPartial: "トレーニングでは、データセットを読み込む前に未完了のダウンロードを完了します。",
+      noticeTransformersUpgrade: "インストール済みの transformers はこのアーキテクチャに未対応です。実行を開始すると、まず transformers {version} のインストールを確認します。",
+      noticeSixteenBitOnly: "このアーキテクチャは 16 ビット LoRA で学習します。4 ビットは利用できないため、QLoRA より大幅に多い VRAM が必要です。",
+      noticeInstallSwitchesSixteenBit: "モデル独自のコードを使う代わりにそのリリースをインストールすると、この実行は 16 ビット LoRA に切り替わり、QLoRA より大幅に多い VRAM が必要になります。",
       advancedSettings: "詳細設定",
       defaultAdvancedSettings: "デフォルト",
       nonDefaultAdvancedSettings: "デフォルト以外の設定: {count} 件",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "データセット",
@@ -4049,20 +3845,16 @@ export const ja = {
       sourceLocal: "ローカル",
       scanningLocal: "このデバイス上のデータセットをスキャン中…",
       couldntScan: "ローカルデータセットをスキャンできませんでした",
-      someLocationsUnscanned:
-        "一部のデータセット保存場所をスキャンできませんでした。",
-      noLocalDatasets:
-        "このデバイスにはまだデータセットがありません。Hub からダウンロードするか、レシピで作成するか、ファイルをアップロードしてください。",
+      someLocationsUnscanned: "一部のデータセット保存場所をスキャンできませんでした。",
+      noLocalDatasets: "このデバイスにはまだデータセットがありません。Hub からダウンロードするか、レシピで作成するか、ファイルをアップロードしてください。",
       openDataRecipes: "データレシピを開く",
       searchingHub: "Hugging Face を検索中…",
       noDatasetsFound: "データセットが見つかりません。",
       tokenRejectedTitle: "Hugging Face トークンが拒否されました",
-      tokenRejectedBody:
-        "「設定」→「一般」でトークンを更新してから、再試行してください。",
+      tokenRejectedBody: "「設定」→「一般」でトークンを更新してから、再試行してください。",
       hubUnreachable: "Hugging Face に接続できませんでした",
       cantUseDataset: "データセットを使用できません",
-      reasonInvalidHubId:
-        "有効な Hugging Face データセット ID を入力してください。形式は repo または owner/repo で、ピリオドやハイフンを連続させず、末尾に .git を付けないでください（各部分は最大 96 文字）。",
+      reasonInvalidHubId: "有効な Hugging Face データセット ID を入力してください。形式は repo または owner/repo で、ピリオドやハイフンを連続させず、末尾に .git を付けないでください（各部分は最大 96 文字）。",
     },
     modelPicker: {
       noun: "モデル",
@@ -4081,32 +3873,23 @@ export const ja = {
       sourceLocalModel: "ローカルモデル",
       scanningLocal: "ローカルモデルをスキャン中…",
       couldntScan: "ローカルモデルをスキャンできませんでした",
-      someLocationsUnscanned:
-        "一部のローカル保存場所をスキャンできませんでした。",
+      someLocationsUnscanned: "一部のローカル保存場所をスキャンできませんでした。",
       noLocalModels: "ローカルモデルが見つかりません。",
-      noLocalModelsHint:
-        "上にフォルダパスを貼り付けるか、Hugging Face に切り替えてください。",
+      noLocalModelsHint: "上にフォルダパスを貼り付けるか、Hugging Face に切り替えてください。",
       searchingHub: "Hugging Face を検索中…",
       noModelsFound: "モデルが見つかりません。",
       tokenRejectedTitle: "Hugging Face トークンが拒否されました",
-      tokenRejectedBody:
-        "「設定」→「一般」でトークンを更新してから、再試行してください。",
-      tokenRejectedAnonymousBody:
-        "公開モデルはトークンなしで表示しています。非公開モデルやアクセス制限付きモデルを使うには、「設定」→「一般」でトークンを更新してください。",
+      tokenRejectedBody: "「設定」→「一般」でトークンを更新してから、再試行してください。",
+      tokenRejectedAnonymousBody: "公開モデルはトークンなしで表示しています。非公開モデルやアクセス制限付きモデルを使うには、「設定」→「一般」でトークンを更新してください。",
       hubUnreachable: "Hugging Face に接続できませんでした",
       cantUseModel: "このモデルはトレーニングに使用できません",
-      reasonTypeMismatch:
-        "このモデルは、前のステップで選択したトレーニングタイプと一致しません。",
-      reasonInvalidHubId:
-        "有効な Hugging Face モデル ID を入力してください。形式は repo または owner/repo で、ピリオドやハイフンを連続させず、末尾に .git を付けないでください（各部分は最大 96 文字）。",
+      reasonTypeMismatch: "このモデルは、前のステップで選択したトレーニングタイプと一致しません。",
+      reasonInvalidHubId: "有効な Hugging Face モデル ID を入力してください。形式は repo または owner/repo で、ピリオドやハイフンを連続させず、末尾に .git を付けないでください（各部分は最大 96 文字）。",
       reasonEmptyId: "モデル ID またはローカルモデルのパスを入力してください。",
       reasonGguf: "GGUF モデルはトレーニングに使用できません。",
-      reasonAdapter:
-        "アダプターの出力はベーストレーニングモデルとして使用できません。",
-      reasonNotTrainable:
-        "このデバイス上のモデルはトレーニングできません。",
-      reasonUnsupportedFormat:
-        "このモデル形式はトレーニングでサポートされていません。",
+      reasonAdapter: "アダプターの出力はベーストレーニングモデルとして使用できません。",
+      reasonNotTrainable: "このデバイス上のモデルはトレーニングできません。",
+      reasonUnsupportedFormat: "このモデル形式はトレーニングでサポートされていません。",
       vramNeeds: "約 {est}GB VRAM が必要 (GPU: {total}GiB)",
       vramTight: "約 {est}GB VRAM (GPU {total}GiB ではギリギリです)",
       vramApprox: "約 {est}GB VRAM",
@@ -4126,8 +3909,7 @@ export const ja = {
       },
       full: {
         label: "フルファインチューニング",
-        hint:
-          "すべての重みをトレーニングします。最高品質ですが、最も多くの VRAM が必要です。",
+        hint: "すべての重みをトレーニングします。最高品質ですが、最も多くの VRAM が必要です。",
         note: "fp16",
       },
       cpt: {
@@ -4135,17 +3917,29 @@ export const ja = {
         hint: "新しいドメインや言語向けに事前学習を継続します。",
         note: "継続",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "設定とトレーニングの開始",
       trainingInProgress: "トレーニング進行中",
       viewPastRuns: "過去のトレーニング実行を表示",
       viewingPastRun: "過去の実行を表示中",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "設定",
       currentRun: "現在の実行",
       history: "履歴",
+      compare: "Compare",
     },
     loadingRuntime: "トレーニングランタイムを読み込み中...",
     checkingSupport: "このマシンのトレーニング対応を確認しています...",
@@ -4157,15 +3951,13 @@ export const ja = {
         trainSplit: "学習用分割",
         trainSplitTooltip: "学習に使用する分割を選択します。",
         evaluationSplit: "評価用分割",
-        evaluationSplitTooltip:
-          "評価に使用する分割を選択します。「なし」を選ぶと学習中に評価を行いません。",
+        evaluationSplitTooltip: "評価に使用する分割を選択します。「なし」を選ぶと学習中に評価を行いません。",
         selectSubset: "サブセットを選択...",
         selectSplit: "分割を選択...",
         none: "なし",
         loading: "データセットの設定と分割を読み込んでいます...",
         manualTitle: "データセットのオプションを手動で入力",
-        manualDescription:
-          "使用する Hugging Face の設定名と分割名を正確に入力してください。",
+        manualDescription: "使用する Hugging Face の設定名と分割名を正確に入力してください。",
         manualSubsetPlaceholder: "設定名（任意）",
         manualRequired: "学習用分割は必須です。",
         manualTooLong: "128 文字以内で入力してください。",
@@ -4185,16 +3977,13 @@ export const ja = {
       uploading: "アップロード中...",
       uploadEvalFile: "評価ファイルをアップロード",
       fileTooLarge: "ファイルが大きすぎます",
-      fileTooLargeDescription:
-        "{file} のサイズは {size} です。トレーニング用アップロードの上限は {limit} です。",
+      fileTooLargeDescription: "{file} のサイズは {size} です。トレーニング用アップロードの上限は {limit} です。",
       documentRedirect: {
         title: "このファイルは先に変換する必要があります",
         genericFile: "このファイル",
-        description:
-          "{file} は素材であり、そのままトレーニングできるデータセットではありません。Data Recipes で文書をデータセットに変換してから、ここに戻ってファインチューニングしてください。",
+        description: "{file} は素材であり、そのままトレーニングできるデータセットではありません。Data Recipes で文書をデータセットに変換してから、ここに戻ってファインチューニングしてください。",
         nextStepTitle: "おすすめの次のステップ",
-        nextStepDescription:
-          "Learning Recipes を開き、PDF grounded QA などの文書ベースのレシピから始めます。",
+        nextStepDescription: "Learning Recipes を開き、PDF grounded QA などの文書ベースのレシピから始めます。",
         openAction: "Learning Recipes を開く",
       },
       evalDatasetDescription: "オプション。提供されない場合は、トレーニングデータから一部が自動的に分割されます。",
@@ -4204,44 +3993,31 @@ export const ja = {
       streamingInfoAriaLabel: "データセットストリーミングの情報",
       streaming: {
         label: "ストリーミングを有効化",
-        description:
-          "Hugging Face のテキストデータセットをダウンロードせずにストリーミングします。",
+        description: "Hugging Face のテキストデータセットをダウンロードせずにストリーミングします。",
         unavailable: "ストリーミングを利用できません。有効にするには:",
-        completionsUnavailable:
-          "データセットのストリーミングが有効な間は利用できません。",
+        completionsUnavailable: "データセットのストリーミングが有効な間は利用できません。",
         blockers: {
-          source:
-            "Hugging Face データセットを使用してください（ローカルアップロードや S3 ソースは使用できません）。",
-          maxSteps:
-            "最大ステップ数を 0 より大きく設定してください。ストリーミングデータセットの長さは事前に分かりません。",
-          trainOnCompletions:
-            "「アシスタントの応答のみ学習」をオフにしてください。",
-          evalSplit:
-            "個別の評価用分割を選択してください。評価は有効ですが、トレーニング用とは別の評価用分割が設定されていません。",
+          source: "Hugging Face データセットを使用してください（ローカルアップロードや S3 ソースは使用できません）。",
+          maxSteps: "最大ステップ数を 0 より大きく設定してください。ストリーミングデータセットの長さは事前に分かりません。",
+          trainOnCompletions: "「アシスタントの応答のみ学習」をオフにしてください。",
+          evalSplit: "個別の評価用分割を選択してください。評価は有効ですが、トレーニング用とは別の評価用分割が設定されていません。",
           visionModel: "ビジョンモデルはストリーミングをサポートしていません。",
           audioModel: "オーディオモデルはストリーミングをサポートしていません。",
-          embeddingModel:
-            "埋め込みモデルはストリーミングをサポートしていません（トレーニングにはデータセット全体が必要です）。",
-          imageDataset:
-            "このデータセットには画像が含まれているように見えるため、ストリーミングできません。",
-          audioDataset:
-            "このデータセットには音声が含まれているように見えるため、ストリーミングできません。",
+          embeddingModel: "埋め込みモデルはストリーミングをサポートしていません（トレーニングにはデータセット全体が必要です）。",
+          imageDataset: "このデータセットには画像が含まれているように見えるため、ストリーミングできません。",
+          audioDataset: "このデータセットには音声が含まれているように見えるため、ストリーミングできません。",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "アシスタントの応答のみ学習",
           evaluation: "評価（個別の評価用分割が必要）",
         },
         notifications: {
-          disabledForDetectedModality:
-            "画像または音声データセットは全体をダウンロードする必要があるため、ストリーミングをオフにしました。設定を確認してから、もう一度トレーニングを開始してください。",
-          turnedOffMaxSteps:
-            "ストリーミングをオフにしました。ストリーミングには 0 より大きい固定の最大ステップ数が必要です。",
-          adjusted:
-            "ストリーミング向けに設定を調整しました。互換性のないオプションを無効にしました: {options}。",
-          needsMaxSteps:
-            "ストリーミングには固定の最大ステップ数が必要です（ストリーミングデータセットの長さは事前に分かりません）。先に最大ステップ数を 0 より大きく設定してください。",
-          enabledAdjusted:
-            "ストリーミングを有効にしました。互換性のないオプションを無効にしました: {options}。",
+          disabledForDetectedModality: "画像または音声データセットは全体をダウンロードする必要があるため、ストリーミングをオフにしました。設定を確認してから、もう一度トレーニングを開始してください。",
+          turnedOffMaxSteps: "ストリーミングをオフにしました。ストリーミングには 0 より大きい固定の最大ステップ数が必要です。",
+          adjusted: "ストリーミング向けに設定を調整しました。互換性のないオプションを無効にしました: {options}。",
+          needsMaxSteps: "ストリーミングには固定の最大ステップ数が必要です（ストリーミングデータセットの長さは事前に分かりません）。先に最大ステップ数を 0 より大きく設定してください。",
+          enabledAdjusted: "ストリーミングを有効にしました。互換性のないオプションを無効にしました: {options}。",
         },
       },
       auto: "自動",
@@ -4294,8 +4070,7 @@ export const ja = {
       evalDatasetUploaded: "評価データセットをアップロードしました",
       uploadOneFileAtATime: "一度に1つのファイルのみアップロードできます",
       uploadSingleFileDescription: "トレーニングデータセットのアップロードは単一のファイルのみ受け付けます。",
-      previewLoadingHuggingFace:
-        "Hugging Face からデータセットのプレビューを取得しています...",
+      previewLoadingHuggingFace: "Hugging Face からデータセットのプレビューを取得しています...",
       previewLoading: "プレビューを読み込んでいます...",
       mappingRequirements: {
         audioAndText: "音声とテキスト",
@@ -4308,12 +4083,9 @@ export const ja = {
         heuristicTitle: "ヒューリスティックで検出されたマッピング",
         readyTitle: "マッピングの準備完了",
         requiredTitle: "データセット列をマッピング",
-        heuristicDescription:
-          "ヒューリスティックを使用して、以下の列マッピングを自動検出しました。列ヘッダーのドロップダウンで確認・調整するか、AI アシストを使用してより適切にマッピングしてください。",
-        readyDescription:
-          "問題ありません。このデータセットは自動的に変換されます。",
-        requiredDescription:
-          "ヘッダーのドロップダウンを使用して列にロールを割り当ててください。少なくとも {required} を割り当てる必要があります。",
+        heuristicDescription: "ヒューリスティックを使用して、以下の列マッピングを自動検出しました。列ヘッダーのドロップダウンで確認・調整するか、AI アシストを使用してより適切にマッピングしてください。",
+        readyDescription: "問題ありません。このデータセットは自動的に変換されます。",
+        requiredDescription: "ヘッダーのドロップダウンを使用して列にロールを割り当ててください。少なくとも {required} を割り当てる必要があります。",
       },
       s3: {
         title: "S3 構成",
@@ -4370,8 +4142,7 @@ export const ja = {
       learningRateTooltip: "重み更新のステップサイズ。低い値ほど学習は遅くなりますが安定します。",
       learningRateDescription: "推奨値: LoRAは2e-4、CPTは5e-5、フルファインチューニングは2e-5",
       embeddingLearningRate: "埋め込み学習率",
-      embeddingLearningRateTooltip:
-        "CPT が embed_tokens をトレーニングする場合にのみ使用されます。埋め込みは LoRA の重みよりも不安定になりやすいため、通常はより小さな学習率が必要です。空のままにすると lr/10 が使用されます。一般的にはメインの学習率の 1/2～1/10 が目安です。語彙やドメイン固有トークンの適応が遅すぎる場合にのみ増やしてください。",
+      embeddingLearningRateTooltip: "CPT が embed_tokens をトレーニングする場合にのみ使用されます。埋め込みは LoRA の重みよりも不安定になりやすいため、通常はより小さな学習率が必要です。空のままにすると lr/10 が使用されます。一般的にはメインの学習率の 1/2～1/10 が目安です。語彙やドメイン固有トークンの適応が遅すぎる場合にのみ増やしてください。",
       rank: "Rank",
       rankTooltip: "低ランク行列の次元数。高いほど表現能力が向上します。",
       alpha: "Alpha",
@@ -4424,8 +4195,7 @@ export const ja = {
       evalSteps: "評価ステップ間隔",
       evalStepsTooltip: "評価を行う間隔を、総トレーニングステップに対する割合 (0-1) で指定します。0 に設定すると評価が無効になります。例: 0.01 = ステップの 1% ごとに評価を実行。",
       earlyStoppingPatience: "早期終了の猶予回数",
-      earlyStoppingPatienceTooltip:
-        "評価ロスが下がらない評価がこの回数続いたらトレーニングを停止し、最良の評価時の重みを保持します。評価が必要です (評価ステップ間隔を 0 より大きく設定)。0 で無効になります。",
+      earlyStoppingPatienceTooltip: "評価ロスが下がらない評価がこの回数続いたらトレーニングを停止し、最良の評価時の重みを保持します。評価が必要です (評価ステップ間隔を 0 より大きく設定)。0 で無効になります。",
       seed: "シード値",
       seedTooltip: "再現性のための乱数シード。",
       offloadLayers: "レイヤーのオフロード",
@@ -4460,6 +4230,18 @@ export const ja = {
       enablePacking: "パッキングを有効化",
       assistantCompletionsOnly: "アシスタントの応答のみ学習",
       readMore: "詳細を読む",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "実行の複製に失敗しました",
@@ -4470,56 +4252,37 @@ export const ja = {
       loadingModel: "モデルを読み込み中...",
       checkingDataset: "データセットを確認中...",
       startFailed: "トレーニングの開始に失敗しました",
-      startUnconfirmed:
-        "トレーニングが開始されたか確認できませんでした。バックグラウンドで状態を確認しています。",
+      startUnconfirmed: "トレーニングが開始されたか確認できませんでした。バックグラウンドで状態を確認しています。",
       stopFailed: "トレーニングの停止に失敗しました",
       trainingStillActiveTitle: "トレーニングはまだ実行中です",
-      stopBeforeConfig:
-        "先にトレーニングを停止してから、設定画面に戻ってください。",
+      stopBeforeConfig: "先にトレーニングを停止してから、設定画面に戻ってください。",
       resumeFailed: "トレーニングの再開に失敗しました",
       resumeFailedTitle: "トレーニングを再開できませんでした",
-      resumeUnavailable:
-        "保存済みのチェックポイントがある、停止済みまたはエラー終了した実行のみ再開できます。",
+      resumeUnavailable: "保存済みのチェックポイントがある、停止済みまたはエラー終了した実行のみ再開できます。",
       chooseModel: "モデルを選択",
       chooseDataset: "データセットを選択",
       chooseModelAndDataset: "モデルとデータセットを選択",
-      modelUnverified:
-        "このモデルの設定を確認できませんでした。接続または Hugging Face トークンを確認してから、再試行してください。",
-      legacyDatasetScriptUnsupported:
-        "この Hub データセットは従来のカスタムスクリプトに依存しているため、このトレーニングフローではサポートされていません。",
-      hfModelAccessDenied:
-        "Hugging Face がこのモデルへのアクセスを拒否しました。リポジトリへのアクセス権を持つ有効な Hugging Face トークンを追加し、必要な利用条件に同意してから再試行してください。",
-      hfModelVerificationRateLimited:
-        "Hugging Face のモデル検証はレート制限されています。しばらくしてから再試行してください。",
-      hfModelVerificationFailed:
-        "Hugging Face モデルを検証できませんでした。リポジトリ ID とアクセストークンを確認してください。",
-      hfModelMetadataUnavailable:
-        "Hugging Face のモデルメタデータは一時的に利用できません。トレーニングを開始する前に再試行してください。",
-      datasetUnverified:
-        "データセットがこのモデルと互換性があるか確認できませんでした。接続または Hugging Face トークンを確認してください。トレーニング開始時にもう一度確認します。",
-      setupChanged:
-        "確認中にトレーニング設定が変更されました。設定を確認してから、トレーニングをもう一度開始してください。",
+      modelUnverified: "このモデルの設定を確認できませんでした。接続または Hugging Face トークンを確認してから、再試行してください。",
+      legacyDatasetScriptUnsupported: "この Hub データセットは従来のカスタムスクリプトに依存しているため、このトレーニングフローではサポートされていません。",
+      hfModelAccessDenied: "Hugging Face がこのモデルへのアクセスを拒否しました。リポジトリへのアクセス権を持つ有効な Hugging Face トークンを追加し、必要な利用条件に同意してから再試行してください。",
+      hfModelVerificationRateLimited: "Hugging Face のモデル検証はレート制限されています。しばらくしてから再試行してください。",
+      hfModelVerificationFailed: "Hugging Face モデルを検証できませんでした。リポジトリ ID とアクセストークンを確認してください。",
+      hfModelMetadataUnavailable: "Hugging Face のモデルメタデータは一時的に利用できません。トレーニングを開始する前に再試行してください。",
+      datasetUnverified: "データセットがこのモデルと互換性があるか確認できませんでした。接続または Hugging Face トークンを確認してください。トレーニング開始時にもう一度確認します。",
+      setupChanged: "確認中にトレーニング設定が変更されました。設定を確認してから、トレーニングをもう一度開始してください。",
       validation: {
-        s3MultimodalUnsupported:
-          "S3 データセットは、ビジョンのトレーニングではまだサポートされていません。",
+        s3MultimodalUnsupported: "S3 データセットは、ビジョンのトレーニングではまだサポートされていません。",
         s3BucketRequired: "先に S3 バケット名を入力してください。",
-        s3CredentialsRequired:
-          "S3 アクセスキーを指定するか、IAM ロールを有効にしてください。",
+        s3CredentialsRequired: "S3 アクセスキーを指定するか、IAM ロールを有効にしてください。",
         modelRequired: "先にベースモデルを選択してください。",
         learningRatePositive: "0 より大きい学習率を入力してください。",
-        embeddingLearningRateRange:
-          "0 より大きく 1 より小さい埋め込み学習率を入力してください。",
-        decisionColumnsMissing:
-          "判定モデルには state、questions、gold（または answers）列が必要です。不足している列: {columns}",
-        decisionOwnerOnly:
-          "判定モデルをファインチューニングできるのは Unsloth の所有者だけです。",
-        hfDatasetRequired:
-          "先に Hugging Face データセットを選択してください。",
-        hfDatasetSplitRequired:
-          "先に学習用分割を選択または入力してください。",
+        embeddingLearningRateRange: "0 より大きく 1 より小さい埋め込み学習率を入力してください。",
+        decisionColumnsMissing: "判定モデルには state、questions、gold（または answers）列が必要です。不足している列: {columns}",
+        decisionOwnerOnly: "判定モデルをファインチューニングできるのは Unsloth の所有者だけです。",
+        hfDatasetRequired: "先に Hugging Face データセットを選択してください。",
+        hfDatasetSplitRequired: "先に学習用分割を選択または入力してください。",
         localDatasetRequired: "先にローカルデータセットを選択してください。",
-        unsupportedDatasetSource:
-          "サポートされていないデータセットソースです。",
+        unsupportedDatasetSource: "サポートされていないデータセットソースです。",
       },
       uploadConfigTooltip: "保存された YAML 構成を読み込みます",
       saveConfigTooltip: "現在の構成を YAML としてダウンロードします",
@@ -4538,8 +4301,7 @@ export const ja = {
       continueAction: "トレーニングを続行",
       cancelAction: "トレーニングをキャンセル",
       stopTitle: "トレーニングを停止",
-      stopDescription:
-        "現在のトレーニング実行をどのように停止するか選択してください。「停止して保存」では後で再開できるチェックポイントが保存されますが、保存せずに停止した場合は再開できません。",
+      stopDescription: "現在のトレーニング実行をどのように停止するか選択してください。「停止して保存」では後で再開できるチェックポイントが保存されますが、保存せずに停止した場合は再開できません。",
       stopAction: "停止",
       stopping: "停止中...",
       stopAndSave: "停止して保存",
@@ -4548,23 +4310,19 @@ export const ja = {
       milestone: "マイルストーン",
       halfwayDone: "半分完了しました。トレーニングの進捗が 50% を超えました。",
       doneNextStep: "トレーニングが完了しました。次のステップ: ベースモデルとファインチューニング後の出力を比較します。",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "履歴",
       filesDeleted: "ファイルを削除しました",
       deleteArtifactsLabel: "ディスク上のアダプターファイルも削除",
-      deleteArtifactsDescription:
-        "保存済みのアダプターやチェックポイントを含む、この実行の出力フォルダを削除します。",
-      deleteArtifactsSharedNote:
-        "別の実行がこの出力フォルダを共有しています。このフォルダを使用する最後の実行が削除されるまで、ファイルは保持されます。",
-      artifactsKeptShared:
-        "実行を削除しました。別の実行が同じフォルダを使用しているため、アダプターファイルは保持されました。",
-      deleteArtifactsActiveError:
-        "進行中のトレーニングがこれらのファイルを使用しています。ファイルを削除する前にトレーニングを停止してください。",
-      deleteArtifactsFailed:
-        "実行は削除されましたが、関連ファイルを削除できませんでした。",
-      deleteArtifactsRetainedError:
-        "アダプターファイルを削除できなかったため、トレーニング実行は履歴に保持されました。",
+      deleteArtifactsDescription: "保存済みのアダプターやチェックポイントを含む、この実行の出力フォルダを削除します。",
+      deleteArtifactsSharedNote: "別の実行がこの出力フォルダを共有しています。このフォルダを使用する最後の実行が削除されるまで、ファイルは保持されます。",
+      artifactsKeptShared: "実行を削除しました。別の実行が同じフォルダを使用しているため、アダプターファイルは保持されました。",
+      deleteArtifactsActiveError: "進行中のトレーニングがこれらのファイルを使用しています。ファイルを削除する前にトレーニングを停止してください。",
+      deleteArtifactsFailed: "実行は削除されましたが、関連ファイルを削除できませんでした。",
+      deleteArtifactsRetainedError: "アダプターファイルを削除できなかったため、トレーニング実行は履歴に保持されました。",
       emptyDescription: "トレーニング実行がまだありません。「設定」タブで最初のトレーニングを開始してください。",
       loadError: "トレーニング実行の読み込みに失敗しました",
       deleteError: "トレーニング実行の削除に失敗しました。もう一度お試しください。",
@@ -4598,6 +4356,22 @@ export const ja = {
       copyPreviewLink: "プレビューリンクをコピー",
       previewLinkCopied: "プレビューリンクをコピーしました",
       previewLinkCopyFailed: "リンクをコピーできませんでした",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "チャート設定",
@@ -4693,6 +4467,9 @@ export const ja = {
         error: "エラー",
         stopped: "停止",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "準備完了",
@@ -4708,13 +4485,131 @@ export const ja = {
       dataset: "データセット",
       datasetStreaming: "データセット: ストリーミング（完全なダウンロードなし）",
       modelWeights: "モデルの重み",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "重み {model} + コンテキスト {context} = 使用可能な VRAM {budget} 中 {total}",
-    readoutWithSpec:
-      "重み {model} + KV {kv} + MTP 下書き {spec} = 使用可能な VRAM {budget} 中 {total}",
+    readout: "重み {model} + コンテキスト {context} = 使用可能な VRAM {budget} 中 {total}",
+    readoutWithSpec: "重み {model} + KV {kv} + MTP 下書き {spec} = 使用可能な VRAM {budget} 中 {total}",
     kvRate: "KV は事前確保、約 {rate}/トークン",
     oomLikely: "現在の設定ではメモリ不足になる可能性があります",
     tooLarge: "VRAM を超えるため CPU にオフロードされます。より小さい量子化の方が高速です",
@@ -4763,7 +4658,7 @@ export const ja = {
     importError: "スキルをインポートできませんでした",
     exportError: "スキルをエクスポートできませんでした",
     deleteTitle: "スキルを削除",
-    deleteDescription: '"{name}" と ~/.agents/skills 内のそのフォルダーの中身をすべて削除しますか？この操作は取り消せません。',
+    deleteDescription: "\"{name}\" と ~/.agents/skills 内のそのフォルダーの中身をすべて削除しますか？この操作は取り消せません。",
     search: "名前または説明でスキルを検索…",
     noMatch: "“{query}” に一致するスキルはありません",
     clearSearch: "検索をクリア",
@@ -4987,8 +4882,7 @@ export const ja = {
       modelEmpty: "別のモデルを選ぶには、Model Hub でダウンロードするか接続を追加してください。",
       modelMissing: "{model}（このデバイスにありません）",
       allowLoad: "離席中は自動で切り替える",
-      allowLoadHint:
-        "このタスクの時刻になり、Unsloth を 5 分間使っていない場合は、確認せずにこのモデルを読み込んでタスクを実行し、その後元のモデルに戻します。その時点で Unsloth を使用中か学習中の場合、実行はスキップされ、モデルはそのままです。オフにすると、読み込む前に Unsloth が確認します。",
+      allowLoadHint: "このタスクの時刻になり、Unsloth を 5 分間使っていない場合は、確認せずにこのモデルを読み込んでタスクを実行し、その後元のモデルに戻します。その時点で Unsloth を使用中か学習中の場合、実行はスキップされ、モデルはそのままです。オフにすると、読み込む前に Unsloth が確認します。",
       reasoning: "思考の深さ",
       reasoningDefault: "デフォルト",
       reasoningOff: "オフ",
@@ -5620,12 +5514,9 @@ export const ja = {
     currentPassword: "現在のパスワード",
     newPassword: "新しいパスワード",
     confirmPassword: "パスワードを確認",
-    setupCodeHint:
-      "初めてサインインしますか？管理者から受け取ったセットアップコードをパスワードとして貼り付けてください。",
-    ownerHint:
-      "インストールの所有者ですか？unsloth、または 設定 > アカウント に表示されているサインイン名でサインインしてください。",
-    currentSetupCodeHint:
-      "サインインに使ったセットアップコードを現在のパスワードとして貼り付けてください。",
+    setupCodeHint: "初めてサインインしますか？管理者から受け取ったセットアップコードをパスワードとして貼り付けてください。",
+    ownerHint: "インストールの所有者ですか？unsloth、または 設定 > アカウント に表示されているサインイン名でサインインしてください。",
+    currentSetupCodeHint: "サインインに使ったセットアップコードを現在のパスワードとして貼り付けてください。",
     minLength: "8 文字以上で入力してください。",
     ensureMatch: "パスワードが一致していることを確認してください。",
     noSpaces: "新しいパスワードにスペースは使用できません。",
@@ -5638,17 +5529,14 @@ export const ja = {
     continueAsOwner: "所有者として続行",
     signInWithUsername: "ユーザー名とパスワードでサインインしてください。",
     bootstrapping: "認証システムはまだデフォルトの管理者アカウントを初期化中です。",
-    signInToChange:
-      "パスワードを変更するには、初期設定の認証情報で一度サインインしてください。",
+    signInToChange: "パスワードを変更するには、初期設定の認証情報で一度サインインしてください。",
     alreadyUpdated: "パスワードは更新済みです。サインイン画面を使用してください。",
     busy: "Unsloth は処理中です。しばらくしてからもう一度お試しください。",
     updateFailed: "パスワードの更新に失敗しました。",
     loadFailed: "読み込みに失敗しました。",
     failed: "認証に失敗しました。",
-    shuttingDown:
-      "このインスタンスはシャットダウン中です。ネットワーク経由でアクセス可能な状態で、デフォルトのパスワードが一度も変更されなかったためです。",
-    shutdownCountdown:
-      "このインスタンスはネットワーク経由でアクセス可能で、デフォルトのパスワードのままのため、{time} 後にシャットダウンします。ここでパスワードを設定すると引き続き実行されます。",
+    shuttingDown: "このインスタンスはシャットダウン中です。ネットワーク経由でアクセス可能な状態で、デフォルトのパスワードが一度も変更されなかったためです。",
+    shutdownCountdown: "このインスタンスはネットワーク経由でアクセス可能で、デフォルトのパスワードのままのため、{time} 後にシャットダウンします。ここでパスワードを設定すると引き続き実行されます。",
   },
   routes: {
     chat: "チャット",
@@ -5662,21 +5550,15 @@ export const ja = {
     blockedTitle: "カスタムコードはブロックされました",
     enableTitle: "このモデルのカスタムコードを有効にしますか？",
     thisModel: "このモデル",
-    unsafeBody:
-      "{model} には、Hugging Face のセキュリティスキャンで安全でないと判定されたファイル（例: モデルの読み込み時にコードを実行する悪意のある pickle）が含まれています。このモデルは読み込めません。判定されたファイルはダウンロードされていません。",
-    unsafeBodyFromProvider:
-      "{provider} の {model} には、Hugging Face のセキュリティスキャンで安全でないと判定されたファイル（例: モデルの読み込み時にコードを実行する悪意のある pickle）が含まれています。このモデルは読み込めません。判定されたファイルはダウンロードされていません。",
+    unsafeBody: "{model} には、Hugging Face のセキュリティスキャンで安全でないと判定されたファイル（例: モデルの読み込み時にコードを実行する悪意のある pickle）が含まれています。このモデルは読み込めません。判定されたファイルはダウンロードされていません。",
+    unsafeBodyFromProvider: "{provider} の {model} には、Hugging Face のセキュリティスキャンで安全でないと判定されたファイル（例: モデルの読み込み時にコードを実行する悪意のある pickle）が含まれています。このモデルは読み込めません。判定されたファイルはダウンロードされていません。",
     customCode: "{model} はリポジトリ内でカスタム Python コードを宣言しています。{note}",
-    customCodeFromProvider:
-      "{provider} の {model} はリポジトリ内でカスタム Python コードを宣言しています。{note}",
-    blockedNote:
-      "セキュリティスキャンで CRITICAL の問題が検出されたため、有効にできません。",
-    reviewNote:
-      "以下のセキュリティスキャン結果を確認してください。モデルの提供元を信頼できる場合にのみ続行してください。",
+    customCodeFromProvider: "{provider} の {model} はリポジトリ内でカスタム Python コードを宣言しています。{note}",
+    blockedNote: "セキュリティスキャンで CRITICAL の問題が検出されたため、有効にできません。",
+    reviewNote: "以下のセキュリティスキャン結果を確認してください。モデルの提供元を信頼できる場合にのみ続行してください。",
     trustNote: "モデルの提供元を信頼できる場合にのみ続行してください。",
     flaggedIntro: "自動スキャナーが次のような問題を検出しました:",
-    nothingFlagged:
-      "自動スキャナーは懸念のあるファイルを検出しませんでしたが、念のためご自身でも確認してください。",
+    nothingFlagged: "自動スキャナーは懸念のあるファイルを検出しませんでしたが、念のためご自身でも確認してください。",
     unscannedTitle: "モデルファイルをスキャンできませんでした",
     unscannedBody: "{model} には読み込み時にコードを実行できる pickle 重みが含まれており、マルウェアスキャンの結果もないため読み込めません。{note}",
     unscannedIntro: "スキャンできなかったファイル:",
@@ -5707,10 +5589,8 @@ export const ja = {
     openChangelog: "変更履歴を開く",
     retry: "再試行",
     loadingChanges: "新しい変更を読み込んでいます...",
-    customLlamaRepo:
-      "このインストールはカスタムの llama.cpp リポジトリを追跡しているため、変更を比較できません。",
-    noItemisedNotes:
-      "このビルドは項目別のリリースノート導入前のものなので、変更を比較できません。",
+    customLlamaRepo: "このインストールはカスタムの llama.cpp リポジトリを追跡しているため、変更を比較できません。",
+    noItemisedNotes: "このビルドは項目別のリリースノート導入前のものなので、変更を比較できません。",
     compareFailed: "これらのリリースを比較できませんでした。",
     llamaChangesLabel: "{from} から {to} への llama.cpp の新しい変更",
     showingChanges: "{total} 件中 {shown} 件の変更を表示",
@@ -5735,8 +5615,7 @@ export const ja = {
     useDefaultLocation: "デフォルトを使用",
     longPaths: {
       title: "Windows が許可を求めます",
-      approve:
-        "コンパイル済みカーネル用に長いファイルパスを有効にするため、{tool} を一度承認してください。",
+      approve: "コンパイル済みカーネル用に長いファイルパスを有効にするため、{tool} を一度承認してください。",
       waiting: "Windows の許可を待っています...",
     },
     skip: "スキップ",
@@ -5765,8 +5644,7 @@ export const ja = {
     repair: {
       upgrading: "フルインストールにアップグレードしています...",
       gettingReady: "準備しています...",
-      upgradingDetail:
-        "このマシンの GPU 用に PyTorch とそのライブラリをダウンロードしています。数分かかる場合があります。",
+      upgradingDetail: "このマシンの GPU 用に PyTorch とそのライブラリをダウンロードしています。数分かかる場合があります。",
       wontTakeLong: "すぐに完了します。",
       upgradeFailed: "フルインストールにアップグレードできませんでした",
       updateFailed: "更新に失敗しました",
@@ -5793,8 +5671,7 @@ export const ja = {
     diagnostics: {
       copy: "診断情報をコピー",
       copying: "コピーしています...",
-      clipboardFailed:
-        "クリップボードへのコピーに失敗しました。下の診断情報を選択してコピーしてください。",
+      clipboardFailed: "クリップボードへのコピーに失敗しました。下の診断情報を選択してコピーしてください。",
       copyFailed: "診断情報のコピーに失敗しました: {error}",
     },
   },
@@ -5928,4 +5805,4 @@ export const ja = {
       inRam: "RAM に {amount}",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

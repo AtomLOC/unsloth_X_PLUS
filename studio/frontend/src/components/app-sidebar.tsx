@@ -3411,6 +3411,45 @@ export function AppSidebar() {
         preloadSilently(router.preloadRoute({ to: "/studio" }));
       },
     },
+    // The X+ engines: Labs (artifacts, lineage, pipelines, benchmarks), model merging and the
+    // Scaler. Ungated on purpose - each runs on a CPU-only host as well, and a capability gate
+    // here is what made them unreachable after the upstream sync.
+    merge: {
+      icon: LayerIcon,
+      label: t("shell.navigation.merge"),
+      active: pathname === "/merge" || pathname.startsWith("/merge/"),
+      onClick: () => {
+        navigateFromRow({ to: "/merge" });
+        closeMobileIfOpen();
+      },
+      onIntent: () => {
+        preloadSilently(router.preloadRoute({ to: "/merge" }));
+      },
+    },
+    scale: {
+      icon: ZapIcon,
+      label: t("shell.navigation.scale"),
+      active: pathname === "/scale" || pathname.startsWith("/scale/"),
+      onClick: () => {
+        navigateFromRow({ to: "/scale" });
+        closeMobileIfOpen();
+      },
+      onIntent: () => {
+        preloadSilently(router.preloadRoute({ to: "/scale" }));
+      },
+    },
+    labs: {
+      icon: TestTubeOutlineIcon,
+      label: t("shell.navigation.labs"),
+      active: pathname === "/labs" || pathname.startsWith("/labs/"),
+      onClick: () => {
+        navigateFromRow({ to: "/labs" });
+        closeMobileIfOpen();
+      },
+      onIntent: () => {
+        preloadSilently(router.preloadRoute({ to: "/labs" }));
+      },
+    },
     video: {
       icon: FlimSlateIcon,
       label: t("shell.navigation.video"),

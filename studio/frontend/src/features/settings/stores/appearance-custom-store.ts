@@ -97,6 +97,10 @@ export const SIDEBAR_NAV_ITEM_IDS = [
   // Last and under "More", so they join every saved layout without moving anything.
   "tasks",
   "translate",
+  // The X+ engines, last for the same reason: they join every saved layout without moving a row.
+  "merge",
+  "scale",
+  "labs",
 ] as const;
 
 export type SidebarNavItemId = (typeof SIDEBAR_NAV_ITEM_IDS)[number];
@@ -143,6 +147,9 @@ export const SIDEBAR_NAV_DEFAULT_PINNED: Record<SidebarNavItemId, boolean> = {
   api: false,
   tasks: false,
   translate: false,
+  merge: false,
+  scale: false,
+  labs: false,
 };
 
 /** Every previously shipped layout, so a migration can tell an untouched install from an

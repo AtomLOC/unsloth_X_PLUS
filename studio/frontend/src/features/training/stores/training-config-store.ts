@@ -8,9 +8,11 @@ import {
   LR_DEFAULT_LORA,
 } from "@/config/training";
 import { getHfToken } from "@/features/hub/stores/hf-token-store";
+import { usePlatformStore } from "@/config/env";
 import { translate } from "@/i18n";
 import { toast } from "@/lib/toast";
 import { isAdapterMethod } from "@/types/training";
+import { advancedStateFromRunConfig } from "@/features/advanced/types";
 import type { ModelType, TrainingMethod } from "@/types/training";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -69,6 +71,7 @@ import {
   formatStreamingDisabledOptions,
   hasSeparateStreamingEvalSplit,
   initialTrainingConfigState,
+  moeModelPatch,
   resolveDeferredTrainOnCompletionsDefault,
   resolveTrainingToggleDefaults,
   trainingToggleDefaults,
@@ -121,6 +124,24 @@ const DEFAULT_DECISION_CHECKPOINT = "laya-multilingual";
 function earlyStoppingPatienceFrom(value: unknown): number {
   const patience = Number(value);
   return Number.isFinite(patience) && patience > 0 ? Math.floor(patience) : 0;
+}
+
+const DEFAULT_PARENT_GUARD_STEPS = 50;
+
+function earlyStopParentRunIdFrom(value: unknown): string | null {
+  return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
+function earlyStopPatienceStepsFrom(value: unknown): number {
+  const steps = Number(value);
+  return Number.isFinite(steps) && steps > 0
+    ? Math.min(Math.floor(steps), 100000)
+    : 0;
+}
+
+function earlyStopMinDeltaFrom(value: unknown): number {
+  const delta = Number(value);
+  return Number.isFinite(delta) && delta > 0 ? delta : 0;
 }
 
 // evalSteps is left alone: it follows the chosen eval split, not the model.
@@ -398,6 +419,7 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
                 modelDefaultsAppliedFor: modelName,
                 maxPositionEmbeddings:
                   modelDetails.max_position_embeddings ?? null,
+                ...moeModelPatch(modelDetails),
               });
               if (!canContinue) {
                 toast.error(translate("studio.modelPicker.cantUseModel"), {
@@ -658,6 +680,7 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
                 : {}),
               maxPositionEmbeddings:
                 modelDetails.max_position_embeddings ?? null,
+              ...moeModelPatch(modelDetails),
             });
             if (restoreStreaming) {
               trainingDatasetCacheRejections.reset(get().dataset);
@@ -954,6 +977,10 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
         datasetSliceStart: null,
         datasetSliceEnd: null,
         uploadedEvalFile: null,
+        // The second selector belongs to the dataset that was just replaced.
+        evalDataset: null,
+        evalDatasetSubset: null,
+        evalDatasetSplit: null,
         isDatasetImage: null,
         isDatasetAudio: false,
         isCheckingDataset: false,
@@ -1273,7 +1300,12 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
         setTrainingMethod: (trainingMethod) => {
           _trainingMethodEditGeneration += 1;
           const state = get();
-          const patch = buildTrainingMethodPatch(state, trainingMethod);
+          const patch = buildTrainingMethodPatch(
+            state,
+            trainingMethod,
+            usePlatformStore.getState().deviceType,
+            usePlatformStore.getState().isCpuTrainingHost(),
+          );
           if (
             state.trainingMethod !== "cpt" &&
             trainingMethod === "cpt" &&
@@ -1543,6 +1575,27 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
             uploadedEvalFile,
             evalSteps: uploadedEvalFile ? 0.1 : 0,
           }),
+        // The evaluation dataset is optional: selecting one turns evaluation on
+        // (identical to picking an eval split), clearing it turns it back off.
+        selectEvalHfDataset: (dataset) => {
+          const evalDataset = dataset?.trim() || null;
+          setUserEdit({
+            evalDataset,
+            evalDatasetSubset: null,
+            evalDatasetSplit: null,
+            evalSteps: evalDataset
+              ? get().evalSteps > 0
+                ? get().evalSteps
+                : 0.1
+              : 0,
+            ...(evalDataset ? {} : { uploadedEvalFile: null }),
+          });
+        },
+        setEvalDatasetSubset: (evalDatasetSubset) =>
+          setUserEdit({ evalDatasetSubset }),
+        setEvalDatasetSplit: (evalDatasetSplit) =>
+          setUserEdit({ evalDatasetSplit }),
+        setMoeExpertScope: (moeExpertScope) => setUserEdit({ moeExpertScope }),
         setEpochs: (epochs) => setUserEdit({ epochs }),
         setContextLength: (contextLength) => setUserEdit({ contextLength }),
         setVisionImageSize: (visionImageSize) =>
@@ -1605,6 +1658,22 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
         },
         setEarlyStoppingPatience: (earlyStoppingPatience) =>
           setUserEdit({ earlyStoppingPatience }),
+        setEarlyStopParentRunId: (earlyStopParentRunId) =>
+          setUserEdit({
+            earlyStopParentRunId,
+            earlyStopPatienceSteps:
+              earlyStopParentRunId === null
+                ? 0
+                : get().earlyStopPatienceSteps || DEFAULT_PARENT_GUARD_STEPS,
+          }),
+        setEarlyStopPatienceSteps: (earlyStopPatienceSteps) =>
+          setUserEdit({
+            earlyStopPatienceSteps: earlyStopPatienceStepsFrom(
+              earlyStopPatienceSteps,
+            ),
+          }),
+        setEarlyStopMinDelta: (earlyStopMinDelta) =>
+          setUserEdit({ earlyStopMinDelta: earlyStopMinDeltaFrom(earlyStopMinDelta) }),
         setDrafterEnabled: (drafterEnabled) => setUserEdit({ drafterEnabled }),
         setDrafterStrategy: (drafterStrategy) =>
           setUserEdit({ drafterStrategy }),
@@ -1666,6 +1735,19 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
           setUserEdit({ targetModules });
         },
         setS3Config: (s3Config) => setUserEdit({ s3Config }),
+        setAdvanced: (patch) =>
+          setUserEdit((state) => ({
+            advanced: {
+              ...state.advanced,
+              ...patch,
+              layerLrZones: patch.layerLrZones
+                ? { ...state.advanced.layerLrZones, ...patch.layerLrZones }
+                : state.advanced.layerLrZones,
+              layerLrKinds: patch.layerLrKinds
+                ? { ...state.advanced.layerLrKinds, ...patch.layerLrKinds }
+                : state.advanced.layerLrKinds,
+            },
+          })),
         restoreRunConfig: (config) => {
           const selections = runConfigDraftSelections(config);
           const hyperparameters = mapBackendModelConfigToTrainingPatch({
@@ -1688,7 +1770,18 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
             earlyStoppingPatience: earlyStoppingPatienceFrom(
               config.early_stopping_patience,
             ),
+            earlyStopParentRunId: earlyStopParentRunIdFrom(
+              config.early_stop_parent_run_id,
+            ),
+            earlyStopPatienceSteps: earlyStopPatienceStepsFrom(
+              config.early_stop_patience_steps,
+            ),
+            earlyStopMinDelta: earlyStopMinDeltaFrom(config.early_stop_min_delta),
             ...drafterStateFrom(config.drafter),
+            advanced: advancedStateFromRunConfig(
+              config.advanced,
+              get().advanced,
+            ),
           });
           // Fetch capabilities without replacing the saved recipe.
           loadAndApplyModelDefaults(selections.selectedModel, {
@@ -1736,7 +1829,10 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
             config.training ?? {},
             "early_stopping_patience",
           );
-          const importsDrafter = Object.hasOwn(config.training ?? {}, "drafter");
+          const importsDrafter = Object.hasOwn(
+            config.training ?? {},
+            "drafter",
+          );
           setUserEdit((state) => {
             const importsCompletionsInCpt =
               state.trainingMethod === "cpt" &&

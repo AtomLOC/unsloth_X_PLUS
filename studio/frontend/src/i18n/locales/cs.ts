@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const cs = {
   turns: {
     label: "Kolo {number}",
@@ -113,8 +110,7 @@ export const cs = {
   },
   imageViewer: {
     title: "Obrázek",
-    description:
-      "Mezi obrázky se pohybujte šipkami, přiblížení a oddálení ovládejte klávesami plus a minus.",
+    description: "Mezi obrázky se pohybujte šipkami, přiblížení a oddálení ovládejte klávesami plus a minus.",
     failed: "Tento obrázek se nepodařilo načíst.",
     downloadFailed: "Obrázek se nepodařilo uložit.",
     openSource: "Otevřít zdrojovou stránku",
@@ -133,8 +129,7 @@ export const cs = {
   browser: {
     drafts: {
       title: "Uvolnit stránku se zadaným textem?",
-      description:
-        "Aby chat reagoval svižně, zůstávají spuštěné jen tři skryté stránky se zadaným textem. Pokud budete pokračovat, uvolní se {pages} a neuložený text se může ztratit. Tlačítkem Zrušit se vrátíte na předchozí kartu.",
+      description: "Aby chat reagoval svižně, zůstávají spuštěné jen tři skryté stránky se zadaným textem. Pokud budete pokračovat, uvolní se {pages} a neuložený text se může ztratit. Tlačítkem Zrušit se vrátíte na předchozí kartu.",
       confirm: "Uvolnit a pokračovat",
     },
     agentSettings: {
@@ -142,28 +137,23 @@ export const cs = {
       docs: "Dokumentace",
       docsLabel: "Otevřít dokumentaci k ovládání prohlížeče",
       enable: "Povolit modelům používat prohlížeč",
-      enableDescription:
-        "Modely otevírají stránky ve vlastní kartě prohlížeče, čtou je a klikají a píší za vás. K dispozici také v nabídce + v poli zprávy.",
+      enableDescription: "Modely otevírají stránky ve vlastní kartě prohlížeče, čtou je a klikají a píší za vás. K dispozici také v nabídce + v poli zprávy.",
       history: "Historie prohlížení",
-      historyDescription:
-        "Úplný přístup přeskočí schválení; Nikdy přístup stále blokuje",
+      historyDescription: "Úplný přístup přeskočí schválení; Nikdy přístup stále blokuje",
       alwaysAsk: "Vždy se zeptat",
       alwaysAllow: "Vždy povolit",
       never: "Nikdy",
       scripts: "Spouštět skripty",
-      scriptsDescription:
-        "Zvolte, zda mohou modely na stránkách spouštět skripty. Každý skript uvidíte před jeho spuštěním",
+      scriptsDescription: "Zvolte, zda mohou modely na stránkách spouštět skripty. Každý skript uvidíte před jeho spuštěním",
       scriptsAllowDescription: "Modely spouštějí skripty na libovolné stránce bez ptaní. Skript může na stránce cokoli číst i měnit",
       scriptsConfirmTitle: "Povolit všechny skripty?",
       scriptsConfirmDescription: "Modely budou spouštět skripty na každé stránce, aniž by vám je nejdřív ukázaly. Skript může číst a měnit cokoli na stránce, včetně stránek, kde jste přihlášeni. Zapněte to jen tehdy, pokud modelům, které používáte, důvěřujete.",
       scriptsConfirmAction: "Povolit všechny skripty",
       cursor: "Zobrazovat kurzor",
-      cursorDescription:
-        "Zobrazovat ukazatel v místech, kde modely na stránce klikají, píší a přetahují",
+      cursorDescription: "Zobrazovat ukazatel v místech, kde modely na stránce klikají, píší a přetahují",
       askEveryTime: "Pokaždé se zeptat",
       permissionsTitle: "Oprávnění agentů",
-      permissionsDescription:
-        "Nastavte výchozí hodnoty a výjimky pro jednotlivé weby. Pole pro hesla a platby se nikdy nevyplňují.",
+      permissionsDescription: "Nastavte výchozí hodnoty a výjimky pro jednotlivé weby. Pole pro hesla a platby se nikdy nevyplňují.",
       site: "Web nebo vzor",
       sitePlaceholder: "example.com nebo *.example.com",
       default: "Výchozí",
@@ -180,8 +170,7 @@ export const cs = {
       cancel: "Zrušit",
       removeSite: "Odebrat {site}",
       hostOnly: "Pouze tento hostitel, ne jeho subdomény",
-      permissionsNote:
-        "Zobrazují se zde jen weby s vlastními oprávněními. Akce jsou přihlášení, odeslání formulářů a tlačítka, která nakupují, odesílají nebo mažou.",
+      permissionsNote: "Zobrazují se zde jen weby s vlastními oprávněními. Akce jsou přihlášení, odeslání formulářů a tlačítka, která nakupují, odesílají nebo mažou.",
       siteInvalid: "Zadejte web, například example.com nebo *.example.com.",
     },
     agent: {
@@ -199,8 +188,7 @@ export const cs = {
         click: "Povolit Unsloth kliknout na „{name}“ na webu {host}?",
         history: "Povolit Unsloth číst vaši historii prohlížení?",
         script: "Povolit Unsloth spustit tento skript na webu {host}?",
-        pointer:
-          "Povolit Unsloth klikat na části webu {host} bez popisku, například na plátno?",
+        pointer: "Povolit Unsloth klikat na části webu {host} bez popisku, například na plátno?",
       },
       step: {
         open: "Otevírání: {detail}",
@@ -241,8 +229,7 @@ export const cs = {
     browserUse: {
       label: "Ovládání prohlížeče",
       description: "Povolit modelům ovládat vestavěný prohlížeč",
-      unavailable:
-        "Chcete-li modelu povolit používání prohlížeče, načtěte model, který umí volat nástroje.",
+      unavailable: "Chcete-li modelu povolit používání prohlížeče, načtěte model, který umí volat nástroje.",
     },
     suggested: "Navrhované",
     suggestedMenu: {
@@ -277,11 +264,9 @@ export const cs = {
       close: "Zavřít",
       security: "Zabezpečení",
       secureTitle: "Připojení je zabezpečené",
-      secureDescription:
-        "Vaše údaje, například hesla nebo čísla karet, zůstávají při odesílání na tento web soukromé.",
+      secureDescription: "Vaše údaje, například hesla nebo čísla karet, zůstávají při odesílání na tento web soukromé.",
       insecureTitle: "Připojení není zabezpečené",
-      insecureDescription:
-        "Údaje, které na tento web odešlete, například hesla nebo čísla karet, mohou vidět ostatní.",
+      insecureDescription: "Údaje, které na tento web odešlete, například hesla nebo čísla karet, mohou vidět ostatní.",
       learnMore: "Další informace",
       certificateValid: "Certifikát je platný",
     },
@@ -295,96 +280,71 @@ export const cs = {
     linkCopied: "Odkaz byl zkopírován",
     download: "Stáhnout",
     settings: "Nastavení prohlížeče",
-    cannotShowFile:
-      "Tento soubor zde nelze zobrazit. Chcete-li ho otevřít, stáhněte si ho.",
+    cannotShowFile: "Tento soubor zde nelze zobrazit. Chcete-li ho otevřít, stáhněte si ho.",
     fileGone: "Tento soubor již není k dispozici. Otevřete ho znovu z chatu.",
     settingsTitle: "Prohlížeč",
     linksTitle: "Odkazy a soubory",
     addressBarTitle: "Adresní řádek",
     openLinksSetting: "Otevírat odkazy v",
-    openLinksSettingDescription:
-      "Kde se otevírají odkazy z chatu: ve výchozím prohlížeči, nebo na kartě prohlížeče vedle konverzace. Odkazy na místní adresy se vždy otevírají ve výchozím prohlížeči.",
+    openLinksSettingDescription: "Kde se otevírají odkazy z chatu: ve výchozím prohlížeči, nebo na kartě prohlížeče vedle konverzace. Odkazy na místní adresy se vždy otevírají ve výchozím prohlížeči.",
     linkDestinationDefault: "Výchozí prohlížeč",
     linkDestinationPanel: "Prohlížeč Unsloth",
     openFilesSetting: "Otevírat soubory v prohlížeči",
-    openFilesSettingDescription:
-      "Připojené dokumenty, například PDF, soubory Office, HTML a text, se otevírají na kartě prohlížeče vedle konverzace místo v okně náhledu.",
+    openFilesSettingDescription: "Připojené dokumenty, například PDF, soubory Office, HTML a text, se otevírají na kartě prohlížeče vedle konverzace místo v okně náhledu.",
     searchEngineSetting: "Vyhledávač",
-    searchEngineSettingDescription:
-      "Použije se, když do adresního řádku zadáte slova místo URL.",
+    searchEngineSettingDescription: "Použije se, když do adresního řádku zadáte slova místo URL.",
     showFullUrlSetting: "Zobrazovat celou URL",
-    showFullUrlSettingDescription:
-      "Zobrazovat v adresním řádku i dotaz a fragment, nejen web a cestu.",
+    showFullUrlSettingDescription: "Zobrazovat v adresním řádku i dotaz a fragment, nejen web a cestu.",
     bookmarksTitle: "Záložky",
     bookmarksToolbarSetting: "Panel záložek",
-    bookmarksToolbarSettingDescription:
-      "Kdy zobrazovat uložené stránky pod adresním řádkem.",
-    bookmarkEditorSettingDescription:
-      "Při ukládání záložky ji pojmenujte a zvolte její umístění.",
-    bookmarksSettingDescription:
-      "Zobrazení, úpravy a odebrání stránek uložených v prohlížeči.",
+    bookmarksToolbarSettingDescription: "Kdy zobrazovat uložené stránky pod adresním řádkem.",
+    bookmarkEditorSettingDescription: "Při ukládání záložky ji pojmenujte a zvolte její umístění.",
+    bookmarksSettingDescription: "Zobrazení, úpravy a odebrání stránek uložených v prohlížeči.",
     browsingDataTitle: "Data prohlížení",
     historySetting: "Historie prohlížení",
-    historySettingDescription:
-      "Zobrazení a správa stránek navštívených v prohlížeči.",
+    historySettingDescription: "Zobrazení a správa stránek navštívených v prohlížeči.",
     downloadsSetting: "Historie stahování",
-    downloadsSettingDescription:
-      "Zobrazení a správa souborů stažených z prohlížeče.",
+    downloadsSettingDescription: "Zobrazení a správa souborů stažených z prohlížeče.",
     pagesFromChat: "Chcete-li toto zobrazit v prohlížeči, otevřete chat.",
     tabsTitle: "Karty",
     switchToNewTabsSetting: "Ihned přepínat na nové karty",
-    switchToNewTabsSettingDescription:
-      "Když otevřete odkaz na nové kartě pomocí ⌘ nebo Ctrl, zobrazí se ihned místo otevření na pozadí.",
-    switchToNewTabsNative:
-      "Stránky v desktopové aplikaci vždy otevírají nové karty v popředí.",
+    switchToNewTabsSettingDescription: "Když otevřete odkaz na nové kartě pomocí ⌘ nebo Ctrl, zobrazí se ihned místo otevření na pozadí.",
+    switchToNewTabsNative: "Stránky v desktopové aplikaci vždy otevírají nové karty v popředí.",
     defaultZoomSetting: "Výchozí přiblížení",
-    defaultZoomSettingDescription:
-      "Jak velké se stránky zobrazí při otevření. Obnovení přiblížení stránky se vrátí na tuto hodnotu.",
+    defaultZoomSettingDescription: "Jak velké se stránky zobrazí při otevření. Obnovení přiblížení stránky se vrátí na tuto hodnotu.",
     newTabPageTitle: "Stránka nové karty",
     showSuggestedSetting: "Zobrazovat navrhované weby",
-    showSuggestedSettingDescription:
-      "Často navštěvované weby jako zkratky na nové kartě.",
+    showSuggestedSettingDescription: "Často navštěvované weby jako zkratky na nové kartě.",
     showRecentsSetting: "Zobrazovat nedávné stránky",
-    showRecentsSettingDescription:
-      "Nedávno navštívené stránky zobrazené na nové kartě.",
+    showRecentsSettingDescription: "Nedávno navštívené stránky zobrazené na nové kartě.",
     hiddenSuggestionsSetting: "Odebrané návrhy",
-    hiddenSuggestionsSettingDescription:
-      "Weby odebrané z navrhovaných: {count}. Obnovením je znovu zobrazíte.",
-    hiddenSuggestionsNone:
-      "Weby, které odeberete z navrhovaných, lze obnovit zde.",
+    hiddenSuggestionsSettingDescription: "Weby odebrané z navrhovaných: {count}. Obnovením je znovu zobrazíte.",
+    hiddenSuggestionsNone: "Weby, které odeberete z navrhovaných, lze obnovit zde.",
     restore: "Obnovit",
     importBookmarksSetting: "Import a export",
-    importBookmarksSettingDescription:
-      "Importujte záložky z prohlížeče Chrome, Safari, Firefox nebo Edge pomocí jimi exportovaného souboru HTML, nebo do takového souboru uložte své.",
+    importBookmarksSettingDescription: "Importujte záložky z prohlížeče Chrome, Safari, Firefox nebo Edge pomocí jimi exportovaného souboru HTML, nebo do takového souboru uložte své.",
     importBookmarks: "Importovat…",
     exportBookmarks: "Exportovat",
     importBookmarksDoneOne: "Importována {count} záložka.",
     importBookmarksDoneMany: "Importované záložky: {count}.",
     importBookmarksNone: "V tomto souboru nejsou žádné nové záložky.",
-    importBookmarksPartial:
-      "Importováno: {count}. Dalších {leftOut} se nevešlo: Unsloth uchovává nejvýše {max} záložek.",
-    importBookmarksFailed:
-      "Tento soubor se nepodařilo přečíst. Vyberte soubor HTML se záložkami exportovaný z prohlížeče.",
+    importBookmarksPartial: "Importováno: {count}. Dalších {leftOut} se nevešlo: Unsloth uchovává nejvýše {max} záložek.",
+    importBookmarksFailed: "Tento soubor se nepodařilo přečíst. Vyberte soubor HTML se záložkami exportovaný z prohlížeče.",
     downloadsTitle: "Stahování",
     askWhereToSaveSetting: "Ptát se, kam uložit každý soubor",
-    askWhereToSaveSettingDescription:
-      "U souborů stahovaných v prohlížeči zobrazovat dialog pro uložení.",
-    askWhereToSaveUnsupported:
-      "Váš webový prohlížeč ukládá stažené soubory do vlastní složky pro stahování.",
+    askWhereToSaveSettingDescription: "U souborů stahovaných v prohlížeči zobrazovat dialog pro uložení.",
+    askWhereToSaveUnsupported: "Váš webový prohlížeč ukládá stažené soubory do vlastní složky pro stahování.",
     downloadLocationSetting: "Umístění",
     downloadLocationDefault: "Systémová složka Stažené soubory",
     downloadLocationChange: "Změnit",
     downloadLocationReset: "Obnovit výchozí",
     askBeforeDownloadingSetting: "Ptát se před stažením",
-    askBeforeDownloadingSettingDescription:
-      "Potvrzovat soubory z webů před jejich uložením.",
+    askBeforeDownloadingSettingDescription: "Potvrzovat soubory z webů před jejich uložením.",
     askBeforeProgramDownloadsSetting: "Ptát se před stažením programů",
     askBeforeProgramDownloadsSettingDescription: "Potvrzovat soubory, které mohou spouštět programy, například .exe nebo .dmg, i když se ostatní stahování neptají.",
     downloadSitesSetting: "Oprávnění webů ke stahování",
-    downloadSitesSettingDescription:
-      "Weby, ze kterých jste zvolili vždy povolit nebo blokovat stahování.",
-    downloadSitesNone:
-      "Když se zobrazí dotaz, zaškrtněte Zapamatovat si příště a web se objeví zde.",
+    downloadSitesSettingDescription: "Weby, ze kterých jste zvolili vždy povolit nebo blokovat stahování.",
+    downloadSitesNone: "Když se zobrazí dotaz, zaškrtněte Zapamatovat si příště a web se objeví zde.",
     downloadSitesFor: "Stahování z webu {host}",
     downloadSitesRemove: "Zapomenout {host}",
     capture: {
@@ -419,8 +379,7 @@ export const cs = {
     downloadPrompt: {
       title: "Stáhnout tento soubor?",
       description: "Web {host} chce do vašeho počítače uložit soubor {name}.",
-      dangerous:
-        "Soubory tohoto typu mohou ve vašem počítači spouštět programy. Stáhněte ho, jen pokud webu {host} důvěřujete.",
+      dangerous: "Soubory tohoto typu mohou ve vašem počítači spouštět programy. Stáhněte ho, jen pokud webu {host} důvěřujete.",
       remember: "Zapamatovat si příště",
       once: "Zeptat se příště",
       site: "Vždy pro {host}",
@@ -432,14 +391,11 @@ export const cs = {
       save: "Uložit",
     },
     saveDownloadHistorySetting: "Uchovávat historii stahování",
-    saveDownloadHistorySettingDescription:
-      "Zobrazovat soubory stažené z prohlížeče v Historii stahování.",
+    saveDownloadHistorySettingDescription: "Zobrazovat soubory stažené z prohlížeče v Historii stahování.",
     saveHistorySetting: "Ukládat historii prohlížení",
-    saveHistorySettingDescription:
-      "Pamatovat si navštívené stránky pro Historii, Nedávné a Navrhované.",
+    saveHistorySettingDescription: "Pamatovat si navštívené stránky pro Historii, Nedávné a Navrhované.",
     historyRetentionSetting: "Uchovávat historii",
-    historyRetentionSettingDescription:
-      "Starší návštěvy se automaticky smažou.",
+    historyRetentionSettingDescription: "Starší návštěvy se automaticky smažou.",
     retention: {
       forever: "Do vymazání",
       days90: "3 měsíce",
@@ -449,17 +405,13 @@ export const cs = {
     },
     annotationsTitle: "Anotace",
     annotationScreenshotsSetting: "Snímky obrazovky k anotacím",
-    annotationScreenshotsSettingDescription:
-      "Snímek stránky s vašimi značkami pomáhá modelům s viděním porozumět vašim komentářům, ale spotřebuje více kontextu.",
-    annotationScreenshotsUnsupported:
-      "Vyžaduje desktopovou aplikaci nebo prohlížeč založený na Chromiu, například Chrome nebo Edge.",
-    annotationScreenshotsHint:
-      "Ve webovém prohlížeči budete při každém odeslání anotací požádáni o sdílení karty.",
+    annotationScreenshotsSettingDescription: "Snímek stránky s vašimi značkami pomáhá modelům s viděním porozumět vašim komentářům, ale spotřebuje více kontextu.",
+    annotationScreenshotsUnsupported: "Vyžaduje desktopovou aplikaci nebo prohlížeč založený na Chromiu, například Chrome nebo Edge.",
+    annotationScreenshotsHint: "Ve webovém prohlížeči budete při každém odeslání anotací požádáni o sdílení karty.",
     annotationScreenshotsAlways: "Vždy přiložit",
     annotationScreenshotsNever: "Nikdy nepřikládat",
     clearDataSetting: "Vymazat data prohlížení",
-    clearDataSettingDescription:
-      "Vymaže historii prohlížení, historii stahování a stránky v mezipaměti. Soubory cookie a data webů si stránky uchovávají jen do opětovného načtení Unsloth.",
+    clearDataSettingDescription: "Vymaže historii prohlížení, historii stahování a stránky v mezipaměti. Soubory cookie a data webů si stránky uchovávají jen do opětovného načtení Unsloth.",
     manage: "Spravovat",
     fullView: {
       enter: "Přejít do plného zobrazení",
@@ -552,10 +504,8 @@ export const cs = {
       pathCopied: "Cesta byla zkopírována",
       openFailed: "Nepodařilo se otevřít: {name}.",
       wrap: "Zalamovat řádky",
-      reactNeedsNode:
-        "Náhledy React vyžadují Node.js 20.19 nebo novější. Pokud chybí, nainstalujte ho a poté znovu spusťte instalaci Unsloth.",
-      reactFailed:
-        "Tento náhled se nepodařilo připravit. Zkuste ho spustit znovu.",
+      reactNeedsNode: "Náhledy React vyžadují Node.js 20.19 nebo novější. Pokud chybí, nainstalujte ho a poté znovu spusťte instalaci Unsloth.",
+      reactFailed: "Tento náhled se nepodařilo připravit. Zkuste ho spustit znovu.",
     },
     video: {
       play: "Přehrát",
@@ -598,8 +548,7 @@ export const cs = {
       noHistory: "Zde se zobrazí stránky, které navštívíte v prohlížeči.",
       showMore: "Zobrazit více",
       noDownloads: "Zde se zobrazí soubory, které stáhnete z prohlížeče.",
-      noBookmarks:
-        "Zde se zobrazí stránky, které přidáte do záložek hvězdičkou v adresním řádku.",
+      noBookmarks: "Zde se zobrazí stránky, které přidáte do záložek hvězdičkou v adresním řádku.",
       noMatches: "Hledání neodpovídá nic.",
       fromChat: "Z chatu",
       searchHistory: "Hledat v historii prohlížení",
@@ -637,39 +586,30 @@ export const cs = {
       undo: "Zpět",
       manage: "Spravovat záložky",
       more: "Další záložky",
-      toolbarEmpty:
-        "Přidejte stránku do záložek pomocí hvězdičky v adresním řádku a zobrazí se zde.",
+      toolbarEmpty: "Přidejte stránku do záložek pomocí hvězdičky v adresním řádku a zobrazí se zde.",
       toolbarAlways: "Zobrazovat vždy",
       toolbarNewTab: "Zobrazovat jen na nové kartě",
       toolbarNever: "Nezobrazovat nikdy",
     },
     clearData: {
       title: "Vymazat data prohlížení?",
-      description:
-        "Vymaže se historie prohlížení, historie stahování, stránky v mezipaměti a soubory cookie a data webů, čímž budete z webů odhlášeni. Stažené soubory zůstanou v počítači.",
+      description: "Vymaže se historie prohlížení, historie stahování, stránky v mezipaměti a soubory cookie a data webů, čímž budete z webů odhlášeni. Stažené soubory zůstanou v počítači.",
       cancel: "Zrušit",
       confirm: "Vymazat data",
       done: "Data prohlížení byla vymazána",
     },
     error: {
       title: "Tuto stránku se nepodařilo načíst",
-      description:
-        "Web {host} neodpověděl, odmítl připojení nebo zablokoval požadavek.",
+      description: "Web {host} neodpověděl, odmítl připojení nebo zablokoval požadavek.",
       retry: "Zkusit znovu",
       botCheckTitle: "Tento web ověřuje, zda jde o skutečný prohlížeč",
-      botCheckDescription:
-        "Web {host} žádá návštěvníky o ověření, že jsou lidé, což zobrazení v aplikaci zde nedokáže. Otevřete ho raději ve svém prohlížeči.",
-      botCheckDescriptionWeb:
-        "Web {host} žádá návštěvníky o ověření, že jsou lidé, což zobrazení v aplikaci zde nedokáže. Otevřete ho ve svém prohlížeči nebo v aplikaci {app}, která ho otevřít dokáže.",
+      botCheckDescription: "Web {host} žádá návštěvníky o ověření, že jsou lidé, což zobrazení v aplikaci zde nedokáže. Otevřete ho raději ve svém prohlížeči.",
+      botCheckDescriptionWeb: "Web {host} žádá návštěvníky o ověření, že jsou lidé, což zobrazení v aplikaci zde nedokáže. Otevřete ho ve svém prohlížeči nebo v aplikaci {app}, která ho otevřít dokáže.",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "Tato stránka vznikla odesláním formuláře. Opětovným načtením se formulář odešle znovu, což může zopakovat provedenou akci.",
-      upload:
-        "Nahrávání souborů v tomto zobrazení nefunguje. K odeslání otevřete stránku v systémovém prohlížeči.",
-      scriptNavigation:
-        "Tato stránka se pomocí skriptu pokusila přejít na jinou adresu, což toto zobrazení nedokáže následovat. Otevřete ji raději v systémovém prohlížeči.",
-      needsBrowser:
-        "Tato stránka se pokusila použít funkci prohlížeče, kterou toto zobrazení blokuje, takže její části nemusí fungovat. Otevřete ji raději v systémovém prohlížeči.",
+      resubmit: "Tato stránka vznikla odesláním formuláře. Opětovným načtením se formulář odešle znovu, což může zopakovat provedenou akci.",
+      upload: "Nahrávání souborů v tomto zobrazení nefunguje. K odeslání otevřete stránku v systémovém prohlížeči.",
+      scriptNavigation: "Tato stránka se pomocí skriptu pokusila přejít na jinou adresu, což toto zobrazení nedokáže následovat. Otevřete ji raději v systémovém prohlížeči.",
+      needsBrowser: "Tato stránka se pokusila použít funkci prohlížeče, kterou toto zobrazení blokuje, takže její části nemusí fungovat. Otevřete ji raději v systémovém prohlížeči.",
     },
     native: {
       externalPrompt: "Web {host} chce otevřít {url}",
@@ -677,18 +617,12 @@ export const cs = {
       downloading: "Stahování: {name}",
       downloaded: "Uloženo do složky Stažené soubory: {name}",
       downloadFailed: "Nepodařilo se stáhnout: {name}",
-      notMarked:
-        "Soubor {name} byl uložen, ale nepodařilo se ho označit jako stažený z internetu, takže vás systém před jeho otevřením neupozorní.",
-      blocked:
-        "Tuto adresu nelze otevřít v panelu prohlížeče. Otevírá pouze veřejné weby.",
-      blockedLocal:
-        "Tuto místní adresu zde nelze otevřít. Pokud ji chcete otevřít, zadejte ji do adresního řádku.",
-      studioAddress:
-        "Toto je vlastní adresa aplikace Unsloth, a proto ji nelze otevřít v panelu prohlížeče.",
-      clearDataSettingDescription:
-        "Vymaže historii prohlížení, historii stahování, stránky v mezipaměti a soubory cookie a data, která si stránky ukládají, čímž budete z webů odhlášeni.",
-      clearDataDescription:
-        "Vymaže se historie prohlížení, historie stahování, stránky v mezipaměti a soubory cookie a data webů, čímž budete z webů odhlášeni. Stažené soubory zůstanou v počítači.",
+      notMarked: "Soubor {name} byl uložen, ale nepodařilo se ho označit jako stažený z internetu, takže vás systém před jeho otevřením neupozorní.",
+      blocked: "Tuto adresu nelze otevřít v panelu prohlížeče. Otevírá pouze veřejné weby.",
+      blockedLocal: "Tuto místní adresu zde nelze otevřít. Pokud ji chcete otevřít, zadejte ji do adresního řádku.",
+      studioAddress: "Toto je vlastní adresa aplikace Unsloth, a proto ji nelze otevřít v panelu prohlížeče.",
+      clearDataSettingDescription: "Vymaže historii prohlížení, historii stahování, stránky v mezipaměti a soubory cookie a data, která si stránky ukládají, čímž budete z webů odhlášeni.",
+      clearDataDescription: "Vymaže se historie prohlížení, historie stahování, stránky v mezipaměti a soubory cookie a data webů, čímž budete z webů odhlášeni. Stažené soubory zůstanou v počítači.",
       clearDataFailed: "Data webů se nepodařilo vymazat. Zkuste to znovu.",
     },
   },
@@ -755,32 +689,25 @@ export const cs = {
     tensor: "Tenzorový paralelismus",
     pipeline: "Paralelismus pipeline",
     data: "Repliky (datový paralelismus)",
-    pipelineHelp:
-      "Rozdělí vrstvy modelu mezi GPU. Každé GPU musí pojmout své vrstvy i mezipaměť.",
-    dataHelp:
-      "Rozloží požadavky mezi GPU. Husté modely se musí vejít na každé GPU; modely MoE mohou experty sdílet.",
+    pipelineHelp: "Rozdělí vrstvy modelu mezi GPU. Každé GPU musí pojmout své vrstvy i mezipaměť.",
+    dataHelp: "Rozloží požadavky mezi GPU. Husté modely se musí vejít na každé GPU; modely MoE mohou experty sdílet.",
     tensorParallel: "Rozdělí výpočty vrstev mezi GPU (počet: {count}).",
     inUse: "Před opravou, obnovením nebo odebráním modulu uvolněte model.",
     title: "Další moduly",
-    description:
-      "Další moduly pro GPU (beta). Mohou spouštět modely rychleji, zejména při dávkové inferenci. Nainstalujte je zde a potom je vyberte v nastavení spuštění modelu.",
+    description: "Další moduly pro GPU (beta). Mohou spouštět modely rychleji, zejména při dávkové inferenci. Nainstalujte je zde a potom je vyberte v nastavení spuštění modelu.",
     picker: "Inferenční modul",
     precision: "Přesnost",
     precisionAuto: "Výchozí pro model",
-    precisionHelp:
-      "Výchozí nastavení modelu zachová uloženou přesnost. Ostatní možnosti při načítání převedou nekvantizované váhy.",
+    precisionHelp: "Výchozí nastavení modelu zachová uloženou přesnost. Ostatní možnosti při načítání převedou nekvantizované váhy.",
     kvCache: "Mezipaměť KV",
     kvCacheFp8: "FP8 (poloviční paměť)",
-    kvCacheHelp:
-      "FP8 ukládá mezipaměť kontextu v 8 bitech, takže se do stejné paměti vejde zhruba dvojnásobný kontext. Bez kalibrovaných měřítek v kontrolním bodě mohou být odpovědi o něco méně přesné.",
+    kvCacheHelp: "FP8 ukládá mezipaměť kontextu v 8 bitech, takže se do stejné paměti vejde zhruba dvojnásobný kontext. Bez kalibrovaných měřítek v kontrolním bodě mohou být odpovědi o něco méně přesné.",
     gpuMemory: "Limit paměti GPU",
     gpuMemoryAuto: "Automaticky",
-    gpuMemoryHelp:
-      "Největší část každého vybraného GPU, kterou smí modul použít. Možnost Automaticky použije volnou paměť; snižte ji, pokud chcete ponechat místo pro jiné programy.",
+    gpuMemoryHelp: "Největší část každého vybraného GPU, kterou smí modul použít. Možnost Automaticky použije volnou paměť; snižte ji, pokud chcete ponechat místo pro jiné programy.",
     seed: "Seed",
     seedPlaceholder: "Výchozí hodnota modulu",
-    seedHelp:
-      "Nastaví náhodný seed modulu. Souběžné chaty mohou vzorkované odpovědi přesto ovlivnit.",
+    seedHelp: "Nastaví náhodný seed modulu. Souběžné chaty mohou vzorkované odpovědi přesto ovlivnit.",
     default: "Výchozí",
     installRequired: "vyžaduje instalaci",
     ownerRequired: "Požádejte vlastníka Unsloth o instalaci tohoto modulu.",
@@ -795,26 +722,19 @@ export const cs = {
     installTitle: "Nainstalovat {engine}",
     installAndLoad: "Nainstalovat a načíst",
     confirm: "Nainstalovat {engine} {version}? Může se stáhnout i několik GB.",
-    confirmSized:
-      "Nainstalovat {engine} {version}? Ke stažení přibližně {size}.",
-    wslSetup:
-      "Ve Windows běží {engine} v soukromém prostředí WSL2, které Unsloth nastaví. Počítejte s jednou výzvou k udělení oprávnění správce a případně s restartem.",
-    wslReady:
-      "Ve Windows běží {engine} v soukromém prostředí WSL2 aplikace Unsloth.",
-    wslRestart:
-      "Restartujte Windows, aby se dokončilo zapnutí WSL2, a potom znovu klikněte na Nainstalovat.",
+    confirmSized: "Nainstalovat {engine} {version}? Ke stažení přibližně {size}.",
+    wslSetup: "Ve Windows běží {engine} v soukromém prostředí WSL2, které Unsloth nastaví. Počítejte s jednou výzvou k udělení oprávnění správce a případně s restartem.",
+    wslReady: "Ve Windows běží {engine} v soukromém prostředí WSL2 aplikace Unsloth.",
+    wslRestart: "Restartujte Windows, aby se dokončilo zapnutí WSL2, a potom znovu klikněte na Nainstalovat.",
     background: "Instaluje se na pozadí.",
-    failed:
-      "Instalace modulu se nezdařila. Zkuste to znovu nebo použijte výchozí modul.",
+    failed: "Instalace modulu se nezdařila. Zkuste to znovu nebo použijte výchozí modul.",
     details: "Technické podrobnosti",
     cancelled: "Instalace byla zrušena. Můžete to zkusit znovu.",
-    scope:
-      "Textový a obrázkový chat na GPU NVIDIA. První načtení může trvat déle.",
+    scope: "Textový a obrázkový chat na GPU NVIDIA. První načtení může trvat déle.",
   },
   sandboxSetup: {
     levelTitle: "Sandbox operačního systému není k dispozici",
-    levelDescription:
-      "Pokud chcete použít úroveň Vysoká, nainstalujte ho, nebo ponechte úroveň Nízká (softwarový sandbox).",
+    levelDescription: "Pokud chcete použít úroveň Vysoká, nainstalujte ho, nebo ponechte úroveň Nízká (softwarový sandbox).",
     useLow: "Použít sandbox Nízká",
     checking: "Kontrola sandboxu v tomto počítači…",
     install: "Nainstalovat sandbox",
@@ -822,34 +742,25 @@ export const cs = {
     copyCommand: "Kopírovat příkaz",
     copied: "Příkaz byl zkopírován",
     copyFailed: "Příkaz se nepodařilo zkopírovat",
-    copiedRunIt:
-      "Příkaz byl zkopírován. Spusťte ho v terminálu na počítači, na kterém běží Unsloth, a potom přepněte na úroveň Vysoká.",
-    ownerOnly:
-      "Nainstalovat ho může pouze vlastník, a to z počítače, na kterém běží Unsloth.",
-    windowsNote:
-      "Po každém restartu vyžaduje krok s oprávněním správce. MXC je jen ve verzi preview a nepředstavuje bezpečnostní hranici.",
-    running:
-      "Probíhá nastavení. Na počítači, na kterém běží Unsloth, potvrďte výzvu k zadání hesla nebo k udělení oprávnění správce…",
-    succeeded:
-      "Sandbox operačního systému je připraven. Sandbox Vysoká je zapnutý.",
-    stillUnavailable:
-      "Nastavení skončilo, ale sandbox operačního systému stále neprošel kontrolou.",
-    declined:
-      "Výzva k zadání hesla nebo k udělení oprávnění správce byla odmítnuta.",
+    copiedRunIt: "Příkaz byl zkopírován. Spusťte ho v terminálu na počítači, na kterém běží Unsloth, a potom přepněte na úroveň Vysoká.",
+    ownerOnly: "Nainstalovat ho může pouze vlastník, a to z počítače, na kterém běží Unsloth.",
+    windowsNote: "Po každém restartu vyžaduje krok s oprávněním správce. MXC je jen ve verzi preview a nepředstavuje bezpečnostní hranici.",
+    running: "Probíhá nastavení. Na počítači, na kterém běží Unsloth, potvrďte výzvu k zadání hesla nebo k udělení oprávnění správce…",
+    succeeded: "Sandbox operačního systému je připraven. Sandbox Vysoká je zapnutý.",
+    stillUnavailable: "Nastavení skončilo, ale sandbox operačního systému stále neprošel kontrolou.",
+    declined: "Výzva k zadání hesla nebo k udělení oprávnění správce byla odmítnuta.",
     failed: "Nastavení se nezdařilo.",
     startError: "Nastavení sandboxu se nepodařilo spustit",
     checkFailed: "Sandbox v tomto počítači se nepodařilo zkontrolovat.",
     retry: "Zkusit znovu",
-    keepsRunning:
-      "Zavřením tohoto okna se nastavení nezastaví. Jeho výsledek se zobrazí v části Nastavení > Zabezpečení.",
+    keepsRunning: "Zavřením tohoto okna se nastavení nezastaví. Jeho výsledek se zobrazí v části Nastavení > Zabezpečení.",
   },
   composerSettings: {
     shareDraft: "Sdílet koncepty mezi chaty",
     shareDraftDescription: "Používat jeden koncept pro chaty a porovnání. Ve výchozím stavu vypnuto; každý chat si ponechá vlastní koncept.",
     title: "Pole zprávy",
     plainText: "Pole zprávy s prostým textem",
-    plainTextDescription:
-      "Ponechá kód, Markdown a odkazy jako doslovný text. Po vypnutí se zobrazí formátovaný náhled.",
+    plainTextDescription: "Ponechá kód, Markdown a odkazy jako doslovný text. Po vypnutí se zobrazí formátovaný náhled.",
     richPaste: "Vkládání formátovaného textu",
     richPasteDescription: "Vkládá odkazy, tabulky a formátování jako Markdown. {shortcut} vloží prostý text. Plný editor formátovaného textu brzy.",
     showContext: "Využití kontextového okna",
@@ -857,18 +768,14 @@ export const cs = {
     sendMultiline: "{mod} + Enter pro víceřádkové prompty",
     sendAlways: "Vždy {mod} + Enter",
     sendEnterDescription: "Enter odešle. Shift + Enter přidá nový řádek.",
-    sendMultilineDescription:
-      "Enter odešle jednořádkový prompt. Jakmile má prompt více řádků, Enter přidá nový řádek a {mod} + Enter odešle.",
+    sendMultilineDescription: "Enter odešle jednořádkový prompt. Jakmile má prompt více řádků, Enter přidá nový řádek a {mod} + Enter odešle.",
     sendAlwaysDescription: "{mod} + Enter odešle. Enter přidá nový řádek.",
     followUp: "Chování navazujících zpráv",
-    followUpDescription:
-      "Co se stane, když odešlete zprávu během generování odpovědi. Stisknutím {shortcut} jednorázově provedete opak.",
-    followUpMultilineShortcut:
-      "{shortcut} ({multiline} ve víceřádkovém promptu)",
+    followUpDescription: "Co se stane, když odešlete zprávu během generování odpovědi. Stisknutím {shortcut} jednorázově provedete opak.",
+    followUpMultilineShortcut: "{shortcut} ({multiline} ve víceřádkovém promptu)",
     queue: "Zařadit do fronty",
     steer: "Usměrnit",
-    steerDescription:
-      "Usměrnění zastaví aktuální odpověď a jako další odešle vaši navazující zprávu.",
+    steerDescription: "Usměrnění zastaví aktuální odpověď a jako další odešle vaši navazující zprávu.",
     settings: "Nastavení pole zprávy",
     preview: "Formátovaný náhled",
   },
@@ -877,8 +784,7 @@ export const cs = {
     listLabel: "Prompty ve frontě",
     regionLabel: "Fronta promptů, {current} z {total}",
     itemLabel: "Prompt ve frontě {position} z {total}: {prompt}",
-    reorderInstructions:
-      "Pořadí změníte přetažením úchytu. Když je úchyt aktivní, posunete prompt o jednu pozici klávesou šipka nahoru nebo dolů, na začátek nebo konec klávesou Home nebo End.",
+    reorderInstructions: "Pořadí změníte přetažením úchytu. Když je úchyt aktivní, posunete prompt o jednu pozici klávesou šipka nahoru nebo dolů, na začátek nebo konec klávesou Home nebo End.",
     dragTooltip: "Přetažením změníte pořadí",
     reorderLabel: "Změnit pořadí promptu ve frontě {position} z {total}",
     paused: "Pozastaveno",
@@ -903,23 +809,17 @@ export const cs = {
     sendLabel: "Odeslat zprávu",
     followUpTooltip: "{action} ({send}) · {opposite} pro opak",
     announceUpdated: "Prompt ve frontě byl aktualizován.",
-    announceEditFailed:
-      "Tento prompt už nelze upravit, protože se fronta změnila.",
+    announceEditFailed: "Tento prompt už nelze upravit, protože se fronta změnila.",
     announceRemoved: "Prompt byl odebrán z fronty.",
     announceSteered: "Tento prompt jako další usměrní odpověď.",
-    announceSteerFailed:
-      "Tímto promptem se nepodařilo usměrnit odpověď. Zkontrolujte frontu a zkuste to znovu.",
+    announceSteerFailed: "Tímto promptem se nepodařilo usměrnit odpověď. Zkontrolujte frontu a zkuste to znovu.",
     announceCopied: "Prompt byl zkopírován.",
-    announceCopyFailed:
-      "Tento prompt se nepodařilo zkopírovat. Zkuste to znovu.",
-    announceQueueingOn:
-      "Nové navazující zprávy se zařadí do fronty za aktuální odpověď.",
+    announceCopyFailed: "Tento prompt se nepodařilo zkopírovat. Zkuste to znovu.",
+    announceQueueingOn: "Nové navazující zprávy se zařadí do fronty za aktuální odpověď.",
     announceQueueingOff: "Nové navazující zprávy usměrní aktuální odpověď.",
     announceMoved: "Prompt byl přesunut na pozici {position} z {total}.",
-    announceMoveFailed:
-      "Fronta se změnila dříve, než bylo možné prompt přesunout. Zkuste to znovu.",
-    announceDragReset:
-      "Fronta se změnila. Pořadí zbývajících promptů změníte dalším přetažením.",
+    announceMoveFailed: "Fronta se změnila dříve, než bylo možné prompt přesunout. Zkuste to znovu.",
+    announceDragReset: "Fronta se změnila. Pořadí zbývajících promptů změníte dalším přetažením.",
     editingHint: "Úprava zprávy",
     queueingOffHint: "Nové zprávy přeruší odpověď a spustí se jako další.",
     queueingOnHint: "Nové zprávy čekají, až na ně přijde řada.",
@@ -936,12 +836,10 @@ export const cs = {
     modeConversation: "Pouze konverzace",
     modeFiles: "Pouze soubory",
     checkFailed: "Změny souborů se nepodařilo zkontrolovat: {error}",
-    summary:
-      "Soubory k obnovení: {restore}. K odstranění: {remove}. K opětovnému vytvoření: {recreate}.",
+    summary: "Soubory k obnovení: {restore}. K odstranění: {remove}. K opětovnému vytvoření: {recreate}.",
     conflicts: "Od té doby změněno, bude přeskočeno",
     untracked: "Nelze obnovit",
-    scopeNote:
-      "Soubory zahrnují i kód. Programy, balíčky a soubory mimo složku tohoto chatu se nezmění.",
+    scopeNote: "Soubory zahrnují i kód. Programy, balíčky a soubory mimo složku tohoto chatu se nezmění.",
     back: "Zpět",
     cancel: "Zrušit",
     confirm: "Vrátit zpět",
@@ -950,8 +848,7 @@ export const cs = {
     restoredMany: "Obnovené soubory: {count}",
     nothingRestored: "Žádné soubory nebylo nutné obnovit",
     skippedCount: "Přeskočeno: {count}",
-    filesNotRestored:
-      "Změněné soubory, které nelze obnovit a zůstanou beze změny: {count}.",
+    filesNotRestored: "Změněné soubory, které nelze obnovit a zůstanou beze změny: {count}.",
     restoreFailed: "Soubory se nepodařilo obnovit",
     undo: "Zpět",
     undone: "Obnovení souborů bylo vráceno zpět",
@@ -981,8 +878,7 @@ export const cs = {
     addScheduledTask: "Přidat naplánovanou úlohu…",
     compact: "Zkomprimovat konverzaci",
     compactEmpty: "Zatím není co komprimovat",
-    compactUnsupported:
-      "Komprimace vyžaduje model GGUF nebo MLX s podporou nástrojů",
+    compactUnsupported: "Komprimace vyžaduje model GGUF nebo MLX s podporou nástrojů",
   },
   welcome: {
     goodToSeeYou: "Je fajn vás vidět",
@@ -1001,13 +897,11 @@ export const cs = {
     nightShift: "Noční směna začíná",
     nightShiftName: "Noční směna začíná, {name}",
     temporaryChat: "Dočasný chat",
-    temporaryChatDescription:
-      "Tento chat se nezobrazí v historii a neukládá se. Po odchodu zmizí.",
+    temporaryChatDescription: "Tento chat se nezobrazí v historii a neukládá se. Po odchodu zmizí.",
   },
   picker: {
     unifiedTightFit: "Těsně se vejde",
-    unifiedTightFitHint:
-      "Na tomto Macu se model může načíst s kratším kontextem nebo běžet pomaleji.",
+    unifiedTightFitHint: "Na tomto Macu se model může načíst s kratším kontextem nebo běžet pomaleji.",
     residentToRun: "ke spuštění",
     residentToRunHint: "Paměť GPU, kterou kontrola načtení vyžaduje za běhu",
     onDevice: "V zařízení",
@@ -1015,8 +909,7 @@ export const cs = {
     retry: "Zkusit znovu",
     loadMore: "Načíst další",
     offlineTitle: "Jste offline",
-    offlineBody:
-      "Pokud chcete použít položky z mezipaměti nebo místní položky ({noun}), přepněte na Zařízení.",
+    offlineBody: "Pokud chcete použít položky z mezipaměti nebo místní položky ({noun}), přepněte na Zařízení.",
     offlineSwitchDevice: "Zařízení",
     searchAriaLabel: "Hledat: {noun}",
     modelSourceAriaLabel: "Zdroj modelu",
@@ -1025,14 +918,12 @@ export const cs = {
     modelDroppedByProvider: "{provider} · už není nabízeno",
     modelDisabled: "Není povoleno",
     modelDisabledByProvider: "{provider} · není povoleno",
-    multipleMatches:
-      "Odpovídá více položek ({noun}). Vyberte jednu ze seznamu.",
+    multipleMatches: "Odpovídá více položek ({noun}). Vyberte jednu ze seznamu.",
     rateLimitedTitle: "Byl dosažen limit požadavků Hugging Face",
     rateLimitedBody: "Chvíli počkejte a potom hledání zopakujte ({noun}).",
     modelScope: "ModelScope",
     useModelScope: "Použít ModelScope",
-    useModelScopeHint:
-      "Hledat a stahovat raději z ModelScope. Zpět můžete přepnout v Nastavení.",
+    useModelScopeHint: "Hledat a stahovat raději z ModelScope. Zpět můžete přepnout v Nastavení.",
     useModelScopeFailed: "Na ModelScope se nepodařilo přepnout.",
     updateToken: "Aktualizovat token",
     hfToken: {
@@ -1042,8 +933,7 @@ export const cs = {
       savedAriaLabel: "Token Hugging Face je uložen",
       addAriaLabel: "Nastavit token Hugging Face",
       savedHint: "Token je uložen. Přístup se ověří při jeho použití.",
-      addHint:
-        "Nastavte token pro přístup k soukromým a chráněným repozitářům.",
+      addHint: "Nastavte token pro přístup k soukromým a chráněným repozitářům.",
     },
   },
   common: {
@@ -1080,8 +970,7 @@ export const cs = {
       previous: "Předchozí shoda",
       next: "Další shoda",
       close: "Zavřít hledání",
-      truncated:
-        "Tato stránka je příliš dlouhá na to, aby se dala prohledat celá.",
+      truncated: "Tato stránka je příliš dlouhá na to, aby se dala prohledat celá.",
       searchChat: "Hledat v chatu",
       searchBrowser: "Hledat na stránce prohlížeče",
     },
@@ -1154,10 +1043,8 @@ export const cs = {
       guidedTour: "Průvodce",
       help: "Nápověda",
       logOut: "Odhlásit se",
-      logOutNeedsPassword:
-        "Před odhlášením nastavte heslo v části Nastavení > Vzdálený přístup a LAN, abyste se mohli znovu přihlásit.",
-      logOutFailed:
-        "Nepodařilo se bezpečně odhlásit. Zkuste to za chvíli znovu.",
+      logOutNeedsPassword: "Před odhlášením nastavte heslo v části Nastavení > Vzdálený přístup a LAN, abyste se mohli znovu přihlásit.",
+      logOutFailed: "Nepodařilo se bezpečně odhlásit. Zkuste to za chvíli znovu.",
       shutdown: "Vypnout",
     },
     commandPalette: {
@@ -1217,10 +1104,8 @@ export const cs = {
       unpinProjects: "Odepnout projekty",
       deleteProjects: "Smazat projekty",
       deleteProjectsTitle: "Smazat projekty",
-      deleteProjectsDescription:
-        "Projekty ({count}) a všechny jejich chaty budou trvale smazány. Tuto akci nelze vrátit zpět.",
-      deleteProjectsFilesDescription:
-        "Složka pracovního prostoru každého projektu bude odstraněna z disku.",
+      deleteProjectsDescription: "Projekty ({count}) a všechny jejich chaty budou trvale smazány. Tuto akci nelze vrátit zpět.",
+      deleteProjectsFilesDescription: "Složka pracovního prostoru každého projektu bude odstraněna z disku.",
       countSelected: "Vybráno: {count}",
       pinChats: "Připnout chaty",
       unpinChats: "Odepnout chaty",
@@ -1229,13 +1114,10 @@ export const cs = {
       markRead: "Označit jako přečtené",
       deleteChats: "Smazat chaty",
       deleteTitle: "Smazat chaty",
-      deleteDescription:
-        "Chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
-      deleteFilesDescription:
-        "Vlastní složka sandboxu každého chatu bude odstraněna z disku. Soubory, které chaty zapsaly do projektu, zůstanou v pracovním prostoru daného projektu.",
+      deleteDescription: "Chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
+      deleteFilesDescription: "Vlastní složka sandboxu každého chatu bude odstraněna z disku. Soubory, které chaty zapsaly do projektu, zůstanou v pracovním prostoru daného projektu.",
       deleteFilesLabel: "Smazat soubory a složku sandboxu",
-      deleteChatFilesDescription:
-        "Vlastní složka sandboxu tohoto chatu bude odstraněna z disku. Soubory, které chat zapsal do projektu, zůstanou v pracovním prostoru daného projektu.",
+      deleteChatFilesDescription: "Vlastní složka sandboxu tohoto chatu bude odstraněna z disku. Soubory, které chat zapsal do projektu, zůstanou v pracovním prostoru daného projektu.",
     },
     organize: {
       sidebarHeading: "Uspořádat postranní panel",
@@ -1307,32 +1189,26 @@ export const cs = {
       signsInAs: "Přihlašuje se jako {username}",
       signsInAsOwner: "Přihlašuje se jako {alias} nebo {username}",
       signInName: "Vaše přihlašovací jméno",
-      signInNameDescription:
-        "Jméno, které zadáváte při přihlášení, když má tato instalace více než jeden účet. Jméno unsloth funguje vždy. Pokud chcete používat jen unsloth, ponechte pole prázdné.",
+      signInNameDescription: "Jméno, které zadáváte při přihlášení, když má tato instalace více než jeden účet. Jméno unsloth funguje vždy. Pokud chcete používat jen unsloth, ponechte pole prázdné.",
       signInNameSave: "Uložit jméno",
       title: "Účty",
-      description:
-        "Vytvářejte soukromé účty Unsloth. Noví uživatelé se přihlásí pomocí jednorázového kódu nastavení a zvolí si heslo.",
+      description: "Vytvářejte soukromé účty Unsloth. Noví uživatelé se přihlásí pomocí jednorázového kódu nastavení a zvolí si heslo.",
       username: "Uživatelské jméno",
       create: "Vytvořit účet",
-      createDescription:
-        "Sdílejte kód nastavení, aby si uživatel mohl zvolit vlastní heslo.",
+      createDescription: "Sdílejte kód nastavení, aby si uživatel mohl zvolit vlastní heslo.",
       actionsFor: "Spravovat účet {username}",
       actions: "Akce",
       search: "Hledat účty",
       noResults: "Žádné odpovídající účty",
       created: "Vytvořeno",
       status: "Stav",
-      loginHint:
-        "Přihlaste se jako {username} s tímto kódem jako heslem a potom si zvolte nové heslo.",
+      loginHint: "Přihlaste se jako {username} s tímto kódem jako heslem a potom si zvolte nové heslo.",
       privateAccount: "Soukromý účet",
       modelAccess: "Přístup k modelům",
       modelAccessTitle: "Přístup k modelům pro účet {username}",
-      modelAccessDescription:
-        "Vyberte, které modely Hugging Face může tento účet vidět, stahovat, načítat a používat prostřednictvím svých klíčů API.",
+      modelAccessDescription: "Vyberte, které modely Hugging Face může tento účet vidět, stahovat, načítat a používat prostřednictvím svých klíčů API.",
       modelAccessLabel: "Povolené modely",
-      modelAccessHint:
-        "Jeden model na řádek, například unsloth/Qwen3-4B-GGUF, nebo unsloth/* pro celou organizaci. Pokud chcete povolit všechny modely, ponechte pole prázdné.",
+      modelAccessHint: "Jeden model na řádek, například unsloth/Qwen3-4B-GGUF, nebo unsloth/* pro celou organizaci. Pokud chcete povolit všechny modely, ponechte pole prázdné.",
       modelAccessSave: "Uložit",
       modelAccessLimited: "Omezený přístup k modelům",
       rename: "Přejmenovat",
@@ -1341,27 +1217,23 @@ export const cs = {
       empty: "Zatím žádné další účty",
       setupCode: "Kód nastavení",
       setupFor: "Kód nastavení pro účet {username}",
-      shownOnce:
-        "Zkopírujte tento kód hned a sdílejte ho s držitelem účtu. Zobrazuje se pouze zde a lze ho použít jednou během 60 minut.",
+      shownOnce: "Zkopírujte tento kód hned a sdílejte ho s držitelem účtu. Zobrazuje se pouze zde a lze ho použít jednou během 60 minut.",
       expires: "Platnost vyprší: {expiry}",
       copy: "Kopírovat kód nastavení",
       copied: "Zkopírováno",
-      copyFailed:
-        "Kopírování se nezdařilo. Vyberte kód nastavení výše a zkopírujte ho.",
+      copyFailed: "Kopírování se nezdařilo. Vyberte kód nastavení výše a zkopírujte ho.",
       dismiss: "Hotovo",
       owner: "Vlastník instalace",
       active: "Aktivní",
       inactive: "Deaktivováno",
       regenerate: "Znovu vygenerovat kód nastavení",
       resetTitle: "Obnovit heslo účtu {username}?",
-      resetDescription:
-        "Opětovným vygenerováním kódu nastavení se nahradí heslo účtu {username}, uživatel bude odhlášen a jeho klíče API budou odvolány. Předejte mu nový kód, aby si mohl znovu zvolit heslo.",
+      resetDescription: "Opětovným vygenerováním kódu nastavení se nahradí heslo účtu {username}, uživatel bude odhlášen a jeho klíče API budou odvolány. Předejte mu nový kód, aby si mohl znovu zvolit heslo.",
       deactivate: "Deaktivovat",
       reactivate: "Aktivovat",
       delete: "Smazat účet",
       deleteTitle: "Smazat účet {username}?",
-      deleteDescription:
-        "Tím se odvolají relace účtu {username} a zruší se jeho rozpracovaná práce. Jeho chaty, nastavení, přihlašovací údaje, nahrané soubory, datové sady, běhy trénování, výstupy, exporty, galerie, sandboxy, projekty a dočasné soubory budou vyřazeny. Adresáře se přejmenují a odloží stranou, nikdy se nesmažou. Opětovným vytvořením tohoto uživatelského jména vznikne nový účet bez jakýchkoli těchto dat.",
+      deleteDescription: "Tím se odvolají relace účtu {username} a zruší se jeho rozpracovaná práce. Jeho chaty, nastavení, přihlašovací údaje, nahrané soubory, datové sady, běhy trénování, výstupy, exporty, galerie, sandboxy, projekty a dočasné soubory budou vyřazeny. Adresáře se přejmenují a odloží stranou, nikdy se nesmažou. Opětovným vytvořením tohoto uživatelského jména vznikne nový účet bez jakýchkoli těchto dat.",
       cancel: "Zrušit",
       retry: "Obnovit účty",
       failed: "Požadavek na účet se nezdařil.",
@@ -1384,58 +1256,46 @@ export const cs = {
       medium: "Střední",
       large: "Velké",
       imageLayout: "Karty obrázků",
-      imageLayoutDescription:
-        "Zachovat tvar každého obrázku, nebo je oříznout na stejné čtverce.",
+      imageLayoutDescription: "Zachovat tvar každého obrázku, nebo je oříznout na stejné čtverce.",
       masonry: "Původní tvar",
       square: "Čtverec",
       showCardDates: "Zobrazovat data na kartách",
-      showCardDatesDescription:
-        "Zobrazí, kdy byl každý soubor naposledy změněn.",
+      showCardDatesDescription: "Zobrazí, kdy byl každý soubor naposledy změněn.",
       browsingSection: "Procházení",
       startTab: "Otevírat na",
       startTabDescription: "Karta, na které se knihovna otevře.",
       suggested: "Navrhované",
       all: "Vše",
       sort: "Seřadit podle",
-      sortDescription:
-        "Pořadí souborů a složek. Navrhované vždy zobrazuje nejnovější položky.",
+      sortDescription: "Pořadí souborů a složek. Navrhované vždy zobrazuje nejnovější položky.",
       recent: "Nejnovější",
       oldest: "Nejstarší",
       name: "Název",
       suggestedLimit: "Navrhované položky",
-      suggestedLimitDescription:
-        "Kolik nedávných souborů se zobrazí v části Navrhované.",
+      suggestedLimitDescription: "Kolik nedávných souborů se zobrazí v části Navrhované.",
       tabAuto: "Pokud obsahují soubory",
       tabAlways: "Vždy",
       contentSection: "Obsah",
-      contentDescription:
-        "Vyberte, co se v knihovně zobrazí. Skryté soubory se nemažou.",
+      contentDescription: "Vyberte, co se v knihovně zobrazí. Skryté soubory se nemažou.",
       showChatAttachments: "Přílohy chatů",
       showChatAttachmentsDescription: "Soubory, které jste připojili k chatům.",
       showChatToolFiles: "Soubory z nástrojů chatu",
-      showChatToolFilesDescription:
-        "Soubory, které během chatů vytvořil kód a nástroje.",
+      showChatToolFilesDescription: "Soubory, které během chatů vytvořil kód a nástroje.",
       showGeneratedMedia: "Vygenerovaná média",
-      showGeneratedMediaDescription:
-        "Obrázky, videa a zvuk ze stránek Obrázky, Video a Zvuk.",
-      showFineTunesDescription:
-        "Modely, které jste v Unsloth natrénovali nebo exportovali.",
+      showGeneratedMediaDescription: "Obrázky, videa a zvuk ze stránek Obrázky, Video a Zvuk.",
+      showFineTunesDescription: "Modely, které jste v Unsloth natrénovali nebo exportovali.",
       deletingSection: "Mazání",
       confirmDelete: "Před smazáním požádat o potvrzení",
-      confirmDeleteDescription:
-        "Zeptat se před smazáním souborů a složek z knihovny.",
+      confirmDeleteDescription: "Zeptat se před smazáním souborů a složek z knihovny.",
       reset: "Obnovit výchozí nastavení knihovny",
-      resetDescription:
-        "Obnoví všechny výše uvedené možnosti na výchozí hodnoty.",
+      resetDescription: "Obnoví všechny výše uvedené možnosti na výchozí hodnoty.",
       resetButton: "Obnovit výchozí",
       resetDone: "Nastavení knihovny bylo obnoveno",
       storageSection: "Úložiště",
       downloadsSection: "Stahování obrázků",
       imageInfoStamp: "Informační razítko",
-      imageInfoStampDescription:
-        "Zobrazí model, datum a seed v dolní části obrázků stažených ze stránky Obrázky. Nastavení generování se do souboru uloží v každém případě.",
-      storageDescription:
-        "Otevřete kategorii, zobrazí se její soubory od největšího, a smažte, co už nepotřebujete.",
+      imageInfoStampDescription: "Zobrazí model, datum a seed v dolní části obrázků stažených ze stránky Obrázky. Nastavení generování se do souboru uloží v každém případě.",
+      storageDescription: "Otevřete kategorii, zobrazí se její soubory od největšího, a smažte, co už nepotřebujete.",
       storageUsed: "Knihovna využívá {size}",
       storageDisk: "Na tomto disku volno {free} z {total}",
       storageEmpty: "V knihovně zatím není nic uloženo.",
@@ -1445,25 +1305,21 @@ export const cs = {
       storageOpen: "Otevřít",
       storageError: "Úložiště knihovny se nepodařilo načíst.",
       locationsSection: "Soubory na disku",
-      locationsDescription:
-        "Kde Unsloth uchovává jednotlivé druhy souborů. Složky knihovny jsou štítky uvnitř Unsloth, nikoli složky na disku. Doladěné modely a exporty zůstávají na svém místě, protože trénování a chaty na ně odkazují cestou.",
+      locationsDescription: "Kde Unsloth uchovává jednotlivé druhy souborů. Složky knihovny jsou štítky uvnitř Unsloth, nikoli složky na disku. Doladěné modely a exporty zůstávají na svém místě, protože trénování a chaty na ně odkazují cestou.",
       locationUploads: "Nahrané soubory knihovny",
       locationExports: "Exporty",
       revealFailed: "Správce souborů se nepodařilo otevřít",
       locationReset: "Obnovit výchozí",
       locationMoveTitle: "Přesunout do nové složky: {name}",
-      locationMoveDescription:
-        "Vyberte libovolnou složku. Pokud už obsahuje soubory, Unsloth v ní vytvoří vlastní složku. Přesune se i vše, co je zde už uloženo.",
+      locationMoveDescription: "Vyberte libovolnou složku. Pokud už obsahuje soubory, Unsloth v ní vytvoří vlastní složku. Přesune se i vše, co je zde už uloženo.",
       locationMoveAction: "Přesunout sem",
       locationMoving: "Přesouvání: {name}…",
       locationMoved: "Přesunuto: {name}",
       locationMoveFailed: "Nepodařilo se přesunout: {name}",
       locationFree: "Na této jednotce volno {free}",
-      locationUnavailable:
-        "Není k dispozici. Znovu připojte příslušnou jednotku nebo obnovte výchozí složku.",
+      locationUnavailable: "Není k dispozici. Znovu připojte příslušnou jednotku nebo obnovte výchozí složku.",
       locationResetUnavailableTitle: "Obnovit výchozí složku: {name}?",
-      locationResetUnavailableDescription:
-        "Příslušná jednotka není připojena. Soubory v {path} zůstanou na této jednotce a v knihovně se nezobrazí, dokud je nepřesunete zpět.",
+      locationResetUnavailableDescription: "Příslušná jednotka není připojena. Soubory v {path} zůstanou na této jednotce a v knihovně se nezobrazí, dokud je nepřesunete zpět.",
       locationLeftBehind: "Soubory v {path} zůstanou na této jednotce.",
       dataStorage: "Úložiště knihovny",
       manageStorage: "Spravovat úložiště",
@@ -1473,8 +1329,7 @@ export const cs = {
       itemCountOne: "1 položka",
       itemCount: "Položky: {count}",
       tabsSection: "Karty",
-      tabsDescription:
-        "Vyberte, které karty knihovna zobrazí. Karta, kterou otevřete z odkazu, se zobrazí vždy.",
+      tabsDescription: "Vyberte, které karty knihovna zobrazí. Karta, kterou otevřete z odkazu, se zobrazí vždy.",
       tabHidden: "Skryté",
       lastVisited: "Naposledy navštívené",
     },
@@ -1502,8 +1357,7 @@ export const cs = {
     },
     keyboardShortcuts: {
       title: "Klávesové zkratky",
-      intro:
-        "Pokud chcete zkratku změnit, vyberte kombinaci kláves a potom stiskněte nové klávesy",
+      intro: "Pokud chcete zkratku změnit, vyberte kombinaci kláves a potom stiskněte nové klávesy",
       searchPlaceholder: "Hledat zkratky…",
       keystrokePlaceholder: "Stiskněte zkratku, kterou chcete vyhledat",
       searchByKeystrokes: "Hledat podle kláves",
@@ -1511,15 +1365,13 @@ export const cs = {
       noResults: "Hledání neodpovídají žádné zkratky.",
       unassigned: "žádná",
       recording: "Stiskněte posloupnost kláves",
-      needsModifier:
-        "Přidejte ⌘, Ctrl nebo Alt. Samotná klávesa by zachytávala psaní.",
+      needsModifier: "Přidejte ⌘, Ctrl nebo Alt. Samotná klávesa by zachytávala psaní.",
       conflict: "Používá ji i jiná zkratka",
       conflictShadowed: "Tuto kombinaci má jiná zkratka a spustí se místo této",
       edit: "Změnit zkratku",
       reset: "Obnovit výchozí",
       resetAll: "Obnovit výchozí hodnoty",
-      browserReserved:
-        "Prohlížeč si tuto kombinaci může ponechat pro sebe. V desktopové aplikaci funguje.",
+      browserReserved: "Prohlížeč si tuto kombinaci může ponechat pro sebe. V desktopové aplikaci funguje.",
       metaUnsupported: "Klávesu Windows nelze ve zkratkách použít.",
       altGraphUnsupported: "Kombinace s AltGr nelze použít jako zkratky.",
       desktopOnly: "Pouze v desktopové aplikaci",
@@ -1540,8 +1392,7 @@ export const cs = {
         },
         toggleBrowserFullView: {
           label: "Přepnout zobrazení prohlížeče přes celé okno",
-          description:
-            "Zobrazit prohlížeč přes celé okno s chatem plovoucím nad ním",
+          description: "Zobrazit prohlížeč přes celé okno s chatem plovoucím nad ním",
         },
         openSettings: {
           label: "Otevřít nastavení",
@@ -1593,13 +1444,11 @@ export const cs = {
         },
         markChatUnread: {
           label: "Označit jako nepřečtené",
-          description:
-            "Označit vybrané chaty nebo aktuální chat jako nepřečtené",
+          description: "Označit vybrané chaty nebo aktuální chat jako nepřečtené",
         },
         togglePinChat: {
           label: "Připnout/odepnout",
-          description:
-            "Připnout nebo odepnout vybrané chaty nebo aktuální chat",
+          description: "Připnout nebo odepnout vybrané chaty nebo aktuální chat",
         },
         selectAllChats: {
           label: "Vybrat všechny chaty",
@@ -1607,8 +1456,7 @@ export const cs = {
         },
         clearChatSelection: {
           label: "Zrušit výběr",
-          description:
-            "Zrušit výběr vybraných chatů. Stejně funguje i klávesa Escape",
+          description: "Zrušit výběr vybraných chatů. Stejně funguje i klávesa Escape",
         },
         deleteSelectedChats: {
           label: "Smazat vybrané chaty",
@@ -1632,8 +1480,7 @@ export const cs = {
         },
         nextChatNeedingAttention: {
           label: "Další chat vyžadující pozornost",
-          description:
-            "Přepnout na další chat, který generuje, čeká ve frontě nebo je nepřečtený",
+          description: "Přepnout na další chat, který generuje, čeká ve frontě nebo je nepřečtený",
         },
         clearAllUnreads: {
           label: "Označit vše jako přečtené",
@@ -1775,8 +1622,7 @@ export const cs = {
     },
     sandbox: {
       title: "Zabezpečení",
-      description:
-        "Zda se volání nástrojů Python a Terminál v tomto počítači spouštějí v sandboxu operačního systému.",
+      description: "Zda se volání nástrojů Python a Terminál v tomto počítači spouštějí v sandboxu operačního systému.",
       docs: "Dokumentace",
       docsLabel: "Otevřít dokumentaci k sandboxu",
       toolsSection: "Tento počítač",
@@ -1785,37 +1631,27 @@ export const cs = {
       terminal: "Terminál",
       osIsolation: "Sandbox operačního systému ({backend})",
       softwareSafeguards: "Softwarová ochrana",
-      noReason:
-        "Zde zatím nefunguje žádný sandbox operačního systému, a proto Unsloth místo toho kontroluje každé volání.",
-      runsInCmd:
-        "Spouští se v cmd.exe, protože Git Bash nelze v sandboxu Windows spustit.",
+      noReason: "Zde zatím nefunguje žádný sandbox operačního systému, a proto Unsloth místo toho kontroluje každé volání.",
+      runsInCmd: "Spouští se v cmd.exe, protože Git Bash nelze v sandboxu Windows spustit.",
       loadError: "Stav sandboxu se nepodařilo načíst",
       saveError: "Nastavení sandboxu se nepodařilo uložit",
       prepareError: "Tento počítač se nepodařilo připravit",
-      unsupported:
-        "Tento server Unsloth zatím nehlásí stav sandboxu. Pokud ho chcete spravovat zde, aktualizujte Unsloth.",
+      unsupported: "Tento server Unsloth zatím nehlásí stav sandboxu. Pokud ho chcete spravovat zde, aktualizujte Unsloth.",
       windowsSection: "Sandbox Windows (preview)",
-      windowsDescription:
-        "Sandbox MXC od Microsoftu. Používá kontejner integrovaný ve Windows, nebo záložní řešení ve verzích Windows, které ho nemají.",
+      windowsDescription: "Sandbox MXC od Microsoftu. Používá kontejner integrovaný ve Windows, nebo záložní řešení ve verzích Windows, které ho nemají.",
       builtinLabel: "Integrovaný kontejner",
-      builtinDescription:
-        "Sandbox Windows běží v integrovaném kontejneru Windows bez kroku s oprávněním správce.",
+      builtinDescription: "Sandbox Windows běží v integrovaném kontejneru Windows bez kroku s oprávněním správce.",
       builtinInUse: "Používá se",
       optInLabel: "Použít záložní sandbox",
-      optInDescription:
-        "Pro verze Windows bez integrovaného kontejneru. Python a Terminál pak mohou měnit pouze soubory ve složce chatu.",
-      optInNotNeeded:
-        "Na tomto počítači není potřeba, protože integrovaný kontejner funguje.",
-      disclosure:
-        "Záložní sandbox vyžaduje jednorázový krok s oprávněním správce, Připravit tento počítač, který je nutné opakovat po každém restartu. Během běhu nástroje mu Unsloth udělí dočasný přístup ke složkám, které potřebuje. MXC je stále jen ve verzi preview a nepředstavuje bezpečnostní hranici.",
+      optInDescription: "Pro verze Windows bez integrovaného kontejneru. Python a Terminál pak mohou měnit pouze soubory ve složce chatu.",
+      optInNotNeeded: "Na tomto počítači není potřeba, protože integrovaný kontejner funguje.",
+      disclosure: "Záložní sandbox vyžaduje jednorázový krok s oprávněním správce, Připravit tento počítač, který je nutné opakovat po každém restartu. Během běhu nástroje mu Unsloth udělí dočasný přístup ke složkám, které potřebuje. MXC je stále jen ve verzi preview a nepředstavuje bezpečnostní hranici.",
       lockedDacl: "Nastaveno proměnnou UNSLOTH_MXC_ALLOW_DACL_FALLBACK",
       grantsLabel: "Rychlejší spouštění nástrojů",
-      grantsDescription:
-        "Mezi voláními zachová přístup jen pro čtení k vlastním složkám běhového prostředí Unsloth. Po vypnutí se každé volání spustí o několik sekund pomaleji.",
+      grantsDescription: "Mezi voláními zachová přístup jen pro čtení k vlastním složkám běhového prostředí Unsloth. Po vypnutí se každé volání spustí o několik sekund pomaleji.",
       lockedGrants: "Nastaveno proměnnou UNSLOTH_MXC_PERSISTENT_READ_GRANTS",
       memoryLabel: "Limit paměti",
-      memoryDescription:
-        "Maximum paměti, které si může vyhradit jedno volání nástroje Python nebo Terminál v sandboxu. Platí od dalšího volání. Výchozí hodnota je {defaultSize} GB.",
+      memoryDescription: "Maximum paměti, které si může vyhradit jedno volání nástroje Python nebo Terminál v sandboxu. Platí od dalšího volání. Výchozí hodnota je {defaultSize} GB.",
       memoryLocked: "Nastaveno proměnnou UNSLOTH_STUDIO_SANDBOX_AS_GB",
       memoryInvalid: "Zadejte celé číslo od {min} do {max}.",
       restored: "Přístup byl odebrán ze složek (počet: {count}).",
@@ -1831,45 +1667,33 @@ export const cs = {
       prepFailed: "Příprava se nezdařila.",
       setupLabel: "Sandbox operačního systému",
       setupCommandHint: "Spusťte toto na počítači, na kterém běží Unsloth:",
-      macosBuiltIn:
-        "macOS má integrovaný sandbox, takže není nutné nic instalovat.",
-      setupKeywords:
-        "instalace nastavení install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
+      macosBuiltIn: "macOS má integrovaný sandbox, takže není nutné nic instalovat.",
+      setupKeywords: "instalace nastavení install setup bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
       setupSucceeded: "Sandbox operačního systému je připraven.",
-      runtimeMissing:
-        "Zatím není nainstalováno. Instalace nevyžaduje výzvu k udělení oprávnění správce.",
+      runtimeMissing: "Zatím není nainstalováno. Instalace nevyžaduje výzvu k udělení oprávnění správce.",
       runtimeLabel: "Běhové prostředí sandboxu Windows",
       installRuntime: "Nainstalovat běhové prostředí",
       installingRuntime: "Instalace…",
       installRuntimeFailed: "Instalace běhového prostředí se nezdařila.",
-      installRuntimeError:
-        "Instalaci běhového prostředí se nepodařilo spustit.",
-      unsupportedArch:
-        "Sandbox Windows (MXC) funguje pouze ve Windows pro x64 a ARM64, a proto na tomto počítači není k dispozici.",
-      builtinNeedsUpdate:
-        "Integrovaný kontejner Windows vyžaduje sestavení {required} nebo novější, ale tento počítač má {current}. Pokud ho chcete používat bez kroku s oprávněním správce, nainstalujte nejnovější aktualizaci Windows, nebo níže zapněte záložní sandbox.",
-      unsupportedBuild:
-        "Sandbox Windows (MXC) vyžaduje Windows 11 24H2 (sestavení 26100) nebo novější, a proto na tomto počítači není k dispozici.",
+      installRuntimeError: "Instalaci běhového prostředí se nepodařilo spustit.",
+      unsupportedArch: "Sandbox Windows (MXC) funguje pouze ve Windows pro x64 a ARM64, a proto na tomto počítači není k dispozici.",
+      builtinNeedsUpdate: "Integrovaný kontejner Windows vyžaduje sestavení {required} nebo novější, ale tento počítač má {current}. Pokud ho chcete používat bez kroku s oprávněním správce, nainstalujte nejnovější aktualizaci Windows, nebo níže zapněte záložní sandbox.",
+      unsupportedBuild: "Sandbox Windows (MXC) vyžaduje Windows 11 24H2 (sestavení 26100) nebo novější, a proto na tomto počítači není k dispozici.",
       permissionLabel: "Oprávnění nástrojů",
       levelRowLabel: "Úroveň sandboxu",
       levelPickerTitle: "Jak má být kód izolován v sandboxu?",
       levelOff: "Vypnuto",
       levelOffShort: "Úplný přístup vypíná sandbox",
-      levelHighDetail:
-        "Python a Terminál běží v sandboxu operačního systému (bubblewrap, Seatbelt nebo MXC) nad softwarovým sandboxem. Bez funkčního sandboxu operačního systému se riziková volání nejprve zeptají.",
-      levelLowDetail:
-        "Python a Terminál běží pouze se softwarovým sandboxem, mimo sandbox operačního systému. Riziková volání se nejprve zeptají, pokud jste nezvolili Úplný přístup.",
+      levelHighDetail: "Python a Terminál běží v sandboxu operačního systému (bubblewrap, Seatbelt nebo MXC) nad softwarovým sandboxem. Bez funkčního sandboxu operačního systému se riziková volání nejprve zeptají.",
+      levelLowDetail: "Python a Terminál běží pouze se softwarovým sandboxem, mimo sandbox operačního systému. Riziková volání se nejprve zeptají, pokud jste nezvolili Úplný přístup.",
       levelLabel: "Sandbox",
       levelHigh: "Vysoká",
       levelLow: "Nízká",
-      levelHighShort:
-        "Přidává izolaci operačního systému pro Python a Terminál",
+      levelHighShort: "Přidává izolaci operačního systému pro Python a Terminál",
       levelLowShort: "Pouze software. Rizikový kód se nejprve zeptá",
-      levelFullAccessNote:
-        "Úplný přístup vypíná sandbox. Toto nastavení začne znovu platit, když zvolíte jinou úroveň.",
+      levelFullAccessNote: "Úplný přístup vypíná sandbox. Toto nastavení začne znovu platit, když zvolíte jinou úroveň.",
       learnMore: "Další informace",
-      managedNote:
-        "Sandbox operačního systému nastavuje vlastník tohoto serveru Unsloth.",
+      managedNote: "Sandbox operačního systému nastavuje vlastník tohoto serveru Unsloth.",
       trustedFoldersTitle: "Důvěryhodné složky",
       trustedFoldersLabel: "Spouštět bez ptaní",
       trustedFoldersDescription: "Python a Terminál mohou číst a spouštět soubory v těchto složkách bez žádosti o schválení, pouze ve vašich vlastních chatech. Zápis do nich se stále ptá. Jedna složka na řádek.",
@@ -1881,8 +1705,7 @@ export const cs = {
       description: "Čtěte protokoly Unsloth, aniž byste opustili aplikaci.",
       logSection: "Soubor protokolu",
       source: "Soubor protokolu",
-      sourceHint:
-        "Spouštěče modelů zapisují vlastní protokoly, takže neúspěšné načtení nebo generování bývá vysvětleno spíše tam než v protokolu serveru.",
+      sourceHint: "Spouštěče modelů zapisují vlastní protokoly, takže neúspěšné načtení nebo generování bývá vysvětleno spíše tam než v protokolu serveru.",
       path: "Umístění",
       pathCopy: "Kopírovat cestu",
       currentSession: "Aktuální",
@@ -1901,59 +1724,45 @@ export const cs = {
       modeInterval: "Každé 3 sekundy",
       modeManual: "Ručně",
       refreshNow: "Obnovit nyní",
-      privacyNote:
-        "Přihlašovací údaje jsou v tomto zobrazení maskovány. Soubor na disku maskován není.",
+      privacyNote: "Přihlašovací údaje jsou v tomto zobrazení maskovány. Soubor na disku maskován není.",
       copyVisible: "Kopírovat zobrazený protokol",
       empty: "Zatím nebylo nic zaprotokolováno.",
-      disabled:
-        "Protokolování do souboru je vypnuté (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
+      disabled: "Protokolování do souboru je vypnuté (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
       missing: "Nebyl nalezen žádný soubor protokolu.",
       unreadable: "Soubor protokolu se nepodařilo přečíst.",
       viewLogs: "Zobrazit protokoly",
-      timeout:
-        "Časový limit požadavku na protokol vypršel. Server může být nedostupný.",
-      droppedNotice:
-        "Některé řádky byly přeskočeny: protokol se zapisoval rychleji, než ho bylo možné číst.",
-      morePending:
-        "Další řádky se ještě načítají; zobrazí se při příštím obnovení.",
-      staleSession:
-        "Protokolování do souboru je vypnuté, takže jde o dřívější relaci, která se nebude aktualizovat.",
+      timeout: "Časový limit požadavku na protokol vypršel. Server může být nedostupný.",
+      droppedNotice: "Některé řádky byly přeskočeny: protokol se zapisoval rychleji, než ho bylo možné číst.",
+      morePending: "Další řádky se ještě načítají; zobrazí se při příštím obnovení.",
+      staleSession: "Protokolování do souboru je vypnuté, takže jde o dřívější relaci, která se nebude aktualizovat.",
       downloadAllLogs: "Stáhnout všechny protokoly (.zip)",
       downloadingAllLogs: "Balení protokolů...",
-      exportMaskedNote:
-        "Přihlašovací údaje jsou v exportovaných souborech maskovány. U velmi velkých protokolů se zachovají jen nejnovější řádky a některé protokoly mohou být zcela vynechány; podrobnosti najdete v souboru EXPORT_WARNINGS.txt v archivu.",
+      exportMaskedNote: "Přihlašovací údaje jsou v exportovaných souborech maskovány. U velmi velkých protokolů se zachovají jen nejnovější řádky a některé protokoly mohou být zcela vynechány; podrobnosti najdete v souboru EXPORT_WARNINGS.txt v archivu.",
       downloadedTo: "Uloženo do {path}",
       downloadedToBrowser: "Stahování bylo zahájeno.",
       showInFolder: "Zobrazit ve složce",
       openLogsFolder: "Otevřít složku protokolů",
       openLogsFolderFailed: "Složku protokolů se nepodařilo otevřít.",
       exportFailed: "Protokoly se nepodařilo stáhnout.",
-      exportTooOld:
-        "Spuštěný backend Unsloth je příliš starý na export protokolů. Aktualizujte backend a restartujte ho.",
-      exportForbidden:
-        "Stažení všech protokolů vyžaduje přihlášenou relaci Unsloth. Klíč API nestačí.",
-      keywords:
-        "ladění protokol protokoly chyba chyby pád selhání trasování zásobníku řešení potíží diagnostika debug log logs error crash traceback stack trace troubleshoot failed",
+      exportTooOld: "Spuštěný backend Unsloth je příliš starý na export protokolů. Aktualizujte backend a restartujte ho.",
+      exportForbidden: "Stažení všech protokolů vyžaduje přihlášenou relaci Unsloth. Klíč API nestačí.",
+      keywords: "ladění protokol protokoly chyba chyby pád selhání trasování zásobníku řešení potíží diagnostika debug log logs error crash traceback stack trace troubleshoot failed",
     },
     voice: {
       title: "Hlas",
       description: "Mikrofon, diktování, převod řeči na text a předčítání",
       dictation: {
         audioUploadTitle: "Diktovat pomocí nahrávky",
-        audioUploadDescription:
-          "Pro přímé nahrávání v Unsloth vyžaduje prohlížeč zabezpečené připojení (HTTPS). Na tomto připojení HTTP místo toho použijte diktafon v telefonu nebo vyberte uloženou nahrávku. Server Unsloth zvuk přepíše a text přidá do vaší zprávy.",
+        audioUploadDescription: "Pro přímé nahrávání v Unsloth vyžaduje prohlížeč zabezpečené připojení (HTTPS). Na tomto připojení HTTP místo toho použijte diktafon v telefonu nebo vyberte uloženou nahrávku. Server Unsloth zvuk přepíše a text přidá do vaší zprávy.",
         audioUploadChooseFile: "Vybrat nahrávku",
         audioUploadRecord: "Nahrát zvuk",
-        audioUploadIphoneHint:
-          "Na iPhonu uložte nahrávku z aplikace Diktafon nebo jiné nahrávací aplikace a potom ji vyberte zde.",
-        audioUploadServerModelNote:
-          "Tato nahrávka používá místní model zobrazený výše na serveru Unsloth, i když běžné diktování používá jiný modul.",
+        audioUploadIphoneHint: "Na iPhonu uložte nahrávku z aplikace Diktafon nebo jiné nahrávací aplikace a potom ji vyberte zde.",
+        audioUploadServerModelNote: "Tato nahrávka používá místní model zobrazený výše na serveru Unsloth, i když běžné diktování používá jiný modul.",
         audioUploadAutomatic: "Automaticky",
         audioUploadModelReady: "Připraveno na tomto serveru Unsloth",
         audioUploadRetryTitle: "Nepodařilo se přepsat: {file}",
         audioUploadRetry: "Zkusit přepis znovu",
-        audioUploadChooseModel:
-          "Vyberte místní model rozpoznávání řeči v nastavení Hlas.",
+        audioUploadChooseModel: "Vyberte místní model rozpoznávání řeči v nastavení Hlas.",
         audioUploadEmpty: "Vybraná nahrávka je prázdná.",
         audioUploadTooLarge: "Vyberte nahrávku menší než {size}.",
         audioUploadVideoUnsupported: "Vyberte zvukovou nahrávku, nikoli video.",
@@ -1971,42 +1780,31 @@ export const cs = {
         micRecordForModel: "Nahrát zvuk pro model",
         engineLabel: "Modul diktování",
         engineBrowser: "Prohlížeč",
-        engineBrowserDescription:
-          "Přepisuje zvuk pomocí služby rozpoznávání řeči v prohlížeči. Pokud chcete použít model STT, vyberte „Místní přepis“.",
+        engineBrowserDescription: "Přepisuje zvuk pomocí služby rozpoznávání řeči v prohlížeči. Pokud chcete použít model STT, vyberte „Místní přepis“.",
         engineModel: "Místní přepis",
-        engineModelDescription:
-          "Spouští model převodu řeči na text (STT) místně a funguje offline. Stáhněte ho a načtěte; po nečinnosti se uvolní.",
+        engineModelDescription: "Spouští model převodu řeči na text (STT) místně a funguje offline. Stáhněte ho a načtěte; po nečinnosti se uvolní.",
         engineCustom: "Vlastní koncový bod",
-        engineCustomDescription:
-          "Odesílá nahraný zvuk na server STT kompatibilní s OpenAI z vašich připojení.",
+        engineCustomDescription: "Odesílá nahraný zvuk na server STT kompatibilní s OpenAI z vašich připojení.",
         connectionLabel: "Připojení",
-        connectionDescription:
-          "Server kompatibilní s OpenAI a volitelný klíč API přidejte v části Připojení.",
+        connectionDescription: "Server kompatibilní s OpenAI a volitelný klíč API přidejte v části Připojení.",
         connectionPlaceholder: "Vyberte připojení",
         connectionEmpty: "Nejsou k dispozici žádná připojení",
         customModelLabel: "Model",
-        customModelDescription:
-          "Název modelu odesílaný na /v1/audio/transcriptions.",
+        customModelDescription: "Název modelu odesílaný na /v1/audio/transcriptions.",
         sttModelLabel: "Model rozpoznávání řeči",
-        sttModelDescription:
-          "Vyberte nebo vyhledejte model STT, který se má spouštět místně.",
+        sttModelDescription: "Vyberte nebo vyhledejte model STT, který se má spouštět místně.",
         sttQuantLabel: "Kvantizace",
-        sttQuantDescription:
-          "Vyberte nebo vyhledejte model STT, který se má spouštět místně, a potom jeho kvantizaci.",
+        sttQuantDescription: "Vyberte nebo vyhledejte model STT, který se má spouštět místně, a potom jeho kvantizaci.",
         sttDeviceLabel: "Načíst do",
         sttContextLabel: "Kontext hlasu",
         sttContextAuto: "Automaticky (doporučeno)",
-        sttContextAutoDescription:
-          "Přizpůsobí se každé nahrávce a pro delší zvuk použije více paměti. Starší běhová prostředí mohou ke snížení paměti potřebovat pevnou velikost. Platí pro Qwen3-ASR v sekcích Hlas a Přepis.",
-        sttContextFixedDescription:
-          "Menší limity používají méně paměti. Nahrávky, které se nevejdou, potřebují vyšší limit nebo Automaticky. Platí pro Qwen3-ASR v sekcích Hlas a Přepis.",
+        sttContextAutoDescription: "Přizpůsobí se každé nahrávce a pro delší zvuk použije více paměti. Starší běhová prostředí mohou ke snížení paměti potřebovat pevnou velikost. Platí pro Qwen3-ASR v sekcích Hlas a Přepis.",
+        sttContextFixedDescription: "Menší limity používají méně paměti. Nahrávky, které se nevejdou, potřebují vyšší limit nebo Automaticky. Platí pro Qwen3-ASR v sekcích Hlas a Přepis.",
         sttContextTokens: "tokeny: {count}",
         sttDeviceAuto: "GPU, pokud je k dispozici",
         sttDeviceCpu: "RAM procesoru",
-        sttDeviceAutoDescription:
-          "Použít GPU, pokud je k dispozici, jinak CPU.",
-        sttDeviceCpuDescription:
-          "Ponechat model v systémové RAM. Přepis je pomalejší, ale nevyužívá se paměť GPU.",
+        sttDeviceAutoDescription: "Použít GPU, pokud je k dispozici, jinak CPU.",
+        sttDeviceCpuDescription: "Ponechat model v systémové RAM. Přepis je pomalejší, ale nevyužívá se paměť GPU.",
         sttModelSearchPlaceholder: "Hledat libovolný model na HF",
         sttModelSearching: "Hledání na Hugging Face…",
         sttModelValidating: "Kontrola kompatibility s Whisper…",
@@ -2019,18 +1817,15 @@ export const cs = {
         sttLoadingModel: "Načítání modelu…",
         sttReady: "Načteno na: {device}",
         sttLoaded: "Načteno",
-        sttUnavailable:
-          "Na tomto serveru není nainstalováno. Pokud chcete zapnout místní diktování, spusťte `unsloth studio update`.",
+        sttUnavailable: "Na tomto serveru není nainstalováno. Pokud chcete zapnout místní diktování, spusťte `unsloth studio update`.",
         sttRetry: "Zkusit znovu",
         sttDownloadChecking: "Kontrola stavu stahování…",
         sttNotDownloaded: "Nestaženo",
         sttDownloadStatusFailed: "Stav stahování se nepodařilo zkontrolovat",
         sttDownload: "Stáhnout",
         sttDownloadConfirmTitle: "Stáhnout {model}?",
-        sttDownloadConfirmBody:
-          "Místní diktování běží zcela offline, ale nejprve potřebuje model řeči {model}. Přibližně {size}, stáhne se jednou do vaší mezipaměti Hugging Face.",
-        sttDownloadConfirmBodyUnsized:
-          "Místní diktování běží zcela offline, ale nejprve potřebuje model řeči {model}. Stáhne se jednou do vaší mezipaměti Hugging Face.",
+        sttDownloadConfirmBody: "Místní diktování běží zcela offline, ale nejprve potřebuje model řeči {model}. Přibližně {size}, stáhne se jednou do vaší mezipaměti Hugging Face.",
+        sttDownloadConfirmBodyUnsized: "Místní diktování běží zcela offline, ale nejprve potřebuje model řeči {model}. Stáhne se jednou do vaší mezipaměti Hugging Face.",
         sttOpenVoiceSettings: "Otevřít nastavení Hlas",
         sttDownloadStarted: "Stahování: {model}",
         sttDownloading: "Stahování… {progress} %",
@@ -2047,17 +1842,12 @@ export const cs = {
         microphoneLabel: "Mikrofon",
         microphoneFallbackName: "Mikrofon {index}",
         microphoneDescription: "Používá se pro diktování",
-        microphoneFallbackHint:
-          "Používá se pro diktování. Pokud modul rozpoznávání řeči v prohlížeči nemůže toto zařízení použít, použije se výchozí zařízení systému",
-        microphoneGrantDescription:
-          "Povolte přístup k mikrofonu, aby se zobrazily názvy zařízení",
+        microphoneFallbackHint: "Používá se pro diktování. Pokud modul rozpoznávání řeči v prohlížeči nemůže toto zařízení použít, použije se výchozí zařízení systému",
+        microphoneGrantDescription: "Povolte přístup k mikrofonu, aby se zobrazily názvy zařízení",
         allowMicrophone: "Povolit mikrofon",
-        micAccessBlocked:
-          "Přístup k mikrofonu byl zablokován. Povolte přístup k mikrofonu pro tuto stránku Unsloth a zkuste to znovu.",
-        micAccessBlockedDesktop:
-          "Přístup k mikrofonu byl zablokován. Zkuste to znovu a zvolte Povolit, nebo mikrofon povolte v nastavení soukromí systému.",
-        micAccessUnsupported:
-          "Přístup k mikrofonu není v tomto prohlížeči nebo kontextu podporován.",
+        micAccessBlocked: "Přístup k mikrofonu byl zablokován. Povolte přístup k mikrofonu pro tuto stránku Unsloth a zkuste to znovu.",
+        micAccessBlockedDesktop: "Přístup k mikrofonu byl zablokován. Zkuste to znovu a zvolte Povolit, nebo mikrofon povolte v nastavení soukromí systému.",
+        micAccessUnsupported: "Přístup k mikrofonu není v tomto prohlížeči nebo kontextu podporován.",
         systemDefault: "Výchozí nastavení systému",
         savedMicDisconnected: "Uložený mikrofon (nepřipojen)",
         languageLabel: "Jazyk diktování",
@@ -2067,8 +1857,7 @@ export const cs = {
       },
       dictionary: {
         sectionTitle: "Slovník diktování",
-        sectionDescription:
-          "Nastavte, jak má diktování psát konkrétní slova nebo fráze",
+        sectionDescription: "Nastavte, jak má diktování psát konkrétní slova nebo fráze",
         manageLabel: "Vlastní pravopis",
         manage: "Spravovat",
         backToVoice: "Zpět na Hlas",
@@ -2080,12 +1869,10 @@ export const cs = {
       },
       recents: {
         sectionTitle: "Historie diktování",
-        sectionDescription:
-          "Každé diktování se ukládá sem, abyste mohli text obnovit",
+        sectionDescription: "Každé diktování se ukládá sem, abyste mohli text obnovit",
         manageLabel: "Historie diktování",
         manage: "Spravovat",
-        pageDescription:
-          "Každé diktování se ukládá. Můžete je zobrazit, zkopírovat nebo smazat, případně otevřít chat, ve kterém bylo diktování použito.",
+        pageDescription: "Každé diktování se ukládá. Můžete je zobrazit, zkopírovat nebo smazat, případně otevřít chat, ve kterém bylo diktování použito.",
         searchPlaceholder: "Hledat v diktováních",
         sortLabel: "Seřadit diktování",
         sortNewest: "Nejnovější",
@@ -2104,16 +1891,13 @@ export const cs = {
         copyFailed: "Do schránky se nepodařilo zkopírovat",
         delete: "Smazat diktát",
         deleteTitle: "Smazat diktát",
-        deleteDescription:
-          "Smazat tento uložený diktát? Tuto akci nelze vrátit zpět.",
-        deleteLinkedDescription:
-          "Smazat tento uložený diktát? Můžete smazat i chat, ve kterém byl použit. Tuto akci nelze vrátit zpět.",
+        deleteDescription: "Smazat tento uložený diktát? Tuto akci nelze vrátit zpět.",
+        deleteLinkedDescription: "Smazat tento uložený diktát? Můžete smazat i chat, ve kterém byl použit. Tuto akci nelze vrátit zpět.",
         deleteWithChat: "Smazat chat i diktát",
         deleteWithChatFailed: "Chat se nepodařilo smazat",
         clear: "Vymazat historii",
         clearTitle: "Vymazat historii diktátů",
-        clearDescription:
-          "Smazat všechny uložené diktáty? Tuto akci nelze vrátit zpět.",
+        clearDescription: "Smazat všechny uložené diktáty? Tuto akci nelze vrátit zpět.",
         clearConfirm: "Vymazat vše",
         showMore: "Zobrazit další ({count})",
         openChat: "Otevřít chat",
@@ -2123,37 +1907,29 @@ export const cs = {
         buttonLabel: "Tlačítko Předčítat",
         buttonDescription: "Zobrazit u odpovědí asistenta",
         autoLabel: "Automaticky předčítat odpovědi",
-        autoDescription:
-          "Předčítat každou odpověď nahlas hned po jejím dokončení",
+        autoDescription: "Předčítat každou odpověď nahlas hned po jejím dokončení",
         engineLabel: "Modul TTS",
         engineSystemDescription: "Vestavěné hlasy zařízení",
-        engineStudioDescription:
-          "Mluví pomocí modelu načteného v části Zvuk › Převod textu na řeč",
+        engineStudioDescription: "Mluví pomocí modelu načteného v části Zvuk › Převod textu na řeč",
         engineSystem: "Systémové hlasy",
         engineStudio: "Model Unsloth",
         engineCustom: "Vlastní koncový bod",
-        engineCustomDescription:
-          "Server TTS kompatibilní s OpenAI z vašich připojení (např. Kokoro)",
+        engineCustomDescription: "Server TTS kompatibilní s OpenAI z vašich připojení (např. Kokoro)",
         connectionLabel: "Připojení",
-        connectionDescription:
-          "Server kompatibilní s OpenAI přidejte na kartě Připojení",
+        connectionDescription: "Server kompatibilní s OpenAI přidejte na kartě Připojení",
         connectionPlaceholder: "Vyberte připojení",
         customModelLabel: "Model",
-        customVoiceDescription:
-          "Název hlasu, který koncový bod očekává; výchozí je alloy",
+        customVoiceDescription: "Název hlasu, který koncový bod očekává; výchozí je alloy",
         modelLabel: "Model TTS",
-        modelDescription:
-          "Žádný není načten. Načtěte ho v části Zvuk › Převod textu na řeč.",
+        modelDescription: "Žádný není načten. Načtěte ho v části Zvuk › Převod textu na řeč.",
         modelLoaded: "Načtený model: {model}",
         keepBothLabel: "Ponechat model chatu načtený",
-        keepBothDescription:
-          "Možnost „Ponechat více modelů načtených“ je vypnutá, takže načtení řečového modelu uvolní model chatu.",
+        keepBothDescription: "Možnost „Ponechat více modelů načtených“ je vypnutá, takže načtení řečového modelu uvolní model chatu.",
         keepBothAction: "Ponechat oba načtené",
         openAudioAction: "Otevřít Zvuk",
         voiceLabel: "Hlas",
         voiceDescription: "Nejlepší hlasy v tomto zařízení",
-        studioVoiceDescription:
-          "Hlasy uložené v části Zvuk vyžadují model pro klonování hlasu",
+        studioVoiceDescription: "Hlasy uložené v části Zvuk vyžadují model pro klonování hlasu",
         studioVoiceDefault: "Vlastní hlas modelu",
         studioVoiceSaved: "Uložený hlas",
         speedLabel: "Rychlost",
@@ -2174,8 +1950,7 @@ export const cs = {
       description: "Globální předvolby pro Unsloth.",
       account: "Účet",
       huggingFaceToken: "Token Hugging Face",
-      huggingFaceTokenDescription:
-        "Slouží k načítání modelů s omezeným přístupem a k nahrávání artefaktů.",
+      huggingFaceTokenDescription: "Slouží k načítání modelů s omezeným přístupem a k nahrávání artefaktů.",
       hideToken: "Skrýt token",
       showToken: "Zobrazit token",
       clearToken: "Vymazat",
@@ -2186,22 +1961,18 @@ export const cs = {
       passwordDialog: {
         trigger: "Změnit heslo",
         title: "Změnit heslo",
-        description:
-          "Zadejte své současné heslo a zvolte nové (minimální počet znaků: {minLength}).",
+        description: "Zadejte své současné heslo a zvolte nové (minimální počet znaků: {minLength}).",
         setTrigger: "Nastavit vzdálené heslo",
         setTitle: "Nastavit vzdálené heslo",
-        setDescription:
-          "Zvolte heslo, kterým se vzdálené prohlížeče přihlašují jako unsloth (minimální počet znaků: {minLength}). Aplikace Unsloth Desktop se bude i nadále přihlašovat automaticky.",
+        setDescription: "Zvolte heslo, kterým se vzdálené prohlížeče přihlašují jako unsloth (minimální počet znaků: {minLength}). Aplikace Unsloth Desktop se bude i nadále přihlašovat automaticky.",
         setSubmit: "Nastavit heslo",
         setting: "Nastavování...",
         setDone: "Heslo bylo nastaveno.",
         currentPassword: "Současné heslo",
         newPassword: "Nové heslo",
         confirmPassword: "Potvrzení nového hesla",
-        currentTooShort:
-          "Současné heslo musí mít alespoň tento počet znaků: {minLength}.",
-        newTooShort:
-          "Nové heslo musí mít alespoň tento počet znaků: {minLength}.",
+        currentTooShort: "Současné heslo musí mít alespoň tento počet znaků: {minLength}.",
+        newTooShort: "Nové heslo musí mít alespoň tento počet znaků: {minLength}.",
         newHasSpaces: "Nové heslo nesmí obsahovat mezery.",
         mismatch: "Hesla se neshodují.",
         samePassword: "Nové heslo se musí lišit od současného hesla.",
@@ -2236,35 +2007,24 @@ export const cs = {
       helperLlm: {
         sectionTitle: "Pomocný LLM",
         preloadOnStartup: "Při spuštění předem stáhnout pomocný LLM",
-        preloadOnStartupDescription:
-          "Při spuštění stáhnout na pozadí pomocný model AI Assist. Ve výchozím nastavení vypnuto; AI Assist si ho může stáhnout i na vyžádání.",
-        disabledByEnv:
-          "Vypnuto proměnnou UNSLOTH_HELPER_MODEL_DISABLE v prostředí backendu.",
+        preloadOnStartupDescription: "Při spuštění stáhnout na pozadí pomocný model AI Assist. Ve výchozím nastavení vypnuto; AI Assist si ho může stáhnout i na vyžádání.",
+        disabledByEnv: "Vypnuto proměnnou UNSLOTH_HELPER_MODEL_DISABLE v prostředí backendu.",
         loadError: "Nastavení pomocného LLM se nepodařilo načíst.",
         saveError: "Nastavení pomocného LLM se nepodařilo uložit.",
       },
       developerMode: {
         sectionTitle: "Vývojářský režim",
         videoCpu: "Povolit generování videa na CPU (experimentální)",
-        videoCpuDescription:
-          "Umožní spouštět stránku Video na počítači bez podporovaného GPU. Ve výchozím nastavení vypnuto; nepodporováno a velmi pomalé.",
-        notApplicable:
-          "Na tomto počítači nemá žádný vliv: video buď už běží na jeho GPU, nebo ho blokuje něco, co CPU nedokáže obejít.",
-        forcedOnByEnv:
-          "Zapnuto proměnnou UNSLOTH_VIDEO_ALLOW_CPU v prostředí backendu.",
-        forcedOffByEnv:
-          "Vypnuto proměnnou UNSLOTH_VIDEO_ALLOW_CPU v prostředí backendu.",
+        videoCpuDescription: "Umožní spouštět stránku Video na počítači bez podporovaného GPU. Ve výchozím nastavení vypnuto; nepodporováno a velmi pomalé.",
+        notApplicable: "Na tomto počítači nemá žádný vliv: video buď už běží na jeho GPU, nebo ho blokuje něco, co CPU nedokáže obejít.",
+        forcedOnByEnv: "Zapnuto proměnnou UNSLOTH_VIDEO_ALLOW_CPU v prostředí backendu.",
+        forcedOffByEnv: "Vypnuto proměnnou UNSLOTH_VIDEO_ALLOW_CPU v prostředí backendu.",
         confirmTitle: "Zapnout generování videa na CPU?",
-        confirmWarning:
-          "Generování videa na CPU může trvat hodiny, spotřebovat velké množství RAM a může zamrazit váš systém. Pokračujete na vlastní riziko.",
-        ramBelowMinimum:
-          "Tento počítač má {host} GB RAM, méně než {min} GB, které nejmenší video model potřebuje na CPU. Načtení pravděpodobně selže nebo zamrazí systém.",
-        ramOk:
-          "Tento počítač má {host} GB RAM. Nejmenší video model potřebuje na CPU asi {min} GB; větší modely potřebují mnohem víc.",
-        ramUnknown:
-          "Nejmenší video model potřebuje na CPU asi {min} GB RAM; větší modely potřebují mnohem víc.",
-        performanceEstimate:
-          "Počítejte s minutami na každý krok odšumování: 5snímkový klip 832x480 z modelu Wan2.1 1.3B se 3 kroky trval na 16 vláknech CPU asi 4 minuty a klip plné délky s výchozím nastavením může trvat hodiny.",
+        confirmWarning: "Generování videa na CPU může trvat hodiny, spotřebovat velké množství RAM a může zamrazit váš systém. Pokračujete na vlastní riziko.",
+        ramBelowMinimum: "Tento počítač má {host} GB RAM, méně než {min} GB, které nejmenší video model potřebuje na CPU. Načtení pravděpodobně selže nebo zamrazí systém.",
+        ramOk: "Tento počítač má {host} GB RAM. Nejmenší video model potřebuje na CPU asi {min} GB; větší modely potřebují mnohem víc.",
+        ramUnknown: "Nejmenší video model potřebuje na CPU asi {min} GB RAM; větší modely potřebují mnohem víc.",
+        performanceEstimate: "Počítejte s minutami na každý krok odšumování: 5snímkový klip 832x480 z modelu Wan2.1 1.3B se 3 kroky trval na 16 vláknech CPU asi 4 minuty a klip plné délky s výchozím nastavením může trvat hodiny.",
         confirmAction: "Přesto zapnout",
         loadError: "Nastavení vývojářského režimu se nepodařilo načíst.",
         saveError: "Nastavení vývojářského režimu se nepodařilo uložit.",
@@ -2272,50 +2032,33 @@ export const cs = {
       modelAutoSwitch: {
         sectionTitle: "Automatické přepínání modelu (OpenAI API)",
         enable: "Přepínat model podle požadavku",
-        enableDescription:
-          "Před obsloužením načíst stažený model uvedený v požadavku API. Ve výchozím nastavení vypnuto.",
+        enableDescription: "Před obsloužením načíst stažený model uvedený v požadavku API. Ve výchozím nastavení vypnuto.",
         autoDownload: "Stahovat chybějící modely",
-        autoDownloadDescription:
-          "Stáhnout GGUF uvedený v požadavku API, který ještě není stažený. Kdokoli s klíčem API pak může využívat disk a přenosovou kapacitu.",
+        autoDownloadDescription: "Stáhnout GGUF uvedený v požadavku API, který ještě není stažený. Kdokoli s klíčem API pak může využívat disk a přenosovou kapacitu.",
         idleUnload: "Automatické uvolnění při nečinnosti",
-        idleUnloadDescription:
-          "Uvolnit VRAM po tomto počtu sekund nečinnosti. 0 ponechá model načtený, minimum je 60.",
-        idleSecondsAriaLabel:
-          "Sekundy do automatického uvolnění při nečinnosti",
+        idleUnloadDescription: "Uvolnit VRAM po tomto počtu sekund nečinnosti. 0 ponechá model načtený, minimum je 60.",
+        idleSecondsAriaLabel: "Sekundy do automatického uvolnění při nečinnosti",
         mediaEnable: "Přepínat model obrázků a videa podle požadavku",
-        mediaEnableDescription:
-          "Před generováním načíst stažený model obrázků nebo videa uvedený v požadavku API. Nezávislé na přepínání modelu chatu. Ve výchozím nastavení vypnuto.",
-        mediaIdleUnload:
-          "Automatické uvolnění při nečinnosti pro obrázky a video",
-        mediaIdleUnloadDescription:
-          "Uvolnit VRAM uvolněním modelů obrázků a videa po tomto počtu sekund nečinnosti. Nezávislé na přepínání modelu chatu. 0 je ponechá načtené, minimum je 60.",
-        mediaIdleSecondsAriaLabel:
-          "Sekundy do automatického uvolnění modelů obrázků a videa při nečinnosti",
-        mediaIdlePaused:
-          "Pozastaveno, dokud je zapnutá možnost Ponechat model v paměti GPU.",
-        idleNeedsEnable:
-          "Nejprve zapněte možnost Přepínat model podle požadavku.",
+        mediaEnableDescription: "Před generováním načíst stažený model obrázků nebo videa uvedený v požadavku API. Nezávislé na přepínání modelu chatu. Ve výchozím nastavení vypnuto.",
+        mediaIdleUnload: "Automatické uvolnění při nečinnosti pro obrázky a video",
+        mediaIdleUnloadDescription: "Uvolnit VRAM uvolněním modelů obrázků a videa po tomto počtu sekund nečinnosti. Nezávislé na přepínání modelu chatu. 0 je ponechá načtené, minimum je 60.",
+        mediaIdleSecondsAriaLabel: "Sekundy do automatického uvolnění modelů obrázků a videa při nečinnosti",
+        mediaIdlePaused: "Pozastaveno, dokud je zapnutá možnost Ponechat model v paměti GPU.",
+        idleNeedsEnable: "Nejprve zapněte možnost Přepínat model podle požadavku.",
         idleActiveViaEnv: "Aktivní přes UNSLOTH_MODEL_IDLE_TTL.",
-        loadError:
-          "Nastavení automatického přepínání modelu se nepodařilo načíst.",
-        saveError:
-          "Nastavení automatického přepínání modelu se nepodařilo uložit.",
-        idleError:
-          "Zadejte 0, chcete-li model ponechat načtený, nebo alespoň 60 sekund.",
+        loadError: "Nastavení automatického přepínání modelu se nepodařilo načíst.",
+        saveError: "Nastavení automatického přepínání modelu se nepodařilo uložit.",
+        idleError: "Zadejte 0, chcete-li model ponechat načtený, nebo alespoň 60 sekund.",
         idleUnsaved: "Zatím neuloženo.",
         keepKv: "Zachovat kontext chatu i po uvolnění",
-        keepKvDescription:
-          "Uložit mezipaměť KV před uvolněním při nečinnosti nebo před tím, než GPU převezme model obrázků či videa, aby obnovené chaty nemusely znovu číst historii. Až 10 GB na disku.",
-        keepKvKeywords:
-          "kv cache mezipaměť kontext výměna obnovení obrázek video",
+        keepKvDescription: "Uložit mezipaměť KV před uvolněním při nečinnosti nebo před tím, než GPU převezme model obrázků či videa, aby obnovené chaty nemusely znovu číst historii. Až 10 GB na disku.",
+        keepKvKeywords: "kv cache mezipaměť kontext výměna obnovení obrázek video",
         apiOnly: "Uvolňovat jen modely načtené přes API",
-        apiOnlyDescription:
-          "Uvolnění při nečinnosti ponechá v paměti model, který jste načetli z Unsloth, a uvolní jen ty, které načetl požadavek API.",
+        apiOnlyDescription: "Uvolnění při nečinnosti ponechá v paměti model, který jste načetli z Unsloth, a uvolní jen ty, které načetl požadavek API.",
       },
       modelAliases: {
         sectionTitle: "Aliasy modelů (OpenAI API)",
-        description:
-          "Krátké názvy, které mohou klienti API používat místo celého názvu modelu.",
+        description: "Krátké názvy, které mohou klienti API používat místo celého názvu modelu.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Název aliasu",
         modelAriaLabel: "Model, na který alias odkazuje",
@@ -2329,24 +2072,20 @@ export const cs = {
         speculativeDecoding: "Spekulativní dekódování",
         savedSetting: "Uložené nastavení",
         loadSettings: "Nastavení načtení",
-        loadSettingsHint:
-          "Jen pro modely GGUF. Prázdná pole použijí uložená nastavení modelu.",
+        loadSettingsHint: "Jen pro modely GGUF. Prázdná pole použijí uložená nastavení modelu.",
       },
       previewSharing: {
         sectionTitle: "Sdílení náhledů",
         enableLabel: "Veřejné odkazy na náhled",
-        enableDescription:
-          "Umožní komukoli s podepsaným odkazem chatovat s hotovým modelem bez přihlášení. Vypnutím veřejné rozhraní náhledů odpojíte; sdílené odkazy přestanou fungovat.",
+        enableDescription: "Umožní komukoli s podepsaným odkazem chatovat s hotovým modelem bez přihlášení. Vypnutím veřejné rozhraní náhledů odpojíte; sdílené odkazy přestanou fungovat.",
         loadError: "Nastavení sdílení náhledů se nepodařilo načíst.",
         saveError: "Nastavení sdílení náhledů se nepodařilo uložit.",
         revokeLabel: "Odvolat všechny odkazy na náhled",
-        revokeDescription:
-          "Vyměnit podpisový klíč, takže všechny odkazy, které jste sdíleli, přestanou fungovat. Nově zkopírované odkazy budou fungovat dál.",
+        revokeDescription: "Vyměnit podpisový klíč, takže všechny odkazy, které jste sdíleli, přestanou fungovat. Nově zkopírované odkazy budou fungovat dál.",
         revokeAction: "Odvolat odkazy",
         revoking: "Odvolávání...",
         revokeConfirmTitle: "Odvolat všechny odkazy na náhled?",
-        revokeConfirmDescription:
-          "Všechny odkazy na náhled, které jste sdíleli, okamžitě přestanou fungovat. Tuto akci nelze vrátit zpět.",
+        revokeConfirmDescription: "Všechny odkazy na náhled, které jste sdíleli, okamžitě přestanou fungovat. Tuto akci nelze vrátit zpět.",
         revokeConfirmAction: "Odvolat všechny odkazy",
         revoked: "Všechny odkazy na náhled byly odvolány",
         revokeError: "Odkazy na náhled se nepodařilo odvolat",
@@ -2354,14 +2093,10 @@ export const cs = {
       managedProviderUrls: {
         sectionTitle: "Spravované účty",
         enableLabel: "Místní a síťová připojení",
-        enableDescription:
-          "Umožní spravovaným účtům směrovat svá připojení na místní nebo síťové adresy, například na server Ollama nebo llama.cpp v tomto počítači nebo ve vaší síti LAN. Ve výchozím nastavení vypnuto, protože tyto účty pak mají přístup ke službám běžícím ve vašem počítači a ve vaší síti.",
-        lockedByEnvironment:
-          "Nastaveno proměnnou UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 na tomto serveru, která odmítá privátní adresy pro všechny účty.",
-        loadError:
-          "Nastavení připojení spravovaných účtů se nepodařilo načíst.",
-        saveError:
-          "Nastavení připojení spravovaných účtů se nepodařilo uložit.",
+        enableDescription: "Umožní spravovaným účtům směrovat svá připojení na místní nebo síťové adresy, například na server Ollama nebo llama.cpp v tomto počítači nebo ve vaší síti LAN. Ve výchozím nastavení vypnuto, protože tyto účty pak mají přístup ke službám běžícím ve vašem počítači a ve vaší síti.",
+        lockedByEnvironment: "Nastaveno proměnnou UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 na tomto serveru, která odmítá privátní adresy pro všechny účty.",
+        loadError: "Nastavení připojení spravovaných účtů se nepodařilo načíst.",
+        saveError: "Nastavení připojení spravovaných účtů se nepodařilo uložit.",
       },
       permissions: {
         sectionTitle: "Oprávnění",
@@ -2389,11 +2124,9 @@ export const cs = {
       notifications: {
         sectionTitle: "Oznámení",
         showLoadedModels: "Karta načtených modelů",
-        showLoadedModelsDescription:
-          "Karta v rohu se všemi načtenými modely, které lze jedním kliknutím uvolnit.",
+        showLoadedModelsDescription: "Karta v rohu se všemi načtenými modely, které lze jedním kliknutím uvolnit.",
         updateReminders: "Připomenutí aktualizací",
-        updateRemindersDescription:
-          "Jak často nabízet novou verzi, když je k dispozici.",
+        updateRemindersDescription: "Jak často nabízet novou verzi, když je k dispozici.",
         llamaHint: "Chat a modely GGUF",
         audioHint: "Řeč, hudba a přepis",
         frequency: {
@@ -2408,79 +2141,57 @@ export const cs = {
       startup: {
         sectionTitle: "Spuštění",
         launchAtLogin: "Spouštět Unsloth po přihlášení",
-        launchAtLoginDescription:
-          "Spustit Unsloth na pozadí, když se přihlásíte. Zůstane na řádku nabídek nebo v oznamovací oblasti, dokud ho neotevřete.",
+        launchAtLoginDescription: "Spustit Unsloth na pozadí, když se přihlásíte. Zůstane na řádku nabídek nebo v oznamovací oblasti, dokud ho neotevřete.",
         closeToTray: "Zavírat do oznamovací oblasti",
-        closeToTrayDescription:
-          "Po zavření hlavního okna nechat Unsloth a jeho server běžet na pozadí.",
-        closeToTraySaveError:
-          "Nastavení zavírání do oznamovací oblasti se nepodařilo aktualizovat.",
+        closeToTrayDescription: "Po zavření hlavního okna nechat Unsloth a jeho server běžet na pozadí.",
+        closeToTraySaveError: "Nastavení zavírání do oznamovací oblasti se nepodařilo aktualizovat.",
         menuBarIcon: "Zobrazovat na řádku nabídek",
-        menuBarIconDescription:
-          "Zobrazovat ikonu Unsloth na řádku nabídek macOS. Když je skrytá, zůstává Unsloth místo toho v Docku, i když se spouští po přihlášení.",
-        menuBarIconSaveError:
-          "Nastavení ikony na řádku nabídek se nepodařilo aktualizovat.",
+        menuBarIconDescription: "Zobrazovat ikonu Unsloth na řádku nabídek macOS. Když je skrytá, zůstává Unsloth místo toho v Docku, i když se spouští po přihlášení.",
+        menuBarIconSaveError: "Nastavení ikony na řádku nabídek se nepodařilo aktualizovat.",
         loadError: "Nastavení spouštění po přihlášení se nepodařilo načíst.",
-        saveError:
-          "Nastavení spouštění po přihlášení se nepodařilo aktualizovat.",
+        saveError: "Nastavení spouštění po přihlášení se nepodařilo aktualizovat.",
       },
       power: {
         sectionTitle: "Napájení",
         keepAwake: "Nechat počítač vzhůru",
-        keepAwakeDescription:
-          "Zabrání tomu, aby počítač sám přešel do režimu spánku, dokud běží Unsloth. Displej se může i tak vypnout.",
+        keepAwakeDescription: "Zabrání tomu, aby počítač sám přešel do režimu spánku, dokud běží Unsloth. Displej se může i tak vypnout.",
         keepAwakeKeywords: "spánek uspání hibernace úspora napájení sleep caffeinate",
         loadError: "Nastavení nechat počítač vzhůru se nepodařilo načíst.",
         saveError: "Nastavení nechat počítač vzhůru se nepodařilo aktualizovat.",
       },
       hub: {
         source: "Zdroj modelů",
-        sourceDescription:
-          "Kde centrum modelů vyhledává a odkud stahuje. Pokud je Hugging Face ve vaší síti blokovaný nebo pomalý, zvolte ModelScope.",
-        sourceFallback:
-          "ModelScope se nepodařilo spustit, proto se používá Hugging Face. Zkontrolujte protokoly Unsloth.",
+        sourceDescription: "Kde centrum modelů vyhledává a odkud stahuje. Pokud je Hugging Face ve vaší síti blokovaný nebo pomalý, zvolte ModelScope.",
+        sourceFallback: "ModelScope se nepodařilo spustit, proto se používá Hugging Face. Zkontrolujte protokoly Unsloth.",
         autoSourceTitle: "Zdroj modelů byl přepnut na ModelScope",
-        autoSourceDescription:
-          "Hugging Face je ve vaší oblasti často pomalý nebo blokovaný, proto Unsloth nyní stahuje modely z ModelScope.",
+        autoSourceDescription: "Hugging Face je ve vaší oblasti často pomalý nebo blokovaný, proto Unsloth nyní stahuje modely z ModelScope.",
         autoSourceAction: "Otevřít nastavení zdroje modelů",
         sectionTitle: "Centrum modelů",
         endpoint: "Koncový bod Hugging Face",
-        endpointDescription:
-          "Odkud se stahují modely a datové sady. Pro huggingface.co ponechte prázdné, nebo zadejte zrcadlo, například https://hf-mirror.com.",
+        endpointDescription: "Odkud se stahují modely a datové sady. Pro huggingface.co ponechte prázdné, nebo zadejte zrcadlo, například https://hf-mirror.com.",
         datasetsServer: "Používat ho pro náhledy datových sad",
-        datasetsServerDescription:
-          "Posílat na tento koncový bod i požadavky na náhledy datových sad (HF_DATASETS_SERVER). Zapněte jen v případě, že je zrcadlo obsluhuje.",
-        invalidEndpoint:
-          "Zadejte URL http(s) bez přihlašovacích údajů a dotazu. Prosté http funguje jen pro místní adresu.",
+        datasetsServerDescription: "Posílat na tento koncový bod i požadavky na náhledy datových sad (HF_DATASETS_SERVER). Zapněte jen v případě, že je zrcadlo obsluhuje.",
+        invalidEndpoint: "Zadejte URL http(s) bez přihlašovacích údajů a dotazu. Prosté http funguje jen pro místní adresu.",
         saveFailed: "Nastavení centra modelů se nepodařilo uložit.",
         loadFailed: "Nastavení centra modelů se nepodařilo načíst.",
       },
       downloads: {
         sectionTitle: "Stahování",
         transport: "Způsob přenosu při stahování",
-        transportDescription:
-          "Jak se soubory modelů a datových sad stahují z Hugging Face. HTTPS pokračuje tam, kde přestalo; Xet bývá při prvním stažení rychlejší, ale po zrušení začne soubor stahovat znovu.",
-        transportHint:
-          "HTTPS je obyčejné TLS: povolí ho každá síť, proxy i VPN, zrušený nebo přerušený přenos pokračuje od bajtů, které už jsou na disku, a využití paměti zůstává stálé. Xet stahuje deduplikované bloky, takže repozytorium sdílející data s tím, které už máte, může dorazit mnohem rychleji, ale vyžaduje hf_xet, používá více RAM a zrušení zahodí právě přenášený soubor. Možnost Automaticky se ptá tohoto počítače: zváží RAM a to, zda se tu Xet zasekával, a případně přejde na HTTPS.",
+        transportDescription: "Jak se soubory modelů a datových sad stahují z Hugging Face. HTTPS pokračuje tam, kde přestalo; Xet bývá při prvním stažení rychlejší, ale po zrušení začne soubor stahovat znovu.",
+        transportHint: "HTTPS je obyčejné TLS: povolí ho každá síť, proxy i VPN, zrušený nebo přerušený přenos pokračuje od bajtů, které už jsou na disku, a využití paměti zůstává stálé. Xet stahuje deduplikované bloky, takže repozytorium sdílející data s tím, které už máte, může dorazit mnohem rychleji, ale vyžaduje hf_xet, používá více RAM a zrušení zahodí právě přenášený soubor. Možnost Automaticky se ptá tohoto počítače: zváží RAM a to, zda se tu Xet zasekával, a případně přejde na HTTPS.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Automaticky",
-        httpsHint:
-          "Standardní TLS. Po zrušení pokračuje, funguje v každé síti, stálé využití paměti.",
-        transportDescriptionNoResume:
-          "Jak se soubory modelů a datových sad stahují z Hugging Face. V této instalaci nemůže pokračovat ani jeden způsob přenosu, takže zrušené stahování začne znovu; Xet bývá při prvním stažení rychlejší.",
-        httpsHintNoResume:
-          "Standardní TLS. Funguje v každé síti, stálé využití paměti. Tato instalace nemůže pokračovat ve zrušeném stahování.",
-        xetHint:
-          "Přenos deduplikovaných bloků. Při novém stažení bývá rychlejší, po zrušení začne soubor znovu, potřebuje více paměti.",
-        autoHint:
-          "Vybírá podle počítače a přepne na HTTPS, pokud se tu Xet zasekne nebo selže.",
-        autoCurrently:
-          "Automatický režim na tomto počítači používá: {transport}.",
+        httpsHint: "Standardní TLS. Po zrušení pokračuje, funguje v každé síti, stálé využití paměti.",
+        transportDescriptionNoResume: "Jak se soubory modelů a datových sad stahují z Hugging Face. V této instalaci nemůže pokračovat ani jeden způsob přenosu, takže zrušené stahování začne znovu; Xet bývá při prvním stažení rychlejší.",
+        httpsHintNoResume: "Standardní TLS. Funguje v každé síti, stálé využití paměti. Tato instalace nemůže pokračovat ve zrušeném stahování.",
+        xetHint: "Přenos deduplikovaných bloků. Při novém stažení bývá rychlejší, po zrušení začne soubor znovu, potřebuje více paměti.",
+        autoHint: "Vybírá podle počítače a přepne na HTTPS, pokud se tu Xet zasekne nebo selže.",
+        autoCurrently: "Automatický režim na tomto počítači používá: {transport}.",
         xetMissing: "Xet není k dispozici, protože není nainstalován hf_xet.",
         speedLimit: "Limit rychlosti stahování",
-        speedLimitDescription:
-          "Bez limitu, dokud nezadáte hodnotu. Omezené stahování používá HTTPS.",
+        speedLimitDescription: "Bez limitu, dokud nezadáte hodnotu. Omezené stahování používá HTTPS.",
         speedLimitNoLimit: "Bez limitu",
         speedLimitInvalid: "Zadejte počet Mbit/s nebo nechte pole prázdné.",
         speedLimitUsesHttps: "Když je nastaven limit rychlosti, stahování používá HTTPS. Soubory nad 50 GB stále používají Xet, bez limitu.",
@@ -2493,21 +2204,15 @@ export const cs = {
       rag: {
         sectionTitle: "Dokumenty a RAG",
         embeddingModel: "Embeddingový model",
-        embeddingModelShort:
-          "Převádí vaše dokumenty na vektory, aby v nich chat mohl vyhledávat.",
-        embeddingModelDescription:
-          "Model Hugging Face nebo místní cesta, které slouží k indexování vašich dokumentů a vyhledávání v nich. Výchozí je {defaultModel}.",
+        embeddingModelShort: "Převádí vaše dokumenty na vektory, aby v nich chat mohl vyhledávat.",
+        embeddingModelDescription: "Model Hugging Face nebo místní cesta, které slouží k indexování vašich dokumentů a vyhledávání v nich. Výchozí je {defaultModel}.",
         searchPlaceholder: "Hledat libovolný model na HF",
-        reindexWarning:
-          "Týká se jen nově indexovaných dokumentů. Po změně modelu existující dokumenty znovu vektorizujte.",
+        reindexWarning: "Týká se jen nově indexovaných dokumentů. Po změně modelu existující dokumenty znovu vektorizujte.",
         reembed: {
           label: "Znovu vektorizovat dokumenty",
-          staleOne:
-            "1 dokument byl indexován jiným embeddingovým modelem, proto ho sémantické vyhledávání přeskakuje.",
-          staleMany:
-            "Dokumenty indexované jiným embeddingovým modelem sémantické vyhledávání přeskakuje (počet: {count}).",
-          staleArchived:
-            "Starší historie chatu byla indexována jiným embeddingovým modelem, proto ji sémantické vyhledávání přeskakuje.",
+          staleOne: "1 dokument byl indexován jiným embeddingovým modelem, proto ho sémantické vyhledávání přeskakuje.",
+          staleMany: "Dokumenty indexované jiným embeddingovým modelem sémantické vyhledávání přeskakuje (počet: {count}).",
+          staleArchived: "Starší historie chatu byla indexována jiným embeddingovým modelem, proto ji sémantické vyhledávání přeskakuje.",
           running: "Opětovná vektorizace: {done} z {total}",
           action: "Znovu vektorizovat",
           stop: "Zastavit",
@@ -2531,20 +2236,16 @@ export const cs = {
         unloadFailed: "Embeddingový model se nepodařilo uvolnit",
         ejected: "Embeddingový model byl uvolněn",
         ejectModel: "Uvolnit model",
-        onDeviceHint:
-          "Staženo do tohoto počítače. Do paměti se načítá jen během indexování dokumentů nebo vyhledávání v nich, takže do té doby nepoužívá žádnou RAM ani VRAM.",
-        loadedHint:
-          "Nyní v paměti, využívá RAM nebo VRAM. Chcete-li ho uvolnit, najeďte na výběr modelu a klikněte na červenou ikonu.",
+        onDeviceHint: "Staženo do tohoto počítače. Do paměti se načítá jen během indexování dokumentů nebo vyhledávání v nich, takže do té doby nepoužívá žádnou RAM ani VRAM.",
+        loadedHint: "Nyní v paměti, využívá RAM nebo VRAM. Chcete-li ho uvolnit, najeďte na výběr modelu a klikněte na červenou ikonu.",
         notLoaded: "Nenačteno",
-        notLoadedHint:
-          "Momentálně není v paměti. Načte se sám při příštím indexování dokumentů nebo vyhledávání v nich a pak ho můžete uvolnit z výběru modelu.",
+        notLoadedHint: "Momentálně není v paměti. Načte se sám při příštím indexování dokumentů nebo vyhledávání v nich a pak ho můžete uvolnit z výběru modelu.",
         downloadingStatus: "Stahování…",
         notDownloaded: "Nestaženo",
         notDownloadedSized: "Nestaženo · {size}",
         loaded: "Načteno",
         downloading: "Stahování modelu {model}",
-        downloadingDescription:
-          "Průběh najdete na panelu stahování. Indexování ho začne používat, jakmile bude stažen.",
+        downloadingDescription: "Průběh najdete na panelu stahování. Indexování ho začne používat, jakmile bude stažen.",
         downloadFailed: "Stahování se nepodařilo spustit",
         downloadConflict: "V tomto stahování pokračujte z centra modelů",
         downloadBusy: "Stahování už probíhá",
@@ -2557,17 +2258,14 @@ export const cs = {
         localModel: "Místní model",
         switched: "Embeddingový model nastaven na {model}",
         switchedNeedsDownload: "Model {model} ještě není stažený",
-        switchedNeedsDownloadDescription:
-          "Před indexováním nových souborů ho stáhněte v Nastavení.",
-        switchedUncheckedDescription:
-          "Nepodařilo se ověřit, zda je stažený. Před indexováním nových souborů to zkontrolujte v Nastavení.",
+        switchedNeedsDownloadDescription: "Před indexováním nových souborů ho stáhněte v Nastavení.",
+        switchedUncheckedDescription: "Nepodařilo se ověřit, zda je stažený. Před indexováním nových souborů to zkontrolujte v Nastavení.",
         openSettings: "Otevřít nastavení",
         switchFailed: "Embeddingový model se nepodařilo přepnout",
         back: "Zpět na zdroje",
         menuSubtitle: "Pohání vyhledávání v souborech",
         device: "Zařízení pro embedding",
-        deviceDescription:
-          "Kde běží embeddingový model, platí pro všechny modely. GPU indexuje velké sady dokumentů rychleji, ale část VRAM zůstává obsazená až do restartu Unsloth.",
+        deviceDescription: "Kde běží embeddingový model, platí pro všechny modely. GPU indexuje velké sady dokumentů rychleji, ale část VRAM zůstává obsazená až do restartu Unsloth.",
         deviceAuto: "Automaticky",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2598,41 +2296,31 @@ export const cs = {
       },
       fullInstall: {
         label: "Typ instalace",
-        description:
-          "Pouze chat (GGUF). Úplná instalace přidává trénování, export, video, modely safetensors a další funkce generování obrázků.",
-        descriptionCpu:
-          "Pouze chat (GGUF). Nebyla nalezena podporovaná GPU, takže úplná instalace přidává trénování na CPU.",
+        description: "Pouze chat (GGUF). Úplná instalace přidává trénování, export, video, modely safetensors a další funkce generování obrázků.",
+        descriptionCpu: "Pouze chat (GGUF). Nebyla nalezena podporovaná GPU, takže úplná instalace přidává trénování na CPU.",
         action: "Upgradovat na úplnou instalaci",
         confirmTitle: "Upgradovat na úplnou instalaci?",
-        confirmDescription:
-          "Tato instalace Pouze chat spouští modely GGUF. Úplná instalace přidává PyTorch pro GPU tohoto počítače, což umožňuje trénování, export, video, modely safetensors a další funkce generování obrázků. Stáhne několik gigabajtů (potřeba je alespoň 5 GB místa na disku) a restartuje server. Chaty, modely a nastavení zůstanou zachovány. Může to trvat několik minut.",
-        confirmDescriptionCpu:
-          "Tato instalace Pouze chat spouští modely GGUF. V tomto počítači nebyla nalezena podporovaná GPU, takže úplná instalace přidává PyTorch pro CPU, což umožňuje trénování na CPU. Trénování na CPU je mnohem pomalejší než na GPU. Je potřeba alespoň 5 GB místa na disku a server se restartuje. Chaty, modely a nastavení zůstanou zachovány. Může to trvat několik minut.",
+        confirmDescription: "Tato instalace Pouze chat spouští modely GGUF. Úplná instalace přidává PyTorch pro GPU tohoto počítače, což umožňuje trénování, export, video, modely safetensors a další funkce generování obrázků. Stáhne několik gigabajtů (potřeba je alespoň 5 GB místa na disku) a restartuje server. Chaty, modely a nastavení zůstanou zachovány. Může to trvat několik minut.",
+        confirmDescriptionCpu: "Tato instalace Pouze chat spouští modely GGUF. V tomto počítači nebyla nalezena podporovaná GPU, takže úplná instalace přidává PyTorch pro CPU, což umožňuje trénování na CPU. Trénování na CPU je mnohem pomalejší než na GPU. Je potřeba alespoň 5 GB místa na disku a server se restartuje. Chaty, modely a nastavení zůstanou zachovány. Může to trvat několik minut.",
         confirmAction: "Upgradovat",
-        keywords:
-          "úplná instalace upgrade typ instalace pouze chat gguf přidat trénování trénovat doladění fine-tune pytorch torch export video generování obrázků safetensors full install training",
+        keywords: "úplná instalace upgrade typ instalace pouze chat gguf přidat trénování trénovat doladění fine-tune pytorch torch export video generování obrázků safetensors full install training",
       },
       repairInstall: {
         label: "Opravit instalaci",
-        description:
-          "Znovu spustí instalační program nad spravovaným prostředím. Použijte, pokud se nerozpozná GPU nebo se aplikace nespustí.",
+        description: "Znovu spustí instalační program nad spravovaným prostředím. Použijte, pokud se nerozpozná GPU nebo se aplikace nespustí.",
         action: "Opravit instalaci",
         confirmTitle: "Opravit tuto instalaci?",
-        confirmDescription:
-          "Zastaví server a znovu spustí instalační program, který přeinstaluje PyTorch pro GPU tohoto počítače v nejnovější podporované verzi. Chaty a nastavení zůstanou zachovány. Může to trvat několik minut.",
-        confirmDescriptionChatOnly:
-          "Zastaví server a znovu spustí instalační program. Toto je instalace Pouze chat, takže ji instalační program zároveň upgraduje na úplnou instalaci s PyTorch, celkem několik gigabajtů. Chaty a nastavení zůstanou zachovány. Může to trvat několik minut.",
+        confirmDescription: "Zastaví server a znovu spustí instalační program, který přeinstaluje PyTorch pro GPU tohoto počítače v nejnovější podporované verzi. Chaty a nastavení zůstanou zachovány. Může to trvat několik minut.",
+        confirmDescriptionChatOnly: "Zastaví server a znovu spustí instalační program. Toto je instalace Pouze chat, takže ji instalační program zároveň upgraduje na úplnou instalaci s PyTorch, celkem několik gigabajtů. Chaty a nastavení zůstanou zachovány. Může to trvat několik minut.",
         confirmAction: "Opravit nyní",
       },
       resetPreferences: {
         sectionTitle: "Nebezpečná zóna",
         label: "Obnovit všechny místní předvolby",
-        description:
-          "Vymaže předvolby uložené jen místně. Chaty, přístup k API a nastavení uložená v databázi zůstanou zachovány.",
+        description: "Vymaže předvolby uložené jen místně. Chaty, přístup k API a nastavení uložená v databázi zůstanou zachovány.",
         action: "Obnovit předvolby",
         confirmTitle: "Obnovit všechny místní předvolby?",
-        confirmDescription:
-          "Vymaže předvolby uložené jen místně a znovu načte Unsloth. Chaty, přístup k API a nastavení uložená v databázi zůstanou zachovány.",
+        confirmDescription: "Vymaže předvolby uložené jen místně a znovu načte Unsloth. Chaty, přístup k API a nastavení uložená v databázi zůstanou zachovány.",
         confirmAction: "Obnovit a znovu načíst",
       },
     },
@@ -2664,25 +2352,20 @@ export const cs = {
       noneLabel: "Žádný",
       nameSaved: "Jméno profilu bylo uloženo",
       namePersistErrorTitle: "Jméno profilu se nepodařilo trvale uložit",
-      namePersistErrorDescription:
-        "Jméno bylo pro tuto relaci aktualizováno, ale po opětovném načtení se nemusí zachovat.",
+      namePersistErrorDescription: "Jméno bylo pro tuto relaci aktualizováno, ale po opětovném načtení se nemusí zachovat.",
       photoUpdated: "Profilová fotka byla aktualizována",
       photoPersistErrorTitle: "Profilovou fotku se nepodařilo trvale uložit",
-      photoPersistErrorDescription:
-        "Fotka byla pro tuto relaci aktualizována, ale po opětovném načtení se nemusí zachovat.",
+      photoPersistErrorDescription: "Fotka byla pro tuto relaci aktualizována, ale po opětovném načtení se nemusí zachovat.",
       photoUpdateErrorTitle: "Profilovou fotku se nepodařilo aktualizovat",
       imageUseError: "Tento obrázek nelze použít.",
       stats: {
         title: "Vaše statistiky",
-        subtitle:
-          "Vše níže se počítá z vaší vlastní historie. Nic se neshromažďuje ani neodesílá společnosti Unsloth.",
+        subtitle: "Vše níže se počítá z vaší vlastní historie. Nic se neshromažďuje ani neodesílá společnosti Unsloth.",
         retry: "Zkusit znovu",
         exportCsv: "Exportovat CSV",
         exportError: "Využití tokenů se nepodařilo exportovat",
-        privacyNote:
-          "Statistiky se počítají z místní historie chatů, využití API a trénování, kterou uchovává vaše instalace Unsloth. Prompty, odpovědi a klíče API se pro statistiky nikdy neukládají. Nic se neodesílá společnosti Unsloth ani žádné třetí straně.",
-        emptyChats:
-          "Zatím žádné využití chatu ani API. Zahajte konverzaci nebo odešlete ověřený požadavek na místní API a vaše statistiky se zde zobrazí.",
+        privacyNote: "Statistiky se počítají z místní historie chatů, využití API a trénování, kterou uchovává vaše instalace Unsloth. Prompty, odpovědi a klíče API se pro statistiky nikdy neukládají. Nic se neodesílá společnosti Unsloth ani žádné třetí straně.",
+        emptyChats: "Zatím žádné využití chatu ani API. Zahajte konverzaci nebo odešlete ověřený požadavek na místní API a vaše statistiky se zde zobrazí.",
         lifetimeTokens: "Tokeny celkem",
         peakTokens: "Nejaktivnější den",
         longestChat: "Nejdelší chat",
@@ -2747,22 +2430,16 @@ export const cs = {
       gpuRendering: {
         sectionTitle: "Vykreslování",
         label: "Vykreslování pomocí GPU",
-        description:
-          "Vykreslovat Unsloth pomocí grafické karty. Možnost Automaticky ji použije tam, kde je známo, že funguje. Změny se projeví po restartu Unsloth.",
+        description: "Vykreslovat Unsloth pomocí grafické karty. Možnost Automaticky ji použije tam, kde je známo, že funguje. Změny se projeví po restartu Unsloth.",
         auto: "Automaticky",
         on: "Zapnuto",
         off: "Vypnuto",
-        oldWebkitWarning:
-          "WebKitGTK {version} na Waylandu: vykreslování pomocí GPU může při spuštění na NVIDIA se zlomkovým škálováním spadnout (chyba WebKitu 280210). Pokud k tomu dojde, Unsloth se sám vrátí k vykreslování pomocí CPU. Na WebKitGTK 2.50.4 nepřineslo žádné měřitelné zrychlení (v obou případech 8 fps), proto se zde možnost Zapnuto nedoporučuje.",
-        oldDriverWarning:
-          "Ovladač NVIDIA {version} na X11: Unsloth ponechá vykreslování pomocí GPU vypnuté, dokud nebude ovladač ve verzi 610 nebo novější. Starší ovladače při každém snímku ztrácejí jeden popisovač souboru a okno se během několika minut přestane vykreslovat.",
-        fallbackNote:
-          "Vykreslování pomocí GPU v tomto systému při spuštění spadlo, proto Unsloth používá vykreslování pomocí CPU.",
+        oldWebkitWarning: "WebKitGTK {version} na Waylandu: vykreslování pomocí GPU může při spuštění na NVIDIA se zlomkovým škálováním spadnout (chyba WebKitu 280210). Pokud k tomu dojde, Unsloth se sám vrátí k vykreslování pomocí CPU. Na WebKitGTK 2.50.4 nepřineslo žádné měřitelné zrychlení (v obou případech 8 fps), proto se zde možnost Zapnuto nedoporučuje.",
+        oldDriverWarning: "Ovladač NVIDIA {version} na X11: Unsloth ponechá vykreslování pomocí GPU vypnuté, dokud nebude ovladač ve verzi 610 nebo novější. Starší ovladače při každém snímku ztrácejí jeden popisovač souboru a okno se během několika minut přestane vykreslovat.",
+        fallbackNote: "Vykreslování pomocí GPU v tomto systému při spuštění spadlo, proto Unsloth používá vykreslování pomocí CPU.",
         tryAgain: "Zkusit GPU znovu",
-        envOverride:
-          "Nastaveno proměnnou prostředí {name}. Dokud ji neodstraníte, nemá toto nastavení žádný vliv.",
-        macNote:
-          "macOS vždy vykresluje pomocí GPU. WebKit nemá žádný podporovaný přepínač, jak to vypnout.",
+        envOverride: "Nastaveno proměnnou prostředí {name}. Dokud ji neodstraníte, nemá toto nastavení žádný vliv.",
+        macNote: "macOS vždy vykresluje pomocí GPU. WebKit nemá žádný podporovaný přepínač, jak to vypnout.",
         restartPending: "Změny se projeví po restartu Unsloth.",
         restartNow: "Restartovat nyní",
         loadError: "Nastavení vykreslování pomocí GPU se nepodařilo načíst.",
@@ -2779,8 +2456,7 @@ export const cs = {
       },
       palette: {
         label: "Motiv",
-        description:
-          "Barvy používané v celém Unsloth, ve světlém i tmavém režimu.",
+        description: "Barvy používané v celém Unsloth, ve světlém i tmavém režimu.",
         standard: "Standardní",
         moreThemes: "Další motivy",
       },
@@ -2813,8 +2489,7 @@ export const cs = {
         },
         sentAttachments: {
           label: "Přílohy v odeslaných zprávách",
-          description:
-            "Standardní zobrazení ukáže každý soubor s jeho typem, kompaktní zobrazení vměstná na každý řádek víc souborů. Automatický režim přepne na kompaktní při více než šesti souborech.",
+          description: "Standardní zobrazení ukáže každý soubor s jeho typem, kompaktní zobrazení vměstná na každý řádek víc souborů. Automatický režim přepne na kompaktní při více než šesti souborech.",
           auto: "Automaticky",
           list: "Standardní",
           chips: "Kompaktní",
@@ -2855,16 +2530,13 @@ export const cs = {
         importFont: {
           upload: "Nahrát",
           scanFolder: "Vybrat složku",
-          alreadyAvailable:
-            "Toto písmo už je k dispozici, proto se použije existující kopie.",
+          alreadyAvailable: "Toto písmo už je k dispozici, proto se použije existující kopie.",
           folderNoFonts: "V této složce nebyly nalezeny žádné soubory písem.",
           remove: "Odebrat",
-          errorInvalidType:
-            "Nepodporovaný typ souboru. Použijte .woff2, .woff, .ttf nebo .otf.",
+          errorInvalidType: "Nepodporovaný typ souboru. Použijte .woff2, .woff, .ttf nebo .otf.",
           errorTooLarge: "Soubor písma je příliš velký (max. 1,5 MB).",
           errorLimit: "Importovat můžete nejvýše 3 písma.",
-          errorStorageFull:
-            "Pro toto písmo není dost místního úložiště. Nejprve odeberte některé importované písmo.",
+          errorStorageFull: "Pro toto písmo není dost místního úložiště. Nejprve odeberte některé importované písmo.",
           errorFailed: "Tento soubor písma se nepodařilo načíst.",
         },
         interfaceScale: {
@@ -2873,8 +2545,7 @@ export const cs = {
         },
         uiFontSize: {
           label: "Velikost písma rozhraní",
-          description:
-            "Upravit základní velikost používanou v rozhraní Unsloth.",
+          description: "Upravit základní velikost používanou v rozhraní Unsloth.",
         },
         codeFontSize: {
           label: "Velikost písma kódu",
@@ -2900,8 +2571,7 @@ export const cs = {
         },
         pointerCursors: {
           label: "Používat kurzor ukazatele",
-          description:
-            "Při najetí na interaktivní prvky změnit kurzor na ukazatel.",
+          description: "Při najetí na interaktivní prvky změnit kurzor na ukazatel.",
         },
       },
       language: {
@@ -2917,13 +2587,11 @@ export const cs = {
       layout: {
         title: "Rozložení",
         compactSidebar: "Ve výchozím nastavení připnout postranní panel",
-        compactSidebarDescription:
-          "Ponechat postranní panel rozbalený, místo aby se sbalil na ikony.",
+        compactSidebarDescription: "Ponechat postranní panel rozbalený, místo aby se sbalil na ikony.",
       },
       sidebarNav: {
         title: "Navigace postranního panelu",
-        description:
-          "Připněte karty postranního panelu a změňte jejich pořadí. Nepřipnuté karty se přesunou do nabídky Další.",
+        description: "Připněte karty postranního panelu a změňte jejich pořadí. Nepřipnuté karty se přesunou do nabídky Další.",
         dragToReorder: "Přetažením změníte pořadí",
         pinToSidebar: "Připnout do postranního panelu: {name}",
         moreHolds: "Další ({count})",
@@ -2941,13 +2609,11 @@ export const cs = {
       liveUpdates: "Živé aktualizace",
       floatingWindow: "Plovoucí okno",
       showFloatingWindow: "Zobrazit plovoucí okno",
-      showFloatingWindowDescription:
-        "Zobrazovat využití CPU, RAM a GPU na obrazovce nad Unsloth.",
+      showFloatingWindowDescription: "Zobrazovat využití CPU, RAM a GPU na obrazovce nad Unsloth.",
       liveMonitor: {
         title: "Živé sledování",
         apiTitle: "Sledování API",
-        apiDescription:
-          "Sledujte, co ostatní aplikace posílají do API tohoto serveru, hned jak to dorazí.",
+        apiDescription: "Sledujte, co ostatní aplikace posílají do API tohoto serveru, hned jak to dorazí.",
         summary: "Živé požadavky, chyby a využití tokenů",
         status: "Aktivní: {active} · nedávné: {recent} · {model}",
         noModelLoaded: "Žádný model není načten",
@@ -2983,8 +2649,7 @@ export const cs = {
         gpuUnusable: "GPU nelze použít",
         gpuUnusableDetail: "Rozpoznáno, ale PyTorch ho nemůže použít",
         detailedView: "Podrobné zobrazení",
-        detailedViewDescription:
-          "Zobrazovat v plovoucím okně zatížení, teplotu a příkon každého GPU.",
+        detailedViewDescription: "Zobrazovat v plovoucím okně zatížení, teplotu a příkon každého GPU.",
         gpuLoad: "Zatížení GPU",
         temperature: "Teplota",
         power: "Příkon",
@@ -3000,16 +2665,11 @@ export const cs = {
         unavailable: "nedostupné",
         detecting: "Hledání GPU...",
         unreadable: "Hardware tohoto serveru se nepodařilo načíst.",
-        noGpu:
-          "Nebyla zjištěna samostatná GPU.",
-        noUsableGpu:
-          "Na tomto počítači není žádné GPU, které by PyTorch mohl použít.",
-        mismatchCpuBuild:
-          "PyTorch je sestavení pouze pro CPU ({version}), takže níže uvedená GPU nelze použít. Podporu GPU obnovíte opravou instalace.",
-        mismatchUnavailable:
-          "PyTorch ({version}) nedokáže inicializovat níže uvedená GPU, takže je nelze použít. Zkontrolujte ovladač GPU nebo opravte instalaci.",
-        driverIdleEvict:
-          "Ovladač AMD {version} má známou chybu, která může zamrazit Windows, když je GPU AMD nečinné, nejčastěji s více než jedním GPU. Aktualizujte na Adrenalin 26.9.2 nebo novější.",
+        noGpu: "Nebyla zjištěna samostatná GPU.",
+        noUsableGpu: "Na tomto počítači není žádné GPU, které by PyTorch mohl použít.",
+        mismatchCpuBuild: "PyTorch je sestavení pouze pro CPU ({version}), takže níže uvedená GPU nelze použít. Podporu GPU obnovíte opravou instalace.",
+        mismatchUnavailable: "PyTorch ({version}) nedokáže inicializovat níže uvedená GPU, takže je nelze použít. Zkontrolujte ovladač GPU nebo opravte instalaci.",
+        driverIdleEvict: "Ovladač AMD {version} má známou chybu, která může zamrazit Windows, když je GPU AMD nečinné, nejčastěji s více než jedním GPU. Aktualizujte na Adrenalin 26.9.2 nebo novější.",
         driverIdleEvictDetails: "Podrobnosti",
         dismissNotice: "Zavřít",
         unusableDevice: "nelze použít",
@@ -3027,36 +2687,28 @@ export const cs = {
       llamaBackend: {
         title: "Inferenční modul GGUF",
         label: "Výpočetní backend",
-        description:
-          "Backend, který llama.cpp používá ke spouštění modelů GGUF.",
+        description: "Backend, který llama.cpp používá ke spouštění modelů GGUF.",
         runningOn: "llama.cpp aktuálně běží na: {backend}.",
         hint: "Nainstaluje sestavení llama.cpp pro tento backend a zachová ho i při aktualizacích. Hodí se, když automatická volba padá nebo ji ovladač vašeho GPU nepodporuje. Zobrazují se jen backendy, pro které existuje sestavení pro tento počítač; trénování to neovlivní.",
         autoWith: "Automaticky ({backend})",
         apply: "Použít",
         applying: "Instalace...",
-        applyHint:
-          "Stáhne nové sestavení a restartuje llama.cpp. Načtený model bude uvolněn.",
-        applyHintWithSize:
-          "Stáhne {size} a restartuje llama.cpp. Načtený model bude uvolněn.",
+        applyHint: "Stáhne nové sestavení a restartuje llama.cpp. Načtený model bude uvolněn.",
+        applyHintWithSize: "Stáhne {size} a restartuje llama.cpp. Načtený model bude uvolněn.",
         switchedTo: "llama.cpp nyní běží na: {backend}.",
         switchFailed: "Backend llama.cpp se nepodařilo změnit.",
         switchInterrupted: "Přepnutí bylo přerušeno před dokončením.",
-        envLocked:
-          "Nastaveno na {backend} proměnnou prostředí UNSLOTH_LLAMA_CPP_BACKEND, která má přednost před tímto nastavením.",
+        envLocked: "Nastaveno na {backend} proměnnou prostředí UNSLOTH_LLAMA_CPP_BACKEND, která má přednost před tímto nastavením.",
         customPath: {
           label: "Vlastní složka llama.cpp",
           description: "Použít vlastní sestavení llama-server.",
           hint: "Vyberte složku llama.cpp, která obsahuje llama-server, nebo sestavení, kde je v build/bin. Vlastní běhové prostředí se používá pro chat GGUF, embeddingy a podporované hlasové modely. Proměnné prostředí mají stále přednost.",
           automatic: "Automaticky (přibalené)",
-          bundled:
-            "Používá běhové prostředí llama.cpp nainstalované aplikací Unsloth.",
-          active:
-            "Při příštím načtení modelu se použije váš vlastní llama-server.",
+          bundled: "Používá běhové prostředí llama.cpp nainstalované aplikací Unsloth.",
+          active: "Při příštím načtení modelu se použije váš vlastní llama-server.",
           environmentManaged: "Spravováno proměnnou prostředí {variable}.",
-          missingBinary:
-            "llama-server už v této složce není k dispozici. Vyberte jinou složku nebo použijte přibalené běhové prostředí.",
-          reloadRequired:
-            "Chcete-li použít vybraný llama-server, načtěte model znovu.",
+          missingBinary: "llama-server už v této složce není k dispozici. Vyberte jinou složku nebo použijte přibalené běhové prostředí.",
+          reloadRequired: "Chcete-li použít vybraný llama-server, načtěte model znovu.",
           change: "Změnit",
           saving: "Ukládání...",
           useBundled: "Použít přibalené",
@@ -3074,76 +2726,51 @@ export const cs = {
           metal: "Metal",
         },
         unsupported: {
-          notInstalled:
-            "Nebyla nalezena žádná spravovaná instalace llama.cpp, takže není co přepnout.",
-          localLink:
-            "llama.cpp je místní adresář, který jste sami propojili, takže ho Unsloth nenahradí.",
-          sourceBuild:
-            "Tato llama.cpp byla sestavena ze zdrojového kódu, takže její backend odsud nelze přepnout.",
-          customPath:
-            "Je vybrána vlastní složka llama.cpp. O výpočetním backendu rozhoduje její sestavení.",
-          unresolved:
-            "Dostupné backendy se nepodařilo ověřit. Zkontrolujte připojení a zkuste to znovu.",
-          updateChecksDisabled:
-            "Kontroly aktualizací jsou vypnuté (UNSLOTH_DISABLE_UPDATE_CHECK=1), takže se dostupné backendy nevyhledávají.",
+          notInstalled: "Nebyla nalezena žádná spravovaná instalace llama.cpp, takže není co přepnout.",
+          localLink: "llama.cpp je místní adresář, který jste sami propojili, takže ho Unsloth nenahradí.",
+          sourceBuild: "Tato llama.cpp byla sestavena ze zdrojového kódu, takže její backend odsud nelze přepnout.",
+          customPath: "Je vybrána vlastní složka llama.cpp. O výpočetním backendu rozhoduje její sestavení.",
+          unresolved: "Dostupné backendy se nepodařilo ověřit. Zkontrolujte připojení a zkuste to znovu.",
+          updateChecksDisabled: "Kontroly aktualizací jsou vypnuté (UNSLOTH_DISABLE_UPDATE_CHECK=1), takže se dostupné backendy nevyhledávají.",
         },
-        llamaBackendKeywords:
-          "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu akcelerátor accelerator předsestavené prebuilt přepnout switch modul engine vlastní custom cesta path složka folder adresář directory llama-server spustitelný soubor executable binary",
+        llamaBackendKeywords: "llama.cpp backend gguf inference cuda rocm hip vulkan metal cpu gpu akcelerátor accelerator předsestavené prebuilt přepnout switch modul engine vlastní custom cesta path složka folder adresář directory llama-server spustitelný soubor executable binary",
       },
       modelMemory: {
         title: "Načítání modelu",
         keepResident: "Ponechat model v paměti GPU",
         keepResidentDescription: "Zůstat ve VRAM mezi prompty.",
-        keepResidentHint:
-          "Dokud je model načtený, nevracet váhy do systémové RAM. Vypne automatické uvolnění při nečinnosti, a pokud váhy přece jen leží v RAM hostitele (sjednocená paměť nebo částečné přesunutí na GPU), předá také --mlock, aby je operační systém nemohl odstránkovat a při dalším promptu znovu nahrávat.",
+        keepResidentHint: "Dokud je model načtený, nevracet váhy do systémové RAM. Vypne automatické uvolnění při nečinnosti, a pokud váhy přece jen leží v RAM hostitele (sjednocená paměť nebo částečné přesunutí na GPU), předá také --mlock, aby je operační systém nemohl odstránkovat a při dalším promptu znovu nahrávat.",
         noRamReserve: "Nerezervovat pro model systémovou RAM",
-        noRamReserveDescription:
-          "Omezit RAM hostitele vyhrazenou pro váhy modelu.",
-        noRamReserveHint:
-          "Na podporovaných sestaveních Windows vynechá načítání mapované do paměti, když je model celý přesunutý na GPU, takže jeho stránky nezůstávají rezidentní. Jinak načítání mapované do paměti zachová. Nezbytné vyrovnávací paměti CPU mohou RAM využívat i nadále. Vypouští --no-mmap a --mlock.",
+        noRamReserveDescription: "Omezit RAM hostitele vyhrazenou pro váhy modelu.",
+        noRamReserveHint: "Na podporovaných sestaveních Windows vynechá načítání mapované do paměti, když je model celý přesunutý na GPU, takže jeho stránky nezůstávají rezidentní. Jinak načítání mapované do paměti zachová. Nezbytné vyrovnávací paměti CPU mohou RAM využívat i nadále. Vypouští --no-mmap a --mlock.",
         multiModel: "Ponechat více modelů načtených",
         openSystemSettings: "Otevřít v části Systém",
         multiModelOff: "Vypnuto",
         multiModelFit: "Když se vejdou",
         multiModelAlways: "Vždy",
-        multiModelDescription:
-          "Načtení modelu chatu, řeči, obrázků nebo videa uvolní ostatní.",
-        multiModelDescriptionFit:
-          "Načtení modelu ponechá ostatní, pokud se vejdou. Pokud ne, uvolní nejprve ty, které se nepoužívají, a pak ten aktivní.",
-        multiModelDescriptionAlways:
-          "Načtení modelu nikdy neuvolní jiný. Model, který se nevejde, se nenačte. Automatické uvolnění při nečinnosti a trénování paměť uvolňují i nadále.",
-        multiModelHint:
-          "Týká se modelů chatu, řeči, obrázků a videa. Každý načtený model chatu odpovídá na požadavky, které ho uvádějí. S více GPU se Unsloth snaží umístit nový model na GPU, které nepoužívá žádný jiný model. Volba „Když se vejdou“ ponechá asi 1 GB rezervu. Model načtený vedle ostatních dostane paměť, kterou nechají volnou, takže může začít s kratším kontextem. Volby „Když se vejdou“ a „Vždy“ nikdy neuvolní model na jiném GPU.",
+        multiModelDescription: "Načtení modelu chatu, řeči, obrázků nebo videa uvolní ostatní.",
+        multiModelDescriptionFit: "Načtení modelu ponechá ostatní, pokud se vejdou. Pokud ne, uvolní nejprve ty, které se nepoužívají, a pak ten aktivní.",
+        multiModelDescriptionAlways: "Načtení modelu nikdy neuvolní jiný. Model, který se nevejde, se nenačte. Automatické uvolnění při nečinnosti a trénování paměť uvolňují i nadále.",
+        multiModelHint: "Týká se modelů chatu, řeči, obrázků a videa. Každý načtený model chatu odpovídá na požadavky, které ho uvádějí. S více GPU se Unsloth snaží umístit nový model na GPU, které nepoužívá žádný jiný model. Volba „Když se vejdou“ ponechá asi 1 GB rezervu. Model načtený vedle ostatních dostane paměť, kterou nechají volnou, takže může začít s kratším kontextem. Volby „Když se vejdou“ a „Vždy“ nikdy neuvolní model na jiném GPU.",
         allowOversizedLoad: "Povolit načítání příliš velkých modelů",
-        allowOversizedLoadDescription:
-          "Načítat modely obrázků a videa, i když kontrola paměti hlásí, že se nevejdou.",
-        allowOversizedLoadHint:
-          "Platí tam, kde CPU a GPU sdílejí jeden fond paměti (Apple Silicon, integrovaná GPU). Unsloth odmítne načtení, když je jeho odhad vah modelu větší než paměť, která zbude po vyhrazení místa pro operační systém. Když je tato možnost zapnutá, o taková načtení se přesto pokusí. Odhad se může mýlit oběma směry: načtení příliš velkého modelu může selhat, spotřebovat veškerou paměť, způsobit, že počítač bude intenzivně swapovat nebo přestane reagovat, nebo zastavit Unsloth. Ve výchozím nastavení vypnuto.",
-        mediaIdleUnloadDescription:
-          "Uvolnit VRAM uvolněním modelů obrázků a videa po tomto počtu sekund nečinnosti. 0 je ponechá načtené, minimum je 60.",
-        mlockVetoed:
-          "--mlock zůstává vypnuté: připnutí modelu na místě by pro něj celý vyhradilo RAM. Automatické uvolnění při nečinnosti je stále vypnuté.",
-        mlockNotApplicable:
-          "Celý na GPU: v systémové RAM není nic k uzamčení. Automatické uvolnění při nečinnosti zůstává vypnuté.",
-        memlockCapped:
-          "Tento systém omezuje uzamčenou paměť na {limit}. Větší model nebude připnut celý; limit zvýšíte pomocí ulimit -l.",
-        reloadRequired:
-          "Chcete-li použít nové příznaky paměti, načtěte model znovu.",
+        allowOversizedLoadDescription: "Načítat modely obrázků a videa, i když kontrola paměti hlásí, že se nevejdou.",
+        allowOversizedLoadHint: "Platí tam, kde CPU a GPU sdílejí jeden fond paměti (Apple Silicon, integrovaná GPU). Unsloth odmítne načtení, když je jeho odhad vah modelu větší než paměť, která zbude po vyhrazení místa pro operační systém. Když je tato možnost zapnutá, o taková načtení se přesto pokusí. Odhad se může mýlit oběma směry: načtení příliš velkého modelu může selhat, spotřebovat veškerou paměť, způsobit, že počítač bude intenzivně swapovat nebo přestane reagovat, nebo zastavit Unsloth. Ve výchozím nastavení vypnuto.",
+        mediaIdleUnloadDescription: "Uvolnit VRAM uvolněním modelů obrázků a videa po tomto počtu sekund nečinnosti. 0 je ponechá načtené, minimum je 60.",
+        mlockVetoed: "--mlock zůstává vypnuté: připnutí modelu na místě by pro něj celý vyhradilo RAM. Automatické uvolnění při nečinnosti je stále vypnuté.",
+        mlockNotApplicable: "Celý na GPU: v systémové RAM není nic k uzamčení. Automatické uvolnění při nečinnosti zůstává vypnuté.",
+        memlockCapped: "Tento systém omezuje uzamčenou paměť na {limit}. Větší model nebude připnut celý; limit zvýšíte pomocí ulimit -l.",
+        reloadRequired: "Chcete-li použít nové příznaky paměti, načtěte model znovu.",
         loadError: "Nastavení paměti modelu se nepodařilo načíst",
         saveError: "Nastavení paměti modelu se nepodařilo uložit",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu paměť memory ram rezidentní resident residency připnout pin pinned stránka page zámek lock locked ponechat načtený keep loaded uvolnit unload nečinnost idle mmap no-mmap load-mode swap stránkování paging",
-        multiModelKeywords:
-          "více několik modelů současně vedle sebe multiple several models together alongside swap vejde fit uvolnit unload evict vram gpu obrázek image video chat řeč speech tts hlas voice předčítání read aloud vždy always nečinnost idle",
-        mediaIdleUnloadKeywords:
-          "obrázek image video difuze diffusion nečinnost idle uvolnit unload ttl časový limit timeout sekundy seconds uvolnit vram free vram gpu paměť memory",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu paměť memory ram rezidentní resident residency připnout pin pinned stránka page zámek lock locked ponechat načtený keep loaded uvolnit unload nečinnost idle mmap no-mmap load-mode swap stránkování paging",
+        multiModelKeywords: "více několik modelů současně vedle sebe multiple several models together alongside swap vejde fit uvolnit unload evict vram gpu obrázek image video chat řeč speech tts hlas voice předčítání read aloud vždy always nečinnost idle",
+        mediaIdleUnloadKeywords: "obrázek image video difuze diffusion nečinnost idle uvolnit unload ttl časový limit timeout sekundy seconds uvolnit vram free vram gpu paměť memory",
       },
       storage: {
         title: "Úložiště",
         systemDisk: "Systémový disk",
         systemUsed: "Na systémovém disku využito {used} z {total}",
-        modelsDiskSummary:
-          "Jednotka se složkou modelů: využito {used} z {total}, volno {free}",
+        modelsDiskSummary: "Jednotka se složkou modelů: využito {used} z {total}, volno {free}",
         segmentModels: "Modely",
         segmentCaches: "Mezipaměti",
         segmentOther: "Ostatní",
@@ -3154,10 +2781,8 @@ export const cs = {
         diskFree: "Volno: {free}",
         modelsFolder: "Složka modelů",
         modelsFolderDescription: "Kam se ukládají stažené modely.",
-        modelsFolderHint:
-          "Kam se ukládají stažené modely. Změňte ji, chcete-li mít modely mimo systémovou jednotku. Platí jen pro nová stažení. Modely, které už máte, zůstanou tam, kde jsou.",
-        modelsFolderKeywords:
-          "složka modelů adresář cesta umístění stahování stažené mezipaměť úložiště disk jednotka přesunout models folder directory path location download downloads cache storage drive move relocate hugging face",
+        modelsFolderHint: "Kam se ukládají stažené modely. Změňte ji, chcete-li mít modely mimo systémovou jednotku. Platí jen pro nová stažení. Modely, které už máte, zůstanou tam, kde jsou.",
+        modelsFolderKeywords: "složka modelů adresář cesta umístění stahování stažené mezipaměť úložiště disk jednotka přesunout models folder directory path location download downloads cache storage drive move relocate hugging face",
         futureDownloads: "Pouze nová stažení",
         environmentManaged: "Spravováno proměnnou prostředí {variable}.",
         locationFree: "Volno: {free}",
@@ -3168,19 +2793,16 @@ export const cs = {
         chooseTitle: "Vybrat umístění pro stahování modelů",
         chooseAction: "Použít pro budoucí stažení",
         cacheSaved: "Umístění pro stahování modelů bylo aktualizováno",
-        cacheSaveError:
-          "Umístění pro stahování modelů se nepodařilo aktualizovat",
+        cacheSaveError: "Umístění pro stahování modelů se nepodařilo aktualizovat",
         cachePickerError: "Výběr složky se nepodařilo otevřít",
         copied: "Cesta byla zkopírována",
         openError: "Složku se nepodařilo otevřít",
         copyError: "Cestu se nepodařilo zkopírovat",
         caches: {
           label: "Soubory mezipaměti",
-          description:
-            "V mezipamětích je {size}, z toho lze nyní vymazat {reclaimable}.",
+          description: "V mezipamětích je {size}, z toho lze nyní vymazat {reclaimable}.",
           hint: "Stažené balíčky, zkompilovaná jádra a mezipaměti přenosů, které Unsloth v případě potřeby znovu vytvoří. Stažené modely, projekty, chaty, nastavení a váš token Hugging Face se zde nikdy nevymažou.",
-          keywords:
-            "mezipaměť mezipaměti vymazat vyčistit uvolnit místo disk cache caches purge prune clear clean free space uv pip npm bun triton inductor cuda numba matplotlib vllm zkompilované compiled xet dočasné temporary",
+          keywords: "mezipaměť mezipaměti vymazat vyčistit uvolnit místo disk cache caches purge prune clear clean free space uv pip npm bun triton inductor cuda numba matplotlib vllm zkompilované compiled xet dočasné temporary",
           measuring: "Měření velikosti mezipamětí...",
           measureFailed: "Mezipaměti se nepodařilo změřit",
           empty: "Nebyly nalezeny žádné soubory mezipaměti.",
@@ -3189,24 +2811,18 @@ export const cs = {
           hideDetailsAction: "Skrýt podrobnosti",
           showFolders: "Zobrazit složky",
           hideFolders: "Skrýt složky",
-          previousLocations:
-            "Zahrnuje i předchozí umístění. Hlavní tlačítko Vymazat se týká aktuální složky mezipaměti. Tlačítka u modelů vymažou jen vybranou kopii.",
-          clearModelDescription:
-            "Odstraní se jen tato kopie v mezipaměti. V případě potřeby se znovu stáhne.",
+          previousLocations: "Zahrnuje i předchozí umístění. Hlavní tlačítko Vymazat se týká aktuální složky mezipaměti. Tlačítka u modelů vymažou jen vybranou kopii.",
+          clearModelDescription: "Odstraní se jen tato kopie v mezipaměti. V případě potřeby se znovu stáhne.",
           clearAction: "Vymazat mezipaměti",
           clearOneAction: "Vymazat",
           clearingAction: "Mazání...",
           confirmTitle: "Vymazat soubory v mezipaměti?",
           confirmDescription: "Uvolní se přibližně {size}.",
           confirmOneTitle: "Vymazat: {name}?",
-          safety:
-            "Unsloth mezipaměť znovu vytvoří, až ji bude příště potřebovat. Stažených modelů, projektů, chatů, nastavení a vašeho tokenu Hugging Face se to nedotkne.",
-          hubCost:
-            "Toto je mezipaměť modelů. Po jejím vymazání se tyto modely při příštím použití stáhnou znovu.",
-          datasetsCost:
-            "Po vymazání se tyto datové sady při příštím použití stáhnou znovu.",
-          npuCost:
-            "Toto jsou vaše stažené modely NPU. Vymazáním je smažete a pro použití je musíte znovu stáhnout z Hubu.",
+          safety: "Unsloth mezipaměť znovu vytvoří, až ji bude příště potřebovat. Stažených modelů, projektů, chatů, nastavení a vašeho tokenu Hugging Face se to nedotkne.",
+          hubCost: "Toto je mezipaměť modelů. Po jejím vymazání se tyto modely při příštím použití stáhnou znovu.",
+          datasetsCost: "Po vymazání se tyto datové sady při příštím použití stáhnou znovu.",
+          npuCost: "Toto jsou vaše stažené modely NPU. Vymazáním je smažete a pro použití je musíte znovu stáhnout z Hubu.",
           blocked: "Nevymazáno: {reason}",
           cleared: "Vymazáno: {size}",
           partial: "Některé soubory mezipaměti se nepodařilo odstranit",
@@ -3234,8 +2850,7 @@ export const cs = {
         lowDisk: {
           title: "Na disku dochází místo",
           criticalTitle: "Na disku je kriticky málo místa",
-          description:
-            "Volno {free} z {total}. Místo můžete uvolnit vymazáním mezipamětí.",
+          description: "Volno {free} z {total}. Místo můžete uvolnit vymazáním mezipamětí.",
           action: "Zkontrolovat mezipaměti",
         },
       },
@@ -3256,14 +2871,10 @@ export const cs = {
     },
     agents: {
       title: "Agenti",
-      description:
-        "Propojte kódovací agenty, jako jsou Claude Code a Codex, s místním modelem pomocí unsloth start.",
-      agentKeywords:
-        "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex agent kódovací agent",
-      vscodeNote:
-        "Výjimkou je VS Code: tento příkaz přidá obsluhovaný model do seznamu modelů Copilot Chat ve VS Code (chatLanguageModels.json).",
-      intro:
-        "propojí Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode a další agenty s modelem, který Unsloth obsluhuje místně, zcela offline. Spustí server kompatibilní s OpenAI a konfiguračních souborů vašeho agenta se nikdy nedotkne.",
+      description: "Propojte kódovací agenty, jako jsou Claude Code a Codex, s místním modelem pomocí unsloth start.",
+      agentKeywords: "vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex agent kódovací agent",
+      vscodeNote: "Výjimkou je VS Code: tento příkaz přidá obsluhovaný model do seznamu modelů Copilot Chat ve VS Code (chatLanguageModels.json).",
+      intro: "propojí Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode a další agenty s modelem, který Unsloth obsluhuje místně, zcela offline. Spustí server kompatibilní s OpenAI a konfiguračních souborů vašeho agenta se nikdy nedotkne.",
       readDocs: "Přečíst dokumentaci",
       copy: "Kopírovat",
       copied: "Zkopírováno",
@@ -3273,32 +2884,26 @@ export const cs = {
       model: "Model",
       searchModels: "Hledat modely GGUF...",
       noModels: "Žádné odpovídající modely GGUF.",
-      showingModels:
-        "Zobrazeno {shown} z {total} shod. Pište dál, chcete-li seznam zúžit.",
+      showingModels: "Zobrazeno {shown} z {total} shod. Pište dál, chcete-li seznam zúžit.",
       quantization: "Kvantizace",
       loadingQuantizations: "Načítání kvantizací...",
       noQuantizations: "Žádná samostatná kvantizace",
       recommended: "Doporučeno",
       downloaded: "Staženo",
-      quantizationLoadError:
-        "Nepodařilo se načíst všechny kvantizace. Příkaz použije dostupnou hodnotu modelu.",
+      quantizationLoadError: "Nepodařilo se načíst všechny kvantizace. Příkaz použije dostupnou hodnotu modelu.",
       generatedCommand: "Vygenerovaný příkaz",
       docs: "Dokumentace",
       docsLabel: "Otevřít dokumentaci k unsloth start",
       agentDocs: "Otevřít dokumentaci k nastavení: {agent}",
       copyGeneratedCommand: "Kopírovat vygenerovaný příkaz",
-      automaticSettingsNote:
-        "Pokud jste nenastavili žádné příznaky, Unsloth automaticky použije doporučené nastavení modelu.",
-      configurationNote:
-        "Můžete také upravit libovolnou konfiguraci. Viz níže nebo",
+      automaticSettingsNote: "Pokud jste nenastavili žádné příznaky, Unsloth automaticky použije doporučené nastavení modelu.",
+      configurationNote: "Můžete také upravit libovolnou konfiguraci. Viz níže nebo",
       configurationDocs: "dokumentace",
       configurationFlagsSuffix: "s popisem příznaků.",
-      modelNote:
-        "Claude Code a Codex vyžadují model GGUF obsluhovaný přes llama-server nebo model MLX. Ostatní agenti mohou používat i modely založené na transformers; odeberte --model, chcete-li použít model, který je už načtený v Unsloth.",
+      modelNote: "Claude Code a Codex vyžadují model GGUF obsluhovaný přes llama-server nebo model MLX. Ostatní agenti mohou používat i modely založené na transformers; odeberte --model, chcete-li použít model, který je už načtený v Unsloth.",
       subagent: {
         title: "Použít místní model jako subagenta",
-        description:
-          "Ponechte agenta {agent} na jeho současném modelu a vybrané úlohy delegujte na tento místní model Unsloth.",
+        description: "Ponechte agenta {agent} na jeho současném modelu a vybrané úlohy delegujte na tento místní model Unsloth.",
         setupCommand: "Příkaz pro nastavení",
         copySetupCommand: "Kopírovat příkaz pro nastavení subagenta",
         usagePrompt: "Pak v agentovi {agent} napište:",
@@ -3308,10 +2913,8 @@ export const cs = {
       },
       quickstart: {
         title: "Sestavit příkaz",
-        description:
-          "Spusťte agenta s modelem, který je aktuálně načtený v Unsloth. Nejprve načtěte model a pak nahraďte claude libovolným podporovaným agentem níže.",
-        noneDetected:
-          "Ve vaší proměnné PATH nebyla nalezena žádná rozhraní CLI podporovaných agentů.",
+        description: "Spusťte agenta s modelem, který je aktuálně načtený v Unsloth. Nejprve načtěte model a pak nahraďte claude libovolným podporovaným agentem níže.",
+        noneDetected: "Ve vaší proměnné PATH nebyla nalezena žádná rozhraní CLI podporovaných agentů.",
         installed: "Nainstalováno",
       },
       supportedAgents: {
@@ -3321,55 +2924,48 @@ export const cs = {
       },
       models: {
         title: "Výběr modelu",
-        description:
-          "Model a kvantizaci vyberete pomocí --model, okno nastavíte pomocí --context-length. Použijte příponu kvantizace nebo explicitní příznak --gguf-variant.",
+        description: "Model a kvantizaci vyberete pomocí --model, okno nastavíte pomocí --context-length. Použijte příponu kvantizace nebo explicitní příznak --gguf-variant.",
         suffixLabel: "S příponou kvantizace",
         variantLabel: "S explicitním příznakem varianty",
       },
       options: {
         title: "Běžné možnosti",
-        description:
-          "Nejprve se zpracují příznaky Unsloth; vše, co nerozpozná, se předá přímo agentovi.",
-        model:
-          "Vybrat model. Bez --model použije unsloth start model, který je aktuálně načtený v Unsloth, a pokud žádný načtený není, skončí chybou.",
-        contextLength:
-          "Nastavit požadovanou délku kontextu (alias: --max-seq-length).",
+        description: "Nejprve se zpracují příznaky Unsloth; vše, co nerozpozná, se předá přímo agentovi.",
+        model: "Vybrat model. Bez --model použije unsloth start model, který je aktuálně načtený v Unsloth, a pokud žádný načtený není, skončí chybou.",
+        contextLength: "Nastavit požadovanou délku kontextu (alias: --max-seq-length).",
         ggufVariant: "Zvolit variantu kvantizace GGUF.",
         loadIn4bit: "Přepnout 4bitové načítání pro modely Hugging Face.",
         tensorParallel: "Přepnout tenzorový paralelismus napříč více GPU.",
         serve: "Zapnout nebo vypnout automatický místní server.",
         launch: "Spustit agenta, nebo jen vypsat příkaz a prostředí.",
-        persist:
-          "Zachovat úložiště agenta spravované aplikací Unsloth mezi běhy.",
-        asSubagent:
-          "Ponechat nadřazeného agenta na jeho současném modelu a zaregistrovat Unsloth jako místního subagenta (Claude Code, Codex, OpenCode a Pi).",
+        persist: "Zachovat úložiště agenta spravované aplikací Unsloth mezi běhy.",
+        asSubagent: "Ponechat nadřazeného agenta na jeho současném modelu a zaregistrovat Unsloth jako místního subagenta (Claude Code, Codex, OpenCode a Pi).",
         apiKey: "Zadat váš klíč API Unsloth (nebo nastavit UNSLOTH_API_KEY).",
-        reasoning:
-          "Používat v chatu uvažování: on, off nebo auto. Auto se řídí šablonou chatu modelu, což obvykle znamená zapnuto.",
-        reasoningEffort:
-          "Úsilí uvažování předávané šabloně chatu modelu, např. medium. Úrovně se liší podle modelu, proto použijte takovou, kterou daný model přijímá. Bez nastavení zůstane hodnota ze šablony.",
+        reasoning: "Používat v chatu uvažování: on, off nebo auto. Auto se řídí šablonou chatu modelu, což obvykle znamená zapnuto.",
+        reasoningEffort: "Úsilí uvažování předávané šabloně chatu modelu, např. medium. Úrovně se liší podle modelu, proto použijte takovou, kterou daný model přijímá. Bez nastavení zůstane hodnota ze šablony.",
         yolo: "Přeskočit výzvy ke schválení. Používejte jen v důvěryhodných prostředích.",
       },
       remote: {
         title: "Připojit se ke vzdálenému Unsloth",
-        description:
-          "Chcete-li unsloth start nasměrovat na instanci Unsloth běžící jinde, nastavte před spuštěním tyto proměnné (nebo přímo předejte --api-key):",
+        description: "Chcete-li unsloth start nasměrovat na instanci Unsloth běžící jinde, nastavte před spuštěním tyto proměnné (nebo přímo předejte --api-key):",
       },
       passthrough: {
         title: "Předávání argumentů agentovi",
-        description:
-          "Argumenty za příznaky Unsloth se předají samotnému agentovi, takže nativní příkazy jako resume fungují i nadále:",
+        description: "Argumenty za příznaky Unsloth se předají samotnému agentovi, takže nativní příkazy jako resume fungují i nadále:",
       },
       dryRun: {
         title: "Náhled bez spuštění",
-        description:
-          "Přidejte --no-launch, chcete-li místo spuštění agenta vypsat prostředí a příkaz. Pokud je nastaveno --model, model se přesto může vyhledat a načíst.",
+        description: "Přidejte --no-launch, chcete-li místo spuštění agenta vypsat prostředí a příkaz. Pokud je nastaveno --model, model se přesto může vyhledat a načíst.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Odpovědi" },
-        thinkingTools: { title: "Přemýšlení a nástroje" },
+        replies: {
+          title: "Odpovědi",
+        },
+        thinkingTools: {
+          title: "Přemýšlení a nástroje",
+        },
         conversations: {
           title: "Konverzace",
         },
@@ -3392,35 +2988,26 @@ export const cs = {
       },
       library: {
         label: "Spravovat chaty",
-        description:
-          "Vyhledávejte, řaďte a uspořádejte chaty, projekty a oddíly.",
+        description: "Vyhledávejte, řaďte a uspořádejte chaty, projekty a oddíly.",
         action: "Otevřít knihovnu",
       },
-      projectAttachmentsHint:
-        "Toto nastavení můžete přepsat v nabídce příloh každého chatu.",
-      rememberParamsPerModelHint:
-        "Když je vypnuto, používá se pro všechny modely stejné nastavení.",
-      autoCompactHint:
-        "Místní chaty GGUF a MLX: vyřazené výměny se indexují, aby je model mohl vyhledáním vrátit zpět, a reset doslovně ocituje trvalé pokyny, které se vejdou, přičemž nejstarší a nejnovější mají přednost před prostředními. Archivace vyžaduje uložený chat a vektorový index; bez nich se starší výměny zahodí. Používá délku kontextu, kterou jste nastavili, ne dostupnou VRAM. Modely API: poskytovatel starší výměny shrne, kde to jde, jinak se nejstarší výměny zahodí, když se chat blíží zveřejněnému kontextovému oknu modelu.",
-      pastedTextShortDescription:
-        "Vložený text o délce alespoň {count} znaků se změní na přílohu .txt.",
+      projectAttachmentsHint: "Toto nastavení můžete přepsat v nabídce příloh každého chatu.",
+      rememberParamsPerModelHint: "Když je vypnuto, používá se pro všechny modely stejné nastavení.",
+      autoCompactHint: "Místní chaty GGUF a MLX: vyřazené výměny se indexují, aby je model mohl vyhledáním vrátit zpět, a reset doslovně ocituje trvalé pokyny, které se vejdou, přičemž nejstarší a nejnovější mají přednost před prostředními. Archivace vyžaduje uložený chat a vektorový index; bez nich se starší výměny zahodí. Používá délku kontextu, kterou jste nastavili, ne dostupnou VRAM. Modely API: poskytovatel starší výměny shrne, kde to jde, jinak se nejstarší výměny zahodí, když se chat blíží zveřejněnému kontextovému oknu modelu.",
+      pastedTextShortDescription: "Vložený text o délce alespoň {count} znaků se změní na přílohu .txt.",
       pastedTextOffDescription: "Vložený text vždy zůstane v poli zprávy.",
       title: "Chat",
       description: "Přizpůsobte si chování chatu v tomto zařízení.",
       modelSelection: {
         title: "Výběr modelu",
         expandQuantizations: "Rozbalit kvantizace",
-        expandQuantizationsDescription:
-          "Zobrazovat kvantizace GGUF v části V zařízení bez otevírání jednotlivých modelů.",
+        expandQuantizationsDescription: "Zobrazovat kvantizace GGUF v části V zařízení bez otevírání jednotlivých modelů.",
         showAllQuantizations: "Všechny kvantizace",
-        showAllQuantizationsDescription:
-          "Zahrnout do části V zařízení i kvantizace, které nejsou stažené.",
+        showAllQuantizationsDescription: "Zahrnout do části V zařízení i kvantizace, které nejsou stažené.",
         showMemoryBar: "Ukazatel využití VRAM",
-        showMemoryBarDescription:
-          "Zobrazovat odhad VRAM pro váhy modelu, kontext a spekulativní dekódování.",
+        showMemoryBarDescription: "Zobrazovat odhad VRAM pro váhy modelu, kontext a spekulativní dekódování.",
         fitOnDeviceOnly: "Zobrazovat jen modely, které se vejdou",
-        fitOnDeviceOnlyDescription:
-          "Ve výběru modelu a v centru modelů skrýt modely, které jsou pro paměť GPU a RAM tohoto zařízení příliš velké. Stažené modely zůstanou viditelné.",
+        fitOnDeviceOnlyDescription: "Ve výběru modelu a v centru modelů skrýt modely, které jsou pro paměť GPU a RAM tohoto zařízení příliš velké. Stažené modely zůstanou viditelné.",
         pickerExpandLoaded: "Zobrazit celý seznam modelů",
         pickerExpandLoadedDescription: "Při načteném modelu otevírat výběr modelu na celém seznamu místo jen načteného modelu. Rozbalení nebo sbalení výběru toto nastavení také změní.",
         pickerMonochromeIcons: "Jednobarevné ikony modelů",
@@ -3428,8 +3015,7 @@ export const cs = {
       },
       menu: {
         title: "Nabídka chatu",
-        description:
-          "Připněte položky do nabídky + chatu a přetažením změňte jejich pořadí. Ostatní se přesunou do „Další“.",
+        description: "Připněte položky do nabídky + chatu a přetažením změňte jejich pořadí. Ostatní se přesunou do „Další“.",
         deepResearch: "Hloubkový výzkum",
         browserUse: "Ovládání prohlížeče",
         computerUse: "Ovládání počítače",
@@ -3446,75 +3032,52 @@ export const cs = {
         more: "Další",
       },
       pastedTextThreshold: "Zhustit dlouhý vložený text",
-      pastedTextThresholdDescription:
-        "Stisknutím {shortcut} vložíte text přímo do pole zprávy.",
+      pastedTextThresholdDescription: "Stisknutím {shortcut} vložíte text přímo do pole zprávy.",
       pastedTextThresholdOff: "Vypnuto",
       autoScroll: "Posouvat během generování",
-      autoScrollDescription:
-        "Automatické posouvání udržuje nový text na očích. Ruční zůstane na místě, abyste mohli číst od začátku.",
+      autoScrollDescription: "Automatické posouvání udržuje nový text na očích. Ruční zůstane na místě, abyste mohli číst od začátku.",
       autoScrollAuto: "Automatické posouvání",
       autoScrollManual: "Ruční",
-      autoScrollKeywords:
-        "posouvání posunout automaticky sledovat dole skok streamování generování zámek ruční scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual",
+      autoScrollKeywords: "posouvání posunout automaticky sledovat dole skok streamování generování zámek ruční scroll autoscroll auto-scroll follow stick bottom jump streaming generating viewport lock hold auto manual",
       replyNotification: "Upozornit na dokončení odpovědi",
-      replyNotificationDescription:
-        "Zobrazit systémové oznámení, když se odpověď dokončí, zatímco je Unsloth minimalizovaný nebo na pozadí.",
-      replyNotificationBlocked:
-        "Oznámení jsou blokována. Povolte je pro Unsloth v nastavení prohlížeče nebo systému a zkuste to znovu.",
-      replyNotificationKeywords:
-        "oznámení upozornění hotovo dokončeno připraveno odpověď pozadí minimalizováno zvuk notify notification alert done finished complete ready response reply background minimized desktop sound",
+      replyNotificationDescription: "Zobrazit systémové oznámení, když se odpověď dokončí, zatímco je Unsloth minimalizovaný nebo na pozadí.",
+      replyNotificationBlocked: "Oznámení jsou blokována. Povolte je pro Unsloth v nastavení prohlížeče nebo systému a zkuste to znovu.",
+      replyNotificationKeywords: "oznámení upozornění hotovo dokončeno připraveno odpověď pozadí minimalizováno zvuk notify notification alert done finished complete ready response reply background minimized desktop sound",
       showLinkPreviews: "Náhledy odkazů",
       showLinkPreviewsDescription: "Zobrazovat náhledy při najetí na odkazy na zdroje.",
       showResponseModel: "Model odpovědi",
-      showResponseModelDescription:
-        "Zobrazovat v odpovědích asistenta podrobnosti o modelu.",
+      showResponseModelDescription: "Zobrazovat v odpovědích asistenta podrobnosti o modelu.",
       showReplyTimes: "Časy odpovědí",
-      showReplyTimesDescription:
-        "Pod každou odpovědí zobrazovat, kdy byla dokončena.",
-      showReplyTimesKeywords:
-        "časové razítko čas hodiny datum kdy dokončeno odpověď zpráva timestamp time clock date hour when finished arrived reply response message",
+      showReplyTimesDescription: "Pod každou odpovědí zobrazovat, kdy byla dokončena.",
+      showReplyTimesKeywords: "časové razítko čas hodiny datum kdy dokončeno odpověď zpráva timestamp time clock date hour when finished arrived reply response message",
       showGenerationDetails: "Podrobné informace o rychlosti",
-      showGenerationDetailsDescription:
-        "Přidá do živých údajů rychlost čtení výzvy, počty tokenů a přijetí návrhů.",
-      showGenerationDetailsKeywords:
-        "podrobné vývojář statistiky rychlost verbose developer stats speed tok/s prefill decode",
+      showGenerationDetailsDescription: "Přidá do živých údajů rychlost čtení výzvy, počty tokenů a přijetí návrhů.",
+      showGenerationDetailsKeywords: "podrobné vývojář statistiky rychlost verbose developer stats speed tok/s prefill decode",
       generationStatsUpdates: "Statistiky rychlosti a kontextu",
-      generationStatsUpdatesDescription:
-        "Režim V reálném čase počítá tokeny za sekundu a využití kontextu během streamování odpovědi. Po dokončení je aktualizuje, až každá odpověď skončí.",
-      generationStatsUpdatesHint:
-        "V reálném čase obnovuje ukazatel tokenů za sekundu pod odpovědí a lištu kontextu nahoře v chatu několikrát za sekundu, zatímco se odpověď píše. Po dokončení je aktualizuje jednou, až každá odpověď skončí. Režim v reálném čase může způsobit zasekávání nebo nižší výkon, hlavně na starších či vytížených počítačích.",
+      generationStatsUpdatesDescription: "Režim V reálném čase počítá tokeny za sekundu a využití kontextu během streamování odpovědi. Po dokončení je aktualizuje, až každá odpověď skončí.",
+      generationStatsUpdatesHint: "V reálném čase obnovuje ukazatel tokenů za sekundu pod odpovědí a lištu kontextu nahoře v chatu několikrát za sekundu, zatímco se odpověď píše. Po dokončení je aktualizuje jednou, až každá odpověď skončí. Režim v reálném čase může způsobit zasekávání nebo nižší výkon, hlavně na starších či vytížených počítačích.",
       generationStatsUpdatesSettled: "Po dokončení",
       generationStatsUpdatesRealtime: "V reálném čase",
-      generationStatsUpdatesKeywords:
-        "reálný čas živě aktualizace rychlost kontext statistiky realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "reálný čas živě aktualizace rychlost kontext statistiky realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Upravit odpověď přímo u odpovědí",
-      inlineEditResponseDescription:
-        "Zobrazovat Upravit odpověď u každé odpovědi místo v nabídce Další.",
+      inlineEditResponseDescription: "Zobrazovat Upravit odpověď u každé odpovědi místo v nabídce Další.",
       turnNavigation: "Navigace v kolech",
       turnNavigationDescription: "Zobrazí vaše zprávy jako lištu u levého okraje dlouhých chatů. Najetím zobrazíte náhled kola, kliknutím na něj přejdete a záložkami si kola označíte.",
       composerPosition: "Umístění pole zprávy",
       composerPositionDescription: "Kde je pole zprávy při zahájení nového chatu, od horní části stránky až dolů.",
       projectAttachments: "Sdílet soubory v rámci projektu",
-      projectAttachmentsDescription:
-        "Zpřístupnit nové přílohy chatu všem chatům v projektu.",
+      projectAttachmentsDescription: "Zpřístupnit nové přílohy chatu všem chatům v projektu.",
       rememberParamsPerModel: "Pamatovat si nastavení pro každý model",
-      rememberParamsPerModelDescription:
-        "Obnovit naposledy použitý prompt, teplotu a další nastavení každého modelu.",
+      rememberParamsPerModelDescription: "Obnovit naposledy použitý prompt, teplotu a další nastavení každého modelu.",
       autoCompact: "Automaticky komprimovat dlouhé chaty",
-      autoCompactDescription:
-        "Když chat zaplní svůj kontext, starší výměny se přesunou do prohledávatelného archivu.",
-      autoCompactKeywords:
-        "komprimace komprimovat zhuštění kontextové okno zkrátit archiv vyhledávání compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search",
+      autoCompactDescription: "Když chat zaplní svůj kontext, starší výměny se přesunou do prohledávatelného archivu.",
+      autoCompactKeywords: "komprimace komprimovat zhuštění kontextové okno zkrátit archiv vyhledávání compaction compact auto-compact context window truncate rolling checkpoint headroom archive retrieval recall rag search",
       keepRunningWhenTabClosed: "Pokračovat i po zavření karty",
-      keepRunningWhenTabClosedDescription:
-        "Odpovědi, vyhledávání na webu a Hloubkový výzkum pokračují po zavření karty na serveru. Vypnutím je místo toho zastavíte.",
-      keepRunningWhenTabClosedHint:
-        "Chcete-li navázat na běh, který pokračoval, otevřete chat znovu v libovolném zařízení. Když je vypnuto, běh se zastaví zhruba do minuty po zavření jeho poslední karty, takže ho opětovné načtení stránky nezastaví. Platí pro běhy spuštěné po změně tohoto nastavení. Dočasné chaty, odpovědi modelů API nebo odpovědi na přílohy a výměny, které používají panel prohlížeče, se vždy zastaví spolu se svou kartou.",
-      keepRunningWhenTabClosedKeywords:
-        "pozadí karta zavřít zavřená opustit pokračovat zastavit zrušit hloubkový výzkum vyhledávání na webu obnovit znovu připojit zařízení telefon background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone",
+      keepRunningWhenTabClosedDescription: "Odpovědi, vyhledávání na webu a Hloubkový výzkum pokračují po zavření karty na serveru. Vypnutím je místo toho zastavíte.",
+      keepRunningWhenTabClosedHint: "Chcete-li navázat na běh, který pokračoval, otevřete chat znovu v libovolném zařízení. Když je vypnuto, běh se zastaví zhruba do minuty po zavření jeho poslední karty, takže ho opětovné načtení stránky nezastaví. Platí pro běhy spuštěné po změně tohoto nastavení. Dočasné chaty, odpovědi modelů API nebo odpovědi na přílohy a výměny, které používají panel prohlížeče, se vždy zastaví spolu se svou kartou.",
+      keepRunningWhenTabClosedKeywords: "pozadí karta zavřít zavřená opustit pokračovat zastavit zrušit hloubkový výzkum vyhledávání na webu obnovit znovu připojit zařízení telefon background tab close closed leave keep running continue stop cancel deep research web search resume reconnect device phone",
       firstTokenLabel: "Limit čekání na první token",
-      firstTokenDescription:
-        "Jak dlouho mohou místní modely GGUF čekat bez postupu ve zpracování promptu, než vygenerují první token. Platí pro nová čekání u všech účtů. Možnost Neomezeně čeká, dokud ji nezastavíte.",
+      firstTokenDescription: "Jak dlouho mohou místní modely GGUF čekat bez postupu ve zpracování promptu, než vygenerují první token. Platí pro nová čekání u všech účtů. Možnost Neomezeně čeká, dokud ji nezastavíte.",
       firstTokenDefault: "20 min (výchozí)",
       firstTokenCustom: "Vlastní",
       firstTokenUnlimited: "Neomezeně",
@@ -3524,67 +3087,53 @@ export const cs = {
       firstTokenSaving: "Ukládání…",
       firstTokenLoadError: "Limit čekání na první token se nepodařilo načíst.",
       firstTokenSaveError: "Limit čekání na první token se nepodařilo uložit.",
-      firstTokenKeywords:
-        "časový limit první token pomalé CPU přes noc neomezeně čekání limit timeout first token prefill slow overnight unlimited waiting",
+      firstTokenKeywords: "časový limit první token pomalé CPU přes noc neomezeně čekání limit timeout first token prefill slow overnight unlimited waiting",
       toolResultLimit: "Délka výstupu nástroje",
-      toolResultLimitDescription:
-        "Počet znaků jednoho výsledku nástroje Python, Terminál nebo MCP, který model přečte. Výchozí hodnota je {count}.",
-      toolResultLimitHint:
-        "Delší výstup Pythonu a terminálu se uloží do souboru, který model může číst po částech. Vyšší limit platí pro modely běžící v Unsloth a malá kontextová okna stále dostanou méně. Modely API si ponechají výchozí hodnotu, pokud ji nesnížíte.",
+      toolResultLimitDescription: "Počet znaků jednoho výsledku nástroje Python, Terminál nebo MCP, který model přečte. Výchozí hodnota je {count}.",
+      toolResultLimitHint: "Delší výstup Pythonu a terminálu se uloží do souboru, který model může číst po částech. Vyšší limit platí pro modely běžící v Unsloth a malá kontextová okna stále dostanou méně. Modely API si ponechají výchozí hodnotu, pokud ji nesnížíte.",
       toolResultLimitDefault: "{count} (výchozí)",
       toolResultLimitLocked: "Nastaveno pomocí UNSLOTH_TOOL_RESULT_MAX_CHARS",
       toolResultLimitLoadError: "Délku výstupu nástroje se nepodařilo načíst.",
       toolResultLimitSaveError: "Délku výstupu nástroje se nepodařilo uložit.",
-      toolResultLimitKeywords:
-        "nástroj výstup výsledek zkrátit zkrácení limit znaky délka terminál tool output result truncate truncated truncation cap characters chars length terminal python mcp",
+      toolResultLimitKeywords: "nástroj výstup výsledek zkrátit zkrácení limit znaky délka terminál tool output result truncate truncated truncation cap characters chars length terminal python mcp",
       visibility: {
         collapsed: "Sbaleno",
         auto: "Rozbalit během běhu",
         expanded: "Vždy rozbaleno",
       },
-      visibilityKeywords:
-        "sbalit sbaleno rozbalit rozbaleno otevřeno zavřeno uvažování přemýšlení volání nástrojů aktivita nástrojů seskupit collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming",
+      visibilityKeywords: "sbalit sbaleno rozbalit rozbaleno otevřeno zavřeno uvažování přemýšlení volání nástrojů aktivita nástrojů seskupit collapse collapsed expand expanded open closed reasoning thinking tool calls tool activity fold group streaming",
       thinking: {
         visibility: "Přemýšlení",
-        visibilityDescription:
-          "Jak se uvažování otevírá. Jakýkoli blok můžete i tak sami rozbalit nebo sbalit.",
+        visibilityDescription: "Jak se uvažování otevírá. Jakýkoli blok můžete i tak sami rozbalit nebo sbalit.",
       },
       memory: {
         title: "Paměť",
-        description:
-          "Poznámky, které čte každý chat, pro všechny modely, místní i cloudové. Chaty v projektu čtou také soubor AGENTS.md daného projektu.",
+        description: "Poznámky, které čte každý chat, pro všechny modely, místní i cloudové. Chaty v projektu čtou také soubor AGENTS.md daného projektu.",
         enable: "Používat paměť v chatech",
         enableDescription: "Posílat tyto poznámky s každým chatem.",
-        locked:
-          "Pro tuto instalaci vypnuto proměnnou UNSLOTH_STUDIO_AGENTS_MD.",
+        locked: "Pro tuto instalaci vypnuto proměnnou UNSLOTH_STUDIO_AGENTS_MD.",
         editor: "Poznámky paměti",
-        placeholder:
-          "Například:\n- Píšu v Pythonu a používám uv.\n- Odpovídej stručně.",
+        placeholder: "Například:\n- Píšu v Pythonu a používám uv.\n- Odpovídej stručně.",
         hint: "Uloženo do {path}. Tento soubor můžete upravit i v libovolném textovém editoru.",
         size: "{used} / {max} KB",
         save: "Uložit",
         saved: "Paměť byla uložena",
         loadError: "Paměť se nepodařilo načíst.",
         saveError: "Paměť se nepodařilo uložit.",
-        keywords:
-          "paměť pamatovat přizpůsobení profil předvolby poznámky fakta vlastní pokyny o mně memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md",
+        keywords: "paměť pamatovat přizpůsobení profil předvolby poznámky fakta vlastní pokyny o mně memory remember personalization personalisation profile preferences notes facts custom instructions about me agents.md claude.md",
       },
       currentDate: {
         label: "Sdělit modelu dnešní datum",
-        description:
-          "Přidávat dnešní datum, aby vyhledávání a výzkum našly aktuální zdroje.",
+        description: "Přidávat dnešní datum, aby vyhledávání a výzkum našly aktuální zdroje.",
         loadError: "Nastavení aktuálního data se nepodařilo načíst",
         saveError: "Nastavení aktuálního data se nepodařilo aktualizovat",
       },
       tools: {
         visibility: "Volání nástrojů",
-        visibilityDescription:
-          "Jak se aktivita nástrojů otevírá. Jakékoli volání můžete i tak sami rozbalit nebo sbalit.",
+        visibilityDescription: "Jak se aktivita nástrojů otevírá. Jakékoli volání můžete i tak sami rozbalit nebo sbalit.",
         foldIntoThinking: "Seskupit volání nástrojů pod Přemýšlení",
-        foldIntoThinkingDescription:
-          "Zobrazovat volání nástrojů dané odpovědi uvnitř jeho bloku Přemýšlení místo na samostatných řádcích.",
-        foldIntoThinkingBlocked:
-          "Není k dispozici, když jsou volání nástrojů nastavena na Vždy rozbaleno, což je ponechává na samostatných řádcích.",
+        foldIntoThinkingDescription: "Zobrazovat volání nástrojů dané odpovědi uvnitř jeho bloku Přemýšlení místo na samostatných řádcích.",
+        foldIntoThinkingBlocked: "Není k dispozici, když jsou volání nástrojů nastavena na Vždy rozbaleno, což je ponechává na samostatných řádcích.",
       },
       webSearch: {
         title: "Vyhledávání na webu",
@@ -3594,24 +3143,19 @@ export const cs = {
       artifacts: {
         title: "Stránky HTML",
         collapseHtmlBlocks: "Sbalovat bloky HTML",
-        collapseHtmlBlocksDescription:
-          "Zobrazovat úplné dokumenty HTML v chatu jako kartu, která se otevře v prohlížeči, místo jako kód.",
+        collapseHtmlBlocksDescription: "Zobrazovat úplné dokumenty HTML v chatu jako kartu, která se otevře v prohlížeči, místo jako kód.",
         allowNetworkAccess: "Povolit stránkám HTML přístup k síti",
-        allowNetworkAccessDescription:
-          "Umožnit stránkám HTML z chatu načítat externí skripty, styly, písma a média. Pro offline náhledy vypněte.",
+        allowNetworkAccessDescription: "Umožnit stránkám HTML z chatu načítat externí skripty, styly, písma a média. Pro offline náhledy vypněte.",
         blockedBanner: "Zablokované externí prostředky z {hosts}: {count}.",
-        blockedBannerPlural:
-          "Zablokované externí prostředky z {hosts}: {count}.",
+        blockedBannerPlural: "Zablokované externí prostředky z {hosts}: {count}.",
         blockedBannerAction: "Povolit pro tuto stránku",
         blockedTitle: "Přístup k síti je pro stránky HTML vypnutý",
-        blockedHint:
-          "Chcete-li stránkám HTML povolit načítání externích prostředků, zapněte „{setting}“ v Nastavení → Prohlížeč, nebo to povolte jen pro tuto stránku.",
+        blockedHint: "Chcete-li stránkám HTML povolit načítání externích prostředků, zapněte „{setting}“ v Nastavení → Prohlížeč, nebo to povolte jen pro tuto stránku.",
         blockedSettingsAction: "Otevřít Nastavení",
         blockedDismiss: "Zavřít",
         errorTitle: "Na této stránce došlo k chybě",
         errorTitlePlural: "Na této stránce došlo k chybám (počet: {count})",
-        errorHint:
-          "Opravit pomocí modelu vloží chybu do pole zprávy. Nic se neodešle, dokud to sami neodešlete.",
+        errorHint: "Opravit pomocí modelu vloží chybu do pole zprávy. Nic se neodešle, dokud to sami neodešlete.",
         errorBannerAction: "Opravit pomocí modelu",
         errorConsoleAction: "Otevřít konzoli",
         errorConsoleHideAction: "Skrýt konzoli",
@@ -3624,8 +3168,7 @@ export const cs = {
         consoleClear: "Vymazat konzoli",
         consoleClose: "Zavřít konzoli",
         consoleEmpty: "Konzole zatím nemá žádný výstup.",
-        consoleCapped:
-          "Uchovává se jen tento počet posledních záznamů: {count}; starší výstup byl zahozen.",
+        consoleCapped: "Uchovává se jen tento počet posledních záznamů: {count}; starší výstup byl zahozen.",
       },
       data: "Data",
       exportHistory: "Exportovat historii chatů",
@@ -3633,34 +3176,27 @@ export const cs = {
       exportAction: "Exportovat",
       exportingAction: "Exportování...",
       exportConversations: "Exportovat Nedávné a Projekty",
-      exportConversationsDescription:
-        "Stáhnout Nedávné, nebo Nedávné spolu s chaty projektů, jako Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML nebo PDF, sloučené nebo po jednotlivých chatech. Message JSONL je k dispozici po jednotlivých chatech.",
+      exportConversationsDescription: "Stáhnout Nedávné, nebo Nedávné spolu s chaty projektů, jako Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML nebo PDF, sloučené nebo po jednotlivých chatech. Message JSONL je k dispozici po jednotlivých chatech.",
       exportConversationsAction: "Exportovat",
       exportScopeRecents: "Nedávné",
       exportScopeAll: "Nedávné + Projekty",
       importChats: "Importovat chaty",
-      importChatsDescription:
-        "Importovat soubory JSON, JSONL, NDJSON, CSV nebo Markdown do Nedávných.",
+      importChatsDescription: "Importovat soubory JSON, JSONL, NDJSON, CSV nebo Markdown do Nedávných.",
       importChatsAction: "Importovat",
       importNoConversations: "V souboru nebyly nalezeny žádné konverzace.",
       importedOneChat: "Do Nedávných byla importována 1 konverzace.",
       importedChatCount: "Konverzace importované do Nedávných: {count}.",
       importingChats: "Importování chatů: zatím {count} ({percent} %)...",
-      importedChatCountPartial:
-        "Konverzace importované do Nedávných: {count}; nepodařilo se uložit: {failed}.",
+      importedChatCountPartial: "Konverzace importované do Nedávných: {count}; nepodařilo se uložit: {failed}.",
       importFailed: "Import se nezdařil.",
       importFromSource: "Importovat z {source}",
-      importFromSourceDescription:
-        "Zkopírujte své konverzace ze zdroje {source} do Unsloth, seskupené podle projektu, do kterého patří.",
+      importFromSourceDescription: "Zkopírujte své konverzace ze zdroje {source} do Unsloth, seskupené podle projektu, do kterého patří.",
       importingAction: "Importování...",
-      importedSourceOneChat:
-        "Byla importována 1 konverzace ze zdroje {source}.",
-      importedSourceChatCount:
-        "Importované konverzace ze zdroje {source}: {count}",
+      importedSourceOneChat: "Byla importována 1 konverzace ze zdroje {source}.",
+      importedSourceChatCount: "Importované konverzace ze zdroje {source}: {count}",
       sourceUpdated: "Nové zprávy přidané ze zdroje {source}: {count}",
       sourceUpToDate: "Konverzace ze zdroje {source} jsou již aktuální.",
-      importedSourcePartial:
-        "Některé konverzace ze zdroje {source} se nepodařilo importovat.",
+      importedSourcePartial: "Některé konverzace ze zdroje {source} se nepodařilo importovat.",
       clearHistory: "Vymazat historii chatů",
       clearHistoryDescription: "Smazat historii chatů z tohoto zařízení.",
       clearAction: "Vymazat",
@@ -3668,13 +3204,11 @@ export const cs = {
       clearAllChatsDescription: "Trvale smazat všechny chaty v tomto zařízení.",
       noChatsToClear: "Nejsou žádné chaty k vymazání.",
       clearOneChatDescription: "Trvale smazat jediný chat v tomto zařízení.",
-      clearChatCountDescription:
-        "Trvale smazat všechny chaty v tomto zařízení (počet: {count}).",
+      clearChatCountDescription: "Trvale smazat všechny chaty v tomto zařízení (počet: {count}).",
       clearChatsAction: "Vymazat chaty",
       clearOneChatTitle: "Vymazat 1 chat?",
       clearChatsTitle: "Vymazat chaty ({count})?",
-      clearChatsConfirmDescription:
-        "Trvale smaže všechny chaty v tomto zařízení. Tuto akci nelze vrátit zpět.",
+      clearChatsConfirmDescription: "Trvale smaže všechny chaty v tomto zařízení. Tuto akci nelze vrátit zpět.",
       clearingAction: "Mazání...",
       clearOneChatAction: "Vymazat 1 chat",
       clearChatCountAction: "Vymazat chaty ({count})",
@@ -3682,18 +3216,12 @@ export const cs = {
       clearedOneChat: "Byl vymazán 1 chat",
       clearedChatCount: "Vymazané chaty: {count}",
       someChatsCouldNotBeCleared: "Některé chaty se nepodařilo vymazat",
-      chatsClearedRemainOne:
-        "Vymazané chaty: {clearedCount}; 1 chat zůstává. Zkuste to prosím znovu.",
-      chatsClearedRemain:
-        "Vymazané chaty: {clearedCount}; zbývající chaty: {remainingCount}. Zkuste to prosím znovu.",
-      oneChatClearedRemain:
-        "1 chat byl vymazán; zbývající chaty: {remainingCount}. Zkuste to prosím znovu.",
-      oneChatClearedRemainOne:
-        "1 chat byl vymazán; 1 chat zůstává. Zkuste to prosím znovu.",
-      storageClearFailedOne:
-        "Vymazání úložiště se nezdařilo; 1 chat možná zůstal. Zkuste to prosím znovu.",
-      storageClearFailed:
-        "Vymazání úložiště se nezdařilo; chaty, které možná zůstaly: {count}. Zkuste to prosím znovu.",
+      chatsClearedRemainOne: "Vymazané chaty: {clearedCount}; 1 chat zůstává. Zkuste to prosím znovu.",
+      chatsClearedRemain: "Vymazané chaty: {clearedCount}; zbývající chaty: {remainingCount}. Zkuste to prosím znovu.",
+      oneChatClearedRemain: "1 chat byl vymazán; zbývající chaty: {remainingCount}. Zkuste to prosím znovu.",
+      oneChatClearedRemainOne: "1 chat byl vymazán; 1 chat zůstává. Zkuste to prosím znovu.",
+      storageClearFailedOne: "Vymazání úložiště se nezdařilo; 1 chat možná zůstal. Zkuste to prosím znovu.",
+      storageClearFailed: "Vymazání úložiště se nezdařilo; chaty, které možná zůstaly: {count}. Zkuste to prosím znovu.",
       failedToClearChats: "Chaty se nepodařilo vymazat",
     },
     data: {
@@ -3733,23 +3261,18 @@ export const cs = {
         deleteResults: "Smazat výsledky",
         noChats: "Vašemu hledání neodpovídají žádné chaty.",
         noArchivedChats: "Žádné archivované chaty.",
-        noArchivedMatches:
-          "Vašemu hledání neodpovídají žádné archivované chaty.",
+        noArchivedMatches: "Vašemu hledání neodpovídají žádné archivované chaty.",
         noMedia: "Žádné archivované položky.",
-        noMediaMatches:
-          "Vašemu hledání neodpovídají žádné archivované položky.",
+        noMediaMatches: "Vašemu hledání neodpovídají žádné archivované položky.",
         itemCount: "Položky: {count}",
-        incompleteSearch:
-          "Hledání není úplné. Zkuste znovu načíst zbývající položky.",
-        searchingRemaining:
-          "Prohledávání zbývajících položek (načteno: {count})...",
+        incompleteSearch: "Hledání není úplné. Zkuste znovu načíst zbývající položky.",
+        searchingRemaining: "Prohledávání zbývajících položek (načteno: {count})...",
         noLoadedMatches: "V dosud načtených položkách nejsou žádné shody.",
         deleteItem: "Smazat: {title}",
         unarchiveItem: "Zrušit archivaci: {title}",
         deleteItemsTitle: "Smazat archivované položky ({count})",
         unarchiveItemsTitle: "Zrušit archivaci položek ({count})",
-        deleteFilesWarning:
-          "Tyto soubory budou trvale smazány. Tuto akci nelze vrátit zpět.",
+        deleteFilesWarning: "Tyto soubory budou trvale smazány. Tuto akci nelze vrátit zpět.",
         restoreWarning: "Tyto položky se vrátí do galerie.",
         working: "Probíhá zpracování...",
         loadFailed: "Archivované položky se nepodařilo načíst",
@@ -3774,36 +3297,28 @@ export const cs = {
         movedChatsToRecents: "Chaty přesunuté do Nedávných: {count}",
         moveFailed: "Chaty se nepodařilo přesunout",
         deleteChatsTitle: "Smazat chaty ({count})",
-        deleteChatsWarning:
-          "Chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
+        deleteChatsWarning: "Chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
         deleteArchivedTitle: "Smazat archivované chaty ({count})",
-        deleteArchivedWarning:
-          "Archivované chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
+        deleteArchivedWarning: "Archivované chaty ({count}) a jejich zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
         deleting: "Mazání...",
       },
       title: "Data",
       backToData: "Zpět na Data",
       exportFailed: "Chaty se nepodařilo exportovat",
-      description:
-        "Spravujte historii chatů a nahrané soubory uložené v tomto zařízení.",
+      description: "Spravujte historii chatů a nahrané soubory uložené v tomto zařízení.",
       manageFiles: {
         label: "Spravovat soubory",
-        description:
-          "Vyhledávejte, řaďte a uspořádejte obrázky, videa, zvuk a soubory.",
+        description: "Vyhledávejte, řaďte a uspořádejte obrázky, videa, zvuk a soubory.",
         action: "Otevřít knihovnu",
       },
       archivedChats: "Archivované chaty",
-      archivedChatsDescription:
-        "Zobrazte a spravujte chaty, které jste archivovali.",
+      archivedChatsDescription: "Zobrazte a spravujte chaty, které jste archivovali.",
       archivedImages: "Archivované obrázky",
-      archivedImagesDescription:
-        "Zobrazte a spravujte obrázky, které jste archivovali.",
+      archivedImagesDescription: "Zobrazte a spravujte obrázky, které jste archivovali.",
       archivedVideos: "Archivovaná videa",
-      archivedVideosDescription:
-        "Zobrazte a spravujte videa, která jste archivovali.",
+      archivedVideosDescription: "Zobrazte a spravujte videa, která jste archivovali.",
       archivedAudio: "Archivovaný zvuk",
-      archivedAudioDescription:
-        "Zobrazte a spravujte zvukové klipy, které jste archivovali.",
+      archivedAudioDescription: "Zobrazte a spravujte zvukové klipy, které jste archivovali.",
       manageAction: "Spravovat",
       exportArchivedChats: "Exportovat",
       exportingArchivedChats: "Exportování...",
@@ -3812,52 +3327,43 @@ export const cs = {
       noArchivedChatsToExport: "Nejsou žádné archivované chaty k exportu.",
       failedToExportArchivedChats: "Archivované chaty se nepodařilo exportovat",
       archiveAllChats: "Archivovat všechny chaty",
-      archiveAllChatsDescription:
-        "Přesunout všechny chaty z Nedávných a Projektů do archivu.",
+      archiveAllChatsDescription: "Přesunout všechny chaty z Nedávných a Projektů do archivu.",
       noChatsToArchive: "Nejsou žádné chaty k archivaci.",
       archiveAllAction: "Archivovat vše",
       archivingAction: "Archivování...",
       archiveAllChatsTitle: "Archivovat všechny chaty?",
-      archiveAllChatsConfirmDescription:
-        "Přesune všechny chaty v tomto zařízení do archivu. Archivované chaty zůstanou dostupné a jejich archivaci lze kdykoli zrušit.",
+      archiveAllChatsConfirmDescription: "Přesune všechny chaty v tomto zařízení do archivu. Archivované chaty zůstanou dostupné a jejich archivaci lze kdykoli zrušit.",
       archivedAllChats: "Všechny chaty byly archivovány",
       archivedOneChat: "Byl archivován 1 chat",
       archivedChatCount: "Archivované chaty: {count}",
       failedToArchiveChats: "Chaty se nepodařilo archivovat",
       confirmBeforeDeleting: "Potvrzovat před smazáním",
-      confirmBeforeDeletingDescription:
-        "Před smazáním chatu požádat o potvrzení. Po vypnutí se chaty smažou okamžitě.",
+      confirmBeforeDeletingDescription: "Před smazáním chatu požádat o potvrzení. Po vypnutí se chaty smažou okamžitě.",
       alwaysDeleteFiles: "Vždy smazat soubory",
-      alwaysDeleteFilesDescription:
-        "Smazáním chatu se z disku odstraní i jeho vlastní složka sandboxu. Soubory, které zapsal uvnitř projektu, zůstanou v pracovním prostoru daného projektu.",
+      alwaysDeleteFilesDescription: "Smazáním chatu se z disku odstraní i jeho vlastní složka sandboxu. Soubory, které zapsal uvnitř projektu, zůstanou v pracovním prostoru daného projektu.",
       chatsSection: "Chaty a archivy",
       transferSection: "Import a export",
       deletionSection: "Mazání",
       archives: "Archivy",
       archiveChatsLabel: "Chaty",
       archiveVideosLabel: "Videa",
-      exportFormatsSummary:
-        "Exportujte chaty z Nedávných a projektů v preferovaném formátu.",
+      exportFormatsSummary: "Exportujte chaty z Nedávných a projektů v preferovaném formátu.",
       trainingSummary: "Převeďte své chaty na datovou sadu pro doladění.",
       confirmDeletionSummary: "Ptát se před smazáním jednotlivých chatů.",
       sandboxFiles: "Soubory sandboxu chatu",
       sandboxFilesDescription: "Výchozí akce při mazání chatu.",
       keepSandboxFiles: "Zachovat soubory sandboxu",
       deleteSandboxFiles: "Smazat soubory sandboxu",
-      projectFilesKept:
-        "Sandboxy jsou složky vytvořené pro jednotlivé chaty. Soubory uložené v pracovních prostorech projektů zůstanou zachovány.",
+      projectFilesKept: "Sandboxy jsou složky vytvořené pro jednotlivé chaty. Soubory uložené v pracovních prostorech projektů zůstanou zachovány.",
       deleteAllAction: "Smazat vše",
       deleteChatsOnly: "Smazat pouze chaty…",
       deleteChatsAndSandboxes: "Smazat chaty a sandboxy…",
-      deleteSandboxFilesDescription:
-        "Smazat také složku sandboxu každého chatu a soubory v ní. Soubory v pracovních prostorech projektů zůstanou zachovány.",
+      deleteSandboxFilesDescription: "Smazat také složku sandboxu každého chatu a soubory v ní. Soubory v pracovních prostorech projektů zůstanou zachovány.",
       filesSection: "Soubory",
       uploadedFiles: "Nahrané soubory",
-      uploadedFilesDescription:
-        "Zobrazte a spravujte soubory nahrané do chatů, projektů a znalostních bází.",
+      uploadedFilesDescription: "Zobrazte a spravujte soubory nahrané do chatů, projektů a znalostních bází.",
       fineTuneExport: "Použít chaty jako trénovací data",
-      fineTuneExportDescription:
-        "Vytvořte z chatů datovou sadu JSONL pro doladění. Načtěte ji v části Trénování, upravte v Receptech nebo ji exportujte.",
+      fineTuneExportDescription: "Vytvořte z chatů datovou sadu JSONL pro doladění. Načtěte ji v části Trénování, upravte v Receptech nebo ji exportujte.",
       fineTuneExportAction: "Exportovat JSONL",
       fineTuneRunAction: "Spustit",
       fineTuneExportingAction: "Exportování...",
@@ -3867,8 +3373,7 @@ export const cs = {
       fineTuneTrainingAction: "Načítání...",
       fineTuneExportFailed: "Trénovací data se nepodařilo exportovat",
       fineTuneRecipeFailed: "Chaty se nepodařilo otevřít v Receptech",
-      fineTuneTrainFailed:
-        "Datovou sadu se nepodařilo načíst na kartě Trénování",
+      fineTuneTrainFailed: "Datovou sadu se nepodařilo načíst na kartě Trénování",
     },
     connections: {
       title: "Připojení",
@@ -3876,13 +3381,11 @@ export const cs = {
     },
     remoteLan: {
       title: "Vzdálený přístup a LAN",
-      description:
-        "Přistupujte k tomuto Unsloth z dalších zařízení přes místní síť nebo dočasnou veřejnou adresu URL.",
+      description: "Přistupujte k tomuto Unsloth z dalších zařízení přes místní síť nebo dočasnou veřejnou adresu URL.",
     },
     apiKeys: {
       title: "API",
-      description:
-        "Přistupujte k Unsloth přes API kompatibilní s OpenAI a Anthropic.",
+      description: "Přistupujte k Unsloth přes API kompatibilní s OpenAI a Anthropic.",
       readDocs: "Přečíst dokumentaci API",
       noAccess: "Zatím žádný přístup k API.",
       accessTokens: "Přístupové tokeny",
@@ -3915,8 +3418,7 @@ export const cs = {
       copyAccessToken: "Kopírovat přístupový token",
       copyNow: "Zkopírujte si ho hned – znovu už se nezobrazí.",
       usageExamples: "API pro chat",
-      usageNoModel:
-        "Načtěte nebo stáhněte model, aby se zobrazily spustitelné příklady. Tento server zatím nemá žádný model, který by šlo uvést.",
+      usageNoModel: "Načtěte nebo stáhněte model, aby se zobrazily spustitelné příklady. Tento server zatím nemá žádný model, který by šlo uvést.",
       usageTools: "Nástroje",
       exampleLanguage: "Jazyk",
       exampleRequest: "Požadavek",
@@ -3928,18 +3430,15 @@ export const cs = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "Zabezpečené HTTPS",
-      secureHttpsHint:
-        "Port na adrese 0.0.0.0 je stále dosažitelný odkudkoli. Pro úplné zabezpečení spusťte Unsloth s parametrem --secure, aby byl zpřístupněn pouze tento odkaz HTTPS.",
+      secureHttpsHint: "Port na adrese 0.0.0.0 je stále dosažitelný odkudkoli. Pro úplné zabezpečení spusťte Unsloth s parametrem --secure, aby byl zpřístupněn pouze tento odkaz HTTPS.",
       copyTunnelUrl: "Kopírovat URL tunelu",
       copySnippet: "Kopírovat ukázku",
       copy: "Kopírovat",
       copied: "Zkopírováno",
       codingAgents: "Agenti pro programování",
-      codingAgentsHint:
-        "Spusťte agenta pro programování proti tomuto serveru. Použije načtený model; místní server vytvoří klíč API automaticky, vzdálený ho zahrne do příkazu.",
+      codingAgentsHint: "Spusťte agenta pro programování proti tomuto serveru. Použije načtený model; místní server vytvoří klíč API automaticky, vzdálený ho zahrne do příkazu.",
       openAgentsTab: "Otevřít v Agentech",
-      codingAgentsSwap:
-        "Místo claude můžete použít codex, openclaw, opencode nebo hermes.",
+      codingAgentsSwap: "Místo claude můžete použít codex, openclaw, opencode nebo hermes.",
       relativeNever: "nikdy",
       relativeJustNow: "právě teď",
       expired: "platnost vypršela",
@@ -3951,20 +3450,17 @@ export const cs = {
       revokeToken: "Odvolat token",
       regenerateToken: "Znovu vygenerovat token",
       regenerateTitle: "Znovu vygenerovat přístupový token „{name}“?",
-      regenerateDescription:
-        "Tento token nahradí nový token se stejným názvem a dobou platnosti. Aplikace používající aktuální token okamžitě ztratí přístup.",
+      regenerateDescription: "Tento token nahradí nový token se stejným názvem a dobou platnosti. Aplikace používající aktuální token okamžitě ztratí přístup.",
       regenerateAction: "Znovu vygenerovat",
       regenerating: "Generování...",
       regenerateError: "Přístupový token se nepodařilo znovu vygenerovat.",
       revokeTitle: "Odvolat přístupový token „{name}“?",
-      revokeDescription:
-        "Aplikace používající tento token okamžitě ztratí přístup. Tuto akci nelze vrátit zpět.",
+      revokeDescription: "Aplikace používající tento token okamžitě ztratí přístup. Tuto akci nelze vrátit zpět.",
       revokeAction: "Odvolat „{name}“",
       revoking: "Odvolávání...",
       audioApi: {
         title: "API pro zvuk",
-        description:
-          "Řeč, klonování hlasu, přepis a pracovní postupy stránky Zvuk.",
+        description: "Řeč, klonování hlasu, přepis a pracovní postupy stránky Zvuk.",
         speak: "Řeč",
         clone: "Klonování",
         transcribe: "Přepis",
@@ -3973,45 +3469,33 @@ export const cs = {
         convert: "Převod",
         music: "Hudba",
         edit: "Úpravy",
-        placeholderModel:
-          "Tento příklad zatím nedokáže spustit žádný stažený model, proto je zobrazen zástupný model. Nejprve nějaký stáhněte na stránce Zvuk.",
-        autoSwitchOff:
-          "Model se podle názvu načte pouze tehdy, když je zapnuté automatické přepínání modelů. Zapněte ho, nebo model nejprve načtěte na jeho stránce Zvuk.",
+        placeholderModel: "Tento příklad zatím nedokáže spustit žádný stažený model, proto je zobrazen zástupný model. Nejprve nějaký stáhněte na stránce Zvuk.",
+        autoSwitchOff: "Model se podle názvu načte pouze tehdy, když je zapnuté automatické přepínání modelů. Zapněte ho, nebo model nejprve načtěte na jeho stránce Zvuk.",
         useViaApi: "Použít přes API",
       },
       mediaApi: {
         title: "API pro obrázky a video",
-        description:
-          "Generujte obrázky a videa z vlastního kódu pomocí koncových bodů kompatibilních s OpenAI.",
+        description: "Generujte obrázky a videa z vlastního kódu pomocí koncových bodů kompatibilních s OpenAI.",
         images: "Obrázky",
         video: "Video",
-        placeholderModel:
-          "Zobrazený model je pouze příklad. Načtěte model na stránce Obrázky nebo Video a otevřete toto okno tlačítkem API na dané stránce, aby se model doplnil.",
-        autoSwitchOff:
-          "Automatické přepínání médií je vypnuté, takže požadavky běží na modelu načteném na stránce bez ohledu na to, jaký model uvádějí.",
+        placeholderModel: "Zobrazený model je pouze příklad. Načtěte model na stránce Obrázky nebo Video a otevřete toto okno tlačítkem API na dané stránce, aby se model doplnil.",
+        autoSwitchOff: "Automatické přepínání médií je vypnuté, takže požadavky běží na modelu načteném na stránce bez ohledu na to, jaký model uvádějí.",
       },
       trainingApi: {
         title: "API pro trénování",
-        description:
-          "Dolaďujte modely z vlastního kódu pomocí koncových bodů pro doladění kompatibilních s OpenAI: nahrajte soubor JSONL, vytvořte úlohu, sledujte její události a pak chatujte s natrénovaným modelem.",
-        placeholder:
-          "Zobrazený model a nastavení jsou pouze příklad. Otevřete toto okno tlačítkem API na stránce Trénování, aby se doplnilo vaše aktuální nastavení.",
-        hubDataset:
-          "Vaše stránka Trénování používá datovou sadu z Hugging Face nebo S3. API trénuje na nahraných souborech, proto datovou sadu uložte jako JSONL a nahrajte ji.",
-        batching:
-          "Kompatibilní úlohy čekající ve frontě se trénují společně automaticky.",
-        chatNote:
-          "Chatování s natrénovaným modelem podle názvu vyžaduje zapnuté automatické přepínání modelů, jinak model nejprve načtěte na stránce Chat.",
+        description: "Dolaďujte modely z vlastního kódu pomocí koncových bodů pro doladění kompatibilních s OpenAI: nahrajte soubor JSONL, vytvořte úlohu, sledujte její události a pak chatujte s natrénovaným modelem.",
+        placeholder: "Zobrazený model a nastavení jsou pouze příklad. Otevřete toto okno tlačítkem API na stránce Trénování, aby se doplnilo vaše aktuální nastavení.",
+        hubDataset: "Vaše stránka Trénování používá datovou sadu z Hugging Face nebo S3. API trénuje na nahraných souborech, proto datovou sadu uložte jako JSONL a nahrajte ji.",
+        batching: "Kompatibilní úlohy čekající ve frontě se trénují společně automaticky.",
+        chatNote: "Chatování s natrénovaným modelem podle názvu vyžaduje zapnuté automatické přepínání modelů, jinak model nejprve načtěte na stránce Chat.",
         cancelTitle: "Zrušit úlohu",
-        cancelDescription:
-          "Zastaví úlohu ve frontě nebo spuštěnou úlohu. Není součástí výše uvedeného příkladu.",
+        cancelDescription: "Zastaví úlohu ve frontě nebo spuštěnou úlohu. Není součástí výše uvedeného příkladu.",
       },
       decisionApi: {
         title: "Decision API",
         docs: "Dokumentace",
         docsLabel: "Otevřít dokumentaci Decision API",
-        description:
-          "Odpovídejte na otázky typu ano/ne, s výběrem z možností a s hodnocením týkající se textu pomocí modelu v tomto počítači nebo rozhodovacího modelu z Připojení. Funguje se sadou TypeSafe SDK.",
+        description: "Odpovídejte na otázky typu ano/ne, s výběrem z možností a s hodnocením týkající se textu pomocí modelu v tomto počítači nebo rozhodovacího modelu z Připojení. Funguje se sadou TypeSafe SDK.",
         codeTitle: "Volání z kódu",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "Ostatní klienti MCP se sem připojují se stejným tokenem.",
@@ -4028,16 +3512,13 @@ export const cs = {
         modelClef: "Clef",
         recommended: "Doporučeno",
         device: "Spustit na",
-        deviceDescription:
-          "GPU odpovídá rychleji a po uvolnění modelu svou paměť uvolní.",
+        deviceDescription: "GPU odpovídá rychleji a po uvolnění modelu svou paměť uvolní.",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
         backend: "Běhové prostředí",
         backendAuto: "Automaticky",
-        backendDescription:
-          "Režim Automaticky obsluhuje Clef přes llama.cpp, pokud má model sestavení GGUF, jinak použije PyTorch. llama.cpp umí číst i obrázky.",
-        backendDescriptionMlx:
-          "Režim Automaticky obsluhuje Clef přes MLX na Apple Silicon a přes llama.cpp, pokud je načteno nebo staženo pouze sestavení GGUF daného modelu. MLX čte obrázky pouze u modelů Clef. llama.cpp umí číst i obrázky.",
+        backendDescription: "Režim Automaticky obsluhuje Clef přes llama.cpp, pokud má model sestavení GGUF, jinak použije PyTorch. llama.cpp umí číst i obrázky.",
+        backendDescriptionMlx: "Režim Automaticky obsluhuje Clef přes MLX na Apple Silicon a přes llama.cpp, pokud je načteno nebo staženo pouze sestavení GGUF daného modelu. MLX čte obrázky pouze u modelů Clef. llama.cpp umí číst i obrázky.",
         backendStatus: "Běhové prostředí: {backend}",
         backendNone: "nedostupné",
         mediaImages: "Čte text a obrázky.",
@@ -4053,37 +3534,30 @@ export const cs = {
         download: "Stáhnout",
         downloadConfirmTitle: "Stáhnout Laya {model}?",
         downloadConfirmTitleModel: "Stáhnout {model}?",
-        downloadConfirmBody:
-          "Decision API potřebuje tento model k odpovídání na požadavky. Přibližně {size}, stáhne se jednou do vaší mezipaměti Hugging Face.",
+        downloadConfirmBody: "Decision API potřebuje tento model k odpovídání na požadavky. Přibližně {size}, stáhne se jednou do vaší mezipaměti Hugging Face.",
         unload: "Uvolnit",
         downloadBusy: "Model pro Decision API se již stahuje.",
         downloadFailed: "Stahování se nepodařilo spustit.",
         saveFailed: "Nastavení Decision API se nepodařilo uložit.",
         loadError: "Nastavení Decision API se nepodařilo načíst.",
         sendsTo: "Požadavky se odesílají poskytovateli {provider}.",
-        connectionMissing:
-          "Toto připojení již neexistuje nebo nemá žádné rozhodovací modely. Vyberte jiný model.",
-        addConnection:
-          "Chcete-li použít rozhodovací model hostovaný v cloudu, přidejte ho v části ",
+        connectionMissing: "Toto připojení již neexistuje nebo nemá žádné rozhodovací modely. Vyberte jiný model.",
+        addConnection: "Chcete-li použít rozhodovací model hostovaný v cloudu, přidejte ho v části ",
         connectionsLink: "Připojení",
         addConnectionSuffix: ".",
       },
       mcp: {
         title: "Přístup agentů (MCP)",
-        description:
-          "Umožněte agentům pro programování, jako jsou Claude Code a Codex, používat Unsloth přes MCP.",
+        description: "Umožněte agentům pro programování, jako jsou Claude Code a Codex, používat Unsloth přes MCP.",
         enable: "Povolit připojení agentů",
-        enableDescription:
-          "Obsluhuje /mcp/ pro požadavky, které obsahují klíč API Unsloth.",
+        enableDescription: "Obsluhuje /mcp/ pro požadavky, které obsahují klíč API Unsloth.",
         lockedByEnv: "Nastaveno proměnnou {name}.",
         loadError: "Nastavení přístupu agentů se nepodařilo načíst.",
         saveError: "Nastavení přístupu agentů se nepodařilo uložit.",
         agent: "Agent",
-        exportKeyHint:
-          "Před spuštěním agenta nastavte {name} na klíč API Unsloth.",
+        exportKeyHint: "Před spuštěním agenta nastavte {name} na klíč API Unsloth.",
         configFileHint: "Přidejte toto do souboru {path}.",
-        keywords:
-          "mcp model context protocol agents agenti claude codex tools nástroje",
+        keywords: "mcp model context protocol agents agenti claude codex tools nástroje",
       },
     },
     mcp: {
@@ -4098,8 +3572,7 @@ export const cs = {
         allTools: "Všechny nástroje",
         selectAll: "Vybrat vše",
         selectNone: "Nevybrat nic",
-        description:
-          "Každý zapnutý nástroj přidává k tomu, co agenti čtou před začátkem, takže vypněte ty, které nepotřebujete. Agenti vypnutý nástroj nikdy nevidí a jeho volání jsou odmítnuta. Už připojení agenti uvidí změnu po opětovném připojení.",
+        description: "Každý zapnutý nástroj přidává k tomu, co agenti čtou před začátkem, takže vypněte ty, které nepotřebujete. Agenti vypnutý nástroj nikdy nevidí a jeho volání jsou odmítnuta. Už připojení agenti uvidí změnu po opětovném připojení.",
         saveError: "Nastavení nástrojů Unsloth MCP se nepodařilo uložit.",
         chatNote: "Chat nikdy nedostane {tools}.",
         groups: {
@@ -4171,8 +3644,7 @@ export const cs = {
     },
     about: {
       title: "O aplikaci",
-      description:
-        "Dokumentace, poznámky k verzi, zpětná vazba a informace o sestavení.",
+      description: "Dokumentace, poznámky k verzi, zpětná vazba a informace o sestavení.",
       studioVersion: "Verze Unsloth",
       packageVersion: "Verze balíčku",
       desktopAppVersion: "Verze desktopové aplikace",
@@ -4185,16 +3657,14 @@ export const cs = {
       whisperCppVersion: "Verze whisper.cpp",
       engines: {
         title: "Moduly",
-        description:
-          "Běhová prostředí, která Unsloth používá ke spouštění modelů. Aktualizace se instalují na pozadí, bez restartu.",
+        description: "Běhová prostředí, která Unsloth používá ke spouštění modelů. Aktualizace se instalují na pozadí, bez restartu.",
         updatesLabel: "Aktualizace modulů",
         notInstalled: "Nenainstalováno",
         available: "K dispozici: {version}",
         upToDate: "Aktuální",
         updatesAvailable: "K dispozici jsou aktualizace",
         checking: "Hledání aktualizací…",
-        checkFailed:
-          "Aktualizace se nepodařilo zkontrolovat. Zkuste to později.",
+        checkFailed: "Aktualizace se nepodařilo zkontrolovat. Zkuste to později.",
         unsupported: "Moduly této instalace jsou spravovány mimo Unsloth.",
         checkForUpdates: "Zkontrolovat aktualizace",
         update: "Aktualizovat",
@@ -4240,45 +3710,33 @@ export const cs = {
         localUpdateHeading: "Místní aktualizace",
         installCommandUnix: "Instalační příkaz pro macOS/Linux",
         installCommandWindows: "Instalační příkaz pro Windows",
-        localInstallDetected:
-          "Byla zjištěna místní instalace. Aktualizujte z původního klonu repozitáře, abyste ji nenahradili verzí z PyPI.",
-        pullThenUpdate:
-          "Stáhněte nejnovější změny a pak spusťte místní instalátor:",
+        localInstallDetected: "Byla zjištěna místní instalace. Aktualizujte z původního klonu repozitáře, abyste ji nenahradili verzí z PyPI.",
+        pullThenUpdate: "Stáhněte nejnovější změny a pak spusťte místní instalátor:",
         gitPullCommand: "příkaz git pull",
         localInstallerCommand: "příkaz místního instalátoru",
-        sourceInstallDetected:
-          "Byla zjištěna instalace ze zdrojového kódu nebo balíčku VCS. Přeinstalujte z původní místní cesty nebo adresy URL Git.",
-        repoCheckoutFallback:
-          "Pokud stále máte klon repozitáře, spusťte z něj místní instalátor:",
+        sourceInstallDetected: "Byla zjištěna instalace ze zdrojového kódu nebo balíčku VCS. Přeinstalujte z původní místní cesty nebo adresy URL Git.",
+        repoCheckoutFallback: "Pokud stále máte klon repozitáře, spusťte z něj místní instalátor:",
         restartAfterUpdate: "Po aktualizaci Unsloth restartujte.",
         desktopReady: "Aktualizace desktopové aplikace",
-        desktopReadyDescription:
-          "Zkontrolujte, zda je k dispozici novější verze desktopové aplikace.",
+        desktopReadyDescription: "Zkontrolujte, zda je k dispozici novější verze desktopové aplikace.",
         desktopChecking: "Hledání aktualizací",
         desktopCheckingDescription: "Obvykle to trvá několik sekund.",
         desktopAvailable: "Je k dispozici desktopová aplikace {version}",
-        desktopAvailableDescription:
-          "Aktualizujte nyní; po dokončení se desktopová aplikace restartuje.",
-        desktopExternalServer:
-          "Připojeno k serveru Unsloth na portu {port}, který tato aplikace nespustila, například `unsloth studio` v terminálu. Zastavte ho tam, kde byl spuštěn, potom aplikaci ukončete a znovu otevřete, aby se aktualizovala.",
-        desktopManualInstall:
-          "Otevřete stránku vydání a nainstalujte nejnovější balíček pro Linux.",
+        desktopAvailableDescription: "Aktualizujte nyní; po dokončení se desktopová aplikace restartuje.",
+        desktopExternalServer: "Připojeno k serveru Unsloth na portu {port}, který tato aplikace nespustila, například `unsloth studio` v terminálu. Zastavte ho tam, kde byl spuštěn, potom aplikaci ukončete a znovu otevřete, aby se aktualizovala.",
+        desktopManualInstall: "Otevřete stránku vydání a nainstalujte nejnovější balíček pro Linux.",
         desktopCheckFailed: "Aktualizace se nepodařilo zkontrolovat",
-        desktopCheckFailedDescription:
-          "Zkontrolujte připojení a zkuste to znovu.",
+        desktopCheckFailedDescription: "Zkontrolujte připojení a zkuste to znovu.",
         desktopCurrent: "Desktopová aplikace je aktuální",
-        desktopCurrentDescription:
-          "Unsloth bude aktualizace dál kontrolovat automaticky.",
+        desktopCurrentDescription: "Unsloth bude aktualizace dál kontrolovat automaticky.",
         checkForUpdates: "Zkontrolovat aktualizace",
         checkAgain: "Zkontrolovat znovu",
         retryCheck: "Zkusit znovu",
         checking: "Kontrola...",
         updateNow: "Aktualizovat nyní",
         openReleasePage: "Otevřít stránku vydání",
-        unknownInstall:
-          "Nepodařilo se zjistit, jak byl Unsloth nainstalován. U instalací instalátorem nebo z PyPI použijte výše uvedené příkazy.",
-        localCheckout:
-          "U instalací z místního klonu repozitáře spusťte místní instalátor z tohoto klonu:",
+        unknownInstall: "Nepodařilo se zjistit, jak byl Unsloth nainstalován. U instalací instalátorem nebo z PyPI použijte výše uvedené příkazy.",
+        localCheckout: "U instalací z místního klonu repozitáře spusťte místní instalátor z tohoto klonu:",
         docs: "Dokumentace k instalaci:",
         docsInstall: "Instalace",
         docsUpdating: "Aktualizace",
@@ -4292,8 +3750,7 @@ export const cs = {
   },
   studio: {
     routeTitle: "Trénování",
-    cpuTrainingNotice:
-      "Nebyla nalezena žádná GPU, takže trénování běží na CPU. Je mnohem pomalejší než trénování na GPU a podporuje pouze textové modely (LoRA nebo úplné doladění).",
+    cpuTrainingNotice: "Nebyla nalezena žádná GPU, takže trénování běží na CPU. Je mnohem pomalejší než trénování na GPU a podporuje pouze textové modely (LoRA nebo úplné doladění).",
     wizard: {
       modelTitle: "Model",
       modelDescription: "Vyberte model a metodu trénování",
@@ -4306,20 +3763,16 @@ export const cs = {
       modelLabel: "Model",
       modelTooltip: "Základní model, který chcete doladit.",
       methodLabel: "Metoda",
-      methodTooltip:
-        "Způsob trénování modelu. LoRA a QLoRA aktualizují malé adaptéry místo všech vah.",
+      methodTooltip: "Způsob trénování modelu. LoRA a QLoRA aktualizují malé adaptéry místo všech vah.",
       trainAsLabel: "Trénovat jako",
-      trainAsTooltip:
-        "Jazykový model píše text. Rozhodovací model vybere jednu z možností, které mu zadáte, i s pravděpodobností, a běží v Decision API.",
+      trainAsTooltip: "Jazykový model píše text. Rozhodovací model vybere jednu z možností, které mu zadáte, i s pravděpodobností, a běží v Decision API.",
       trainAsLanguage: "Jazykový model",
       trainAsDecision: "Rozhodovací model",
       checkpointLabel: "Kontrolní bod",
-      checkpointTooltip:
-        "Kontrolní bod Laya, který chcete doladit. Vícejazyčný vyhovuje většině datových sad.",
+      checkpointTooltip: "Kontrolní bod Laya, který chcete doladit. Vícejazyčný vyhovuje většině datových sad.",
       datasetLabel: "Datová sada",
       datasetTooltip: "Trénovací data použitá k doladění modelu.",
-      hfTokenDescription:
-        "Vyžadováno pro chráněné nebo soukromé modely a datové sady.",
+      hfTokenDescription: "Vyžadováno pro chráněné nebo soukromé modely a datové sady.",
       uploadLocalLabel: "Nahrát místní soubor",
       sourceBrowse: "Procházet",
       releaseToUpload: "Uvolněním nahrajete",
@@ -4327,11 +3780,9 @@ export const cs = {
       saveYaml: "Uložit YAML",
       resetDefaults: "Obnovit výchozí",
       cachedModelGoneTitle: "Model v mezipaměti již není k dispozici",
-      cachedModelGoneDescription:
-        "Soubory modelu již v tomto zařízení nejsou, takže je trénování znovu stáhne.",
+      cachedModelGoneDescription: "Soubory modelu již v tomto zařízení nejsou, takže je trénování znovu stáhne.",
       cachedDatasetGoneTitle: "Datová sada v mezipaměti již není k dispozici",
-      cachedDatasetGoneDescription:
-        "Soubory datové sady již v tomto zařízení nejsou, takže je trénování znovu stáhne.",
+      cachedDatasetGoneDescription: "Soubory datové sady již v tomto zařízení nejsou, takže je trénování znovu stáhne.",
     },
     preview: {
       title: "Náhled běhu",
@@ -4367,23 +3818,17 @@ export const cs = {
       dataset: "Datová sada",
       downloadsOnStart: "Stáhne se při spuštění",
       continuesOnStart: "Pokračuje při spuštění",
-      noticeModelDownload:
-        "Tento model zatím v tomto zařízení není. Trénování ho stáhne automaticky.",
-      noticeModelPartial:
-        "Trénování před načtením modelu dokončí jeho částečné stažení.",
-      noticeDatasetDownload:
-        "Tato datová sada zatím v tomto zařízení není. Trénování ji stáhne automaticky.",
-      noticeDatasetPartial:
-        "Trénování před čtením datové sady dokončí její částečné stažení.",
-      noticeTransformersUpgrade:
-        "Žádná nainstalovaná verze transformers tuto architekturu zatím nepodporuje. Při spuštění běhu se nejprve nabídne instalace transformers {version}.",
-      noticeSixteenBitOnly:
-        "Tato architektura se trénuje v 16bitové LoRA: 4bitová varianta pro ni není k dispozici, takže běh potřebuje mnohem více VRAM než QLoRA.",
-      noticeInstallSwitchesSixteenBit:
-        "Instalace této verze místo zachování vlastního kódu modelu přepne tento běh na 16bitovou LoRA, která potřebuje mnohem více VRAM než QLoRA.",
+      noticeModelDownload: "Tento model zatím v tomto zařízení není. Trénování ho stáhne automaticky.",
+      noticeModelPartial: "Trénování před načtením modelu dokončí jeho částečné stažení.",
+      noticeDatasetDownload: "Tato datová sada zatím v tomto zařízení není. Trénování ji stáhne automaticky.",
+      noticeDatasetPartial: "Trénování před čtením datové sady dokončí její částečné stažení.",
+      noticeTransformersUpgrade: "Žádná nainstalovaná verze transformers tuto architekturu zatím nepodporuje. Při spuštění běhu se nejprve nabídne instalace transformers {version}.",
+      noticeSixteenBitOnly: "Tato architektura se trénuje v 16bitové LoRA: 4bitová varianta pro ni není k dispozici, takže běh potřebuje mnohem více VRAM než QLoRA.",
+      noticeInstallSwitchesSixteenBit: "Instalace této verze místo zachování vlastního kódu modelu přepne tento běh na 16bitovou LoRA, která potřebuje mnohem více VRAM než QLoRA.",
       advancedSettings: "Pokročilá nastavení",
       defaultAdvancedSettings: "Výchozí",
       nonDefaultAdvancedSettings: "Nevýchozí: {count}",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "datové sady",
@@ -4394,20 +3839,16 @@ export const cs = {
       hfCacheLabel: "Mezipaměť HF",
       scanningLocal: "Prohledávání datových sad v tomto zařízení…",
       couldntScan: "Místní datové sady se nepodařilo prohledat",
-      someLocationsUnscanned:
-        "Některá umístění datových sad se nepodařilo prohledat.",
-      noLocalDatasets:
-        "V tomto zařízení zatím nic není. Stáhněte datovou sadu z Hubu, vytvořte ji v Receptech nebo nahrajte soubor.",
+      someLocationsUnscanned: "Některá umístění datových sad se nepodařilo prohledat.",
+      noLocalDatasets: "V tomto zařízení zatím nic není. Stáhněte datovou sadu z Hubu, vytvořte ji v Receptech nebo nahrajte soubor.",
       openDataRecipes: "Otevřít Data Recipes",
       searchingHub: "Hledání na Hugging Face…",
       noDatasetsFound: "Nebyly nalezeny žádné datové sady.",
       tokenRejectedTitle: "Token Hugging Face byl odmítnut",
-      tokenRejectedBody:
-        "Aktualizujte token v části Nastavení → Obecné a zkuste to znovu.",
+      tokenRejectedBody: "Aktualizujte token v části Nastavení → Obecné a zkuste to znovu.",
       hubUnreachable: "Nepodařilo se spojit s Hugging Face",
       cantUseDataset: "Datovou sadu nelze použít",
-      reasonInvalidHubId:
-        "Zadejte platné ID datové sady Hugging Face: repo nebo owner/repo, bez po sobě jdoucích teček či spojovníků a bez přípony .git (nejvýše 96 znaků na část).",
+      reasonInvalidHubId: "Zadejte platné ID datové sady Hugging Face: repo nebo owner/repo, bez po sobě jdoucích teček či spojovníků a bez přípony .git (nejvýše 96 znaků na část).",
       sourceRecipe: "Recept",
       sourceUpload: "Nahráno",
       sourceLocal: "Místní",
@@ -4416,38 +3857,29 @@ export const cs = {
       noun: "modely",
       selectModel: "Vybrat model",
       hubPlaceholder: "Hledejte nebo vložte ID z Hugging Face...",
-      devicePlaceholder:
-        "Hledejte místní modely nebo vložte cestu ke složce...",
+      devicePlaceholder: "Hledejte místní modely nebo vložte cestu ke složce...",
       useAsHubModel: "Použít jako model z Hugging Face",
       useAsLocalPath: "Použít jako místní cestu",
       hfCacheLabel: "Mezipaměť HF",
       scanningLocal: "Prohledávání místních modelů…",
       couldntScan: "Místní modely se nepodařilo prohledat",
-      someLocationsUnscanned:
-        "Některá místní umístění se nepodařilo prohledat.",
+      someLocationsUnscanned: "Některá místní umístění se nepodařilo prohledat.",
       noLocalModels: "Nebyly nalezeny žádné místní modely.",
-      noLocalModelsHint:
-        "Vložte výše cestu ke složce nebo přepněte na Hugging Face.",
+      noLocalModelsHint: "Vložte výše cestu ke složce nebo přepněte na Hugging Face.",
       searchingHub: "Hledání na Hugging Face…",
       noModelsFound: "Nebyly nalezeny žádné modely.",
       tokenRejectedTitle: "Token Hugging Face byl odmítnut",
-      tokenRejectedBody:
-        "Aktualizujte token v části Nastavení → Obecné a zkuste to znovu.",
-      tokenRejectedAnonymousBody:
-        "Veřejné modely se zobrazují i bez něj. Chcete-li získat přístup k soukromým a chráněným modelům, aktualizujte token v části Nastavení → Obecné.",
+      tokenRejectedBody: "Aktualizujte token v části Nastavení → Obecné a zkuste to znovu.",
+      tokenRejectedAnonymousBody: "Veřejné modely se zobrazují i bez něj. Chcete-li získat přístup k soukromým a chráněným modelům, aktualizujte token v části Nastavení → Obecné.",
       hubUnreachable: "Nepodařilo se spojit s Hugging Face",
       cantUseModel: "Model nelze použít k trénování",
-      reasonTypeMismatch:
-        "Tento model neodpovídá typu trénování vybranému v předchozím kroku.",
+      reasonTypeMismatch: "Tento model neodpovídá typu trénování vybranému v předchozím kroku.",
       reasonEmptyId: "Zadejte ID modelu nebo místní cestu k modelu.",
       reasonGguf: "Modely GGUF nelze použít k trénování.",
-      reasonAdapter:
-        "Výstupy adaptérů nelze použít jako základní modely pro trénování.",
+      reasonAdapter: "Výstupy adaptérů nelze použít jako základní modely pro trénování.",
       reasonNotTrainable: "Tento model v zařízení nelze trénovat.",
-      reasonUnsupportedFormat:
-        "Tento formát modelu není pro trénování podporován.",
-      reasonInvalidHubId:
-        "Zadejte platné ID modelu Hugging Face: repo nebo owner/repo, bez po sobě jdoucích teček či spojovníků a bez přípony .git (nejvýše 96 znaků na část).",
+      reasonUnsupportedFormat: "Tento formát modelu není pro trénování podporován.",
+      reasonInvalidHubId: "Zadejte platné ID modelu Hugging Face: repo nebo owner/repo, bez po sobě jdoucích teček či spojovníků a bez přípony .git (nejvýše 96 znaků na část).",
       sourceModelsFolder: "Složka modelů",
       sourceHfCache: "Mezipaměť HF",
       sourceLmStudio: "LM Studio",
@@ -4482,17 +3914,29 @@ export const cs = {
         hint: "Pokračující předtrénování pro nové domény nebo jazyky.",
         note: "pokračující",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Nastavte a spusťte trénování",
       trainingInProgress: "Probíhá trénování",
       viewPastRuns: "Zobrazit předchozí běhy trénování",
       viewingPastRun: "Zobrazení předchozího běhu",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Nastavení",
       currentRun: "Aktuální běh",
       history: "Historie",
+      compare: "Compare",
     },
     goToLibrary: "Přejít do knihovny",
     imageTraining: "Trénování obrázků",
@@ -4503,20 +3947,17 @@ export const cs = {
     dataset: {
       selectors: {
         subset: "Podmnožina",
-        subsetTooltip:
-          "Vyberte, kterou podmnožinu (konfiguraci) datové sady použít.",
+        subsetTooltip: "Vyberte, kterou podmnožinu (konfiguraci) datové sady použít.",
         trainSplit: "Trénovací rozdělení",
         trainSplitTooltip: "Vyberte, které rozdělení použít k trénování.",
         evaluationSplit: "Vyhodnocovací rozdělení",
-        evaluationSplitTooltip:
-          "Vyberte, které rozdělení použít k vyhodnocení. Žádné znamená bez vyhodnocení během trénování.",
+        evaluationSplitTooltip: "Vyberte, které rozdělení použít k vyhodnocení. Žádné znamená bez vyhodnocení během trénování.",
         selectSubset: "Vyberte podmnožinu...",
         selectSplit: "Vyberte rozdělení...",
         none: "Žádné",
         loading: "Načítání konfigurací a rozdělení datové sady...",
         manualTitle: "Zadat možnosti datové sady ručně",
-        manualDescription:
-          "Zadejte přesné názvy konfigurace a rozdělení z Hugging Face, které se mají použít.",
+        manualDescription: "Zadejte přesné názvy konfigurace a rozdělení z Hugging Face, které se mají použít.",
         manualSubsetPlaceholder: "Volitelný název konfigurace",
         manualRequired: "Trénovací rozdělení je povinné.",
         manualTooLong: "Použijte nejvýše 128 znaků.",
@@ -4536,87 +3977,65 @@ export const cs = {
       uploading: "Nahrávání...",
       uploadEvalFile: "Nahrát vyhodnocovací soubor",
       fileTooLarge: "Soubor je příliš velký",
-      fileTooLargeDescription:
-        "Soubor {file} má velikost {size}. Nahrávání pro trénování podporuje nejvýše {limit}.",
+      fileTooLargeDescription: "Soubor {file} má velikost {size}. Nahrávání pro trénování podporuje nejvýše {limit}.",
       documentRedirect: {
         title: "Tento soubor je nejprve potřeba převést",
         genericFile: "Tento soubor",
-        description:
-          "{file}: jde o zdrojový materiál, ne o datovou sadu připravenou k trénování. Pomocí Data Recipes převeďte dokument na datovou sadu a pak se sem vraťte a model dolaďte.",
+        description: "{file}: jde o zdrojový materiál, ne o datovou sadu připravenou k trénování. Pomocí Data Recipes převeďte dokument na datovou sadu a pak se sem vraťte a model dolaďte.",
         nextStepTitle: "Doporučený další krok",
-        nextStepDescription:
-          "Otevřete Learning Recipes a začněte receptem založeným na dokumentu, například PDF grounded QA.",
+        nextStepDescription: "Otevřete Learning Recipes a začněte receptem založeným na dokumentu, například PDF grounded QA.",
         openAction: "Otevřít Learning Recipes",
       },
-      evalDatasetDescription:
-        "Volitelné. Pokud není zadána, oddělí se malá část z trénovacích dat.",
+      evalDatasetDescription: "Volitelné. Pokud není zadána, oddělí se malá část z trénovacích dat.",
       advanced: "Pokročilé",
       targetFormat: "Cílový formát",
-      targetFormatTooltip:
-        "Formát vašich trénovacích dat. Automatické rozpoznání funguje u většiny datových sad.",
+      targetFormatTooltip: "Formát vašich trénovacích dat. Automatické rozpoznání funguje u většiny datových sad.",
       streamingInfoAriaLabel: "Informace o streamování datové sady",
       streaming: {
         label: "Zapnout streamování",
-        description:
-          "Streamovat textové datové sady z Hugging Face místo jejich stahování.",
+        description: "Streamovat textové datové sady z Hugging Face místo jejich stahování.",
         unavailable: "Streamování není k dispozici. Chcete-li ho zapnout:",
-        completionsUnavailable:
-          "Není k dispozici, když je zapnuté streamování datové sady.",
+        completionsUnavailable: "Není k dispozici, když je zapnuté streamování datové sady.",
         blockers: {
-          source:
-            "Použijte datovou sadu z Hugging Face (ne místní nahraný soubor ani zdroj S3).",
-          maxSteps:
-            "Nastavte Maximum kroků > 0 – streamované datové sady nemají známou délku.",
+          source: "Použijte datovou sadu z Hugging Face (ne místní nahraný soubor ani zdroj S3).",
+          maxSteps: "Nastavte Maximum kroků > 0 – streamované datové sady nemají známou délku.",
           trainOnCompletions: "Vypněte „Pouze odpovědi asistenta“.",
-          evalSplit:
-            "Vyberte samostatné vyhodnocovací rozdělení – vyhodnocení je zapnuté, ale není nastaveno samostatné vyhodnocovací rozdělení.",
+          evalSplit: "Vyberte samostatné vyhodnocovací rozdělení – vyhodnocení je zapnuté, ale není nastaveno samostatné vyhodnocovací rozdělení.",
           visionModel: "Modely pro zpracování obrazu streamování nepodporují.",
           audioModel: "Zvukové modely streamování nepodporují.",
-          embeddingModel:
-            "Modely pro embeddingy streamování nepodporují (trénování potřebuje celou datovou sadu).",
-          imageDataset:
-            "Tato datová sada vypadá jako obrázky, které nelze streamovat.",
-          audioDataset:
-            "Tato datová sada vypadá jako zvuk, který nelze streamovat.",
+          embeddingModel: "Modely pro embeddingy streamování nepodporují (trénování potřebuje celou datovou sadu).",
+          imageDataset: "Tato datová sada vypadá jako obrázky, které nelze streamovat.",
+          audioDataset: "Tato datová sada vypadá jako zvuk, který nelze streamovat.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "pouze odpovědi asistenta",
-          evaluation:
-            "vyhodnocení (vyžaduje samostatné vyhodnocovací rozdělení)",
+          evaluation: "vyhodnocení (vyžaduje samostatné vyhodnocovací rozdělení)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Streamování bylo vypnuto: streamování vyžaduje pevné Maximum kroků > 0.",
-          adjusted:
-            "Upraveno pro streamování. Vypnuté nekompatibilní možnosti: {options}.",
-          needsMaxSteps:
-            "Streamování vyžaduje pevné Maximum kroků (streamované datové sady nemají známou délku). Nejprve nastavte Maximum kroků > 0.",
-          enabledAdjusted:
-            "Streamování bylo zapnuto. Vypnuté nekompatibilní možnosti: {options}.",
-          disabledForDetectedModality:
-            "Streamování bylo vypnuto, protože datové sady s obrázky a zvukem vyžadují úplné stažení. Zkontrolujte nastavení a spusťte znovu.",
+          turnedOffMaxSteps: "Streamování bylo vypnuto: streamování vyžaduje pevné Maximum kroků > 0.",
+          adjusted: "Upraveno pro streamování. Vypnuté nekompatibilní možnosti: {options}.",
+          needsMaxSteps: "Streamování vyžaduje pevné Maximum kroků (streamované datové sady nemají známou délku). Nejprve nastavte Maximum kroků > 0.",
+          enabledAdjusted: "Streamování bylo zapnuto. Vypnuté nekompatibilní možnosti: {options}.",
+          disabledForDetectedModality: "Streamování bylo vypnuto, protože datové sady s obrázky a zvukem vyžadují úplné stažení. Zkontrolujte nastavení a spusťte znovu.",
         },
       },
       auto: "Automaticky",
       rawText: "Prostý text",
       trainSplitStart: "Začátek trénovacího rozdělení",
-      trainSplitStartTooltip:
-        "Trénujte jen na části trénovacího rozdělení zadáním počátečního indexu řádku (včetně, od 0). Ponecháte-li prázdné, začne se prvním řádkem.",
+      trainSplitStartTooltip: "Trénujte jen na části trénovacího rozdělení zadáním počátečního indexu řádku (včetně, od 0). Ponecháte-li prázdné, začne se prvním řádkem.",
       trainSplitEnd: "Konec trénovacího rozdělení",
-      trainSplitEndTooltip:
-        "Index posledního řádku trénovacího rozdělení, který se zahrne (včetně, od 0). Například nastavením Začátku na 0 a Konce na 99 budete trénovat na prvních 100 řádcích. Ponecháte-li prázdné, použijí se všechny zbývající řádky.",
+      trainSplitEndTooltip: "Index posledního řádku trénovacího rozdělení, který se zahrne (včetně, od 0). Například nastavením Začátku na 0 a Konce na 99 budete trénovat na prvních 100 řádcích. Ponecháte-li prázdné, použijí se všechny zbývající řádky.",
       endPlaceholder: "Konec",
       clear: "Vymazat",
       dropFileOrClick: "Přetáhněte soubor sem nebo klikněte a nahrajte ho",
       uploadDetails: "Podrobnosti nahrávání",
-      uploadDetailsTooltip:
-        "Nejvýše {limit} na soubor. PDF, DOCX a TXT nejsou datové sady připravené k trénování, proto je nejprve převeďte v Learning Recipes.",
+      uploadDetailsTooltip: "Nejvýše {limit} na soubor. PDF, DOCX a TXT nejsou datové sady připravené k trénování, proto je nejprve převeďte v Learning Recipes.",
       viewDataset: "Zobrazit datovou sadu",
       previewTokens: "Náhled tokenů",
       tokenPreview: {
         title: "Náhled tokenů",
-        description:
-          "Jak model {model} tokenizuje tato data pro trénování. Stáhne se pouze tokenizér.",
+        description: "Jak model {model} tokenizuje tato data pro trénování. Stáhne se pouze tokenizér.",
         datasetTab: "Vzorky datové sady",
         textTab: "Váš text",
         trained: "Trénované",
@@ -4624,8 +4043,7 @@ export const cs = {
         completionsOnly: "Pouze odpovědi asistenta",
         allTokens: "Trénují se všechny tokeny",
         responseMarker: "Značka odpovědi",
-        maskingNotApplied:
-          "Značky chatu nebyly nalezeny, takže se trénuje každý token.",
+        maskingNotApplied: "Značky chatu nebyly nalezeny, takže se trénuje každý token.",
         loading: "Načítání tokenizéru. První náhled trvá o něco déle...",
         shuffle: "Zamíchat vzorky",
         showIds: "Zobrazit ID tokenů",
@@ -4634,19 +4052,15 @@ export const cs = {
         sample: "Vzorek {index}",
         stats: "Tokeny: {tokens}, trénované: {trained} ({percent} %)",
         truncated: "Zkráceno délkou kontextu na {max} z {full} tokenů.",
-        noTrained:
-          "Žádný token v tomto řádku se netrénuje, proto ho trénování přeskočí.",
+        noTrained: "Žádný token v tomto řádku se netrénuje, proto ho trénování přeskočí.",
         hiddenTokens: "Další nezobrazené tokeny: {count}",
-        multimodal:
-          "Řádky s obrázky a zvukem se zde nezobrazují. Tokenizér si však můžete vyzkoušet na vlastním textu.",
+        multimodal: "Řádky s obrázky a zvukem se zde nezobrazují. Tokenizér si však můžete vyzkoušet na vlastním textu.",
         textPlaceholder: "Napište nebo vložte text a zobrazte jeho tokeny...",
-        textHint:
-          "Při volbě Pouze odpovědi asistenta se trénuje jen text za značkou asistenta.",
+        textHint: "Při volbě Pouze odpovědi asistenta se trénuje jen text za značkou asistenta.",
         insertExample: "Vložit ukázkový chat",
         vocab: "Velikost slovníku (tokeny): {count}",
         retry: "Zkusit znovu",
-        packing:
-          "Packing je zapnutý: běh spojuje řádky do sekvencí o délce kontextu, takže místo, kde se řádek zkrátí, se může lišit od tohoto zobrazení po řádcích.",
+        packing: "Packing je zapnutý: běh spojuje řádky do sekvencí o délce kontextu, takže místo, kde se řádek zkrátí, se může lišit od tohoto zobrazení po řádcích.",
       },
       uploadFailed: "Nahrání se nezdařilo",
       unknownError: "Neznámá chyba",
@@ -4655,10 +4069,8 @@ export const cs = {
       datasetUploaded: "Datová sada byla nahrána",
       evalDatasetUploaded: "Vyhodnocovací datová sada byla nahrána",
       uploadOneFileAtATime: "Nahrávejte vždy jen jeden soubor",
-      uploadSingleFileDescription:
-        "Nahrávání trénovací datové sady přijímá pouze jeden soubor.",
-      previewLoadingHuggingFace:
-        "Načítání náhledu datové sady z Hugging Face...",
+      uploadSingleFileDescription: "Nahrávání trénovací datové sady přijímá pouze jeden soubor.",
+      previewLoadingHuggingFace: "Načítání náhledu datové sady z Hugging Face...",
       previewLoading: "Načítání náhledu...",
       mappingRequirements: {
         audioAndText: "zvuk a text",
@@ -4671,17 +4083,13 @@ export const cs = {
         heuristicTitle: "Mapování zjištěné heuristikou",
         readyTitle: "Mapování je připraveno",
         requiredTitle: "Namapujte sloupce datové sady",
-        heuristicDescription:
-          "Mapování sloupců níže jsme automaticky zjistili pomocí heuristiky. Zkontrolujte ho a upravte pomocí rozevíracích seznamů v záhlavích sloupců, nebo pro chytřejší mapování použijte AI Assist.",
-        readyDescription:
-          "Vypadá to dobře. Tuto datovou sadu převedeme automaticky.",
-        requiredDescription:
-          "Přiřaďte sloupcům role pomocí rozevíracích seznamů v záhlavích. Přiřaďte alespoň: {required}.",
+        heuristicDescription: "Mapování sloupců níže jsme automaticky zjistili pomocí heuristiky. Zkontrolujte ho a upravte pomocí rozevíracích seznamů v záhlavích sloupců, nebo pro chytřejší mapování použijte AI Assist.",
+        readyDescription: "Vypadá to dobře. Tuto datovou sadu převedeme automaticky.",
+        requiredDescription: "Přiřaďte sloupcům role pomocí rozevíracích seznamů v záhlavích. Přiřaďte alespoň: {required}.",
       },
       s3: {
         title: "Konfigurace S3",
-        description:
-          "Načtěte datové sady .parquet, .json, .jsonl nebo .csv z Amazon S3",
+        description: "Načtěte datové sady .parquet, .json, .jsonl nebo .csv z Amazon S3",
         bucket: "Název bucketu",
         bucketPlaceholder: "my-training-data-bucket",
         region: "Oblast AWS",
@@ -4703,19 +4111,16 @@ export const cs = {
       },
       projectName: "Název projektu",
       optional: "Volitelné",
-      projectNameDescription:
-        "Používá se v názvech výstupních složek trénování, ve výchozích hodnotách exportu a v historii.",
+      projectNameDescription: "Používá se v názvech výstupních složek trénování, ve výchozích hodnotách exportu a v historii.",
       loraSettings: "Nastavení LoRA",
       trainingHyperparameters: "Hyperparametry trénování",
       drafterSettings: "Návrhový model pro spekulativní dekódování",
       drafterTrain: "Natrénovat návrhový model pro spekulativní dekódování",
-      drafterTrainTooltip:
-        "Po doladění natrénuje malou návrhovou hlavu, aby inference v llama.cpp a vLLM běžela rychleji; výstupy se nemění.",
+      drafterTrainTooltip: "Po doladění natrénuje malou návrhovou hlavu, aby inference v llama.cpp a vLLM běžela rychleji; výstupy se nemění.",
       drafterChecking: "Kontrola tohoto modelu...",
       drafterUnavailable: "Pro tento model není k dispozici: {reason}",
       drafterRetrainMtp: "Znovu natrénuje hlavu MTP tohoto modelu",
-      drafterEagle3:
-        "Natrénuje návrhový model EAGLE-3 (tento model nemá hlavu MTP)",
+      drafterEagle3: "Natrénuje návrhový model EAGLE-3 (tento model nemá hlavu MTP)",
       drafterDataSource: "Trénovací data",
       drafterDataSourceDataset: "Odpovědi z datové sady",
       drafterDataSourceRegenerate: "Vlastní odpovědi modelu (pomalejší, lepší)",
@@ -4734,20 +4139,16 @@ export const cs = {
       contextLengthTooltip: "Maximální počet tokenů na jeden trénovací vzorek.",
       customContextLength: "Zadejte vlastní hodnotu",
       learningRate: "Rychlost učení",
-      learningRateTooltip:
-        "Velikost kroku pro aktualizace vah. Nižší hodnoty trénují pomaleji, ale stabilněji.",
-      learningRateDescription:
-        "Doporučeno: 2e-4 pro LoRA, 5e-5 pro CPT, 2e-5 pro úplné doladění",
+      learningRateTooltip: "Velikost kroku pro aktualizace vah. Nižší hodnoty trénují pomaleji, ale stabilněji.",
+      learningRateDescription: "Doporučeno: 2e-4 pro LoRA, 5e-5 pro CPT, 2e-5 pro úplné doladění",
       embeddingLearningRate: "Rychlost učení embeddingů",
-      embeddingLearningRateTooltip:
-        "Používá se jen tehdy, když CPT trénuje embed_tokens. Embeddingy se destabilizují snáz než váhy LoRA, proto obvykle potřebují menší LR. Ponecháte-li prázdné, použije se lr/10; typický funkční rozsah je 2× až 10× menší než hlavní LR. Zvyšte ho jen tehdy, je-li adaptace slovníku nebo doménových tokenů příliš pomalá.",
+      embeddingLearningRateTooltip: "Používá se jen tehdy, když CPT trénuje embed_tokens. Embeddingy se destabilizují snáz než váhy LoRA, proto obvykle potřebují menší LR. Ponecháte-li prázdné, použije se lr/10; typický funkční rozsah je 2× až 10× menší než hlavní LR. Zvyšte ho jen tehdy, je-li adaptace slovníku nebo doménových tokenů příliš pomalá.",
       rank: "Rank",
       rankTooltip: "Rozměr matic nízkého ranku. Vyšší = větší kapacita.",
       alpha: "Alpha",
       alphaTooltip: "Měřítko pro aktualizace LoRA. Obvykle 2× rank.",
       dropout: "Dropout",
-      dropoutTooltip:
-        "Pravděpodobnost dropoutu pro vrstvy LoRA ke snížení přeučení.",
+      dropoutTooltip: "Pravděpodobnost dropoutu pro vrstvy LoRA ke snížení přeučení.",
       visionLayers: "Obrazové vrstvy",
       languageLayers: "Jazykové vrstvy",
       attentionModules: "Moduly attention",
@@ -4759,19 +4160,15 @@ export const cs = {
       memoryEfficient: "LoRA inicializovaná pomocí SVD",
       weightDecomposed: "LoRA s multiplikátory",
       notSupportedAppleSilicon: "Není podporováno na Apple Silicon",
-      doraNeedsVisionLayersOff:
-        "Chcete-li použít DoRA, vypněte trénování obrazových vrstev",
+      doraNeedsVisionLayersOff: "Chcete-li použít DoRA, vypněte trénování obrazových vrstev",
       optimization: "Optimalizace",
       schedule: "Plán",
       memory: "Paměť",
       optimizer: "Optimalizátor",
-      optimizerTooltip:
-        "Optimalizační algoritmus. 8bitové varianty snižují využití paměti. Pro modely zpracovávající obraz se doporučuje varianta Fused.",
-      optimizerTooltipMlx:
-        "Optimalizační algoritmus. Výchozí je AdamW. Lion využívá méně paměti, ale obvykle potřebuje nižší rychlost učení.",
+      optimizerTooltip: "Optimalizační algoritmus. 8bitové varianty snižují využití paměti. Pro modely zpracovávající obraz se doporučuje varianta Fused.",
+      optimizerTooltipMlx: "Optimalizační algoritmus. Výchozí je AdamW. Lion využívá méně paměti, ale obvykle potřebuje nižší rychlost učení.",
       lrScheduler: "Plánovač LR",
-      lrSchedulerTooltip:
-        "Jak se rychlost učení mění během trénování. Lineární klesá rovnoměrně, kosinový klesá po křivce.",
+      lrSchedulerTooltip: "Jak se rychlost učení mění během trénování. Lineární klesá rovnoměrně, kosinový klesá po křivce.",
       optimizerOptions: {
         adamw8bit: "AdamW 8bit",
         pagedAdamw8bit: "Paged AdamW 8bit",
@@ -4785,41 +4182,33 @@ export const cs = {
         cosine: "Kosinový",
       },
       batchSize: "Velikost dávky",
-      batchSizeTooltip:
-        "Počet vzorků zpracovaných v jednom kroku. Vyšší hodnota využívá více VRAM.",
+      batchSizeTooltip: "Počet vzorků zpracovaných v jednom kroku. Vyšší hodnota využívá více VRAM.",
       gradAccum: "Kroky akumulace gradientu",
       gradAccumTooltip: "Simuluje větší velikost dávky bez dodatečné VRAM.",
       weightDecay: "Útlum vah",
       weightDecayTooltip: "Regularizace L2 proti přeučení.",
       warmupSteps: "Kroky zahřívání",
-      warmupStepsTooltip:
-        "Postupně zvyšuje LR na začátku trénování kvůli stabilitě.",
-      scheduleEpochsTooltip:
-        "Počet úplných průchodů datovou sadou. Nastavením 0 se trénuje podle maximálního počtu kroků.",
+      warmupStepsTooltip: "Postupně zvyšuje LR na začátku trénování kvůli stabilitě.",
+      scheduleEpochsTooltip: "Počet úplných průchodů datovou sadou. Nastavením 0 se trénuje podle maximálního počtu kroků.",
       saveSteps: "Kroky ukládání",
       saveStepsTooltip: "Uložit kontrolní bod každých N kroků. 0 = vypnuto.",
       evalSteps: "Kroky vyhodnocení",
-      evalStepsTooltip:
-        "Podíl celkového počtu kroků trénování mezi vyhodnoceními (0–1). Nastavením 0 vyhodnocení vypnete. Např. 0.01 = vyhodnotit po každém 1 % kroků.",
+      evalStepsTooltip: "Podíl celkového počtu kroků trénování mezi vyhodnoceními (0–1). Nastavením 0 vyhodnocení vypnete. Např. 0.01 = vyhodnotit po každém 1 % kroků.",
       earlyStoppingPatience: "Trpělivost předčasného zastavení",
-      earlyStoppingPatienceTooltip:
-        "Zastaví trénování po tomto počtu vyhodnocení po sobě bez nižší vyhodnocovací ztráty a zachová váhy z nejlepšího vyhodnocení. Vyžaduje vyhodnocení (Kroky vyhodnocení nad 0). 0 = vypnuto.",
+      earlyStoppingPatienceTooltip: "Zastaví trénování po tomto počtu vyhodnocení po sobě bez nižší vyhodnocovací ztráty a zachová váhy z nejlepšího vyhodnocení. Vyžaduje vyhodnocení (Kroky vyhodnocení nad 0). 0 = vypnuto.",
       seed: "Seed",
       seedTooltip: "Náhodný seed pro reprodukovatelnost.",
       offloadLayers: "Odkládání vrstev",
-      offloadLayersTooltip:
-        "Uchovává vrstvy dekodéru v systémové RAM a každou z nich přesune do GPU těsně před jejím spuštěním, takže i model větší než vaše VRAM lze trénovat s LoRA. Režim Automaticky odloží co nejméně vrstev, aby se model vešel; zadaný počet odloží přesně tolik vrstev. Vyžaduje gradient checkpointing.",
+      offloadLayersTooltip: "Uchovává vrstvy dekodéru v systémové RAM a každou z nich přesune do GPU těsně před jejím spuštěním, takže i model větší než vaše VRAM lze trénovat s LoRA. Režim Automaticky odloží co nejméně vrstev, aby se model vešel; zadaný počet odloží přesně tolik vrstev. Vyžaduje gradient checkpointing.",
       offloadOff: "Vypnuto",
       offloadAuto: "Automaticky",
       offloadCount: "Počet",
       offloadVramBudget: "Rozpočet VRAM (GiB)",
-      offloadVramBudgetTooltip:
-        "Nejvíce VRAM, kterou tento běh smí použít. Režim Automaticky odloží dostatek vrstev, aby se do ní vešel, a dva běhy mohou sdílet jednu kartu, pokud každý využije její část. Prázdné = použije se celá karta.",
+      offloadVramBudgetTooltip: "Nejvíce VRAM, kterou tento běh smí použít. Režim Automaticky odloží dostatek vrstev, aby se do ní vešel, a dva běhy mohou sdílet jednu kartu, pokud každý využije její část. Prázdné = použije se celá karta.",
       offloadWholeCard: "celá karta",
       offloadVramBudgetGpu: "Rozpočet VRAM pro GPU {index} (GiB)",
       prefetchDepth: "Hloubka předběžného načítání",
-      prefetchDepthTooltip:
-        "Kolik odložených vrstev se kopíruje dopředu před právě běžící vrstvou. Režim Automaticky začíná na 1 a hlubší zásobník udržuje jen tehdy, když měřitelně zkracuje čekání na kopírování.",
+      prefetchDepthTooltip: "Kolik odložených vrstev se kopíruje dopředu před právě běžící vrstvou. Režim Automaticky začíná na 1 a hlubší zásobník udržuje jen tehdy, když měřitelně zkracuje čekání na kopírování.",
       offloadPanelTitle: "Odložené vrstvy",
       offloadPanelGpu: "V GPU",
       offloadPanelHost: "V systémové RAM",
@@ -4831,23 +4220,32 @@ export const cs = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "hloubka předběžného načítání",
       offloadPanelPinned: "připnuto",
-      offloadPanelSweepNote:
-        "Pohyblivé okno ukazuje pořadí, v jakém se vrstvy načítají, zpomaleně, aby bylo vidět; čísla jsou naměřena v posledním kroku.",
+      offloadPanelSweepNote: "Pohyblivé okno ukazuje pořadí, v jakém se vrstvy načítají, zpomaleně, aby bylo vidět; čísla jsou naměřena v posledním kroku.",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Neznámá karta",
       gradCheckpoint: "Gradient checkpointing",
-      gradCheckpointTooltip:
-        "Šetří paměť za cenu výpočtů tím, že aktivace počítá znovu.",
+      gradCheckpointTooltip: "Šetří paměť za cenu výpočtů tím, že aktivace počítá znovu.",
       none: "Žádné",
       standard: "Standardní",
       enablePacking: "Zapnout packing",
       assistantCompletionsOnly: "Pouze odpovědi asistenta",
       readMore: "Další informace",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Běh se nepodařilo duplikovat",
-      duplicateDraftChanged:
-        "Nastavení trénování se během načítání změnilo. Zkuste duplikování znovu.",
+      duplicateDraftChanged: "Nastavení trénování se během načítání změnilo. Zkuste duplikování znovu.",
       duplicateNoModel: "Tento běh nemá uloženou konfiguraci modelu.",
       startTraining: "Spustit trénování",
       starting: "Spouštění...",
@@ -4857,52 +4255,35 @@ export const cs = {
       chooseDataset: "Vyberte datovou sadu",
       chooseModelAndDataset: "Vyberte model a datovou sadu",
       validation: {
-        s3MultimodalUnsupported:
-          "Datové sady S3 zatím nejsou pro trénování obrazových modelů podporovány.",
+        s3MultimodalUnsupported: "Datové sady S3 zatím nejsou pro trénování obrazových modelů podporovány.",
         s3BucketRequired: "Nejprve zadejte název bucketu S3.",
-        s3CredentialsRequired:
-          "Zadejte přístupové klíče S3 nebo zapněte roli IAM.",
+        s3CredentialsRequired: "Zadejte přístupové klíče S3 nebo zapněte roli IAM.",
         modelRequired: "Nejprve vyberte základní model.",
         learningRatePositive: "Zadejte rychlost učení větší než nula.",
-        embeddingLearningRateRange:
-          "Zadejte rychlost učení embeddingů větší než 0 a menší než 1.",
-        decisionColumnsMissing:
-          "Rozhodovací modely potřebují sloupce state, questions a gold (nebo answers). Chybí: {columns}.",
-        decisionOwnerOnly:
-          "Rozhodovací modely může dolaďovat pouze vlastník Unsloth.",
+        embeddingLearningRateRange: "Zadejte rychlost učení embeddingů větší než 0 a menší než 1.",
+        decisionColumnsMissing: "Rozhodovací modely potřebují sloupce state, questions a gold (nebo answers). Chybí: {columns}.",
+        decisionOwnerOnly: "Rozhodovací modely může dolaďovat pouze vlastník Unsloth.",
         hfDatasetRequired: "Nejprve vyberte datovou sadu z Hugging Face.",
-        hfDatasetSplitRequired:
-          "Nejprve vyberte nebo zadejte trénovací rozdělení.",
+        hfDatasetSplitRequired: "Nejprve vyberte nebo zadejte trénovací rozdělení.",
         localDatasetRequired: "Nejprve vyberte místní datovou sadu.",
         unsupportedDatasetSource: "Nepodporovaný zdroj datové sady.",
       },
       startFailed: "Trénování se nepodařilo spustit",
-      startUnconfirmed:
-        "Unsloth nemohl potvrdit, zda se trénování spustilo. Stav se kontroluje na pozadí.",
+      startUnconfirmed: "Unsloth nemohl potvrdit, zda se trénování spustilo. Stav se kontroluje na pozadí.",
       stopFailed: "Trénování se nepodařilo zastavit",
       trainingStillActiveTitle: "Trénování stále probíhá",
-      stopBeforeConfig:
-        "Nejprve zastavte trénování a pak se vraťte ke konfiguraci.",
+      stopBeforeConfig: "Nejprve zastavte trénování a pak se vraťte ke konfiguraci.",
       resumeFailed: "Trénování se nepodařilo obnovit",
       resumeFailedTitle: "Trénování nelze obnovit",
-      resumeUnavailable:
-        "Obnovit lze pouze zastavené běhy nebo běhy s chybou, které mají uložený kontrolní bod.",
-      modelUnverified:
-        "Nastavení tohoto modelu se nepodařilo ověřit. Zkontrolujte připojení nebo token Hugging Face a zkuste to znovu.",
-      legacyDatasetScriptUnsupported:
-        "Tato datová sada z Hubu závisí na starším vlastním skriptu a v tomto postupu trénování není podporována.",
-      hfModelAccessDenied:
-        "Hugging Face odepřel přístup k tomuto modelu. Přidejte platný token Hugging Face s přístupem k repozitáři, přijměte všechny požadované podmínky přístupu a zkuste to znovu.",
-      hfModelVerificationRateLimited:
-        "Ověřování modelu na Hugging Face je omezeno počtem požadavků. Zkuste to za chvíli znovu.",
-      hfModelVerificationFailed:
-        "Model z Hugging Face se nepodařilo ověřit. Zkontrolujte ID repozitáře a svůj přístupový token.",
-      hfModelMetadataUnavailable:
-        "Metadata modelu z Hugging Face jsou dočasně nedostupná. Před spuštěním trénování to zkuste znovu.",
-      datasetUnverified:
-        "Nepodařilo se ověřit, zda je datová sada kompatibilní s tímto modelem. Zkontrolujte připojení nebo token Hugging Face – při spuštění trénování se kontrola zopakuje.",
-      setupChanged:
-        "Nastavení trénování se během kontroly změnilo. Zkontrolujte ho a spusťte znovu.",
+      resumeUnavailable: "Obnovit lze pouze zastavené běhy nebo běhy s chybou, které mají uložený kontrolní bod.",
+      modelUnverified: "Nastavení tohoto modelu se nepodařilo ověřit. Zkontrolujte připojení nebo token Hugging Face a zkuste to znovu.",
+      legacyDatasetScriptUnsupported: "Tato datová sada z Hubu závisí na starším vlastním skriptu a v tomto postupu trénování není podporována.",
+      hfModelAccessDenied: "Hugging Face odepřel přístup k tomuto modelu. Přidejte platný token Hugging Face s přístupem k repozitáři, přijměte všechny požadované podmínky přístupu a zkuste to znovu.",
+      hfModelVerificationRateLimited: "Ověřování modelu na Hugging Face je omezeno počtem požadavků. Zkuste to za chvíli znovu.",
+      hfModelVerificationFailed: "Model z Hugging Face se nepodařilo ověřit. Zkontrolujte ID repozitáře a svůj přístupový token.",
+      hfModelMetadataUnavailable: "Metadata modelu z Hugging Face jsou dočasně nedostupná. Před spuštěním trénování to zkuste znovu.",
+      datasetUnverified: "Nepodařilo se ověřit, zda je datová sada kompatibilní s tímto modelem. Zkontrolujte připojení nebo token Hugging Face – při spuštění trénování se kontrola zopakuje.",
+      setupChanged: "Nastavení trénování se během kontroly změnilo. Zkontrolujte ho a spusťte znovu.",
       uploadConfigTooltip: "Načíst uloženou konfiguraci YAML",
       saveConfigTooltip: "Stáhnout aktuální konfiguraci jako YAML",
       resetConfigTooltip: "Obnovit výchozí hodnoty modelu",
@@ -4913,17 +4294,14 @@ export const cs = {
       failedToReadFile: "Soubor se nepodařilo přečíst",
       failedToSaveConfig: "Konfiguraci se nepodařilo uložit",
       parametersReset: "Parametry byly obnoveny na výchozí hodnoty modelu",
-      audioIncompatible:
-        "Tento model nepodporuje zvuk. Přepněte na model se zvukem nebo vyberte datovou sadu bez zvuku.",
-      visionIncompatible:
-        "Textový model není kompatibilní s multimodální datovou sadou. Přepněte na obrazový model nebo vyberte čistě textovou datovou sadu.",
+      audioIncompatible: "Tento model nepodporuje zvuk. Přepněte na model se zvukem nebo vyberte datovou sadu bez zvuku.",
+      visionIncompatible: "Textový model není kompatibilní s multimodální datovou sadou. Přepněte na obrazový model nebo vyberte čistě textovou datovou sadu.",
       cancelTitle: "Zrušit trénování",
       cancelDescription: "Chcete zrušit aktuální běh trénování?",
       continueAction: "Pokračovat v trénování",
       cancelAction: "Zrušit trénování",
       stopTitle: "Zastavit trénování",
-      stopDescription:
-        "Vyberte, jak chcete aktuální běh trénování zastavit. Možnost Zastavit a uložit zapíše kontrolní bod, ze kterého můžete později pokračovat; běh zastavený bez uložení nelze obnovit.",
+      stopDescription: "Vyberte, jak chcete aktuální běh trénování zastavit. Možnost Zastavit a uložit zapíše kontrolní bod, ze kterého můžete později pokračovat; běh zastavený bez uložení nelze obnovit.",
       stopAction: "Zastavit",
       stopping: "Zastavování...",
       stopAndSave: "Zastavit a uložit",
@@ -4931,38 +4309,30 @@ export const cs = {
       exportModel: "Exportovat model",
       milestone: "Milník",
       halfwayDone: "Polovina hotová. Trénování překročilo 50 %.",
-      doneNextStep:
-        "Trénování dokončeno. Další krok: porovnejte výstupy základního a doladěného modelu.",
+      doneNextStep: "Trénování dokončeno. Další krok: porovnejte výstupy základního a doladěného modelu.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Historie",
       filesDeleted: "Soubory byly smazány",
       deleteArtifactsLabel: "Smazat také soubory adaptéru na disku",
-      deleteArtifactsDescription:
-        "Odstraní výstupní složku běhu včetně uložených adaptérů a kontrolních bodů.",
-      deleteArtifactsSharedNote:
-        "Tuto výstupní složku sdílí jiný běh. Soubory zůstanou zachovány, dokud nebude smazán poslední běh, který je používá.",
-      artifactsKeptShared:
-        "Běh byl smazán. Soubory adaptéru byly zachovány, protože stejnou složku používá jiný běh.",
-      deleteArtifactsActiveError:
-        "Tyto soubory používá probíhající běh trénování. Před jejich smazáním trénování zastavte.",
-      deleteArtifactsFailed:
-        "Běh byl smazán, ale jeho soubory se nepodařilo odstranit.",
-      deleteArtifactsRetainedError:
-        "Soubory adaptéru se nepodařilo odstranit, proto byl běh trénování v historii ponechán.",
-      emptyDescription:
-        "Zatím žádné běhy trénování. Spusťte první běh trénování na kartě Nastavení.",
+      deleteArtifactsDescription: "Odstraní výstupní složku běhu včetně uložených adaptérů a kontrolních bodů.",
+      deleteArtifactsSharedNote: "Tuto výstupní složku sdílí jiný běh. Soubory zůstanou zachovány, dokud nebude smazán poslední běh, který je používá.",
+      artifactsKeptShared: "Běh byl smazán. Soubory adaptéru byly zachovány, protože stejnou složku používá jiný běh.",
+      deleteArtifactsActiveError: "Tyto soubory používá probíhající běh trénování. Před jejich smazáním trénování zastavte.",
+      deleteArtifactsFailed: "Běh byl smazán, ale jeho soubory se nepodařilo odstranit.",
+      deleteArtifactsRetainedError: "Soubory adaptéru se nepodařilo odstranit, proto byl běh trénování v historii ponechán.",
+      emptyDescription: "Zatím žádné běhy trénování. Spusťte první běh trénování na kartě Nastavení.",
       loadError: "Běhy trénování se nepodařilo načíst",
-      deleteError:
-        "Běh trénování se nepodařilo smazat. Zkuste to prosím znovu.",
+      deleteError: "Běh trénování se nepodařilo smazat. Zkuste to prosím znovu.",
       retry: "Zkusit znovu",
       loadMore: "Načíst další",
       loading: "Načítání...",
       loadingRun: "Načítání běhu trénování...",
       runNotFound: "Běh nebyl nalezen",
       deleteTitle: "Smazat běh trénování?",
-      deleteDescription:
-        "Tento běh trénování a všechny jeho metriky budou trvale smazány. Tuto akci nelze vrátit zpět.",
+      deleteDescription: "Tento běh trénování a všechny jeho metriky budou trvale smazány. Tuto akci nelze vrátit zpět.",
       resumeTraining: "Obnovit trénování",
       resuming: "Obnovování...",
       deleteRun: "Smazat běh",
@@ -4986,22 +4356,35 @@ export const cs = {
       copyPreviewLink: "Kopírovat odkaz na náhled",
       previewLinkCopied: "Odkaz na náhled byl zkopírován",
       previewLinkCopyFailed: "Odkaz se nepodařilo zkopírovat",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Nastavení grafů",
-      settingsDescription:
-        "Upravte zobrazení grafů, zatímco trénování dál běží.",
+      settingsDescription: "Upravte zobrazení grafů, zatímco trénování dál běží.",
       openSettings: "Otevřít nastavení grafů",
       viewWindow: "Okno zobrazení",
-      viewWindowDescription:
-        "Zobrazit jen poslední kroky, nebo celou historii.",
+      viewWindowDescription: "Zobrazit jen poslední kroky, nebo celou historii.",
       window: "Okno",
       all: "Vše",
       trainingLoss: "Trénovací ztráta",
       trainingLossDescription: "Ovládání překryvů a vyhlazení EMA.",
       smoothing: "Vyhlazení",
-      smoothingDescription:
-        "Posunutím doprava vyhladíte více. `0` = nezpracované.",
+      smoothingDescription: "Posunutím doprava vyhladíte více. `0` = nezpracované.",
       showRawLoss: "Zobrazit nezpracovanou ztrátu",
       showSmoothedLoss: "Zobrazit vyhlazenou ztrátu",
       showAverageLine: "Zobrazit čáru průměru",
@@ -5027,8 +4410,7 @@ export const cs = {
       waitingForFirstEvaluationStep: "Čekání na první krok vyhodnocení...",
       evaluationNotConfigured: "Vyhodnocení není nastaveno",
       evalChartWillAppear: "Graf se zobrazí po dosažení eval_steps",
-      setEvalDatasetAndSteps:
-        "Chcete-li sledovat vyhodnocovací ztrátu, nastavte vyhodnocovací datovou sadu a eval_steps",
+      setEvalDatasetAndSteps: "Chcete-li sledovat vyhodnocovací ztrátu, nastavte vyhodnocovací datovou sadu a eval_steps",
     },
     progress: {
       title: "Průběh trénování",
@@ -5085,6 +4467,9 @@ export const cs = {
         error: "Chyba",
         stopped: "Zastaveno",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Připraveno",
@@ -5100,59 +4485,165 @@ export const cs = {
       dataset: "Datová sada",
       datasetStreaming: "Datová sada: streamování (bez úplného stažení)",
       modelWeights: "Váhy modelu",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Váhy {model} + kontext {context} = {total} z {budget} použitelné VRAM",
-    readoutWithSpec:
-      "Váhy {model} + KV {kv} + návrh MTP {spec} = {total} z {budget} použitelné VRAM",
+    readout: "Váhy {model} + kontext {context} = {total} z {budget} použitelné VRAM",
+    readoutWithSpec: "Váhy {model} + KV {kv} + návrh MTP {spec} = {total} z {budget} použitelné VRAM",
     kvRate: "Rezervováno pro KV, ~{rate}/token",
-    oomLikely:
-      "Při aktuálním nastavení je pravděpodobný nedostatek paměti (OOM)",
-    tooLarge:
-      "Větší než VRAM, část poběží na CPU. Menší kvantizace poběží rychleji",
+    oomLikely: "Při aktuálním nastavení je pravděpodobný nedostatek paměti (OOM)",
+    tooLarge: "Větší než VRAM, část poběží na CPU. Menší kvantizace poběží rychleji",
   },
   skills: {
     title: "Dovednosti",
-    description:
-      "Dovednosti se vyhledávají ve standardních složkách agentů. Zde je zapněte a pak je v chatu zmiňte zadáním @.",
+    description: "Dovednosti se vyhledávají ve standardních složkách agentů. Zde je zapněte a pak je v chatu zmiňte zadáním @.",
     precedence: "~/.agents/skills má přednost před ~/.claude/skills.",
     refresh: "Obnovit",
-    empty:
-      "Nebyly nalezeny žádné dovednosti. Přidejte složku se SKILL.md do ~/.agents/skills nebo ~/.claude/skills a pak obnovte.",
+    empty: "Nebyly nalezeny žádné dovednosti. Přidejte složku se SKILL.md do ~/.agents/skills nebo ~/.claude/skills a pak obnovte.",
     sourceAgents: "Agenti",
     sourceClaude: "Claude",
     sourceBundled: "Přibalené",
     shadowed: "Zastíněno",
     invalid: "Neplatné",
     compatibility: "Kompatibilita: {value}",
-    shadowedBy:
-      "Jiná dovednost se stejným názvem (zdroj {source}) má přednost.",
+    shadowedBy: "Jiná dovednost se stejným názvem (zdroj {source}) má přednost.",
     enable: "Zapnout: {name}",
     disable: "Vypnout: {name}",
     updateError: "Dovednost se nepodařilo aktualizovat",
     newSkill: "Nová dovednost",
     import: "Importovat",
     delete: "Smazat: {name}",
-    createDescription:
-      "Uloží se jako SKILL.md do nové složky v ~/.agents/skills a zapne se, jakmile bude vytvořena.",
+    createDescription: "Uloží se jako SKILL.md do nové složky v ~/.agents/skills a zapne se, jakmile bude vytvořena.",
     nameLabel: "Název",
     namePlaceholder: "např. code-arithmetic",
-    nameHint:
-      "Malá písmena, číslice a jednotlivé spojovníky. Slouží zároveň jako název složky.",
-    nameInvalid:
-      "Použijte 1–64 malých písmen, číslic nebo jednotlivých spojovníků; nesmí začínat ani končit spojovníkem.",
+    nameHint: "Malá písmena, číslice a jednotlivé spojovníky. Slouží zároveň jako název složky.",
+    nameInvalid: "Použijte 1–64 malých písmen, číslic nebo jednotlivých spojovníků; nesmí začínat ani končit spojovníkem.",
     descriptionLabel: "Popis",
-    descriptionPlaceholder:
-      "Použij, když uživatel žádá o výpočet. Vždy ho spočítej pomocí nástroje pro kód.",
-    descriptionHint:
-      "Řádek, který model vidí ve svém katalogu dovedností. Podle něj se rozhoduje, kdy dovednost načíst.",
+    descriptionPlaceholder: "Použij, když uživatel žádá o výpočet. Vždy ho spočítej pomocí nástroje pro kód.",
+    descriptionHint: "Řádek, který model vidí ve svém katalogu dovedností. Podle něj se rozhoduje, kdy dovednost načíst.",
     instructionsLabel: "Pokyny",
-    instructionsPlaceholder:
-      "Co dělat, když se tato dovednost uplatní (v Markdownu).",
-    instructionsHint:
-      "Tělo souboru SKILL.md, které model načte celé, jakmile dovednost vybere.",
+    instructionsPlaceholder: "Co dělat, když se tato dovednost uplatní (v Markdownu).",
+    instructionsHint: "Tělo souboru SKILL.md, které model načte celé, jakmile dovednost vybere.",
     create: "Vytvořit dovednost",
     save: "Uložit změny",
     created: "Vytvořeno: {name}",
@@ -5167,16 +4658,13 @@ export const cs = {
     importError: "Dovednost se nepodařilo importovat",
     exportError: "Dovednost se nepodařilo exportovat",
     deleteTitle: "Smazat dovednost",
-    deleteDescription:
-      "Smazat dovednost „{name}“ a vše v její složce v ~/.agents/skills? Tuto akci nelze vrátit zpět.",
+    deleteDescription: "Smazat dovednost „{name}“ a vše v její složce v ~/.agents/skills? Tuto akci nelze vrátit zpět.",
     search: "Hledat dovednosti podle názvu nebo popisu…",
     noMatch: "Hledání „{query}“ neodpovídají žádné dovednosti",
     clearSearch: "Vymazat hledání",
-    readOnlyClaude:
-      "Jen pro čtení: nalezeno v ~/.claude/skills. Soubor upravte tam.",
+    readOnlyClaude: "Jen pro čtení: nalezeno v ~/.claude/skills. Soubor upravte tam.",
     readOnlyBundled: "Jen pro čtení: přibaleno k Unsloth.",
-    readOnlyLinked:
-      "Jen pro čtení: tato položka je odkaz. Soubory upravte v jejich umístění.",
+    readOnlyLinked: "Jen pro čtení: tato položka je odkaz. Soubory upravte v jejich umístění.",
     characters: "Znaky: {count}",
     unsaved: "neuložené změny",
     revert: "Vrátit změny",
@@ -5185,11 +4673,9 @@ export const cs = {
     compatibilityLabel: "Kompatibilita",
     allowedToolsLabel: "Povolené nástroje",
     sectionAgents: "Vaše dovednosti",
-    sectionAgentsHint:
-      "Uloženo v ~/.agents/skills. Zde je můžete vytvářet, upravovat a mazat.",
+    sectionAgentsHint: "Uloženo v ~/.agents/skills. Zde je můžete vytvářet, upravovat a mazat.",
     sectionClaude: "Dovednosti Claude",
-    sectionClaudeHint:
-      "Nalezeno v ~/.claude/skills. Zde jen pro čtení; soubory upravte tam.",
+    sectionClaudeHint: "Nalezeno v ~/.claude/skills. Zde jen pro čtení; soubory upravte tam.",
     sectionBundled: "Přibalené",
     sectionBundledHint: "Dodáváno s Unsloth. Jen pro čtení.",
     linked: "Odkaz",
@@ -5204,8 +4690,7 @@ export const cs = {
     disableAll: "Vypnout vše",
     resetAll: "Obnovit výchozí",
     resetTitle: "Obnovit všechny dovednosti?",
-    resetDescription:
-      "Všechny dovednosti se vrátí do stavu po čisté instalaci: vaše dovednosti a dovednosti Claude zapnuté, přibalené dovednosti vypnuté. Vaše volby zapnutí a vypnutí budou vymazány.",
+    resetDescription: "Všechny dovednosti se vrátí do stavu po čisté instalaci: vaše dovednosti a dovednosti Claude zapnuté, přibalené dovednosti vypnuté. Vaše volby zapnutí a vypnutí budou vymazány.",
     reset: "Obnovit",
   },
   translate: {
@@ -5226,8 +4711,7 @@ export const cs = {
     sourcePlaceholder: "Napište nebo vložte text, nebo přetáhněte dokument či obrázek",
     outputLabel: "Překlad",
     outputEmpty: "Překlad se zobrazí zde.",
-    firstRunHint:
-      "Při prvním překladu se stáhne {model} ({size}). Poté běží offline na tomto zařízení.",
+    firstRunHint: "Při prvním překladu se stáhne {model} ({size}). Poté běží offline na tomto zařízení.",
     charLimit: "Max. {max} znaků",
     readingFile: "Načítání {name}…",
     downloadConfirmTitle: "Stáhnout {model}?",
@@ -5284,8 +4768,7 @@ export const cs = {
       toneFormal: "Formální",
       toneCasual: "Neformální",
       auto: "Překládat při psaní",
-      autoDescription:
-        "Spustí se po načtení modelu. Psaní nikdy nespustí stahování.",
+      autoDescription: "Spustí se po načtení modelu. Psaní nikdy nespustí stahování.",
       saveHistory: "Ukládat historii",
       saveHistoryDescription: "Ukládá se pouze v tomto prohlížeči.",
       showPrompt: "Zobrazit prompt",
@@ -5298,21 +4781,17 @@ export const cs = {
       noMatches: "Žádné překlady neodpovídají.",
       clearAll: "Vymazat vše",
       clearTitle: "Vymazat historii překladů?",
-      clearDescription:
-        "Tím se z tohoto prohlížeče odstraní všechny uložené překlady.",
+      clearDescription: "Tím se z tohoto prohlížeče odstraní všechny uložené překlady.",
       delete: "Smazat překlad",
       export: "Exportovat",
       chatRecent: "Chatovat s posledními překlady",
     },
     errors: {
       title: "Překlad se nezdařil",
-      noChatModel:
-        "Není načten žádný model pro chat. Načtěte ho v Chatu nebo vyberte překladový model.",
-      downloadFailed:
-        "Model se nepodařilo stáhnout. Zkontrolujte Stahování v Centru modelů a zkuste to znovu.",
+      noChatModel: "Není načten žádný model pro chat. Načtěte ho v Chatu nebo vyberte překladový model.",
+      downloadFailed: "Model se nepodařilo stáhnout. Zkontrolujte Stahování v Centru modelů a zkuste to znovu.",
       loadFailed: "Model se nepodařilo načíst. Jeho soubor může být poškozený, nebo není dost paměti. Zkuste jiný model nebo ho stáhněte znovu.",
-      unavailable:
-        "Připojení tohoto modelu není dostupné. Zkontrolujte ho v Nastavení nebo vyberte jiný model.",
+      unavailable: "Připojení tohoto modelu není dostupné. Zkontrolujte ho v Nastavení nebo vyberte jiný model.",
       cutOff: "Překlad byl přerušen před dokončením.",
       filtered: "Překlad zastavil filtr obsahu poskytovatele.",
       exportFailed: "Historii se nepodařilo exportovat.",
@@ -5339,8 +4818,7 @@ export const cs = {
     chatMark: "Chat z naplánované úlohy",
     taskMissing: "Tato úloha již neexistuje.",
     emptyTitle: "Zatím žádné naplánované úlohy",
-    emptyDescription:
-      "Nechte si posílat denní souhrn, týdenní připomínku nebo cokoli jiného, co chcete mít hotové podle plánu.",
+    emptyDescription: "Nechte si posílat denní souhrn, týdenní připomínku nebo cokoli jiného, co chcete mít hotové podle plánu.",
     createFirst: "Vytvořit úlohu",
     loadFailed: "Naplánované úlohy se nepodařilo načíst.",
     retry: "Zkusit znovu",
@@ -5386,8 +4864,7 @@ export const cs = {
       time: "Čas",
       days: "Dny",
       dayOfMonth: "Den v měsíci",
-      lastDayNote:
-        "V měsících bez tohoto dne proběhne úloha poslední den měsíce.",
+      lastDayNote: "V měsících bez tohoto dne proběhne úloha poslední den měsíce.",
       advanced: "Pokročilé",
       notifications: "Oznámení",
       notifyAll: "Každý běh",
@@ -5400,16 +4877,12 @@ export const cs = {
       model: "Model",
       modelLoaded: "Aktuálně načtený model",
       modelOnDevice: "V tomto zařízení",
-      modelNote:
-        "Pokud tento model při spuštění úlohy nebude načtený, Unsloth se nejprve zeptá.",
-      modelNoteAllowed:
-        "Tento model se načte jen tehdy, když Unsloth nepoužíváte, a pak se obnoví původní stav.",
-      modelEmpty:
-        "Chcete-li vybrat jiný, stáhněte model v Centru modelů nebo přidejte připojení.",
+      modelNote: "Pokud tento model při spuštění úlohy nebude načtený, Unsloth se nejprve zeptá.",
+      modelNoteAllowed: "Tento model se načte jen tehdy, když Unsloth nepoužíváte, a pak se obnoví původní stav.",
+      modelEmpty: "Chcete-li vybrat jiný, stáhněte model v Centru modelů nebo přidejte připojení.",
       modelMissing: "{model} (není v tomto zařízení)",
       allowLoad: "Přepnout automaticky, když nejsem u počítače",
-      allowLoadHint:
-        "Když je úloha na řadě a vy jste Unsloth 5 minut nepoužili, načte se tento model bez ptaní, úloha se spustí a pak se přepne zpět na váš původní model. Pokud v tu dobu Unsloth používáte nebo trénujete, běh se přeskočí a váš model zůstane beze změny. Když je volba vypnutá, Unsloth se před načtením zeptá.",
+      allowLoadHint: "Když je úloha na řadě a vy jste Unsloth 5 minut nepoužili, načte se tento model bez ptaní, úloha se spustí a pak se přepne zpět na váš původní model. Pokud v tu dobu Unsloth používáte nebo trénujete, běh se přeskočí a váš model zůstane beze změny. Když je volba vypnutá, Unsloth se před načtením zeptá.",
       reasoning: "Úroveň přemýšlení",
       reasoningDefault: "Výchozí",
       reasoningOff: "Vypnuto",
@@ -5419,20 +4892,14 @@ export const cs = {
     },
     deleteDialog: {
       title: "Smazat naplánovanou úlohu?",
-      description:
-        "Úloha „{title}“ se přestane spouštět. Chaty, které již vytvořila, zůstanou zachovány.",
+      description: "Úloha „{title}“ se přestane spouštět. Chaty, které již vytvořila, zůstanou zachovány.",
     },
     errors: {
-      noModel:
-        "Nebyl načten žádný model. Načtěte model v Chatu a pak úlohu spusťte znovu.",
-      modelNotLoaded:
-        "Model úlohy nebyl načten. Načtěte ho v Chatu a pak úlohu spusťte znovu.",
-      modelLoadFailed:
-        "Model úlohy se nepodařilo načíst. Ověřte, že je stále stažený v Centru modelů.",
-      modelBusy:
-        "Přeskočeno, protože jste právě používali Unsloth; váš model zůstal beze změny.",
-      connectionUnavailable:
-        "Připojení úlohy chybí nebo je vypnuté. Zkontrolujte ho v části Připojení.",
+      noModel: "Nebyl načten žádný model. Načtěte model v Chatu a pak úlohu spusťte znovu.",
+      modelNotLoaded: "Model úlohy nebyl načten. Načtěte ho v Chatu a pak úlohu spusťte znovu.",
+      modelLoadFailed: "Model úlohy se nepodařilo načíst. Ověřte, že je stále stažený v Centru modelů.",
+      modelBusy: "Přeskočeno, protože jste právě používali Unsloth; váš model zůstal beze změny.",
+      connectionUnavailable: "Připojení úlohy chybí nebo je vypnuté. Zkontrolujte ho v části Připojení.",
       timeout: "Odpověď modelu trvala příliš dlouho.",
       cancelled: "Běh byl zastaven před dokončením.",
       interrupted: "Unsloth se zavřel dříve, než běh skončil.",
@@ -5445,8 +4912,7 @@ export const cs = {
     },
     loadPrompt: {
       title: "Načíst model {model}?",
-      description:
-        "Úloha „{title}“ běží na modelu {model}, který není načtený. Spuštěním se model {model} načte do jejího dokončení a pak se obnoví původní stav.",
+      description: "Úloha „{title}“ běží na modelu {model}, který není načtený. Spuštěním se model {model} načte do jejího dokončení a pak se obnoví původní stav.",
       always: "Už se neptat. Přepínat jen tehdy, když Unsloth nepoužívám.",
       notNow: "Teď ne",
       load: "Načíst a spustit",
@@ -5458,8 +4924,7 @@ export const cs = {
       open: "Otevřít",
       view: "Zobrazit",
     },
-    notificationBody:
-      "Vaše naplánovaná úloha byla dokončena. Odpověď si přečtete v Unsloth.",
+    notificationBody: "Vaše naplánovaná úloha byla dokončena. Odpověď si přečtete v Unsloth.",
   },
   library: {
     tabs: {
@@ -5540,28 +5005,21 @@ export const cs = {
       },
       empty: {
         chatsTitle: "Zatím žádné chaty",
-        chatsDescription:
-          "Zde se zobrazují vaše konverzace, odděleně od vašich souborů.",
+        chatsDescription: "Zde se zobrazují vaše konverzace, odděleně od vašich souborů.",
         archivedTitle: "Nic není archivováno",
         archivedDescription: "Zde se zobrazují chaty, které archivujete.",
         sectionsTitle: "Zatím žádné sekce",
-        sectionsDescription:
-          "Sekce seskupují chaty a projekty v postranním panelu podle vašich představ.",
+        sectionsDescription: "Sekce seskupují chaty a projekty v postranním panelu podle vašich představ.",
         sectionTitle: "V této sekci zatím nic není",
-        sectionDescription:
-          "Přesuňte sem chaty z jejich nabídky nebo v této sekci založte nový chat.",
+        sectionDescription: "Přesuňte sem chaty z jejich nabídky nebo v této sekci založte nový chat.",
       },
       dialog: {
         renameChat: "Přejmenovat chat",
-        deleteChatDescription:
-          "Chat a jeho zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
-        deleteProjectDescription:
-          "Projekt a jeho chaty ({count}) budou trvale smazány. Tuto akci nelze vrátit zpět.",
-        deleteFilesMany:
-          "Odstranit také soubory a složky sandboxu, které tyto chaty vytvořily.",
+        deleteChatDescription: "Chat a jeho zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
+        deleteProjectDescription: "Projekt a jeho chaty ({count}) budou trvale smazány. Tuto akci nelze vrátit zpět.",
+        deleteFilesMany: "Odstranit také soubory a složky sandboxu, které tyto chaty vytvořily.",
         deleteProjectFilesLabel: "Smazat složku pracovního prostoru projektu",
-        deleteProjectFiles:
-          "Složka pracovního prostoru projektu bude odstraněna z disku.",
+        deleteProjectFiles: "Složka pracovního prostoru projektu bude odstraněna z disku.",
       },
       toast: {
         projectMoved: "Projekt {project} byl přesunut do sekce {section}",
@@ -5573,30 +5031,23 @@ export const cs = {
       },
       folder: {
         openChat: "Otevřít složku chatu",
-        openChatTitle:
-          "Otevřít složku, ve které volání nástrojů tohoto chatu čtou a zapisují",
+        openChatTitle: "Otevřít složku, ve které volání nástrojů tohoto chatu čtou a zapisují",
         openProject: "Otevřít složku projektu",
-        openProjectTitle:
-          "Otevřít složku, ve které chaty tohoto projektu čtou a zapisují",
-        chatHint:
-          "Složku se soubory chatu může otevřít jen desktopová aplikace. V prohlížeči stáhněte soubor z výsledku nástroje, který ho zapsal.",
-        projectHint:
-          "Složku projektu může otevřít jen desktopová aplikace. V prohlížeči stáhněte soubory z výsledků nástrojů, které je zapsaly.",
+        openProjectTitle: "Otevřít složku, ve které chaty tohoto projektu čtou a zapisují",
+        chatHint: "Složku se soubory chatu může otevřít jen desktopová aplikace. V prohlížeči stáhněte soubor z výsledku nástroje, který ho zapsal.",
+        projectHint: "Složku projektu může otevřít jen desktopová aplikace. V prohlížeči stáhněte soubory z výsledků nástrojů, které je zapsaly.",
         manyFolders: "Tento chat zapisoval do více než jedné složky.",
-        manyFoldersDescription:
-          "Spouštěl nástroje před přesunem i po něm, proto složku otevřete z karty nástroje.",
+        manyFoldersDescription: "Spouštěl nástroje před přesunem i po něm, proto složku otevřete z karty nástroje.",
         chatFailed: "Složku chatu se nepodařilo otevřít.",
         projectFailed: "Složku projektu se nepodařilo otevřít.",
         chatMissing: "Tento chat zatím nemá složku.",
         projectMissing: "Tento projekt zatím nemá složku.",
         missingDescription: "Vytvoří se, jakmile nástroj poprvé zapíše soubor.",
         upload: "Nahrát do složky chatu",
-        uploadTitle:
-          "Přidat soubory do složky, ve které volání nástrojů tohoto chatu čtou a zapisují",
+        uploadTitle: "Přidat soubory do složky, ve které volání nástrojů tohoto chatu čtou a zapisují",
         uploaded: "Soubor {name} byl přidán do složky chatu",
         uploadedMany: "Soubory přidané do složky chatu: {count}",
-        uploadedDescription:
-          "Nástroje v tomto chatu je nyní mohou otevřít. Do konverzace přidány nejsou.",
+        uploadedDescription: "Nástroje v tomto chatu je nyní mohou otevřít. Do konverzace přidány nejsou.",
         uploadExists: "Soubor {name} už ve složce chatu je",
         uploadExistsMany: "Soubory, které už ve složce chatu jsou: {count}",
         replace: "Nahradit",
@@ -5605,26 +5056,19 @@ export const cs = {
     },
     empty: {
       suggestedTitle: "Vaše knihovna je prázdná",
-      suggestedDescription:
-        "Zde se zobrazují soubory, které nahrajete nebo vytvoříte v chatech.",
+      suggestedDescription: "Zde se zobrazují soubory, které nahrajete nebo vytvoříte v chatech.",
       favoritesTitle: "Zatím žádné oblíbené",
-      favoritesDescription:
-        "Přidejte soubory do oblíbených a najdete je zde rychle.",
+      favoritesDescription: "Přidejte soubory do oblíbených a najdete je zde rychle.",
       foldersTitle: "Vytvořte svou první složku",
-      foldersDescription:
-        "Vytvářejte složky a uspořádejte si položky v knihovně.",
+      foldersDescription: "Vytvářejte složky a uspořádejte si položky v knihovně.",
       imagesTitle: "Zatím žádné obrázky",
-      imagesDescription:
-        "Zde se zobrazují obrázky, které nahrajete nebo vygenerujete.",
+      imagesDescription: "Zde se zobrazují obrázky, které nahrajete nebo vygenerujete.",
       videosTitle: "Zatím žádná videa",
-      videosDescription:
-        "Zde se zobrazují videa, která nahrajete nebo vygenerujete.",
+      videosDescription: "Zde se zobrazují videa, která nahrajete nebo vygenerujete.",
       audioTitle: "Zatím žádný zvuk",
-      audioDescription:
-        "Zde se zobrazuje řeč, hudba a stopy, které vytvoříte na stránce Zvuk.",
+      audioDescription: "Zde se zobrazuje řeč, hudba a stopy, které vytvoříte na stránce Zvuk.",
       modelsTitle: "Zatím žádné doladěné modely",
-      modelsDescription:
-        "Zde se zobrazují modely, které v Unsloth natrénujete nebo exportujete.",
+      modelsDescription: "Zde se zobrazují modely, které v Unsloth natrénujete nebo exportujete.",
       createFolder: "Vytvořit složku",
       generateImage: "Generovat obrázek",
       generateVideo: "Generovat video",
@@ -5747,12 +5191,9 @@ export const cs = {
       renameFile: "Přejmenovat soubor",
       deleteTitle: "Smazat „{name}“?",
       deleteManyTitle: "Smazat položky ({count})?",
-      deleteManyDescription:
-        "Soubory budou smazány ze svého umístění. Obsah smazané složky se přesune o úroveň výš.",
-      deleteFolderIntoParent:
-        "Veškerý obsah se přesune do složky „{folder}“. Žádné soubory nebudou smazány.",
-      deleteFolderIntoLibrary:
-        "Veškerý obsah se přesune do vaší knihovny. Žádné soubory nebudou smazány.",
+      deleteManyDescription: "Soubory budou smazány ze svého umístění. Obsah smazané složky se přesune o úroveň výš.",
+      deleteFolderIntoParent: "Veškerý obsah se přesune do složky „{folder}“. Žádné soubory nebudou smazány.",
+      deleteFolderIntoLibrary: "Veškerý obsah se přesune do vaší knihovny. Žádné soubory nebudou smazány.",
       deleteUpload: "Tímto bude soubor trvale smazán.",
       deleteAttachment: "Odstraní se také z chatu, ke kterému byl připojen.",
       deleteImage: "Odstraní se také z vaší galerie Obrázky.",
@@ -5761,8 +5202,7 @@ export const cs = {
       deleteSandbox: "Odstraní se také z chatu, který ho vytvořil.",
       deleteModel: "Tímto bude model trvale smazán z disku.",
       unsavedTitle: "Vaše změny nebyly uloženy",
-      unsavedDescription:
-        "{reason} Zkuste to znovu, nebo změny zahoďte a soubor zavřete.",
+      unsavedDescription: "{reason} Zkuste to znovu, nebo změny zahoďte a soubor zavřete.",
       keepEditing: "Pokračovat v úpravách",
       discardChanges: "Zahodit změny",
     },
@@ -5779,21 +5219,17 @@ export const cs = {
       sheetTruncated: "Zobrazuje se jen část tohoto listu",
       documentTruncated: "Zobrazuje se jen začátek tohoto dokumentu",
       emptyDocument: "Tento soubor je prázdný.",
-      cannotPreview:
-        "Náhled tohoto souboru zde nelze zobrazit. Chcete-li ho otevřít, stáhněte si ho.",
+      cannotPreview: "Náhled tohoto souboru zde nelze zobrazit. Chcete-li ho otevřít, stáhněte si ho.",
       noPreview: "Pro tento typ souboru není k dispozici náhled.",
-      tooLargeToPreview:
-        "Tento soubor je příliš velký na zobrazení náhledu. Chcete-li ho otevřít, stáhněte si ho.",
+      tooLargeToPreview: "Tento soubor je příliš velký na zobrazení náhledu. Chcete-li ho otevřít, stáhněte si ho.",
       startWriting: "Začněte psát…",
       type: "Typ",
       baseModel: "Základní model",
       size: "Velikost",
       location: "Umístění",
       unknown: "Neznámé",
-      readOnlyUtf16:
-        "Tento soubor není platný text UTF-16, proto se zde otevře jen pro čtení.",
-      readOnlyNotUtf8:
-        "Tento soubor není text UTF-8, proto se zde otevře jen pro čtení. Některé znaky se nemusí zobrazit správně.",
+      readOnlyUtf16: "Tento soubor není platný text UTF-16, proto se zde otevře jen pro čtení.",
+      readOnlyNotUtf8: "Tento soubor není text UTF-8, proto se zde otevře jen pro čtení. Některé znaky se nemusí zobrazit správně.",
     },
     viewer: {
       scale: "Měřítko",
@@ -5843,11 +5279,9 @@ export const cs = {
       createNoteFailed: "Poznámku se nepodařilo vytvořit",
       renameFailed: "Přejmenování se nezdařilo",
       createFolderFailed: "Složku se nepodařilo vytvořit",
-      signedOutBeforeFolder:
-        "Došlo k odhlášení dříve, než byla složka vytvořena.",
+      signedOutBeforeFolder: "Došlo k odhlášení dříve, než byla složka vytvořena.",
       signedOutBeforeSave: "Došlo k odhlášení dříve, než byla změna uložena.",
-      signedOutBeforeUpload:
-        "Došlo k odhlášení dříve, než bylo nahrávání dokončeno.",
+      signedOutBeforeUpload: "Došlo k odhlášení dříve, než bylo nahrávání dokončeno.",
       deleteFailed: "Některé položky se nepodařilo smazat",
       saveFailed: "Uložení se nezdařilo",
       saveNoteFirst: "Nejprve poznámku uložte.",
@@ -5855,8 +5289,7 @@ export const cs = {
       downloadFailed: "Nepodařilo se stáhnout: {name}",
       downloadManyFailed: "Soubory se nepodařilo stáhnout",
       downloadingMany: "Stahování souborů ({count})",
-      downloadingManyDescription:
-        "Pokud se prohlížeč zeptá, povolte tomuto webu stahování více souborů.",
+      downloadingManyDescription: "Pokud se prohlížeč zeptá, povolte tomuto webu stahování více souborů.",
       preparingMany: "Příprava souborů ({count})…",
       zipFileName: "Soubory z knihovny",
       nothingToChat: "Zatím není o čem chatovat",
@@ -5867,8 +5300,7 @@ export const cs = {
       attachedMany: "Připojené soubory: {count}",
       skippedTooLarge: "Příliš velké k připojení: {count}.",
       skippedOverLimit: "Nad limit souborů ({limit}): {count}.",
-      chatFilesWaiting:
-        "Připojí se po načtení modelu, který je umí číst: {count}.",
+      chatFilesWaiting: "Připojí se po načtení modelu, který je umí číst: {count}.",
       openFilesFailed: "Soubory se nepodařilo otevřít",
       editImageFailed: "Obrázek se nepodařilo otevřít k úpravám",
       speechModel: "{name} je řečový model",
@@ -5895,10 +5327,8 @@ export const cs = {
   },
   exportDecision: {
     title: "Rozhodovací model",
-    description:
-      "Rozhodovací modely typu {layout} se exportují do GGUF pro rozhodovací server llama.cpp. Vyberte jednu nebo více kvantizací.",
-    adapterNote:
-      "Tento kontrolní bod obsahuje adaptéry LoRA; před převodem se sloučí.",
+    description: "Rozhodovací modely typu {layout} se exportují do GGUF pro rozhodovací server llama.cpp. Vyberte jednu nebo více kvantizací.",
+    adapterNote: "Tento kontrolní bod obsahuje adaptéry LoRA; před převodem se sloučí.",
     notEligibleTitle: "Export GGUF není k dispozici",
     ggufOnly: "Rozhodovací modely lze exportovat pouze do GGUF",
     existing: "Již exportováno: {quantizations}",
@@ -5915,8 +5345,7 @@ export const cs = {
     typeChoice: "Výběr",
     typeScore: "Hodnocení",
     aboutNoul: "Odpoví ano, nebo ne, s pravděpodobností odpovědi ano.",
-    aboutChoice:
-      "Vybere jednu možnost ze seznamu, s pravděpodobností pro každou z nich.",
+    aboutChoice: "Vybere jednu možnost ze seznamu, s pravděpodobností pro každou z nich.",
     aboutScore: "Ohodnotí stav na stupnici úrovní, od nejnižší.",
     model: "Rozhodovací model",
     defaultModel: "Výchozí ({model})",
@@ -5925,8 +5354,7 @@ export const cs = {
     modelReady: "Připraveno",
     modelLoading: "Načítání",
     modelNotLoaded: "Načte se při prvním spuštění",
-    connectionNotDefault:
-      "Nejprve tento model nastavte jako model Decision API v Nastavení > API.",
+    connectionNotDefault: "Nejprve tento model nastavte jako model Decision API v Nastavení > API.",
     question: "Otázka",
     questionHelp: "O čem má model rozhodnout.",
     result: "Výsledek",
@@ -5937,8 +5365,7 @@ export const cs = {
     stateHelp: "Text, o kterém se rozhoduje. Prostý text nebo JSON.",
     criteria: "Kritéria",
     criteriaNoulHelp: "Volitelné. Co se počítá jako ano a co jako ne.",
-    criteriaChoiceHelp:
-      "Možnosti, ze kterých se vybírá, každá s krátkým popisem.",
+    criteriaChoiceHelp: "Možnosti, ze kterých se vybírá, každá s krátkým popisem.",
     criteriaScoreHelp: "Úrovně stupnice, od nejnižší.",
     yesWhen: "Ano, když",
     noWhen: "Ne, když",
@@ -6003,19 +5430,15 @@ export const cs = {
       noneLoadedDetail: "Zde se zobrazí modely, které načtete.",
       otherAccount: "Používá jiný účet",
       otherAccountDetail: "Paměť zabírá model, který nevidíte",
-      toastStillResident:
-        "Model „{model}“ byl během uvolňování načten, takže stále využívá paměť. Uvolněte ho znovu.",
-      toastUnverified:
-        "Model {model} dostal pokyn k uvolnění, ale jeho běhové prostředí to nepotvrdilo. Za chvíli zkontrolujte kartu.",
+      toastStillResident: "Model „{model}“ byl během uvolňování načten, takže stále využívá paměť. Uvolněte ho znovu.",
+      toastUnverified: "Model {model} dostal pokyn k uvolnění, ale jeho běhové prostředí to nepotvrdilo. Za chvíli zkontrolujte kartu.",
       toastAlreadyFree: "Model {model} již nebyl načtený.",
-      toastReplaced:
-        "Model {model} již není načtený. Jeho místo zaujal model „{resident}“, který zůstal beze změny.",
+      toastReplaced: "Model {model} již není načtený. Jeho místo zaujal model „{resident}“, který zůstal beze změny.",
       toastEjected: "Uvolněno: {model}",
       toastFailed: "Nepodařilo se uvolnit: {model}",
     },
     monitor: {
-      dragHandleLabel:
-        "Přesunout živý monitor. Šipky ho posunou, dvojklik ho vrátí na výchozí místo.",
+      dragHandleLabel: "Přesunout živý monitor. Šipky ho posunou, dvojklik ho vrátí na výchozí místo.",
       resizeHint: "Přetažením okraje nebo rohu změníte šířku. Dvojklik ji obnoví.",
       reconnecting: "Opětovné připojování...",
     },
@@ -6036,8 +5459,7 @@ export const cs = {
     oldestFirst: "Nejstarší první",
     today: "Dnes",
     yesterday: "Včera",
-    emptyDescription:
-      "Projekt drží související chaty pohromadě, se sdílenými pokyny a zdroji, které může používat každý chat v něm.",
+    emptyDescription: "Projekt drží související chaty pohromadě, se sdílenými pokyny a zdroji, které může používat každý chat v něm.",
     createFirst: "Vytvořte svůj první projekt",
     noMatches: "Hledání neodpovídají žádné projekty.",
     clearSearch: "Vymazat hledání",
@@ -6059,18 +5481,15 @@ export const cs = {
     renameChat: "Přejmenovat chat",
     chatName: "Název chatu",
     deleteChat: "Smazat chat",
-    deleteChatDescription:
-      "Chat „{name}“ a jeho zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
+    deleteChatDescription: "Chat „{name}“ a jeho zprávy budou trvale smazány. Tuto akci nelze vrátit zpět.",
     importChats: "Importovat chaty",
     importDestination: "Vyberte, kam importovat {name}:",
     selectDestination: "Vybrat cíl",
     recents: "Nedávné",
     import: "Importovat",
     deleteProject: "Smazat projekt",
-    deleteProjectDescription:
-      "Projekt „{name}“ a všechny jeho chaty budou trvale smazány. Tuto akci nelze vrátit zpět.",
-    deleteProjectFiles:
-      "Složka pracovního prostoru projektu bude odstraněna z disku.",
+    deleteProjectDescription: "Projekt „{name}“ a všechny jeho chaty budou trvale smazány. Tuto akci nelze vrátit zpět.",
+    deleteProjectFiles: "Složka pracovního prostoru projektu bude odstraněna z disku.",
     deleteAll: "Smazat vše",
     projectFallback: "projekt",
     importFailed: "Import se nezdařil.",
@@ -6095,18 +5514,14 @@ export const cs = {
     currentPassword: "Aktuální heslo",
     newPassword: "Nové heslo",
     confirmPassword: "Potvrdit heslo",
-    setupCodeHint:
-      "Přihlašujete se poprvé? Jako heslo vložte kód nastavení, který vám dal správce.",
-    ownerHint:
-      "Jste vlastník instalace? Přihlaste se jako unsloth nebo pod přihlašovacím jménem uvedeným v Nastavení > Účty.",
-    currentSetupCodeHint:
-      "Jako aktuální heslo vložte kód nastavení, kterým jste se právě přihlásili.",
+    setupCodeHint: "Přihlašujete se poprvé? Jako heslo vložte kód nastavení, který vám dal správce.",
+    ownerHint: "Jste vlastník instalace? Přihlaste se jako unsloth nebo pod přihlašovacím jménem uvedeným v Nastavení > Účty.",
+    currentSetupCodeHint: "Jako aktuální heslo vložte kód nastavení, kterým jste se právě přihlásili.",
     minLength: "Musí mít alespoň 8 znaků.",
     ensureMatch: "Ujistěte se, že se hesla shodují.",
     noSpaces: "Nové heslo nesmí obsahovat mezery.",
     currentTooShort: "Aktuální heslo musí mít alespoň 8 znaků.",
-    setupInitFailed:
-      "Nastavení se nepodařilo inicializovat. Načtěte stránku znovu a zkuste to znovu.",
+    setupInitFailed: "Nastavení se nepodařilo inicializovat. Načtěte stránku znovu a zkuste to znovu.",
     newTooShort: "Nové heslo musí mít alespoň 8 znaků.",
     mismatch: "Hesla se neshodují.",
     mustDiffer: "Nové heslo se musí lišit od aktuálního hesla.",
@@ -6114,17 +5529,14 @@ export const cs = {
     continueAsOwner: "Pokračovat jako vlastník",
     signInWithUsername: "Přihlaste se uživatelským jménem a heslem.",
     bootstrapping: "Ověřování stále vytváří výchozí účet správce.",
-    signInToChange:
-      "Chcete-li změnit heslo, přihlaste se jednou pomocí výchozích přihlašovacích údajů.",
+    signInToChange: "Chcete-li změnit heslo, přihlaste se jednou pomocí výchozích přihlašovacích údajů.",
     alreadyUpdated: "Heslo již bylo změněno. Použijte přihlašovací obrazovku.",
     busy: "Unsloth je zaneprázdněn. Zkuste to za chvíli znovu.",
     updateFailed: "Změna hesla se nezdařila.",
     loadFailed: "Načtení se nezdařilo.",
     failed: "Ověření se nezdařilo.",
-    shuttingDown:
-      "Tato instance se vypíná: byla dostupná v síti a její výchozí heslo nebylo nikdy změněno.",
-    shutdownCountdown:
-      "Tato instance je dostupná v síti a stále používá výchozí heslo, proto se vypne za {time}. Nastavením hesla zde zůstane spuštěná.",
+    shuttingDown: "Tato instance se vypíná: byla dostupná v síti a její výchozí heslo nebylo nikdy změněno.",
+    shutdownCountdown: "Tato instance je dostupná v síti a stále používá výchozí heslo, proto se vypne za {time}. Nastavením hesla zde zůstane spuštěná.",
   },
   routes: {
     chat: "Chat",
@@ -6138,22 +5550,15 @@ export const cs = {
     blockedTitle: "Vlastní kód zablokován",
     enableTitle: "Povolit pro tento model vlastní kód?",
     thisModel: "Tento model",
-    unsafeBody:
-      "{model} obsahuje soubory, které bezpečnostní kontrola Hugging Face označila za nebezpečné (například škodlivý pickle, který by při načtení modelu spustil kód). Nelze ho načíst. Označené soubory nebyly nikdy staženy.",
-    unsafeBodyFromProvider:
-      "{model} od poskytovatele {provider} obsahuje soubory, které bezpečnostní kontrola Hugging Face označila za nebezpečné (například škodlivý pickle, který by při načtení modelu spustil kód). Nelze ho načíst. Označené soubory nebyly nikdy staženy.",
-    customCode:
-      "{model} deklaruje ve svém repozitáři vlastní kód v Pythonu. {note}",
-    customCodeFromProvider:
-      "{model} od poskytovatele {provider} deklaruje ve svém repozitáři vlastní kód v Pythonu. {note}",
-    blockedNote:
-      "Bezpečnostní kontrola zjistila KRITICKÉ problémy, proto ho nelze povolit.",
-    reviewNote:
-      "Projděte si níže výsledky bezpečnostní kontroly. Pokračujte, jen pokud zdroji modelu důvěřujete.",
+    unsafeBody: "{model} obsahuje soubory, které bezpečnostní kontrola Hugging Face označila za nebezpečné (například škodlivý pickle, který by při načtení modelu spustil kód). Nelze ho načíst. Označené soubory nebyly nikdy staženy.",
+    unsafeBodyFromProvider: "{model} od poskytovatele {provider} obsahuje soubory, které bezpečnostní kontrola Hugging Face označila za nebezpečné (například škodlivý pickle, který by při načtení modelu spustil kód). Nelze ho načíst. Označené soubory nebyly nikdy staženy.",
+    customCode: "{model} deklaruje ve svém repozitáři vlastní kód v Pythonu. {note}",
+    customCodeFromProvider: "{model} od poskytovatele {provider} deklaruje ve svém repozitáři vlastní kód v Pythonu. {note}",
+    blockedNote: "Bezpečnostní kontrola zjistila KRITICKÉ problémy, proto ho nelze povolit.",
+    reviewNote: "Projděte si níže výsledky bezpečnostní kontroly. Pokračujte, jen pokud zdroji modelu důvěřujete.",
     trustNote: "Pokračujte, jen pokud zdroji modelu důvěřujete.",
     flaggedIntro: "Náš automatický skener označil mimo jiné tyto problémy:",
-    nothingFlagged:
-      "Náš automatický skener neoznačil žádné znepokojivé soubory, přesto to prosím ověřte.",
+    nothingFlagged: "Náš automatický skener neoznačil žádné znepokojivé soubory, přesto to prosím ověřte.",
     unscannedTitle: "Soubory modelu se nepodařilo zkontrolovat",
     unscannedBody: "{model} obsahuje váhy pickle, které mohou při načtení spustit kód, a kontrola malwaru pro ně není k dispozici, takže jej nelze načíst. {note}",
     unscannedIntro: "Soubory, které se nepodařilo zkontrolovat:",
@@ -6184,19 +5589,15 @@ export const cs = {
     openChangelog: "Otevřít seznam změn",
     retry: "Zkusit znovu",
     loadingChanges: "Načítání nových změn...",
-    customLlamaRepo:
-      "Tato instalace sleduje vlastní repozitář llama.cpp, takže její změny nelze porovnat.",
-    noItemisedNotes:
-      "Toto sestavení je starší než podrobné poznámky k verzi, takže jeho změny nelze porovnat.",
+    customLlamaRepo: "Tato instalace sleduje vlastní repozitář llama.cpp, takže její změny nelze porovnat.",
+    noItemisedNotes: "Toto sestavení je starší než podrobné poznámky k verzi, takže jeho změny nelze porovnat.",
     compareFailed: "Tato vydání se nepodařilo porovnat.",
     llamaChangesLabel: "Nové změny llama.cpp od {from} do {to}",
     showingChanges: "Zobrazeno {shown} z {total} změn",
-    noCarriedChanges:
-      "Pro toto sestavení nejsou uvedeny žádné nové převzaté změny.",
+    noCarriedChanges: "Pro toto sestavení nejsou uvedeny žádné nové převzaté změny.",
     notesFor: "Poznámky k vydání {release}",
     notesForVersion: "Poznámky k verzi {version}",
-    notesTruncated:
-      "Poznámky jsou zkrácené. Zobrazte si úplné poznámky k verzi.",
+    notesTruncated: "Poznámky jsou zkrácené. Zobrazte si úplné poznámky k verzi.",
     summaryLabel: "Souhrn poznámek k verzi",
     moreCount: "+{count} další",
     loadingNotes: "Načítání poznámek k verzi...",
@@ -6214,8 +5615,7 @@ export const cs = {
     useDefaultLocation: "Použít výchozí",
     longPaths: {
       title: "Windows požádá o oprávnění",
-      approve:
-        "Jednou schvalte {tool}, aby se pro kompilovaná jádra zapnuly dlouhé cesty k souborům.",
+      approve: "Jednou schvalte {tool}, aby se pro kompilovaná jádra zapnuly dlouhé cesty k souborům.",
       waiting: "Čeká se na oprávnění Windows...",
     },
     skip: "Přeskočit",
@@ -6244,8 +5644,7 @@ export const cs = {
     repair: {
       upgrading: "Přechod na úplnou instalaci...",
       gettingReady: "Probíhá příprava...",
-      upgradingDetail:
-        "Stahuje se PyTorch a jeho knihovny pro GPU tohoto počítače. Může to trvat několik minut.",
+      upgradingDetail: "Stahuje se PyTorch a jeho knihovny pro GPU tohoto počítače. Může to trvat několik minut.",
       wontTakeLong: "Nebude to trvat dlouho.",
       upgradeFailed: "Přechod na úplnou instalaci se nezdařil",
       updateFailed: "Aktualizace se nezdařila",
@@ -6272,8 +5671,7 @@ export const cs = {
     diagnostics: {
       copy: "Kopírovat diagnostiku",
       copying: "Kopírování...",
-      clipboardFailed:
-        "Kopírování do schránky se nezdařilo. Označte a zkopírujte diagnostiku níže.",
+      clipboardFailed: "Kopírování do schránky se nezdařilo. Označte a zkopírujte diagnostiku níže.",
       copyFailed: "Kopírování diagnostiky se nezdařilo: {error}",
     },
   },
@@ -6295,8 +5693,7 @@ export const cs = {
       failedTitle: "Aktualizace aplikace se nezdařila",
       newVersion: "Nová verze Unsloth",
       backendRecovered: "Backend se obnovil. Diagnostika je stále k dispozici.",
-      linuxManual:
-        "Chcete-li nainstalovat balíček pro Linux, otevřete stránku vydání na GitHubu",
+      linuxManual: "Chcete-li nainstalovat balíček pro Linux, otevřete stránku vydání na GitHubu",
       available: "Je k dispozici nová aktualizace aplikace",
       showNotes: "Zobrazit poznámky k verzi",
       hideNotes: "Skrýt poznámky k verzi",
@@ -6408,4 +5805,4 @@ export const cs = {
       inRam: "{amount} v RAM",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

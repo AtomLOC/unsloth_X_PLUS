@@ -23,6 +23,8 @@ export const SETTINGS_TABS = [
   "browser",
   "computer-use",
   "debugging",
+  "telemetry",
+  "labs",
   "about",
 ] as const;
 

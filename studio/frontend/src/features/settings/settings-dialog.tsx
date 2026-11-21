@@ -39,7 +39,13 @@ import {
   UserCircleIcon,
 } from "@hugeicons/core-free-icons";
 import { ShieldCogIcon } from "@/lib/shield-cog-icon";
-import { ChipIcon, MessageCircleIcon, Settings01Icon } from "@/lib/hugeicons-derived";
+import {
+  ChipIcon,
+  MessageCircleIcon,
+  Settings01Icon,
+  SpeedMeterIcon,
+  TestTubeOutlineIcon,
+} from "@/lib/hugeicons-derived";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -111,6 +117,9 @@ const TAB_LOADERS = {
     import("./tabs/agents-tab").then((m) => ({ default: m.AgentsTab })),
   debugging: () =>
     import("./tabs/debugging-tab").then((m) => ({ default: m.DebuggingTab })),
+  telemetry: () =>
+    import("./tabs/telemetry-tab").then((m) => ({ default: m.TelemetryTab })),
+  labs: () => import("./tabs/labs-tab").then((m) => ({ default: m.LabsTab })),
   about: () =>
     import("./tabs/about-tab").then((m) => ({ default: m.AboutTab })),
 } satisfies Record<SettingsTab, () => Promise<{ default: FC<SettingsPanelProps> }>>;
@@ -336,6 +345,16 @@ const TABS: TabDef[] = [
     labelKey: "settings.tabs.debugging",
     icon: ComputerTerminal01Icon,
   },
+  {
+    id: "telemetry",
+    labelKey: "settings.tabs.telemetry",
+    icon: SpeedMeterIcon,
+  },
+  {
+    id: "labs",
+    labelKey: "settings.tabs.labs",
+    icon: TestTubeOutlineIcon,
+  },
   { id: "about", labelKey: "settings.tabs.about", icon: HelpCircleIcon },
 ];
 
@@ -366,7 +385,7 @@ export const SETTINGS_NAV_GROUPS: {
     headingKey: "settings.navGroups.dataAccess",
     ids: ["sandbox", "accounts", "data", "library"],
   },
-  { headingKey: null, ids: ["debugging", "about"] },
+  { headingKey: null, ids: ["debugging", "telemetry", "labs", "about"] },
 ];
 
 
@@ -662,6 +681,8 @@ export function SettingsDialog() {
     return () => window.cancelAnimationFrame(frame);
   }, [open]);
   const tabButtonRefs = useRef<Record<SettingsTab, HTMLButtonElement | null>>({
+    telemetry: null,
+    labs: null,
     accounts: null,
     general: null,
     profile: null,

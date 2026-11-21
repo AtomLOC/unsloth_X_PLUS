@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import type { DeepPartialMessageTree } from "../types";
-import type { en } from "./en.ts";
-
 export const tr = {
   turns: {
     label: "Tur {number}",
@@ -113,8 +110,7 @@ export const tr = {
   },
   imageViewer: {
     title: "Görsel",
-    description:
-      "Görseller arasında geçmek için ok tuşlarını, yakınlaştırmak için artı veya eksiyi kullanın.",
+    description: "Görseller arasında geçmek için ok tuşlarını, yakınlaştırmak için artı veya eksiyi kullanın.",
     failed: "Bu görsel yüklenemedi.",
     downloadFailed: "Görsel kaydedilemedi.",
     openSource: "Kaynak sayfayı aç",
@@ -133,8 +129,7 @@ export const tr = {
   browser: {
     drafts: {
       title: "Metin girilmiş bir sayfa bellekten kaldırılsın mı?",
-      description:
-        "Sohbetin hızlı yanıt vermesi için metin girilmiş en fazla üç gizli sayfa çalışır durumda kalır. Devam ederseniz şu sayfalar bellekten kaldırılır ve kaydedilmemiş metin kaybolabilir: {pages}. İptal, önceki sekmeye döner.",
+      description: "Sohbetin hızlı yanıt vermesi için metin girilmiş en fazla üç gizli sayfa çalışır durumda kalır. Devam ederseniz şu sayfalar bellekten kaldırılır ve kaydedilmemiş metin kaybolabilir: {pages}. İptal, önceki sekmeye döner.",
       confirm: "Bellekten kaldır ve devam et",
     },
     agentSettings: {
@@ -142,28 +137,23 @@ export const tr = {
       docs: "Belgeler",
       docsLabel: "Tarayıcı kullanımı belgelerini aç",
       enable: "Modellerin tarayıcıyı kullanmasına izin ver",
-      enableDescription:
-        "Modeller sayfaları kendi tarayıcı sekmelerinde açar, okur ve sizin yerinize tıklayıp yazar. Yazma alanındaki + menüsünde de bulunur.",
+      enableDescription: "Modeller sayfaları kendi tarayıcı sekmelerinde açar, okur ve sizin yerinize tıklayıp yazar. Yazma alanındaki + menüsünde de bulunur.",
       history: "Tarama geçmişi",
-      historyDescription:
-        "Tam erişim onayı atlar; Hiçbir zaman yine de erişimi engeller",
+      historyDescription: "Tam erişim onayı atlar; Hiçbir zaman yine de erişimi engeller",
       alwaysAsk: "Her zaman sor",
       alwaysAllow: "Her zaman izin ver",
       never: "Hiçbir zaman",
       scripts: "Betik çalıştır",
-      scriptsDescription:
-        "Modellerin sayfalarda betik çalıştırıp çalıştıramayacağını seçin. Her betiği çalışmadan önce görürsünüz",
+      scriptsDescription: "Modellerin sayfalarda betik çalıştırıp çalıştıramayacağını seçin. Her betiği çalışmadan önce görürsünüz",
       scriptsAllowDescription: "Modeller betikleri sormadan her sayfada çalıştırır. Bir betik sayfadaki her şeyi okuyabilir ve değiştirebilir",
       scriptsConfirmTitle: "Tüm betiklere izin verilsin mi?",
       scriptsConfirmDescription: "Modeller betikleri size önce göstermeden her sayfada çalıştırır. Bir betik, oturum açtığınız sayfalar dahil sayfadaki her şeyi okuyabilir ve değiştirebilir. Bunu yalnızca kullandığınız modellere güveniyorsanız açın.",
       scriptsConfirmAction: "Tüm betiklere izin ver",
       cursor: "İmleci göster",
-      cursorDescription:
-        "Modellerin sayfada tıkladığı, yazdığı ve sürüklediği yerde bir işaretçi göster",
+      cursorDescription: "Modellerin sayfada tıkladığı, yazdığı ve sürüklediği yerde bir işaretçi göster",
       askEveryTime: "Her seferinde sor",
       permissionsTitle: "Ajan izinleri",
-      permissionsDescription:
-        "Varsayılanları ve siteye özel istisnaları ayarlayın. Parola ve ödeme alanları asla doldurulmaz.",
+      permissionsDescription: "Varsayılanları ve siteye özel istisnaları ayarlayın. Parola ve ödeme alanları asla doldurulmaz.",
       site: "Site veya kalıp",
       sitePlaceholder: "example.com veya *.example.com",
       default: "Varsayılan",
@@ -180,8 +170,7 @@ export const tr = {
       cancel: "İptal",
       removeSite: "Kaldır: {site}",
       hostOnly: "Yalnızca bu ana bilgisayar, alt alan adları hariç",
-      permissionsNote:
-        "Burada yalnızca kendi izinleri olan siteler görünür. Eylemler; oturum açma, form gönderme ve satın alan, gönderen veya silen düğmelerdir.",
+      permissionsNote: "Burada yalnızca kendi izinleri olan siteler görünür. Eylemler; oturum açma, form gönderme ve satın alan, gönderen veya silen düğmelerdir.",
       siteInvalid: "example.com veya *.example.com gibi bir site girin.",
     },
     agent: {
@@ -199,8 +188,7 @@ export const tr = {
         click: "Unsloth şu sitede “{name}” öğesine tıklasın mı: {host}?",
         history: "Unsloth tarama geçmişinizi okusun mu?",
         script: "Unsloth bu betiği şu sitede çalıştırsın mı: {host}?",
-        pointer:
-          "Unsloth şu sitenin tuval gibi etiketsiz bölümlerine tıklasın mı: {host}?",
+        pointer: "Unsloth şu sitenin tuval gibi etiketsiz bölümlerine tıklasın mı: {host}?",
       },
       step: {
         open: "Açılıyor: {detail}",
@@ -241,8 +229,7 @@ export const tr = {
     browserUse: {
       label: "Tarayıcı kullanımı",
       description: "Modellerin yerleşik tarayıcıyı denetlemesine izin ver",
-      unavailable:
-        "Tarayıcıyı kullanabilmesi için araç çağırabilen bir model yükleyin.",
+      unavailable: "Tarayıcıyı kullanabilmesi için araç çağırabilen bir model yükleyin.",
     },
     suggested: "Önerilenler",
     suggestedMenu: {
@@ -277,11 +264,9 @@ export const tr = {
       close: "Kapat",
       security: "Güvenlik",
       secureTitle: "Bağlantı güvenli",
-      secureDescription:
-        "Parolalar veya kart numaraları gibi bilgileriniz bu siteye gönderilirken gizli kalır.",
+      secureDescription: "Parolalar veya kart numaraları gibi bilgileriniz bu siteye gönderilirken gizli kalır.",
       insecureTitle: "Bağlantı güvenli değil",
-      insecureDescription:
-        "Bu siteye gönderdiğiniz parolalar veya kart numaraları gibi bilgiler başkaları tarafından görülebilir.",
+      insecureDescription: "Bu siteye gönderdiğiniz parolalar veya kart numaraları gibi bilgiler başkaları tarafından görülebilir.",
       learnMore: "Daha fazla bilgi",
       certificateValid: "Sertifika geçerli",
     },
@@ -301,89 +286,65 @@ export const tr = {
     linksTitle: "Bağlantılar ve dosyalar",
     addressBarTitle: "Adres çubuğu",
     openLinksSetting: "Bağlantıları açma yeri",
-    openLinksSettingDescription:
-      "Sohbetteki bağlantıların açılacağı yer: varsayılan tarayıcınız veya konuşmanın yanındaki tarayıcıda bir sekme. Yerel adreslere giden bağlantılar her zaman varsayılan tarayıcınızda açılır.",
+    openLinksSettingDescription: "Sohbetteki bağlantıların açılacağı yer: varsayılan tarayıcınız veya konuşmanın yanındaki tarayıcıda bir sekme. Yerel adreslere giden bağlantılar her zaman varsayılan tarayıcınızda açılır.",
     linkDestinationDefault: "Varsayılan tarayıcı",
     linkDestinationPanel: "Unsloth tarayıcısı",
     openFilesSetting: "Dosyaları tarayıcıda aç",
-    openFilesSettingDescription:
-      "Eklediğiniz PDF, Office dosyaları, HTML ve metin gibi belgeler önizleme penceresi yerine konuşmanın yanındaki bir tarayıcı sekmesinde açılır.",
+    openFilesSettingDescription: "Eklediğiniz PDF, Office dosyaları, HTML ve metin gibi belgeler önizleme penceresi yerine konuşmanın yanındaki bir tarayıcı sekmesinde açılır.",
     searchEngineSetting: "Arama motoru",
-    searchEngineSettingDescription:
-      "Adres çubuğuna URL yerine sözcükler girildiğinde kullanılır.",
+    searchEngineSettingDescription: "Adres çubuğuna URL yerine sözcükler girildiğinde kullanılır.",
     showFullUrlSetting: "Tam URL'yi göster",
-    showFullUrlSettingDescription:
-      "Adres çubuğunda yalnızca siteyi ve yolu değil, sorguyu ve parçayı da göster.",
+    showFullUrlSettingDescription: "Adres çubuğunda yalnızca siteyi ve yolu değil, sorguyu ve parçayı da göster.",
     bookmarksTitle: "Yer imleri",
     bookmarksToolbarSetting: "Yer imleri araç çubuğu",
-    bookmarksToolbarSettingDescription:
-      "Kaydettiğiniz sayfaların adres çubuğunun altında ne zaman gösterileceği.",
-    bookmarkEditorSettingDescription:
-      "Yer imini kaydederken adını verin ve konumunu seçin.",
-    bookmarksSettingDescription:
-      "Tarayıcıda kaydedilen sayfaları görüntüleyin, düzenleyin ve kaldırın.",
+    bookmarksToolbarSettingDescription: "Kaydettiğiniz sayfaların adres çubuğunun altında ne zaman gösterileceği.",
+    bookmarkEditorSettingDescription: "Yer imini kaydederken adını verin ve konumunu seçin.",
+    bookmarksSettingDescription: "Tarayıcıda kaydedilen sayfaları görüntüleyin, düzenleyin ve kaldırın.",
     browsingDataTitle: "Tarama verileri",
     historySetting: "Tarama geçmişi",
-    historySettingDescription:
-      "Tarayıcıda ziyaret edilen sayfaları görüntüleyin ve yönetin.",
+    historySettingDescription: "Tarayıcıda ziyaret edilen sayfaları görüntüleyin ve yönetin.",
     downloadsSetting: "İndirme geçmişi",
-    downloadsSettingDescription:
-      "Tarayıcıdan indirilen dosyaları görüntüleyin ve yönetin.",
+    downloadsSettingDescription: "Tarayıcıdan indirilen dosyaları görüntüleyin ve yönetin.",
     pagesFromChat: "Bunu tarayıcıda görüntülemek için bir sohbet açın.",
     tabsTitle: "Sekmeler",
     switchToNewTabsSetting: "Yeni sekmelere hemen geç",
-    switchToNewTabsSettingDescription:
-      "Bir bağlantıyı ⌘ veya Ctrl ile yeni sekmede açtığınızda, arka planda açmak yerine onu gösterir.",
-    switchToNewTabsNative:
-      "Masaüstü uygulamasında sayfalar yeni sekmeleri her zaman önde açar.",
+    switchToNewTabsSettingDescription: "Bir bağlantıyı ⌘ veya Ctrl ile yeni sekmede açtığınızda, arka planda açmak yerine onu gösterir.",
+    switchToNewTabsNative: "Masaüstü uygulamasında sayfalar yeni sekmeleri her zaman önde açar.",
     defaultZoomSetting: "Varsayılan yakınlaştırma",
-    defaultZoomSettingDescription:
-      "Sayfaların açıldığında ne kadar büyük görüneceği. Bir sayfanın yakınlaştırmasını sıfırlamak bu değere döndürür.",
+    defaultZoomSettingDescription: "Sayfaların açıldığında ne kadar büyük görüneceği. Bir sayfanın yakınlaştırmasını sıfırlamak bu değere döndürür.",
     newTabPageTitle: "Yeni sekme sayfası",
     showSuggestedSetting: "Önerilen siteleri göster",
-    showSuggestedSettingDescription:
-      "Sık ziyaret ettiğiniz siteler, yeni sekmede kısayol olarak.",
+    showSuggestedSettingDescription: "Sık ziyaret ettiğiniz siteler, yeni sekmede kısayol olarak.",
     showRecentsSetting: "Son sayfaları göster",
-    showRecentsSettingDescription:
-      "Yakın zamanda ziyaret ettiğiniz sayfalar yeni sekmede listelenir.",
+    showRecentsSettingDescription: "Yakın zamanda ziyaret ettiğiniz sayfalar yeni sekmede listelenir.",
     hiddenSuggestionsSetting: "Kaldırılan öneriler",
-    hiddenSuggestionsSettingDescription:
-      "Önerilenler'den kaldırdığınız siteler: {count}. Yeniden görünmeleri için geri yükleyin.",
-    hiddenSuggestionsNone:
-      "Önerilenler'den kaldırdığınız siteleri burada geri yükleyebilirsiniz.",
+    hiddenSuggestionsSettingDescription: "Önerilenler'den kaldırdığınız siteler: {count}. Yeniden görünmeleri için geri yükleyin.",
+    hiddenSuggestionsNone: "Önerilenler'den kaldırdığınız siteleri burada geri yükleyebilirsiniz.",
     restore: "Geri yükle",
     importBookmarksSetting: "İçe ve dışa aktar",
-    importBookmarksSettingDescription:
-      "Chrome, Safari, Firefox veya Edge'in dışa aktardığı HTML dosyasıyla yer imlerini içe aktarın ya da kendi yer imlerinizi bu biçimde kaydedin.",
+    importBookmarksSettingDescription: "Chrome, Safari, Firefox veya Edge'in dışa aktardığı HTML dosyasıyla yer imlerini içe aktarın ya da kendi yer imlerinizi bu biçimde kaydedin.",
     importBookmarks: "İçe aktar…",
     exportBookmarks: "Dışa aktar",
     importBookmarksDoneOne: "{count} yer imi içe aktarıldı.",
     importBookmarksDoneMany: "{count} yer imi içe aktarıldı.",
     importBookmarksNone: "Bu dosyada yeni yer imi yok.",
-    importBookmarksPartial:
-      "{count} yer imi içe aktarıldı, ancak {leftOut} tanesi sığmadı: Unsloth en fazla {max} yer imi saklar.",
-    importBookmarksFailed:
-      "Bu dosya okunamadı. Bir tarayıcıdan dışa aktarılmış yer imi HTML dosyası seçin.",
+    importBookmarksPartial: "{count} yer imi içe aktarıldı, ancak {leftOut} tanesi sığmadı: Unsloth en fazla {max} yer imi saklar.",
+    importBookmarksFailed: "Bu dosya okunamadı. Bir tarayıcıdan dışa aktarılmış yer imi HTML dosyası seçin.",
     downloadsTitle: "İndirilenler",
     askWhereToSaveSetting: "Her dosyanın nereye kaydedileceğini sor",
-    askWhereToSaveSettingDescription:
-      "Tarayıcıda indirdiğiniz dosyalar için kaydetme penceresi gösterilir.",
-    askWhereToSaveUnsupported:
-      "Web tarayıcınız indirmeleri kendi İndirilenler klasörüne kaydeder.",
+    askWhereToSaveSettingDescription: "Tarayıcıda indirdiğiniz dosyalar için kaydetme penceresi gösterilir.",
+    askWhereToSaveUnsupported: "Web tarayıcınız indirmeleri kendi İndirilenler klasörüne kaydeder.",
     downloadLocationSetting: "Konum",
     downloadLocationDefault: "Sistem İndirilenler klasörü",
     downloadLocationChange: "Değiştir",
     downloadLocationReset: "Sıfırla",
     askBeforeDownloadingSetting: "İndirmeden önce sor",
-    askBeforeDownloadingSettingDescription:
-      "Web sitelerinden gelen dosyalar kaydedilmeden önce onayınız istenir.",
+    askBeforeDownloadingSettingDescription: "Web sitelerinden gelen dosyalar kaydedilmeden önce onayınız istenir.",
     askBeforeProgramDownloadsSetting: "Program indirmeden önce sor",
     askBeforeProgramDownloadsSettingDescription: ".exe veya .dmg gibi program çalıştırabilen dosyaları, diğer indirmeler sormasa bile onayla.",
     downloadSitesSetting: "Site indirme izinleri",
-    downloadSitesSettingDescription:
-      "İndirmelerine her zaman izin vermeyi veya engellemeyi seçtiğiniz siteler.",
-    downloadSitesNone:
-      "Sorulduğunda Sonraki sefer için hatırla seçeneğini işaretleyin; site burada görünür.",
+    downloadSitesSettingDescription: "İndirmelerine her zaman izin vermeyi veya engellemeyi seçtiğiniz siteler.",
+    downloadSitesNone: "Sorulduğunda Sonraki sefer için hatırla seçeneğini işaretleyin; site burada görünür.",
     downloadSitesFor: "İndirme kaynağı: {host}",
     downloadSitesRemove: "Unut: {host}",
     capture: {
@@ -417,10 +378,8 @@ export const tr = {
     downloadSiteBlock: "Her zaman engelle",
     downloadPrompt: {
       title: "Bu dosya indirilsin mi?",
-      description:
-        "{host}, {name} dosyasını bilgisayarınıza kaydetmek istiyor.",
-      dangerous:
-        "Bu tür dosyalar bilgisayarınızda program çalıştırabilir. Yalnızca {host} kaynağına güveniyorsanız indirin.",
+      description: "{host}, {name} dosyasını bilgisayarınıza kaydetmek istiyor.",
+      dangerous: "Bu tür dosyalar bilgisayarınızda program çalıştırabilir. Yalnızca {host} kaynağına güveniyorsanız indirin.",
       remember: "Sonraki sefer için hatırla",
       once: "Bir dahaki sefere sor",
       site: "{host} için her zaman",
@@ -432,14 +391,11 @@ export const tr = {
       save: "Kaydet",
     },
     saveDownloadHistorySetting: "İndirme geçmişini sakla",
-    saveDownloadHistorySettingDescription:
-      "Tarayıcıdan indirdiğiniz dosyalar İndirme geçmişi altında listelenir.",
+    saveDownloadHistorySettingDescription: "Tarayıcıdan indirdiğiniz dosyalar İndirme geçmişi altında listelenir.",
     saveHistorySetting: "Tarama geçmişini kaydet",
-    saveHistorySettingDescription:
-      "Geçmiş, Son sayfalar ve Önerilenler için ziyaret ettiğiniz sayfalar hatırlanır.",
+    saveHistorySettingDescription: "Geçmiş, Son sayfalar ve Önerilenler için ziyaret ettiğiniz sayfalar hatırlanır.",
     historyRetentionSetting: "Geçmişin saklanma süresi",
-    historyRetentionSettingDescription:
-      "Bundan eski ziyaretler otomatik olarak silinir.",
+    historyRetentionSettingDescription: "Bundan eski ziyaretler otomatik olarak silinir.",
     retention: {
       forever: "Temizlenene kadar",
       days90: "3 ay",
@@ -449,17 +405,13 @@ export const tr = {
     },
     annotationsTitle: "Ek açıklamalar",
     annotationScreenshotsSetting: "Ek açıklama ekran görüntüleri",
-    annotationScreenshotsSettingDescription:
-      "İşaretlerinizi içeren bir sayfa ekran görüntüsü, görsel modellerin yorumlarınızı anlamasına yardımcı olur ancak daha fazla bağlam kullanır.",
-    annotationScreenshotsUnsupported:
-      "Masaüstü uygulaması veya Chrome ya da Edge gibi Chromium tabanlı bir tarayıcı gerekir.",
-    annotationScreenshotsHint:
-      "Web tarayıcısında, ek açıklama her gönderdiğinizde sekmeyi paylaşmanız istenir.",
+    annotationScreenshotsSettingDescription: "İşaretlerinizi içeren bir sayfa ekran görüntüsü, görsel modellerin yorumlarınızı anlamasına yardımcı olur ancak daha fazla bağlam kullanır.",
+    annotationScreenshotsUnsupported: "Masaüstü uygulaması veya Chrome ya da Edge gibi Chromium tabanlı bir tarayıcı gerekir.",
+    annotationScreenshotsHint: "Web tarayıcısında, ek açıklama her gönderdiğinizde sekmeyi paylaşmanız istenir.",
     annotationScreenshotsAlways: "Her zaman ekle",
     annotationScreenshotsNever: "Hiçbir zaman ekleme",
     clearDataSetting: "Tarama verilerini temizle",
-    clearDataSettingDescription:
-      "Tarama geçmişini, indirme geçmişini ve önbelleğe alınmış sayfaları temizler. Sayfalar, çerezleri ve site verilerini yalnızca Unsloth yeniden yüklenene kadar saklar.",
+    clearDataSettingDescription: "Tarama geçmişini, indirme geçmişini ve önbelleğe alınmış sayfaları temizler. Sayfalar, çerezleri ve site verilerini yalnızca Unsloth yeniden yüklenene kadar saklar.",
     manage: "Yönet",
     fullView: {
       enter: "Tam görünüme geç",
@@ -552,10 +504,8 @@ export const tr = {
       pathCopied: "Yol kopyalandı",
       openFailed: "Açılamadı: {name}",
       wrap: "Satırları kaydır",
-      reactNeedsNode:
-        "React önizlemeleri için Node.js 20.19 veya daha yeni bir sürüm gerekir. Yüklü değilse kurun, ardından Unsloth kurulumunu yeniden çalıştırın.",
-      reactFailed:
-        "Bu önizleme hazırlanamadı. Yeniden denemek için tekrar çalıştırın.",
+      reactNeedsNode: "React önizlemeleri için Node.js 20.19 veya daha yeni bir sürüm gerekir. Yüklü değilse kurun, ardından Unsloth kurulumunu yeniden çalıştırın.",
+      reactFailed: "Bu önizleme hazırlanamadı. Yeniden denemek için tekrar çalıştırın.",
     },
     video: {
       play: "Oynat",
@@ -598,8 +548,7 @@ export const tr = {
       noHistory: "Tarayıcıda ziyaret ettiğiniz sayfalar burada görünür.",
       showMore: "Daha fazla göster",
       noDownloads: "Tarayıcıdan indirdiğiniz dosyalar burada görünür.",
-      noBookmarks:
-        "Adres çubuğundaki yıldızla yer imlerine eklediğiniz sayfalar burada görünür.",
+      noBookmarks: "Adres çubuğundaki yıldızla yer imlerine eklediğiniz sayfalar burada görünür.",
       noMatches: "Aramanızla eşleşen sonuç yok.",
       fromChat: "Sohbetten",
       searchHistory: "Tarama geçmişinde ara",
@@ -637,39 +586,30 @@ export const tr = {
       undo: "Geri al",
       manage: "Yer imlerini yönet",
       more: "Diğer yer imleri",
-      toolbarEmpty:
-        "Bir sayfayı buraya eklemek için adres çubuğundaki yıldızla yer imlerine ekleyin.",
+      toolbarEmpty: "Bir sayfayı buraya eklemek için adres çubuğundaki yıldızla yer imlerine ekleyin.",
       toolbarAlways: "Her zaman göster",
       toolbarNewTab: "Yalnızca yeni sekmede göster",
       toolbarNever: "Hiçbir zaman gösterme",
     },
     clearData: {
       title: "Tarama verileri temizlensin mi?",
-      description:
-        "Bu işlem tarama geçmişinizi, indirme geçmişinizi, önbelleğe alınmış sayfaları ve site çerezleriyle verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır. İndirilen dosyalar bilgisayarınızda kalır.",
+      description: "Bu işlem tarama geçmişinizi, indirme geçmişinizi, önbelleğe alınmış sayfaları ve site çerezleriyle verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır. İndirilen dosyalar bilgisayarınızda kalır.",
       cancel: "İptal",
       confirm: "Verileri temizle",
       done: "Tarama verileri temizlendi",
     },
     error: {
       title: "Bu sayfa yüklenemedi",
-      description:
-        "{host} yanıt vermedi, bağlantıyı reddetti veya isteği engelledi.",
+      description: "{host} yanıt vermedi, bağlantıyı reddetti veya isteği engelledi.",
       retry: "Yeniden dene",
       botCheckTitle: "Bu site gerçek bir tarayıcı olup olmadığını denetliyor",
-      botCheckDescription:
-        "{host}, ziyaretçilerden insan olduklarını kanıtlamalarını istiyor; uygulama içi görünüm bunu burada yapamaz. Bunun yerine tarayıcınızda açın.",
-      botCheckDescriptionWeb:
-        "{host}, ziyaretçilerden insan olduklarını kanıtlamalarını istiyor; uygulama içi görünüm bunu burada yapamaz. Tarayıcınızda veya sayfayı açabilen {app} uygulamasında açın.",
+      botCheckDescription: "{host}, ziyaretçilerden insan olduklarını kanıtlamalarını istiyor; uygulama içi görünüm bunu burada yapamaz. Bunun yerine tarayıcınızda açın.",
+      botCheckDescriptionWeb: "{host}, ziyaretçilerden insan olduklarını kanıtlamalarını istiyor; uygulama içi görünüm bunu burada yapamaz. Tarayıcınızda veya sayfayı açabilen {app} uygulamasında açın.",
       desktopApp: "Unsloth Desktop",
-      resubmit:
-        "Bu sayfa bir formdan geldi. Yeniden yüklemek formu tekrar gönderir ve yaptığı işlemi yineleyebilir.",
-      upload:
-        "Dosya yükleme bu görünümde çalışmaz. Göndermek için sayfayı sistem tarayıcınızda açın.",
-      scriptNavigation:
-        "Bu sayfa betik ile başka bir adrese gitmeye çalıştı; bu görünüm bunu izleyemez. Bunun yerine sistem tarayıcınızda açın.",
-      needsBrowser:
-        "Bu sayfa, bu görünümün engellediği bir tarayıcı özelliğini kullanmaya çalıştı; bu nedenle bazı bölümleri çalışmayabilir. Bunun yerine sistem tarayıcınızda açın.",
+      resubmit: "Bu sayfa bir formdan geldi. Yeniden yüklemek formu tekrar gönderir ve yaptığı işlemi yineleyebilir.",
+      upload: "Dosya yükleme bu görünümde çalışmaz. Göndermek için sayfayı sistem tarayıcınızda açın.",
+      scriptNavigation: "Bu sayfa betik ile başka bir adrese gitmeye çalıştı; bu görünüm bunu izleyemez. Bunun yerine sistem tarayıcınızda açın.",
+      needsBrowser: "Bu sayfa, bu görünümün engellediği bir tarayıcı özelliğini kullanmaya çalıştı; bu nedenle bazı bölümleri çalışmayabilir. Bunun yerine sistem tarayıcınızda açın.",
     },
     native: {
       externalPrompt: "{host} şu adresi açmak istiyor: {url}",
@@ -677,18 +617,12 @@ export const tr = {
       downloading: "İndiriliyor: {name}",
       downloaded: "İndirilenler klasörüne kaydedildi: {name}",
       downloadFailed: "İndirilemedi: {name}",
-      notMarked:
-        "{name} kaydedildi ancak internetten indirilmiş olarak işaretlenemedi; bu nedenle sisteminiz açmadan önce uyarı vermeyecek.",
-      blocked:
-        "Bu adres tarayıcı panelinde açılamaz. Panel yalnızca herkese açık web sitelerini açar.",
-      blockedLocal:
-        "Bu yerel adres burada açılamaz. Açmak için adres çubuğuna yazın.",
-      studioAddress:
-        "Bu, Unsloth'un kendi adresi olduğundan tarayıcı panelinde açılamaz.",
-      clearDataSettingDescription:
-        "Tarama geçmişini, indirme geçmişini, önbelleğe alınmış sayfaları ve sayfaların sakladığı çerezlerle site verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır.",
-      clearDataDescription:
-        "Bu işlem tarama geçmişinizi, indirme geçmişinizi, önbelleğe alınmış sayfaları ve site çerezleriyle verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır. İndirilen dosyalar bilgisayarınızda kalır.",
+      notMarked: "{name} kaydedildi ancak internetten indirilmiş olarak işaretlenemedi; bu nedenle sisteminiz açmadan önce uyarı vermeyecek.",
+      blocked: "Bu adres tarayıcı panelinde açılamaz. Panel yalnızca herkese açık web sitelerini açar.",
+      blockedLocal: "Bu yerel adres burada açılamaz. Açmak için adres çubuğuna yazın.",
+      studioAddress: "Bu, Unsloth'un kendi adresi olduğundan tarayıcı panelinde açılamaz.",
+      clearDataSettingDescription: "Tarama geçmişini, indirme geçmişini, önbelleğe alınmış sayfaları ve sayfaların sakladığı çerezlerle site verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır.",
+      clearDataDescription: "Bu işlem tarama geçmişinizi, indirme geçmişinizi, önbelleğe alınmış sayfaları ve site çerezleriyle verilerini temizler; bu da sitelerdeki oturumlarınızı kapatır. İndirilen dosyalar bilgisayarınızda kalır.",
       clearDataFailed: "Site verileri temizlenemedi. Yeniden deneyin.",
     },
   },
@@ -755,33 +689,25 @@ export const tr = {
     tensor: "Tensör paralelliği",
     pipeline: "İşlem hattı paralelliği",
     data: "Kopyalar (veri paralelliği)",
-    pipelineHelp:
-      "Model katmanlarını GPU'lara böler. Her GPU'ya kendi katmanları ve önbelleği sığmalıdır.",
-    dataHelp:
-      "İstekleri GPU'lara dağıtır. Yoğun modeller her GPU'ya sığmalıdır; MoE modelleri uzmanları paylaşabilir.",
+    pipelineHelp: "Model katmanlarını GPU'lara böler. Her GPU'ya kendi katmanları ve önbelleği sığmalıdır.",
+    dataHelp: "İstekleri GPU'lara dağıtır. Yoğun modeller her GPU'ya sığmalıdır; MoE modelleri uzmanları paylaşabilir.",
     tensorParallel: "Katman hesaplamalarını {count} GPU'ya böler.",
-    inUse:
-      "Motorunu onarmadan, geri yüklemeden veya kaldırmadan önce modeli bellekten kaldırın.",
+    inUse: "Motorunu onarmadan, geri yüklemeden veya kaldırmadan önce modeli bellekten kaldırın.",
     title: "Diğer motorlar",
-    description:
-      "GPU'lar için ek motorlar (Beta). Özellikle toplu çıkarımda modelleri daha hızlı çalıştırabilirler. Buradan kurun, ardından modelin çalıştırma ayarlarından seçin.",
+    description: "GPU'lar için ek motorlar (Beta). Özellikle toplu çıkarımda modelleri daha hızlı çalıştırabilirler. Buradan kurun, ardından modelin çalıştırma ayarlarından seçin.",
     picker: "Çıkarım motoru",
     precision: "Hassasiyet",
     precisionAuto: "Model varsayılanı",
-    precisionHelp:
-      "Model varsayılanı, kayıtlı hassasiyeti korur. Diğer seçenekler, nicelenmemiş ağırlıkları yükleme sırasında dönüştürür.",
+    precisionHelp: "Model varsayılanı, kayıtlı hassasiyeti korur. Diğer seçenekler, nicelenmemiş ağırlıkları yükleme sırasında dönüştürür.",
     kvCache: "KV önbelleği",
     kvCacheFp8: "FP8 (yarı bellek)",
-    kvCacheHelp:
-      "FP8, bağlam önbelleğini 8 bitte saklar ve aynı bellekte yaklaşık iki kat bağlam sığdırır. Kontrol noktasında kalibre edilmiş ölçekler yoksa yanıtlar biraz daha az doğru olabilir.",
+    kvCacheHelp: "FP8, bağlam önbelleğini 8 bitte saklar ve aynı bellekte yaklaşık iki kat bağlam sığdırır. Kontrol noktasında kalibre edilmiş ölçekler yoksa yanıtlar biraz daha az doğru olabilir.",
     gpuMemory: "GPU belleği sınırı",
     gpuMemoryAuto: "Otomatik",
-    gpuMemoryHelp:
-      "Motorun seçili her GPU'dan kullanabileceği en yüksek miktar. Otomatik, boş olanı kullanır; diğer programlara yer bırakmak için düşürün.",
+    gpuMemoryHelp: "Motorun seçili her GPU'dan kullanabileceği en yüksek miktar. Otomatik, boş olanı kullanır; diğer programlara yer bırakmak için düşürün.",
     seed: "Tohum",
     seedPlaceholder: "Motor varsayılanı",
-    seedHelp:
-      "Motorun rastgele tohumunu ayarlar. Eşzamanlı sohbetler örneklenen yanıtları yine de değiştirebilir.",
+    seedHelp: "Motorun rastgele tohumunu ayarlar. Eşzamanlı sohbetler örneklenen yanıtları yine de değiştirebilir.",
     default: "Varsayılan",
     installRequired: "kurulum gerekli",
     ownerRequired: "Bu motoru kurması için Unsloth sahibine başvurun.",
@@ -796,25 +722,19 @@ export const tr = {
     installTitle: "Kur: {engine}",
     installAndLoad: "Kur ve yükle",
     confirm: "{engine} {version} kurulsun mu? Bu işlem birkaç GB indirebilir.",
-    confirmSized:
-      "{engine} {version} kurulsun mu? İndirme boyutu yaklaşık {size}.",
-    wslSetup:
-      "Windows'ta {engine}, Unsloth'un kurduğu özel bir WSL2 ortamında çalışır. Bir kez yönetici izni isteği ve muhtemelen yeniden başlatma bekleyin.",
+    confirmSized: "{engine} {version} kurulsun mu? İndirme boyutu yaklaşık {size}.",
+    wslSetup: "Windows'ta {engine}, Unsloth'un kurduğu özel bir WSL2 ortamında çalışır. Bir kez yönetici izni isteği ve muhtemelen yeniden başlatma bekleyin.",
     wslReady: "Windows'ta {engine}, Unsloth'un özel WSL2 ortamında çalışır.",
-    wslRestart:
-      "WSL2'yi açmayı tamamlamak için Windows'u yeniden başlatın, ardından yeniden Kur'a tıklayın.",
+    wslRestart: "WSL2'yi açmayı tamamlamak için Windows'u yeniden başlatın, ardından yeniden Kur'a tıklayın.",
     background: "Arka planda kurulur.",
-    failed:
-      "Motor kurulumu başarısız oldu. Yeniden deneyin veya varsayılan motoru kullanın.",
+    failed: "Motor kurulumu başarısız oldu. Yeniden deneyin veya varsayılan motoru kullanın.",
     details: "Teknik ayrıntılar",
     cancelled: "Kurulum iptal edildi. Yeniden deneyebilirsiniz.",
-    scope:
-      "NVIDIA GPU'larda metin ve görsel sohbeti. İlk yükleme daha uzun sürebilir.",
+    scope: "NVIDIA GPU'larda metin ve görsel sohbeti. İlk yükleme daha uzun sürebilir.",
   },
   sandboxSetup: {
     levelTitle: "İşletim sistemi korumalı alanı kullanılamıyor",
-    levelDescription:
-      "Yüksek'i kullanmak için kurun veya Düşük'te (yazılım tabanlı korumalı alan) kalın.",
+    levelDescription: "Yüksek'i kullanmak için kurun veya Düşük'te (yazılım tabanlı korumalı alan) kalın.",
     useLow: "Düşük korumalı alanı kullan",
     checking: "Bu bilgisayardaki korumalı alan denetleniyor…",
     install: "Korumalı alanı kur",
@@ -822,32 +742,25 @@ export const tr = {
     copyCommand: "Komutu kopyala",
     copied: "Komut kopyalandı",
     copyFailed: "Komut kopyalanamadı",
-    copiedRunIt:
-      "Komut kopyalandı. Unsloth'u çalıştıran bilgisayarda bir terminalde çalıştırın, ardından Yüksek'e geçin.",
+    copiedRunIt: "Komut kopyalandı. Unsloth'u çalıştıran bilgisayarda bir terminalde çalıştırın, ardından Yüksek'e geçin.",
     ownerOnly: "Yalnızca sahip, Unsloth'u çalıştıran bilgisayardan kurabilir.",
-    windowsNote:
-      "Her yeniden başlatmadan sonra bir yönetici adımı gerekir. MXC bir önizlemedir, güvenlik sınırı değildir.",
-    running:
-      "Kuruluyor. Unsloth'u çalıştıran bilgisayardaki parola veya yönetici izni isteğini onaylayın…",
-    succeeded:
-      "İşletim sistemi korumalı alanı hazır. Korumalı alan Yüksek açık.",
-    stillUnavailable:
-      "Kurulum tamamlandı ancak işletim sistemi korumalı alanı hâlâ denetimden geçmiyor.",
+    windowsNote: "Her yeniden başlatmadan sonra bir yönetici adımı gerekir. MXC bir önizlemedir, güvenlik sınırı değildir.",
+    running: "Kuruluyor. Unsloth'u çalıştıran bilgisayardaki parola veya yönetici izni isteğini onaylayın…",
+    succeeded: "İşletim sistemi korumalı alanı hazır. Korumalı alan Yüksek açık.",
+    stillUnavailable: "Kurulum tamamlandı ancak işletim sistemi korumalı alanı hâlâ denetimden geçmiyor.",
     declined: "Parola veya yönetici izni isteği reddedildi.",
     failed: "Kurulum başarısız oldu.",
     startError: "Korumalı alan kurulumu başlatılamadı",
     checkFailed: "Bu bilgisayardaki korumalı alan denetlenemedi.",
     retry: "Yeniden dene",
-    keepsRunning:
-      "Bunu kapatmak kurulumu durdurmaz. Sonuç, Ayarlar > Güvenlik bölümünde görünür.",
+    keepsRunning: "Bunu kapatmak kurulumu durdurmaz. Sonuç, Ayarlar > Güvenlik bölümünde görünür.",
   },
   composerSettings: {
     shareDraft: "Taslakları sohbetler arasında paylaş",
     shareDraftDescription: "Sohbetler ve karşılaştırmalar için tek bir taslak kullan. Varsayılan olarak kapalıdır; her sohbet kendi taslağını tutar.",
     title: "Yazma alanı",
     plainText: "Düz metin yazma alanı",
-    plainTextDescription:
-      "Kod, Markdown ve bağlantılar olduğu gibi metin olarak kalır. Biçimlendirilmiş önizleme göstermek için kapatın.",
+    plainTextDescription: "Kod, Markdown ve bağlantılar olduğu gibi metin olarak kalır. Biçimlendirilmiş önizleme göstermek için kapatın.",
     richPaste: "Biçimli metin yapıştırma",
     richPasteDescription: "Bağlantıları, tabloları ve biçimlendirmeyi Markdown olarak yapıştırır. {shortcut} düz metin yapıştırır. Tam zengin metin düzenleyicisi yakında.",
     showContext: "Bağlam penceresi kullanımı",
@@ -855,17 +768,14 @@ export const tr = {
     sendMultiline: "Çok satırlı istemlerde {mod} + Enter",
     sendAlways: "Her zaman {mod} + Enter",
     sendEnterDescription: "Enter gönderir. Shift + Enter yeni satır ekler.",
-    sendMultilineDescription:
-      "Enter tek satırlık istemi gönderir. İstem birden fazla satır olduğunda Enter yeni satır ekler, {mod} + Enter gönderir.",
+    sendMultilineDescription: "Enter tek satırlık istemi gönderir. İstem birden fazla satır olduğunda Enter yeni satır ekler, {mod} + Enter gönderir.",
     sendAlwaysDescription: "{mod} + Enter gönderir. Enter yeni satır ekler.",
     followUp: "Devam mesajı davranışı",
-    followUpDescription:
-      "Yanıt sırasında gönderdiğinizde ne olacağı. Bir kereliğine tersini yapmak için {shortcut} tuşlarına basın.",
+    followUpDescription: "Yanıt sırasında gönderdiğinizde ne olacağı. Bir kereliğine tersini yapmak için {shortcut} tuşlarına basın.",
     followUpMultilineShortcut: "{shortcut} (çok satırlı istemde {multiline})",
     queue: "Sıraya al",
     steer: "Yönlendir",
-    steerDescription:
-      "Yönlendir, geçerli yanıtı durdurur ve devam mesajınızı hemen ardından gönderir.",
+    steerDescription: "Yönlendir, geçerli yanıtı durdurur ve devam mesajınızı hemen ardından gönderir.",
     settings: "Yazma alanı ayarları",
     preview: "Biçimlendirilmiş önizleme",
   },
@@ -874,8 +784,7 @@ export const tr = {
     listLabel: "Sıradaki istemler",
     regionLabel: "İstem sırası, {current} / {total}",
     itemLabel: "Sıradaki istem {position} / {total}: {prompt}",
-    reorderInstructions:
-      "Yeniden sıralamak için tutamacı sürükleyin. Tutamaç odaktayken bir konum taşımak için Yukarı veya Aşağı, başa ya da sona taşımak için Home veya End tuşunu kullanın.",
+    reorderInstructions: "Yeniden sıralamak için tutamacı sürükleyin. Tutamaç odaktayken bir konum taşımak için Yukarı veya Aşağı, başa ya da sona taşımak için Home veya End tuşunu kullanın.",
     dragTooltip: "Yeniden sıralamak için sürükleyin",
     reorderLabel: "Sıradaki istemi yeniden sırala: {position} / {total}",
     paused: "Duraklatıldı",
@@ -903,17 +812,14 @@ export const tr = {
     announceEditFailed: "Sıra değiştiği için bu istem artık düzenlenemez.",
     announceRemoved: "İstem sıradan kaldırıldı.",
     announceSteered: "Bu istem yanıtı bir sonraki adımda yönlendirecek.",
-    announceSteerFailed:
-      "Bu istem yanıtı yönlendiremedi. Sırayı kontrol edip yeniden deneyin.",
+    announceSteerFailed: "Bu istem yanıtı yönlendiremedi. Sırayı kontrol edip yeniden deneyin.",
     announceCopied: "İstem kopyalandı.",
     announceCopyFailed: "Bu istem kopyalanamadı. Yeniden deneyin.",
-    announceQueueingOn:
-      "Yeni devam mesajları geçerli yanıttan sonra sıraya alınacak.",
+    announceQueueingOn: "Yeni devam mesajları geçerli yanıttan sonra sıraya alınacak.",
     announceQueueingOff: "Yeni devam mesajları geçerli yanıtı yönlendirecek.",
     announceMoved: "İstem {position} / {total} konumuna taşındı.",
     announceMoveFailed: "Bu istem taşınamadan sıra değişti. Yeniden deneyin.",
-    announceDragReset:
-      "Sıra değişti. Kalan istemleri yeniden sıralamak için tekrar sürükleyin.",
+    announceDragReset: "Sıra değişti. Kalan istemleri yeniden sıralamak için tekrar sürükleyin.",
     editingHint: "Mesaj düzenleniyor",
     queueingOffHint: "Yeni mesajlar yanıtı keser ve hemen ardından çalışır.",
     queueingOnHint: "Yeni mesajlar sırasını bekler.",
@@ -930,12 +836,10 @@ export const tr = {
     modeConversation: "Yalnızca konuşma",
     modeFiles: "Yalnızca dosyalar",
     checkFailed: "Dosya değişiklikleri denetlenemedi: {error}",
-    summary:
-      "Geri yüklenecek dosyalar: {restore}. Kaldırılacak: {remove}. Yeniden oluşturulacak: {recreate}.",
+    summary: "Geri yüklenecek dosyalar: {restore}. Kaldırılacak: {remove}. Yeniden oluşturulacak: {recreate}.",
     conflicts: "O zamandan beri değişti, atlanacak",
     untracked: "Geri yüklenemez",
-    scopeNote:
-      "Dosyalara kod dahildir. Programlar, paketler ve bu sohbetin klasörü dışındaki dosyalar değiştirilmez.",
+    scopeNote: "Dosyalara kod dahildir. Programlar, paketler ve bu sohbetin klasörü dışındaki dosyalar değiştirilmez.",
     back: "Geri",
     cancel: "İptal",
     confirm: "Geri sar",
@@ -944,8 +848,7 @@ export const tr = {
     restoredMany: "{count} dosya geri yüklendi",
     nothingRestored: "Geri yüklenmesi gereken dosya yoktu",
     skippedCount: "{count} atlandı",
-    filesNotRestored:
-      "Değişen {count} dosya geri yüklenemez ve olduğu gibi kalır.",
+    filesNotRestored: "Değişen {count} dosya geri yüklenemez ve olduğu gibi kalır.",
     restoreFailed: "Dosyalar geri yüklenemedi",
     undo: "Geri al",
     undone: "Dosya geri yükleme geri alındı",
@@ -975,8 +878,7 @@ export const tr = {
     addScheduledTask: "Zamanlanmış görev ekle…",
     compact: "Konuşmayı sıkıştır",
     compactEmpty: "Henüz sıkıştırılacak bir şey yok",
-    compactUnsupported:
-      "Sıkıştırma için araç desteği olan bir GGUF veya MLX modeli gerekir",
+    compactUnsupported: "Sıkıştırma için araç desteği olan bir GGUF veya MLX modeli gerekir",
   },
   welcome: {
     goodToSeeYou: "Sizi görmek güzel",
@@ -995,16 +897,13 @@ export const tr = {
     nightShift: "Gece vardiyası başlıyor",
     nightShiftName: "Gece vardiyası başlıyor, {name}",
     temporaryChat: "Geçici sohbet",
-    temporaryChatDescription:
-      "Bu sohbet geçmişinizde görünmez ve kaydedilmez. Ayrıldığınızda kaybolur.",
+    temporaryChatDescription: "Bu sohbet geçmişinizde görünmez ve kaydedilmez. Ayrıldığınızda kaybolur.",
   },
   picker: {
     unifiedTightFit: "Sınırda",
-    unifiedTightFitHint:
-      "Bu Mac'te daha kısa bir bağlamla yüklenebilir veya daha yavaş çalışabilir.",
+    unifiedTightFitHint: "Bu Mac'te daha kısa bir bağlamla yüklenebilir veya daha yavaş çalışabilir.",
     residentToRun: "çalıştırmak için",
-    residentToRunHint:
-      "Yükleme denetiminin çalışırken gerektirdiği GPU belleği",
+    residentToRunHint: "Yükleme denetiminin çalışırken gerektirdiği GPU belleği",
     onDevice: "Cihazda",
     huggingFace: "Hugging Face",
     retry: "Yeniden dene",
@@ -1019,15 +918,12 @@ export const tr = {
     modelDroppedByProvider: "{provider} · artık sunulmuyor",
     modelDisabled: "Etkin değil",
     modelDisabledByProvider: "{provider} · etkin değil",
-    multipleMatches:
-      "Birden fazla eşleşme var ({noun}). Listeden birini seçin.",
+    multipleMatches: "Birden fazla eşleşme var ({noun}). Listeden birini seçin.",
     rateLimitedTitle: "Hugging Face istek sınırına ulaşıldı",
-    rateLimitedBody:
-      "Biraz bekleyin, ardından aramayı yeniden deneyin ({noun}).",
+    rateLimitedBody: "Biraz bekleyin, ardından aramayı yeniden deneyin ({noun}).",
     modelScope: "ModelScope",
     useModelScope: "ModelScope'u kullan",
-    useModelScopeHint:
-      "Bunun yerine ModelScope'ta arayın ve oradan indirin. Ayarlar'dan geri dönebilirsiniz.",
+    useModelScopeHint: "Bunun yerine ModelScope'ta arayın ve oradan indirin. Ayarlar'dan geri dönebilirsiniz.",
     useModelScopeFailed: "ModelScope'a geçilemedi.",
     updateToken: "Token'ı güncelle",
     hfToken: {
@@ -1037,8 +933,7 @@ export const tr = {
       savedAriaLabel: "Hugging Face token'ı kaydedildi",
       addAriaLabel: "Hugging Face token'ını ayarla",
       savedHint: "Token kaydedildi. Erişim, kullandığınızda denetlenir.",
-      addHint:
-        "Özel ve erişimi kısıtlı depolara erişmek için bir token ayarlayın.",
+      addHint: "Özel ve erişimi kısıtlı depolara erişmek için bir token ayarlayın.",
     },
   },
   common: {
@@ -1148,10 +1043,8 @@ export const tr = {
       guidedTour: "Rehberli Tur",
       help: "Yardım",
       logOut: "Oturumu kapat",
-      logOutNeedsPassword:
-        "Yeniden oturum açabilmeniz için oturumu kapatmadan önce Ayarlar > Uzak ve LAN bölümünden bir parola belirleyin.",
-      logOutFailed:
-        "Oturum güvenli bir şekilde kapatılamadı. Biraz sonra yeniden deneyin.",
+      logOutNeedsPassword: "Yeniden oturum açabilmeniz için oturumu kapatmadan önce Ayarlar > Uzak ve LAN bölümünden bir parola belirleyin.",
+      logOutFailed: "Oturum güvenli bir şekilde kapatılamadı. Biraz sonra yeniden deneyin.",
       shutdown: "Kapat",
     },
     commandPalette: {
@@ -1211,10 +1104,8 @@ export const tr = {
       unpinProjects: "Projelerin sabitlemesini kaldır",
       deleteProjects: "Projeleri sil",
       deleteProjectsTitle: "Projeleri sil",
-      deleteProjectsDescription:
-        "{count} proje ve tüm sohbetleri kalıcı olarak silinecek. Bu işlem geri alınamaz.",
-      deleteProjectsFilesDescription:
-        "Her projenin çalışma alanı klasörü diskten kaldırılır.",
+      deleteProjectsDescription: "{count} proje ve tüm sohbetleri kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+      deleteProjectsFilesDescription: "Her projenin çalışma alanı klasörü diskten kaldırılır.",
       countSelected: "{count} seçildi",
       pinChats: "Sohbetleri sabitle",
       unpinChats: "Sohbetlerin sabitlemesini kaldır",
@@ -1224,11 +1115,9 @@ export const tr = {
       deleteChats: "Sohbetleri sil",
       deleteTitle: "Sohbetleri sil",
       deleteDescription: "{count} sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
-      deleteFilesDescription:
-        "Her sohbetin kendi korumalı alan klasörü diskten kaldırılır. Sohbetlerin bir proje içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
+      deleteFilesDescription: "Her sohbetin kendi korumalı alan klasörü diskten kaldırılır. Sohbetlerin bir proje içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
       deleteFilesLabel: "Dosyaları ve korumalı alan klasörünü sil",
-      deleteChatFilesDescription:
-        "Bu sohbetin kendi korumalı alan klasörü diskten kaldırılır. Sohbetin bir proje içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
+      deleteChatFilesDescription: "Bu sohbetin kendi korumalı alan klasörü diskten kaldırılır. Sohbetin bir proje içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
     },
     organize: {
       sidebarHeading: "Kenar çubuğunu düzenle",
@@ -1238,8 +1127,7 @@ export const tr = {
       projectsHome: "Projeler ana sayfası",
       lastUpdated: "Son güncelleme",
       manualOrder: "Elle sıralama",
-      switchedToManual:
-        "Elle sıralandı: yeniden sıralamak için satırları sürükleyin",
+      switchedToManual: "Elle sıralandı: yeniden sıralamak için satırları sürükleyin",
       organizeChats: "Sohbetleri düzenle",
       organizeProjects: "Projeleri düzenle",
       sortPinnedChats: "Sabitlenmiş sohbetleri sırala",
@@ -1276,8 +1164,7 @@ export const tr = {
       },
       deleteRun: {
         title: "Eğitim çalıştırmasını sil",
-        description:
-          "“{name}” çalıştırmasını silmek istediğinizden emin misiniz?",
+        description: "“{name}” çalıştırmasını silmek istediğinizden emin misiniz?",
       },
       renameChat: {
         title: "Sohbeti yeniden adlandır",
@@ -1302,32 +1189,26 @@ export const tr = {
       signsInAs: "{username} olarak oturum açar",
       signsInAsOwner: "{alias} veya {username} olarak oturum açar",
       signInName: "Oturum açma adınız",
-      signInNameDescription:
-        "Bu kurulumda birden fazla hesap olduğunda oturum açmak için yazdığınız ad. unsloth da her zaman çalışır. Yalnızca unsloth kullanmak için boş bırakın.",
+      signInNameDescription: "Bu kurulumda birden fazla hesap olduğunda oturum açmak için yazdığınız ad. unsloth da her zaman çalışır. Yalnızca unsloth kullanmak için boş bırakın.",
       signInNameSave: "Adı kaydet",
       title: "Hesaplar",
-      description:
-        "Özel Unsloth hesapları oluşturun. Yeni kullanıcılar tek kullanımlık bir kurulum koduyla oturum açar ve bir parola seçer.",
+      description: "Özel Unsloth hesapları oluşturun. Yeni kullanıcılar tek kullanımlık bir kurulum koduyla oturum açar ve bir parola seçer.",
       username: "Kullanıcı adı",
       create: "Hesap oluştur",
-      createDescription:
-        "Kendi parolalarını seçebilmeleri için bir kurulum kodu paylaşın.",
+      createDescription: "Kendi parolalarını seçebilmeleri için bir kurulum kodu paylaşın.",
       actionsFor: "Yönet: {username}",
       actions: "Eylemler",
       search: "Hesaplarda ara",
       noResults: "Eşleşen hesap yok",
       created: "Oluşturulma",
       status: "Durum",
-      loginHint:
-        "Parola olarak bu kodu kullanıp {username} olarak oturum açın, ardından yeni bir parola seçin.",
+      loginHint: "Parola olarak bu kodu kullanıp {username} olarak oturum açın, ardından yeni bir parola seçin.",
       privateAccount: "Özel hesap",
       modelAccess: "Model erişimi",
       modelAccessTitle: "Model erişimi: {username}",
-      modelAccessDescription:
-        "Bu hesabın hangi Hugging Face modellerini görebileceğini, indirebileceğini, yükleyebileceğini ve API anahtarları aracılığıyla kullanabileceğini seçin.",
+      modelAccessDescription: "Bu hesabın hangi Hugging Face modellerini görebileceğini, indirebileceğini, yükleyebileceğini ve API anahtarları aracılığıyla kullanabileceğini seçin.",
       modelAccessLabel: "İzin verilen modeller",
-      modelAccessHint:
-        "Her satıra bir model; örneğin unsloth/Qwen3-4B-GGUF veya bir kuruluşun tamamı için unsloth/*. Tüm modellere izin vermek için boş bırakın.",
+      modelAccessHint: "Her satıra bir model; örneğin unsloth/Qwen3-4B-GGUF veya bir kuruluşun tamamı için unsloth/*. Tüm modellere izin vermek için boş bırakın.",
       modelAccessSave: "Kaydet",
       modelAccessLimited: "Sınırlı model erişimi",
       rename: "Yeniden adlandır",
@@ -1336,8 +1217,7 @@ export const tr = {
       empty: "Henüz başka hesap yok",
       setupCode: "Kurulum kodu",
       setupFor: "Kurulum kodu: {username}",
-      shownOnce:
-        "Bu kodu şimdi kopyalayıp hesap sahibiyle paylaşın. Kod yalnızca burada gösterilir ve 60 dakika içinde bir kez kullanılabilir.",
+      shownOnce: "Bu kodu şimdi kopyalayıp hesap sahibiyle paylaşın. Kod yalnızca burada gösterilir ve 60 dakika içinde bir kez kullanılabilir.",
       expires: "Son geçerlilik: {expiry}",
       copy: "Kurulum kodunu kopyala",
       copied: "Kopyalandı",
@@ -1348,14 +1228,12 @@ export const tr = {
       inactive: "Devre dışı",
       regenerate: "Kurulum kodunu yeniden oluştur",
       resetTitle: "{username} kullanıcısının parolası sıfırlansın mı?",
-      resetDescription:
-        "Kurulum kodunu yeniden oluşturmak {username} kullanıcısının parolasını değiştirir, oturumunu kapatır ve API anahtarlarını iptal eder. Yeniden parola seçebilmesi için kullanıcıya yeni kodu verin.",
+      resetDescription: "Kurulum kodunu yeniden oluşturmak {username} kullanıcısının parolasını değiştirir, oturumunu kapatır ve API anahtarlarını iptal eder. Yeniden parola seçebilmesi için kullanıcıya yeni kodu verin.",
       deactivate: "Devre dışı bırak",
       reactivate: "Etkinleştir",
       delete: "Hesabı sil",
       deleteTitle: "{username} silinsin mi?",
-      deleteDescription:
-        "Bu işlem {username} kullanıcısının oturumlarını iptal eder ve çalışmalarını durdurur. Kullanıcının sohbetleri, ayarları, kimlik bilgileri, yüklemeleri, veri kümeleri, eğitim çalıştırmaları, çıktıları, dışa aktarmaları, galerileri, korumalı alanları, projeleri ve geçici dosyaları kullanımdan kaldırılır. Dizinler farklı bir adla kenara alınır, asla silinmez. Bu kullanıcı adını yeniden oluşturmak, bu verilerin hiçbirini içermeyen yeni bir hesap başlatır.",
+      deleteDescription: "Bu işlem {username} kullanıcısının oturumlarını iptal eder ve çalışmalarını durdurur. Kullanıcının sohbetleri, ayarları, kimlik bilgileri, yüklemeleri, veri kümeleri, eğitim çalıştırmaları, çıktıları, dışa aktarmaları, galerileri, korumalı alanları, projeleri ve geçici dosyaları kullanımdan kaldırılır. Dizinler farklı bir adla kenara alınır, asla silinmez. Bu kullanıcı adını yeniden oluşturmak, bu verilerin hiçbirini içermeyen yeni bir hesap başlatır.",
       cancel: "İptal",
       retry: "Hesapları yenile",
       failed: "Hesap isteği başarısız oldu.",
@@ -1378,21 +1256,18 @@ export const tr = {
       medium: "Orta",
       large: "Büyük",
       imageLayout: "Görsel kartları",
-      imageLayoutDescription:
-        "Her görselin şeklini koruyun veya eşit karelere kırpın.",
+      imageLayoutDescription: "Her görselin şeklini koruyun veya eşit karelere kırpın.",
       masonry: "Özgün şekil",
       square: "Kare",
       showCardDates: "Kartlarda tarihleri göster",
-      showCardDatesDescription:
-        "Her dosyanın en son ne zaman değiştiğini gösterir.",
+      showCardDatesDescription: "Her dosyanın en son ne zaman değiştiğini gösterir.",
       browsingSection: "Göz atma",
       startTab: "Açılış sekmesi",
       startTabDescription: "Kitaplığın açıldığı sekme.",
       suggested: "Önerilenler",
       all: "Tümü",
       sort: "Sıralama ölçütü",
-      sortDescription:
-        "Dosya ve klasörlerin sırası. Önerilenler her zaman en yenileri gösterir.",
+      sortDescription: "Dosya ve klasörlerin sırası. Önerilenler her zaman en yenileri gösterir.",
       recent: "En yeni",
       oldest: "En eski",
       name: "Ad",
@@ -1401,34 +1276,26 @@ export const tr = {
       tabAuto: "Dosya olduğunda",
       tabAlways: "Her zaman",
       contentSection: "İçerik",
-      contentDescription:
-        "Kitaplığın neleri göstereceğini seçin. Gizlenen dosyalar silinmez.",
+      contentDescription: "Kitaplığın neleri göstereceğini seçin. Gizlenen dosyalar silinmez.",
       showChatAttachments: "Sohbet ekleri",
       showChatAttachmentsDescription: "Sohbetlere eklediğiniz dosyalar.",
       showChatToolFiles: "Sohbet araçlarından gelen dosyalar",
-      showChatToolFilesDescription:
-        "Sohbetler sırasında kodun ve araçların oluşturduğu dosyalar.",
+      showChatToolFilesDescription: "Sohbetler sırasında kodun ve araçların oluşturduğu dosyalar.",
       showGeneratedMedia: "Oluşturulan medya",
-      showGeneratedMediaDescription:
-        "Görseller, Video ve Ses sayfalarından gelen görseller, videolar ve sesler.",
-      showFineTunesDescription:
-        "Unsloth'ta eğittiğiniz veya dışa aktardığınız modeller.",
+      showGeneratedMediaDescription: "Görseller, Video ve Ses sayfalarından gelen görseller, videolar ve sesler.",
+      showFineTunesDescription: "Unsloth'ta eğittiğiniz veya dışa aktardığınız modeller.",
       deletingSection: "Silme",
       confirmDelete: "Silmeden önce onayla",
-      confirmDeleteDescription:
-        "Kitaplıktan dosya ve klasör silmeden önce sorulur.",
+      confirmDeleteDescription: "Kitaplıktan dosya ve klasör silmeden önce sorulur.",
       reset: "Kitaplık ayarlarını sıfırla",
-      resetDescription:
-        "Yukarıdaki tüm seçenekleri varsayılan değerlerine döndürür.",
+      resetDescription: "Yukarıdaki tüm seçenekleri varsayılan değerlerine döndürür.",
       resetButton: "Sıfırla",
       resetDone: "Kitaplık ayarları sıfırlandı",
       storageSection: "Depolama",
       downloadsSection: "Görsel indirmeleri",
       imageInfoStamp: "Bilgi damgası",
-      imageInfoStampDescription:
-        "Görseller sayfasından indirdiğiniz görsellerin alt kısmında modeli, tarihi ve tohumu gösterir. Oluşturma ayarları her durumda dosyanın içine kaydedilir.",
-      storageDescription:
-        "Dosyalarını en büyükten başlayarak görmek için bir kategori açın ve artık ihtiyacınız olmayanları silin.",
+      imageInfoStampDescription: "Görseller sayfasından indirdiğiniz görsellerin alt kısmında modeli, tarihi ve tohumu gösterir. Oluşturma ayarları her durumda dosyanın içine kaydedilir.",
+      storageDescription: "Dosyalarını en büyükten başlayarak görmek için bir kategori açın ve artık ihtiyacınız olmayanları silin.",
       storageUsed: "Kitaplığın kullandığı alan: {size}",
       storageDisk: "Bu diskteki boş alan: {free} / {total}",
       storageEmpty: "Kitaplıkta henüz hiçbir şey depolanmıyor.",
@@ -1438,25 +1305,21 @@ export const tr = {
       storageOpen: "Aç",
       storageError: "Kitaplık depolama alanı okunamadı.",
       locationsSection: "Diskteki dosyalar",
-      locationsDescription:
-        "Unsloth'un her dosya türünü nerede sakladığı. Kitaplık klasörleri diskteki klasörler değil, Unsloth içindeki etiketlerdir. İnce ayarlı modeller ve dışa aktarmalar, eğitim ve sohbetler bunlara yol üzerinden başvurduğu için oldukları yerde kalır.",
+      locationsDescription: "Unsloth'un her dosya türünü nerede sakladığı. Kitaplık klasörleri diskteki klasörler değil, Unsloth içindeki etiketlerdir. İnce ayarlı modeller ve dışa aktarmalar, eğitim ve sohbetler bunlara yol üzerinden başvurduğu için oldukları yerde kalır.",
       locationUploads: "Kitaplık yüklemeleri",
       locationExports: "Dışa aktarmalar",
       revealFailed: "Dosya yöneticisi açılamadı",
       locationReset: "Sıfırla",
       locationMoveTitle: "Yeni bir klasöre taşı: {name}",
-      locationMoveDescription:
-        "Herhangi bir klasör seçin. Klasörde zaten dosyalar varsa Unsloth içinde kendi klasörünü oluşturur. Burada bulunan her şey de taşınır.",
+      locationMoveDescription: "Herhangi bir klasör seçin. Klasörde zaten dosyalar varsa Unsloth içinde kendi klasörünü oluşturur. Burada bulunan her şey de taşınır.",
       locationMoveAction: "Buraya taşı",
       locationMoving: "Taşınıyor: {name}…",
       locationMoved: "Taşındı: {name}",
       locationMoveFailed: "Taşınamadı: {name}",
       locationFree: "Bu sürücüdeki boş alan: {free}",
-      locationUnavailable:
-        "Kullanılamıyor. Sürücüsünü yeniden bağlayın veya klasörü sıfırlayın.",
+      locationUnavailable: "Kullanılamıyor. Sürücüsünü yeniden bağlayın veya klasörü sıfırlayın.",
       locationResetUnavailableTitle: "{name} sıfırlansın mı?",
-      locationResetUnavailableDescription:
-        "Sürücüsü bağlı değil. {path} konumundaki dosyalar o sürücüde kalır ve siz onları geri taşıyana kadar Kitaplık'ta görünmez.",
+      locationResetUnavailableDescription: "Sürücüsü bağlı değil. {path} konumundaki dosyalar o sürücüde kalır ve siz onları geri taşıyana kadar Kitaplık'ta görünmez.",
       locationLeftBehind: "{path} konumundaki dosyalar o sürücüde kalır.",
       dataStorage: "Kitaplık depolama alanı",
       manageStorage: "Depolamayı yönet",
@@ -1466,8 +1329,7 @@ export const tr = {
       itemCountOne: "1 öğe",
       itemCount: "{count} öğe",
       tabsSection: "Sekmeler",
-      tabsDescription:
-        "Kitaplık'ın hangi sekmeleri göstereceğini seçin. Bir bağlantıdan açtığınız sekme yine de görünür.",
+      tabsDescription: "Kitaplık'ın hangi sekmeleri göstereceğini seçin. Bir bağlantıdan açtığınız sekme yine de görünür.",
       tabHidden: "Gizli",
       lastVisited: "Son ziyaret",
     },
@@ -1495,8 +1357,7 @@ export const tr = {
     },
     keyboardShortcuts: {
       title: "Klavye kısayolları",
-      intro:
-        "Bir kısayolu değiştirmek için tuş bileşimini seçin ve ardından yeni tuşlara basın",
+      intro: "Bir kısayolu değiştirmek için tuş bileşimini seçin ve ardından yeni tuşlara basın",
       searchPlaceholder: "Kısayollarda ara…",
       keystrokePlaceholder: "Aramak için kısayola basın",
       searchByKeystrokes: "Tuş vuruşlarına göre ara",
@@ -1504,16 +1365,13 @@ export const tr = {
       noResults: "Bu aramayla eşleşen kısayol yok.",
       unassigned: "yok",
       recording: "Tuş dizisine basın",
-      needsModifier:
-        "⌘, Ctrl veya Alt ekleyin. Tek başına bir tuş yazmayı engeller.",
+      needsModifier: "⌘, Ctrl veya Alt ekleyin. Tek başına bir tuş yazmayı engeller.",
       conflict: "Başka bir kısayol tarafından da kullanılıyor",
-      conflictShadowed:
-        "Bu tuş bileşimi başka bir kısayolda da var ve onun yerine o çalışır",
+      conflictShadowed: "Bu tuş bileşimi başka bir kısayolda da var ve onun yerine o çalışır",
       edit: "Kısayolu değiştir",
       reset: "Varsayılana geri yükle",
       resetAll: "Varsayılanlara geri yükle",
-      browserReserved:
-        "Tarayıcınız bu tuş bileşimini kendine ayırmış olabilir. Masaüstü uygulamasında çalışır.",
+      browserReserved: "Tarayıcınız bu tuş bileşimini kendine ayırmış olabilir. Masaüstü uygulamasında çalışır.",
       metaUnsupported: "Windows tuşu kısayollarda kullanılamaz.",
       altGraphUnsupported: "AltGr tuş bileşimleri kısayol olarak kullanılamaz.",
       desktopOnly: "Yalnızca masaüstü uygulaması",
@@ -1534,8 +1392,7 @@ export const tr = {
         },
         toggleBrowserFullView: {
           label: "Tarayıcı tam görünümünü aç/kapat",
-          description:
-            "Tarayıcıyı tüm pencere boyunca gösterin, sohbet üzerinde yüzer",
+          description: "Tarayıcıyı tüm pencere boyunca gösterin, sohbet üzerinde yüzer",
         },
         openSettings: {
           label: "Ayarları aç",
@@ -1587,13 +1444,11 @@ export const tr = {
         },
         markChatUnread: {
           label: "Okunmadı olarak işaretle",
-          description:
-            "Seçili sohbetleri veya geçerli sohbeti okunmadı olarak işaretleyin",
+          description: "Seçili sohbetleri veya geçerli sohbeti okunmadı olarak işaretleyin",
         },
         togglePinChat: {
           label: "Sabitlemeyi aç/kapat",
-          description:
-            "Seçili sohbetleri veya geçerli sohbeti sabitleyin ya da sabitlemesini kaldırın",
+          description: "Seçili sohbetleri veya geçerli sohbeti sabitleyin ya da sabitlemesini kaldırın",
         },
         selectAllChats: {
           label: "Tüm sohbetleri seç",
@@ -1601,8 +1456,7 @@ export const tr = {
         },
         clearChatSelection: {
           label: "Seçimi temizle",
-          description:
-            "Seçili sohbetlerin seçimini kaldırın. Escape tuşu da aynısını yapar",
+          description: "Seçili sohbetlerin seçimini kaldırın. Escape tuşu da aynısını yapar",
         },
         deleteSelectedChats: {
           label: "Seçili sohbetleri sil",
@@ -1626,8 +1480,7 @@ export const tr = {
         },
         nextChatNeedingAttention: {
           label: "İlgi bekleyen sonraki sohbet",
-          description:
-            "Yanıt üreten, sırada bekleyen veya okunmamış sonraki sohbete geçin",
+          description: "Yanıt üreten, sırada bekleyen veya okunmamış sonraki sohbete geçin",
         },
         clearAllUnreads: {
           label: "Tüm okunmamışları temizle",
@@ -1731,8 +1584,7 @@ export const tr = {
         },
         steerMessage: {
           label: "Yanıtı yönlendir",
-          description:
-            "Geçerli yanıtı durdurun ve taslağı sıradaki olarak gönderin",
+          description: "Geçerli yanıtı durdurun ve taslağı sıradaki olarak gönderin",
         },
         stopGeneration: {
           label: "Üretmeyi durdur",
@@ -1770,8 +1622,7 @@ export const tr = {
     },
     sandbox: {
       title: "Güvenlik",
-      description:
-        "Python ve Terminal araç çağrılarının bu bilgisayarda bir işletim sistemi korumalı alanında çalışıp çalışmayacağı.",
+      description: "Python ve Terminal araç çağrılarının bu bilgisayarda bir işletim sistemi korumalı alanında çalışıp çalışmayacağı.",
       docs: "Belgeler",
       docsLabel: "Korumalı alan belgelerini aç",
       toolsSection: "Bu bilgisayar",
@@ -1780,37 +1631,27 @@ export const tr = {
       terminal: "Terminal",
       osIsolation: "İşletim sistemi korumalı alanı ({backend})",
       softwareSafeguards: "Yazılım güvenlik önlemleri",
-      noReason:
-        "Burada henüz hiçbir işletim sistemi korumalı alanı çalışmıyor, bu yüzden Unsloth bunun yerine her çağrıyı denetler.",
-      runsInCmd:
-        "Git Bash Windows korumalı alanında başlatılamadığı için cmd.exe içinde çalışır.",
+      noReason: "Burada henüz hiçbir işletim sistemi korumalı alanı çalışmıyor, bu yüzden Unsloth bunun yerine her çağrıyı denetler.",
+      runsInCmd: "Git Bash Windows korumalı alanında başlatılamadığı için cmd.exe içinde çalışır.",
       loadError: "Korumalı alan durumu yüklenemedi",
       saveError: "Korumalı alan ayarı kaydedilemedi",
       prepareError: "Bu bilgisayar hazırlanamadı",
-      unsupported:
-        "Bu Unsloth sunucusu henüz korumalı alan durumunu bildirmiyor. Buradan yönetmek için Unsloth'u güncelleyin.",
+      unsupported: "Bu Unsloth sunucusu henüz korumalı alan durumunu bildirmiyor. Buradan yönetmek için Unsloth'u güncelleyin.",
       windowsSection: "Windows korumalı alanı (önizleme)",
-      windowsDescription:
-        "Microsoft'un MXC korumalı alanı. Windows'a yerleşik kapsayıcıyı veya kapsayıcı içermeyen Windows sürümlerinde bir yedek çözümü kullanır.",
+      windowsDescription: "Microsoft'un MXC korumalı alanı. Windows'a yerleşik kapsayıcıyı veya kapsayıcı içermeyen Windows sürümlerinde bir yedek çözümü kullanır.",
       builtinLabel: "Yerleşik kapsayıcı",
-      builtinDescription:
-        "Windows korumalı alanı, Windows'un yerleşik kapsayıcısında yönetici adımı gerektirmeden çalışır.",
+      builtinDescription: "Windows korumalı alanı, Windows'un yerleşik kapsayıcısında yönetici adımı gerektirmeden çalışır.",
       builtinInUse: "Kullanımda",
       optInLabel: "Yedek korumalı alanı kullan",
-      optInDescription:
-        "Yerleşik kapsayıcısı olmayan Windows sürümleri içindir. Bu durumda Python ve Terminal yalnızca sohbetin klasöründeki dosyaları değiştirebilir.",
-      optInNotNeeded:
-        "Yerleşik kapsayıcı çalıştığı için bu bilgisayarda gerekli değil.",
-      disclosure:
-        "Yedek çözüm, her yeniden başlatmadan sonra tekrarlanması gereken tek seferlik bir yönetici adımı (Bu bilgisayarı hazırla) gerektirir. Bir araç çalışırken Unsloth ona gereken klasörlere geçici erişim verir. MXC hâlâ bir önizlemedir, bir güvenlik sınırı değildir.",
+      optInDescription: "Yerleşik kapsayıcısı olmayan Windows sürümleri içindir. Bu durumda Python ve Terminal yalnızca sohbetin klasöründeki dosyaları değiştirebilir.",
+      optInNotNeeded: "Yerleşik kapsayıcı çalıştığı için bu bilgisayarda gerekli değil.",
+      disclosure: "Yedek çözüm, her yeniden başlatmadan sonra tekrarlanması gereken tek seferlik bir yönetici adımı (Bu bilgisayarı hazırla) gerektirir. Bir araç çalışırken Unsloth ona gereken klasörlere geçici erişim verir. MXC hâlâ bir önizlemedir, bir güvenlik sınırı değildir.",
       lockedDacl: "UNSLOTH_MXC_ALLOW_DACL_FALLBACK tarafından ayarlandı",
       grantsLabel: "Daha hızlı araç başlatma",
-      grantsDescription:
-        "Unsloth'un kendi çalışma zamanı klasörlerine salt okunur erişimi çağrılar arasında korur. Kapalıyken her çağrı birkaç saniye daha yavaş başlar.",
+      grantsDescription: "Unsloth'un kendi çalışma zamanı klasörlerine salt okunur erişimi çağrılar arasında korur. Kapalıyken her çağrı birkaç saniye daha yavaş başlar.",
       lockedGrants: "UNSLOTH_MXC_PERSISTENT_READ_GRANTS tarafından ayarlandı",
       memoryLabel: "Bellek sınırı",
-      memoryDescription:
-        "Korumalı alanda çalışan tek bir Python veya Terminal çağrısının ayırabileceği en fazla bellek. Bir sonraki çağrıdan itibaren geçerlidir. Varsayılan değer {defaultSize} GB'dir.",
+      memoryDescription: "Korumalı alanda çalışan tek bir Python veya Terminal çağrısının ayırabileceği en fazla bellek. Bir sonraki çağrıdan itibaren geçerlidir. Varsayılan değer {defaultSize} GB'dir.",
       memoryLocked: "UNSLOTH_STUDIO_SANDBOX_AS_GB tarafından ayarlandı",
       memoryInvalid: "{min} ile {max} arasında bir tam sayı girin.",
       restored: "{count} klasörden erişim kaldırıldı.",
@@ -1826,10 +1667,8 @@ export const tr = {
       prepFailed: "Hazırlama başarısız oldu.",
       setupLabel: "İşletim sistemi korumalı alanı",
       setupCommandHint: "Bunu Unsloth'u çalıştıran bilgisayarda çalıştırın:",
-      macosBuiltIn:
-        "macOS'ta yerleşik bir korumalı alan bulunduğundan yüklenecek bir şey yok.",
-      setupKeywords:
-        "install setup kurulum kur yükle bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
+      macosBuiltIn: "macOS'ta yerleşik bir korumalı alan bulunduğundan yüklenecek bir şey yok.",
+      setupKeywords: "install setup kurulum kur yükle bubblewrap bwrap seatbelt mxc sudo pkexec apparmor uac",
       setupSucceeded: "İşletim sistemi korumalı alanı hazır.",
       runtimeMissing: "Henüz yüklenmedi. Yüklemek için yönetici izni gerekmez.",
       runtimeLabel: "Windows korumalı alan çalışma zamanı",
@@ -1837,31 +1676,24 @@ export const tr = {
       installingRuntime: "Yükleniyor…",
       installRuntimeFailed: "Çalışma zamanı yüklemesi başarısız oldu.",
       installRuntimeError: "Çalışma zamanı yüklemesi başlatılamadı.",
-      unsupportedArch:
-        "Windows korumalı alanı (MXC) yalnızca x64 ve ARM64 Windows'ta çalışır, bu nedenle bu bilgisayarda kullanılamaz.",
-      builtinNeedsUpdate:
-        "Windows'un yerleşik kapsayıcısı {required} veya daha yeni bir derleme gerektiriyor; bu bilgisayardaki derleme: {current}. Yönetici adımı olmadan kullanmak için en son Windows güncellemesini yükleyin veya aşağıdaki yedek çözümü açın.",
-      unsupportedBuild:
-        "Windows korumalı alanı (MXC) Windows 11 24H2 (derleme 26100) veya daha yenisini gerektirir, bu nedenle bu bilgisayarda kullanılamaz.",
+      unsupportedArch: "Windows korumalı alanı (MXC) yalnızca x64 ve ARM64 Windows'ta çalışır, bu nedenle bu bilgisayarda kullanılamaz.",
+      builtinNeedsUpdate: "Windows'un yerleşik kapsayıcısı {required} veya daha yeni bir derleme gerektiriyor; bu bilgisayardaki derleme: {current}. Yönetici adımı olmadan kullanmak için en son Windows güncellemesini yükleyin veya aşağıdaki yedek çözümü açın.",
+      unsupportedBuild: "Windows korumalı alanı (MXC) Windows 11 24H2 (derleme 26100) veya daha yenisini gerektirir, bu nedenle bu bilgisayarda kullanılamaz.",
       permissionLabel: "Araç izinleri",
       levelRowLabel: "Korumalı alan düzeyi",
       levelPickerTitle: "Kod nasıl korumalı alanda çalıştırılsın?",
       levelOff: "Devre dışı",
       levelOffShort: "Tam erişim korumalı alanı kapatır",
-      levelHighDetail:
-        "Python ve Terminal, yazılım korumasına ek olarak işletim sistemi korumalı alanında (bubblewrap, Seatbelt veya MXC) çalışır. Çalışan bir işletim sistemi korumalı alanı yoksa riskli çağrılar önce onay ister.",
-      levelLowDetail:
-        "Python ve Terminal, işletim sistemi korumalı alanının dışında yalnızca yazılım korumasıyla çalışır. Tam erişim'i seçmediyseniz riskli çağrılar önce onay ister.",
+      levelHighDetail: "Python ve Terminal, yazılım korumasına ek olarak işletim sistemi korumalı alanında (bubblewrap, Seatbelt veya MXC) çalışır. Çalışan bir işletim sistemi korumalı alanı yoksa riskli çağrılar önce onay ister.",
+      levelLowDetail: "Python ve Terminal, işletim sistemi korumalı alanının dışında yalnızca yazılım korumasıyla çalışır. Tam erişim'i seçmediyseniz riskli çağrılar önce onay ister.",
       levelLabel: "Korumalı alan",
       levelHigh: "Yüksek",
       levelLow: "Düşük",
       levelHighShort: "Python ve Terminal'e işletim sistemi yalıtımı ekler",
       levelLowShort: "Yalnızca yazılım. Riskli kod önce onay ister",
-      levelFullAccessNote:
-        "Tam erişim korumalı alanı kapatır. Başka bir düzey seçtiğinizde bu ayar yeniden geçerli olur.",
+      levelFullAccessNote: "Tam erişim korumalı alanı kapatır. Başka bir düzey seçtiğinizde bu ayar yeniden geçerli olur.",
       learnMore: "Daha fazla bilgi",
-      managedNote:
-        "İşletim sistemi korumalı alanını bu Unsloth sunucusunun sahibi ayarlar.",
+      managedNote: "İşletim sistemi korumalı alanını bu Unsloth sunucusunun sahibi ayarlar.",
       trustedFoldersTitle: "Güvenilen klasörler",
       trustedFoldersLabel: "Sormadan çalıştır",
       trustedFoldersDescription: "Python ve Terminal bu klasörlerdeki dosyaları onay istemeden okuyabilir ve çalıştırabilir, yalnızca kendi sohbetlerinizde. Bu klasörlere yazmak yine onay ister. Her satıra bir klasör.",
@@ -1873,8 +1705,7 @@ export const tr = {
       description: "Unsloth günlüklerini uygulamadan çıkmadan okuyun.",
       logSection: "Günlük dosyası",
       source: "Günlük dosyası",
-      sourceHint:
-        "Model çalıştırıcıları kendi günlüklerini yazar; bu nedenle başarısız bir yükleme veya üretimin nedeni genellikle sunucu günlüğünde değil, orada açıklanır.",
+      sourceHint: "Model çalıştırıcıları kendi günlüklerini yazar; bu nedenle başarısız bir yükleme veya üretimin nedeni genellikle sunucu günlüğünde değil, orada açıklanır.",
       path: "Konum",
       pathCopy: "Yolu kopyala",
       currentSession: "Geçerli",
@@ -1893,58 +1724,45 @@ export const tr = {
       modeInterval: "3 saniyede bir",
       modeManual: "El ile",
       refreshNow: "Şimdi yenile",
-      privacyNote:
-        "Kimlik bilgileri bu görünümde maskelenir. Diskteki dosya maskelenmez.",
+      privacyNote: "Kimlik bilgileri bu görünümde maskelenir. Diskteki dosya maskelenmez.",
       copyVisible: "Görünür günlüğü kopyala",
       empty: "Henüz hiçbir şey günlüğe kaydedilmedi.",
       disabled: "Dosyaya günlük kaydı kapalı (UNSLOTH_STUDIO_NO_FILE_LOG=1).",
       missing: "Günlük dosyası bulunamadı.",
       unreadable: "Günlük dosyası okunamadı.",
       viewLogs: "Günlükleri görüntüle",
-      timeout:
-        "Günlük isteği zaman aşımına uğradı. Sunucuya erişilemiyor olabilir.",
-      droppedNotice:
-        "Bazı satırlar atlandı: günlük, okunabileceğinden daha hızlı yazıldı.",
-      morePending:
-        "Daha fazla satır hâlâ okunuyor; bir sonraki yenilemede gelecekler.",
-      staleSession:
-        "Dosyaya günlük kaydı kapalı olduğundan bu önceki bir oturumdur ve güncellenmeyecek.",
+      timeout: "Günlük isteği zaman aşımına uğradı. Sunucuya erişilemiyor olabilir.",
+      droppedNotice: "Bazı satırlar atlandı: günlük, okunabileceğinden daha hızlı yazıldı.",
+      morePending: "Daha fazla satır hâlâ okunuyor; bir sonraki yenilemede gelecekler.",
+      staleSession: "Dosyaya günlük kaydı kapalı olduğundan bu önceki bir oturumdur ve güncellenmeyecek.",
       downloadAllLogs: "Tüm günlükleri indir (.zip)",
       downloadingAllLogs: "Günlükler paketleniyor...",
-      exportMaskedNote:
-        "Dışa aktarılan dosyalarda kimlik bilgileri maskelenir. Çok büyük günlüklerde yalnızca en son satırlar tutulur ve bazı günlükler tamamen dışarıda bırakılabilir; arşivdeki EXPORT_WARNINGS.txt dosyasına bakın.",
+      exportMaskedNote: "Dışa aktarılan dosyalarda kimlik bilgileri maskelenir. Çok büyük günlüklerde yalnızca en son satırlar tutulur ve bazı günlükler tamamen dışarıda bırakılabilir; arşivdeki EXPORT_WARNINGS.txt dosyasına bakın.",
       downloadedTo: "Kaydedildiği konum: {path}",
       downloadedToBrowser: "İndirme başladı.",
       showInFolder: "Klasörde göster",
       openLogsFolder: "Günlükler klasörünü aç",
       openLogsFolderFailed: "Günlükler klasörü açılamadı.",
       exportFailed: "Günlükler indirilemedi.",
-      exportTooOld:
-        "Çalışan Unsloth arka ucu günlükleri dışa aktarmak için çok eski. Bu arka ucu güncelleyip yeniden başlatın.",
-      exportForbidden:
-        "Tüm günlükleri indirmek için oturum açılmış bir Unsloth oturumu gerekir. API anahtarı yeterli değildir.",
-      keywords:
-        "hata ayıklama günlük günlükler hata hatalar çökme sorun giderme tanılama başarısız debug log logs error crash traceback stack trace",
+      exportTooOld: "Çalışan Unsloth arka ucu günlükleri dışa aktarmak için çok eski. Bu arka ucu güncelleyip yeniden başlatın.",
+      exportForbidden: "Tüm günlükleri indirmek için oturum açılmış bir Unsloth oturumu gerekir. API anahtarı yeterli değildir.",
+      keywords: "hata ayıklama günlük günlükler hata hatalar çökme sorun giderme tanılama başarısız debug log logs error crash traceback stack trace",
     },
     voice: {
       title: "Ses",
       description: "Mikrofon, dikte, konuşmayı metne dönüştürme ve sesli okuma",
       dictation: {
         audioUploadTitle: "Kayıtla dikte et",
-        audioUploadDescription:
-          "Tarayıcınız, doğrudan Unsloth içinde kayıt yapmak için güvenli bir bağlantı (HTTPS) gerektiriyor. Bu HTTP bağlantısında bunun yerine telefonunuzun ses kaydedicisini kullanın veya kayıtlı bir ses kaydı seçin. Unsloth sunucunuz sesi metne dönüştürür ve metni mesajınıza ekler.",
+        audioUploadDescription: "Tarayıcınız, doğrudan Unsloth içinde kayıt yapmak için güvenli bir bağlantı (HTTPS) gerektiriyor. Bu HTTP bağlantısında bunun yerine telefonunuzun ses kaydedicisini kullanın veya kayıtlı bir ses kaydı seçin. Unsloth sunucunuz sesi metne dönüştürür ve metni mesajınıza ekler.",
         audioUploadChooseFile: "Kayıt seç",
         audioUploadRecord: "Ses kaydet",
-        audioUploadIphoneHint:
-          "iPhone'da Sesli Notlar'dan veya başka bir kayıt uygulamasından bir kayıt kaydedin, ardından burada seçin.",
-        audioUploadServerModelNote:
-          "Normal dikte farklı bir motor kullansa bile bu kayıt, Unsloth sunucusunda yukarıda gösterilen yerel modeli kullanır.",
+        audioUploadIphoneHint: "iPhone'da Sesli Notlar'dan veya başka bir kayıt uygulamasından bir kayıt kaydedin, ardından burada seçin.",
+        audioUploadServerModelNote: "Normal dikte farklı bir motor kullansa bile bu kayıt, Unsloth sunucusunda yukarıda gösterilen yerel modeli kullanır.",
         audioUploadAutomatic: "Otomatik",
         audioUploadModelReady: "Bu Unsloth sunucusunda hazır",
         audioUploadRetryTitle: "Metne dönüştürülemedi: {file}",
         audioUploadRetry: "Metne dönüştürmeyi yeniden dene",
-        audioUploadChooseModel:
-          "Ses ayarlarında yerel bir konuşma tanıma modeli seçin.",
+        audioUploadChooseModel: "Ses ayarlarında yerel bir konuşma tanıma modeli seçin.",
         audioUploadEmpty: "Seçilen kayıt boş.",
         audioUploadTooLarge: "{size} boyutundan küçük bir kayıt seçin.",
         audioUploadVideoUnsupported: "Video değil, bir ses kaydı seçin.",
@@ -1962,41 +1780,31 @@ export const tr = {
         micRecordForModel: "Model için ses kaydet",
         engineLabel: "Dikte motoru",
         engineBrowser: "Tarayıcı",
-        engineBrowserDescription:
-          "Sesi tarayıcınızın konuşma hizmetiyle metne dönüştürür. Bir STT modeli kullanmak için “Yerel metne dönüştürme”yi seçin.",
+        engineBrowserDescription: "Sesi tarayıcınızın konuşma hizmetiyle metne dönüştürür. Bir STT modeli kullanmak için “Yerel metne dönüştürme”yi seçin.",
         engineModel: "Yerel metne dönüştürme",
-        engineModelDescription:
-          "Bir konuşmayı metne dönüştürme (STT) modelini yerel olarak çalıştırır ve çevrimdışı çalışır. İndirin, yükleyin; işlem yapılmadığında bellekten kaldırılır.",
+        engineModelDescription: "Bir konuşmayı metne dönüştürme (STT) modelini yerel olarak çalıştırır ve çevrimdışı çalışır. İndirin, yükleyin; işlem yapılmadığında bellekten kaldırılır.",
         engineCustom: "Özel uç nokta",
-        engineCustomDescription:
-          "Kaydedilen sesi Bağlantılar'ınızdaki OpenAI uyumlu bir STT sunucusuna gönderir.",
+        engineCustomDescription: "Kaydedilen sesi Bağlantılar'ınızdaki OpenAI uyumlu bir STT sunucusuna gönderir.",
         connectionLabel: "Bağlantı",
-        connectionDescription:
-          "Bağlantılar bölümünde OpenAI uyumlu bir sunucu ve isteğe bağlı bir API anahtarı ekleyin.",
+        connectionDescription: "Bağlantılar bölümünde OpenAI uyumlu bir sunucu ve isteğe bağlı bir API anahtarı ekleyin.",
         connectionPlaceholder: "Bir bağlantı seçin",
         connectionEmpty: "Kullanılabilir bağlantı yok",
         customModelLabel: "Model",
-        customModelDescription:
-          "/v1/audio/transcriptions adresine gönderilen model adı.",
+        customModelDescription: "/v1/audio/transcriptions adresine gönderilen model adı.",
         sttModelLabel: "Konuşma tanıma modeli",
-        sttModelDescription:
-          "Yerel olarak çalıştırılacak bir STT modeli seçin veya arayın.",
+        sttModelDescription: "Yerel olarak çalıştırılacak bir STT modeli seçin veya arayın.",
         sttQuantLabel: "Niceleme",
-        sttQuantDescription:
-          "Yerel olarak çalıştırılacak bir STT modeli seçin veya arayın, ardından nicelemesini seçin.",
+        sttQuantDescription: "Yerel olarak çalıştırılacak bir STT modeli seçin veya arayın, ardından nicelemesini seçin.",
         sttDeviceLabel: "Yükleneceği yer",
         sttContextLabel: "Ses bağlamı",
         sttContextAuto: "Otomatik (önerilen)",
-        sttContextAutoDescription:
-          "Her kayda uyum sağlar, daha uzun seslerde daha fazla bellek kullanır. Eski çalışma ortamları belleği azaltmak için sabit bir boyut gerektirebilir. Ses ve Yazıya dök bölümlerindeki Qwen3-ASR için geçerlidir.",
-        sttContextFixedDescription:
-          "Daha küçük sınırlar daha az bellek kullanır. Sığmayan kayıtlar daha yüksek bir sınır veya Otomatik gerektirir. Ses ve Yazıya dök bölümlerindeki Qwen3-ASR için geçerlidir.",
+        sttContextAutoDescription: "Her kayda uyum sağlar, daha uzun seslerde daha fazla bellek kullanır. Eski çalışma ortamları belleği azaltmak için sabit bir boyut gerektirebilir. Ses ve Yazıya dök bölümlerindeki Qwen3-ASR için geçerlidir.",
+        sttContextFixedDescription: "Daha küçük sınırlar daha az bellek kullanır. Sığmayan kayıtlar daha yüksek bir sınır veya Otomatik gerektirir. Ses ve Yazıya dök bölümlerindeki Qwen3-ASR için geçerlidir.",
         sttContextTokens: "{count} token",
         sttDeviceAuto: "Varsa GPU",
         sttDeviceCpu: "CPU RAM",
         sttDeviceAutoDescription: "Varsa GPU'yu, yoksa CPU'yu kullanın.",
-        sttDeviceCpuDescription:
-          "Modeli sistem RAM'inde tutun. Metne dönüştürme daha yavaştır ancak GPU belleği kullanılmaz.",
+        sttDeviceCpuDescription: "Modeli sistem RAM'inde tutun. Metne dönüştürme daha yavaştır ancak GPU belleği kullanılmaz.",
         sttModelSearchPlaceholder: "HF'de herhangi bir modeli arayın",
         sttModelSearching: "Hugging Face'te aranıyor…",
         sttModelValidating: "Whisper uyumluluğu denetleniyor…",
@@ -2009,18 +1817,15 @@ export const tr = {
         sttLoadingModel: "Model yükleniyor…",
         sttReady: "Yüklendiği yer: {device}",
         sttLoaded: "Yüklendi",
-        sttUnavailable:
-          "Bu sunucuda yüklü değil. Yerel dikteyi etkinleştirmek için `unsloth studio update` komutunu çalıştırın.",
+        sttUnavailable: "Bu sunucuda yüklü değil. Yerel dikteyi etkinleştirmek için `unsloth studio update` komutunu çalıştırın.",
         sttRetry: "Yeniden dene",
         sttDownloadChecking: "İndirme durumu denetleniyor…",
         sttNotDownloaded: "İndirilmedi",
         sttDownloadStatusFailed: "İndirme durumu denetlenemedi",
         sttDownload: "İndir",
         sttDownloadConfirmTitle: "{model} indirilsin mi?",
-        sttDownloadConfirmBody:
-          "Yerel dikte tamamen çevrimdışı çalışır, ancak önce {model} konuşma modeline ihtiyaç duyar. Yaklaşık {size} boyutundadır ve Hugging Face önbelleğinize bir kez indirilir.",
-        sttDownloadConfirmBodyUnsized:
-          "Yerel dikte tamamen çevrimdışı çalışır, ancak önce {model} konuşma modeline ihtiyaç duyar. Hugging Face önbelleğinize bir kez indirilir.",
+        sttDownloadConfirmBody: "Yerel dikte tamamen çevrimdışı çalışır, ancak önce {model} konuşma modeline ihtiyaç duyar. Yaklaşık {size} boyutundadır ve Hugging Face önbelleğinize bir kez indirilir.",
+        sttDownloadConfirmBodyUnsized: "Yerel dikte tamamen çevrimdışı çalışır, ancak önce {model} konuşma modeline ihtiyaç duyar. Hugging Face önbelleğinize bir kez indirilir.",
         sttOpenVoiceSettings: "Ses ayarlarını aç",
         sttDownloadStarted: "İndiriliyor: {model}",
         sttDownloading: "İndiriliyor… %{progress}",
@@ -2037,17 +1842,12 @@ export const tr = {
         microphoneLabel: "Mikrofon",
         microphoneFallbackName: "Mikrofon {index}",
         microphoneDescription: "Dikte için kullanılır",
-        microphoneFallbackHint:
-          "Dikte için kullanılır. Tarayıcının konuşma motoru bu aygıtı kullanamazsa sistem varsayılanına geri döner",
-        microphoneGrantDescription:
-          "Aygıt adlarını göstermek için mikrofon erişimine izin verin",
+        microphoneFallbackHint: "Dikte için kullanılır. Tarayıcının konuşma motoru bu aygıtı kullanamazsa sistem varsayılanına geri döner",
+        microphoneGrantDescription: "Aygıt adlarını göstermek için mikrofon erişimine izin verin",
         allowMicrophone: "Mikrofona izin ver",
-        micAccessBlocked:
-          "Mikrofon erişimi engellendi. Bu Unsloth sayfası için mikrofon erişimine izin verin ve yeniden deneyin.",
-        micAccessBlockedDesktop:
-          "Mikrofon erişimi engellendi. Yeniden deneyip İzin Ver'i seçin veya sistem gizlilik ayarlarınızda mikrofonu etkinleştirin.",
-        micAccessUnsupported:
-          "Mikrofon erişimi bu tarayıcıda veya bu bağlamda desteklenmiyor.",
+        micAccessBlocked: "Mikrofon erişimi engellendi. Bu Unsloth sayfası için mikrofon erişimine izin verin ve yeniden deneyin.",
+        micAccessBlockedDesktop: "Mikrofon erişimi engellendi. Yeniden deneyip İzin Ver'i seçin veya sistem gizlilik ayarlarınızda mikrofonu etkinleştirin.",
+        micAccessUnsupported: "Mikrofon erişimi bu tarayıcıda veya bu bağlamda desteklenmiyor.",
         systemDefault: "Sistem varsayılanı",
         savedMicDisconnected: "Kayıtlı mikrofon (bağlı değil)",
         languageLabel: "Dikte dili",
@@ -2057,8 +1857,7 @@ export const tr = {
       },
       dictionary: {
         sectionTitle: "Dikte sözlüğü",
-        sectionDescription:
-          "Diktenin belirli sözcükleri veya ifadeleri nasıl yazacağını ayarlayın",
+        sectionDescription: "Diktenin belirli sözcükleri veya ifadeleri nasıl yazacağını ayarlayın",
         manageLabel: "Özel yazımlar",
         manage: "Yönet",
         backToVoice: "Ses'e dön",
@@ -2070,12 +1869,10 @@ export const tr = {
       },
       recents: {
         sectionTitle: "Dikte geçmişi",
-        sectionDescription:
-          "Metni kurtarabilmeniz için her dikte burada kaydedilir",
+        sectionDescription: "Metni kurtarabilmeniz için her dikte burada kaydedilir",
         manageLabel: "Dikte geçmişi",
         manage: "Yönet",
-        pageDescription:
-          "Her dikte kaydedilir. Diktelerinizi görüntüleyin, kopyalayın veya silin ya da bir diktenin kullanıldığı sohbeti açın.",
+        pageDescription: "Her dikte kaydedilir. Diktelerinizi görüntüleyin, kopyalayın veya silin ya da bir diktenin kullanıldığı sohbeti açın.",
         searchPlaceholder: "Diktelerde ara",
         sortLabel: "Dikteleri sırala",
         sortNewest: "En yeni",
@@ -2094,16 +1891,13 @@ export const tr = {
         copyFailed: "Panoya kopyalanamadı",
         delete: "Dikteyi sil",
         deleteTitle: "Dikteyi sil",
-        deleteDescription:
-          "Bu kayıtlı dikte silinsin mi? Bu işlem geri alınamaz.",
-        deleteLinkedDescription:
-          "Bu kayıtlı dikte silinsin mi? Kullanıldığı sohbeti de silebilirsiniz. Bu işlem geri alınamaz.",
+        deleteDescription: "Bu kayıtlı dikte silinsin mi? Bu işlem geri alınamaz.",
+        deleteLinkedDescription: "Bu kayıtlı dikte silinsin mi? Kullanıldığı sohbeti de silebilirsiniz. Bu işlem geri alınamaz.",
         deleteWithChat: "Sohbeti ve dikteyi sil",
         deleteWithChatFailed: "Sohbet silinemedi",
         clear: "Geçmişi temizle",
         clearTitle: "Dikte geçmişini temizle",
-        clearDescription:
-          "Tüm kayıtlı dikteler silinsin mi? Bu işlem geri alınamaz.",
+        clearDescription: "Tüm kayıtlı dikteler silinsin mi? Bu işlem geri alınamaz.",
         clearConfirm: "Tümünü temizle",
         showMore: "Daha fazla göster ({count})",
         openChat: "Sohbeti aç",
@@ -2116,33 +1910,26 @@ export const tr = {
         autoDescription: "Her yanıtı tamamlanır tamamlanmaz sesli okuyun",
         engineLabel: "TTS motoru",
         engineSystemDescription: "Aygıta yerleşik sesler",
-        engineStudioDescription:
-          "Ses › Metinden Konuşmaya bölümünde yüklenen bir modelle konuşur",
+        engineStudioDescription: "Ses › Metinden Konuşmaya bölümünde yüklenen bir modelle konuşur",
         engineSystem: "Sistem sesleri",
         engineStudio: "Unsloth modeli",
         engineCustom: "Özel uç nokta",
-        engineCustomDescription:
-          "Bağlantılarınızdaki OpenAI uyumlu bir TTS sunucusu (ör. Kokoro)",
+        engineCustomDescription: "Bağlantılarınızdaki OpenAI uyumlu bir TTS sunucusu (ör. Kokoro)",
         connectionLabel: "Bağlantı",
-        connectionDescription:
-          "Bağlantılar sekmesinde OpenAI uyumlu bir sunucu ekleyin",
+        connectionDescription: "Bağlantılar sekmesinde OpenAI uyumlu bir sunucu ekleyin",
         connectionPlaceholder: "Bir bağlantı seçin",
         customModelLabel: "Model",
-        customVoiceDescription:
-          "Uç noktanın beklediği ses adı; varsayılan olarak alloy",
+        customVoiceDescription: "Uç noktanın beklediği ses adı; varsayılan olarak alloy",
         modelLabel: "TTS modeli",
-        modelDescription:
-          "Yüklü model yok. Ses › Metinden Konuşmaya bölümünde bir model yükleyin.",
+        modelDescription: "Yüklü model yok. Ses › Metinden Konuşmaya bölümünde bir model yükleyin.",
         modelLoaded: "{model} yüklendi",
         keepBothLabel: "Sohbet modelini yüklü tut",
-        keepBothDescription:
-          "Birden çok modeli yüklü tut ayarı Kapalı olduğundan, bir konuşma modeli yüklemek sohbet modelini bellekten kaldırır.",
+        keepBothDescription: "Birden çok modeli yüklü tut ayarı Kapalı olduğundan, bir konuşma modeli yüklemek sohbet modelini bellekten kaldırır.",
         keepBothAction: "İkisini de yüklü tut",
         openAudioAction: "Ses'i aç",
         voiceLabel: "Ses",
         voiceDescription: "Bu aygıttaki en iyi sesler",
-        studioVoiceDescription:
-          "Ses bölümünde kaydedilen sesler bir klonlama modeli gerektirir",
+        studioVoiceDescription: "Ses bölümünde kaydedilen sesler bir klonlama modeli gerektirir",
         studioVoiceDefault: "Modelin kendi sesi",
         studioVoiceSaved: "Kayıtlı ses",
         speedLabel: "Hız",
@@ -2163,8 +1950,7 @@ export const tr = {
       description: "Unsloth için genel tercihler.",
       account: "Hesap",
       huggingFaceToken: "Hugging Face token'ı",
-      huggingFaceTokenDescription:
-        "Erişimi kısıtlı modelleri yüklemek ve yapıtları göndermek için kullanılır.",
+      huggingFaceTokenDescription: "Erişimi kısıtlı modelleri yüklemek ve yapıtları göndermek için kullanılır.",
       hideToken: "Token'ı gizle",
       showToken: "Token'ı göster",
       clearToken: "Temizle",
@@ -2175,12 +1961,10 @@ export const tr = {
       passwordDialog: {
         trigger: "Parolayı değiştir",
         title: "Parolayı değiştir",
-        description:
-          "Geçerli parolanızı girin ve yeni bir parola seçin (en az {minLength} karakter).",
+        description: "Geçerli parolanızı girin ve yeni bir parola seçin (en az {minLength} karakter).",
         setTrigger: "Uzak parolayı ayarla",
         setTitle: "Uzak parolayı ayarla",
-        setDescription:
-          "Uzak tarayıcıların unsloth olarak oturum açarken kullanacağı parolayı seçin (en az {minLength} karakter). Unsloth Desktop App otomatik olarak oturum açmaya devam eder.",
+        setDescription: "Uzak tarayıcıların unsloth olarak oturum açarken kullanacağı parolayı seçin (en az {minLength} karakter). Unsloth Desktop App otomatik olarak oturum açmaya devam eder.",
         setSubmit: "Parolayı ayarla",
         setting: "Ayarlanıyor...",
         setDone: "Parola ayarlandı.",
@@ -2223,35 +2007,24 @@ export const tr = {
       helperLlm: {
         sectionTitle: "Yardımcı LLM",
         preloadOnStartup: "Yardımcı LLM'yi başlangıçta önbelleğe al",
-        preloadOnStartupDescription:
-          "AI Assist yardımcı modelini başlangıçta arka planda indirin. Varsayılan olarak kapalıdır; AI Assist gerektiğinde yine de indirebilir.",
-        disabledByEnv:
-          "Arka uç ortamındaki UNSLOTH_HELPER_MODEL_DISABLE tarafından devre dışı bırakıldı.",
+        preloadOnStartupDescription: "AI Assist yardımcı modelini başlangıçta arka planda indirin. Varsayılan olarak kapalıdır; AI Assist gerektiğinde yine de indirebilir.",
+        disabledByEnv: "Arka uç ortamındaki UNSLOTH_HELPER_MODEL_DISABLE tarafından devre dışı bırakıldı.",
         loadError: "Yardımcı LLM ayarları yüklenemedi.",
         saveError: "Yardımcı LLM ayarları kaydedilemedi.",
       },
       developerMode: {
         sectionTitle: "Geliştirici modu",
         videoCpu: "CPU'da video üretimine izin ver (deneysel)",
-        videoCpuDescription:
-          "Video sayfasının desteklenen GPU'su olmayan bir ana makinede çalışmasına izin verir. Varsayılan olarak kapalıdır; desteklenmez ve çok yavaştır.",
-        notApplicable:
-          "Bu makinede etkisi yoktur: video ya zaten GPU'sunda çalışıyor ya da CPU'nun aşamayacağı bir nedenle engelleniyor.",
-        forcedOnByEnv:
-          "Arka uç ortamındaki UNSLOTH_VIDEO_ALLOW_CPU tarafından açıldı.",
-        forcedOffByEnv:
-          "Arka uç ortamındaki UNSLOTH_VIDEO_ALLOW_CPU tarafından kapatıldı.",
+        videoCpuDescription: "Video sayfasının desteklenen GPU'su olmayan bir ana makinede çalışmasına izin verir. Varsayılan olarak kapalıdır; desteklenmez ve çok yavaştır.",
+        notApplicable: "Bu makinede etkisi yoktur: video ya zaten GPU'sunda çalışıyor ya da CPU'nun aşamayacağı bir nedenle engelleniyor.",
+        forcedOnByEnv: "Arka uç ortamındaki UNSLOTH_VIDEO_ALLOW_CPU tarafından açıldı.",
+        forcedOffByEnv: "Arka uç ortamındaki UNSLOTH_VIDEO_ALLOW_CPU tarafından kapatıldı.",
         confirmTitle: "CPU'da video üretimi etkinleştirilsin mi?",
-        confirmWarning:
-          "CPU'da video üretimi saatler sürebilir, büyük miktarda RAM tüketebilir ve sisteminizin donmasına neden olabilir. Riski size ait olmak üzere devam edin.",
-        ramBelowMinimum:
-          "Bu makinede {host} GB RAM var; bu, en küçük video modelinin CPU'da gerektirdiği {min} GB'nin altında. Yükleme büyük olasılıkla başarısız olur veya sistemi dondurur.",
-        ramOk:
-          "Bu makinede {host} GB RAM var. En küçük video modeli CPU'da yaklaşık {min} GB gerektirir; daha büyük modeller çok daha fazlasını gerektirir.",
-        ramUnknown:
-          "En küçük video modeli CPU'da yaklaşık {min} GB RAM gerektirir; daha büyük modeller çok daha fazlasını gerektirir.",
-        performanceEstimate:
-          "Gürültü giderme adımı başına dakikalar bekleyin: Wan2.1 1.3B ile 3 adımda 5 karelik 832x480 bir klip 16 CPU iş parçacığında yaklaşık 4 dakika sürdü; varsayılan ayarlarla tam uzunlukta bir klip saatler sürebilir.",
+        confirmWarning: "CPU'da video üretimi saatler sürebilir, büyük miktarda RAM tüketebilir ve sisteminizin donmasına neden olabilir. Riski size ait olmak üzere devam edin.",
+        ramBelowMinimum: "Bu makinede {host} GB RAM var; bu, en küçük video modelinin CPU'da gerektirdiği {min} GB'nin altında. Yükleme büyük olasılıkla başarısız olur veya sistemi dondurur.",
+        ramOk: "Bu makinede {host} GB RAM var. En küçük video modeli CPU'da yaklaşık {min} GB gerektirir; daha büyük modeller çok daha fazlasını gerektirir.",
+        ramUnknown: "En küçük video modeli CPU'da yaklaşık {min} GB RAM gerektirir; daha büyük modeller çok daha fazlasını gerektirir.",
+        performanceEstimate: "Gürültü giderme adımı başına dakikalar bekleyin: Wan2.1 1.3B ile 3 adımda 5 karelik 832x480 bir klip 16 CPU iş parçacığında yaklaşık 4 dakika sürdü; varsayılan ayarlarla tam uzunlukta bir klip saatler sürebilir.",
         confirmAction: "Yine de etkinleştir",
         loadError: "Geliştirici modu ayarları yüklenemedi.",
         saveError: "Geliştirici modu ayarları kaydedilemedi.",
@@ -2259,25 +2032,17 @@ export const tr = {
       modelAutoSwitch: {
         sectionTitle: "Otomatik model değiştirme (OpenAI API)",
         enable: "Modeli isteğe göre değiştir",
-        enableDescription:
-          "Bir API isteğinde adı geçen indirilmiş modeli, yanıt vermeden önce yükleyin. Varsayılan olarak kapalıdır.",
+        enableDescription: "Bir API isteğinde adı geçen indirilmiş modeli, yanıt vermeden önce yükleyin. Varsayılan olarak kapalıdır.",
         autoDownload: "Eksik modelleri indir",
-        autoDownloadDescription:
-          "Bir API isteğinde adı geçen ve henüz indirilmemiş bir GGUF'yi indirin. Bu durumda API anahtarı olan herkes disk alanını ve bant genişliğini kullanabilir.",
+        autoDownloadDescription: "Bir API isteğinde adı geçen ve henüz indirilmemiş bir GGUF'yi indirin. Bu durumda API anahtarı olan herkes disk alanını ve bant genişliğini kullanabilir.",
         idleUnload: "Boştayken otomatik bellekten kaldır",
-        idleUnloadDescription:
-          "Bu kadar saniye boşta kaldıktan sonra VRAM'i boşaltın. 0 modeli yüklü tutar, en az 60.",
-        idleSecondsAriaLabel:
-          "Boştayken otomatik bellekten kaldırma süresi (saniye)",
+        idleUnloadDescription: "Bu kadar saniye boşta kaldıktan sonra VRAM'i boşaltın. 0 modeli yüklü tutar, en az 60.",
+        idleSecondsAriaLabel: "Boştayken otomatik bellekten kaldırma süresi (saniye)",
         mediaEnable: "Görüntü ve video modelini isteğe göre değiştir",
-        mediaEnableDescription:
-          "Bir API isteğinde adı geçen indirilmiş görüntü veya video modelini, üretimden önce yükleyin. Sohbet modeli değiştirmeden ayrıdır. Varsayılan olarak kapalıdır.",
-        mediaIdleUnload:
-          "Görüntü ve video için boştayken otomatik bellekten kaldır",
-        mediaIdleUnloadDescription:
-          "Bu kadar saniye boşta kaldıktan sonra görüntü ve video modellerini bellekten kaldırarak VRAM'i boşaltın. Sohbet modeli değiştirmeden ayrıdır. 0 modelleri yüklü tutar, en az 60.",
-        mediaIdleSecondsAriaLabel:
-          "Görüntü ve video için boştayken otomatik bellekten kaldırma süresi (saniye)",
+        mediaEnableDescription: "Bir API isteğinde adı geçen indirilmiş görüntü veya video modelini, üretimden önce yükleyin. Sohbet modeli değiştirmeden ayrıdır. Varsayılan olarak kapalıdır.",
+        mediaIdleUnload: "Görüntü ve video için boştayken otomatik bellekten kaldır",
+        mediaIdleUnloadDescription: "Bu kadar saniye boşta kaldıktan sonra görüntü ve video modellerini bellekten kaldırarak VRAM'i boşaltın. Sohbet modeli değiştirmeden ayrıdır. 0 modelleri yüklü tutar, en az 60.",
+        mediaIdleSecondsAriaLabel: "Görüntü ve video için boştayken otomatik bellekten kaldırma süresi (saniye)",
         mediaIdlePaused: "Modeli GPU belleğinde tut açıkken duraklatılır.",
         idleNeedsEnable: "Önce Modeli isteğe göre değiştir seçeneğini açın.",
         idleActiveViaEnv: "UNSLOTH_MODEL_IDLE_TTL aracılığıyla etkin.",
@@ -2286,18 +2051,14 @@ export const tr = {
         idleError: "Modeli yüklü tutmak için 0 veya en az 60 saniye girin.",
         idleUnsaved: "Henüz kaydedilmedi.",
         keepKv: "Bellekten kaldırmalar arasında sohbet bağlamını koru",
-        keepKvDescription:
-          "Boşta bellekten kaldırmadan veya bir görüntü ya da video modeli GPU'yu almadan önce KV önbelleğini kaydedin; böylece devam ettirilen sohbetler geçmişi yeniden okumaz. Diskte en fazla 10 GB.",
-        keepKvKeywords:
-          "kv cache context swap resume image video önbellek bağlam devam görüntü",
+        keepKvDescription: "Boşta bellekten kaldırmadan veya bir görüntü ya da video modeli GPU'yu almadan önce KV önbelleğini kaydedin; böylece devam ettirilen sohbetler geçmişi yeniden okumaz. Diskte en fazla 10 GB.",
+        keepKvKeywords: "kv cache context swap resume image video önbellek bağlam devam görüntü",
         apiOnly: "Yalnızca API tarafından yüklenen modelleri bellekten kaldır",
-        apiOnlyDescription:
-          "Boştayken bellekten kaldırma, Unsloth'tan yüklediğiniz modeli bellekte bırakır ve yalnızca bir API isteğinin yüklediklerini boşaltır.",
+        apiOnlyDescription: "Boştayken bellekten kaldırma, Unsloth'tan yüklediğiniz modeli bellekte bırakır ve yalnızca bir API isteğinin yüklediklerini boşaltır.",
       },
       modelAliases: {
         sectionTitle: "Model takma adları (OpenAI API)",
-        description:
-          "API istemcilerinin modelin tam adı yerine kullanabileceği kısa adlar.",
+        description: "API istemcilerinin modelin tam adı yerine kullanabileceği kısa adlar.",
         namePlaceholder: "fast-chat",
         nameAriaLabel: "Takma ad",
         modelAriaLabel: "Takma adın işaret ettiği model",
@@ -2311,24 +2072,20 @@ export const tr = {
         speculativeDecoding: "Spekülatif kod çözme",
         savedSetting: "Kayıtlı ayar",
         loadSettings: "Yükleme ayarları",
-        loadSettingsHint:
-          "Yalnızca GGUF modelleri için. Boş bırakılan alanlar modelin kayıtlı ayarlarını kullanır.",
+        loadSettingsHint: "Yalnızca GGUF modelleri için. Boş bırakılan alanlar modelin kayıtlı ayarlarını kullanır.",
       },
       previewSharing: {
         sectionTitle: "Önizleme paylaşımı",
         enableLabel: "Herkese açık önizleme bağlantıları",
-        enableDescription:
-          "İmzalı bağlantıya sahip herkesin, oturum açmadan tamamlanmış bir modelle sohbet etmesine izin verin. Herkese açık önizleme yüzeyini çevrimdışı yapmak için kapatın; paylaşılan bağlantılar çalışmayı durdurur.",
+        enableDescription: "İmzalı bağlantıya sahip herkesin, oturum açmadan tamamlanmış bir modelle sohbet etmesine izin verin. Herkese açık önizleme yüzeyini çevrimdışı yapmak için kapatın; paylaşılan bağlantılar çalışmayı durdurur.",
         loadError: "Önizleme paylaşımı ayarları yüklenemedi.",
         saveError: "Önizleme paylaşımı ayarları kaydedilemedi.",
         revokeLabel: "Tüm önizleme bağlantılarını iptal et",
-        revokeDescription:
-          "İmzalama gizli anahtarını yenileyerek paylaştığınız her bağlantının çalışmasını durdurun. Yeni kopyalanan bağlantılar çalışmaya devam eder.",
+        revokeDescription: "İmzalama gizli anahtarını yenileyerek paylaştığınız her bağlantının çalışmasını durdurun. Yeni kopyalanan bağlantılar çalışmaya devam eder.",
         revokeAction: "Bağlantıları iptal et",
         revoking: "İptal ediliyor...",
         revokeConfirmTitle: "Tüm önizleme bağlantıları iptal edilsin mi?",
-        revokeConfirmDescription:
-          "Paylaştığınız her önizleme bağlantısı hemen çalışmayı durduracak. Bu işlem geri alınamaz.",
+        revokeConfirmDescription: "Paylaştığınız her önizleme bağlantısı hemen çalışmayı durduracak. Bu işlem geri alınamaz.",
         revokeConfirmAction: "Tüm bağlantıları iptal et",
         revoked: "Tüm önizleme bağlantıları iptal edildi",
         revokeError: "Önizleme bağlantıları iptal edilemedi",
@@ -2336,10 +2093,8 @@ export const tr = {
       managedProviderUrls: {
         sectionTitle: "Yönetilen hesaplar",
         enableLabel: "Yerel ve ağ bağlantıları",
-        enableDescription:
-          "Yönetilen hesapların bağlantılarını, bu bilgisayardaki veya LAN'ınızdaki bir Ollama ya da llama.cpp sunucusu gibi yerel veya ağ adreslerine yönlendirmesine izin verin. Bu hesapların bilgisayarınızda ve ağınızda çalışan hizmetlere erişmesine olanak tanıdığı için varsayılan olarak kapalıdır.",
-        lockedByEnvironment:
-          "Bu sunucuda UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 tarafından ayarlandı; bu ayar her hesap için özel adresleri reddeder.",
+        enableDescription: "Yönetilen hesapların bağlantılarını, bu bilgisayardaki veya LAN'ınızdaki bir Ollama ya da llama.cpp sunucusu gibi yerel veya ağ adreslerine yönlendirmesine izin verin. Bu hesapların bilgisayarınızda ve ağınızda çalışan hizmetlere erişmesine olanak tanıdığı için varsayılan olarak kapalıdır.",
+        lockedByEnvironment: "Bu sunucuda UNSLOTH_STUDIO_BLOCK_PRIVATE_PROVIDER_URLS=1 tarafından ayarlandı; bu ayar her hesap için özel adresleri reddeder.",
         loadError: "Yönetilen hesap bağlantı ayarları yüklenemedi.",
         saveError: "Yönetilen hesap bağlantı ayarları kaydedilemedi.",
       },
@@ -2369,11 +2124,9 @@ export const tr = {
       notifications: {
         sectionTitle: "Bildirimler",
         showLoadedModels: "Yüklü modeller kartı",
-        showLoadedModelsDescription:
-          "Yüklü tüm modelleri gösteren, tek tıklamayla bellekten kaldırmanızı sağlayan bir köşe kartı.",
+        showLoadedModelsDescription: "Yüklü tüm modelleri gösteren, tek tıklamayla bellekten kaldırmanızı sağlayan bir köşe kartı.",
         updateReminders: "Güncelleme anımsatıcıları",
-        updateRemindersDescription:
-          "Yeni bir sürüm hazır olduğunda ne sıklıkla önerileceği.",
+        updateRemindersDescription: "Yeni bir sürüm hazır olduğunda ne sıklıkla önerileceği.",
         llamaHint: "Sohbet ve GGUF modelleri",
         audioHint: "Konuşma, müzik ve metne dönüştürme",
         frequency: {
@@ -2388,15 +2141,12 @@ export const tr = {
       startup: {
         sectionTitle: "Başlangıç",
         launchAtLogin: "Oturum açıldığında Unsloth'u çalıştır",
-        launchAtLoginDescription:
-          "Oturum açtığınızda Unsloth'u arka planda başlatın. Siz açana kadar menü çubuğunda veya sistem tepsisinde kalır.",
+        launchAtLoginDescription: "Oturum açtığınızda Unsloth'u arka planda başlatın. Siz açana kadar menü çubuğunda veya sistem tepsisinde kalır.",
         closeToTray: "Kapatınca sistem tepsisine küçült",
-        closeToTrayDescription:
-          "Ana pencereyi kapattığınızda Unsloth'un ve sunucusunun arka planda çalışmaya devam etmesini sağlayın.",
+        closeToTrayDescription: "Ana pencereyi kapattığınızda Unsloth'un ve sunucusunun arka planda çalışmaya devam etmesini sağlayın.",
         closeToTraySaveError: "Sistem tepsisine küçültme ayarı güncellenemedi.",
         menuBarIcon: "Menü çubuğunda göster",
-        menuBarIconDescription:
-          "Unsloth simgesini macOS menü çubuğunda gösterin. Gizlendiğinde Unsloth, oturum açılışında başladığında da dahil olmak üzere bunun yerine Dock'ta kalır.",
+        menuBarIconDescription: "Unsloth simgesini macOS menü çubuğunda gösterin. Gizlendiğinde Unsloth, oturum açılışında başladığında da dahil olmak üzere bunun yerine Dock'ta kalır.",
         menuBarIconSaveError: "Menü çubuğu simgesi ayarı güncellenemedi.",
         loadError: "Oturum açıldığında başlatma ayarı yüklenemedi.",
         saveError: "Oturum açıldığında başlatma ayarı güncellenemedi.",
@@ -2404,60 +2154,44 @@ export const tr = {
       power: {
         sectionTitle: "Güç",
         keepAwake: "Bilgisayarı uyanık tut",
-        keepAwakeDescription:
-          "Unsloth çalışırken bu bilgisayarın kendiliğinden uyku moduna geçmesini engeller. Ekran yine de kapanabilir.",
+        keepAwakeDescription: "Unsloth çalışırken bu bilgisayarın kendiliğinden uyku moduna geçmesini engeller. Ekran yine de kapanabilir.",
         keepAwakeKeywords: "uyku askıya alma bekleme hazırda bekletme güç sleep caffeinate",
         loadError: "Bilgisayarı uyanık tut ayarı yüklenemedi.",
         saveError: "Bilgisayarı uyanık tut ayarı güncellenemedi.",
       },
       hub: {
         source: "Model kaynağı",
-        sourceDescription:
-          "Model merkezinin arama ve indirme yaptığı yer. Ağınızda Hugging Face engelliyse veya yavaşsa ModelScope'u seçin.",
-        sourceFallback:
-          "ModelScope başlatılamadığı için Hugging Face kullanılıyor. Unsloth günlüklerini kontrol edin.",
+        sourceDescription: "Model merkezinin arama ve indirme yaptığı yer. Ağınızda Hugging Face engelliyse veya yavaşsa ModelScope'u seçin.",
+        sourceFallback: "ModelScope başlatılamadığı için Hugging Face kullanılıyor. Unsloth günlüklerini kontrol edin.",
         autoSourceTitle: "Model kaynağı ModelScope olarak değiştirildi",
-        autoSourceDescription:
-          "Hugging Face bölgenizde sık sık yavaş veya engelli olduğundan Unsloth artık modelleri ModelScope'tan indiriyor.",
+        autoSourceDescription: "Hugging Face bölgenizde sık sık yavaş veya engelli olduğundan Unsloth artık modelleri ModelScope'tan indiriyor.",
         autoSourceAction: "Model kaynağı ayarlarını aç",
         sectionTitle: "Model merkezi",
         endpoint: "Hugging Face uç noktası",
-        endpointDescription:
-          "Modellerin ve veri kümelerinin indirildiği yer. huggingface.co için boş bırakın veya https://hf-mirror.com gibi bir yansı girin.",
+        endpointDescription: "Modellerin ve veri kümelerinin indirildiği yer. huggingface.co için boş bırakın veya https://hf-mirror.com gibi bir yansı girin.",
         datasetsServer: "Veri kümesi önizlemeleri için kullan",
-        datasetsServerDescription:
-          "Veri kümesi önizleme isteklerini (HF_DATASETS_SERVER) de bu uç noktaya gönderin. Yalnızca yansı bunları sunuyorsa açın.",
-        invalidEndpoint:
-          "Oturum açma bilgisi veya sorgu içermeyen bir http(s) URL'si girin. Düz http yalnızca yerel bir adres için çalışır.",
+        datasetsServerDescription: "Veri kümesi önizleme isteklerini (HF_DATASETS_SERVER) de bu uç noktaya gönderin. Yalnızca yansı bunları sunuyorsa açın.",
+        invalidEndpoint: "Oturum açma bilgisi veya sorgu içermeyen bir http(s) URL'si girin. Düz http yalnızca yerel bir adres için çalışır.",
         saveFailed: "Merkez ayarları kaydedilemedi.",
         loadFailed: "Merkez ayarları yüklenemedi.",
       },
       downloads: {
         sectionTitle: "İndirmeler",
         transport: "İndirme aktarımı",
-        transportDescription:
-          "Model ve veri kümesi dosyalarının Hugging Face'ten nasıl indirileceği. HTTPS kaldığı yerden devam eder; Xet ilk indirmede genellikle daha hızlıdır ancak iptal ederseniz dosyayı baştan başlatır.",
-        transportHint:
-          "HTTPS düz TLS'dir: her ağ, proxy ve VPN buna izin verir, iptal edilen veya kesilen bir aktarım diskte zaten bulunan baytlardan devam eder ve bellek kullanımı sabit kalır. Xet yinelenenleri kaldırılmış parçalar indirir; bu nedenle elinizde zaten bulunan bir depoyla veri paylaşan bir depo çok daha hızlı gelebilir, ancak hf_xet gerektirir, daha fazla RAM kullanır ve iptal, aktarılmakta olan dosyayı atar. Otomatik bu makineye göre karar verir: RAM'i ve Xet'in burada takılıp takılmadığını tartar ve gerekirse HTTPS'ye geri döner.",
+        transportDescription: "Model ve veri kümesi dosyalarının Hugging Face'ten nasıl indirileceği. HTTPS kaldığı yerden devam eder; Xet ilk indirmede genellikle daha hızlıdır ancak iptal ederseniz dosyayı baştan başlatır.",
+        transportHint: "HTTPS düz TLS'dir: her ağ, proxy ve VPN buna izin verir, iptal edilen veya kesilen bir aktarım diskte zaten bulunan baytlardan devam eder ve bellek kullanımı sabit kalır. Xet yinelenenleri kaldırılmış parçalar indirir; bu nedenle elinizde zaten bulunan bir depoyla veri paylaşan bir depo çok daha hızlı gelebilir, ancak hf_xet gerektirir, daha fazla RAM kullanır ve iptal, aktarılmakta olan dosyayı atar. Otomatik bu makineye göre karar verir: RAM'i ve Xet'in burada takılıp takılmadığını tartar ve gerekirse HTTPS'ye geri döner.",
         https: "HTTPS",
         xet: "Xet",
         auto: "Otomatik",
-        httpsHint:
-          "Standart TLS. İptalden sonra devam eder, her ağda çalışır, bellek kullanımı sabittir.",
-        transportDescriptionNoResume:
-          "Model ve veri kümesi dosyalarının Hugging Face'ten nasıl indirileceği. Bu kurulumda hiçbir aktarım devam ettirilemez, bu nedenle iptal edilen bir indirme baştan başlar; Xet ilk indirmede genellikle daha hızlıdır.",
-        httpsHintNoResume:
-          "Standart TLS. Her ağda çalışır, bellek kullanımı sabittir. Bu kurulum, iptal edilen bir indirmeyi devam ettiremez.",
-        xetHint:
-          "Yinelenenleri kaldırılmış parça aktarımı. Yeni bir indirmede genellikle daha hızlıdır, iptal ederseniz dosyayı yeniden başlatır, daha fazla bellek gerektirir.",
-        autoHint:
-          "Makineye göre seçer ve Xet burada takılırsa veya başarısız olursa HTTPS'ye geçer.",
-        autoCurrently:
-          "Otomatik, bu makinede şu aktarımı kullanıyor: {transport}",
+        httpsHint: "Standart TLS. İptalden sonra devam eder, her ağda çalışır, bellek kullanımı sabittir.",
+        transportDescriptionNoResume: "Model ve veri kümesi dosyalarının Hugging Face'ten nasıl indirileceği. Bu kurulumda hiçbir aktarım devam ettirilemez, bu nedenle iptal edilen bir indirme baştan başlar; Xet ilk indirmede genellikle daha hızlıdır.",
+        httpsHintNoResume: "Standart TLS. Her ağda çalışır, bellek kullanımı sabittir. Bu kurulum, iptal edilen bir indirmeyi devam ettiremez.",
+        xetHint: "Yinelenenleri kaldırılmış parça aktarımı. Yeni bir indirmede genellikle daha hızlıdır, iptal ederseniz dosyayı yeniden başlatır, daha fazla bellek gerektirir.",
+        autoHint: "Makineye göre seçer ve Xet burada takılırsa veya başarısız olursa HTTPS'ye geçer.",
+        autoCurrently: "Otomatik, bu makinede şu aktarımı kullanıyor: {transport}",
         xetMissing: "hf_xet yüklü olmadığı için Xet kullanılamıyor.",
         speedLimit: "İndirme hızı sınırı",
-        speedLimitDescription:
-          "Bir değer girilmedikçe sınır yoktur. Sınırlı indirme HTTPS kullanır.",
+        speedLimitDescription: "Bir değer girilmedikçe sınır yoktur. Sınırlı indirme HTTPS kullanır.",
         speedLimitNoLimit: "Sınır yok",
         speedLimitInvalid: "Mbit/s cinsinden bir sayı girin veya alanı boş bırakın.",
         speedLimitUsesHttps: "Hız sınırı ayarlıyken indirmeler HTTPS kullanır. 50 GB'tan büyük dosyalar sınırsız olarak Xet kullanmaya devam eder.",
@@ -2470,21 +2204,15 @@ export const tr = {
       rag: {
         sectionTitle: "Belgeler ve RAG",
         embeddingModel: "Gömme modeli",
-        embeddingModelShort:
-          "Sohbetin belgelerinizde arama yapabilmesi için onları vektörlere dönüştürür.",
-        embeddingModelDescription:
-          "Belgelerinizi dizinlemek ve aramak için kullanılan Hugging Face modeli veya yerel yol. Varsayılan: {defaultModel}.",
+        embeddingModelShort: "Sohbetin belgelerinizde arama yapabilmesi için onları vektörlere dönüştürür.",
+        embeddingModelDescription: "Belgelerinizi dizinlemek ve aramak için kullanılan Hugging Face modeli veya yerel yol. Varsayılan: {defaultModel}.",
         searchPlaceholder: "HF'de herhangi bir modeli arayın",
-        reindexWarning:
-          "Yalnızca yeni dizinlenen belgeleri etkiler. Modeli değiştirdikten sonra mevcut belgeleri yeniden gömün.",
+        reindexWarning: "Yalnızca yeni dizinlenen belgeleri etkiler. Modeli değiştirdikten sonra mevcut belgeleri yeniden gömün.",
         reembed: {
           label: "Belgeleri yeniden göm",
-          staleOne:
-            "1 belge farklı bir gömme modeliyle dizinlendiği için anlamsal arama onu atlıyor.",
-          staleMany:
-            "{count} belge farklı bir gömme modeliyle dizinlendiği için anlamsal arama bunları atlıyor.",
-          staleArchived:
-            "Önceki sohbet geçmişi farklı bir gömme modeliyle dizinlendiği için anlamsal arama onu atlıyor.",
+          staleOne: "1 belge farklı bir gömme modeliyle dizinlendiği için anlamsal arama onu atlıyor.",
+          staleMany: "{count} belge farklı bir gömme modeliyle dizinlendiği için anlamsal arama bunları atlıyor.",
+          staleArchived: "Önceki sohbet geçmişi farklı bir gömme modeliyle dizinlendiği için anlamsal arama onu atlıyor.",
           running: "Yeniden gömülüyor: {done}/{total}",
           action: "Yeniden göm",
           stop: "Durdur",
@@ -2508,20 +2236,16 @@ export const tr = {
         unloadFailed: "Gömme modeli çıkarılamadı",
         ejected: "Gömme modeli çıkarıldı",
         ejectModel: "Modeli çıkar",
-        onDeviceHint:
-          "Bu bilgisayara indirildi. Yalnızca belgeler dizinlenirken veya aranırken belleğe yüklenir, bu nedenle o zamana kadar RAM ya da VRAM kullanmaz.",
-        loadedHint:
-          "Şu anda bellekte ve RAM ya da VRAM kullanıyor. Çıkarmak için imleci model seçicinin üzerine getirip kırmızı simgeye tıklayın.",
+        onDeviceHint: "Bu bilgisayara indirildi. Yalnızca belgeler dizinlenirken veya aranırken belleğe yüklenir, bu nedenle o zamana kadar RAM ya da VRAM kullanmaz.",
+        loadedHint: "Şu anda bellekte ve RAM ya da VRAM kullanıyor. Çıkarmak için imleci model seçicinin üzerine getirip kırmızı simgeye tıklayın.",
         notLoaded: "Yüklü değil",
-        notLoadedHint:
-          "Şu anda bellekte değil. Belgeler bir sonraki dizinlenişinde veya aranışında kendiliğinden yüklenir; ardından onu seçiciden çıkarabilirsiniz.",
+        notLoadedHint: "Şu anda bellekte değil. Belgeler bir sonraki dizinlenişinde veya aranışında kendiliğinden yüklenir; ardından onu seçiciden çıkarabilirsiniz.",
         downloadingStatus: "İndiriliyor…",
         notDownloaded: "İndirilmedi",
         notDownloadedSized: "İndirilmedi · {size}",
         loaded: "Yüklendi",
         downloading: "İndiriliyor: {model}",
-        downloadingDescription:
-          "İlerleme indirmeler panelinde. İndirme tamamlanınca dizinleme bu modeli kullanır.",
+        downloadingDescription: "İlerleme indirmeler panelinde. İndirme tamamlanınca dizinleme bu modeli kullanır.",
         downloadFailed: "İndirme başlatılamadı",
         downloadConflict: "Bu indirmeyi Merkez'den devam ettirin",
         downloadBusy: "İndirme zaten sürüyor",
@@ -2534,17 +2258,14 @@ export const tr = {
         localModel: "Yerel model",
         switched: "Gömme modeli ayarlandı: {model}",
         switchedNeedsDownload: "{model} henüz indirilmedi",
-        switchedNeedsDownloadDescription:
-          "Yeni dosyaları dizinlemeden önce Ayarlar'dan indirin.",
-        switchedUncheckedDescription:
-          "İndirilip indirilmediği denetlenemedi. Yeni dosyaları dizinlemeden önce Ayarlar'dan kontrol edin.",
+        switchedNeedsDownloadDescription: "Yeni dosyaları dizinlemeden önce Ayarlar'dan indirin.",
+        switchedUncheckedDescription: "İndirilip indirilmediği denetlenemedi. Yeni dosyaları dizinlemeden önce Ayarlar'dan kontrol edin.",
         openSettings: "Ayarları aç",
         switchFailed: "Gömme modeli değiştirilemedi",
         back: "Kaynaklara dön",
         menuSubtitle: "Dosya aramasını destekler",
         device: "Gömme aygıtı",
-        deviceDescription:
-          "Gömme modelinin çalıştığı yer (tüm modeller için). GPU büyük belge kümelerini daha hızlı dizinler ancak Unsloth yeniden başlatılana kadar bir miktar VRAM'i kullanımda tutar.",
+        deviceDescription: "Gömme modelinin çalıştığı yer (tüm modeller için). GPU büyük belge kümelerini daha hızlı dizinler ancak Unsloth yeniden başlatılana kadar bir miktar VRAM'i kullanımda tutar.",
         deviceAuto: "Otomatik",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
@@ -2575,41 +2296,31 @@ export const tr = {
       },
       fullInstall: {
         label: "Kurulum türü",
-        description:
-          "Yalnızca sohbet (GGUF). Tam kurulum; eğitim, dışa aktarma, video, safetensors modelleri ve ek görüntü üretme özellikleri ekler.",
-        descriptionCpu:
-          "Yalnızca sohbet (GGUF). Desteklenen bir GPU bulunamadı, bu nedenle tam kurulum CPU üzerinde eğitim ekler.",
+        description: "Yalnızca sohbet (GGUF). Tam kurulum; eğitim, dışa aktarma, video, safetensors modelleri ve ek görüntü üretme özellikleri ekler.",
+        descriptionCpu: "Yalnızca sohbet (GGUF). Desteklenen bir GPU bulunamadı, bu nedenle tam kurulum CPU üzerinde eğitim ekler.",
         action: "Tam kuruluma yükselt",
         confirmTitle: "Tam kuruluma yükseltilsin mi?",
-        confirmDescription:
-          "Bu Yalnızca sohbet kurulumu GGUF modellerini çalıştırır. Tam kurulum, bu makinenin GPU'su için PyTorch ekler; bu da eğitimi, dışa aktarmayı, videoyu, safetensors modellerini ve ek görüntü üretme özelliklerini etkinleştirir. Birkaç gigabayt indirir (en az 5 GB disk alanı) ve sunucuyu yeniden başlatır. Sohbetler, modeller ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
-        confirmDescriptionCpu:
-          "Bu Yalnızca sohbet kurulumu GGUF modellerini çalıştırır. Bu makinede desteklenen bir GPU bulunamadı, bu nedenle tam kurulum CPU için PyTorch ekler; bu da CPU üzerinde eğitimi etkinleştirir. CPU üzerinde eğitim, GPU'ya göre çok daha yavaştır. En az 5 GB disk alanı gerektirir ve sunucuyu yeniden başlatır. Sohbetler, modeller ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
+        confirmDescription: "Bu Yalnızca sohbet kurulumu GGUF modellerini çalıştırır. Tam kurulum, bu makinenin GPU'su için PyTorch ekler; bu da eğitimi, dışa aktarmayı, videoyu, safetensors modellerini ve ek görüntü üretme özelliklerini etkinleştirir. Birkaç gigabayt indirir (en az 5 GB disk alanı) ve sunucuyu yeniden başlatır. Sohbetler, modeller ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
+        confirmDescriptionCpu: "Bu Yalnızca sohbet kurulumu GGUF modellerini çalıştırır. Bu makinede desteklenen bir GPU bulunamadı, bu nedenle tam kurulum CPU için PyTorch ekler; bu da CPU üzerinde eğitimi etkinleştirir. CPU üzerinde eğitim, GPU'ya göre çok daha yavaştır. En az 5 GB disk alanı gerektirir ve sunucuyu yeniden başlatır. Sohbetler, modeller ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
         confirmAction: "Yükselt",
-        keywords:
-          "tam kurulum yükselt kurulum türü yalnızca sohbet gguf eğitim eğit ince ayar pytorch torch dışa aktar video görüntü üretme safetensors full install upgrade chat only training fine-tune export image generation",
+        keywords: "tam kurulum yükselt kurulum türü yalnızca sohbet gguf eğitim eğit ince ayar pytorch torch dışa aktar video görüntü üretme safetensors full install upgrade chat only training fine-tune export image generation",
       },
       repairInstall: {
         label: "Kurulumu onar",
-        description:
-          "Yükleyiciyi yönetilen ortam üzerinde yeniden çalıştırır. GPU algılanmıyorsa veya uygulama başlamıyorsa bunu kullanın.",
+        description: "Yükleyiciyi yönetilen ortam üzerinde yeniden çalıştırır. GPU algılanmıyorsa veya uygulama başlamıyorsa bunu kullanın.",
         action: "Kurulumu onar",
         confirmTitle: "Bu kurulum onarılsın mı?",
-        confirmDescription:
-          "Sunucuyu durdurur ve yükleyiciyi yeniden çalıştırır; yükleyici, bu makinenin GPU'su için PyTorch'u desteklenen en yeni sürümle yeniden kurar. Sohbetler ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
-        confirmDescriptionChatOnly:
-          "Sunucuyu durdurur ve yükleyiciyi yeniden çalıştırır. Bu bir Yalnızca sohbet kurulumu olduğundan yükleyici onu PyTorch ile tam kuruluma da yükseltir; toplamda birkaç gigabayt. Sohbetler ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
+        confirmDescription: "Sunucuyu durdurur ve yükleyiciyi yeniden çalıştırır; yükleyici, bu makinenin GPU'su için PyTorch'u desteklenen en yeni sürümle yeniden kurar. Sohbetler ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
+        confirmDescriptionChatOnly: "Sunucuyu durdurur ve yükleyiciyi yeniden çalıştırır. Bu bir Yalnızca sohbet kurulumu olduğundan yükleyici onu PyTorch ile tam kuruluma da yükseltir; toplamda birkaç gigabayt. Sohbetler ve ayarlar korunur. Bu işlem birkaç dakika sürebilir.",
         confirmAction: "Şimdi onar",
       },
       resetPreferences: {
         sectionTitle: "Tehlikeli bölge",
         label: "Tüm yerel tercihleri sıfırla",
-        description:
-          "Yalnızca yerel tercihleri temizler. Sohbetler, API erişimi ve veritabanında tutulan ayarlar korunur.",
+        description: "Yalnızca yerel tercihleri temizler. Sohbetler, API erişimi ve veritabanında tutulan ayarlar korunur.",
         action: "Tercihleri sıfırla",
         confirmTitle: "Tüm yerel tercihler sıfırlansın mı?",
-        confirmDescription:
-          "Yalnızca yerel tercihleri temizler ve Unsloth'u yeniden yükler. Sohbetler, API erişimi ve veritabanında tutulan ayarlar korunur.",
+        confirmDescription: "Yalnızca yerel tercihleri temizler ve Unsloth'u yeniden yükler. Sohbetler, API erişimi ve veritabanında tutulan ayarlar korunur.",
         confirmAction: "Sıfırla ve yeniden yükle",
       },
     },
@@ -2641,25 +2352,20 @@ export const tr = {
       noneLabel: "Yok",
       nameSaved: "Profil adı kaydedildi",
       namePersistErrorTitle: "Profil adı kalıcı olarak kaydedilemedi",
-      namePersistErrorDescription:
-        "Ad bu oturum için güncellendi, ancak yeniden yüklemeden sonra korunmayabilir.",
+      namePersistErrorDescription: "Ad bu oturum için güncellendi, ancak yeniden yüklemeden sonra korunmayabilir.",
       photoUpdated: "Profil fotoğrafı güncellendi",
       photoPersistErrorTitle: "Profil fotoğrafı kalıcı olarak kaydedilemedi",
-      photoPersistErrorDescription:
-        "Fotoğraf bu oturum için güncellendi, ancak yeniden yüklemeden sonra korunmayabilir.",
+      photoPersistErrorDescription: "Fotoğraf bu oturum için güncellendi, ancak yeniden yüklemeden sonra korunmayabilir.",
       photoUpdateErrorTitle: "Profil fotoğrafı güncellenemedi",
       imageUseError: "Bu görüntü kullanılamadı.",
       stats: {
         title: "İstatistikleriniz",
-        subtitle:
-          "Aşağıdaki her şey kendi geçmişinizden hesaplanır. Hiçbir şey toplanmaz veya Unsloth'a gönderilmez.",
+        subtitle: "Aşağıdaki her şey kendi geçmişinizden hesaplanır. Hiçbir şey toplanmaz veya Unsloth'a gönderilmez.",
         retry: "Yeniden dene",
         exportCsv: "CSV olarak dışa aktar",
         exportError: "Token kullanımınız dışa aktarılamadı",
-        privacyNote:
-          "İstatistikler, Unsloth kurulumunuzda tutulan yerel sohbet, API kullanımı ve eğitim geçmişinden hesaplanır. API istemleri, yanıtları ve anahtarları istatistikler için asla saklanmaz. Hiçbir şey Unsloth'a veya herhangi bir üçüncü tarafa gönderilmez.",
-        emptyChats:
-          "Henüz sohbet veya API kullanımı yok. Bir sohbet başlatın veya kimliği doğrulanmış bir yerel API isteği yapın; istatistikleriniz burada görünecek.",
+        privacyNote: "İstatistikler, Unsloth kurulumunuzda tutulan yerel sohbet, API kullanımı ve eğitim geçmişinden hesaplanır. API istemleri, yanıtları ve anahtarları istatistikler için asla saklanmaz. Hiçbir şey Unsloth'a veya herhangi bir üçüncü tarafa gönderilmez.",
+        emptyChats: "Henüz sohbet veya API kullanımı yok. Bir sohbet başlatın veya kimliği doğrulanmış bir yerel API isteği yapın; istatistikleriniz burada görünecek.",
         lifetimeTokens: "Toplam token",
         peakTokens: "En yoğun gün",
         longestChat: "En uzun sohbet",
@@ -2724,22 +2430,16 @@ export const tr = {
       gpuRendering: {
         sectionTitle: "İşleme",
         label: "GPU ile işleme",
-        description:
-          "Unsloth'u ekran kartınızla çizin. Otomatik, yalnızca sorunsuz çalıştığı bilinen sistemlerde kullanır. Değişiklikler Unsloth yeniden başlatıldıktan sonra uygulanır.",
+        description: "Unsloth'u ekran kartınızla çizin. Otomatik, yalnızca sorunsuz çalıştığı bilinen sistemlerde kullanır. Değişiklikler Unsloth yeniden başlatıldıktan sonra uygulanır.",
         auto: "Otomatik",
         on: "Açık",
         off: "Kapalı",
-        oldWebkitWarning:
-          "Wayland üzerinde WebKitGTK {version}: Kesirli ölçekleme kullanılan NVIDIA sistemlerinde GPU ile işleme başlatma sırasında çökebilir (WebKit hatası 280210). Böyle olursa Unsloth kendiliğinden CPU ile işlemeye geri döner. WebKitGTK 2.50.4 üzerinde ölçülebilir bir hızlanma sağlamadı (her iki durumda da 8 fps), bu nedenle burada Açık önerilmez.",
-        oldDriverWarning:
-          "X11 üzerinde NVIDIA sürücüsü {version}: Sürücü 610 veya daha yeni olana kadar Unsloth GPU ile işlemeyi kapalı tutar. Eski sürücüler her karede bir dosya tanımlayıcısı sızdırır ve pencere birkaç dakika içinde çizim yapmayı durdurur.",
-        fallbackNote:
-          "GPU ile işleme bu sistemde başlatma sırasında çöktüğü için Unsloth CPU ile işleme kullanıyor.",
+        oldWebkitWarning: "Wayland üzerinde WebKitGTK {version}: Kesirli ölçekleme kullanılan NVIDIA sistemlerinde GPU ile işleme başlatma sırasında çökebilir (WebKit hatası 280210). Böyle olursa Unsloth kendiliğinden CPU ile işlemeye geri döner. WebKitGTK 2.50.4 üzerinde ölçülebilir bir hızlanma sağlamadı (her iki durumda da 8 fps), bu nedenle burada Açık önerilmez.",
+        oldDriverWarning: "X11 üzerinde NVIDIA sürücüsü {version}: Sürücü 610 veya daha yeni olana kadar Unsloth GPU ile işlemeyi kapalı tutar. Eski sürücüler her karede bir dosya tanımlayıcısı sızdırır ve pencere birkaç dakika içinde çizim yapmayı durdurur.",
+        fallbackNote: "GPU ile işleme bu sistemde başlatma sırasında çöktüğü için Unsloth CPU ile işleme kullanıyor.",
         tryAgain: "GPU'yu yeniden dene",
-        envOverride:
-          "{name} ortam değişkeniyle ayarlandı. Bu değişken kaldırılana kadar bu ayarın etkisi yoktur.",
-        macNote:
-          "macOS her zaman GPU ile işler. WebKit'te bunu kapatmak için desteklenen bir seçenek yoktur.",
+        envOverride: "{name} ortam değişkeniyle ayarlandı. Bu değişken kaldırılana kadar bu ayarın etkisi yoktur.",
+        macNote: "macOS her zaman GPU ile işler. WebKit'te bunu kapatmak için desteklenen bir seçenek yoktur.",
         restartPending: "Uygulamak için Unsloth'u yeniden başlatın.",
         restartNow: "Şimdi yeniden başlat",
         loadError: "GPU ile işleme ayarı yüklenemedi.",
@@ -2789,8 +2489,7 @@ export const tr = {
         },
         sentAttachments: {
           label: "Gönderilen mesajlardaki ekler",
-          description:
-            "Standart, her dosyayı türüyle birlikte gösterir; Kompakt her satıra daha fazlasını sığdırır. Otomatik, altı dosyadan sonra Kompakt görünüme geçer.",
+          description: "Standart, her dosyayı türüyle birlikte gösterir; Kompakt her satıra daha fazlasını sığdırır. Otomatik, altı dosyadan sonra Kompakt görünüme geçer.",
           auto: "Otomatik",
           list: "Standart",
           chips: "Kompakt",
@@ -2831,16 +2530,13 @@ export const tr = {
         importFont: {
           upload: "Karşıya yükle",
           scanFolder: "Klasör seç",
-          alreadyAvailable:
-            "Bu yazı tipi zaten mevcut, bu nedenle var olan kopya kullanılıyor.",
+          alreadyAvailable: "Bu yazı tipi zaten mevcut, bu nedenle var olan kopya kullanılıyor.",
           folderNoFonts: "Bu klasörde yazı tipi dosyası bulunamadı.",
           remove: "Kaldır",
-          errorInvalidType:
-            "Desteklenmeyen dosya türü. .woff2, .woff, .ttf veya .otf kullanın.",
+          errorInvalidType: "Desteklenmeyen dosya türü. .woff2, .woff, .ttf veya .otf kullanın.",
           errorTooLarge: "Yazı tipi dosyası çok büyük (en fazla 1.5 MB).",
           errorLimit: "En fazla 3 yazı tipi içe aktarabilirsiniz.",
-          errorStorageFull:
-            "Bu yazı tipi için yeterli yerel depolama alanı yok. Önce içe aktarılmış bir yazı tipini kaldırın.",
+          errorStorageFull: "Bu yazı tipi için yeterli yerel depolama alanı yok. Önce içe aktarılmış bir yazı tipini kaldırın.",
           errorFailed: "Bu yazı tipi dosyası yüklenemedi.",
         },
         interfaceScale: {
@@ -2849,8 +2545,7 @@ export const tr = {
         },
         uiFontSize: {
           label: "Arayüz yazı tipi boyutu",
-          description:
-            "Unsloth arayüzü için kullanılan temel boyutu ayarlayın.",
+          description: "Unsloth arayüzü için kullanılan temel boyutu ayarlayın.",
         },
         codeFontSize: {
           label: "Kod yazı tipi boyutu",
@@ -2876,8 +2571,7 @@ export const tr = {
         },
         pointerCursors: {
           label: "İşaretçi imleçleri kullan",
-          description:
-            "Etkileşimli öğelerin üzerine gelindiğinde imleci el işaretçisine dönüştürün.",
+          description: "Etkileşimli öğelerin üzerine gelindiğinde imleci el işaretçisine dönüştürün.",
         },
       },
       language: {
@@ -2888,45 +2582,38 @@ export const tr = {
         search: "Dillerde ara",
         noResults: "Eşleşen dil yok",
         spellCheck: "Yazım denetimi",
-        spellCheckDescription:
-          "Yazarken yanlış yazılmış sözcüklerin altını çizin.",
+        spellCheckDescription: "Yazarken yanlış yazılmış sözcüklerin altını çizin.",
       },
       layout: {
         title: "Düzen",
         compactSidebar: "Kenar çubuğunu varsayılan olarak sabitle",
-        compactSidebarDescription:
-          "Kenar çubuğunu simgelere daraltmak yerine genişletilmiş tutun.",
+        compactSidebarDescription: "Kenar çubuğunu simgelere daraltmak yerine genişletilmiş tutun.",
       },
       sidebarNav: {
         title: "Kenar çubuğu gezinmesi",
-        description:
-          "Kenar çubuğu sekmelerini sabitleyin ve yeniden sıralayın. Sabitlenmemiş sekmeler Diğer menüsüne taşınır.",
+        description: "Kenar çubuğu sekmelerini sabitleyin ve yeniden sıralayın. Sabitlenmemiş sekmeler Diğer menüsüne taşınır.",
         dragToReorder: "Yeniden sıralamak için sürükleyin",
         pinToSidebar: "{name} öğesini kenar çubuğuna sabitle",
         moreHolds: "Diğer ({count})",
       },
       sidebarMenu: {
         title: "Profil menüsü",
-        description:
-          "Adınızın altındaki kısayolları seçin ve yeniden sıralayın.",
+        description: "Adınızın altındaki kısayolları seçin ve yeniden sıralayın.",
         darkModeToggle: "Koyu mod anahtarı",
         dragToReorder: "Yeniden sıralamak için sürükleyin",
       },
     },
     resources: {
       title: "Sistem ve Motor",
-      description:
-        "Bu Unsloth sunucusunun donanımını ve depolama alanını izleyin.",
+      description: "Bu Unsloth sunucusunun donanımını ve depolama alanını izleyin.",
       liveUpdates: "Canlı güncellemeler",
       floatingWindow: "Kayan pencere",
       showFloatingWindow: "Kayan pencereyi göster",
-      showFloatingWindowDescription:
-        "CPU, RAM ve GPU kullanımını Unsloth'un üzerinde ekranda tutun.",
+      showFloatingWindowDescription: "CPU, RAM ve GPU kullanımını Unsloth'un üzerinde ekranda tutun.",
       liveMonitor: {
         title: "Canlı izleyici",
         apiTitle: "API izleyici",
-        apiDescription:
-          "Diğer uygulamaların bu sunucunun API'sine gönderdiklerini geldikleri anda görün.",
+        apiDescription: "Diğer uygulamaların bu sunucunun API'sine gönderdiklerini geldikleri anda görün.",
         summary: "Canlı istekler, hatalar ve token kullanımı",
         status: "{active} etkin · {recent} son · {model}",
         noModelLoaded: "Yüklü model yok",
@@ -2962,8 +2649,7 @@ export const tr = {
         gpuUnusable: "GPU kullanılamıyor",
         gpuUnusableDetail: "Algılandı, ancak PyTorch kullanamıyor",
         detailedView: "Ayrıntılı görünüm",
-        detailedViewDescription:
-          "Kayan pencerede her GPU'nun yükünü, sıcaklığını ve güç tüketimini gösterin.",
+        detailedViewDescription: "Kayan pencerede her GPU'nun yükünü, sıcaklığını ve güç tüketimini gösterin.",
         gpuLoad: "GPU yükü",
         temperature: "Sıcaklık",
         power: "Güç",
@@ -2979,15 +2665,11 @@ export const tr = {
         unavailable: "kullanılamıyor",
         detecting: "GPU'lar denetleniyor...",
         unreadable: "Bu sunucunun donanımı okunamadı.",
-        noGpu:
-          "Ayrı bir GPU algılanmadı.",
+        noGpu: "Ayrı bir GPU algılanmadı.",
         noUsableGpu: "Bu makinede PyTorch'un kullanabileceği bir GPU yok.",
-        mismatchCpuBuild:
-          "PyTorch yalnızca CPU derlemesi ({version}), bu nedenle aşağıdaki GPU'lar kullanılamaz. GPU desteğini geri getirmek için kurulumu onarın.",
-        mismatchUnavailable:
-          "PyTorch ({version}) aşağıdaki GPU'ları başlatamıyor, bu nedenle kullanılamazlar. GPU sürücüsünü denetleyin veya kurulumu onarın.",
-        driverIdleEvict:
-          "AMD sürücüsü {version}, bir AMD GPU boşta kaldığında Windows'u dondurabilen bilinen bir hataya sahiptir; bu çoğunlukla birden fazla GPU olduğunda görülür. Adrenalin 26.9.2 veya sonraki bir sürüme güncelleyin.",
+        mismatchCpuBuild: "PyTorch yalnızca CPU derlemesi ({version}), bu nedenle aşağıdaki GPU'lar kullanılamaz. GPU desteğini geri getirmek için kurulumu onarın.",
+        mismatchUnavailable: "PyTorch ({version}) aşağıdaki GPU'ları başlatamıyor, bu nedenle kullanılamazlar. GPU sürücüsünü denetleyin veya kurulumu onarın.",
+        driverIdleEvict: "AMD sürücüsü {version}, bir AMD GPU boşta kaldığında Windows'u dondurabilen bilinen bir hataya sahiptir; bu çoğunlukla birden fazla GPU olduğunda görülür. Adrenalin 26.9.2 veya sonraki bir sürüme güncelleyin.",
         driverIdleEvictDetails: "Ayrıntılar",
         dismissNotice: "Kapat",
         unusableDevice: "kullanılamaz",
@@ -3005,37 +2687,28 @@ export const tr = {
       llamaBackend: {
         title: "GGUF çıkarım motoru",
         label: "Hesaplama arka ucu",
-        description:
-          "llama.cpp'nin GGUF modellerini çalıştırmak için kullandığı arka uç.",
+        description: "llama.cpp'nin GGUF modellerini çalıştırmak için kullandığı arka uç.",
         runningOn: "llama.cpp şu anda şu arka uçta çalışıyor: {backend}.",
         hint: "Bu arka uç için llama.cpp derlemesini kurar ve güncellemeler boyunca korur. Otomatik seçim çöktüğünde veya GPU sürücünüz onu desteklemediğinde kullanışlıdır. Yalnızca bu makine için derlemesi olan arka uçlar listelenir; eğitim etkilenmez.",
         autoWith: "Otomatik ({backend})",
         apply: "Uygula",
         applying: "Kuruluyor...",
-        applyHint:
-          "Yeni derlemeyi indirir ve llama.cpp'yi yeniden başlatır. Yüklü bir model bellekten kaldırılır.",
-        applyHintWithSize:
-          "{size} indirir ve llama.cpp'yi yeniden başlatır. Yüklü bir model bellekten kaldırılır.",
+        applyHint: "Yeni derlemeyi indirir ve llama.cpp'yi yeniden başlatır. Yüklü bir model bellekten kaldırılır.",
+        applyHintWithSize: "{size} indirir ve llama.cpp'yi yeniden başlatır. Yüklü bir model bellekten kaldırılır.",
         switchedTo: "llama.cpp artık şu arka uçta çalışıyor: {backend}.",
         switchFailed: "llama.cpp arka ucu değiştirilemedi.",
         switchInterrupted: "Geçiş tamamlanmadan kesintiye uğradı.",
-        envLocked:
-          "UNSLOTH_LLAMA_CPP_BACKEND ortam değişkeniyle {backend} olarak ayarlandı; bu değişken bu ayarı geçersiz kılar.",
+        envLocked: "UNSLOTH_LLAMA_CPP_BACKEND ortam değişkeniyle {backend} olarak ayarlandı; bu değişken bu ayarı geçersiz kılar.",
         customPath: {
           label: "Özel llama.cpp klasörü",
           description: "Kendi llama-server derlemenizi kullanın.",
           hint: "llama-server dosyasını içeren llama.cpp klasörünü veya bu dosyanın build/bin altında bulunduğu bir derlemeyi seçin. Özel çalışma zamanı GGUF sohbeti, gömmeler ve desteklenen ses modelleri için kullanılır. Ortam değişkenleri yine önceliklidir.",
           automatic: "Otomatik (paketle gelen)",
-          bundled:
-            "Unsloth tarafından kurulan llama.cpp çalışma zamanını kullanır.",
-          active:
-            "Bir sonraki model yüklemesinde özel llama-server'ınız kullanılacak.",
-          environmentManaged:
-            "{variable} ortam değişkeni tarafından yönetiliyor.",
-          missingBinary:
-            "llama-server artık bu klasörde bulunmuyor. Başka bir klasör seçin veya paketle gelen çalışma zamanını kullanın.",
-          reloadRequired:
-            "Seçilen llama-server'ı kullanmak için modeli yeniden yükleyin.",
+          bundled: "Unsloth tarafından kurulan llama.cpp çalışma zamanını kullanır.",
+          active: "Bir sonraki model yüklemesinde özel llama-server'ınız kullanılacak.",
+          environmentManaged: "{variable} ortam değişkeni tarafından yönetiliyor.",
+          missingBinary: "llama-server artık bu klasörde bulunmuyor. Başka bir klasör seçin veya paketle gelen çalışma zamanını kullanın.",
+          reloadRequired: "Seçilen llama-server'ı kullanmak için modeli yeniden yükleyin.",
           change: "Değiştir",
           saving: "Kaydediliyor...",
           useBundled: "Paketle geleni kullan",
@@ -3053,76 +2726,51 @@ export const tr = {
           metal: "Metal",
         },
         unsupported: {
-          notInstalled:
-            "Yönetilen bir llama.cpp kurulumu bulunamadı, bu nedenle değiştirilecek bir arka uç yok.",
-          localLink:
-            "llama.cpp sizin bağladığınız yerel bir dizin olduğundan Unsloth onu değiştirmeyecek.",
-          sourceBuild:
-            "Bu llama.cpp kaynaktan derlendiği için arka ucu buradan değiştirilemez.",
-          customPath:
-            "Özel bir llama.cpp klasörü seçili. Hesaplama arka ucunu onun derlemesi belirler.",
-          unresolved:
-            "Kullanılabilir arka uçlar denetlenemedi. Bağlantınızı kontrol edip yeniden deneyin.",
-          updateChecksDisabled:
-            "Güncelleme denetimleri devre dışı (UNSLOTH_DISABLE_UPDATE_CHECK=1), bu nedenle kullanılabilir arka uçlar aranmıyor.",
+          notInstalled: "Yönetilen bir llama.cpp kurulumu bulunamadı, bu nedenle değiştirilecek bir arka uç yok.",
+          localLink: "llama.cpp sizin bağladığınız yerel bir dizin olduğundan Unsloth onu değiştirmeyecek.",
+          sourceBuild: "Bu llama.cpp kaynaktan derlendiği için arka ucu buradan değiştirilemez.",
+          customPath: "Özel bir llama.cpp klasörü seçili. Hesaplama arka ucunu onun derlemesi belirler.",
+          unresolved: "Kullanılabilir arka uçlar denetlenemedi. Bağlantınızı kontrol edip yeniden deneyin.",
+          updateChecksDisabled: "Güncelleme denetimleri devre dışı (UNSLOTH_DISABLE_UPDATE_CHECK=1), bu nedenle kullanılabilir arka uçlar aranmıyor.",
         },
-        llamaBackendKeywords:
-          "llama.cpp arka uç gguf çıkarım cuda rocm hip vulkan metal cpu gpu hızlandırıcı hazır derleme değiştir geçiş motor özel yol klasör dizin llama-server yürütülebilir ikili dosya backend inference engine",
+        llamaBackendKeywords: "llama.cpp arka uç gguf çıkarım cuda rocm hip vulkan metal cpu gpu hızlandırıcı hazır derleme değiştir geçiş motor özel yol klasör dizin llama-server yürütülebilir ikili dosya backend inference engine",
       },
       modelMemory: {
         title: "Model yükleme",
         keepResident: "Modeli GPU belleğinde tut",
         keepResidentDescription: "İstemler arasında VRAM'de kalır.",
-        keepResidentHint:
-          "Model yüklü kaldığı sürece ağırlıkları sistem RAM'ine geri vermez. Boşta otomatik bellekten kaldırmayı kapatır; ağırlıklar ana bilgisayar RAM'inde bulunduğunda (birleşik bellek veya kısmi GPU aktarımı) işletim sisteminin bunları disk belleğine atıp bir sonraki isteminizde yeniden yüklememesi için --mlock seçeneğini de iletir.",
+        keepResidentHint: "Model yüklü kaldığı sürece ağırlıkları sistem RAM'ine geri vermez. Boşta otomatik bellekten kaldırmayı kapatır; ağırlıklar ana bilgisayar RAM'inde bulunduğunda (birleşik bellek veya kısmi GPU aktarımı) işletim sisteminin bunları disk belleğine atıp bir sonraki isteminizde yeniden yüklememesi için --mlock seçeneğini de iletir.",
         noRamReserve: "Model için sistem RAM'i ayırma",
-        noRamReserveDescription:
-          "Model ağırlıkları için tutulan ana bilgisayar RAM'ini azaltın.",
-        noRamReserveHint:
-          "Desteklenen Windows derlemelerinde model tamamen GPU'ya aktarıldığında bellek eşlemeli yüklemeyi atlar, böylece sayfaları bellekte tutulmaz. Aksi halde bellek eşlemeli yükleme korunur. Gerekli CPU arabellekleri yine de RAM kullanabilir. --no-mmap ve --mlock seçeneklerini kaldırır.",
+        noRamReserveDescription: "Model ağırlıkları için tutulan ana bilgisayar RAM'ini azaltın.",
+        noRamReserveHint: "Desteklenen Windows derlemelerinde model tamamen GPU'ya aktarıldığında bellek eşlemeli yüklemeyi atlar, böylece sayfaları bellekte tutulmaz. Aksi halde bellek eşlemeli yükleme korunur. Gerekli CPU arabellekleri yine de RAM kullanabilir. --no-mmap ve --mlock seçeneklerini kaldırır.",
         multiModel: "Birden fazla modeli yüklü tut",
         openSystemSettings: "Sistem'de aç",
         multiModelOff: "Kapalı",
         multiModelFit: "Sığdıklarında",
         multiModelAlways: "Her zaman",
-        multiModelDescription:
-          "Bir sohbet, konuşma, görüntü veya video modeli yüklemek diğerlerini bellekten kaldırır.",
-        multiModelDescriptionFit:
-          "Bir model yüklendiğinde, sığdıkları sürece diğerleri korunur. Sığmadıklarında önce kullanılmayanlar, ardından etkin olan bellekten kaldırılır.",
-        multiModelDescriptionAlways:
-          "Bir model yüklemek hiçbir zaman başka bir modeli bellekten kaldırmaz. Sığmayan bir model yüklenmez. Boşta otomatik bellekten kaldırma ve eğitim yine de bellek boşaltır.",
-        multiModelHint:
-          "Sohbet, konuşma, görüntü ve video modellerini kapsar. Yüklü her sohbet modeli, kendi adını belirten istekleri yanıtlar. Birden fazla GPU varsa Unsloth yeni bir modeli başka hiçbir modelin kullanmadığı bir GPU'ya yerleştirmeye çalışır. “Sığdıklarında” yaklaşık 1 GB boş alan bırakır. Diğerlerinin yanına yüklenen bir model, onların boş bıraktığı belleği alır; bu nedenle daha kısa bir bağlamla başlayabilir. “Sığdıklarında” ve “Her zaman” başka bir GPU'daki modeli hiçbir zaman bellekten kaldırmaz.",
+        multiModelDescription: "Bir sohbet, konuşma, görüntü veya video modeli yüklemek diğerlerini bellekten kaldırır.",
+        multiModelDescriptionFit: "Bir model yüklendiğinde, sığdıkları sürece diğerleri korunur. Sığmadıklarında önce kullanılmayanlar, ardından etkin olan bellekten kaldırılır.",
+        multiModelDescriptionAlways: "Bir model yüklemek hiçbir zaman başka bir modeli bellekten kaldırmaz. Sığmayan bir model yüklenmez. Boşta otomatik bellekten kaldırma ve eğitim yine de bellek boşaltır.",
+        multiModelHint: "Sohbet, konuşma, görüntü ve video modellerini kapsar. Yüklü her sohbet modeli, kendi adını belirten istekleri yanıtlar. Birden fazla GPU varsa Unsloth yeni bir modeli başka hiçbir modelin kullanmadığı bir GPU'ya yerleştirmeye çalışır. “Sığdıklarında” yaklaşık 1 GB boş alan bırakır. Diğerlerinin yanına yüklenen bir model, onların boş bıraktığı belleği alır; bu nedenle daha kısa bir bağlamla başlayabilir. “Sığdıklarında” ve “Her zaman” başka bir GPU'daki modeli hiçbir zaman bellekten kaldırmaz.",
         allowOversizedLoad: "Aşırı büyük model yüklemelerine izin ver",
-        allowOversizedLoadDescription:
-          "Bellek denetimi sığmayacaklarını söylese bile görüntü ve video modellerini yükleyin.",
-        allowOversizedLoadHint:
-          "CPU ve GPU'nun tek bir bellek havuzunu paylaştığı sistemlerde (Apple Silicon, tümleşik GPU'lar) geçerlidir. Model ağırlıklarına ilişkin tahmini, işletim sistemine yer ayrıldıktan sonra kalan bellekten büyük olduğunda Unsloth yüklemeyi reddeder. Bu seçenek açıkken bu yüklemeler yine de denenir. Tahmin her iki yönde de yanlış olabilir: aşırı büyük bir yükleme başarısız olabilir, tüm belleği tüketebilir, bilgisayarın yoğun şekilde disk belleği kullanmasına veya yanıt vermemesine ya da Unsloth'un durmasına neden olabilir. Varsayılan olarak kapalıdır.",
-        mediaIdleUnloadDescription:
-          "Görüntü ve video modellerini bu kadar saniye boşta kaldıktan sonra bellekten kaldırarak VRAM'i boşaltın. 0 modelleri yüklü tutar, en az 60.",
-        mlockVetoed:
-          "--mlock kapalı kalır: modeli yerinde sabitlemek modelin tamamı için RAM ayırır. Boşta otomatik bellekten kaldırma yine devre dışıdır.",
-        mlockNotApplicable:
-          "Tamamen GPU'da: sistem RAM'inde kilitlenecek bir şey yok. Boşta otomatik bellekten kaldırma kapalı kalır.",
-        memlockCapped:
-          "Bu sistem kilitli belleği {limit} ile sınırlıyor. Daha büyük bir model tamamen sabitlenmez; sınırı ulimit -l ile yükseltin.",
-        reloadRequired:
-          "Yeni bellek bayraklarını uygulamak için modeli yeniden yükleyin.",
+        allowOversizedLoadDescription: "Bellek denetimi sığmayacaklarını söylese bile görüntü ve video modellerini yükleyin.",
+        allowOversizedLoadHint: "CPU ve GPU'nun tek bir bellek havuzunu paylaştığı sistemlerde (Apple Silicon, tümleşik GPU'lar) geçerlidir. Model ağırlıklarına ilişkin tahmini, işletim sistemine yer ayrıldıktan sonra kalan bellekten büyük olduğunda Unsloth yüklemeyi reddeder. Bu seçenek açıkken bu yüklemeler yine de denenir. Tahmin her iki yönde de yanlış olabilir: aşırı büyük bir yükleme başarısız olabilir, tüm belleği tüketebilir, bilgisayarın yoğun şekilde disk belleği kullanmasına veya yanıt vermemesine ya da Unsloth'un durmasına neden olabilir. Varsayılan olarak kapalıdır.",
+        mediaIdleUnloadDescription: "Görüntü ve video modellerini bu kadar saniye boşta kaldıktan sonra bellekten kaldırarak VRAM'i boşaltın. 0 modelleri yüklü tutar, en az 60.",
+        mlockVetoed: "--mlock kapalı kalır: modeli yerinde sabitlemek modelin tamamı için RAM ayırır. Boşta otomatik bellekten kaldırma yine devre dışıdır.",
+        mlockNotApplicable: "Tamamen GPU'da: sistem RAM'inde kilitlenecek bir şey yok. Boşta otomatik bellekten kaldırma kapalı kalır.",
+        memlockCapped: "Bu sistem kilitli belleği {limit} ile sınırlıyor. Daha büyük bir model tamamen sabitlenmez; sınırı ulimit -l ile yükseltin.",
+        reloadRequired: "Yeni bellek bayraklarını uygulamak için modeli yeniden yükleyin.",
         loadError: "Model belleği ayarları yüklenemedi",
         saveError: "Model belleği ayarları kaydedilemedi",
-        modelMemoryKeywords:
-          "mlock memlock ulimit vram gpu bellek ram kalıcı sabitle sabitlenmiş sayfa kilit kilitli yüklü tut bellekten kaldır boşta mmap no-mmap yükleme modu takas disk belleği memory",
-        multiModelKeywords:
-          "birden fazla çoklu modeller birlikte yan yana takas sığdır bellekten kaldır çıkar vram gpu görüntü video sohbet konuşma tts ses sesli oku her zaman boşta",
-        mediaIdleUnloadKeywords:
-          "görüntü video difüzyon boşta bellekten kaldır ttl zaman aşımı saniye boşalt vram gpu bellek",
+        modelMemoryKeywords: "mlock memlock ulimit vram gpu bellek ram kalıcı sabitle sabitlenmiş sayfa kilit kilitli yüklü tut bellekten kaldır boşta mmap no-mmap yükleme modu takas disk belleği memory",
+        multiModelKeywords: "birden fazla çoklu modeller birlikte yan yana takas sığdır bellekten kaldır çıkar vram gpu görüntü video sohbet konuşma tts ses sesli oku her zaman boşta",
+        mediaIdleUnloadKeywords: "görüntü video difüzyon boşta bellekten kaldır ttl zaman aşımı saniye boşalt vram gpu bellek",
       },
       storage: {
         title: "Depolama",
         systemDisk: "Sistem diski",
         systemUsed: "Sistem diskinde {used} / {total} kullanılıyor",
-        modelsDiskSummary:
-          "Modeller klasörünün sürücüsü: {used} / {total} kullanılıyor, {free} boş",
+        modelsDiskSummary: "Modeller klasörünün sürücüsü: {used} / {total} kullanılıyor, {free} boş",
         segmentModels: "Modeller",
         segmentCaches: "Önbellekler",
         segmentOther: "Diğer",
@@ -3133,13 +2781,10 @@ export const tr = {
         diskFree: "{free} boş",
         modelsFolder: "Modeller klasörü",
         modelsFolderDescription: "İndirilen modellerin depolandığı yer.",
-        modelsFolderHint:
-          "İndirilen modellerin depolandığı yer. Modelleri sistem sürücünüzün dışında tutmak için değiştirin. Yalnızca yeni indirmeler için geçerlidir. Mevcut modelleriniz oldukları yerde kalır.",
-        modelsFolderKeywords:
-          "modeller klasör dizin yol konum indir indirmeler önbellek depolama disk sürücü taşı yer değiştir hugging face models folder",
+        modelsFolderHint: "İndirilen modellerin depolandığı yer. Modelleri sistem sürücünüzün dışında tutmak için değiştirin. Yalnızca yeni indirmeler için geçerlidir. Mevcut modelleriniz oldukları yerde kalır.",
+        modelsFolderKeywords: "modeller klasör dizin yol konum indir indirmeler önbellek depolama disk sürücü taşı yer değiştir hugging face models folder",
         futureDownloads: "Yalnızca yeni indirmeler",
-        environmentManaged:
-          "{variable} ortam değişkeni tarafından yönetiliyor.",
+        environmentManaged: "{variable} ortam değişkeni tarafından yönetiliyor.",
         locationFree: "{free} boş",
         openAction: "Aç",
         copyAction: "Yolu kopyala",
@@ -3155,11 +2800,9 @@ export const tr = {
         copyError: "Yol kopyalanamadı",
         caches: {
           label: "Önbellek dosyaları",
-          description:
-            "Önbelleklerde {size} var; bunun {reclaimable} kadarı şimdi temizlenebilir.",
+          description: "Önbelleklerde {size} var; bunun {reclaimable} kadarı şimdi temizlenebilir.",
           hint: "Unsloth'un gerektiğinde yeniden oluşturduğu paket indirmeleri, derlenmiş çekirdekler ve aktarım önbellekleri. İndirilen modeller, projeler, sohbetler, ayarlar ve Hugging Face tokenınız burada asla temizlenmez.",
-          keywords:
-            "önbellek önbellekler temizle sil arındır boş alan disk uv pip npm bun triton inductor cuda numba matplotlib vllm derlenmiş xet geçici cache",
+          keywords: "önbellek önbellekler temizle sil arındır boş alan disk uv pip npm bun triton inductor cuda numba matplotlib vllm derlenmiş xet geçici cache",
           measuring: "Önbellek boyutları ölçülüyor...",
           measureFailed: "Önbellekler ölçülemedi",
           empty: "Önbellek dosyası bulunamadı.",
@@ -3168,24 +2811,18 @@ export const tr = {
           hideDetailsAction: "Ayrıntıları gizle",
           showFolders: "Klasörleri göster",
           hideFolders: "Klasörleri gizle",
-          previousLocations:
-            "Önceki konumları da içerir. Ana Temizle düğmesi geçerli önbellek klasörünü etkiler. Model düğmeleri yalnızca seçilen kopyayı temizler.",
-          clearModelDescription:
-            "Bu işlem yalnızca bu önbelleğe alınmış kopyayı kaldırır. Gerektiğinde yeniden indirilir.",
+          previousLocations: "Önceki konumları da içerir. Ana Temizle düğmesi geçerli önbellek klasörünü etkiler. Model düğmeleri yalnızca seçilen kopyayı temizler.",
+          clearModelDescription: "Bu işlem yalnızca bu önbelleğe alınmış kopyayı kaldırır. Gerektiğinde yeniden indirilir.",
           clearAction: "Önbellekleri temizle",
           clearOneAction: "Temizle",
           clearingAction: "Temizleniyor...",
           confirmTitle: "Önbelleğe alınmış dosyalar temizlensin mi?",
           confirmDescription: "Bu işlem yaklaşık {size} alan boşaltır.",
           confirmOneTitle: "{name} temizlensin mi?",
-          safety:
-            "Unsloth bir önbelleği bir sonraki ihtiyaç duyduğunda yeniden oluşturur. İndirilen modellere, projelere, sohbetlere, ayarlara ve Hugging Face tokenınıza dokunulmaz.",
-          hubCost:
-            "Bu, model önbelleğidir. Temizlerseniz bu modeller bir sonraki kullanımınızda yeniden indirilir.",
-          datasetsCost:
-            "Bunu temizlerseniz bu veri kümeleri bir sonraki kullanımınızda yeniden indirilir.",
-          npuCost:
-            "Bunlar indirdiğiniz NPU modelleri. Temizlemek onları siler; kullanmak için Hub'dan yeniden indirmeniz gerekir.",
+          safety: "Unsloth bir önbelleği bir sonraki ihtiyaç duyduğunda yeniden oluşturur. İndirilen modellere, projelere, sohbetlere, ayarlara ve Hugging Face tokenınıza dokunulmaz.",
+          hubCost: "Bu, model önbelleğidir. Temizlerseniz bu modeller bir sonraki kullanımınızda yeniden indirilir.",
+          datasetsCost: "Bunu temizlerseniz bu veri kümeleri bir sonraki kullanımınızda yeniden indirilir.",
+          npuCost: "Bunlar indirdiğiniz NPU modelleri. Temizlemek onları siler; kullanmak için Hub'dan yeniden indirmeniz gerekir.",
           blocked: "Temizlenmedi: {reason}",
           cleared: "{size} temizlendi",
           partial: "Bazı önbellek dosyaları kaldırılamadı",
@@ -3213,8 +2850,7 @@ export const tr = {
         lowDisk: {
           title: "Disk alanı azalıyor",
           criticalTitle: "Disk alanı kritik düzeyde az",
-          description:
-            "Boş: {free} / {total}. Önbellekleri temizlemek yer açabilir.",
+          description: "Boş: {free} / {total}. Önbellekleri temizlemek yer açabilir.",
           action: "Önbellekleri gözden geçir",
         },
       },
@@ -3235,14 +2871,10 @@ export const tr = {
     },
     agents: {
       title: "Ajanlar",
-      description:
-        "Claude Code ve Codex gibi kodlama ajanlarını unsloth start ile yerel bir modele bağlayın.",
-      agentKeywords:
-        "ajan ajanlar kodlama vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
-      vscodeNote:
-        "VS Code bir istisnadır: bu komut, sunulan modeli VS Code'un Copilot Chat model listesine (chatLanguageModels.json) ekler.",
-      intro:
-        "Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode ve diğer ajanları, Unsloth'un yerel olarak sunduğu bir modele tamamen çevrimdışı bağlar. OpenAI uyumlu bir sunucu çalıştırır ve ajanınızın yapılandırma dosyalarına asla dokunmaz.",
+      description: "Claude Code ve Codex gibi kodlama ajanlarını unsloth start ile yerel bir modele bağlayın.",
+      agentKeywords: "ajan ajanlar kodlama vs code vscode copilot pi mistral vibe deepseek harness hermes openclaw opencode claude codex",
+      vscodeNote: "VS Code bir istisnadır: bu komut, sunulan modeli VS Code'un Copilot Chat model listesine (chatLanguageModels.json) ekler.",
+      intro: "Claude Code, Codex, DeepSeek Harness, Hermes, OpenClaw, OpenCode ve diğer ajanları, Unsloth'un yerel olarak sunduğu bir modele tamamen çevrimdışı bağlar. OpenAI uyumlu bir sunucu çalıştırır ve ajanınızın yapılandırma dosyalarına asla dokunmaz.",
       readDocs: "Belgeleri okuyun",
       copy: "Kopyala",
       copied: "Kopyalandı",
@@ -3252,32 +2884,26 @@ export const tr = {
       model: "Model",
       searchModels: "GGUF modellerinde ara...",
       noModels: "Eşleşen GGUF modeli yok.",
-      showingModels:
-        "{total} eşleşmeden {shown} tanesi gösteriliyor. Listeyi daraltmak için yazmaya devam edin.",
+      showingModels: "{total} eşleşmeden {shown} tanesi gösteriliyor. Listeyi daraltmak için yazmaya devam edin.",
       quantization: "Niceleme",
       loadingQuantizations: "Nicelemeler yükleniyor...",
       noQuantizations: "Ayrı niceleme yok",
       recommended: "Önerilen",
       downloaded: "İndirildi",
-      quantizationLoadError:
-        "Nicelemelerin tümü yüklenemedi. Komut, kullanılabilir model değerini kullanacak.",
+      quantizationLoadError: "Nicelemelerin tümü yüklenemedi. Komut, kullanılabilir model değerini kullanacak.",
       generatedCommand: "Oluşturulan komut",
       docs: "Belgeler",
       docsLabel: "unsloth start belgelerini aç",
       agentDocs: "{agent} kurulum belgelerini aç",
       copyGeneratedCommand: "Oluşturulan komutu kopyala",
-      automaticSettingsNote:
-        "Herhangi bir bayrak ayarlamadıysanız Unsloth modelin önerilen ayarlarını otomatik olarak uygular.",
-      configurationNote:
-        "Herhangi bir yapılandırmayı da değiştirebilirsiniz. Bayraklar için aşağıya veya",
+      automaticSettingsNote: "Herhangi bir bayrak ayarlamadıysanız Unsloth modelin önerilen ayarlarını otomatik olarak uygular.",
+      configurationNote: "Herhangi bir yapılandırmayı da değiştirebilirsiniz. Bayraklar için aşağıya veya",
       configurationDocs: "belgelere",
       configurationFlagsSuffix: "göz atın.",
-      modelNote:
-        "Claude Code ve Codex, llama-server tarafından sunulan bir GGUF modeli veya bir MLX modeli gerektirir. Diğer ajanlar transformer tabanlı modelleri de kullanabilir; Unsloth'ta zaten yüklü olan modeli kullanmak için --model seçeneğini kaldırın.",
+      modelNote: "Claude Code ve Codex, llama-server tarafından sunulan bir GGUF modeli veya bir MLX modeli gerektirir. Diğer ajanlar transformer tabanlı modelleri de kullanabilir; Unsloth'ta zaten yüklü olan modeli kullanmak için --model seçeneğini kaldırın.",
       subagent: {
         title: "Yerel bir modeli alt ajan olarak kullanın",
-        description:
-          "{agent} ajanını mevcut modelinde tutun ve seçtiğiniz görevleri bu yerel Unsloth modeline devredin.",
+        description: "{agent} ajanını mevcut modelinde tutun ve seçtiğiniz görevleri bu yerel Unsloth modeline devredin.",
         setupCommand: "Kurulum komutu",
         copySetupCommand: "Alt ajan kurulum komutunu kopyala",
         usagePrompt: "Ardından {agent} içinde şunu yazın:",
@@ -3287,8 +2913,7 @@ export const tr = {
       },
       quickstart: {
         title: "Komut oluştur",
-        description:
-          "Unsloth'ta şu anda yüklü olan modelle bir ajan başlatın. Önce bir model yükleyin, ardından claude yerine aşağıdaki desteklenen ajanlardan herhangi birini yazın.",
+        description: "Unsloth'ta şu anda yüklü olan modelle bir ajan başlatın. Önce bir model yükleyin, ardından claude yerine aşağıdaki desteklenen ajanlardan herhangi birini yazın.",
         noneDetected: "PATH üzerinde desteklenen bir ajan CLI'ı bulunamadı.",
         installed: "Kurulu",
       },
@@ -3299,58 +2924,48 @@ export const tr = {
       },
       models: {
         title: "Model seçme",
-        description:
-          "Model ve niceleme seçmek için --model, pencereyi ayarlamak için --context-length kullanın. Bir niceleme son eki veya açık bir --gguf-variant bayrağı kullanın.",
+        description: "Model ve niceleme seçmek için --model, pencereyi ayarlamak için --context-length kullanın. Bir niceleme son eki veya açık bir --gguf-variant bayrağı kullanın.",
         suffixLabel: "Niceleme son ekiyle",
         variantLabel: "Açık bir varyant bayrağıyla",
       },
       options: {
         title: "Sık kullanılan seçenekler",
-        description:
-          "Önce Unsloth bayrakları ayrıştırılır; tanınmayan her şey doğrudan ajana iletilir.",
-        model:
-          "Bir model seçin. --model belirtilmezse unsloth start, Unsloth'ta şu anda yüklü olan modeli kullanır ve yüklü model yoksa hata verir.",
-        contextLength:
-          "İstenen bağlam uzunluğunu ayarlayın (diğer adı: --max-seq-length).",
+        description: "Önce Unsloth bayrakları ayrıştırılır; tanınmayan her şey doğrudan ajana iletilir.",
+        model: "Bir model seçin. --model belirtilmezse unsloth start, Unsloth'ta şu anda yüklü olan modeli kullanır ve yüklü model yoksa hata verir.",
+        contextLength: "İstenen bağlam uzunluğunu ayarlayın (diğer adı: --max-seq-length).",
         ggufVariant: "GGUF niceleme varyantını seçin.",
-        loadIn4bit:
-          "Hugging Face modelleri için 4 bit yüklemeyi açın veya kapatın.",
-        tensorParallel:
-          "Birden fazla GPU'da tensör paralelliğini açın veya kapatın.",
+        loadIn4bit: "Hugging Face modelleri için 4 bit yüklemeyi açın veya kapatın.",
+        tensorParallel: "Birden fazla GPU'da tensör paralelliğini açın veya kapatın.",
         serve: "Otomatik yerel sunucuyu etkinleştirin veya devre dışı bırakın.",
         launch: "Ajanı başlatın veya yalnızca komutu ve ortamı yazdırın.",
-        persist:
-          "Unsloth tarafından yönetilen ajan depolamasını çalıştırmalar arasında koruyun.",
-        asSubagent:
-          "Üst ajanı mevcut modelinde tutun ve Unsloth'u yerel bir alt ajan olarak kaydedin (Claude Code, Codex, OpenCode ve Pi).",
-        apiKey:
-          "Unsloth API anahtarınızı girin (veya UNSLOTH_API_KEY değişkenini ayarlayın).",
-        reasoning:
-          "Sohbette akıl yürütmeyi kullanın: on, off veya auto. auto, modelin sohbet şablonunu izler; bu genellikle açık anlamına gelir.",
-        reasoningEffort:
-          "Modelin sohbet şablonuna iletilen akıl yürütme düzeyi, örneğin medium. Düzeyler modele göre değişir, bu nedenle modelin kabul ettiği bir düzey kullanın. Ayarlanmazsa şablonun kendi değeri korunur.",
+        persist: "Unsloth tarafından yönetilen ajan depolamasını çalıştırmalar arasında koruyun.",
+        asSubagent: "Üst ajanı mevcut modelinde tutun ve Unsloth'u yerel bir alt ajan olarak kaydedin (Claude Code, Codex, OpenCode ve Pi).",
+        apiKey: "Unsloth API anahtarınızı girin (veya UNSLOTH_API_KEY değişkenini ayarlayın).",
+        reasoning: "Sohbette akıl yürütmeyi kullanın: on, off veya auto. auto, modelin sohbet şablonunu izler; bu genellikle açık anlamına gelir.",
+        reasoningEffort: "Modelin sohbet şablonuna iletilen akıl yürütme düzeyi, örneğin medium. Düzeyler modele göre değişir, bu nedenle modelin kabul ettiği bir düzey kullanın. Ayarlanmazsa şablonun kendi değeri korunur.",
         yolo: "Onay istemlerini atlayın. Yalnızca güvenilir ortamlarda kullanın.",
       },
       remote: {
         title: "Uzak bir Unsloth'a bağlanın",
-        description:
-          "Başlatmadan önce bunları ayarlayarak unsloth start komutunu başka bir yerde çalışan bir Unsloth örneğine yönlendirin (veya --api-key seçeneğini doğrudan iletin):",
+        description: "Başlatmadan önce bunları ayarlayarak unsloth start komutunu başka bir yerde çalışan bir Unsloth örneğine yönlendirin (veya --api-key seçeneğini doğrudan iletin):",
       },
       passthrough: {
         title: "Ajan bağımsız değişkenlerini iletme",
-        description:
-          "Unsloth bayraklarından sonraki bağımsız değişkenler ajanın kendisine iletilir, böylece resume gibi yerel komutlar çalışmaya devam eder:",
+        description: "Unsloth bayraklarından sonraki bağımsız değişkenler ajanın kendisine iletilir, böylece resume gibi yerel komutlar çalışmaya devam eder:",
       },
       dryRun: {
         title: "Başlatmadan önizleyin",
-        description:
-          "Ajanı başlatmak yerine ortamı ve komutu yazdırmak için --no-launch ekleyin. --model ayarlanmışsa model yine de çözümlenip yüklenebilir.",
+        description: "Ajanı başlatmak yerine ortamı ve komutu yazdırmak için --no-launch ekleyin. --model ayarlanmışsa model yine de çözümlenip yüklenebilir.",
       },
     },
     chat: {
       groups: {
-        replies: { title: "Yanıtlar" },
-        thinkingTools: { title: "Düşünme ve araçlar" },
+        replies: {
+          title: "Yanıtlar",
+        },
+        thinkingTools: {
+          title: "Düşünme ve araçlar",
+        },
         conversations: {
           title: "Sohbetler",
         },
@@ -3373,36 +2988,26 @@ export const tr = {
       },
       library: {
         label: "Sohbetleri yönet",
-        description:
-          "Sohbetleri, projeleri ve bölümleri arayın, sıralayın ve düzenleyin.",
+        description: "Sohbetleri, projeleri ve bölümleri arayın, sıralayın ve düzenleyin.",
         action: "Kitaplığı aç",
       },
-      projectAttachmentsHint:
-        "Bu ayarı her sohbetin ek menüsünden geçersiz kılabilirsiniz.",
-      rememberParamsPerModelHint:
-        "Kapalıyken her model için aynı ayarlar kullanılır.",
-      autoCompactHint:
-        "Yerel GGUF ve MLX sohbetleri: çıkarılan turlar dizine eklenir, böylece model bunları arayıp geri getirebilir; sıfırlamada ise sığan kalıcı talimatlar, ortadakiler yerine en eski ve en yeniler korunarak kelimesi kelimesine yeniden alıntılanır. Arşivleme için kaydedilmiş bir sohbet ve vektör dizini gerekir; bunlar yoksa eski turlar atılır. Kullanılabilir VRAM'i değil, ayarladığınız bağlam uzunluğunu kullanır. API modelleri: sağlayıcı mümkün olduğunda eski turları özetler; aksi halde sohbet modelin yayımlanan bağlam penceresine yaklaştıkça en eski turlar atılır.",
-      pastedTextShortDescription:
-        "{count} veya daha fazla karakter içeren yapıştırmalar .txt eki olur.",
-      pastedTextOffDescription:
-        "Yapıştırılan metin her zaman mesaj kutusunda kalır.",
+      projectAttachmentsHint: "Bu ayarı her sohbetin ek menüsünden geçersiz kılabilirsiniz.",
+      rememberParamsPerModelHint: "Kapalıyken her model için aynı ayarlar kullanılır.",
+      autoCompactHint: "Yerel GGUF ve MLX sohbetleri: çıkarılan turlar dizine eklenir, böylece model bunları arayıp geri getirebilir; sıfırlamada ise sığan kalıcı talimatlar, ortadakiler yerine en eski ve en yeniler korunarak kelimesi kelimesine yeniden alıntılanır. Arşivleme için kaydedilmiş bir sohbet ve vektör dizini gerekir; bunlar yoksa eski turlar atılır. Kullanılabilir VRAM'i değil, ayarladığınız bağlam uzunluğunu kullanır. API modelleri: sağlayıcı mümkün olduğunda eski turları özetler; aksi halde sohbet modelin yayımlanan bağlam penceresine yaklaştıkça en eski turlar atılır.",
+      pastedTextShortDescription: "{count} veya daha fazla karakter içeren yapıştırmalar .txt eki olur.",
+      pastedTextOffDescription: "Yapıştırılan metin her zaman mesaj kutusunda kalır.",
       title: "Sohbet",
       description: "Sohbetin bu cihazda nasıl davranacağını özelleştirin.",
       modelSelection: {
         title: "Model seçimi",
         expandQuantizations: "Nicelemeleri genişlet",
-        expandQuantizationsDescription:
-          "Her modeli açmadan Cihazda bölümünde GGUF nicelemelerini gösterin.",
+        expandQuantizationsDescription: "Her modeli açmadan Cihazda bölümünde GGUF nicelemelerini gösterin.",
         showAllQuantizations: "Tüm nicelemeler",
-        showAllQuantizationsDescription:
-          "İndirilmemiş nicelemeleri de Cihazda bölümüne dahil edin.",
+        showAllQuantizationsDescription: "İndirilmemiş nicelemeleri de Cihazda bölümüne dahil edin.",
         showMemoryBar: "VRAM kullanım çubuğu",
-        showMemoryBarDescription:
-          "Model ağırlıkları, bağlam ve spekülatif kod çözme için tahmini VRAM'i gösterin.",
+        showMemoryBarDescription: "Model ağırlıkları, bağlam ve spekülatif kod çözme için tahmini VRAM'i gösterin.",
         fitOnDeviceOnly: "Yalnızca sığan modelleri göster",
-        fitOnDeviceOnlyDescription:
-          "Model seçicide ve Hub'da bu cihazın GPU belleği ve RAM'i için çok büyük modelleri gizleyin. İndirilen modeller görünür kalır.",
+        fitOnDeviceOnlyDescription: "Model seçicide ve Hub'da bu cihazın GPU belleği ve RAM'i için çok büyük modelleri gizleyin. İndirilen modeller görünür kalır.",
         pickerExpandLoaded: "Tam model listesini göster",
         pickerExpandLoadedDescription: "Bir model yüklüyken model seçiciyi yalnızca yüklü model yerine tam listeyle aç. Seçiciyi genişletmek veya daraltmak da bu ayarı değiştirir.",
         pickerMonochromeIcons: "Tek renkli model simgeleri",
@@ -3410,8 +3015,7 @@ export const tr = {
       },
       menu: {
         title: "Sohbet menüsü",
-        description:
-          "Öğeleri sohbetin + menüsüne sabitleyin ve yeniden sıralamak için sürükleyin. Diğerleri “Diğer” bölümüne taşınır.",
+        description: "Öğeleri sohbetin + menüsüne sabitleyin ve yeniden sıralamak için sürükleyin. Diğerleri “Diğer” bölümüne taşınır.",
         deepResearch: "Derin araştırma",
         browserUse: "Tarayıcı kullanımı",
         computerUse: "Bilgisayar kullanımı",
@@ -3428,75 +3032,52 @@ export const tr = {
         more: "Diğer",
       },
       pastedTextThreshold: "Uzun yapıştırmaları sıkıştır",
-      pastedTextThresholdDescription:
-        "Doğrudan mesaj kutusuna yapıştırmak için {shortcut} tuşlarına basın.",
+      pastedTextThresholdDescription: "Doğrudan mesaj kutusuna yapıştırmak için {shortcut} tuşlarına basın.",
       pastedTextThresholdOff: "Kapalı",
       autoScroll: "Oluşturma sırasında kaydır",
-      autoScrollDescription:
-        "Otomatik kaydırma yeni metni görünür tutar. Elle seçeneği sayfayı sabit tutar, böylece baştan okuyabilirsiniz.",
+      autoScrollDescription: "Otomatik kaydırma yeni metni görünür tutar. Elle seçeneği sayfayı sabit tutar, böylece baştan okuyabilirsiniz.",
       autoScrollAuto: "Otomatik kaydırma",
       autoScrollManual: "Elle",
-      autoScrollKeywords:
-        "kaydır kaydırma otomatik kaydırma izle takip et alta yapış atla akış oluşturma görünüm kilitle tut otomatik elle scroll autoscroll",
+      autoScrollKeywords: "kaydır kaydırma otomatik kaydırma izle takip et alta yapış atla akış oluşturma görünüm kilitle tut otomatik elle scroll autoscroll",
       replyNotification: "Yanıt tamamlandığında bildir",
-      replyNotificationDescription:
-        "Unsloth simge durumundayken veya arka plandayken bir yanıt tamamlandığında sistem bildirimi gösterin.",
-      replyNotificationBlocked:
-        "Bildirimler engellenmiş. Tarayıcınızın veya sisteminizin ayarlarından Unsloth için bildirimlere izin verin, ardından yeniden deneyin.",
-      replyNotificationKeywords:
-        "bildir bildirim uyarı bitti tamamlandı hazır yanıt cevap arka plan simge durumu masaüstü ses notification",
+      replyNotificationDescription: "Unsloth simge durumundayken veya arka plandayken bir yanıt tamamlandığında sistem bildirimi gösterin.",
+      replyNotificationBlocked: "Bildirimler engellenmiş. Tarayıcınızın veya sisteminizin ayarlarından Unsloth için bildirimlere izin verin, ardından yeniden deneyin.",
+      replyNotificationKeywords: "bildir bildirim uyarı bitti tamamlandı hazır yanıt cevap arka plan simge durumu masaüstü ses notification",
       showLinkPreviews: "Bağlantı önizlemeleri",
       showLinkPreviewsDescription: "Kaynak bağlantılarının üzerine gelindiğinde önizlemeleri göster.",
       showResponseModel: "Yanıt modeli",
-      showResponseModelDescription:
-        "Asistan yanıtlarında model ayrıntılarını gösterin.",
+      showResponseModelDescription: "Asistan yanıtlarında model ayrıntılarını gösterin.",
       showReplyTimes: "Yanıt saatleri",
-      showReplyTimesDescription:
-        "Her yanıtın ne zaman tamamlandığını yanıtın altında gösterin.",
-      showReplyTimesKeywords:
-        "zaman damgası zaman saat tarih ne zaman bitti geldi yanıt cevap mesaj timestamp",
+      showReplyTimesDescription: "Her yanıtın ne zaman tamamlandığını yanıtın altında gösterin.",
+      showReplyTimesKeywords: "zaman damgası zaman saat tarih ne zaman bitti geldi yanıt cevap mesaj timestamp",
       showGenerationDetails: "Ayrıntılı hız bilgisi",
-      showGenerationDetailsDescription:
-        "Canlı göstergelere istem okuma hızını, token sayılarını ve taslak kabulünü ekler.",
-      showGenerationDetailsKeywords:
-        "ayrıntılı geliştirici istatistik hız tok/s prefill decode",
+      showGenerationDetailsDescription: "Canlı göstergelere istem okuma hızını, token sayılarını ve taslak kabulünü ekler.",
+      showGenerationDetailsKeywords: "ayrıntılı geliştirici istatistik hız tok/s prefill decode",
       generationStatsUpdates: "Hız ve bağlam istatistikleri",
-      generationStatsUpdatesDescription:
-        "Gerçek zamanlı, bir yanıt akarken saniye başına token ve bağlam kullanımını sayar. Bitince, her yanıt tamamlandığında bunları günceller.",
-      generationStatsUpdatesHint:
-        "Gerçek zamanlı, yanıt yazılırken yanıtın altındaki saniye başına token göstergesini ve sohbetin üstündeki bağlam çubuğunu saniyede birkaç kez yeniler. Bitince, her yanıt tamamlandığında bunları bir kez günceller. Gerçek zamanlı mod, özellikle eski veya yoğun makinelerde takılmaya ya da daha düşük performansa yol açabilir.",
+      generationStatsUpdatesDescription: "Gerçek zamanlı, bir yanıt akarken saniye başına token ve bağlam kullanımını sayar. Bitince, her yanıt tamamlandığında bunları günceller.",
+      generationStatsUpdatesHint: "Gerçek zamanlı, yanıt yazılırken yanıtın altındaki saniye başına token göstergesini ve sohbetin üstündeki bağlam çubuğunu saniyede birkaç kez yeniler. Bitince, her yanıt tamamlandığında bunları bir kez günceller. Gerçek zamanlı mod, özellikle eski veya yoğun makinelerde takılmaya ya da daha düşük performansa yol açabilir.",
       generationStatsUpdatesSettled: "Bitince",
       generationStatsUpdatesRealtime: "Gerçek zamanlı",
-      generationStatsUpdatesKeywords:
-        "gerçek zamanlı canlı güncelle hız bağlam istatistik realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
+      generationStatsUpdatesKeywords: "gerçek zamanlı canlı güncelle hız bağlam istatistik realtime live delayed settled update refresh streaming tok/s tokens per second speed context usage meter stats",
       inlineEditResponse: "Yanıtlarda Yanıtı düzenle",
-      inlineEditResponseDescription:
-        "Yanıtı düzenle seçeneğini Diğer menüsü yerine her yanıtta tutun.",
+      inlineEditResponseDescription: "Yanıtı düzenle seçeneğini Diğer menüsü yerine her yanıtta tutun.",
       turnNavigation: "Tur gezinmesi",
       turnNavigationDescription: "Uzun sohbetlerin sol kenarında mesajlarınızı bir şerit olarak gösterir. Önizlemek için üzerine gelin, gitmek için tıklayın ve yeniden bulmak için yer imi ekleyin.",
       composerPosition: "Yazma alanının konumu",
       composerPositionDescription: "Yeni bir sohbet başlarken yazma alanının nerede duracağı, sayfanın üstünden en altına kadar.",
       projectAttachments: "Dosyaları proje genelinde paylaş",
-      projectAttachmentsDescription:
-        "Yeni sohbet eklerini projedeki her sohbet için kullanılabilir yapın.",
+      projectAttachmentsDescription: "Yeni sohbet eklerini projedeki her sohbet için kullanılabilir yapın.",
       rememberParamsPerModel: "Ayarları model başına hatırla",
-      rememberParamsPerModelDescription:
-        "Her modelin son kullanılan istemini, sıcaklığını ve diğer ayarlarını geri yükleyin.",
+      rememberParamsPerModelDescription: "Her modelin son kullanılan istemini, sıcaklığını ve diğer ayarlarını geri yükleyin.",
       autoCompact: "Uzun sohbetleri otomatik sıkıştır",
-      autoCompactDescription:
-        "Bir sohbet bağlamını doldurduğunda eski turlar aranabilir bir arşive taşınır.",
-      autoCompactKeywords:
-        "sıkıştırma sıkıştır otomatik sıkıştır bağlam penceresi kırp kayan kontrol noktası pay arşiv getirme hatırlama rag ara compaction context",
+      autoCompactDescription: "Bir sohbet bağlamını doldurduğunda eski turlar aranabilir bir arşive taşınır.",
+      autoCompactKeywords: "sıkıştırma sıkıştır otomatik sıkıştır bağlam penceresi kırp kayan kontrol noktası pay arşiv getirme hatırlama rag ara compaction context",
       keepRunningWhenTabClosed: "Sekme kapandıktan sonra çalışmaya devam et",
-      keepRunningWhenTabClosedDescription:
-        "Yanıtlar, web araması ve Derin Araştırma, sekme kapandıktan sonra sunucuda devam eder. Bunun yerine durdurmak için kapatın.",
-      keepRunningWhenTabClosedHint:
-        "Devam eden bir çalıştırmayı sürdürmek için sohbeti herhangi bir cihazda yeniden açın. Kapalıyken bir çalıştırma, son sekmesi kapandıktan yaklaşık bir dakika içinde durur; bu nedenle sayfayı yeniden yüklemek onu durdurmaz. Bu ayarı değiştirdikten sonra başlatılan çalıştırmalar için geçerlidir. Geçici sohbetler, API modellerinden gelen veya eklere verilen yanıtlar ve tarayıcı panelini kullanan turlar her zaman sekmeleriyle birlikte durur.",
-      keepRunningWhenTabClosedKeywords:
-        "arka plan sekme kapat kapandı ayrıl çalışmaya devam et sürdür durdur iptal derin araştırma web araması devam ettir yeniden bağlan cihaz telefon background",
+      keepRunningWhenTabClosedDescription: "Yanıtlar, web araması ve Derin Araştırma, sekme kapandıktan sonra sunucuda devam eder. Bunun yerine durdurmak için kapatın.",
+      keepRunningWhenTabClosedHint: "Devam eden bir çalıştırmayı sürdürmek için sohbeti herhangi bir cihazda yeniden açın. Kapalıyken bir çalıştırma, son sekmesi kapandıktan yaklaşık bir dakika içinde durur; bu nedenle sayfayı yeniden yüklemek onu durdurmaz. Bu ayarı değiştirdikten sonra başlatılan çalıştırmalar için geçerlidir. Geçici sohbetler, API modellerinden gelen veya eklere verilen yanıtlar ve tarayıcı panelini kullanan turlar her zaman sekmeleriyle birlikte durur.",
+      keepRunningWhenTabClosedKeywords: "arka plan sekme kapat kapandı ayrıl çalışmaya devam et sürdür durdur iptal derin araştırma web araması devam ettir yeniden bağlan cihaz telefon background",
       firstTokenLabel: "İlk token bekleme sınırı",
-      firstTokenDescription:
-        "Yerel GGUF modellerinin ilk tokendan önce istem işleme ilerlemesi olmadan ne kadar bekleyebileceği. Tüm hesaplar için yeni beklemelere uygulanır. Sınırsız, siz durdurana kadar beklemeye devam eder.",
+      firstTokenDescription: "Yerel GGUF modellerinin ilk tokendan önce istem işleme ilerlemesi olmadan ne kadar bekleyebileceği. Tüm hesaplar için yeni beklemelere uygulanır. Sınırsız, siz durdurana kadar beklemeye devam eder.",
       firstTokenDefault: "20 dk (varsayılan)",
       firstTokenCustom: "Özel",
       firstTokenUnlimited: "Sınırsız",
@@ -3506,68 +3087,53 @@ export const tr = {
       firstTokenSaving: "Kaydediliyor…",
       firstTokenLoadError: "İlk token bekleme sınırı yüklenemedi.",
       firstTokenSaveError: "İlk token bekleme sınırı kaydedilemedi.",
-      firstTokenKeywords:
-        "zaman aşımı ilk token prefill yavaş CPU gece boyu sınırsız bekleme sınırı timeout",
+      firstTokenKeywords: "zaman aşımı ilk token prefill yavaş CPU gece boyu sınırsız bekleme sınırı timeout",
       toolResultLimit: "Araç çıktısı uzunluğu",
-      toolResultLimitDescription:
-        "Modelin okuduğu tek bir Python, Terminal veya MCP araç sonucunun karakter sayısı. Varsayılan: {count}.",
-      toolResultLimitHint:
-        "Daha uzun Python ve Terminal çıktısı, modelin parça parça okuyabileceği bir dosyaya kaydedilir. Daha yüksek bir sınır Unsloth'ta çalışan modellere uygulanır ve küçük bağlam pencereleri yine daha azını alır. API modelleri, siz düşürmediğiniz sürece varsayılanı korur.",
+      toolResultLimitDescription: "Modelin okuduğu tek bir Python, Terminal veya MCP araç sonucunun karakter sayısı. Varsayılan: {count}.",
+      toolResultLimitHint: "Daha uzun Python ve Terminal çıktısı, modelin parça parça okuyabileceği bir dosyaya kaydedilir. Daha yüksek bir sınır Unsloth'ta çalışan modellere uygulanır ve küçük bağlam pencereleri yine daha azını alır. API modelleri, siz düşürmediğiniz sürece varsayılanı korur.",
       toolResultLimitDefault: "{count} (varsayılan)",
-      toolResultLimitLocked:
-        "UNSLOTH_TOOL_RESULT_MAX_CHARS tarafından ayarlandı",
+      toolResultLimitLocked: "UNSLOTH_TOOL_RESULT_MAX_CHARS tarafından ayarlandı",
       toolResultLimitLoadError: "Araç çıktısı uzunluğu yüklenemedi.",
       toolResultLimitSaveError: "Araç çıktısı uzunluğu kaydedilemedi.",
-      toolResultLimitKeywords:
-        "araç çıktı sonuç kırp kırpılmış kırpma sınır üst sınır karakter uzunluk terminal python mcp tool output",
+      toolResultLimitKeywords: "araç çıktı sonuç kırp kırpılmış kırpma sınır üst sınır karakter uzunluk terminal python mcp tool output",
       visibility: {
         collapsed: "Daraltılmış",
         auto: "Çalışırken genişlet",
         expanded: "Her zaman genişletilmiş",
       },
-      visibilityKeywords:
-        "daralt daraltılmış genişlet genişletilmiş açık kapalı akıl yürütme düşünme araç çağrıları araç etkinliği katla grupla akış",
+      visibilityKeywords: "daralt daraltılmış genişlet genişletilmiş açık kapalı akıl yürütme düşünme araç çağrıları araç etkinliği katla grupla akış",
       thinking: {
         visibility: "Düşünme",
-        visibilityDescription:
-          "Akıl yürütmenin nasıl açılacağı. Herhangi bir bloğu yine kendiniz genişletebilir veya daraltabilirsiniz.",
+        visibilityDescription: "Akıl yürütmenin nasıl açılacağı. Herhangi bir bloğu yine kendiniz genişletebilir veya daraltabilirsiniz.",
       },
       memory: {
         title: "Bellek",
-        description:
-          "Yerel veya bulut, her model için her sohbetin okuduğu notlar. Bir projedeki sohbetler o projenin AGENTS.md dosyasını da okur.",
+        description: "Yerel veya bulut, her model için her sohbetin okuduğu notlar. Bir projedeki sohbetler o projenin AGENTS.md dosyasını da okur.",
         enable: "Sohbetlerde belleği kullan",
         enableDescription: "Bu notları her sohbetle birlikte gönderin.",
-        locked:
-          "Bu kurulum için UNSLOTH_STUDIO_AGENTS_MD tarafından kapatıldı.",
+        locked: "Bu kurulum için UNSLOTH_STUDIO_AGENTS_MD tarafından kapatıldı.",
         editor: "Bellek notları",
-        placeholder:
-          "Örneğin:\n- Python yazıyorum ve uv kullanıyorum.\n- Yanıtları kısa tut.",
+        placeholder: "Örneğin:\n- Python yazıyorum ve uv kullanıyorum.\n- Yanıtları kısa tut.",
         hint: "Şu konuma kaydedildi: {path}. Bu dosyayı herhangi bir metin düzenleyicide de düzenleyebilirsiniz.",
         size: "{used} / {max} KB",
         save: "Kaydet",
         saved: "Bellek kaydedildi",
         loadError: "Bellek yüklenemedi.",
         saveError: "Bellek kaydedilemedi.",
-        keywords:
-          "bellek hatırla kişiselleştirme profil tercihler notlar bilgiler özel talimatlar hakkımda agents.md claude.md memory",
+        keywords: "bellek hatırla kişiselleştirme profil tercihler notlar bilgiler özel talimatlar hakkımda agents.md claude.md memory",
       },
       currentDate: {
         label: "Modele bugünün tarihini bildir",
-        description:
-          "Arama ve araştırmanın yeni kaynakları bulması için bugünün tarihini ekleyin.",
+        description: "Arama ve araştırmanın yeni kaynakları bulması için bugünün tarihini ekleyin.",
         loadError: "Geçerli tarih ayarları yüklenemedi",
         saveError: "Geçerli tarih ayarları güncellenemedi",
       },
       tools: {
         visibility: "Araç çağrıları",
-        visibilityDescription:
-          "Araç etkinliğinin nasıl açılacağı. Herhangi bir çağrıyı yine kendiniz genişletebilir veya daraltabilirsiniz.",
+        visibilityDescription: "Araç etkinliğinin nasıl açılacağı. Herhangi bir çağrıyı yine kendiniz genişletebilir veya daraltabilirsiniz.",
         foldIntoThinking: "Araç çağrılarını Düşünme altında grupla",
-        foldIntoThinkingDescription:
-          "Bir turun araç çağrılarını ayrı satırlar yerine o turun Düşünme bloğunun içinde gösterin.",
-        foldIntoThinkingBlocked:
-          "Araç çağrıları, onları ayrı satırlarda tutan Her zaman genişletilmiş olarak ayarlıyken kullanılamaz.",
+        foldIntoThinkingDescription: "Bir turun araç çağrılarını ayrı satırlar yerine o turun Düşünme bloğunun içinde gösterin.",
+        foldIntoThinkingBlocked: "Araç çağrıları, onları ayrı satırlarda tutan Her zaman genişletilmiş olarak ayarlıyken kullanılamaz.",
       },
       webSearch: {
         title: "Web araması",
@@ -3577,24 +3143,19 @@ export const tr = {
       artifacts: {
         title: "HTML sayfaları",
         collapseHtmlBlocks: "HTML bloklarını daralt",
-        collapseHtmlBlocksDescription:
-          "Sohbetteki tam HTML belgelerini kod yerine tarayıcıda açılan bir kart olarak gösterin.",
+        collapseHtmlBlocksDescription: "Sohbetteki tam HTML belgelerini kod yerine tarayıcıda açılan bir kart olarak gösterin.",
         allowNetworkAccess: "HTML sayfalarına ağ erişimi izni ver",
-        allowNetworkAccessDescription:
-          "Sohbetteki HTML sayfalarının harici betikleri, stilleri, yazı tiplerini ve medyayı yüklemesine izin verin. Çevrimdışı önizlemeler için kapatın.",
+        allowNetworkAccessDescription: "Sohbetteki HTML sayfalarının harici betikleri, stilleri, yazı tiplerini ve medyayı yüklemesine izin verin. Çevrimdışı önizlemeler için kapatın.",
         blockedBanner: "{hosts} kaynağından {count} harici kaynak engellendi.",
-        blockedBannerPlural:
-          "{hosts} kaynağından {count} harici kaynak engellendi.",
+        blockedBannerPlural: "{hosts} kaynağından {count} harici kaynak engellendi.",
         blockedBannerAction: "Bu sayfa için izin ver",
         blockedTitle: "HTML sayfaları için ağ erişimi kapalı",
-        blockedHint:
-          "HTML sayfalarının harici kaynakları yüklemesine izin vermek için Ayarlar → Tarayıcı bölümünde “{setting}” seçeneğini açın veya yalnızca bu sayfa için izin verin.",
+        blockedHint: "HTML sayfalarının harici kaynakları yüklemesine izin vermek için Ayarlar → Tarayıcı bölümünde “{setting}” seçeneğini açın veya yalnızca bu sayfa için izin verin.",
         blockedSettingsAction: "Ayarları aç",
         blockedDismiss: "Kapat",
         errorTitle: "Bu sayfada bir hata oluştu",
         errorTitlePlural: "Bu sayfada {count} hata oluştu",
-        errorHint:
-          "Modelle düzelt, hatayı mesaj kutusuna yerleştirir. Siz gönderene kadar hiçbir şey gönderilmez.",
+        errorHint: "Modelle düzelt, hatayı mesaj kutusuna yerleştirir. Siz gönderene kadar hiçbir şey gönderilmez.",
         errorBannerAction: "Modelle düzelt",
         errorConsoleAction: "Konsolu aç",
         errorConsoleHideAction: "Konsolu gizle",
@@ -3607,40 +3168,32 @@ export const tr = {
         consoleClear: "Konsolu temizle",
         consoleClose: "Konsolu kapat",
         consoleEmpty: "Henüz konsol çıktısı yok.",
-        consoleCapped:
-          "Yalnızca son {count} kayıt tutulur; önceki çıktı atıldı.",
+        consoleCapped: "Yalnızca son {count} kayıt tutulur; önceki çıktı atıldı.",
       },
       data: "Veriler",
       exportHistory: "Sohbet geçmişini dışa aktar",
-      exportHistoryDescription:
-        "Tüm sohbetleri ve mesajları JSON olarak indirin.",
+      exportHistoryDescription: "Tüm sohbetleri ve mesajları JSON olarak indirin.",
       exportAction: "Dışa aktar",
       exportingAction: "Dışa aktarılıyor...",
       exportConversations: "Son Kullanılanları ve Projeleri dışa aktar",
-      exportConversationsDescription:
-        "Son Kullanılanları veya Son Kullanılanlar ile proje sohbetlerini Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML ya da PDF olarak, birleşik veya sohbet başına indirin. Message JSONL sohbet başına kullanılabilir.",
+      exportConversationsDescription: "Son Kullanılanları veya Son Kullanılanlar ile proje sohbetlerini Training JSONL, CSV, ShareGPT JSONL, Markdown, HTML ya da PDF olarak, birleşik veya sohbet başına indirin. Message JSONL sohbet başına kullanılabilir.",
       exportConversationsAction: "Dışa aktar",
       exportScopeRecents: "Son Kullanılanlar",
       exportScopeAll: "Son Kullanılanlar + Projeler",
       importChats: "Sohbetleri içe aktar",
-      importChatsDescription:
-        "JSON, JSONL, NDJSON, CSV veya Markdown dosyalarını Son Kullanılanlar'a aktarın.",
+      importChatsDescription: "JSON, JSONL, NDJSON, CSV veya Markdown dosyalarını Son Kullanılanlar'a aktarın.",
       importChatsAction: "İçe aktar",
       importNoConversations: "Dosyada sohbet bulunamadı.",
       importedOneChat: "1 sohbet Son Kullanılanlar'a aktarıldı.",
       importedChatCount: "{count} sohbet Son Kullanılanlar'a aktarıldı.",
-      importingChats:
-        "Sohbetler içe aktarılıyor: şu ana kadar {count} (%{percent})...",
-      importedChatCountPartial:
-        "{count} sohbet Son Kullanılanlar'a aktarıldı; {failed} sohbet kaydedilemedi.",
+      importingChats: "Sohbetler içe aktarılıyor: şu ana kadar {count} (%{percent})...",
+      importedChatCountPartial: "{count} sohbet Son Kullanılanlar'a aktarıldı; {failed} sohbet kaydedilemedi.",
       importFailed: "İçe aktarma başarısız oldu.",
       importFromSource: "{source} kaynağından içe aktar",
-      importFromSourceDescription:
-        "{source} sohbetlerinizi, ait oldukları projeye göre gruplandırarak Unsloth'a kopyalayın.",
+      importFromSourceDescription: "{source} sohbetlerinizi, ait oldukları projeye göre gruplandırarak Unsloth'a kopyalayın.",
       importingAction: "İçe aktarılıyor...",
       importedSourceOneChat: "{source} kaynağından 1 sohbet içe aktarıldı.",
-      importedSourceChatCount:
-        "{source} kaynağından {count} sohbet içe aktarıldı.",
+      importedSourceChatCount: "{source} kaynağından {count} sohbet içe aktarıldı.",
       sourceUpdated: "{source} kaynağından {count} yeni mesaj eklendi.",
       sourceUpToDate: "{source} sohbetleri zaten güncel.",
       importedSourcePartial: "Bazı {source} sohbetleri içe aktarılamadı.",
@@ -3648,17 +3201,14 @@ export const tr = {
       clearHistoryDescription: "Sohbet geçmişini bu cihazdan silin.",
       clearAction: "Temizle",
       clearAllChats: "Tüm sohbetleri temizle",
-      clearAllChatsDescription:
-        "Bu cihazdaki tüm sohbetleri kalıcı olarak silin.",
+      clearAllChatsDescription: "Bu cihazdaki tüm sohbetleri kalıcı olarak silin.",
       noChatsToClear: "Temizlenecek sohbet yok.",
       clearOneChatDescription: "Bu cihazdaki tek sohbeti kalıcı olarak silin.",
-      clearChatCountDescription:
-        "Bu cihazdaki {count} sohbetin tümünü kalıcı olarak silin.",
+      clearChatCountDescription: "Bu cihazdaki {count} sohbetin tümünü kalıcı olarak silin.",
       clearChatsAction: "Sohbetleri temizle",
       clearOneChatTitle: "1 sohbet temizlensin mi?",
       clearChatsTitle: "{count} sohbet temizlensin mi?",
-      clearChatsConfirmDescription:
-        "Bu cihazdaki tüm sohbetleri kalıcı olarak siler. Bu işlem geri alınamaz.",
+      clearChatsConfirmDescription: "Bu cihazdaki tüm sohbetleri kalıcı olarak siler. Bu işlem geri alınamaz.",
       clearingAction: "Temizleniyor...",
       clearOneChatAction: "1 sohbeti temizle",
       clearChatCountAction: "{count} sohbeti temizle",
@@ -3666,18 +3216,12 @@ export const tr = {
       clearedOneChat: "1 sohbet temizlendi",
       clearedChatCount: "{count} sohbet temizlendi",
       someChatsCouldNotBeCleared: "Bazı sohbetler temizlenemedi",
-      chatsClearedRemainOne:
-        "{clearedCount} sohbet temizlendi; 1 sohbet kaldı. Lütfen yeniden deneyin.",
-      chatsClearedRemain:
-        "{clearedCount} sohbet temizlendi; {remainingCount} sohbet kaldı. Lütfen yeniden deneyin.",
-      oneChatClearedRemain:
-        "1 sohbet temizlendi; {remainingCount} sohbet kaldı. Lütfen yeniden deneyin.",
-      oneChatClearedRemainOne:
-        "1 sohbet temizlendi; 1 sohbet kaldı. Lütfen yeniden deneyin.",
-      storageClearFailedOne:
-        "Bir depolama temizleme işlemi başarısız oldu; 1 sohbet kalmış olabilir. Lütfen yeniden deneyin.",
-      storageClearFailed:
-        "Bir depolama temizleme işlemi başarısız oldu; {count} sohbet kalmış olabilir. Lütfen yeniden deneyin.",
+      chatsClearedRemainOne: "{clearedCount} sohbet temizlendi; 1 sohbet kaldı. Lütfen yeniden deneyin.",
+      chatsClearedRemain: "{clearedCount} sohbet temizlendi; {remainingCount} sohbet kaldı. Lütfen yeniden deneyin.",
+      oneChatClearedRemain: "1 sohbet temizlendi; {remainingCount} sohbet kaldı. Lütfen yeniden deneyin.",
+      oneChatClearedRemainOne: "1 sohbet temizlendi; 1 sohbet kaldı. Lütfen yeniden deneyin.",
+      storageClearFailedOne: "Bir depolama temizleme işlemi başarısız oldu; 1 sohbet kalmış olabilir. Lütfen yeniden deneyin.",
+      storageClearFailed: "Bir depolama temizleme işlemi başarısız oldu; {count} sohbet kalmış olabilir. Lütfen yeniden deneyin.",
       failedToClearChats: "Sohbetler temizlenemedi",
     },
     data: {
@@ -3721,16 +3265,14 @@ export const tr = {
         noMedia: "Arşivlenen öğe yok.",
         noMediaMatches: "Aramanızla eşleşen arşivlenmiş öğe yok.",
         itemCount: "Öğeler: {count}",
-        incompleteSearch:
-          "Arama tamamlanmadı. Kalan öğeleri yüklemeyi yeniden deneyin.",
+        incompleteSearch: "Arama tamamlanmadı. Kalan öğeleri yüklemeyi yeniden deneyin.",
         searchingRemaining: "Kalan öğeler aranıyor ({count} yüklendi)...",
         noLoadedMatches: "Şu ana kadar yüklenen öğelerde eşleşme yok.",
         deleteItem: "Sil: {title}",
         unarchiveItem: "Arşivden çıkar: {title}",
         deleteItemsTitle: "Arşivlenen öğeleri sil ({count})",
         unarchiveItemsTitle: "Öğeleri arşivden çıkar ({count})",
-        deleteFilesWarning:
-          "Bu dosyalar kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+        deleteFilesWarning: "Bu dosyalar kalıcı olarak silinecek. Bu işlem geri alınamaz.",
         restoreWarning: "Bu öğeler galeriye geri dönecek.",
         working: "İşleniyor...",
         loadFailed: "Arşivlenen öğeler yüklenemedi",
@@ -3755,36 +3297,28 @@ export const tr = {
         movedChatsToRecents: "Son Kullanılanlar'a taşınan sohbetler: {count}",
         moveFailed: "Sohbetler taşınamadı",
         deleteChatsTitle: "Sohbetleri sil ({count})",
-        deleteChatsWarning:
-          "{count} sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+        deleteChatsWarning: "{count} sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
         deleteArchivedTitle: "Arşivlenen {count} sohbeti sil",
-        deleteArchivedWarning:
-          "Arşivlenmiş {count} sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+        deleteArchivedWarning: "Arşivlenmiş {count} sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
         deleting: "Siliniyor...",
       },
       title: "Veriler",
       backToData: "Verilere dön",
       exportFailed: "Sohbetler dışa aktarılamadı",
-      description:
-        "Bu cihazda depolanan sohbet geçmişini ve karşıya yüklenen dosyaları yönetin.",
+      description: "Bu cihazda depolanan sohbet geçmişini ve karşıya yüklenen dosyaları yönetin.",
       manageFiles: {
         label: "Dosyaları yönet",
-        description:
-          "Görselleri, videoları, sesleri ve dosyaları arayın, sıralayın ve düzenleyin.",
+        description: "Görselleri, videoları, sesleri ve dosyaları arayın, sıralayın ve düzenleyin.",
         action: "Kitaplığı aç",
       },
       archivedChats: "Arşivlenen sohbetler",
-      archivedChatsDescription:
-        "Arşivlediğiniz sohbetleri görüntüleyin ve yönetin.",
+      archivedChatsDescription: "Arşivlediğiniz sohbetleri görüntüleyin ve yönetin.",
       archivedImages: "Arşivlenen görseller",
-      archivedImagesDescription:
-        "Arşivlediğiniz görselleri görüntüleyin ve yönetin.",
+      archivedImagesDescription: "Arşivlediğiniz görselleri görüntüleyin ve yönetin.",
       archivedVideos: "Arşivlenen videolar",
-      archivedVideosDescription:
-        "Arşivlediğiniz videoları görüntüleyin ve yönetin.",
+      archivedVideosDescription: "Arşivlediğiniz videoları görüntüleyin ve yönetin.",
       archivedAudio: "Arşivlenen sesler",
-      archivedAudioDescription:
-        "Arşivlediğiniz ses kliplerini görüntüleyin ve yönetin.",
+      archivedAudioDescription: "Arşivlediğiniz ses kliplerini görüntüleyin ve yönetin.",
       manageAction: "Yönet",
       exportArchivedChats: "Dışa aktar",
       exportingArchivedChats: "Dışa aktarılıyor...",
@@ -3793,53 +3327,43 @@ export const tr = {
       noArchivedChatsToExport: "Dışa aktarılacak arşivlenmiş sohbet yok.",
       failedToExportArchivedChats: "Arşivlenen sohbetler dışa aktarılamadı",
       archiveAllChats: "Tüm sohbetleri arşivle",
-      archiveAllChatsDescription:
-        "Son Kullanılanlar ve Projeler'deki tüm sohbetleri arşive taşıyın.",
+      archiveAllChatsDescription: "Son Kullanılanlar ve Projeler'deki tüm sohbetleri arşive taşıyın.",
       noChatsToArchive: "Arşivlenecek sohbet yok.",
       archiveAllAction: "Tümünü arşivle",
       archivingAction: "Arşivleniyor...",
       archiveAllChatsTitle: "Tüm sohbetler arşivlensin mi?",
-      archiveAllChatsConfirmDescription:
-        "Bu cihazdaki tüm sohbetleri arşive taşır. Arşivlenen sohbetler kullanılabilir kalır ve istediğiniz zaman arşivden çıkarılabilir.",
+      archiveAllChatsConfirmDescription: "Bu cihazdaki tüm sohbetleri arşive taşır. Arşivlenen sohbetler kullanılabilir kalır ve istediğiniz zaman arşivden çıkarılabilir.",
       archivedAllChats: "Tüm sohbetler arşivlendi",
       archivedOneChat: "1 sohbet arşivlendi",
       archivedChatCount: "{count} sohbet arşivlendi",
       failedToArchiveChats: "Sohbetler arşivlenemedi",
       confirmBeforeDeleting: "Silmeden önce onay iste",
-      confirmBeforeDeletingDescription:
-        "Bir sohbet silinmeden önce onay isteyin. Anında silmek için kapatın.",
+      confirmBeforeDeletingDescription: "Bir sohbet silinmeden önce onay isteyin. Anında silmek için kapatın.",
       alwaysDeleteFiles: "Dosyaları her zaman sil",
-      alwaysDeleteFilesDescription:
-        "Bir sohbeti silmek, o sohbete ait korumalı alan klasörünü de diskten kaldırır. Sohbetin bir projenin içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
+      alwaysDeleteFilesDescription: "Bir sohbeti silmek, o sohbete ait korumalı alan klasörünü de diskten kaldırır. Sohbetin bir projenin içinde yazdığı dosyalar o projenin çalışma alanında kalır.",
       chatsSection: "Sohbetler ve arşivler",
       transferSection: "İçe ve dışa aktarma",
       deletionSection: "Silme",
       archives: "Arşivler",
       archiveChatsLabel: "Sohbetler",
       archiveVideosLabel: "Videolar",
-      exportFormatsSummary:
-        "Son Kullanılanları ve proje sohbetlerini tercih ettiğiniz biçimde dışa aktarın.",
+      exportFormatsSummary: "Son Kullanılanları ve proje sohbetlerini tercih ettiğiniz biçimde dışa aktarın.",
       trainingSummary: "Sohbetlerinizi bir ince ayar veri kümesine dönüştürün.",
       confirmDeletionSummary: "Tek tek sohbetleri silmeden önce sorun.",
       sandboxFiles: "Sohbet korumalı alan dosyaları",
-      sandboxFilesDescription:
-        "Bir sohbet silinirken uygulanacak varsayılan işlem.",
+      sandboxFilesDescription: "Bir sohbet silinirken uygulanacak varsayılan işlem.",
       keepSandboxFiles: "Korumalı alan dosyalarını sakla",
       deleteSandboxFiles: "Korumalı alan dosyalarını sil",
-      projectFilesKept:
-        "Korumalı alanlar, tek tek sohbetler için oluşturulan klasörlerdir. Proje çalışma alanlarına kaydedilen dosyalar saklanır.",
+      projectFilesKept: "Korumalı alanlar, tek tek sohbetler için oluşturulan klasörlerdir. Proje çalışma alanlarına kaydedilen dosyalar saklanır.",
       deleteAllAction: "Tümünü sil",
       deleteChatsOnly: "Yalnızca sohbetleri sil…",
       deleteChatsAndSandboxes: "Sohbetleri ve korumalı alanları sil…",
-      deleteSandboxFilesDescription:
-        "Her sohbetin korumalı alan klasörünü ve içindeki dosyaları da silin. Proje çalışma alanlarındaki dosyalar saklanır.",
+      deleteSandboxFilesDescription: "Her sohbetin korumalı alan klasörünü ve içindeki dosyaları da silin. Proje çalışma alanlarındaki dosyalar saklanır.",
       filesSection: "Dosyalar",
       uploadedFiles: "Karşıya yüklenen dosyalar",
-      uploadedFilesDescription:
-        "Sohbetlere, projelere ve bilgi tabanlarına yüklenen dosyaları görüntüleyin ve yönetin.",
+      uploadedFilesDescription: "Sohbetlere, projelere ve bilgi tabanlarına yüklenen dosyaları görüntüleyin ve yönetin.",
       fineTuneExport: "Sohbetleri eğitim verisi olarak kullan",
-      fineTuneExportDescription:
-        "Sohbetlerinizden bir ince ayar JSONL veri kümesi oluşturun. Eğit sekmesinde yükleyin, Tarifler'de iyileştirin veya dışa aktarın.",
+      fineTuneExportDescription: "Sohbetlerinizden bir ince ayar JSONL veri kümesi oluşturun. Eğit sekmesinde yükleyin, Tarifler'de iyileştirin veya dışa aktarın.",
       fineTuneExportAction: "JSONL olarak dışa aktar",
       fineTuneRunAction: "Çalıştır",
       fineTuneExportingAction: "Dışa aktarılıyor...",
@@ -3857,8 +3381,7 @@ export const tr = {
     },
     remoteLan: {
       title: "Uzak ve LAN",
-      description:
-        "Bu Unsloth'a diğer cihazlarınızdan yerel ağınız veya geçici bir herkese açık URL üzerinden erişin.",
+      description: "Bu Unsloth'a diğer cihazlarınızdan yerel ağınız veya geçici bir herkese açık URL üzerinden erişin.",
     },
     apiKeys: {
       title: "API",
@@ -3895,8 +3418,7 @@ export const tr = {
       copyAccessToken: "Erişim tokenını kopyala",
       copyNow: "Şimdi kopyalayın - bu bir daha gösterilmeyecek.",
       usageExamples: "Sohbet API'si",
-      usageNoModel:
-        "Çalıştırılabilir örnekleri görmek için bir model yükleyin veya indirin. Bu sunucuda henüz adı verilebilecek bir model yok.",
+      usageNoModel: "Çalıştırılabilir örnekleri görmek için bir model yükleyin veya indirin. Bu sunucuda henüz adı verilebilecek bir model yok.",
       usageTools: "Araçlar",
       exampleLanguage: "Dil",
       exampleRequest: "İstek",
@@ -3908,18 +3430,15 @@ export const tr = {
       osUnix: "Linux / macOS / WSL",
       osWindows: "Windows",
       secureHttps: "Güvenli HTTPS",
-      secureHttpsHint:
-        "0.0.0.0 bağlantı noktasına hâlâ her yerden erişilebilir. Tam güvenlik için Unsloth'u yalnızca bu HTTPS bağlantısını açığa çıkaracak şekilde --secure ile başlatın.",
+      secureHttpsHint: "0.0.0.0 bağlantı noktasına hâlâ her yerden erişilebilir. Tam güvenlik için Unsloth'u yalnızca bu HTTPS bağlantısını açığa çıkaracak şekilde --secure ile başlatın.",
       copyTunnelUrl: "Tünel URL'sini kopyala",
       copySnippet: "Kod parçacığını kopyala",
       copy: "Kopyala",
       copied: "Kopyalandı",
       codingAgents: "Kodlama ajanları",
-      codingAgentsHint:
-        "Bu sunucuya karşı bir kodlama ajanı başlatın. Ajan yüklü modeli kullanır; yerel sunucu otomatik olarak bir API anahtarı oluşturur, uzak sunucu ise anahtarı komuta ekler.",
+      codingAgentsHint: "Bu sunucuya karşı bir kodlama ajanı başlatın. Ajan yüklü modeli kullanır; yerel sunucu otomatik olarak bir API anahtarı oluşturur, uzak sunucu ise anahtarı komuta ekler.",
       openAgentsTab: "Ajanlar'da aç",
-      codingAgentsSwap:
-        "claude yerine codex, openclaw, opencode veya hermes kullanabilirsiniz.",
+      codingAgentsSwap: "claude yerine codex, openclaw, opencode veya hermes kullanabilirsiniz.",
       relativeNever: "hiçbir zaman",
       relativeJustNow: "az önce",
       expired: "süresi doldu",
@@ -3931,20 +3450,17 @@ export const tr = {
       revokeToken: "Tokenı iptal et",
       regenerateToken: "Tokenı yeniden oluştur",
       regenerateTitle: "“{name}” erişim tokenı yeniden oluşturulsun mu?",
-      regenerateDescription:
-        "Bunun yerine aynı ada ve geçerlilik süresine sahip yeni bir token geçer. Mevcut tokenı kullanan uygulamalar erişimini hemen kaybeder.",
+      regenerateDescription: "Bunun yerine aynı ada ve geçerlilik süresine sahip yeni bir token geçer. Mevcut tokenı kullanan uygulamalar erişimini hemen kaybeder.",
       regenerateAction: "Yeniden oluştur",
       regenerating: "Yeniden oluşturuluyor...",
       regenerateError: "Erişim tokenı yeniden oluşturulamadı.",
       revokeTitle: "“{name}” erişim tokenı iptal edilsin mi?",
-      revokeDescription:
-        "Bu tokenı kullanan uygulamalar erişimini hemen kaybeder. Bu işlem geri alınamaz.",
+      revokeDescription: "Bu tokenı kullanan uygulamalar erişimini hemen kaybeder. Bu işlem geri alınamaz.",
       revokeAction: "“{name}” tokenını iptal et",
       revoking: "İptal ediliyor...",
       audioApi: {
         title: "Ses API'si",
-        description:
-          "Konuşma, ses klonlama, yazıya dökme ve Ses sayfası iş akışları.",
+        description: "Konuşma, ses klonlama, yazıya dökme ve Ses sayfası iş akışları.",
         speak: "Konuş",
         clone: "Klonla",
         transcribe: "Yazıya dök",
@@ -3953,51 +3469,38 @@ export const tr = {
         convert: "Dönüştür",
         music: "Müzik",
         edit: "Düzenle",
-        placeholderModel:
-          "İndirilmiş hiçbir model henüz bu örneği çalıştıramıyor, bu nedenle gösterilen model yer tutucudur. Önce Ses sayfasından bir model indirin.",
-        autoSwitchOff:
-          "Model, adıyla yalnızca Model otomatik geçişi açıkken yüklenir. Bunu açın veya önce modeli kendi Ses sayfasında yükleyin.",
+        placeholderModel: "İndirilmiş hiçbir model henüz bu örneği çalıştıramıyor, bu nedenle gösterilen model yer tutucudur. Önce Ses sayfasından bir model indirin.",
+        autoSwitchOff: "Model, adıyla yalnızca Model otomatik geçişi açıkken yüklenir. Bunu açın veya önce modeli kendi Ses sayfasında yükleyin.",
         useViaApi: "API üzerinden kullan",
       },
       mediaApi: {
         title: "Görüntü / Video API'si",
-        description:
-          "OpenAI uyumlu uç noktalarla kendi kodunuzdan görüntü ve video oluşturun.",
+        description: "OpenAI uyumlu uç noktalarla kendi kodunuzdan görüntü ve video oluşturun.",
         images: "Görüntüler",
         video: "Video",
-        placeholderModel:
-          "Gösterilen model bir örnektir. Doldurmak için Görüntüler veya Video sayfasında bir model yükleyin ve bunu oradaki API düğmesinden açın.",
-        autoSwitchOff:
-          "Medya otomatik geçişi kapalı; bu nedenle istekler, hangi modeli belirtirse belirtsin sayfanın yüklediği modelde çalışır.",
+        placeholderModel: "Gösterilen model bir örnektir. Doldurmak için Görüntüler veya Video sayfasında bir model yükleyin ve bunu oradaki API düğmesinden açın.",
+        autoSwitchOff: "Medya otomatik geçişi kapalı; bu nedenle istekler, hangi modeli belirtirse belirtsin sayfanın yüklediği modelde çalışır.",
       },
       trainingApi: {
         title: "Eğitim API'si",
-        description:
-          "OpenAI uyumlu ince ayar uç noktalarıyla kendi kodunuzdan modellere ince ayar yapın: bir JSONL dosyası yükleyin, bir iş oluşturun, olaylarını takip edin, ardından eğitilen modelle sohbet edin.",
-        placeholder:
-          "Gösterilen model ve ayarlar bir örnektir. Mevcut kurulumunuzu doldurmak için bunu Eğitim sayfasındaki API düğmesinden açın.",
-        hubDataset:
-          "Eğitim sayfanız bir Hugging Face veya S3 veri kümesi kullanıyor. API yüklenen dosyalarla eğitim yapar; bu nedenle veri kümesini JSONL olarak kaydedip onu yükleyin.",
-        batching:
-          "Kuyrukta bekleyen uyumlu işler otomatik olarak birlikte eğitilir.",
-        chatNote:
-          "Eğitilen modelle adıyla sohbet etmek için Model otomatik geçişinin açık olması gerekir; ya da modeli önce Sohbet sayfasında yükleyin.",
+        description: "OpenAI uyumlu ince ayar uç noktalarıyla kendi kodunuzdan modellere ince ayar yapın: bir JSONL dosyası yükleyin, bir iş oluşturun, olaylarını takip edin, ardından eğitilen modelle sohbet edin.",
+        placeholder: "Gösterilen model ve ayarlar bir örnektir. Mevcut kurulumunuzu doldurmak için bunu Eğitim sayfasındaki API düğmesinden açın.",
+        hubDataset: "Eğitim sayfanız bir Hugging Face veya S3 veri kümesi kullanıyor. API yüklenen dosyalarla eğitim yapar; bu nedenle veri kümesini JSONL olarak kaydedip onu yükleyin.",
+        batching: "Kuyrukta bekleyen uyumlu işler otomatik olarak birlikte eğitilir.",
+        chatNote: "Eğitilen modelle adıyla sohbet etmek için Model otomatik geçişinin açık olması gerekir; ya da modeli önce Sohbet sayfasında yükleyin.",
         cancelTitle: "Bir işi iptal et",
-        cancelDescription:
-          "Kuyruktaki veya çalışan bir işi durdurur. Yukarıdaki örneğin parçası değildir.",
+        cancelDescription: "Kuyruktaki veya çalışan bir işi durdurur. Yukarıdaki örneğin parçası değildir.",
       },
       decisionApi: {
         title: "Karar API'si",
         docs: "Belgeler",
         docsLabel: "Karar API'si belgelerini aç",
-        description:
-          "Bu makinedeki bir modelle veya Bağlantılar'daki bir karar modeliyle metin hakkında evet/hayır, çoktan seçmeli ve puanlama sorularını yanıtlayın. TypeSafe SDK ile çalışır.",
+        description: "Bu makinedeki bir modelle veya Bağlantılar'daki bir karar modeliyle metin hakkında evet/hayır, çoktan seçmeli ve puanlama sorularını yanıtlayın. TypeSafe SDK ile çalışır.",
         codeTitle: "Koddan çağır",
         mcpUrl: "MCP URL",
         mcpUrlDescription: "Diğer MCP istemcileri buraya aynı belirteçle bağlanır.",
         enable: "İstekleri sun",
-        enableDescription:
-          "/v1/systemone uç noktasını sunar. Açıldığında model indirilir.",
+        enableDescription: "/v1/systemone uç noktasını sunar. Açıldığında model indirilir.",
         enableRemoteDescription: "/v1/systemone uç noktasını sunar.",
         lockedByEnv: "{name} tarafından ayarlandı.",
         model: "Model",
@@ -4009,16 +3512,13 @@ export const tr = {
         modelClef: "Clef",
         recommended: "Önerilen",
         device: "Çalıştırma yeri",
-        deviceDescription:
-          "GPU daha hızlı yanıt verir ve model bellekten kaldırıldığında belleğini boşaltır.",
+        deviceDescription: "GPU daha hızlı yanıt verir ve model bellekten kaldırıldığında belleğini boşaltır.",
         deviceCpu: "CPU",
         deviceGpu: "GPU",
         backend: "Çalışma zamanı",
         backendAuto: "Otomatik",
-        backendDescription:
-          "Otomatik seçeneği, modelin GGUF derlemesi varsa Clef'i llama.cpp üzerinden sunar, yoksa PyTorch'a geri döner. llama.cpp görüntüleri de okur.",
-        backendDescriptionMlx:
-          "Otomatik seçeneği, Clef'i Apple Silicon'da MLX üzerinden, yalnızca modelin GGUF derlemesi yüklü veya indirilmiş olduğunda ise llama.cpp üzerinden sunar. MLX görüntüleri yalnızca Clef modelleri için okur. llama.cpp görüntüleri de okur.",
+        backendDescription: "Otomatik seçeneği, modelin GGUF derlemesi varsa Clef'i llama.cpp üzerinden sunar, yoksa PyTorch'a geri döner. llama.cpp görüntüleri de okur.",
+        backendDescriptionMlx: "Otomatik seçeneği, Clef'i Apple Silicon'da MLX üzerinden, yalnızca modelin GGUF derlemesi yüklü veya indirilmiş olduğunda ise llama.cpp üzerinden sunar. MLX görüntüleri yalnızca Clef modelleri için okur. llama.cpp görüntüleri de okur.",
         backendStatus: "Çalışma zamanı: {backend}",
         backendNone: "kullanılamıyor",
         mediaImages: "Metin ve görüntü okur.",
@@ -4034,36 +3534,30 @@ export const tr = {
         download: "İndir",
         downloadConfirmTitle: "Laya {model} indirilsin mi?",
         downloadConfirmTitleModel: "{model} indirilsin mi?",
-        downloadConfirmBody:
-          "Karar API'sinin istekleri yanıtlayabilmesi için bu model gerekir. Yaklaşık {size}; Hugging Face önbelleğinize bir kez indirilir.",
+        downloadConfirmBody: "Karar API'sinin istekleri yanıtlayabilmesi için bu model gerekir. Yaklaşık {size}; Hugging Face önbelleğinize bir kez indirilir.",
         unload: "Bellekten kaldır",
         downloadBusy: "Bir Karar API'si modeli zaten indiriliyor.",
         downloadFailed: "İndirme başlatılamadı.",
         saveFailed: "Karar API'si ayarı kaydedilemedi.",
         loadError: "Karar API'si ayarları yüklenemedi.",
         sendsTo: "İstekler şuraya gönderilir: {provider}.",
-        connectionMissing:
-          "Bu bağlantı artık yok veya hiç karar modeli içermiyor. Başka bir model seçin.",
+        connectionMissing: "Bu bağlantı artık yok veya hiç karar modeli içermiyor. Başka bir model seçin.",
         addConnection: "Bulutta barındırılan bir karar modeli kullanmak için ",
         connectionsLink: "Bağlantılar",
         addConnectionSuffix: " bölümünden bir tane ekleyin.",
       },
       mcp: {
         title: "Ajan erişimi (MCP)",
-        description:
-          "Claude Code ve Codex gibi kodlama ajanlarının Unsloth'u MCP üzerinden kullanmasına izin verin.",
+        description: "Claude Code ve Codex gibi kodlama ajanlarının Unsloth'u MCP üzerinden kullanmasına izin verin.",
         enable: "Ajan bağlantılarına izin ver",
-        enableDescription:
-          "/mcp/ uç noktasını Unsloth API anahtarı taşıyan isteklere sunar.",
+        enableDescription: "/mcp/ uç noktasını Unsloth API anahtarı taşıyan isteklere sunar.",
         lockedByEnv: "{name} tarafından ayarlandı.",
         loadError: "Ajan erişimi ayarları yüklenemedi.",
         saveError: "Ajan erişimi ayarı kaydedilemedi.",
         agent: "Ajan",
-        exportKeyHint:
-          "Ajanı başlatmadan önce {name} değişkenini bir Unsloth API anahtarına ayarlayın.",
+        exportKeyHint: "Ajanı başlatmadan önce {name} değişkenini bir Unsloth API anahtarına ayarlayın.",
         configFileHint: "Bunu şu dosyaya ekleyin: {path}",
-        keywords:
-          "mcp model context protocol model bağlam protokolü ajanlar agents claude codex araçlar tools",
+        keywords: "mcp model context protocol model bağlam protokolü ajanlar agents claude codex araçlar tools",
       },
     },
     mcp: {
@@ -4078,8 +3572,7 @@ export const tr = {
         allTools: "Tüm araçlar",
         selectAll: "Tümünü seç",
         selectNone: "Hiçbirini seçme",
-        description:
-          "Açık bıraktığın her araç, ajanların başlamadan önce okuduğu şeye eklenir, bu yüzden ihtiyacın olmayanları kapat. Ajanlar kapalı bir aracı asla görmez ve ona yapılan çağrılar reddedilir. Zaten bağlı olan ajanlar değişikliği yeniden bağlandıklarında görür.",
+        description: "Açık bıraktığın her araç, ajanların başlamadan önce okuduğu şeye eklenir, bu yüzden ihtiyacın olmayanları kapat. Ajanlar kapalı bir aracı asla görmez ve ona yapılan çağrılar reddedilir. Zaten bağlı olan ajanlar değişikliği yeniden bağlandıklarında görür.",
         saveError: "Unsloth MCP araç ayarı kaydedilemedi.",
         chatNote: "Sohbet hiçbir zaman {tools} almaz.",
         groups: {
@@ -4151,8 +3644,7 @@ export const tr = {
     },
     about: {
       title: "Hakkında",
-      description:
-        "Belgeler, sürüm notları, geri bildirim ve derleme bilgileri.",
+      description: "Belgeler, sürüm notları, geri bildirim ve derleme bilgileri.",
       studioVersion: "Unsloth Sürümü",
       packageVersion: "Paket Sürümü",
       desktopAppVersion: "Masaüstü Uygulaması Sürümü",
@@ -4165,8 +3657,7 @@ export const tr = {
       whisperCppVersion: "whisper.cpp Sürümü",
       engines: {
         title: "Motorlar",
-        description:
-          "Unsloth'un modelleri çalıştırmak için kullandığı çalışma zamanları. Güncellemeler arka planda, yeniden başlatma gerekmeden kurulur.",
+        description: "Unsloth'un modelleri çalıştırmak için kullandığı çalışma zamanları. Güncellemeler arka planda, yeniden başlatma gerekmeden kurulur.",
         updatesLabel: "Motor güncellemeleri",
         notInstalled: "Kurulu değil",
         available: "{version} kullanılabilir",
@@ -4205,8 +3696,7 @@ export const tr = {
       },
       dangerZone: "Tehlikeli bölge",
       shutDownStudio: "Unsloth'u kapat",
-      shutDownStudioDescription:
-        "Unsloth sunucusunu durdurur ve oturumunuzu sonlandırır.",
+      shutDownStudioDescription: "Unsloth sunucusunu durdurur ve oturumunuzu sonlandırır.",
       shutDown: "Kapat",
       update: {
         title: "Unsloth'u güncelle",
@@ -4220,45 +3710,33 @@ export const tr = {
         localUpdateHeading: "Yerel güncelleme",
         installCommandUnix: "macOS/Linux kurulum komutu",
         installCommandWindows: "Windows kurulum komutu",
-        localInstallDetected:
-          "Yerel kurulum algılandı. PyPI sürümüyle değiştirilmemesi için orijinal checkout'unuzdan güncelleyin.",
-        pullThenUpdate:
-          "En son değişiklikleri çekin, ardından yerel yükleyiciyi çalıştırın:",
+        localInstallDetected: "Yerel kurulum algılandı. PyPI sürümüyle değiştirilmemesi için orijinal checkout'unuzdan güncelleyin.",
+        pullThenUpdate: "En son değişiklikleri çekin, ardından yerel yükleyiciyi çalıştırın:",
         gitPullCommand: "git pull komutu",
         localInstallerCommand: "yerel yükleyici komutu",
-        sourceInstallDetected:
-          "Kaynak veya VCS paketi kurulumu algılandı. Orijinal yerel yoldan veya Git URL'sinden yeniden kurun.",
-        repoCheckoutFallback:
-          "Depo checkout'u hâlâ duruyorsa yerel yükleyiciyi oradan çalıştırın:",
+        sourceInstallDetected: "Kaynak veya VCS paketi kurulumu algılandı. Orijinal yerel yoldan veya Git URL'sinden yeniden kurun.",
+        repoCheckoutFallback: "Depo checkout'u hâlâ duruyorsa yerel yükleyiciyi oradan çalıştırın:",
         restartAfterUpdate: "Güncellemeden sonra Unsloth'u yeniden başlatın.",
         desktopReady: "Masaüstü uygulaması güncellemeleri",
-        desktopReadyDescription:
-          "Daha yeni bir masaüstü uygulaması sürümü olup olmadığını denetleyin.",
+        desktopReadyDescription: "Daha yeni bir masaüstü uygulaması sürümü olup olmadığını denetleyin.",
         desktopChecking: "Güncellemeler denetleniyor",
         desktopCheckingDescription: "Bu genellikle birkaç saniye sürer.",
         desktopAvailable: "Masaüstü uygulaması {version} kullanılabilir",
-        desktopAvailableDescription:
-          "Şimdi güncelleyin; işlem bittiğinde masaüstü uygulaması yeniden başlar.",
-        desktopExternalServer:
-          "Bu uygulamanın başlatmadığı, {port} numaralı bağlantı noktasındaki bir Unsloth sunucusuna bağlı; örneğin bir terminaldeki `unsloth studio`. Güncellemek için sunucuyu başlatıldığı yerden durdurun, ardından uygulamadan çıkıp yeniden açın.",
-        desktopManualInstall:
-          "En son Linux paketini kurmak için sürüm sayfasını açın.",
+        desktopAvailableDescription: "Şimdi güncelleyin; işlem bittiğinde masaüstü uygulaması yeniden başlar.",
+        desktopExternalServer: "Bu uygulamanın başlatmadığı, {port} numaralı bağlantı noktasındaki bir Unsloth sunucusuna bağlı; örneğin bir terminaldeki `unsloth studio`. Güncellemek için sunucuyu başlatıldığı yerden durdurun, ardından uygulamadan çıkıp yeniden açın.",
+        desktopManualInstall: "En son Linux paketini kurmak için sürüm sayfasını açın.",
         desktopCheckFailed: "Güncellemeler denetlenemedi",
-        desktopCheckFailedDescription:
-          "Bağlantınızı kontrol edip yeniden deneyin.",
+        desktopCheckFailedDescription: "Bağlantınızı kontrol edip yeniden deneyin.",
         desktopCurrent: "Masaüstü uygulaması güncel",
-        desktopCurrentDescription:
-          "Unsloth otomatik olarak denetlemeye devam edecek.",
+        desktopCurrentDescription: "Unsloth otomatik olarak denetlemeye devam edecek.",
         checkForUpdates: "Güncellemeleri denetle",
         checkAgain: "Yeniden denetle",
         retryCheck: "Yeniden dene",
         checking: "Denetleniyor...",
         updateNow: "Şimdi güncelle",
         openReleasePage: "Sürüm sayfasını aç",
-        unknownInstall:
-          "Unsloth'un nasıl kurulduğu algılanamadı. Yükleyici veya PyPI kurulumları için yukarıdaki komutları kullanın.",
-        localCheckout:
-          "Yerel checkout kurulumlarında yerel yükleyiciyi o checkout'tan çalıştırın:",
+        unknownInstall: "Unsloth'un nasıl kurulduğu algılanamadı. Yükleyici veya PyPI kurulumları için yukarıdaki komutları kullanın.",
+        localCheckout: "Yerel checkout kurulumlarında yerel yükleyiciyi o checkout'tan çalıştırın:",
         docs: "Kurulum belgeleri:",
         docsInstall: "Kurulum",
         docsUpdating: "Güncelleme",
@@ -4272,8 +3750,7 @@ export const tr = {
   },
   studio: {
     routeTitle: "Eğitim",
-    cpuTrainingNotice:
-      "GPU bulunamadı, bu nedenle eğitim CPU üzerinde çalışır. GPU eğitiminden çok daha yavaştır ve yalnızca metin modellerini destekler (LoRA veya tam ince ayar).",
+    cpuTrainingNotice: "GPU bulunamadı, bu nedenle eğitim CPU üzerinde çalışır. GPU eğitiminden çok daha yavaştır ve yalnızca metin modellerini destekler (LoRA veya tam ince ayar).",
     wizard: {
       modelTitle: "Model",
       modelDescription: "Model ve eğitim yöntemini seçin",
@@ -4286,21 +3763,16 @@ export const tr = {
       modelLabel: "Model",
       modelTooltip: "İnce ayar yapmak istediğiniz temel model.",
       methodLabel: "Yöntem",
-      methodTooltip:
-        "Modelin nasıl eğitileceği. LoRA ve QLoRA tüm ağırlıklar yerine küçük adaptörleri günceller.",
+      methodTooltip: "Modelin nasıl eğitileceği. LoRA ve QLoRA tüm ağırlıklar yerine küçük adaptörleri günceller.",
       trainAsLabel: "Eğitim türü",
-      trainAsTooltip:
-        "Dil modeli metin yazar. Karar modeli, verdiğiniz seçeneklerden birini bir olasılıkla seçer ve Karar API'sinde çalışır.",
+      trainAsTooltip: "Dil modeli metin yazar. Karar modeli, verdiğiniz seçeneklerden birini bir olasılıkla seçer ve Karar API'sinde çalışır.",
       trainAsLanguage: "Dil modeli",
       trainAsDecision: "Karar modeli",
       checkpointLabel: "Kontrol noktası",
-      checkpointTooltip:
-        "İnce ayar yapılacak Laya kontrol noktası. Çok dilli seçenek çoğu veri kümesine uygundur.",
+      checkpointTooltip: "İnce ayar yapılacak Laya kontrol noktası. Çok dilli seçenek çoğu veri kümesine uygundur.",
       datasetLabel: "Veri kümesi",
-      datasetTooltip:
-        "Modele ince ayar yapmak için kullanılan eğitim verileri.",
-      hfTokenDescription:
-        "Erişimi kısıtlı veya özel modeller ve veri kümeleri için gereklidir.",
+      datasetTooltip: "Modele ince ayar yapmak için kullanılan eğitim verileri.",
+      hfTokenDescription: "Erişimi kısıtlı veya özel modeller ve veri kümeleri için gereklidir.",
       uploadLocalLabel: "Yerel dosya yükle",
       sourceBrowse: "Gözat",
       releaseToUpload: "Yüklemek için bırakın",
@@ -4308,11 +3780,9 @@ export const tr = {
       saveYaml: "YAML kaydet",
       resetDefaults: "Varsayılanlara sıfırla",
       cachedModelGoneTitle: "Önbellekteki model artık kullanılamıyor",
-      cachedModelGoneDescription:
-        "Model dosyaları artık bu cihazda değil, bu nedenle eğitim bunları yeniden indirecek.",
+      cachedModelGoneDescription: "Model dosyaları artık bu cihazda değil, bu nedenle eğitim bunları yeniden indirecek.",
       cachedDatasetGoneTitle: "Önbellekteki veri kümesi artık kullanılamıyor",
-      cachedDatasetGoneDescription:
-        "Veri kümesi dosyaları artık bu cihazda değil, bu nedenle eğitim bunları yeniden indirecek.",
+      cachedDatasetGoneDescription: "Veri kümesi dosyaları artık bu cihazda değil, bu nedenle eğitim bunları yeniden indirecek.",
     },
     preview: {
       title: "Çalıştırma önizlemesi",
@@ -4348,23 +3818,17 @@ export const tr = {
       dataset: "Veri kümesi",
       downloadsOnStart: "Başlangıçta indirilir",
       continuesOnStart: "Başlangıçta devam eder",
-      noticeModelDownload:
-        "Bu model henüz bu cihazda değil. Eğitim modeli otomatik olarak indirecek.",
-      noticeModelPartial:
-        "Eğitim, modeli yüklemeden önce yarım kalan model indirmesini tamamlayacak.",
-      noticeDatasetDownload:
-        "Bu veri kümesi henüz bu cihazda değil. Eğitim veri kümesini otomatik olarak indirecek.",
-      noticeDatasetPartial:
-        "Eğitim, veri kümesini okumadan önce yarım kalan veri kümesi indirmesini tamamlayacak.",
-      noticeTransformersUpgrade:
-        "Kurulu hiçbir transformers sürümü henüz bu mimariyi desteklemiyor. Çalıştırmayı başlattığınızda önce transformers {version} sürümünü kurmanız önerilir.",
-      noticeSixteenBitOnly:
-        "Bu mimari 16-bit LoRA ile eğitilir: 4-bit kullanılamadığı için çalıştırma QLoRA'dan çok daha fazla VRAM gerektirir.",
-      noticeInstallSwitchesSixteenBit:
-        "Modelin kendi kodunu korumak yerine bu sürümü kurmak, bu çalıştırmayı QLoRA'dan çok daha fazla VRAM gerektiren 16-bit LoRA'ya geçirir.",
+      noticeModelDownload: "Bu model henüz bu cihazda değil. Eğitim modeli otomatik olarak indirecek.",
+      noticeModelPartial: "Eğitim, modeli yüklemeden önce yarım kalan model indirmesini tamamlayacak.",
+      noticeDatasetDownload: "Bu veri kümesi henüz bu cihazda değil. Eğitim veri kümesini otomatik olarak indirecek.",
+      noticeDatasetPartial: "Eğitim, veri kümesini okumadan önce yarım kalan veri kümesi indirmesini tamamlayacak.",
+      noticeTransformersUpgrade: "Kurulu hiçbir transformers sürümü henüz bu mimariyi desteklemiyor. Çalıştırmayı başlattığınızda önce transformers {version} sürümünü kurmanız önerilir.",
+      noticeSixteenBitOnly: "Bu mimari 16-bit LoRA ile eğitilir: 4-bit kullanılamadığı için çalıştırma QLoRA'dan çok daha fazla VRAM gerektirir.",
+      noticeInstallSwitchesSixteenBit: "Modelin kendi kodunu korumak yerine bu sürümü kurmak, bu çalıştırmayı QLoRA'dan çok daha fazla VRAM gerektiren 16-bit LoRA'ya geçirir.",
       advancedSettings: "Gelişmiş ayarlar",
       defaultAdvancedSettings: "Varsayılanlar",
       nonDefaultAdvancedSettings: "{count} varsayılan dışı",
+      cpuWorkspace: "CPU workspace: Chat, CoRA/QLoRA training, Export and Merge run here. Images and Video need a GPU.",
     },
     datasetPicker: {
       noun: "veri kümesi",
@@ -4376,18 +3840,15 @@ export const tr = {
       scanningLocal: "Bu cihazdaki veri kümeleri taranıyor…",
       couldntScan: "Yerel veri kümeleri taranamadı",
       someLocationsUnscanned: "Bazı veri kümesi konumları taranamadı.",
-      noLocalDatasets:
-        "Bu cihazda henüz bir şey yok. Hub'dan bir veri kümesi indirin, Tarifler'de bir tane oluşturun veya bir dosya yükleyin.",
+      noLocalDatasets: "Bu cihazda henüz bir şey yok. Hub'dan bir veri kümesi indirin, Tarifler'de bir tane oluşturun veya bir dosya yükleyin.",
       openDataRecipes: "Veri Tarifleri'ni aç",
       searchingHub: "Hugging Face'te aranıyor…",
       noDatasetsFound: "Veri kümesi bulunamadı.",
       tokenRejectedTitle: "Hugging Face tokenı reddedildi",
-      tokenRejectedBody:
-        "Tokenınızı Ayarlar → Genel bölümünden güncelleyip yeniden deneyin.",
+      tokenRejectedBody: "Tokenınızı Ayarlar → Genel bölümünden güncelleyip yeniden deneyin.",
       hubUnreachable: "Hugging Face'e ulaşılamadı",
       cantUseDataset: "Veri kümesi kullanılamıyor",
-      reasonInvalidHubId:
-        "Geçerli bir Hugging Face veri kümesi kimliği girin: repo veya owner/repo; art arda nokta veya kısa çizgi ve .git soneki olmadan (her bölüm en fazla 96 karakter).",
+      reasonInvalidHubId: "Geçerli bir Hugging Face veri kümesi kimliği girin: repo veya owner/repo; art arda nokta veya kısa çizgi ve .git soneki olmadan (her bölüm en fazla 96 karakter).",
       sourceRecipe: "Tarif",
       sourceUpload: "Yükleme",
       sourceLocal: "Yerel",
@@ -4396,8 +3857,7 @@ export const tr = {
       noun: "model",
       selectModel: "Model seç",
       hubPlaceholder: "Arayın veya bir Hugging Face kimliği yapıştırın...",
-      devicePlaceholder:
-        "Yerel modellerde arayın veya bir klasör yolu yapıştırın...",
+      devicePlaceholder: "Yerel modellerde arayın veya bir klasör yolu yapıştırın...",
       useAsHubModel: "Hugging Face modeli olarak kullan",
       useAsLocalPath: "Yerel yol olarak kullan",
       hfCacheLabel: "HF önbelleği",
@@ -4405,27 +3865,21 @@ export const tr = {
       couldntScan: "Yerel modeller taranamadı",
       someLocationsUnscanned: "Bazı yerel konumlar taranamadı.",
       noLocalModels: "Yerel model bulunamadı.",
-      noLocalModelsHint:
-        "Yukarıya bir klasör yolu yapıştırın veya Hugging Face'e geçin.",
+      noLocalModelsHint: "Yukarıya bir klasör yolu yapıştırın veya Hugging Face'e geçin.",
       searchingHub: "Hugging Face'te aranıyor…",
       noModelsFound: "Model bulunamadı.",
       tokenRejectedTitle: "Hugging Face tokenı reddedildi",
-      tokenRejectedBody:
-        "Tokenınızı Ayarlar → Genel bölümünden güncelleyip yeniden deneyin.",
-      tokenRejectedAnonymousBody:
-        "Herkese açık modeller token olmadan gösterilir. Özel ve erişimi kısıtlı modellere ulaşmak için tokenınızı Ayarlar → Genel bölümünden güncelleyin.",
+      tokenRejectedBody: "Tokenınızı Ayarlar → Genel bölümünden güncelleyip yeniden deneyin.",
+      tokenRejectedAnonymousBody: "Herkese açık modeller token olmadan gösterilir. Özel ve erişimi kısıtlı modellere ulaşmak için tokenınızı Ayarlar → Genel bölümünden güncelleyin.",
       hubUnreachable: "Hugging Face'e ulaşılamadı",
       cantUseModel: "Model eğitim için kullanılamıyor",
-      reasonTypeMismatch:
-        "Bu model, önceki adımda seçilen eğitim türüyle eşleşmiyor.",
+      reasonTypeMismatch: "Bu model, önceki adımda seçilen eğitim türüyle eşleşmiyor.",
       reasonEmptyId: "Bir model kimliği veya yerel model yolu girin.",
       reasonGguf: "GGUF modelleri eğitim için kullanılamaz.",
-      reasonAdapter:
-        "Adaptör çıktıları temel eğitim modeli olarak kullanılamaz.",
+      reasonAdapter: "Adaptör çıktıları temel eğitim modeli olarak kullanılamaz.",
       reasonNotTrainable: "Bu cihazdaki model eğitilemez.",
       reasonUnsupportedFormat: "Bu model biçimi eğitim için desteklenmiyor.",
-      reasonInvalidHubId:
-        "Geçerli bir Hugging Face model kimliği girin: repo veya owner/repo; art arda nokta veya kısa çizgi ve .git soneki olmadan (her bölüm en fazla 96 karakter).",
+      reasonInvalidHubId: "Geçerli bir Hugging Face model kimliği girin: repo veya owner/repo; art arda nokta veya kısa çizgi ve .git soneki olmadan (her bölüm en fazla 96 karakter).",
       sourceModelsFolder: "Modeller klasörü",
       sourceHfCache: "HF önbelleği",
       sourceLmStudio: "LM Studio",
@@ -4460,17 +3914,29 @@ export const tr = {
         hint: "Yeni alanlar veya diller için sürekli ön eğitim.",
         note: "sürekli",
       },
+      cora: {
+        label: "CoRA (CPU)",
+        hint: "CPU-first LoRA: plain LoRA at 1k context (4-bit base with LoftQ on a GPU), QAT and layer-wise LRs.",
+        note: "CPU",
+      },
+      rl: {
+        label: "Policy Alignment / RL",
+        hint: "DPO or GRPO: shape behaviour with preferences or reward scores.",
+        note: "RL",
+      },
     },
     subtitles: {
       configure: "Yapılandırın ve eğitimi başlatın",
       trainingInProgress: "Eğitim sürüyor",
       viewPastRuns: "Geçmiş eğitim çalıştırmalarını görüntüleyin",
       viewingPastRun: "Geçmiş çalıştırma görüntüleniyor",
+      compare: "Compare saved runs side by side",
     },
     tabs: {
       configure: "Yapılandır",
       currentRun: "Geçerli Çalıştırma",
       history: "Geçmiş",
+      compare: "Compare",
     },
     goToLibrary: "Kitaplığa git",
     imageTraining: "Görüntü eğitimi",
@@ -4481,20 +3947,17 @@ export const tr = {
     dataset: {
       selectors: {
         subset: "Alt küme",
-        subsetTooltip:
-          "Veri kümesinin hangi alt kümesinin (yapılandırmasının) kullanılacağını seçin.",
+        subsetTooltip: "Veri kümesinin hangi alt kümesinin (yapılandırmasının) kullanılacağını seçin.",
         trainSplit: "Eğitim Bölümü",
         trainSplitTooltip: "Eğitim için hangi bölümün kullanılacağını seçin.",
         evaluationSplit: "Değerlendirme Bölümü",
-        evaluationSplitTooltip:
-          "Değerlendirme için hangi bölümün kullanılacağını seçin. Yok, eğitim sırasında değerlendirme yapılmayacağı anlamına gelir.",
+        evaluationSplitTooltip: "Değerlendirme için hangi bölümün kullanılacağını seçin. Yok, eğitim sırasında değerlendirme yapılmayacağı anlamına gelir.",
         selectSubset: "Bir alt küme seçin...",
         selectSplit: "Bir bölüm seçin...",
         none: "Yok",
         loading: "Veri kümesi yapılandırmaları ve bölümleri yükleniyor...",
         manualTitle: "Veri kümesi seçeneklerini elle girin",
-        manualDescription:
-          "Kullanılacak Hugging Face yapılandırma ve bölüm adlarını tam olarak girin.",
+        manualDescription: "Kullanılacak Hugging Face yapılandırma ve bölüm adlarını tam olarak girin.",
         manualSubsetPlaceholder: "İsteğe bağlı yapılandırma adı",
         manualRequired: "Bir eğitim bölümü gereklidir.",
         manualTooLong: "En fazla 128 karakter kullanın.",
@@ -4514,86 +3977,65 @@ export const tr = {
       uploading: "Yükleniyor...",
       uploadEvalFile: "Değerlendirme dosyası yükle",
       fileTooLarge: "Dosya çok büyük",
-      fileTooLargeDescription:
-        "{file} dosyasının boyutu {size}. Eğitim yüklemeleri en fazla {limit} destekler.",
+      fileTooLargeDescription: "{file} dosyasının boyutu {size}. Eğitim yüklemeleri en fazla {limit} destekler.",
       documentRedirect: {
         title: "Bu dosyanın önce dönüştürülmesi gerekiyor",
         genericFile: "Bu dosya",
-        description:
-          "{file} eğitime hazır bir veri kümesi değil, kaynak materyaldir. Belgeyi bir veri kümesine dönüştürmek için Veri Tarifleri'ni kullanın, ardından ince ayar yapmak için buraya dönün.",
+        description: "{file} eğitime hazır bir veri kümesi değil, kaynak materyaldir. Belgeyi bir veri kümesine dönüştürmek için Veri Tarifleri'ni kullanın, ardından ince ayar yapmak için buraya dönün.",
         nextStepTitle: "En iyi sonraki adım",
-        nextStepDescription:
-          "Öğrenme Tarifleri'ni açın ve PDF grounded QA gibi belge tabanlı bir tarifle başlayın.",
+        nextStepDescription: "Öğrenme Tarifleri'ni açın ve PDF grounded QA gibi belge tabanlı bir tarifle başlayın.",
         openAction: "Öğrenme Tarifleri'ni aç",
       },
-      evalDatasetDescription:
-        "İsteğe bağlı. Belirtilmezse eğitim verilerinden küçük bir bölüm ayrılır.",
+      evalDatasetDescription: "İsteğe bağlı. Belirtilmezse eğitim verilerinden küçük bir bölüm ayrılır.",
       advanced: "Gelişmiş",
       targetFormat: "Hedef Biçim",
-      targetFormatTooltip:
-        "Eğitim verilerinizin biçimi. Otomatik algılama çoğu veri kümesinde işe yarar.",
+      targetFormatTooltip: "Eğitim verilerinizin biçimi. Otomatik algılama çoğu veri kümesinde işe yarar.",
       streamingInfoAriaLabel: "Veri kümesi akış bilgileri",
       streaming: {
         label: "Akışı etkinleştir",
-        description:
-          "Hugging Face metin veri kümelerini indirmek yerine akış olarak alın.",
+        description: "Hugging Face metin veri kümelerini indirmek yerine akış olarak alın.",
         unavailable: "Akış kullanılamıyor. Etkinleştirmek için:",
         completionsUnavailable: "Veri kümesi akışı etkinken kullanılamaz.",
         blockers: {
-          source:
-            "Bir Hugging Face veri kümesi kullanın (yerel yükleme veya S3 kaynağı değil).",
-          maxSteps:
-            "Maksimum Adım değerini 0'dan büyük ayarlayın — akış veri kümelerinin uzunluğu bilinmez.",
-          trainOnCompletions:
-            "“Yalnızca asistan yanıtları” seçeneğini kapatın.",
-          evalSplit:
-            "Ayrı bir değerlendirme bölümü seçin — değerlendirme açık ancak ayrı bir değerlendirme bölümü ayarlanmamış.",
+          source: "Bir Hugging Face veri kümesi kullanın (yerel yükleme veya S3 kaynağı değil).",
+          maxSteps: "Maksimum Adım değerini 0'dan büyük ayarlayın — akış veri kümelerinin uzunluğu bilinmez.",
+          trainOnCompletions: "“Yalnızca asistan yanıtları” seçeneğini kapatın.",
+          evalSplit: "Ayrı bir değerlendirme bölümü seçin — değerlendirme açık ancak ayrı bir değerlendirme bölümü ayarlanmamış.",
           visionModel: "Görüntü modelleri akışı desteklemez.",
           audioModel: "Ses modelleri akışı desteklemez.",
-          embeddingModel:
-            "Gömme modelleri akışı desteklemez (eğitim için veri kümesinin tamamı gerekir).",
-          imageDataset:
-            "Bu veri kümesi görüntülerden oluşuyor gibi görünüyor; görüntüler akış olarak alınamaz.",
-          audioDataset:
-            "Bu veri kümesi seslerden oluşuyor gibi görünüyor; sesler akış olarak alınamaz.",
+          embeddingModel: "Gömme modelleri akışı desteklemez (eğitim için veri kümesinin tamamı gerekir).",
+          imageDataset: "Bu veri kümesi görüntülerden oluşuyor gibi görünüyor; görüntüler akış olarak alınamaz.",
+          audioDataset: "Bu veri kümesi seslerden oluşuyor gibi görünüyor; sesler akış olarak alınamaz.",
+          appleSilicon: "Streaming isn't supported on Apple Silicon (MLX) yet.",
         },
         options: {
           trainOnCompletions: "yalnızca asistan yanıtları",
           evaluation: "değerlendirme (ayrı bir değerlendirme bölümü gerekir)",
         },
         notifications: {
-          turnedOffMaxSteps:
-            "Akış kapatıldı: akış için 0'dan büyük sabit bir Maksimum Adım değeri gerekir.",
-          adjusted:
-            "Akış için ayarlandı. Uyumsuz seçenekler devre dışı bırakıldı: {options}.",
-          needsMaxSteps:
-            "Akış için sabit bir Maksimum Adım değeri gerekir (akış veri kümelerinin uzunluğu bilinmez). Önce Maksimum Adım değerini 0'dan büyük ayarlayın.",
-          enabledAdjusted:
-            "Akış etkinleştirildi. Uyumsuz seçenekler devre dışı bırakıldı: {options}.",
-          disabledForDetectedModality:
-            "Görüntü ve ses veri kümelerinin tamamen indirilmesi gerektiğinden akış kapatıldı. Ayarı gözden geçirip yeniden başlatın.",
+          turnedOffMaxSteps: "Akış kapatıldı: akış için 0'dan büyük sabit bir Maksimum Adım değeri gerekir.",
+          adjusted: "Akış için ayarlandı. Uyumsuz seçenekler devre dışı bırakıldı: {options}.",
+          needsMaxSteps: "Akış için sabit bir Maksimum Adım değeri gerekir (akış veri kümelerinin uzunluğu bilinmez). Önce Maksimum Adım değerini 0'dan büyük ayarlayın.",
+          enabledAdjusted: "Akış etkinleştirildi. Uyumsuz seçenekler devre dışı bırakıldı: {options}.",
+          disabledForDetectedModality: "Görüntü ve ses veri kümelerinin tamamen indirilmesi gerektiğinden akış kapatıldı. Ayarı gözden geçirip yeniden başlatın.",
         },
       },
       auto: "Otomatik",
       rawText: "Ham Metin",
       trainSplitStart: "Eğitim Bölümü Başlangıcı",
-      trainSplitStartTooltip:
-        "Bir başlangıç satırı dizini (dahil, 0 tabanlı) belirterek eğitim bölümünüzün yalnızca bir alt kümesiyle eğitin. İlk satırdan başlamak için boş bırakın.",
+      trainSplitStartTooltip: "Bir başlangıç satırı dizini (dahil, 0 tabanlı) belirterek eğitim bölümünüzün yalnızca bir alt kümesiyle eğitin. İlk satırdan başlamak için boş bırakın.",
       trainSplitEnd: "Eğitim Bölümü Sonu",
-      trainSplitEndTooltip:
-        "Eğitim bölümünden dahil edilecek son satır dizini (dahil, 0 tabanlı). Örneğin ilk 100 satırla eğitmek için Başlangıç'ı 0, Son'u 99 olarak ayarlayın. Kalan tüm satırları kullanmak için boş bırakın.",
+      trainSplitEndTooltip: "Eğitim bölümünden dahil edilecek son satır dizini (dahil, 0 tabanlı). Örneğin ilk 100 satırla eğitmek için Başlangıç'ı 0, Son'u 99 olarak ayarlayın. Kalan tüm satırları kullanmak için boş bırakın.",
       endPlaceholder: "Son",
       clear: "Temizle",
       dropFileOrClick: "Dosyayı bırakın veya yüklemek için tıklayın",
       uploadDetails: "Yükleme ayrıntıları",
-      uploadDetailsTooltip:
-        "Dosya başına en fazla {limit}. PDF, DOCX ve TXT eğitime hazır veri kümeleri değildir; bu nedenle önce bunları Öğrenme Tarifleri'nde dönüştürün.",
+      uploadDetailsTooltip: "Dosya başına en fazla {limit}. PDF, DOCX ve TXT eğitime hazır veri kümeleri değildir; bu nedenle önce bunları Öğrenme Tarifleri'nde dönüştürün.",
       viewDataset: "Veri kümesini görüntüle",
       previewTokens: "Tokenları önizle",
       tokenPreview: {
         title: "Token önizlemesi",
-        description:
-          "{model} modelinin bu verileri eğitim için nasıl tokenlara ayırdığı. Yalnızca tokenizer indirilir.",
+        description: "{model} modelinin bu verileri eğitim için nasıl tokenlara ayırdığı. Yalnızca tokenizer indirilir.",
         datasetTab: "Veri kümesi örnekleri",
         textTab: "Metniniz",
         trained: "Eğitilen",
@@ -4601,8 +4043,7 @@ export const tr = {
         completionsOnly: "Yalnızca asistan yanıtları",
         allTokens: "Tüm tokenlar eğitilir",
         responseMarker: "Yanıt işaretçisi",
-        maskingNotApplied:
-          "Sohbet işaretçileri bulunamadı, bu nedenle tüm tokenlar eğitilir.",
+        maskingNotApplied: "Sohbet işaretçileri bulunamadı, bu nedenle tüm tokenlar eğitilir.",
         loading: "Tokenizer yükleniyor. İlk önizleme biraz daha uzun sürer...",
         shuffle: "Örnekleri karıştır",
         showIds: "Token kimliklerini göster",
@@ -4610,22 +4051,16 @@ export const tr = {
         copied: "Token kimlikleri kopyalandı",
         sample: "Örnek {index}",
         stats: "{tokens} token, {trained} eğitilen (%{percent})",
-        truncated:
-          "Bağlam uzunluğu nedeniyle {full} tokenın {max} tanesine kısaltıldı.",
-        noTrained:
-          "Bu satırdaki hiçbir token eğitilmiyor, bu nedenle eğitim bu satırı atlar.",
+        truncated: "Bağlam uzunluğu nedeniyle {full} tokenın {max} tanesine kısaltıldı.",
+        noTrained: "Bu satırdaki hiçbir token eğitilmiyor, bu nedenle eğitim bu satırı atlar.",
         hiddenTokens: "{count} token daha gösterilmiyor",
-        multimodal:
-          "Görüntü ve ses satırları burada gösterilmez. Tokenizer'ı yine de kendi metninizle deneyebilirsiniz.",
-        textPlaceholder:
-          "Tokenlarını görmek için metin yazın veya yapıştırın...",
-        textHint:
-          "Yalnızca asistan yanıtları seçeneğinde yalnızca asistan işaretçisinden sonraki metin eğitilir.",
+        multimodal: "Görüntü ve ses satırları burada gösterilmez. Tokenizer'ı yine de kendi metninizle deneyebilirsiniz.",
+        textPlaceholder: "Tokenlarını görmek için metin yazın veya yapıştırın...",
+        textHint: "Yalnızca asistan yanıtları seçeneğinde yalnızca asistan işaretçisinden sonraki metin eğitilir.",
         insertExample: "Sohbet örneği ekle",
         vocab: "Sözcük dağarcığı: {count} token",
         retry: "Yeniden dene",
-        packing:
-          "Paketleme açık: çalıştırma, satırları bağlam uzunluğundaki dizilerde birleştirir; bu nedenle bir satırın kesildiği yer bu satır bazlı görünümden farklı olabilir.",
+        packing: "Paketleme açık: çalıştırma, satırları bağlam uzunluğundaki dizilerde birleştirir; bu nedenle bir satırın kesildiği yer bu satır bazlı görünümden farklı olabilir.",
       },
       uploadFailed: "Yükleme başarısız oldu",
       unknownError: "Bilinmeyen hata",
@@ -4634,10 +4069,8 @@ export const tr = {
       datasetUploaded: "Veri kümesi yüklendi",
       evalDatasetUploaded: "Değerlendirme veri kümesi yüklendi",
       uploadOneFileAtATime: "Tek seferde bir dosya yükleyin",
-      uploadSingleFileDescription:
-        "Eğitim veri kümesi yüklemesi tek bir dosya kabul eder.",
-      previewLoadingHuggingFace:
-        "Veri kümesi önizlemesi Hugging Face'ten alınıyor...",
+      uploadSingleFileDescription: "Eğitim veri kümesi yüklemesi tek bir dosya kabul eder.",
+      previewLoadingHuggingFace: "Veri kümesi önizlemesi Hugging Face'ten alınıyor...",
       previewLoading: "Önizleme yükleniyor...",
       mappingRequirements: {
         audioAndText: "ses ve metin",
@@ -4650,17 +4083,13 @@ export const tr = {
         heuristicTitle: "Sezgisel olarak algılanan eşleme",
         readyTitle: "Eşleme hazır",
         requiredTitle: "Veri kümesi sütunlarını eşleyin",
-        heuristicDescription:
-          "Aşağıdaki sütun eşlemesi sezgisel yöntemlerle otomatik olarak algılandı. Lütfen sütun başlıklarındaki açılır menüleri kullanarak gözden geçirip düzenleyin veya daha akıllı bir eşleme için AI Assist'i kullanın.",
-        readyDescription:
-          "Her şey yolunda görünüyor. Bu veri kümesi otomatik olarak dönüştürülecek.",
-        requiredDescription:
-          "Başlıklardaki açılır menüleri kullanarak sütunlara roller atayın. En azından şunları atayın: {required}.",
+        heuristicDescription: "Aşağıdaki sütun eşlemesi sezgisel yöntemlerle otomatik olarak algılandı. Lütfen sütun başlıklarındaki açılır menüleri kullanarak gözden geçirip düzenleyin veya daha akıllı bir eşleme için AI Assist'i kullanın.",
+        readyDescription: "Her şey yolunda görünüyor. Bu veri kümesi otomatik olarak dönüştürülecek.",
+        requiredDescription: "Başlıklardaki açılır menüleri kullanarak sütunlara roller atayın. En azından şunları atayın: {required}.",
       },
       s3: {
         title: "S3 Yapılandırması",
-        description:
-          "Amazon S3'ten .parquet, .json, .jsonl veya .csv veri kümeleri yükleyin",
+        description: "Amazon S3'ten .parquet, .json, .jsonl veya .csv veri kümeleri yükleyin",
         bucket: "Bucket Adı",
         bucketPlaceholder: "my-training-data-bucket",
         region: "AWS Bölgesi",
@@ -4682,23 +4111,19 @@ export const tr = {
       },
       projectName: "Proje Adı",
       optional: "İsteğe bağlı",
-      projectNameDescription:
-        "Eğitim çıktı klasörü adlarında, dışa aktarma varsayılanlarında ve geçmişte kullanılır.",
+      projectNameDescription: "Eğitim çıktı klasörü adlarında, dışa aktarma varsayılanlarında ve geçmişte kullanılır.",
       loraSettings: "LoRA Ayarları",
       trainingHyperparameters: "Eğitim Hiperparametreleri",
       drafterSettings: "Spekülatif Kod Çözme Taslakçısı",
       drafterTrain: "Spekülatif kod çözme taslakçısı eğit",
-      drafterTrainTooltip:
-        "İnce ayardan sonra küçük bir taslak başlığı eğiterek llama.cpp ve vLLM'de çıkarımın daha hızlı çalışmasını sağlar; çıktılar değişmez.",
+      drafterTrainTooltip: "İnce ayardan sonra küçük bir taslak başlığı eğiterek llama.cpp ve vLLM'de çıkarımın daha hızlı çalışmasını sağlar; çıktılar değişmez.",
       drafterChecking: "Bu model denetleniyor...",
       drafterUnavailable: "Bu model için kullanılamaz: {reason}",
       drafterRetrainMtp: "Bu modelin MTP başlığını yeniden eğitir",
-      drafterEagle3:
-        "Bir EAGLE-3 taslakçısı eğitir (bu modelde MTP başlığı yok)",
+      drafterEagle3: "Bir EAGLE-3 taslakçısı eğitir (bu modelde MTP başlığı yok)",
       drafterDataSource: "Eğitim verileri",
       drafterDataSourceDataset: "Veri kümesi yanıtları",
-      drafterDataSourceRegenerate:
-        "Modelin kendi yanıtları (daha yavaş, daha iyi)",
+      drafterDataSourceRegenerate: "Modelin kendi yanıtları (daha yavaş, daha iyi)",
       drafterMaxExamples: "Örnekler",
       drafterEpochs: "Epoch",
       drafterLearningRate: "Öğrenme oranı",
@@ -4714,22 +4139,16 @@ export const tr = {
       contextLengthTooltip: "Eğitim örneği başına en fazla token sayısı.",
       customContextLength: "Özel bir değer girin",
       learningRate: "Öğrenme Oranı",
-      learningRateTooltip:
-        "Ağırlık güncellemeleri için adım boyutu. Düşük değerler daha yavaş ama daha kararlı eğitir.",
-      learningRateDescription:
-        "Önerilen: LoRA için 2e-4, CPT için 5e-5, tam ince ayar için 2e-5",
+      learningRateTooltip: "Ağırlık güncellemeleri için adım boyutu. Düşük değerler daha yavaş ama daha kararlı eğitir.",
+      learningRateDescription: "Önerilen: LoRA için 2e-4, CPT için 5e-5, tam ince ayar için 2e-5",
       embeddingLearningRate: "Gömme Öğrenme Oranı",
-      embeddingLearningRateTooltip:
-        "Yalnızca CPT embed_tokens eğitirken kullanılır. Gömmeler LoRA ağırlıklarına göre daha kolay kararsızlaşır, bu nedenle genellikle daha küçük bir öğrenme oranı gerektirir. lr/10 kullanmak için boş bırakın; tipik çalışma aralığı ana öğrenme oranından 2x-10x daha küçüktür. Yalnızca sözcük dağarcığı veya alan tokenı uyarlaması çok yavaşsa artırın.",
+      embeddingLearningRateTooltip: "Yalnızca CPT embed_tokens eğitirken kullanılır. Gömmeler LoRA ağırlıklarına göre daha kolay kararsızlaşır, bu nedenle genellikle daha küçük bir öğrenme oranı gerektirir. lr/10 kullanmak için boş bırakın; tipik çalışma aralığı ana öğrenme oranından 2x-10x daha küçüktür. Yalnızca sözcük dağarcığı veya alan tokenı uyarlaması çok yavaşsa artırın.",
       rank: "Rank",
-      rankTooltip:
-        "Düşük ranklı matrislerin boyutu. Daha yüksek = daha fazla kapasite.",
+      rankTooltip: "Düşük ranklı matrislerin boyutu. Daha yüksek = daha fazla kapasite.",
       alpha: "Alpha",
-      alphaTooltip:
-        "LoRA güncellemeleri için ölçekleme faktörü. Genellikle rank değerinin 2 katı.",
+      alphaTooltip: "LoRA güncellemeleri için ölçekleme faktörü. Genellikle rank değerinin 2 katı.",
       dropout: "Dropout",
-      dropoutTooltip:
-        "Aşırı öğrenmeyi azaltmak için LoRA katmanlarının dropout olasılığı.",
+      dropoutTooltip: "Aşırı öğrenmeyi azaltmak için LoRA katmanlarının dropout olasılığı.",
       visionLayers: "Görüntü katmanları",
       languageLayers: "Dil katmanları",
       attentionModules: "Dikkat modülleri",
@@ -4741,19 +4160,15 @@ export const tr = {
       memoryEfficient: "SVD ile başlatılan LoRA",
       weightDecomposed: "Çarpanlı LoRA",
       notSupportedAppleSilicon: "Apple Silicon'da desteklenmiyor",
-      doraNeedsVisionLayersOff:
-        "DoRA'yı kullanmak için görüntü katmanı eğitimini kapatın",
+      doraNeedsVisionLayersOff: "DoRA'yı kullanmak için görüntü katmanı eğitimini kapatın",
       optimization: "Optimizasyon",
       schedule: "Zamanlama",
       memory: "Bellek",
       optimizer: "Optimize Edici",
-      optimizerTooltip:
-        "Optimizasyon algoritması. 8-bit varyantlar bellek kullanımını azaltır. Görüntü modelleri için Fused önerilir.",
-      optimizerTooltipMlx:
-        "Optimizasyon algoritması. Varsayılan AdamW'dir. Lion daha az bellek kullanır ancak genellikle daha düşük bir öğrenme oranı gerektirir.",
+      optimizerTooltip: "Optimizasyon algoritması. 8-bit varyantlar bellek kullanımını azaltır. Görüntü modelleri için Fused önerilir.",
+      optimizerTooltipMlx: "Optimizasyon algoritması. Varsayılan AdamW'dir. Lion daha az bellek kullanır ancak genellikle daha düşük bir öğrenme oranı gerektirir.",
       lrScheduler: "Öğrenme Oranı Zamanlayıcısı",
-      lrSchedulerTooltip:
-        "Öğrenme oranının eğitim boyunca nasıl değiştiği. Linear sabit hızla azalır; cosine bir eğri boyunca azalır.",
+      lrSchedulerTooltip: "Öğrenme oranının eğitim boyunca nasıl değiştiği. Linear sabit hızla azalır; cosine bir eğri boyunca azalır.",
       optimizerOptions: {
         adamw8bit: "AdamW 8-bit",
         pagedAdamw8bit: "Paged AdamW 8-bit",
@@ -4767,43 +4182,33 @@ export const tr = {
         cosine: "Kosinüs",
       },
       batchSize: "Toplu İş Boyutu",
-      batchSizeTooltip:
-        "Adım başına işlenen örnek sayısı. Yüksek değerler daha fazla VRAM kullanır.",
+      batchSizeTooltip: "Adım başına işlenen örnek sayısı. Yüksek değerler daha fazla VRAM kullanır.",
       gradAccum: "Gradyan Biriktirme Adımları",
-      gradAccumTooltip:
-        "Ek VRAM kullanmadan daha büyük toplu iş boyutlarını taklit eder.",
+      gradAccumTooltip: "Ek VRAM kullanmadan daha büyük toplu iş boyutlarını taklit eder.",
       weightDecay: "Ağırlık Azaltma",
       weightDecayTooltip: "Aşırı öğrenmeyi önlemek için L2 düzenlileştirme.",
       warmupSteps: "Isınma Adımları",
-      warmupStepsTooltip:
-        "Kararlılık için eğitim başında öğrenme oranını kademeli olarak artırır.",
-      scheduleEpochsTooltip:
-        "Veri kümesi üzerinden yapılacak tam geçiş sayısı. Maksimum adıma göre çalıştırmak için 0 ayarlayın.",
+      warmupStepsTooltip: "Kararlılık için eğitim başında öğrenme oranını kademeli olarak artırır.",
+      scheduleEpochsTooltip: "Veri kümesi üzerinden yapılacak tam geçiş sayısı. Maksimum adıma göre çalıştırmak için 0 ayarlayın.",
       saveSteps: "Kaydetme Adımları",
-      saveStepsTooltip:
-        "Her N adımda bir kontrol noktası kaydeder. Devre dışı bırakmak için 0.",
+      saveStepsTooltip: "Her N adımda bir kontrol noktası kaydeder. Devre dışı bırakmak için 0.",
       evalSteps: "Değerlendirme Adımları",
-      evalStepsTooltip:
-        "Değerlendirmeler arasındaki adımların toplam eğitim adımlarına oranı (0-1). Değerlendirmeyi devre dışı bırakmak için 0 ayarlayın. Örn. 0.01 = adımların her %1'inde değerlendir.",
+      evalStepsTooltip: "Değerlendirmeler arasındaki adımların toplam eğitim adımlarına oranı (0-1). Değerlendirmeyi devre dışı bırakmak için 0 ayarlayın. Örn. 0.01 = adımların her %1'inde değerlendir.",
       earlyStoppingPatience: "Erken Durdurma Sabrı",
-      earlyStoppingPatienceTooltip:
-        "Değerlendirme kaybı düşmeden art arda bu kadar değerlendirme geçtikten sonra eğitimi durdurur ve en iyi değerlendirmedeki ağırlıkları korur. Değerlendirme gerektirir (Değerlendirme Adımları 0'dan büyük). Devre dışı bırakmak için 0.",
+      earlyStoppingPatienceTooltip: "Değerlendirme kaybı düşmeden art arda bu kadar değerlendirme geçtikten sonra eğitimi durdurur ve en iyi değerlendirmedeki ağırlıkları korur. Değerlendirme gerektirir (Değerlendirme Adımları 0'dan büyük). Devre dışı bırakmak için 0.",
       seed: "Tohum",
       seedTooltip: "Yeniden üretilebilirlik için rastgele tohum değeri.",
       offloadLayers: "Katmanları boşalt",
-      offloadLayersTooltip:
-        "Kod çözücü katmanlarını sistem RAM'inde tutar ve her birini çalışmadan hemen önce GPU'ya aktarır; böylece VRAM'inizden büyük bir model LoRA ile eğitilebilir. Otomatik seçeneği sığacak kadar az katman boşaltır; bir sayı girilirse tam olarak o kadar katman boşaltılır. Gradyan kontrol noktası oluşturmayı gerektirir.",
+      offloadLayersTooltip: "Kod çözücü katmanlarını sistem RAM'inde tutar ve her birini çalışmadan hemen önce GPU'ya aktarır; böylece VRAM'inizden büyük bir model LoRA ile eğitilebilir. Otomatik seçeneği sığacak kadar az katman boşaltır; bir sayı girilirse tam olarak o kadar katman boşaltılır. Gradyan kontrol noktası oluşturmayı gerektirir.",
       offloadOff: "Kapalı",
       offloadAuto: "Otomatik",
       offloadCount: "Sayı",
       offloadVramBudget: "VRAM bütçesi (GiB)",
-      offloadVramBudgetTooltip:
-        "Bu çalıştırmanın kullanabileceği en fazla VRAM. Otomatik seçeneği bu sınırın altında kalacak kadar katman boşaltır; iki çalıştırma bir kartın birer kısmını alarak aynı kartı paylaşabilir. Boş bırakılırsa kartın tamamı kullanılır.",
+      offloadVramBudgetTooltip: "Bu çalıştırmanın kullanabileceği en fazla VRAM. Otomatik seçeneği bu sınırın altında kalacak kadar katman boşaltır; iki çalıştırma bir kartın birer kısmını alarak aynı kartı paylaşabilir. Boş bırakılırsa kartın tamamı kullanılır.",
       offloadWholeCard: "kartın tamamı",
       offloadVramBudgetGpu: "GPU {index} VRAM bütçesi (GiB)",
       prefetchDepth: "Ön getirme derinliği",
-      prefetchDepthTooltip:
-        "Çalışan katmandan önce kaç boşaltılmış katmanın önceden kopyalanacağı. Otomatik seçeneği 1 ile başlar ve daha derin bir havuzu yalnızca kopyalama beklemesini ölçülebilir şekilde azalttığı sürece korur.",
+      prefetchDepthTooltip: "Çalışan katmandan önce kaç boşaltılmış katmanın önceden kopyalanacağı. Otomatik seçeneği 1 ile başlar ve daha derin bir havuzu yalnızca kopyalama beklemesini ölçülebilir şekilde azalttığı sürece korur.",
       offloadPanelTitle: "Boşaltılan katmanlar",
       offloadPanelGpu: "GPU'da",
       offloadPanelHost: "Sistem RAM'inde",
@@ -4815,25 +4220,33 @@ export const tr = {
       offloadPanelVram: "VRAM",
       offloadPanelDepth: "ön getirme derinliği",
       offloadPanelPinned: "sabitlenmiş",
-      offloadPanelSweepNote:
-        "Hareketli pencere, katmanların getirilme sırasını görünür olması için yavaşlatılmış olarak gösterir; sayılar son adımda ölçülmüştür.",
+      offloadPanelSweepNote: "Hareketli pencere, katmanların getirilme sırasını görünür olması için yavaşlatılmış olarak gösterir; sayılar son adımda ölçülmüştür.",
       offloadPanelCard: "GPU {index}",
       offloadPanelCardUnknown: "Bilinmeyen kart",
       gradCheckpoint: "Gradyan Kontrol Noktası Oluşturma",
-      gradCheckpointTooltip:
-        "Aktivasyonları yeniden hesaplayarak bellekten tasarruf için hesaplama gücünden ödün verir.",
+      gradCheckpointTooltip: "Aktivasyonları yeniden hesaplayarak bellekten tasarruf için hesaplama gücünden ödün verir.",
       none: "Yok",
       standard: "Standart",
       enablePacking: "Paketlemeyi etkinleştir",
       assistantCompletionsOnly: "Yalnızca asistan yanıtları",
       readMore: "Daha fazla bilgi",
+      notSupportedCpu: "Not supported on CPU — choose CoRA or QLoRA",
+      earlyStopParentTitle: "Early stop against a parent run",
+      earlyStopParentHint: "Stop this run when its loss has not beaten a completed run's recorded loss for a set number of steps.",
+      earlyStopParentSummary: "Parent {parent}; must beat its loss by {delta} within {steps} steps or the run stops and saves a checkpoint.",
+      earlyStopParentRun: "Parent run",
+      earlyStopParentLoading: "Loading saved runs…",
+      earlyStopParentLoadError: "Saved runs could not be loaded.",
+      earlyStopParentNoRuns: "A completed run with a recorded loss is needed before this guard can be used.",
+      earlyStopPatienceSteps: "Steps without an improvement",
+      earlyStopPatienceStepsTooltip: "How many training steps may pass without beating the parent's recorded loss. The guard stops the run and keeps a resumable checkpoint when this window runs out.",
+      earlyStopMinDelta: "Minimum loss improvement",
+      earlyStopMinDeltaTooltip: "The child run's loss must be lower than the parent's recorded loss by at least this amount to count as an improvement.",
     },
     training: {
       duplicateFailed: "Çalıştırma çoğaltılamadı",
-      duplicateDraftChanged:
-        "Yükleme sırasında eğitim ayarları değişti. Yeniden çoğaltmayı deneyin.",
-      duplicateNoModel:
-        "Bu çalıştırmanın kaydedilmiş model yapılandırması yok.",
+      duplicateDraftChanged: "Yükleme sırasında eğitim ayarları değişti. Yeniden çoğaltmayı deneyin.",
+      duplicateNoModel: "Bu çalıştırmanın kaydedilmiş model yapılandırması yok.",
       startTraining: "Eğitimi Başlat",
       starting: "Başlatılıyor...",
       loadingModel: "Model yükleniyor...",
@@ -4842,50 +4255,35 @@ export const tr = {
       chooseDataset: "Bir veri kümesi seçin",
       chooseModelAndDataset: "Model ve veri kümesi seçin",
       validation: {
-        s3MultimodalUnsupported:
-          "S3 veri kümeleri henüz görüntü eğitimi için desteklenmiyor.",
+        s3MultimodalUnsupported: "S3 veri kümeleri henüz görüntü eğitimi için desteklenmiyor.",
         s3BucketRequired: "Önce bir S3 bucket adı girin.",
-        s3CredentialsRequired:
-          "S3 erişim anahtarlarını girin veya IAM rolünü etkinleştirin.",
+        s3CredentialsRequired: "S3 erişim anahtarlarını girin veya IAM rolünü etkinleştirin.",
         modelRequired: "Önce bir temel model seçin.",
         learningRatePositive: "Sıfırdan büyük bir öğrenme oranı girin.",
-        embeddingLearningRateRange:
-          "0'dan büyük ve 1'den küçük bir gömme öğrenme oranı girin.",
-        decisionColumnsMissing:
-          "Karar modelleri için state, questions ve gold (veya answers) sütunları gerekir. Eksik: {columns}.",
-        decisionOwnerOnly:
-          "Karar modellerine yalnızca Unsloth sahibi ince ayar yapabilir.",
+        embeddingLearningRateRange: "0'dan büyük ve 1'den küçük bir gömme öğrenme oranı girin.",
+        decisionColumnsMissing: "Karar modelleri için state, questions ve gold (veya answers) sütunları gerekir. Eksik: {columns}.",
+        decisionOwnerOnly: "Karar modellerine yalnızca Unsloth sahibi ince ayar yapabilir.",
         hfDatasetRequired: "Önce bir Hugging Face veri kümesi seçin.",
         hfDatasetSplitRequired: "Önce bir eğitim bölümü seçin veya girin.",
         localDatasetRequired: "Önce yerel bir veri kümesi seçin.",
         unsupportedDatasetSource: "Desteklenmeyen veri kümesi kaynağı.",
       },
       startFailed: "Eğitim başlatılamadı",
-      startUnconfirmed:
-        "Unsloth eğitimin başlayıp başlamadığını doğrulayamadı. Durum arka planda denetleniyor.",
+      startUnconfirmed: "Unsloth eğitimin başlayıp başlamadığını doğrulayamadı. Durum arka planda denetleniyor.",
       stopFailed: "Eğitim durdurulamadı",
       trainingStillActiveTitle: "Eğitim hâlâ etkin",
       stopBeforeConfig: "Önce eğitimi durdurun, ardından yapılandırmaya dönün.",
       resumeFailed: "Eğitim sürdürülemedi",
       resumeFailedTitle: "Eğitim sürdürülemedi",
-      resumeUnavailable:
-        "Yalnızca durdurulmuş veya hata vermiş ve kaydedilmiş bir kontrol noktası olan çalıştırmalar sürdürülebilir.",
-      modelUnverified:
-        "Bu modelin ayarları doğrulanamadı. Bağlantınızı veya Hugging Face tokenınızı kontrol edip yeniden deneyin.",
-      legacyDatasetScriptUnsupported:
-        "Bu Hub veri kümesi eski bir özel betiğe dayanıyor ve bu eğitim akışında desteklenmiyor.",
-      hfModelAccessDenied:
-        "Hugging Face bu modele erişimi reddetti. Depo erişimi olan geçerli bir Hugging Face tokenı ekleyin ve gerekli erişim koşullarını kabul edip yeniden deneyin.",
-      hfModelVerificationRateLimited:
-        "Hugging Face model doğrulaması hız sınırına takıldı. Kısa bir süre sonra yeniden deneyin.",
-      hfModelVerificationFailed:
-        "Hugging Face modeli doğrulanamadı. Depo kimliğini ve erişim tokenınızı kontrol edin.",
-      hfModelMetadataUnavailable:
-        "Hugging Face model meta verileri geçici olarak kullanılamıyor. Eğitimi başlatmadan önce yeniden deneyin.",
-      datasetUnverified:
-        "Veri kümesinin bu modelle uyumlu olduğu doğrulanamadı. Bağlantınızı veya Hugging Face tokenınızı kontrol edin — eğitimi başlattığınızda denetim yeniden denenecek.",
-      setupChanged:
-        "Eğitim kurulumu denetlenirken değişti. Gözden geçirip yeniden başlatın.",
+      resumeUnavailable: "Yalnızca durdurulmuş veya hata vermiş ve kaydedilmiş bir kontrol noktası olan çalıştırmalar sürdürülebilir.",
+      modelUnverified: "Bu modelin ayarları doğrulanamadı. Bağlantınızı veya Hugging Face tokenınızı kontrol edip yeniden deneyin.",
+      legacyDatasetScriptUnsupported: "Bu Hub veri kümesi eski bir özel betiğe dayanıyor ve bu eğitim akışında desteklenmiyor.",
+      hfModelAccessDenied: "Hugging Face bu modele erişimi reddetti. Depo erişimi olan geçerli bir Hugging Face tokenı ekleyin ve gerekli erişim koşullarını kabul edip yeniden deneyin.",
+      hfModelVerificationRateLimited: "Hugging Face model doğrulaması hız sınırına takıldı. Kısa bir süre sonra yeniden deneyin.",
+      hfModelVerificationFailed: "Hugging Face modeli doğrulanamadı. Depo kimliğini ve erişim tokenınızı kontrol edin.",
+      hfModelMetadataUnavailable: "Hugging Face model meta verileri geçici olarak kullanılamıyor. Eğitimi başlatmadan önce yeniden deneyin.",
+      datasetUnverified: "Veri kümesinin bu modelle uyumlu olduğu doğrulanamadı. Bağlantınızı veya Hugging Face tokenınızı kontrol edin — eğitimi başlattığınızda denetim yeniden denenecek.",
+      setupChanged: "Eğitim kurulumu denetlenirken değişti. Gözden geçirip yeniden başlatın.",
       uploadConfigTooltip: "Kaydedilmiş bir YAML yapılandırması yükle",
       saveConfigTooltip: "Geçerli yapılandırmayı YAML olarak indir",
       resetConfigTooltip: "Model varsayılanlarına sıfırla",
@@ -4896,18 +4294,14 @@ export const tr = {
       failedToReadFile: "Dosya okunamadı",
       failedToSaveConfig: "Yapılandırma kaydedilemedi",
       parametersReset: "Parametreler model varsayılanlarına sıfırlandı",
-      audioIncompatible:
-        "Bu model sesi desteklemiyor. Ses destekli bir modele geçin veya ses içermeyen bir veri kümesi seçin.",
-      visionIncompatible:
-        "Metin modeli çok modlu bir veri kümesiyle uyumlu değil. Bir görüntü modeline geçin veya yalnızca metin içeren bir veri kümesi seçin.",
+      audioIncompatible: "Bu model sesi desteklemiyor. Ses destekli bir modele geçin veya ses içermeyen bir veri kümesi seçin.",
+      visionIncompatible: "Metin modeli çok modlu bir veri kümesiyle uyumlu değil. Bir görüntü modeline geçin veya yalnızca metin içeren bir veri kümesi seçin.",
       cancelTitle: "Eğitimi İptal Et",
-      cancelDescription:
-        "Geçerli eğitim çalıştırmasını iptal etmek istiyor musunuz?",
+      cancelDescription: "Geçerli eğitim çalıştırmasını iptal etmek istiyor musunuz?",
       continueAction: "Eğitime Devam Et",
       cancelAction: "Eğitimi İptal Et",
       stopTitle: "Eğitimi Durdur",
-      stopDescription:
-        "Geçerli eğitim çalıştırmasını nasıl durdurmak istediğinizi seçin. Durdur ve Kaydet, daha sonra kaldığınız yerden sürdürebileceğiniz bir kontrol noktası yazar; kaydetmeden durdurulan çalıştırma sürdürülemez.",
+      stopDescription: "Geçerli eğitim çalıştırmasını nasıl durdurmak istediğinizi seçin. Durdur ve Kaydet, daha sonra kaldığınız yerden sürdürebileceğiniz bir kontrol noktası yazar; kaydetmeden durdurulan çalıştırma sürdürülemez.",
       stopAction: "Durdur",
       stopping: "Durduruluyor...",
       stopAndSave: "Durdur ve Kaydet",
@@ -4915,27 +4309,21 @@ export const tr = {
       exportModel: "Modeli Dışa Aktar",
       milestone: "Kilometre taşı",
       halfwayDone: "Yarısı tamamlandı. Eğitim %50'yi geçti.",
-      doneNextStep:
-        "Eğitim tamamlandı. Sonraki adım: temel model ile ince ayarlı modelin çıktılarını karşılaştırın.",
+      doneNextStep: "Eğitim tamamlandı. Sonraki adım: temel model ile ince ayarlı modelin çıktılarını karşılaştırın.",
+      startSimulated: "Start simulated run",
+      simulatedNote: "A simulated run: no GPU, model or dataset is used, and the metrics are generated.",
     },
     history: {
       title: "Geçmiş",
       filesDeleted: "Dosyalar silindi",
       deleteArtifactsLabel: "Diskteki adaptör dosyalarını da sil",
-      deleteArtifactsDescription:
-        "Kaydedilmiş adaptörler ve kontrol noktaları dahil olmak üzere çalıştırmanın çıktı klasörünü kaldırır.",
-      deleteArtifactsSharedNote:
-        "Bu çıktı klasörünü başka bir çalıştırma da kullanıyor. Dosyalar, onları kullanan son çalıştırma silinene kadar korunur.",
-      artifactsKeptShared:
-        "Çalıştırma silindi. Aynı klasörü başka bir çalıştırma kullandığı için adaptör dosyaları korundu.",
-      deleteArtifactsActiveError:
-        "Bu dosyalar devam eden eğitim çalıştırması tarafından kullanılıyor. Silmeden önce eğitimi durdurun.",
-      deleteArtifactsFailed:
-        "Çalıştırma silindi ancak dosyaları kaldırılamadı.",
-      deleteArtifactsRetainedError:
-        "Adaptör dosyaları kaldırılamadı, bu nedenle eğitim çalıştırması geçmişte tutuldu.",
-      emptyDescription:
-        "Henüz eğitim çalıştırması yok. İlk eğitim çalıştırmanızı Yapılandır sekmesinden başlatın.",
+      deleteArtifactsDescription: "Kaydedilmiş adaptörler ve kontrol noktaları dahil olmak üzere çalıştırmanın çıktı klasörünü kaldırır.",
+      deleteArtifactsSharedNote: "Bu çıktı klasörünü başka bir çalıştırma da kullanıyor. Dosyalar, onları kullanan son çalıştırma silinene kadar korunur.",
+      artifactsKeptShared: "Çalıştırma silindi. Aynı klasörü başka bir çalıştırma kullandığı için adaptör dosyaları korundu.",
+      deleteArtifactsActiveError: "Bu dosyalar devam eden eğitim çalıştırması tarafından kullanılıyor. Silmeden önce eğitimi durdurun.",
+      deleteArtifactsFailed: "Çalıştırma silindi ancak dosyaları kaldırılamadı.",
+      deleteArtifactsRetainedError: "Adaptör dosyaları kaldırılamadı, bu nedenle eğitim çalıştırması geçmişte tutuldu.",
+      emptyDescription: "Henüz eğitim çalıştırması yok. İlk eğitim çalıştırmanızı Yapılandır sekmesinden başlatın.",
       loadError: "Eğitim çalıştırmaları yüklenemedi",
       deleteError: "Eğitim çalıştırması silinemedi. Lütfen yeniden deneyin.",
       retry: "Yeniden dene",
@@ -4944,8 +4332,7 @@ export const tr = {
       loadingRun: "Eğitim çalıştırması yükleniyor...",
       runNotFound: "Çalıştırma bulunamadı",
       deleteTitle: "Eğitim çalıştırması silinsin mi?",
-      deleteDescription:
-        "Bu işlem, bu eğitim çalıştırmasını ve tüm metriklerini kalıcı olarak siler. Bu işlem geri alınamaz.",
+      deleteDescription: "Bu işlem, bu eğitim çalıştırmasını ve tüm metriklerini kalıcı olarak siler. Bu işlem geri alınamaz.",
       resumeTraining: "Eğitimi sürdür",
       resuming: "Sürdürülüyor...",
       deleteRun: "Çalıştırmayı sil",
@@ -4969,6 +4356,22 @@ export const tr = {
       copyPreviewLink: "Önizleme bağlantısını kopyala",
       previewLinkCopied: "Önizleme bağlantısı kopyalandı",
       previewLinkCopyFailed: "Bağlantı kopyalanamadı",
+      reproducibilityBundle: "Reproducibility bundle",
+      reproducibilityError: "The bundle could not be saved.",
+      searchPlaceholder: "Search runs, models, datasets, tags",
+      filterByTag: "Filter by tag",
+      allRuns: "All runs",
+      noMatches: "No runs match these filters.",
+      editAnnotations: "Edit tags and notes",
+      annotationsTitle: "Tags and notes",
+      annotationsDescription: "Tags make a run searchable. Notes stay with the run on this machine.",
+      tagsLabel: "Tags",
+      tagsPlaceholder: "baseline, lr-test",
+      tagsHint: "Comma separated, up to 12.",
+      notesLabel: "Notes",
+      notesPlaceholder: "What did this run test?",
+      annotationsSaved: "Run updated",
+      annotationsError: "Couldn't update this run",
     },
     charts: {
       settings: "Grafik Ayarları",
@@ -4981,8 +4384,7 @@ export const tr = {
       trainingLoss: "Eğitim Kaybı",
       trainingLossDescription: "Katmanları ve EMA yumuşatmayı denetleyin.",
       smoothing: "Yumuşatma",
-      smoothingDescription:
-        "Daha fazla yumuşatma için sağa kaydırın. `0` = ham.",
+      smoothingDescription: "Daha fazla yumuşatma için sağa kaydırın. `0` = ham.",
       showRawLoss: "Ham kaybı göster",
       showSmoothedLoss: "Yumuşatılmış kaybı göster",
       showAverageLine: "Ortalama çizgisini göster",
@@ -5007,10 +4409,8 @@ export const tr = {
       averageValue: "ort. {value}",
       waitingForFirstEvaluationStep: "İlk değerlendirme adımı bekleniyor...",
       evaluationNotConfigured: "Değerlendirme yapılandırılmadı",
-      evalChartWillAppear:
-        "Grafik, eval_steps değerine ulaşıldığında görünecek",
-      setEvalDatasetAndSteps:
-        "Değerlendirme kaybını izlemek için değerlendirme veri kümesini ve eval_steps değerini ayarlayın",
+      evalChartWillAppear: "Grafik, eval_steps değerine ulaşıldığında görünecek",
+      setEvalDatasetAndSteps: "Değerlendirme kaybını izlemek için değerlendirme veri kümesini ve eval_steps değerini ayarlayın",
     },
     progress: {
       title: "Eğitim İlerlemesi",
@@ -5067,6 +4467,9 @@ export const tr = {
         error: "Hata",
         stopped: "Durduruldu",
       },
+      tokensPerSecond: "{value} tok/s",
+      finishAt: "Finishes {time}",
+      gpuHours: "{value} GPU-h",
     },
     trainingStart: {
       ready: "Hazır",
@@ -5082,26 +4485,141 @@ export const tr = {
       dataset: "Veri kümesi",
       datasetStreaming: "Veri kümesi: akış (tam indirme yok)",
       modelWeights: "Model ağırlıkları",
+      waitingForFirstStep: "> {message} | waiting for first step... ({step})",
+    },
+    queue: {
+      title: "Run queue",
+      description: "Line up configurations to train one after another. The queue is stored on this device, so it survives a reload while the app stays open.",
+      addCurrent: "Add current setup",
+      addSweep: "Add sweep",
+      added: "{count} queued",
+      addFailed: "The current setup could not be queued.",
+      pause: "Pause queue",
+      resume: "Resume queue",
+      pausedHint: "The queue is paused. A run already in progress keeps training.",
+      hint: "The next run starts when the current one finishes. A scheduled run waits for its time.",
+      empty: "Nothing queued. Add the current setup, or expand a sweep.",
+      scheduleLabel: "Start no earlier than",
+      scheduledFor: "Starts {time}",
+      startNow: "Start now",
+      remove: "Remove {run}",
+      clearFinished: "Clear finished",
+      startFailed: "The queued run could not start.",
+      sweepTitle: "Sweep",
+      sweepCount: "{count} combinations",
+      sweepHint: "One run per combination of the values entered.",
+      sweepLimit: "A sweep is limited to {count} runs.",
+      sweepLearningRates: "Learning rates",
+      sweepLoraRanks: "LoRA ranks",
+      sweepEpochs: "Epochs",
+      sweepBatchSizes: "Batch sizes",
+      status: {
+        queued: "Queued",
+        scheduled: "Scheduled",
+        running: "Running",
+        done: "Done",
+        failed: "Failed",
+        cancelled: "Cancelled",
+      },
+    },
+    presets: {
+      title: "Presets and capacity",
+      description: "Apply a named set of training hyperparameters, save the current one, and check whether the run fits the GPU before starting it.",
+      builtin: "Built-in",
+      builtinHint: "Only hyperparameters change. The model and dataset you already picked stay.",
+      mine: "Saved",
+      none: "None yet.",
+      saveCurrent: "Save current…",
+      namePlaceholder: "Preset name",
+      save: "Save",
+      saved: "Preset saved",
+      applied: "Preset applied",
+      delete: "Delete this preset",
+      fitTitle: "Capacity check",
+      check: "Check this run",
+      checking: "Checking…",
+      needModel: "Pick a model before checking capacity.",
+      checkFailed: "The capacity check could not run",
+      fitHint: "Estimates weights, optimizer state, adapter state and activations from config.json. It is a budget, not a promise.",
+      required: "estimated need",
+      budget: "of {gb} GB",
+      headroom: "{gb} GB headroom",
+      trainable: "trainable",
+      assumptions: "How the estimate is built",
+    },
+    comparison: {
+      title: "Run comparison",
+      description: "Put two to four saved runs on one axis, compare the settings that differ, and mark the one worth keeping.",
+      selectionHint: "{count} of 4 selected",
+      loading: "Loading runs…",
+      loadError: "The runs could not be loaded.",
+      noRuns: "No saved runs to compare yet.",
+      selectRun: "Compare {run}",
+      finalLoss: "Final loss",
+      chooseTwo: "Select at least two runs to compare.",
+      chartTitle: "Loss curves",
+      winner: "Winner",
+      markWinner: "Mark as winner",
+      diffTitle: "What differs",
+      noDifferences: "These runs share every compared setting.",
+      field: "Setting",
+      datasetDrift: "These runs name the same dataset but hashed different content. They are not a controlled comparison.",
+    },
+    exportModelCard: {
+      title: "Model card check",
+      description: "Reads README.md or MODEL_CARD.md in the selected checkpoint before publishing or exporting.",
+      loading: "Checking the model card…",
+      error: "The model card could not be checked.",
+      missingCount: "{count} missing",
+      allPresent: "Complete",
+      present: "Found",
+      missing: "Missing",
+      baseModel: "Base model",
+      license: "License",
+      dataset: "Dataset description",
+      evaluation: "Evaluation numbers",
+      noCard: "No README.md or MODEL_CARD.md was found in this checkpoint, so every check is missing.",
+      addHint: "Add the missing facts to the card before publishing; this check never writes to it.",
+    },
+    chartEvents: {
+      checkpoint: "Checkpoint",
+      resume: "Resume",
+      lrChange: "LR change",
+      anomaly: "Anomaly",
+    },
+    postmortem: {
+      title: "Failure post-mortem",
+      oomTitle: "Out of memory",
+      oomFix: "Lower the batch size, raise gradient accumulation, shorten the context length, or enable 4-bit loading, then resume from the last checkpoint.",
+      nanTitle: "Loss became NaN",
+      nanFix: "Lower the learning rate, turn on gradient clipping, and resume from the last good checkpoint.",
+      diskTitle: "Ran out of disk space",
+      diskFix: "Free space under the outputs folder, lower the checkpoint save frequency, or point the output directory at a larger disk.",
+      authTitle: "Access denied by the Hub",
+      authFix: "Add or refresh your Hugging Face token, confirm access to the repository, then start the run again.",
+      datasetTitle: "The dataset could not be read",
+      datasetFix: "Fix the reported rows or pick another dataset and columns, then start the run again.",
+      timeoutTitle: "The run timed out",
+      timeoutFix: "Raise the wait limit for this step, reduce the dataset size, or check the machine's network and disk throughput.",
+      unknownTitle: "Unrecognised failure",
+      unknownFix: "Read the reported log below, correct the failing setting in the trainer, and start the run again.",
+      openWizard: "Open in trainer",
+      logLabel: "What the run reported",
     },
   },
   modelMemory: {
-    readout:
-      "Ağırlıklar {model} + bağlam {context} = {total} / {budget} kullanılabilir VRAM",
-    readoutWithSpec:
-      "Ağırlıklar {model} + KV {kv} + MTP taslağı {spec} = {total} / {budget} kullanılabilir VRAM",
+    readout: "Ağırlıklar {model} + bağlam {context} = {total} / {budget} kullanılabilir VRAM",
+    readoutWithSpec: "Ağırlıklar {model} + KV {kv} + MTP taslağı {spec} = {total} / {budget} kullanılabilir VRAM",
     kvRate: "KV ayrıldı, token başına ~{rate}",
     oomLikely: "Geçerli ayarlarla bellek yetersizliği (OOM) olası",
-    tooLarge:
-      "VRAM'den büyük, CPU'ya aktarılacak. Daha küçük bir niceleme daha hızlı çalışır",
+    tooLarge: "VRAM'den büyük, CPU'ya aktarılacak. Daha küçük bir niceleme daha hızlı çalışır",
   },
   skills: {
     title: "Beceriler",
-    description:
-      "Beceriler standart ajan klasörlerinizden bulunur. Bunları burada etkinleştirin, ardından birinden bahsetmek için sohbette @ yazın.",
+    description: "Beceriler standart ajan klasörlerinizden bulunur. Bunları burada etkinleştirin, ardından birinden bahsetmek için sohbette @ yazın.",
     precedence: "~/.agents/skills, ~/.claude/skills üzerinde önceliklidir.",
     refresh: "Yenile",
-    empty:
-      "Beceri bulunamadı. ~/.agents/skills veya ~/.claude/skills altına bir SKILL.md klasörü ekleyin, ardından yenileyin.",
+    empty: "Beceri bulunamadı. ~/.agents/skills veya ~/.claude/skills altına bir SKILL.md klasörü ekleyin, ardından yenileyin.",
     sourceAgents: "Agents",
     sourceClaude: "Claude",
     sourceBundled: "Yerleşik",
@@ -5115,24 +4633,17 @@ export const tr = {
     newSkill: "Yeni beceri",
     import: "İçe aktar",
     delete: "Sil: {name}",
-    createDescription:
-      "~/.agents/skills altında yeni bir klasöre SKILL.md olarak kaydedilir ve oluşturulur oluşturulmaz etkinleştirilir.",
+    createDescription: "~/.agents/skills altında yeni bir klasöre SKILL.md olarak kaydedilir ve oluşturulur oluşturulmaz etkinleştirilir.",
     nameLabel: "Ad",
     namePlaceholder: "ör. code-arithmetic",
-    nameHint:
-      "Küçük harfler, rakamlar ve tek kısa çizgiler. Bu aynı zamanda klasör adıdır.",
-    nameInvalid:
-      "Kısa çizgiyle başlamayan veya bitmeyen, 1-64 küçük harf, rakam ya da tek kısa çizgi kullanın.",
+    nameHint: "Küçük harfler, rakamlar ve tek kısa çizgiler. Bu aynı zamanda klasör adıdır.",
+    nameInvalid: "Kısa çizgiyle başlamayan veya bitmeyen, 1-64 küçük harf, rakam ya da tek kısa çizgi kullanın.",
     descriptionLabel: "Açıklama",
-    descriptionPlaceholder:
-      "Kullanıcı aritmetik işlem istediğinde kullanın. Her zaman kod aracıyla hesaplayın.",
-    descriptionHint:
-      "Modelin beceri kataloğunda gördüğü satır. Model, beceriyi ne zaman okuyacağına buna göre karar verir.",
+    descriptionPlaceholder: "Kullanıcı aritmetik işlem istediğinde kullanın. Her zaman kod aracıyla hesaplayın.",
+    descriptionHint: "Modelin beceri kataloğunda gördüğü satır. Model, beceriyi ne zaman okuyacağına buna göre karar verir.",
     instructionsLabel: "Talimatlar",
-    instructionsPlaceholder:
-      "Bu beceri geçerli olduğunda yapılacaklar, Markdown biçiminde.",
-    instructionsHint:
-      "SKILL.md dosyasının gövdesi; model beceriyi seçtiğinde tamamı okunur.",
+    instructionsPlaceholder: "Bu beceri geçerli olduğunda yapılacaklar, Markdown biçiminde.",
+    instructionsHint: "SKILL.md dosyasının gövdesi; model beceriyi seçtiğinde tamamı okunur.",
     create: "Beceri oluştur",
     save: "Değişiklikleri kaydet",
     created: "Oluşturuldu: {name}",
@@ -5147,16 +4658,13 @@ export const tr = {
     importError: "Beceri içe aktarılamadı",
     exportError: "Beceri dışa aktarılamadı",
     deleteTitle: "Beceriyi sil",
-    deleteDescription:
-      "“{name}” ve ~/.agents/skills altındaki klasöründeki her şey silinsin mi? Bu işlem geri alınamaz.",
+    deleteDescription: "“{name}” ve ~/.agents/skills altındaki klasöründeki her şey silinsin mi? Bu işlem geri alınamaz.",
     search: "Becerileri ada veya açıklamaya göre arayın…",
     noMatch: "“{query}” ile eşleşen beceri yok",
     clearSearch: "Aramayı temizle",
-    readOnlyClaude:
-      "Salt okunur: ~/.claude/skills içinde bulundu. Dosyayı orada düzenleyin.",
+    readOnlyClaude: "Salt okunur: ~/.claude/skills içinde bulundu. Dosyayı orada düzenleyin.",
     readOnlyBundled: "Salt okunur: Unsloth ile birlikte gelir.",
-    readOnlyLinked:
-      "Salt okunur: bu öğe bir bağlantıdır. Dosyaları bulundukları yerde düzenleyin.",
+    readOnlyLinked: "Salt okunur: bu öğe bir bağlantıdır. Dosyaları bulundukları yerde düzenleyin.",
     characters: "{count} karakter",
     unsaved: "kaydedilmemiş değişiklikler",
     revert: "Geri al",
@@ -5165,17 +4673,14 @@ export const tr = {
     compatibilityLabel: "Uyumluluk",
     allowedToolsLabel: "İzin verilen araçlar",
     sectionAgents: "Becerileriniz",
-    sectionAgentsHint:
-      "~/.agents/skills içine kaydedilir. Bunları burada oluşturun, düzenleyin ve silin.",
+    sectionAgentsHint: "~/.agents/skills içine kaydedilir. Bunları burada oluşturun, düzenleyin ve silin.",
     sectionClaude: "Claude becerileri",
-    sectionClaudeHint:
-      "~/.claude/skills içinde bulundu. Burada salt okunur; dosyaları orada düzenleyin.",
+    sectionClaudeHint: "~/.claude/skills içinde bulundu. Burada salt okunur; dosyaları orada düzenleyin.",
     sectionBundled: "Yerleşik",
     sectionBundledHint: "Unsloth ile birlikte gelir. Salt okunur.",
     linked: "Bağlantı",
     discardTitle: "Değişiklikler atılsın mı?",
-    discardDescription:
-      "{name} becerisinde kaydedilmemiş düzenlemeler kaybolacak.",
+    discardDescription: "{name} becerisinde kaydedilmemiş düzenlemeler kaybolacak.",
     discard: "At",
     mentions: "Beceriler",
     manage: "Becerileri yönet",
@@ -5185,8 +4690,7 @@ export const tr = {
     disableAll: "Tümünü devre dışı bırak",
     resetAll: "Varsayılanlara sıfırla",
     resetTitle: "Tüm beceriler sıfırlansın mı?",
-    resetDescription:
-      "Her beceri yeni bir kurulumdaki durumuna döner: becerileriniz ve Claude becerileri açık, yerleşik beceriler kapalı. Açık ve kapalı seçimleriniz temizlenir.",
+    resetDescription: "Her beceri yeni bir kurulumdaki durumuna döner: becerileriniz ve Claude becerileri açık, yerleşik beceriler kapalı. Açık ve kapalı seçimleriniz temizlenir.",
     reset: "Sıfırla",
   },
   translate: {
@@ -5295,8 +4799,7 @@ export const tr = {
   },
   scheduledTasks: {
     title: "Zamanlanmış",
-    description:
-      "İstemleri herhangi bir modelinizle zamanlanmış olarak çalıştırın.",
+    description: "İstemleri herhangi bir modelinizle zamanlanmış olarak çalıştırın.",
     newTask: "Yeni görev",
     upcoming: "Yaklaşanlar",
     columns: {
@@ -5315,8 +4818,7 @@ export const tr = {
     chatMark: "Zamanlanmış bir görevden gelen sohbet",
     taskMissing: "Bu görev artık mevcut değil.",
     emptyTitle: "Henüz zamanlanmış görev yok",
-    emptyDescription:
-      "Günlük bir özet, haftalık bir hatırlatıcı veya zamanlanmış olarak yapılmasını istediğiniz başka herhangi bir şey alın.",
+    emptyDescription: "Günlük bir özet, haftalık bir hatırlatıcı veya zamanlanmış olarak yapılmasını istediğiniz başka herhangi bir şey alın.",
     createFirst: "Görev oluştur",
     loadFailed: "Zamanlanmış görevler yüklenemedi.",
     retry: "Yeniden dene",
@@ -5375,16 +4877,12 @@ export const tr = {
       model: "Model",
       modelLoaded: "Hangi model yüklüyse",
       modelOnDevice: "Bu cihazda",
-      modelNote:
-        "Görev çalıştığında bu model yüklü değilse Unsloth önce size sorar.",
-      modelNoteAllowed:
-        "Bu modeli yalnızca siz Unsloth'tan uzaktayken yükler, ardından önceki modelinizi geri getirir.",
-      modelEmpty:
-        "Başka bir model seçmek için Model merkezinden bir model indirin veya bir bağlantı ekleyin.",
+      modelNote: "Görev çalıştığında bu model yüklü değilse Unsloth önce size sorar.",
+      modelNoteAllowed: "Bu modeli yalnızca siz Unsloth'tan uzaktayken yükler, ardından önceki modelinizi geri getirir.",
+      modelEmpty: "Başka bir model seçmek için Model merkezinden bir model indirin veya bir bağlantı ekleyin.",
       modelMissing: "{model} (bu cihazda değil)",
       allowLoad: "Uzaktayken otomatik olarak geçiş yap",
-      allowLoadHint:
-        "Bu görevin zamanı geldiğinde ve Unsloth'u 5 dakikadır kullanmadıysanız, bu modeli sormadan yükler, görevi çalıştırır ve ardından önceki modelinize geri döner. O sırada Unsloth'u kullanıyor veya eğitim yapıyorsanız çalıştırma atlanır ve modelinize dokunulmaz. Kapalıyken Unsloth yüklemeden önce sorar.",
+      allowLoadHint: "Bu görevin zamanı geldiğinde ve Unsloth'u 5 dakikadır kullanmadıysanız, bu modeli sormadan yükler, görevi çalıştırır ve ardından önceki modelinize geri döner. O sırada Unsloth'u kullanıyor veya eğitim yapıyorsanız çalıştırma atlanır ve modelinize dokunulmaz. Kapalıyken Unsloth yüklemeden önce sorar.",
       reasoning: "Düşünme düzeyi",
       reasoningDefault: "Varsayılan",
       reasoningOff: "Kapalı",
@@ -5394,20 +4892,14 @@ export const tr = {
     },
     deleteDialog: {
       title: "Zamanlanmış görev silinsin mi?",
-      description:
-        "“{title}” artık çalışmayacak. Görevin daha önce oluşturduğu sohbetler korunur.",
+      description: "“{title}” artık çalışmayacak. Görevin daha önce oluşturduğu sohbetler korunur.",
     },
     errors: {
-      noModel:
-        "Hiçbir model yüklü değildi. Sohbet'te bir model yükleyin, ardından görevi yeniden çalıştırın.",
-      modelNotLoaded:
-        "Görevin modeli yüklü değildi. Modeli Sohbet'te yükleyin, ardından görevi yeniden çalıştırın.",
-      modelLoadFailed:
-        "Görevin modeli yüklenemedi. Modelin Model merkezinde hâlâ indirilmiş olduğundan emin olun.",
-      modelBusy:
-        "Siz Unsloth'u kullanırken atlandı, bu nedenle modelinize dokunulmadı.",
-      connectionUnavailable:
-        "Görevin bağlantısı eksik veya kapalı. Bağlantılar bölümünden kontrol edin.",
+      noModel: "Hiçbir model yüklü değildi. Sohbet'te bir model yükleyin, ardından görevi yeniden çalıştırın.",
+      modelNotLoaded: "Görevin modeli yüklü değildi. Modeli Sohbet'te yükleyin, ardından görevi yeniden çalıştırın.",
+      modelLoadFailed: "Görevin modeli yüklenemedi. Modelin Model merkezinde hâlâ indirilmiş olduğundan emin olun.",
+      modelBusy: "Siz Unsloth'u kullanırken atlandı, bu nedenle modelinize dokunulmadı.",
+      connectionUnavailable: "Görevin bağlantısı eksik veya kapalı. Bağlantılar bölümünden kontrol edin.",
       timeout: "Modelin yanıt vermesi çok uzun sürdü.",
       cancelled: "Çalıştırma bitmeden durduruldu.",
       interrupted: "Unsloth, çalıştırma bitmeden kapandı.",
@@ -5420,8 +4912,7 @@ export const tr = {
     },
     loadPrompt: {
       title: "{model} yüklensin mi?",
-      description:
-        "“{title}” görevi şu anda yüklü olmayan {model} modelinde çalışır. Çalıştırmak, görev bitene kadar {model} modelini yükler, ardından önceki modelinizi geri getirir.",
+      description: "“{title}” görevi şu anda yüklü olmayan {model} modelinde çalışır. Çalıştırmak, görev bitene kadar {model} modelini yükler, ardından önceki modelinizi geri getirir.",
       always: "Bir daha sorma. Yalnızca ben Unsloth'tan uzaktayken geçiş yap.",
       notNow: "Şimdi değil",
       load: "Yükle ve çalıştır",
@@ -5433,8 +4924,7 @@ export const tr = {
       open: "Aç",
       view: "Görüntüle",
     },
-    notificationBody:
-      "Zamanlanmış göreviniz tamamlandı. Yanıtı okumak için Unsloth'u açın.",
+    notificationBody: "Zamanlanmış göreviniz tamamlandı. Yanıtı okumak için Unsloth'u açın.",
   },
   library: {
     tabs: {
@@ -5515,25 +5005,19 @@ export const tr = {
       },
       empty: {
         chatsTitle: "Henüz sohbet yok",
-        chatsDescription:
-          "Konuşmalarınız dosyalarınızdan ayrı olarak burada görünür.",
+        chatsDescription: "Konuşmalarınız dosyalarınızdan ayrı olarak burada görünür.",
         archivedTitle: "Arşivlenmiş öğe yok",
         archivedDescription: "Arşivlediğiniz sohbetler burada görünür.",
         sectionsTitle: "Henüz bölüm yok",
-        sectionsDescription:
-          "Bölümler, kenar çubuğundaki sohbetleri ve projeleri istediğiniz gibi gruplandırır.",
+        sectionsDescription: "Bölümler, kenar çubuğundaki sohbetleri ve projeleri istediğiniz gibi gruplandırır.",
         sectionTitle: "Bu bölümde henüz bir şey yok",
-        sectionDescription:
-          "Sohbetleri menülerinden buraya taşıyın veya bu bölümde yeni bir sohbet başlatın.",
+        sectionDescription: "Sohbetleri menülerinden buraya taşıyın veya bu bölümde yeni bir sohbet başlatın.",
       },
       dialog: {
         renameChat: "Sohbeti yeniden adlandır",
-        deleteChatDescription:
-          "Sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
-        deleteProjectDescription:
-          "Proje ve sohbetleri ({count}) kalıcı olarak silinecek. Bu işlem geri alınamaz.",
-        deleteFilesMany:
-          "Bu sohbetlerin oluşturduğu dosyaları ve korumalı alan klasörlerini de kaldır.",
+        deleteChatDescription: "Sohbet ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+        deleteProjectDescription: "Proje ve sohbetleri ({count}) kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+        deleteFilesMany: "Bu sohbetlerin oluşturduğu dosyaları ve korumalı alan klasörlerini de kaldır.",
         deleteProjectFilesLabel: "Proje çalışma alanı klasörünü sil",
         deleteProjectFiles: "Proje çalışma alanı klasörü diskten kaldırılacak.",
       },
@@ -5547,30 +5031,23 @@ export const tr = {
       },
       folder: {
         openChat: "Sohbet klasörünü aç",
-        openChatTitle:
-          "Bu sohbetin araç çağrılarının okuyup yazdığı klasörü açın",
+        openChatTitle: "Bu sohbetin araç çağrılarının okuyup yazdığı klasörü açın",
         openProject: "Proje klasörünü aç",
-        openProjectTitle:
-          "Bu projenin sohbetlerinin okuyup yazdığı klasörü açın",
-        chatHint:
-          "Bir sohbetin dosya klasörünü yalnızca masaüstü uygulaması açabilir. Tarayıcıda, dosyayı yazan araç sonucundan indirin.",
-        projectHint:
-          "Bir projenin klasörünü yalnızca masaüstü uygulaması açabilir. Tarayıcıda, dosyaları yazan araç sonuçlarından indirin.",
+        openProjectTitle: "Bu projenin sohbetlerinin okuyup yazdığı klasörü açın",
+        chatHint: "Bir sohbetin dosya klasörünü yalnızca masaüstü uygulaması açabilir. Tarayıcıda, dosyayı yazan araç sonucundan indirin.",
+        projectHint: "Bir projenin klasörünü yalnızca masaüstü uygulaması açabilir. Tarayıcıda, dosyaları yazan araç sonuçlarından indirin.",
         manyFolders: "Bu sohbet birden fazla klasöre yazdı.",
-        manyFoldersDescription:
-          "Bir taşımanın her iki tarafında da araç çalıştırdı; bu nedenle klasörü bunun yerine bir araç kartından açın.",
+        manyFoldersDescription: "Bir taşımanın her iki tarafında da araç çalıştırdı; bu nedenle klasörü bunun yerine bir araç kartından açın.",
         chatFailed: "Sohbet klasörü açılamadı.",
         projectFailed: "Proje klasörü açılamadı.",
         chatMissing: "Bu sohbetin henüz bir klasörü yok.",
         projectMissing: "Bu projenin henüz bir klasörü yok.",
         missingDescription: "Bir araç ilk kez dosya yazdığında oluşturulur.",
         upload: "Sohbet klasörüne yükle",
-        uploadTitle:
-          "Bu sohbetin araç çağrılarının okuyup yazdığı klasöre dosya ekleyin",
+        uploadTitle: "Bu sohbetin araç çağrılarının okuyup yazdığı klasöre dosya ekleyin",
         uploaded: "{name} sohbet klasörüne eklendi",
         uploadedMany: "{count} dosya sohbet klasörüne eklendi",
-        uploadedDescription:
-          "Bu sohbetteki araçlar artık bunları açabilir. Dosyalar konuşmaya eklenmez.",
+        uploadedDescription: "Bu sohbetteki araçlar artık bunları açabilir. Dosyalar konuşmaya eklenmez.",
         uploadExists: "{name} zaten sohbet klasöründe",
         uploadExistsMany: "{count} dosya zaten sohbet klasöründe",
         replace: "Değiştir",
@@ -5579,26 +5056,19 @@ export const tr = {
     },
     empty: {
       suggestedTitle: "Kitaplığınız boş",
-      suggestedDescription:
-        "Sohbetlerde yüklediğiniz veya oluşturduğunuz dosyalar burada görünür.",
+      suggestedDescription: "Sohbetlerde yüklediğiniz veya oluşturduğunuz dosyalar burada görünür.",
       favoritesTitle: "Henüz sık kullanılan yok",
-      favoritesDescription:
-        "Dosyaları burada hızlıca bulmak için sık kullanılanlarınıza ekleyin.",
+      favoritesDescription: "Dosyaları burada hızlıca bulmak için sık kullanılanlarınıza ekleyin.",
       foldersTitle: "İlk klasörünüzü oluşturun",
-      foldersDescription:
-        "Kitaplığınızdaki öğeleri düzenlemek için klasörler oluşturun.",
+      foldersDescription: "Kitaplığınızdaki öğeleri düzenlemek için klasörler oluşturun.",
       imagesTitle: "Henüz görsel yok",
-      imagesDescription:
-        "Yüklediğiniz veya oluşturduğunuz görseller burada görünür.",
+      imagesDescription: "Yüklediğiniz veya oluşturduğunuz görseller burada görünür.",
       videosTitle: "Henüz video yok",
-      videosDescription:
-        "Yüklediğiniz veya oluşturduğunuz videolar burada görünür.",
+      videosDescription: "Yüklediğiniz veya oluşturduğunuz videolar burada görünür.",
       audioTitle: "Henüz ses yok",
-      audioDescription:
-        "Ses sayfasında oluşturduğunuz konuşmalar, müzikler ve ayrıştırılmış parçalar burada görünür.",
+      audioDescription: "Ses sayfasında oluşturduğunuz konuşmalar, müzikler ve ayrıştırılmış parçalar burada görünür.",
       modelsTitle: "Henüz ince ayarlı model yok",
-      modelsDescription:
-        "Unsloth'ta eğittiğiniz veya dışa aktardığınız modeller burada görünür.",
+      modelsDescription: "Unsloth'ta eğittiğiniz veya dışa aktardığınız modeller burada görünür.",
       createFolder: "Klasör oluştur",
       generateImage: "Görsel oluştur",
       generateVideo: "Video oluştur",
@@ -5607,8 +5077,7 @@ export const tr = {
       uploadFiles: "Dosya yükle",
       dropHere: "veya dosyaları buraya bırakın",
       noMatchesTitle: "Eşleşme yok",
-      noMatchesDescription:
-        "Farklı bir arama deneyin veya filtreleri temizleyin.",
+      noMatchesDescription: "Farklı bir arama deneyin veya filtreleri temizleyin.",
       loadErrorTitle: "Kitaplığınız yüklenemedi",
       loadErrorFallback: "Bir sorun oluştu.",
       tryAgain: "Yeniden dene",
@@ -5722,12 +5191,9 @@ export const tr = {
       renameFile: "Dosyayı yeniden adlandır",
       deleteTitle: "“{name}” silinsin mi?",
       deleteManyTitle: "{count} öğe silinsin mi?",
-      deleteManyDescription:
-        "Dosyalar bulundukları yerden silinir. Silinen bir klasörün içindeki her şey bir üst düzeye taşınır.",
-      deleteFolderIntoParent:
-        "İçindeki her şey “{folder}” klasörüne taşınır. Hiçbir dosya silinmez.",
-      deleteFolderIntoLibrary:
-        "İçindeki her şey Kitaplığınıza taşınır. Hiçbir dosya silinmez.",
+      deleteManyDescription: "Dosyalar bulundukları yerden silinir. Silinen bir klasörün içindeki her şey bir üst düzeye taşınır.",
+      deleteFolderIntoParent: "İçindeki her şey “{folder}” klasörüne taşınır. Hiçbir dosya silinmez.",
+      deleteFolderIntoLibrary: "İçindeki her şey Kitaplığınıza taşınır. Hiçbir dosya silinmez.",
       deleteUpload: "Bu işlem dosyayı kalıcı olarak siler.",
       deleteAttachment: "Dosya, eklendiği sohbetten de kaldırılır.",
       deleteImage: "Görseller galerinizden de kaldırılır.",
@@ -5736,8 +5202,7 @@ export const tr = {
       deleteSandbox: "Onu oluşturan sohbetten de kaldırılır.",
       deleteModel: "Bu işlem modeli diskten kalıcı olarak siler.",
       unsavedTitle: "Değişiklikleriniz kaydedilmedi",
-      unsavedDescription:
-        "{reason} Yeniden deneyin veya dosyayı kapatmak için değişikliklerinizi atın.",
+      unsavedDescription: "{reason} Yeniden deneyin veya dosyayı kapatmak için değişikliklerinizi atın.",
       keepEditing: "Düzenlemeye devam et",
       discardChanges: "Değişiklikleri at",
     },
@@ -5756,18 +5221,15 @@ export const tr = {
       emptyDocument: "Bu dosya boş.",
       cannotPreview: "Bu dosya burada önizlenemiyor. Açmak için indirin.",
       noPreview: "Bu dosya türü için önizleme yok.",
-      tooLargeToPreview:
-        "Bu dosya burada önizlenemeyecek kadar büyük. Açmak için indirin.",
+      tooLargeToPreview: "Bu dosya burada önizlenemeyecek kadar büyük. Açmak için indirin.",
       startWriting: "Yazmaya başlayın…",
       type: "Tür",
       baseModel: "Temel model",
       size: "Boyut",
       location: "Konum",
       unknown: "Bilinmiyor",
-      readOnlyUtf16:
-        "Bu dosya geçerli bir UTF-16 metni olmadığından burada salt okunur olarak açılır.",
-      readOnlyNotUtf8:
-        "Bu dosya UTF-8 metni olmadığından burada salt okunur olarak açılır. Bazı karakterler doğru görünmeyebilir.",
+      readOnlyUtf16: "Bu dosya geçerli bir UTF-16 metni olmadığından burada salt okunur olarak açılır.",
+      readOnlyNotUtf8: "Bu dosya UTF-8 metni olmadığından burada salt okunur olarak açılır. Bazı karakterler doğru görünmeyebilir.",
     },
     viewer: {
       scale: "Ölçek",
@@ -5827,8 +5289,7 @@ export const tr = {
       downloadFailed: "İndirilemedi: {name}",
       downloadManyFailed: "Dosyalar indirilemedi",
       downloadingMany: "{count} dosya indiriliyor",
-      downloadingManyDescription:
-        "Tarayıcınız sorarsa bu sitenin birden fazla dosya indirmesine izin verin.",
+      downloadingManyDescription: "Tarayıcınız sorarsa bu sitenin birden fazla dosya indirmesine izin verin.",
       preparingMany: "{count} dosya hazırlanıyor…",
       zipFileName: "Kitaplık dosyaları",
       nothingToChat: "Henüz sohbet edilecek bir şey yok",
@@ -5839,8 +5300,7 @@ export const tr = {
       attachedMany: "{count} dosya eklendi",
       skippedTooLarge: "{count} dosya eklenemeyecek kadar büyük.",
       skippedOverLimit: "{limit} dosya sınırını aşan {count} dosya daha.",
-      chatFilesWaiting:
-        "{count} dosya, bunları okuyabilen bir model yüklendiğinde eklenecek.",
+      chatFilesWaiting: "{count} dosya, bunları okuyabilen bir model yüklendiğinde eklenecek.",
       openFilesFailed: "Dosyalar açılamadı",
       editImageFailed: "Görsel düzenleme için açılamadı",
       speechModel: "{name} bir konuşma modelidir",
@@ -5867,10 +5327,8 @@ export const tr = {
   },
   exportDecision: {
     title: "Karar modeli",
-    description:
-      "{layout} karar modelleri, llama.cpp karar sunucusu için GGUF biçiminde dışa aktarılır. Bir veya daha fazla niceleme seçin.",
-    adapterNote:
-      "Bu kontrol noktası LoRA adaptörleri içerir; dönüştürmeden önce birleştirilirler.",
+    description: "{layout} karar modelleri, llama.cpp karar sunucusu için GGUF biçiminde dışa aktarılır. Bir veya daha fazla niceleme seçin.",
+    adapterNote: "Bu kontrol noktası LoRA adaptörleri içerir; dönüştürmeden önce birleştirilirler.",
     notEligibleTitle: "GGUF dışa aktarma kullanılamıyor",
     ggufOnly: "Karar modelleri yalnızca GGUF biçiminde dışa aktarılır",
     existing: "Zaten dışa aktarıldı: {quantizations}",
@@ -5888,8 +5346,7 @@ export const tr = {
     typeScore: "Puan",
     aboutNoul: "Evet olasılığıyla birlikte evet veya hayır yanıtı verir.",
     aboutChoice: "Her biri için bir olasılıkla, listeden bir seçenek seçer.",
-    aboutScore:
-      "Durumu, en düşükten başlayan düzeylerden oluşan bir ölçekte derecelendirir.",
+    aboutScore: "Durumu, en düşükten başlayan düzeylerden oluşan bir ölçekte derecelendirir.",
     model: "Karar modeli",
     defaultModel: "Varsayılan ({model})",
     layaModel: "Laya {model}",
@@ -5897,8 +5354,7 @@ export const tr = {
     modelReady: "Hazır",
     modelLoading: "Yükleniyor",
     modelNotLoaded: "İlk çalıştırmada yüklenir",
-    connectionNotDefault:
-      "Önce bunu Ayarlar > API bölümünde Karar API modeli olarak ayarlayın.",
+    connectionNotDefault: "Önce bunu Ayarlar > API bölümünde Karar API modeli olarak ayarlayın.",
     question: "Soru",
     questionHelp: "Modelin neye karar vermesi gerektiği.",
     result: "Sonuç",
@@ -5909,8 +5365,7 @@ export const tr = {
     stateHelp: "Karar verilecek metin. Düz metin veya JSON.",
     criteria: "Ölçütler",
     criteriaNoulHelp: "İsteğe bağlı. Neyin evet, neyin hayır sayılacağı.",
-    criteriaChoiceHelp:
-      "Her biri kısa bir açıklamaya sahip, aralarından seçim yapılacak seçenekler.",
+    criteriaChoiceHelp: "Her biri kısa bir açıklamaya sahip, aralarından seçim yapılacak seçenekler.",
     criteriaScoreHelp: "Ölçeğin düzeyleri, en düşükten başlayarak.",
     yesWhen: "Evet, şu durumda",
     noWhen: "Hayır, şu durumda",
@@ -5974,21 +5429,16 @@ export const tr = {
       noneLoaded: "Yüklü model yok",
       noneLoadedDetail: "Yüklediğiniz modeller burada görünür.",
       otherAccount: "Başka bir hesap tarafından kullanılıyor",
-      otherAccountDetail:
-        "Bellek, göremediğiniz bir model tarafından tutuluyor",
-      toastStillResident:
-        "“{model}” çıkarılırken yüklendiği için hâlâ bellek kullanıyor. Belleği serbest bırakmak için yeniden çıkarın.",
-      toastUnverified:
-        "{model} modelinin bellekten kaldırılması istendi ancak çalışma zamanı bunu onaylamadı. Birazdan kartı kontrol edin.",
+      otherAccountDetail: "Bellek, göremediğiniz bir model tarafından tutuluyor",
+      toastStillResident: "“{model}” çıkarılırken yüklendiği için hâlâ bellek kullanıyor. Belleği serbest bırakmak için yeniden çıkarın.",
+      toastUnverified: "{model} modelinin bellekten kaldırılması istendi ancak çalışma zamanı bunu onaylamadı. Birazdan kartı kontrol edin.",
       toastAlreadyFree: "{model} zaten yüklü değildi.",
-      toastReplaced:
-        "{model} artık yüklü değil. Yerini “{resident}” aldı ve ona dokunulmadı.",
+      toastReplaced: "{model} artık yüklü değil. Yerini “{resident}” aldı ve ona dokunulmadı.",
       toastEjected: "Çıkarıldı: {model}",
       toastFailed: "Çıkarılamadı: {model}",
     },
     monitor: {
-      dragHandleLabel:
-        "Canlı izleyiciyi taşıyın. Ok tuşları onu kaydırır, çift tıklama sıfırlar.",
+      dragHandleLabel: "Canlı izleyiciyi taşıyın. Ok tuşları onu kaydırır, çift tıklama sıfırlar.",
       resizeHint: "Genişliği değiştirmek için bir kenarı veya köşeyi sürükleyin. Çift tıklama sıfırlar.",
       reconnecting: "Yeniden bağlanılıyor...",
     },
@@ -6009,8 +5459,7 @@ export const tr = {
     oldestFirst: "Önce en eski",
     today: "Bugün",
     yesterday: "Dün",
-    emptyDescription:
-      "Bir proje, ilgili sohbetleri içindeki her sohbetin kullanabileceği ortak talimatlar ve kaynaklarla bir arada tutar.",
+    emptyDescription: "Bir proje, ilgili sohbetleri içindeki her sohbetin kullanabileceği ortak talimatlar ve kaynaklarla bir arada tutar.",
     createFirst: "İlk projenizi oluşturun",
     noMatches: "Aramanızla eşleşen proje yok.",
     clearSearch: "Aramayı temizle",
@@ -6032,16 +5481,14 @@ export const tr = {
     renameChat: "Sohbeti yeniden adlandır",
     chatName: "Sohbet adı",
     deleteChat: "Sohbeti sil",
-    deleteChatDescription:
-      "“{name}” sohbeti ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+    deleteChatDescription: "“{name}” sohbeti ve mesajları kalıcı olarak silinecek. Bu işlem geri alınamaz.",
     importChats: "Sohbetleri içe aktar",
     importDestination: "{name} öğesinin içe aktarılacağı yeri seçin:",
     selectDestination: "Hedef seçin",
     recents: "Son Kullanılanlar",
     import: "İçe aktar",
     deleteProject: "Projeyi sil",
-    deleteProjectDescription:
-      "“{name}” projesi ve tüm sohbetleri kalıcı olarak silinecek. Bu işlem geri alınamaz.",
+    deleteProjectDescription: "“{name}” projesi ve tüm sohbetleri kalıcı olarak silinecek. Bu işlem geri alınamaz.",
     deleteProjectFiles: "Proje çalışma alanı klasörü diskten kaldırılacak.",
     deleteAll: "Tümünü sil",
     projectFallback: "proje",
@@ -6067,37 +5514,29 @@ export const tr = {
     currentPassword: "Geçerli parola",
     newPassword: "Yeni parola",
     confirmPassword: "Parolayı onayla",
-    setupCodeHint:
-      "İlk kez mi oturum açıyorsunuz? Yöneticinizin size verdiği kurulum kodunu parola olarak yapıştırın.",
-    ownerHint:
-      "Kurulum sahibi misiniz? unsloth olarak veya Ayarlar > Hesaplar bölümünde gösterilen oturum açma adıyla oturum açın.",
-    currentSetupCodeHint:
-      "Az önce oturum açtığınız kurulum kodunu geçerli parola olarak yapıştırın.",
+    setupCodeHint: "İlk kez mi oturum açıyorsunuz? Yöneticinizin size verdiği kurulum kodunu parola olarak yapıştırın.",
+    ownerHint: "Kurulum sahibi misiniz? unsloth olarak veya Ayarlar > Hesaplar bölümünde gösterilen oturum açma adıyla oturum açın.",
+    currentSetupCodeHint: "Az önce oturum açtığınız kurulum kodunu geçerli parola olarak yapıştırın.",
     minLength: "En az 8 karakter olmalıdır.",
     ensureMatch: "Lütfen parolaların eşleştiğinden emin olun.",
     noSpaces: "Yeni parola boşluk içeremez.",
     currentTooShort: "Geçerli parola en az 8 karakter olmalıdır.",
-    setupInitFailed:
-      "Kurulum başlatılamadı. Sayfayı yeniden yükleyip tekrar deneyin.",
+    setupInitFailed: "Kurulum başlatılamadı. Sayfayı yeniden yükleyip tekrar deneyin.",
     newTooShort: "Yeni parola en az 8 karakter olmalıdır.",
     mismatch: "Parolalar eşleşmiyor.",
     mustDiffer: "Yeni parola geçerli parolanızdan farklı olmalıdır.",
     pleaseWait: "Lütfen bekleyin...",
     continueAsOwner: "Sahip olarak devam et",
     signInWithUsername: "Kullanıcı adınız ve parolanızla oturum açın.",
-    bootstrapping:
-      "Kimlik doğrulama, varsayılan yönetici hesabını hâlâ hazırlıyor.",
-    signInToChange:
-      "Parolayı değiştirmek için önceden tanımlanmış kimlik bilgileriyle bir kez oturum açın.",
+    bootstrapping: "Kimlik doğrulama, varsayılan yönetici hesabını hâlâ hazırlıyor.",
+    signInToChange: "Parolayı değiştirmek için önceden tanımlanmış kimlik bilgileriyle bir kez oturum açın.",
     alreadyUpdated: "Parola zaten güncellendi. Giriş ekranını kullanın.",
     busy: "Unsloth meşgul. Birazdan tekrar deneyin.",
     updateFailed: "Parola güncellenemedi.",
     loadFailed: "Yüklenemedi.",
     failed: "Kimlik doğrulama başarısız oldu.",
-    shuttingDown:
-      "Bu örnek kapatılıyor: ağ üzerinden erişilebilir durumdaydı ve varsayılan parolası hiç değiştirilmedi.",
-    shutdownCountdown:
-      "Bu örnek ağ üzerinden erişilebilir ve hâlâ varsayılan parolasını kullanıyor; bu nedenle {time} içinde kapanacak. Burada bir parola belirlemek çalışmaya devam etmesini sağlar.",
+    shuttingDown: "Bu örnek kapatılıyor: ağ üzerinden erişilebilir durumdaydı ve varsayılan parolası hiç değiştirilmedi.",
+    shutdownCountdown: "Bu örnek ağ üzerinden erişilebilir ve hâlâ varsayılan parolasını kullanıyor; bu nedenle {time} içinde kapanacak. Burada bir parola belirlemek çalışmaya devam etmesini sağlar.",
   },
   routes: {
     chat: "Sohbet",
@@ -6111,21 +5550,15 @@ export const tr = {
     blockedTitle: "Özel kod engellendi",
     enableTitle: "Bu model için özel kod etkinleştirilsin mi?",
     thisModel: "Bu model",
-    unsafeBody:
-      "{model}, Hugging Face güvenlik taramasının güvenli değil olarak işaretlediği dosyalar içeriyor (örneğin, model yüklendiğinde kod çalıştıracak kötü amaçlı bir pickle). Bu model yüklenemez. İşaretlenen dosyalar hiç indirilmedi.",
-    unsafeBodyFromProvider:
-      "{provider} kaynağındaki {model}, Hugging Face güvenlik taramasının güvenli değil olarak işaretlediği dosyalar içeriyor (örneğin, model yüklendiğinde kod çalıştıracak kötü amaçlı bir pickle). Bu model yüklenemez. İşaretlenen dosyalar hiç indirilmedi.",
+    unsafeBody: "{model}, Hugging Face güvenlik taramasının güvenli değil olarak işaretlediği dosyalar içeriyor (örneğin, model yüklendiğinde kod çalıştıracak kötü amaçlı bir pickle). Bu model yüklenemez. İşaretlenen dosyalar hiç indirilmedi.",
+    unsafeBodyFromProvider: "{provider} kaynağındaki {model}, Hugging Face güvenlik taramasının güvenli değil olarak işaretlediği dosyalar içeriyor (örneğin, model yüklendiğinde kod çalıştıracak kötü amaçlı bir pickle). Bu model yüklenemez. İşaretlenen dosyalar hiç indirilmedi.",
     customCode: "{model}, deposunda özel Python kodu bildiriyor. {note}",
-    customCodeFromProvider:
-      "{provider} kaynağındaki {model}, deposunda özel Python kodu bildiriyor. {note}",
-    blockedNote:
-      "Bir güvenlik taraması KRİTİK sorunlar işaretlediği için etkinleştirilemez.",
-    reviewNote:
-      "Aşağıdaki güvenlik taramasını inceleyin. Yalnızca model kaynağına güveniyorsanız devam edin.",
+    customCodeFromProvider: "{provider} kaynağındaki {model}, deposunda özel Python kodu bildiriyor. {note}",
+    blockedNote: "Bir güvenlik taraması KRİTİK sorunlar işaretlediği için etkinleştirilemez.",
+    reviewNote: "Aşağıdaki güvenlik taramasını inceleyin. Yalnızca model kaynağına güveniyorsanız devam edin.",
     trustNote: "Yalnızca model kaynağına güveniyorsanız devam edin.",
     flaggedIntro: "Otomatik tarayıcımız şunlar dahil sorunlar işaretledi:",
-    nothingFlagged:
-      "Otomatik tarayıcımız endişe verici bir dosya işaretlemedi, ancak lütfen yine de kontrol edin.",
+    nothingFlagged: "Otomatik tarayıcımız endişe verici bir dosya işaretlemedi, ancak lütfen yine de kontrol edin.",
     unscannedTitle: "Model dosyaları taranamadı",
     unscannedBody: "{model}, yüklenirken kod çalıştırabilen pickle ağırlıkları içeriyor ve bunlar için kötü amaçlı yazılım taraması yok, bu yüzden yüklenemiyor. {note}",
     unscannedIntro: "Taranamayan dosyalar:",
@@ -6156,16 +5589,12 @@ export const tr = {
     openChangelog: "Değişiklik günlüğünü aç",
     retry: "Yeniden dene",
     loadingChanges: "Yeni değişiklikler yükleniyor...",
-    customLlamaRepo:
-      "Bu kurulum özel bir llama.cpp deposunu izlediğinden değişiklikleri karşılaştırılamıyor.",
-    noItemisedNotes:
-      "Bu derleme, madde madde sürüm notlarından önceye ait olduğundan değişiklikleri karşılaştırılamıyor.",
+    customLlamaRepo: "Bu kurulum özel bir llama.cpp deposunu izlediğinden değişiklikleri karşılaştırılamıyor.",
+    noItemisedNotes: "Bu derleme, madde madde sürüm notlarından önceye ait olduğundan değişiklikleri karşılaştırılamıyor.",
     compareFailed: "Bu sürümler karşılaştırılamadı.",
-    llamaChangesLabel:
-      "{from} sürümünden {to} sürümüne yeni llama.cpp değişiklikleri",
+    llamaChangesLabel: "{from} sürümünden {to} sürümüne yeni llama.cpp değişiklikleri",
     showingChanges: "{total} değişiklikten {shown} tanesi gösteriliyor",
-    noCarriedChanges:
-      "Bu derleme için listelenen yeni aktarılmış değişiklik yok.",
+    noCarriedChanges: "Bu derleme için listelenen yeni aktarılmış değişiklik yok.",
     notesFor: "Sürüm notları: {release}",
     notesForVersion: "{version} sürümünün sürüm notları",
     notesTruncated: "Notlar kısaltıldı. Sürüm notlarının tamamına bakın.",
@@ -6186,8 +5615,7 @@ export const tr = {
     useDefaultLocation: "Varsayılanı kullan",
     longPaths: {
       title: "Windows izin isteyecek",
-      approve:
-        "Derlenmiş çekirdekler için uzun dosya yollarını açmak üzere {tool} aracını bir kez onaylayın.",
+      approve: "Derlenmiş çekirdekler için uzun dosya yollarını açmak üzere {tool} aracını bir kez onaylayın.",
       waiting: "Windows izni bekleniyor...",
     },
     skip: "Atla",
@@ -6216,8 +5644,7 @@ export const tr = {
     repair: {
       upgrading: "Tam kuruluma yükseltiliyor...",
       gettingReady: "Her şey hazırlanıyor...",
-      upgradingDetail:
-        "Bu makinenin GPU'su için PyTorch ve kütüphaneleri indiriliyor. Bu işlem birkaç dakika sürebilir.",
+      upgradingDetail: "Bu makinenin GPU'su için PyTorch ve kütüphaneleri indiriliyor. Bu işlem birkaç dakika sürebilir.",
       wontTakeLong: "Bu uzun sürmeyecek.",
       upgradeFailed: "Tam kuruluma yükseltilemedi",
       updateFailed: "Güncelleme başarısız oldu",
@@ -6244,8 +5671,7 @@ export const tr = {
     diagnostics: {
       copy: "Tanılamayı Kopyala",
       copying: "Kopyalanıyor...",
-      clipboardFailed:
-        "Panoya kopyalanamadı. Aşağıdaki tanılama bilgilerini seçip kopyalayın.",
+      clipboardFailed: "Panoya kopyalanamadı. Aşağıdaki tanılama bilgilerini seçip kopyalayın.",
       copyFailed: "Tanılama bilgileri kopyalanamadı: {error}",
     },
   },
@@ -6255,8 +5681,7 @@ export const tr = {
     installing: "Güncelleme yükleniyor...",
     failed: "Güncelleme başarısız oldu",
     updating: "Güncelleniyor...",
-    updatingBackendDetail:
-      "Bu işlem birkaç dakika sürebilir. Uygulamayı kapatmayın.",
+    updatingBackendDetail: "Bu işlem birkaç dakika sürebilir. Uygulamayı kapatmayın.",
     percentDownloaded: "%{percent} indirildi",
     restartShortly: "Uygulama birazdan yeniden başlatılacak.",
     failedDetail: "Güncelleme sırasında bir sorun oluştu.",
@@ -6267,8 +5692,7 @@ export const tr = {
       dismiss: "Uygulama güncelleme bildirimini kapat",
       failedTitle: "Uygulama güncellemesi başarısız oldu",
       newVersion: "Yeni Unsloth sürümü",
-      backendRecovered:
-        "Arka uç kurtarıldı. Tanılama bilgileri hâlâ kullanılabilir.",
+      backendRecovered: "Arka uç kurtarıldı. Tanılama bilgileri hâlâ kullanılabilir.",
       linuxManual: "Linux paketini kurmak için GitHub sürüm sayfasını açın",
       available: "Yeni bir uygulama güncellemesi var",
       showNotes: "Sürüm notlarını göster",
@@ -6317,10 +5741,8 @@ export const tr = {
     bundleTitle: "{count} çalışma zamanı güncellemesi",
     newBackend: "Yeni çalışma zamanı arka ucu",
     newUpdate: "Yeni çalışma zamanı güncellemesi",
-    hideUpdate:
-      "Unsloth yeniden açılana kadar {component} güncellemesini gizle",
-    hideUpdates:
-      "Unsloth yeniden açılana kadar {components} güncellemelerini gizle",
+    hideUpdate: "Unsloth yeniden açılana kadar {component} güncellemesini gizle",
+    hideUpdates: "Unsloth yeniden açılana kadar {components} güncellemelerini gizle",
     whatsNew: "Yenilikler",
     hideWhatsNew: "Yenilikleri gizle",
     later: "Daha sonra",
@@ -6383,4 +5805,4 @@ export const tr = {
       inRam: "{amount} RAM'de",
     },
   },
-} satisfies DeepPartialMessageTree<typeof en>;
+} as const;

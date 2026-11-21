@@ -14,6 +14,8 @@ import {
   ApiIcon,
   Clock01Icon,
   AiTranslateIcon,
+  LayerIcon,
+  ZapIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ProjectIcon } from "@/lib/project-icon";
@@ -41,6 +43,9 @@ const ITEM_META: Record<
   hub: { icon: DashboardCircleIcon, labelKey: "shell.navigation.hub" },
   images: { icon: ImageIcon, labelKey: "shell.navigation.images" },
   train: { icon: TestTubeOutlineIcon, labelKey: "shell.navigation.train" },
+  merge: { icon: LayerIcon, labelKey: "shell.navigation.merge" },
+  scale: { icon: ZapIcon, labelKey: "shell.navigation.scale" },
+  labs: { icon: TestTubeOutlineIcon, labelKey: "shell.navigation.labs" },
   video: { icon: FlimSlateIcon, labelKey: "shell.navigation.video" },
   audio: { icon: AiSpeechIcon, labelKey: "shell.navigation.audio" },
   recipes: { icon: ChefHatIcon, labelKey: "shell.navigation.recipes" },
