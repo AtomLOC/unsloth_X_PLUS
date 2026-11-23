@@ -47,6 +47,13 @@ export function getDatasetStreamingHardBlockers(
   return blockers.filter((blocker) => !streamingBlockerClearsOnEnable(blocker));
 }
 
+/** Whether the Streaming control is usable. The one predicate the panel reads. */
+export function isDatasetStreamingEnabled(
+  blockers: readonly DatasetStreamingBlocker[],
+): boolean {
+  return getDatasetStreamingHardBlockers(blockers).length === 0;
+}
+
 export function getFileExtension(fileName: string): string {
   const extensionStart = fileName.lastIndexOf(".");
   return extensionStart >= 0

@@ -16,6 +16,7 @@ registerBundlerResolver();
 const {
   getDatasetStreamingBlockers,
   getDatasetStreamingHardBlockers,
+  isDatasetStreamingEnabled,
   streamingBlockerClearsOnEnable,
 } = await import("../src/features/studio/sections/dataset-panel-helpers.ts");
 const { initialTrainingConfigState, streamingCompatiblePatch } = await import(
@@ -109,4 +110,22 @@ test("only the two auto-cleared reasons are soft", () => {
   for (const reason of hard) {
     assert.equal(streamingBlockerClearsOnEnable(reason), false);
   }
+});
+
+test("the control's own predicate ignores auto-cleared reasons", () => {
+  // The component reads this, not the raw list: reverting it to "blockers.length === 0"
+  // would disable the checkbox on a fresh form again, and every other test still passes.
+  assert.equal(isDatasetStreamingEnabled([]), true);
+  assert.equal(isDatasetStreamingEnabled(["trainOnCompletions"]), true);
+  assert.equal(isDatasetStreamingEnabled(["evalSplit"]), true);
+  assert.equal(
+    isDatasetStreamingEnabled(["trainOnCompletions", "evalSplit"]),
+    true,
+  );
+  assert.equal(isDatasetStreamingEnabled(["maxSteps"]), false);
+  assert.equal(isDatasetStreamingEnabled(["source"]), false);
+  assert.equal(
+    isDatasetStreamingEnabled(["trainOnCompletions", "visionModel"]),
+    false,
+  );
 });

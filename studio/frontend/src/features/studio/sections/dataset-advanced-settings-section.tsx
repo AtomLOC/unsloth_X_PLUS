@@ -10,6 +10,7 @@ import { DatasetAdvancedSettings } from "./dataset-advanced-settings";
 import {
   getDatasetStreamingBlockers,
   getDatasetStreamingHardBlockers,
+  isDatasetStreamingEnabled,
 } from "./dataset-panel-helpers";
 
 export function DatasetAdvancedSettingsSection() {
@@ -79,8 +80,8 @@ export function DatasetAdvancedSettingsSection() {
   // Only the blockers the toggle cannot clear itself may disable it. Training on
   // completions (on by default) and an evaluation split are cleared by
   // setDatasetStreaming, so treating them as unsupported left the checkbox dead.
-  const isStreamingSupported =
-    getDatasetStreamingHardBlockers(streamingBlockers).length === 0;
+  const hardBlockers = getDatasetStreamingHardBlockers(streamingBlockers);
+  const isStreamingSupported = isDatasetStreamingEnabled(streamingBlockers);
 
   useEffect(() => {
     if (!datasetStreaming || isStreamingSupported) {
@@ -113,7 +114,9 @@ export function DatasetAdvancedSettingsSection() {
       setDatasetSliceEnd={setDatasetSliceEnd}
       setDatasetSliceStart={setDatasetSliceStart}
       setDatasetStreaming={setDatasetStreaming}
-      streamingBlockers={streamingBlockers}
+      // Only the reasons that actually disable it: the rest are cleared on enable, so
+      // listing them here would tell the user to do work the toggle already does.
+      streamingBlockers={hardBlockers}
     />
   );
 }

@@ -1705,7 +1705,12 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
           });
           setUserEdit({
             trainOnCompletions,
-            trainingToggleChoices: { ...state.trainingToggleChoices, trainOnCompletions },
+            // The reconciled value, not the requested one: recording the request would let
+            // resolveTrainingToggleDefaults turn completions back on once streaming is off.
+            trainingToggleChoices: {
+              ...state.trainingToggleChoices,
+              trainOnCompletions: streamingPatch.trainOnCompletions ?? trainOnCompletions,
+            },
             trainOnCompletionsDefaultPendingFor: null,
             ...streamingPatch,
           });
@@ -1769,11 +1774,29 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
           _trainingMethodEditGeneration += 1;
           _trainOnCompletionsManuallySet = true;
           _trainOnCompletionsExplicitModel = selections.selectedModel;
+          // A replayed recipe that predates a streaming rule (or was hand-edited) can carry
+          // datasetStreaming beside completion masking or a shared eval split; the backend
+          // refuses the pair, so reconcile it here as the toggles do.
+          const restored = {
+            ...hyperparameters,
+            ...selections,
+          };
+          const streamingPatch = streamingCompatiblePatch({
+            ...get(),
+            ...restored,
+          });
+          const restoredCompletions =
+            streamingPatch.trainOnCompletions ??
+            (typeof config.train_on_completions === "boolean"
+              ? config.train_on_completions
+              : undefined);
           setUserEdit({
             ...hyperparameters,
             trainingToggleChoices: {
               ...(typeof config.packing === "boolean" ? { packing: config.packing } : {}),
-              ...(typeof config.train_on_completions === "boolean" ? { trainOnCompletions: config.train_on_completions } : {}),
+              ...(restoredCompletions !== undefined
+                ? { trainOnCompletions: restoredCompletions }
+                : {}),
             },
             ...selections,
             earlyStoppingPatience: earlyStoppingPatienceFrom(
@@ -1791,7 +1814,10 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
               config.advanced,
               get().advanced,
             ),
+            // Last, so a replayed recipe's own values cannot undo the reconciliation.
+            ...streamingPatch,
           });
+          notifyStreamingCompat(streamingPatch);
           // Fetch capabilities without replacing the saved recipe.
           loadAndApplyModelDefaults(selections.selectedModel, {
             applyTrainingDefaults: false,

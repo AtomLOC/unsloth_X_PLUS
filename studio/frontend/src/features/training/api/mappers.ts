@@ -302,7 +302,8 @@ export function buildTrainingStartPayload(
     train_on_completions:
       isEmbedding || isDecision || isCpt || isRawText
         ? false
-        : config.trainOnCompletions,
+        // The backend refuses the pair, so no state can make a streaming payload carry it.
+        : config.trainOnCompletions && !config.datasetStreaming,
     finetune_vision_layers: config.finetuneVisionLayers,
     finetune_language_layers: config.finetuneLanguageLayers,
     finetune_attention_modules: config.finetuneAttentionModules,

@@ -21,6 +21,9 @@ const { recordedToasts } = await import("./helpers/store-stubs/toast.ts");
 const { useTrainingConfigStore } = await import(
   "../src/features/training/stores/training-config-store.ts"
 );
+const { buildTrainingStartPayload } = await import(
+  "../src/features/training/api/mappers.ts"
+);
 
 function resetTo(overrides: Record<string, unknown>): void {
   recordedToasts.length = 0;
@@ -67,6 +70,11 @@ test("enabling completions while streaming refuses the toggle, not the stream", 
   const state = useTrainingConfigStore.getState();
   assert.equal(state.datasetStreaming, true, "streaming stays on");
   assert.equal(state.trainOnCompletions, false, "the incompatible toggle is refused");
+  assert.equal(
+    state.trainingToggleChoices.trainOnCompletions,
+    false,
+    "the refusal is remembered, or the default would re-enable it later",
+  );
   assert.ok(
     recordedToasts.some((toast) => toast.message.includes("Adjusted for streaming")),
     "the refusal is explained instead of silently switching streaming off",
@@ -114,5 +122,44 @@ test("retiring the step count still turns streaming off, with the reason", () =>
   assert.ok(
     recordedToasts.some((toast) => toast.message.includes("Streaming turned off")),
     "the user is told why streaming went away",
+  );
+});
+
+test("a streaming payload can never carry completion masking", () => {
+  // Belt and braces at the wire boundary: whatever a future writer does to the store,
+  // the request the backend refuses must not be constructible.
+  resetTo({ ...STREAMING_READY, datasetStreaming: true, trainOnCompletions: true });
+
+  const payload = buildTrainingStartPayload(
+    useTrainingConfigStore.getState(),
+    null,
+  );
+
+  assert.equal(payload.dataset_streaming, true);
+  assert.equal(payload.train_on_completions, false);
+  assert.equal(payload.max_steps, 60);
+});
+
+test("replaying a stale recipe cannot resurrect the pair either", () => {
+  resetTo({ ...STREAMING_READY });
+
+  useTrainingConfigStore.getState().restoreRunConfig({
+    model_name: "unsloth/Llama-3.2-1B",
+    hf_dataset: "unsloth/alpaca-cleaned",
+    train_split: "train",
+    format_type: "alpaca",
+    // Hand-edited or pre-rule recipe: streaming and completions masking together.
+    dataset_streaming: true,
+    train_on_completions: true,
+    max_steps: 60,
+    num_epochs: 3,
+  } as never);
+
+  const state = useTrainingConfigStore.getState();
+  assert.equal(state.datasetStreaming, true, "the replay keeps streaming");
+  assert.equal(
+    state.trainOnCompletions,
+    false,
+    "the replay cannot carry completion masking beside streaming",
   );
 });
