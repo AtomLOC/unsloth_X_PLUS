@@ -7,7 +7,10 @@ import { toast } from "@/lib/toast";
 import { useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { DatasetAdvancedSettings } from "./dataset-advanced-settings";
-import { getDatasetStreamingBlockers } from "./dataset-panel-helpers";
+import {
+  getDatasetStreamingBlockers,
+  getDatasetStreamingHardBlockers,
+} from "./dataset-panel-helpers";
 
 export function DatasetAdvancedSettingsSection() {
   const t = useT();
@@ -58,6 +61,7 @@ export function DatasetAdvancedSettingsSection() {
       trainOnCompletions: state.trainOnCompletions,
     })),
   );
+  // Everything that is wrong right now, for the tooltip's reason list.
   const streamingBlockers = getDatasetStreamingBlockers({
     datasetEvalSplit,
     evalDataset,
@@ -72,7 +76,11 @@ export function DatasetAdvancedSettingsSection() {
     maxSteps,
     trainOnCompletions,
   });
-  const isStreamingSupported = streamingBlockers.length === 0;
+  // Only the blockers the toggle cannot clear itself may disable it. Training on
+  // completions (on by default) and an evaluation split are cleared by
+  // setDatasetStreaming, so treating them as unsupported left the checkbox dead.
+  const isStreamingSupported =
+    getDatasetStreamingHardBlockers(streamingBlockers).length === 0;
 
   useEffect(() => {
     if (!datasetStreaming || isStreamingSupported) {

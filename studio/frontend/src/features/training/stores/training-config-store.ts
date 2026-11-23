@@ -1695,12 +1695,21 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
         setTrainOnCompletions: (trainOnCompletions) => {
           _trainOnCompletionsManuallySet = true;
           _trainOnCompletionsExplicitModel = get().selectedModel;
+          const state = get();
+          // A streaming run cannot carry completion masking (the backend refuses the pair),
+          // so reconcile the toggle the same way setDatasetStreaming does -- refuse it with a
+          // toast -- instead of silently switching streaming off under the user.
+          const streamingPatch = streamingCompatiblePatch({
+            ...state,
+            trainOnCompletions,
+          });
           setUserEdit({
             trainOnCompletions,
-            trainingToggleChoices: { ...get().trainingToggleChoices, trainOnCompletions },
+            trainingToggleChoices: { ...state.trainingToggleChoices, trainOnCompletions },
             trainOnCompletionsDefaultPendingFor: null,
-            ...(trainOnCompletions ? { datasetStreaming: false } : {}),
+            ...streamingPatch,
           });
+          notifyStreamingCompat(streamingPatch);
         },
         setGradientCheckpointing: (gradientCheckpointing) =>
           setUserEdit({ gradientCheckpointing }),
@@ -1833,18 +1842,28 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
             config.training ?? {},
             "drafter",
           );
+          // A saved run or model config can carry the exact pair the backend refuses beside
+          // streaming: completions masking, or evaluation with no separate eval split. Reconcile
+          // it the way the toggles do, or Start is a guaranteed 422 for a streaming import.
+          const streamingPatch = streamingCompatiblePatch({
+            ...get(),
+            ...patch,
+          });
+          const completions =
+            streamingPatch.trainOnCompletions ?? patch.trainOnCompletions;
           setUserEdit((state) => {
             const importsCompletionsInCpt =
               state.trainingMethod === "cpt" &&
               patch.trainOnCompletions !== undefined;
             return {
               ...patch,
-              ...(patch.packing !== undefined || patch.trainOnCompletions !== undefined
+              ...streamingPatch,
+              ...(patch.packing !== undefined || completions !== undefined
                 ? {
                     trainingToggleChoices: {
                       ...state.trainingToggleChoices,
                       ...(patch.packing !== undefined ? { packing: patch.packing } : {}),
-                      ...(patch.trainOnCompletions !== undefined ? { trainOnCompletions: patch.trainOnCompletions } : {}),
+                      ...(completions !== undefined ? { trainOnCompletions: completions } : {}),
                     },
                   }
                 : {}),
@@ -1879,6 +1898,7 @@ export const useTrainingConfigStore = create<TrainingConfigStore>()(
                 : {}),
             };
           });
+          notifyStreamingCompat(streamingPatch);
         },
       };
     },

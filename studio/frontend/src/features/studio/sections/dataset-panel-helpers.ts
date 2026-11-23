@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright 2026-present the Unsloth AI Inc. team. All rights reserved. See /studio/LICENSE.AGPL-3.0
 
-import { hasSeparateStreamingEvalSplit } from "@/features/training";
+// The policy module, not the feature barrel: the barrel pulls the store, and with it the
+// toast/components layer, which a plain-node test cannot resolve.
+import { hasSeparateStreamingEvalSplit } from "@/features/training/stores/training-config-policy";
 import type { DatasetSource } from "@/types/training";
 
 const POSITIVE_INTEGER_PATTERN = /^\d+$/;
@@ -16,6 +18,34 @@ export type DatasetStreamingBlocker =
   | "embeddingModel"
   | "imageDataset"
   | "audioDataset";
+
+/**
+ * Blockers the streaming toggle clears itself.
+ *
+ * `setDatasetStreaming(true)` turns training on completions off and drops evaluation
+ * when it has no separate split, then says so in a toast. Listing these as reasons the
+ * control is unavailable made the auto-clear unreachable: `trainOnCompletions` defaults
+ * to true, so the checkbox was disabled on every fresh form and the only way to stream
+ * was to find that toggle in another panel first.
+ */
+const AUTO_CLEARED_BLOCKERS: ReadonlySet<DatasetStreamingBlocker> = new Set([
+  "trainOnCompletions",
+  "evalSplit",
+]);
+
+/** True for a blocker enabling streaming resolves on the user's behalf. */
+export function streamingBlockerClearsOnEnable(
+  blocker: DatasetStreamingBlocker,
+): boolean {
+  return AUTO_CLEARED_BLOCKERS.has(blocker);
+}
+
+/** The blockers that genuinely prevent streaming: the control stays disabled for these. */
+export function getDatasetStreamingHardBlockers(
+  blockers: readonly DatasetStreamingBlocker[],
+): DatasetStreamingBlocker[] {
+  return blockers.filter((blocker) => !streamingBlockerClearsOnEnable(blocker));
+}
 
 export function getFileExtension(fileName: string): string {
   const extensionStart = fileName.lastIndexOf(".");

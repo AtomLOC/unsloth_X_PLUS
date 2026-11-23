@@ -45,13 +45,30 @@ from loggers import get_logger
 logger = get_logger(__name__)
 
 
+def _stream_safe_column_names(dataset) -> list[str]:
+    """Column names for a dataset whose `column_names` may be None.
+
+    A streaming IterableDataset carries no features until something reads it, so
+    `column_names` is None and `list(None)` raises TypeError. Its sibling in
+    hub/utils/dataset_format.py has always fallen back to a one-row probe; this is the
+    same fallback for the export here.
+    """
+    names = getattr(dataset, "column_names", None)
+    if names is None:
+        features = getattr(dataset, "features", None)
+        if features:
+            return list(features.keys())
+        try:
+            first = next(iter(dataset))
+        except Exception:
+            return []
+        return list(first.keys()) if isinstance(first, dict) else []
+    return list(names)
+
+
 def check_dataset_format(dataset, is_vlm: bool = False) -> dict:
     """check whether frontend column mapping is required without processing the dataset."""
-    columns = (
-        list(dataset.column_names)
-        if hasattr(dataset, "column_names")
-        else list(next(iter(dataset)).keys())
-    )
+    columns = _stream_safe_column_names(dataset)
 
     multimodal_info = detect_multimodal_dataset(dataset)
     is_audio = multimodal_info.get("is_audio", False)
