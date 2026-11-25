@@ -169,7 +169,10 @@ def _untrainable_model_format_error(config: dict) -> str | None:
         return "GGUF models are inference-only and cannot be trained."
     if model_format == "adapter":
         # LoRA / CPT may continue from a saved adapter; full finetune still cannot (#13140).
-        # The embedding, decision and MLX runners wrap a fresh adapter; only the CUDA trainer continues one.
+        # The embedding and decision runners wrap a fresh adapter, so they still need a base.
+        # MLX is not one of them: unsloth-zoo's MLX trainer continues a saved adapter too (#16622),
+        # which is why the reference has no MLX clause here -- adding one refused exactly the runs
+        # that commit taught it to accept.
         if config.get("training_type") in (
             "LoRA/QLoRA",
             "Continued Pretraining",
@@ -177,7 +180,6 @@ def _untrainable_model_format_error(config: dict) -> str | None:
         ) and not (
             config.get("is_embedding", False)
             or config.get("is_decision", False)
-            or _uses_mlx_training_backend()
         ):
             from utils.paths import is_local_path
 

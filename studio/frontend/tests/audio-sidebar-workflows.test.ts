@@ -123,7 +123,14 @@ test("More opens Audio's workflows in a submenu that keeps the flyout open on th
     submenu,
     /className=\{cn\("gap-2\.5", active && "bg-accent\/60"\)\}/,
   );
-  assert.match(submenu, /<DropdownMenuSubContent \{\.\.\.contentProps\}/);
+  // Whitespace-tolerant: the spread moved onto its own line. The behaviour pinned is that
+  // contentProps reaches SubContent (it is what keeps the flyout open on the way in), not the layout
+  // of the JSX.
+  assert.match(
+    submenu,
+    /<DropdownMenuSubContent\s+\{\.\.\.contentProps\}/,
+    "contentProps must reach SubContent: it is what keeps the flyout open on the way in",
+  );
   assert.match(submenu, /tabs\.map/);
   assert.match(submenu, /onSelect=\{\(\) => onPick\(tab\.id\)\}/);
   assert.match(submenu, /current === tab\.id && "bg-accent\/60"/);
@@ -166,7 +173,7 @@ test("clicking Audio in More opens the page, and the open page keeps the row out
 
   assert.match(
     SIDEBAR,
-    /const \{ inline: inlineNavIds, overflow: overflowNavIds \} = placeNavRows\(\s*sidebarNav\.map\(\(item\) => \(\{ id: item\.id, pinned: navRowPinned\(item\) \}\)\),\s*navRows\.audio\.active \? "audio" : navRows\.images\.active \? "images" : null,\s*\);/,
+    /placeNavRows\(\s*sidebarNav\.map\(\(item\) => \(\{ id: item\.id, pinned: navRowPinned\(item\) \}\)\),\s*navRows\.audio\.active \? "audio" : navRows\.images\.active \? "images" : null,\s*\);/,
   );
 });
 

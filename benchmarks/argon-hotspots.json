@@ -1,0 +1,463 @@
+{
+  "tool": "profile_hotspots",
+  "timestamp": "2026-11-17T02:04:32",
+  "iterations": 8,
+  "warmup": 1,
+  "requests": 104,
+  "import_seconds": 2.59,
+  "profiled_wall_s": 1.65,
+  "statuses": {
+    "/api/health": 200,
+    "/api/auth/status": 200,
+    "/api/liveness": 200,
+    "/api/settings/hub": 200,
+    "/api/settings/caches": 200,
+    "/api/settings/multi-model": 200,
+    "/api/settings/remote-access": 200,
+    "/api/llama/architectures": 200,
+    "/api/llama/backend": 200,
+    "/api/models/local": 200,
+    "/api/inference/status": 200,
+    "/api/sandbox/capability": 200,
+    "/api/profile/stats": 200
+  },
+  "per_endpoint_median_ms": {
+    "/api/health": 12.05,
+    "/api/auth/status": 7.67,
+    "/api/liveness": 9.61,
+    "/api/settings/hub": 13.4,
+    "/api/settings/caches": 11.48,
+    "/api/settings/multi-model": 10.05,
+    "/api/settings/remote-access": 14.17,
+    "/api/llama/architectures": 15.37,
+    "/api/llama/backend": 25.79,
+    "/api/models/local": 23.73,
+    "/api/inference/status": 35.09,
+    "/api/sandbox/capability": 9.8,
+    "/api/profile/stats": 12.64
+  },
+  "per_endpoint_p95_ms": {
+    "/api/health": 15.92,
+    "/api/auth/status": 9.07,
+    "/api/liveness": 14.83,
+    "/api/settings/hub": 17.33,
+    "/api/settings/caches": 15.36,
+    "/api/settings/multi-model": 11.52,
+    "/api/settings/remote-access": 15.19,
+    "/api/llama/architectures": 16.56,
+    "/api/llama/backend": 30.62,
+    "/api/models/local": 26.01,
+    "/api/inference/status": 54.25,
+    "/api/sandbox/capability": 13.23,
+    "/api/profile/stats": 13.42
+  },
+  "top_cumulative": [
+    {
+      "function": "request",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\testclient.py",
+      "line": 493,
+      "primcalls": 104,
+      "calls": 108,
+      "tottime_ms": 0.85,
+      "cumtime_ms": 1649.511
+    },
+    {
+      "function": "request",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx2\\_client.py",
+      "line": 742,
+      "primcalls": 104,
+      "calls": 106,
+      "tottime_ms": 0.425,
+      "cumtime_ms": 1631.421
+    },
+    {
+      "function": "send",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx2\\_client.py",
+      "line": 948,
+      "primcalls": 104,
+      "calls": 105,
+      "tottime_ms": 0.453,
+      "cumtime_ms": 1613.254
+    },
+    {
+      "function": "_run_once",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\base_events.py",
+      "line": 1981,
+      "primcalls": 4122,
+      "calls": 4122,
+      "tottime_ms": 21.958,
+      "cumtime_ms": 1581.197
+    },
+    {
+      "function": "_send_handling_auth",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx2\\_client.py",
+      "line": 995,
+      "primcalls": 104,
+      "calls": 105,
+      "tottime_ms": 0.369,
+      "cumtime_ms": 1486.3
+    },
+    {
+      "function": "_send_handling_redirects",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx2\\_client.py",
+      "line": 1029,
+      "primcalls": 104,
+      "calls": 105,
+      "tottime_ms": 0.824,
+      "cumtime_ms": 1485.312
+    },
+    {
+      "function": "_send_single_request",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\httpx2\\_client.py",
+      "line": 1064,
+      "primcalls": 104,
+      "calls": 104,
+      "tottime_ms": 1.745,
+      "cumtime_ms": 1468.224
+    },
+    {
+      "function": "handle_request",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\testclient.py",
+      "line": 234,
+      "primcalls": 104,
+      "calls": 104,
+      "tottime_ms": 4.782,
+      "cumtime_ms": 1444.175
+    },
+    {
+      "function": "<method 'run' of '_contextvars.Context' objects>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 6233,
+      "calls": 6511,
+      "tottime_ms": 8.154,
+      "cumtime_ms": 1008.091
+    },
+    {
+      "function": "_run",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\asyncio\\events.py",
+      "line": 87,
+      "primcalls": 5983,
+      "calls": 5983,
+      "tottime_ms": 4.061,
+      "cumtime_ms": 770.884
+    },
+    {
+      "function": "_run_coro",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\anyio\\_core\\_tasks.py",
+      "line": 322,
+      "primcalls": 2007,
+      "calls": 2007,
+      "tottime_ms": 2.929,
+      "cumtime_ms": 648.034
+    },
+    {
+      "function": "_call_func",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\anyio\\from_thread.py",
+      "line": 242,
+      "primcalls": 2007,
+      "calls": 2007,
+      "tottime_ms": 4.002,
+      "cumtime_ms": 637.618
+    },
+    {
+      "function": "run_app",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\testclient.py",
+      "line": 362,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.836,
+      "cumtime_ms": 610.889
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\applications.py",
+      "line": 1160,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.575,
+      "cumtime_ms": 608.338
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\applications.py",
+      "line": 92,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.538,
+      "cumtime_ms": 607.763
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\middleware\\errors.py",
+      "line": 149,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.523,
+      "cumtime_ms": 607.225
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\auth\\x_api_key.py",
+      "line": 46,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.729,
+      "cumtime_ms": 606.702
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\utils\\remote_access_settings.py",
+      "line": 59,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 0.668,
+      "cumtime_ms": 605.296
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\utils\\keyless_api_access.py",
+      "line": 573,
+      "primcalls": 967,
+      "calls": 967,
+      "tottime_ms": 1.076,
+      "cumtime_ms": 604.519
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\middleware\\cors.py",
+      "line": 77,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.81,
+      "cumtime_ms": 601.075
+    },
+    {
+      "function": "simple_response",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\middleware\\cors.py",
+      "line": 147,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.703,
+      "cumtime_ms": 599.414
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\core\\inference\\llama_keepwarm.py",
+      "line": 683,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.548,
+      "cumtime_ms": 598.711
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\main.py",
+      "line": 1705,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.599,
+      "cumtime_ms": 598.111
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\utils\\model_aliases.py",
+      "line": 177,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.484,
+      "cumtime_ms": 597.443
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\main.py",
+      "line": 1339,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.577,
+      "cumtime_ms": 596.922
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\main.py",
+      "line": 1191,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.726,
+      "cumtime_ms": 596.322
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\utils\\trusted_hosts.py",
+      "line": 186,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 1.174,
+      "cumtime_ms": 589.636
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Projectas\\UnslothX-\\studio\\backend\\loggers\\handlers.py",
+      "line": 303,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 1.254,
+      "cumtime_ms": 586.179
+    },
+    {
+      "function": "__call__",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\middleware\\exceptions.py",
+      "line": 47,
+      "primcalls": 863,
+      "calls": 863,
+      "tottime_ms": 0.802,
+      "cumtime_ms": 580.227
+    },
+    {
+      "function": "wrapped_app",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\starlette\\_exception_handler.py",
+      "line": 31,
+      "primcalls": 863,
+      "calls": 1726,
+      "tottime_ms": 1.067,
+      "cumtime_ms": 579.08
+    }
+  ],
+  "top_total": [
+    {
+      "function": "<built-in method nt._path_exists>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 12424,
+      "calls": 12424,
+      "tottime_ms": 182.949,
+      "cumtime_ms": 182.949
+    },
+    {
+      "function": "<method 'execute' of 'sqlite3.Connection' objects>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 1324,
+      "calls": 1324,
+      "tottime_ms": 148.347,
+      "cumtime_ms": 148.347
+    },
+    {
+      "function": "_match",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\routing.py",
+      "line": 1728,
+      "primcalls": 2440,
+      "calls": 3000,
+      "tottime_ms": 80.493,
+      "cumtime_ms": 295.393
+    },
+    {
+      "function": "<built-in method nt._getfinalpathname>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 1668,
+      "calls": 1668,
+      "tottime_ms": 80.379,
+      "cumtime_ms": 80.379
+    },
+    {
+      "function": "<built-in method _sqlite3.connect>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 267,
+      "calls": 267,
+      "tottime_ms": 53.061,
+      "cumtime_ms": 57.494
+    },
+    {
+      "function": "<built-in method nt.mkdir>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 267,
+      "calls": 267,
+      "tottime_ms": 41.35,
+      "cumtime_ms": 41.526
+    },
+    {
+      "function": "<built-in method nt.stat>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 1371,
+      "calls": 1371,
+      "tottime_ms": 39.788,
+      "cumtime_ms": 49.54
+    },
+    {
+      "function": "matches",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\routing.py",
+      "line": 1505,
+      "primcalls": 52176,
+      "calls": 52176,
+      "tottime_ms": 38.975,
+      "cumtime_ms": 73.172
+    },
+    {
+      "function": "<built-in method builtins.isinstance>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 463548,
+      "calls": 463756,
+      "tottime_ms": 37.48,
+      "cumtime_ms": 40.373
+    },
+    {
+      "function": "<built-in method _overlapped.GetQueuedCompletionStatus>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 5289,
+      "calls": 5289,
+      "tottime_ms": 31.871,
+      "cumtime_ms": 31.871
+    },
+    {
+      "function": "<method 'get' of 'dict' objects>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 292281,
+      "calls": 292281,
+      "tottime_ms": 27.854,
+      "cumtime_ms": 28.693
+    },
+    {
+      "function": "<method 'send' of '_socket.socket' objects>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 1126,
+      "calls": 1167,
+      "tottime_ms": 27.805,
+      "cumtime_ms": 27.044
+    },
+    {
+      "function": "<method 'acquire' of '_thread.lock' objects>",
+      "file": "~",
+      "line": 0,
+      "primcalls": 241,
+      "calls": 3758,
+      "tottime_ms": 26.793,
+      "cumtime_ms": 1.597
+    },
+    {
+      "function": "_restore_fastapi_scope_key",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\routing.py",
+      "line": 908,
+      "primcalls": 55056,
+      "calls": 55056,
+      "tottime_ms": 25.217,
+      "cumtime_ms": 39.39
+    },
+    {
+      "function": "matches",
+      "file": "C:\\Users\\nutti\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\fastapi\\routing.py",
+      "line": 1251,
+      "primcalls": 52720,
+      "calls": 52720,
+      "tottime_ms": 23.026,
+      "cumtime_ms": 121.435
+    }
+  ]
+}

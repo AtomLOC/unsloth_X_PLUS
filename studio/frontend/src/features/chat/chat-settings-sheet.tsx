@@ -222,6 +222,9 @@ export function ParamSlider({
           min={min}
           max={max}
           step={step}
+          // The thumb carries role="slider"; the span beside it is not its accessible name. The
+          // number input on the same row already passes ariaLabel={label} for this reason.
+          aria-label={label}
           {...sliderProps}
           className="min-w-0 flex-1"
           disabled={disabled}
@@ -267,6 +270,7 @@ export function ParamSlider({
         min={min}
         max={max}
         step={step}
+        aria-label={label}
         {...sliderProps}
         disabled={disabled}
       />

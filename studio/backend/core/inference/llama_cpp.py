@@ -1296,6 +1296,31 @@ def _wsl_system_rocm_lib_dirs() -> "list[str]":
     return out
 
 
+# `shutil.which("llama-server")` walks the whole PATH -- 473 stat calls on this Windows host, ~14 ms.
+# The status route resolves a binary up to twice per poll and the UI polls ~1.7x/s, so an uncached
+# lookup was 28.6 ms of a 39.1 ms `/api/inference/status` response (cProfile, 25 requests). PATH is
+# the lowest-priority fallback in `_find_llama_server_binary`, and it cannot change without the user
+# changing their environment, so a short TTL removes that cost; every setting-dependent step above
+# it stays live, and a freshly installed binary is still found within one TTL window.
+_PATH_BINARY_TTL_SECONDS = 5.0
+_path_binary_cache: "dict[str, tuple[float, Optional[str]]]" = {}
+_path_binary_lock = threading.Lock()
+
+
+def _path_binary(name: str) -> Optional[str]:
+    """`shutil.which(name)`, memoised for `_PATH_BINARY_TTL_SECONDS` (misses included: a miss is the
+    common case and costs the full PATH walk)."""
+    now = time.monotonic()
+    with _path_binary_lock:
+        hit = _path_binary_cache.get(name)
+        if hit is not None and now - hit[0] < _PATH_BINARY_TTL_SECONDS:
+            return hit[1]
+    found = shutil.which(name)
+    with _path_binary_lock:
+        _path_binary_cache[name] = (now, found)
+    return found
+
+
 def _bundled_hip_present(binary_dir: str) -> bool:
     """True when a prebuilt bundle ships its own HIP backend library."""
     if not binary_dir:
@@ -10626,7 +10651,7 @@ class LlamaCppBackend:
                 return str(p)
 
         # 7. System PATH
-        system_path = shutil.which("llama-server")
+        system_path = _path_binary("llama-server")
         if system_path:
             return system_path
 

@@ -457,6 +457,7 @@ export function SkeletonList({ count }: { count?: number }) {
   const [autoCount, setAutoCount] = useState(count ?? DEFAULT_SKELETON_ROWS);
   const rowCount = count ?? autoCount;
   const scale = useUiSpaceScale();
+  const t = useT();
 
   useLayoutEffect(() => {
     if (count != null) return;
@@ -491,12 +492,20 @@ export function SkeletonList({ count }: { count?: number }) {
   }, [count, scale]);
 
   return (
-    <ul ref={ref} className="divide-y divide-border" aria-hidden="true">
+    <>
+      {/* The placeholder rows are decorative and stay aria-hidden, which also means a screen
+          reader got no signal that the catalogue was still arriving: the page announced as if it
+          were empty. role="status" is the announcement, the rows stay silent. */}
+      <p role="status" aria-live="polite" className="sr-only">
+        {t("common.loading")}
+      </p>
+      <ul ref={ref} className="divide-y divide-border" aria-hidden="true">
       {Array.from({ length: rowCount }).map((_, i) => (
         <li key={i}>
           <SkeletonRow />
         </li>
       ))}
-    </ul>
+      </ul>
+    </>
   );
 }

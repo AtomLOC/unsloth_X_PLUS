@@ -11,6 +11,7 @@ kept. The memory-fit clamp is untouched: it is what stops a small machine over-t
 
 from __future__ import annotations
 
+import sys
 from collections.abc import Iterable
 
 import pytest
@@ -40,6 +41,8 @@ def _plain_host(monkeypatch):
     _set_flags(monkeypatch, frozenset())
     # Unbounded memory unless a test says otherwise: the clamp is exercised on its own.
     monkeypatch.setattr(cpu_threads, "_openblas_memory_headroom", lambda: None)
+    # Unmeasurable topology unless a test says otherwise: the legacy default is the fallback.
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: None)
     yield
     cpu_threads._host_is_amx_class.cache_clear()
 
@@ -53,6 +56,84 @@ def test_a_plain_cpu_keeps_the_old_default(cpus, expected, monkeypatch):
 
     assert default_openblas_threads() == expected
     assert _OPENBLAS_DEFAULT_MAX == 8
+
+
+# A measured topology replaces the SMT halving, so a host without SMT stops losing half its cores.
+@pytest.mark.parametrize(
+    "cpus, physical, expected",
+    [
+        (1, 1, 1),
+        (2, 2, 2),  # 2C/2T: there is no sibling to leave idle
+        (4, 2, 2),  # 2C/4T: the measurement agrees with the old halving
+        (6, 6, 6),  # this 6C/6T dev host: was 3 threads, measured 1.35-1.6x slower than 6
+        (8, 4, 4),  # 4C/8T
+        (12, 6, 6),
+        (16, 8, 8),
+        (32, 32, 8),  # the 8-thread cap still holds on a measured host
+        (192, 96, 8),
+    ],
+)
+def test_a_measured_topology_replaces_the_smt_halving(cpus, physical, expected, monkeypatch):
+    monkeypatch.setattr(cpu_threads, "_usable_cpus", lambda: cpus)
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: physical)
+
+    assert default_openblas_threads() == expected
+
+
+# An affinity mask wins over the host topology: the process may only run on the narrower set.
+def test_an_affinity_mask_narrows_a_measured_host(monkeypatch):
+    monkeypatch.setattr(cpu_threads, "_usable_cpus", lambda: 4)
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: 64)
+
+    assert default_openblas_threads() == 4
+
+
+# The memory fit still shrinks a measured host: it is about per-thread buffers, not topology.
+def test_the_memory_fit_still_shrinks_a_measured_host(monkeypatch):
+    monkeypatch.setattr(cpu_threads, "_usable_cpus", lambda: 6)
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: 6)
+    monkeypatch.setattr(cpu_threads, "_openblas_memory_headroom", lambda: 640 * MB)
+
+    assert default_openblas_threads() == 2
+
+
+# AMX-class hosts keep their own rule; the measurement changes nothing there.
+def test_the_measurement_does_not_touch_amx_class_hosts(monkeypatch):
+    _set_flags(monkeypatch, {"amx_bf16"})
+    monkeypatch.setattr(cpu_threads, "_usable_cpus", lambda: 32)
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: 16)
+
+    assert default_openblas_threads() == 32
+
+
+def test_the_measurement_reads_this_host():
+    measured = cpu_threads.measured_physical_cpus()
+
+    assert measured is None or (isinstance(measured, int) and measured >= 1)
+
+
+def test_an_unreadable_psutil_is_not_an_error(monkeypatch):
+    class _Broken:
+        @staticmethod
+        def cpu_count(logical = True):
+            if logical:
+                return 8
+            raise RuntimeError("no topology")
+
+    monkeypatch.setitem(sys.modules, "psutil", _Broken)
+
+    assert cpu_threads.measured_physical_cpus() is None
+
+
+def test_a_psutil_without_a_physical_count_is_not_an_error(monkeypatch):
+    class _Zero:
+        @staticmethod
+        def cpu_count(logical = True):
+            return 8 if logical else 0
+
+    monkeypatch.setitem(sys.modules, "psutil", _Zero)
+
+    assert cpu_threads.measured_physical_cpus() is None
 
 
 # On an AMX-class CPU the cap is raised and the SMT halving is dropped, so every usable CPU counts.

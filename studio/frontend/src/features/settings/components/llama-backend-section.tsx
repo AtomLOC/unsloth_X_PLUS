@@ -285,13 +285,12 @@ export function LlamaBackendSection() {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              {statusPending ? (
-                <SelectItem value="loading" disabled>
-                  {t("common.loading")}
-                </SelectItem>
-              ) : null}
-              {unknownRecorded || (!status && loadError) ? (
-                <SelectItem value="unknown">
+              {unknownRecorded || !pending ? (
+                // No option carries the current value, so Radix would render an empty trigger: a
+                // labelled row next to a primary "Apply" button containing a nameless white box.
+                // Show the truth instead — this value is not a backend we can name — and keep it
+                // disabled so the label cannot be picked as if it were a choice.
+                <SelectItem value={value} disabled>
                   {t("settings.resources.environment.unknown")}
                 </SelectItem>
               ) : null}

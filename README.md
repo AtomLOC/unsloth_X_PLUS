@@ -63,7 +63,7 @@ There is no published Kaggle kernel URL yet — publishing one is a Kaggle accou
 | **Telemetry** | An opt-in collector with an operator console under `telemetry/` — off until enabled in Settings |
 | **Installers** | Per-flavour desktop builds (`cpu`, `cpu-gpu`, `gpu`, `cpu-npu`) that pin the runtime they were built as |
 
-The backend wheel carries a PEP 440 local segment — `unsloth==2026.11.7+xplus.1` — so no index can satisfy a fork install with the upstream package of the same base version. `GET /api/health` reports `backend_build_kind` (`xplus`, `upstream`, `dev`), so a mixed install is visible rather than guessed at.
+The backend wheel carries a PEP 440 local segment — `unsloth==2026.11.7+xplus.2` — so no index can satisfy a fork install with the upstream package of the same base version. `GET /api/health` reports `backend_build_kind` (`xplus`, `upstream`, `dev`), so a mixed install is visible rather than guessed at.
 
 ---
 

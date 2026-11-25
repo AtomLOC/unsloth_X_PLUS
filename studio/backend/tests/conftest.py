@@ -201,6 +201,24 @@ if _SESSION_HID_GPUS:
 
 
 @pytest.fixture(autouse = True)
+def _restore_the_torch_module():
+    """Undo a fake `torch` left in sys.modules by the test before.
+
+    Several suites import a throwaway torch package built in tmp_path (or assign a stub), and a
+    module that outlives its test makes every later datasets.Dataset() raise inside the dill
+    fingerprint path (`issubclass(obj_type, torch.Tensor)` against a stub with no Tensor). One
+    such leak turned 55 online-tokenization tests red when the openblas suite ran first.
+    """
+    had_torch = "torch" in sys.modules
+    before = sys.modules.get("torch")
+    yield
+    if had_torch:
+        sys.modules["torch"] = before
+    else:
+        sys.modules.pop("torch", None)
+
+
+@pytest.fixture(autouse = True)
 def _no_cuda_context_from_a_cpu_test(request):
     if not _SESSION_HID_GPUS or request.node.get_closest_marker("gpu") is not None:
         yield

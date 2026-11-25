@@ -48,11 +48,15 @@ def test_advanced_settings_reach_the_worker_config():
 def test_cpu_trainer_uses_processing_class():
     """Upstream TRL removed SFTTrainer(tokenizer=...); the CPU path runs it unpatched."""
     source = _src(_TRAINER)
+    # Four-space edit: the config is built first so the raw-text packing override can land on it,
+    # and the trainer then receives that object. Pinning the literal SFTConfig(...) call inside the
+    # kwargs dict made this fail on a refactor that changed neither behaviour nor keyword.
     assert re.search(
-        r'trainer_kwargs = \{\s*"model": self\.model,\s*"processing_class": sft_tokenizer,.*?"args": SFTConfig',
+        r'trainer_kwargs = \{\s*"model": self\.model,\s*"processing_class": sft_tokenizer,.*?"args": sft_args,',
         source,
         re.DOTALL,
     )
+    assert "sft_args = SFTConfig(**config_args)" in source
 
 
 def test_cpu_optimizer_falls_back_to_torch_adamw():
@@ -129,7 +133,10 @@ def test_cpu_loader_uses_plain_transformers():
     body = _func_src(_TRAINER, "_load_cpu_model")
     assert "AutoModelForCausalLM.from_pretrained" in body
     assert "AutoTokenizer.from_pretrained" in body
-    assert "low_cpu_mem_usage = True" in body
+    # The dtype and the low-memory streaming live in the shared builder, so the loader and the
+    # exporter cannot drift on which kwarg name this transformers reads.
+    assert "load_kwargs = cpu_base_load_kwargs(" in body
+    assert '"dtype": dtype,' not in body
     assert "self.load_in_4bit = False" in body
     assert "self._cpu_training = True" in body
     # No Unsloth loader or kernel patch on this path.
@@ -151,7 +158,10 @@ def test_cpu_training_config_turns_off_gpu_only_settings():
     assert '"bf16": False' in body
     assert '"optim": "adamw_torch"' in body
     assert '"packing": False' in body
-    assert '"dataloader_num_workers": 0' in body
+    # The plan's decisions survive this block: flattening them to 0/False trained an untuned run
+    # while the setup line still reported the tuned one.
+    assert '"dataloader_num_workers": planned_workers,' in body
+    assert "cpu_plan.gradient_checkpointing if cpu_plan is not None" in body
 
 
 def test_completion_masking_falls_back_on_cpu():

@@ -89,17 +89,47 @@ def _usable_cpus() -> int:
         return os.cpu_count() or 1
 
 
+def measured_physical_cpus() -> Optional[int]:
+    """Physical cores this host has, or None when the topology cannot be measured.
+
+    ``os.cpu_count`` answers logical CPUs, which on an SMT machine is twice the cores a GEMM can
+    feed; psutil reads the real topology on win32, linux and darwin. Returns None rather than
+    raising, so a backend installed without psutil keeps the SMT-halving heuristic.
+    """
+    try:
+        import psutil
+
+        count = psutil.cpu_count(logical = False)
+    except Exception:  # noqa: BLE001 -- an unmeasurable topology keeps the SMT heuristic
+        return None
+    try:
+        return int(count) if count else None
+    except (TypeError, ValueError):
+        return None
+
+
 def default_openblas_threads() -> int:
     """About one thread per physical core, at most 8; AMX-class hosts get one per CPU, at most 32.
 
-    The memory-fit clamp applies either way: it is what stops a small machine from over-threading.
+    The halving exists because an SMT sibling adds little to a GEMM, so the default used to be
+    half of the logical CPUs. A *measured* physical count replaces that guess instead of being
+    halved again, so a host without SMT -- a 4C/4T laptop, a Graviton, an Apple Silicon part, this
+    6C/6T dev host -- stops running numpy on half its cores. The 8-thread cap and the memory-fit
+    clamp still apply, which is what keeps a small or a many-core machine from over-threading.
     """
     cpus = _usable_cpus()
     if _host_is_amx_class():
         # AMX-class: no SMT halving, because the wide bf16 matmuls scale with the siblings.
         threads = max(1, min(_AMX_CLASS_DEFAULT_MAX, cpus))
     else:
-        threads = max(1, min(_OPENBLAS_DEFAULT_MAX, cpus // 2))
+        physical = measured_physical_cpus()
+        if physical is None:
+            # Unmeasurable: keep the old half-of-logical rule, which is the SMT guess.
+            cores = max(1, cpus // 2)
+        else:
+            # An affinity mask narrows what this process may run on, so it always wins.
+            cores = max(1, min(physical, cpus))
+        threads = max(1, min(_OPENBLAS_DEFAULT_MAX, cores))
     return _threads_that_fit(threads, _OPENBLAS_THREAD_COST)
 
 

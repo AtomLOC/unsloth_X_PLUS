@@ -397,8 +397,11 @@ def _igpu_budget(gpu: dict, probe: TargetProbe) -> Optional[int]:
     fraction of RAM is the real ceiling, and the reservation is a floor under it.
     """
     from utils.hardware.accelerator_budget import shared_accelerator_budget
+    # Free RAM, not the installed total, for the same reason the CPU row uses it: the fraction is
+    # what the card may take without starving the OS, and on a 16 GB machine with 6 GB free the
+    # installed total would plan a 9.6 GB run the driver then cannot serve.
     return shared_accelerator_budget(
-        probe.system_memory_bytes,
+        probe.system_memory_available_bytes or probe.system_memory_bytes,
         dedicated_bytes = gpu.get("memory_bytes"),
     )
 

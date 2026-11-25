@@ -40,6 +40,25 @@ class CpuTrainingPlan:
     reasons: tuple[str, ...]
 
 
+def measured_physical_cpus() -> int | None:
+    """Physical cores this host has, or None when the measurement is unavailable.
+
+    ``os.cpu_count`` answers logical CPUs, which on an SMT machine is twice the cores a GEMM can
+    use; psutil reads the real topology on win32, linux and darwin. The planner halves the usable
+    count only when it has nothing better, so this measurement is what keeps a CPU without SMT
+    (a 4C/4T laptop, a Graviton, an Apple Silicon part) from training on half its cores.
+
+    Lives here rather than in the loader so it can be tested without importing torch, and returns
+    None rather than raising: a backend installed without psutil keeps the old heuristic.
+
+    The measurement itself lives in ``utils.cpu_threads``, which is also where the OpenBLAS default
+    reads it: one implementation means a host cannot get six torch threads and three numpy ones.
+    """
+    from utils.cpu_threads import measured_physical_cpus as _measured
+
+    return _measured()
+
+
 def plan_cpu_training(
     *,
     usable_cpus: int | None,
@@ -48,11 +67,18 @@ def plan_cpu_training(
     platform: str | None = None,
     supports_sdpa: bool = True,
     fast_bf16: bool = False,
+    physical_cpus: int | None = None,
 ) -> CpuTrainingPlan:
     """Build the CPU training plan from host measurements.
 
     Every measurement may be None ("unknown"), and every rule below then picks the conservative
     answer: one thread, zero dataloader workers, eager attention, fp32, no checkpointing.
+
+    ``physical_cpus`` is the host's physical core count when the loader could measure it
+    (psutil's ``cpu_count(logical = False)``), and None when it could not. A measured count is
+    used as-is instead of halving the usable count, so a CPU without SMT keeps all of its cores.
+    It is ignored when larger than the usable count: an affinity mask narrows what this process
+    may run on, and the mask wins.
 
     ``fast_bf16`` is the one measurement that is not a number: the loader probes the CPU with
     ``utils.cpu_features`` and passes the answer in, so this planner stays a pure function of its
@@ -68,22 +94,41 @@ def plan_cpu_training(
     weights_known = fp32_weight_bytes is not None and fp32_weight_bytes > 0
     cpus_known = usable_cpus is not None and usable_cpus > 0
 
-    # Threads: one per physical core. No portable physical-core count exists (WMI, sysfs and
-    # sysctl all disagree), so physical cores are approximated as half the usable CPUs whenever
-    # there are more than two: SMT siblings add little to a GEMM and cost cache contention. A
-    # machine with two CPUs or fewer is taken at face value, because halving it would leave the
-    # matrix multiplies single-threaded for no measurable win. The count is clamped to at least
-    # one thread and never more than the usable CPUs.
+    # Threads: one per physical core. When the caller measured that count (psutil answers on
+    # win32, linux and darwin) it is used directly: halving the usable count throws away half the
+    # machine on a CPU without SMT -- every 4C/4T laptop, a Graviton, an Apple Silicon part, and
+    # the 6C/6T host this repo is developed on -- which is the opposite of tuning. Only when the
+    # physical count is unknown is it approximated as half the usable CPUs, and only past two
+    # CPUs: SMT siblings add little to a GEMM and cost cache contention. A machine with two CPUs
+    # or fewer is taken at face value, because halving it would leave the matrix multiplies
+    # single-threaded for no measurable win.
+    #
+    # AMX-class hardware is the other exception: bf16 matmuls run on matrix units where SMT
+    # siblings do add throughput, so the usable count is kept and merely capped at 32, the same
+    # choice utils.cpu_threads makes for the OpenBLAS pool. The count is clamped to at least one
+    # thread and never more than the usable CPUs.
     if not cpus_known:
         torch_threads = 1
         reasons.append("The CPU count is unknown, so the run keeps a single thread.")
+    elif fast_bf16:
+        torch_threads = min(usable_cpus, 32)
+        reasons.append(
+            "AMX-class hardware runs bf16 matmuls on matrix units where SMT siblings add "
+            "throughput, so the thread count follows the usable CPU count up to 32."
+        )
+    elif physical_cpus is not None and 0 < physical_cpus <= usable_cpus:
+        torch_threads = physical_cpus
+        reasons.append(
+            "One thread per physical core, measured directly, because halving the usable CPU "
+            "count would waste half the machine on a CPU without SMT."
+        )
     else:
         torch_threads = usable_cpus // 2 if usable_cpus > 2 else usable_cpus
         torch_threads = max(1, min(torch_threads, usable_cpus))
         if usable_cpus > 2:
             reasons.append(
                 "One thread per physical core is approximated as half the usable CPUs because "
-                "SMT siblings add little to a GEMM and cost cache contention."
+                "the physical count could not be measured and SMT siblings add little to a GEMM."
             )
 
     # Memory clamp on the thread count, the way utils.cpu_threads clamps OpenBLAS: fewer threads
@@ -190,3 +235,36 @@ def plan_cpu_training(
         dtype = dtype,
         reasons = tuple(reasons),
     )
+
+
+def cpu_base_load_kwargs(
+    dtype,
+    *,
+    token: str | None = None,
+    trust_remote_code: bool = False,
+    revision: str | None = None,
+    local_files_only: bool = False,
+) -> dict:
+    """The ``from_pretrained`` kwargs the CPU recipe uses for its frozen base.
+
+    The dtype is spelled through ``utils.transformers_dtype.dtype_kwargs`` because the argument
+    changed name: transformers renamed ``torch_dtype`` to ``dtype`` in 4.56 and the floor this
+    project supports is 4.52, where ``dtype`` is not a load argument at all. It lands on the
+    config and is dropped, so a run that chose bfloat16 because the fp32 weights do not fit
+    would load the checkpoint's own dtype -- which is usually the wider one -- and pay exactly
+    the memory squeeze the choice exists to avoid. The wrong spelling does not raise, so only
+    asking by name prevents it.
+
+    ``low_cpu_mem_usage`` is always on: it streams each shard into the finished parameters
+    instead of materialising a full second copy of the weights on the way in.
+    """
+    from utils.transformers_dtype import dtype_kwargs
+
+    return {
+        **dtype_kwargs(dtype),
+        "token": token,
+        "trust_remote_code": trust_remote_code,
+        "revision": revision,
+        "local_files_only": local_files_only,
+        "low_cpu_mem_usage": True,
+    }

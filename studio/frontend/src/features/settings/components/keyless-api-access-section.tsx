@@ -54,7 +54,7 @@ const CONFIRM_COPY: Record<
   full: {
     title: "Allow full localhost access without a key?",
     body: (exposure) =>
-      `Localhost callers will be able to chat, start training runs, and read, change and delete files and settings. Full keyless access is never honored over LAN, a public bind or URL, a tunnel, or Colab.${activeExposureWarning(exposure)}`,
+      `Any user account or process on this machine that can reach localhost will be able to chat, start training runs, and read, change and delete files and settings. That is a per-machine grant, not a per-user one: another local account gets the same owner-level access while this is on. Full keyless access is never honored over LAN, a public bind or URL, a tunnel, or Colab.${activeExposureWarning(exposure)}`,
     action: "Allow everything",
   },
   tools: {
@@ -235,7 +235,7 @@ export function KeylessApiAccessSection({
 
         <SettingsRow
           label="Everything else"
-          description="Also serve training, files and settings, but only to local loopback callers."
+          description="Also serve training, files and settings, to any user or process on this machine that reaches localhost, not just to you."
         >
           <Switch
             checked={scope === "full"}

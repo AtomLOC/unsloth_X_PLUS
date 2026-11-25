@@ -4725,7 +4725,7 @@ export function AppSidebar() {
               { closed: !pinnedOpen },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               Pinned
               <HugeiconsIcon icon={ChevronDownStandardIcon} className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>
@@ -4861,7 +4861,7 @@ export function AppSidebar() {
               { closed: !open },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               <span className="min-w-0 truncate">{section.name}</span>
               <HugeiconsIcon icon={ChevronDownStandardIcon} className="size-3.5 shrink-0 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>
@@ -4979,7 +4979,7 @@ export function AppSidebar() {
               { closed: !projectsOpen },
             )}
           >
-            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 group/sb-collap">
+            <CollapsibleTrigger className="cursor-pointer flex min-w-0 flex-1 items-center gap-1 rounded-md group/sb-collap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               {t("shell.navigation.projects")}
               <HugeiconsIcon icon={ChevronDownStandardIcon} className="size-3.5 opacity-0 transition-[transform,opacity] duration-200 group-hover/sb-section:opacity-100 group-hover/sb-collap:opacity-100 group-focus-visible/sb-collap:opacity-100 data-[state=open]:rotate-0 [[data-state=closed]_&]:rotate-[-90deg] [[data-state=closed]_&]:opacity-100" />
             </CollapsibleTrigger>

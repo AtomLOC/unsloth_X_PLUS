@@ -54,6 +54,8 @@ def windows_mask(monkeypatch):
     monkeypatch.setattr(os, "process_cpu_count", lambda: 32, raising = False)
     monkeypatch.delattr(os, "sched_getaffinity", raising = False)
     monkeypatch.setattr(cpu_threads, "_openblas_memory_headroom", lambda: None)
+    # The mask is what these tests vary; the host's own core count must not leak into the answer.
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: None)
     monkeypatch.setattr(cpu_threads, "_torch_threads_unfitted", None, raising = False)
     monkeypatch.setattr(cpu_threads, "_fitted_affinity", None, raising = False)
     return masks

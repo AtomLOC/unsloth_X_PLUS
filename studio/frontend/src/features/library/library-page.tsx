@@ -177,12 +177,21 @@ function SectionHeading({ children }: { children: ReactNode }) {
 }
 
 function LoadingGrid() {
+  const t = useT();
+
   return (
-    <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
-      {Array.from({ length: 10 }, (_, index) => (
-        <Skeleton key={index} className="aspect-square rounded-2xl" />
-      ))}
-    </div>
+    <>
+      {/* Same reasoning as the Hub's catalogue list: the tiles are decoration and are hidden from
+          assistive tech, so the loading state itself has to be announced somewhere. */}
+      <p role="status" aria-live="polite" className="sr-only">
+        {t("common.loading")}
+      </p>
+      <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5" aria-hidden="true">
+        {Array.from({ length: 10 }, (_, index) => (
+          <Skeleton key={index} className="aspect-square rounded-[calc(var(--radius-xl)-2px)]" />
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -24,6 +24,16 @@ _RUN_PY = _BACKEND_DIR / "run.py"
 _MAIN_PY = _BACKEND_DIR / "main.py"
 
 
+@pytest.fixture(autouse = True)
+def _unmeasurable_topology(monkeypatch):
+    """The expectations below pin the fallback for a host whose topology cannot be read.
+
+    A measured host gets one thread per physical core (test_cpu_thread_defaults.py covers that),
+    so without this fixture the answers would depend on the machine running the suite.
+    """
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: None)
+
+
 def test_cpu_thread_cap_seeds_native_pool_limits():
     env = {"UNSLOTH_CPU_THREADS": " 6 "}
 

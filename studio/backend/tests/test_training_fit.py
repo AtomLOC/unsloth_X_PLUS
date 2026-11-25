@@ -88,7 +88,7 @@ def test_a_named_target_outranks_the_memory_figure_the_page_sent(tmp_path, monke
     monkeypatch.setattr(
         fit,
         "_target_budget_gb",
-        lambda _spec: (10.0, "target:igpu", ["This GPU shares system memory."]),
+        lambda _spec: (10.0, "target:igpu", ["This GPU shares system memory."], "igpu"),
     )
 
     report = fit.estimate(
@@ -105,8 +105,69 @@ def test_a_named_target_outranks_the_memory_figure_the_page_sent(tmp_path, monke
     assert report["target_notes"] == ["This GPU shares system memory."]
 
 
+def test_an_integrated_target_is_sized_in_sixteen_bit_and_never_offered_four_bit(tmp_path, monkeypatch):
+    monkeypatch.setattr(
+        fit,
+        "_target_budget_gb",
+        lambda _spec: (0.1, "target:igpu", ["This GPU shares system memory."], "igpu"),
+    )
+
+    report = fit.estimate(
+        {
+            "model": str(_model(tmp_path)),
+            "method": "lora",
+            "compute_target": "igpu",
+            "load_in_4bit": True,
+            "batch_size": 4,
+            "max_seq_length": 8192,
+        }
+    )
+
+    # The launch path clears 4-bit on this device (bitsandbytes has no integrated kernels), so an
+    # estimate that kept it would size the weights 3.6x too small and then suggest the refusal.
+    assert report["config"]["load_in_4bit"] is False
+    assert report["verdict"] == "over"
+    assert not any("4-bit" in suggestion for suggestion in report["suggestions"])
+
+
+def test_a_discrete_target_still_sizes_the_requested_four_bit_load(tmp_path, monkeypatch):
+    monkeypatch.setattr(
+        fit,
+        "_target_budget_gb",
+        lambda _spec: (24.0, "target:dgpu", [], "dgpu"),
+    )
+
+    report = fit.estimate(
+        {
+            "model": str(_model(tmp_path)),
+            "method": "lora",
+            "compute_target": "dgpu",
+            "load_in_4bit": True,
+            "batch_size": 1,
+            "max_seq_length": 1024,
+        }
+    )
+
+    assert report["config"]["load_in_4bit"] is True
+    assert report["verdict"] == "fits"
+
+def test_a_malformed_memory_figure_is_rejected_even_when_the_target_resolves(tmp_path, monkeypatch):
+    # The target's own budget used to replace the value before it was parsed, so a typo only
+    # surfaced on hosts where no target resolved.
+    monkeypatch.setattr(fit, "_target_budget_gb", lambda _spec: (10.0, "target:cpu", [], "cpu"))
+
+    with pytest.raises(ValueError):
+        fit.estimate(
+            {
+                "model": str(_model(tmp_path)),
+                "method": "lora",
+                "compute_target": "cpu",
+                "gpu_memory_gb": "lots",
+            }
+        )
+
 def test_an_unsizable_target_falls_back_to_the_figure_the_page_sent(tmp_path, monkeypatch):
-    monkeypatch.setattr(fit, "_target_budget_gb", lambda _spec: (None, "unresolved", ["no probe"]))
+    monkeypatch.setattr(fit, "_target_budget_gb", lambda _spec: (None, "unresolved", ["no probe"], None))
 
     report = fit.estimate(
         {

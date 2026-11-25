@@ -243,8 +243,15 @@ def test_an_auto_run_writes_auto_and_pins_nothing():
 def test_the_start_route_still_uses_both_helpers():
     from routes import training
 
+    # The two decisions moved behind the start path's own helpers: _prepare_training_request
+    # enforces the device constraints before a job id is issued, and _admit_training_request puts
+    # the target keys into the worker kwargs. Extracting them is only worth anything if every
+    # start path still runs both, so this walks the indirection instead of pinning one function.
     source = inspect.getsource(training.start_training)
+    prepare = inspect.getsource(training._prepare_training_request)
+    admit = inspect.getsource(training._admit_training_request)
 
-    # Extracting the decisions is only worth anything if the start path still consults them.
-    assert "_apply_target_constraints(request, compute_target)" in source
-    assert "_compute_target_config(compute_target)" in source
+    assert "_prepare_training_request(request, via_api_key)" in source
+    assert "_admit_training_request(request, " in source
+    assert "_apply_target_constraints(request, compute_target)" in prepare
+    assert "**_compute_target_config(compute_target)" in admit

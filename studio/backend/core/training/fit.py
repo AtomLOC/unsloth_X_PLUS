@@ -74,18 +74,18 @@ def _target_budget_gb(spec: Mapping[str, Any]) -> tuple[Optional[float], Optiona
     """
     requested = str(spec.get("compute_target") or "").strip()
     if not requested:
-        return None, None, []
+        return None, None, [], None
     try:
         from core.training.device_targets import TargetProbe, resolve_training_target
         from utils.hardware import accelerator_budget
     except Exception as error:  # noqa: BLE001 - a missing registry degrades to the old estimate
-        return None, "unresolved", [f"The compute-target registry is unavailable: {error}"]
+        return None, "unresolved", [f"The compute-target registry is unavailable: {error}"], None
 
     try:
         probe = TargetProbe.detect()
         target = resolve_training_target(requested, probe)
     except Exception as error:  # noqa: BLE001 - TrainingTargetError and probe failures alike
-        return None, "unresolved", [str(error)]
+        return None, "unresolved", [str(error)], None
 
     integrated = target.kind == "igpu"
     # The GPU the target resolved to, not the first integrated one on the box: with two of them the
@@ -118,7 +118,7 @@ def _target_budget_gb(spec: Mapping[str, Any]) -> tuple[Optional[float], Optiona
             "A CPU run shares this memory with the operating system and the dataset pipeline; the "
             "figure above is what is free right now, and it moves while the run does."
         )
-    return (float(usable) / GB if usable else None), source, notes
+    return (float(usable) / GB if usable else None), source, notes, target.kind
 
 
 def estimate(spec: Mapping[str, Any]) -> dict[str, Any]:
@@ -146,18 +146,25 @@ def estimate(spec: Mapping[str, Any]) -> dict[str, Any]:
             "batch_size, max_seq_length, gradient_accumulation and lora_rank must be numbers."
         ) from error
 
-    load_in_4bit = bool(spec.get("load_in_4bit")) or method == "qlora"
     gradient_checkpointing = bool(spec.get("gradient_checkpointing", True))
     # The device the run will use describes its own ceiling better than any number handed in: on an
     # integrated GPU the figure torch reports is the carve-out rather than the shared pool, and on an
     # XPU host torch reports nothing at all. So a named target wins over `gpu_memory_gb`, which stays
     # as the fallback for a target this host cannot size (and as the only input when none is named).
     budget_gb = spec.get("gpu_memory_gb")
+    if budget_gb not in (None, ""):
+        # Validate before a named target can replace the value, or a typo'd figure would be
+        # silently ignored whenever the device is resolvable.
+        try:
+            budget_gb = float(budget_gb)
+        except (TypeError, ValueError) as error:
+            raise ValueError("gpu_memory_gb must be a number when it is given.") from error
     budget_source = "explicit" if budget_gb not in (None, "") else "unreported"
     target_notes: list[str] = []
     named_source: Optional[str] = None
+    target_kind: Optional[str] = None
     if str(spec.get("compute_target") or "").strip():
-        target_gb, named_source, target_notes = _target_budget_gb(spec)
+        target_gb, named_source, target_notes, target_kind = _target_budget_gb(spec)
         if target_gb not in (None, ""):
             budget_gb = target_gb
             budget_source = named_source or "target"
@@ -168,6 +175,14 @@ def estimate(spec: Mapping[str, Any]) -> dict[str, Any]:
         budget = float(budget_gb) if budget_gb not in (None, "") else None
     except (TypeError, ValueError) as error:
         raise ValueError("gpu_memory_gb must be a number when it is given.") from error
+
+    load_in_4bit = bool(spec.get("load_in_4bit")) or method == "qlora"
+    if target_kind in ("igpu", "npu"):
+        # The launch path forces 16-bit on an integrated GPU and on an NPU: bitsandbytes has no
+        # kernels for either, so routes/training.py clears load_in_4bit before the job starts.
+        # Sizing the weights as 4-bit here would undercount them about 3.6x, call a run that does
+        # not fit "fits", and then recommend the very lever the device refuses.
+        load_in_4bit = False
 
     # Weights. A 4-bit load rounds to roughly 0.55 bytes per parameter once the
     # quantized blocks and their scales are counted; fp16 is the plain 2 bytes.
@@ -231,7 +246,8 @@ def estimate(spec: Mapping[str, Any]) -> dict[str, Any]:
             )
         if not gradient_checkpointing:
             suggestions.append("Turn on gradient checkpointing to shrink the activation peak.")
-        if not load_in_4bit and method != "full":
+        # 4-bit is not a lever an integrated GPU or an NPU can pull: the launch path refuses it there.
+        if not load_in_4bit and method != "full" and target_kind not in ("igpu", "npu"):
             suggestions.append("Load in 4-bit (QLoRA) to cut the weight footprint by about 3.6x.")
         if method in ("lora", "qlora") and rank > 16:
             suggestions.append(

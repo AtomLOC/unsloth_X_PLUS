@@ -335,6 +335,8 @@ class CpuExportBackend:
             import torch
             from transformers import AutoModelForCausalLM, AutoTokenizer
 
+            from utils.transformers_dtype import dtype_kwargs
+
             self.release()
             checkpoint = Path(checkpoint_path).expanduser()
             if not checkpoint.exists():
@@ -367,22 +369,16 @@ class CpuExportBackend:
                 token=token,
                 trust_remote_code=trust_remote_code,
             )
+            # Ask for the dtype by the name this transformers reads (torch_dtype before 4.56,
+            # dtype after). The old TypeError retry could never fire: the wrong spelling is
+            # accepted and ignored, so the model came back at its own width.
             load_kwargs = dict(
+                **dtype_kwargs(dtype),
                 token=token,
                 trust_remote_code=trust_remote_code,
                 low_cpu_mem_usage=True,
             )
-            try:
-                # transformers 5 renamed torch_dtype to dtype; keep the older spelling working.
-                model = AutoModelForCausalLM.from_pretrained(
-                    model_id, dtype=dtype, **load_kwargs
-                )
-            except TypeError as exc:
-                if "dtype" not in str(exc):
-                    raise
-                model = AutoModelForCausalLM.from_pretrained(
-                    model_id, torch_dtype=dtype, **load_kwargs
-                )
+            model = AutoModelForCausalLM.from_pretrained(model_id, **load_kwargs)
             if is_adapter:
                 from peft import PeftModel
 

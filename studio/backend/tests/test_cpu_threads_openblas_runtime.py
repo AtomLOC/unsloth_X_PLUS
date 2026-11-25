@@ -66,6 +66,8 @@ def fake_windows(monkeypatch):
     monkeypatch.setattr(os, "cpu_count", lambda: 32)
     monkeypatch.setattr(cpu_threads, "_usable_cpus", lambda: 32)
     monkeypatch.setattr(cpu_threads, "_openblas_memory_headroom", lambda: None)
+    # 32 logical CPUs with unreadable topology: the answer must not depend on the test host.
+    monkeypatch.setattr(cpu_threads, "measured_physical_cpus", lambda: None)
     monkeypatch.setattr(ctypes, "WinDLL", fake_windll, raising = False)
     monkeypatch.setattr(ctypes, "CDLL", fake_cdll)
     # A worker import on real Windows has already installed the hook.

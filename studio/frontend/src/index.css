@@ -2431,6 +2431,16 @@ html[data-chat-font] .aui-root {
 	.sidebar-row-action {
 		@apply absolute top-0 bottom-0 right-0 inline-flex cursor-pointer items-center justify-end pl-2 pr-0.75 opacity-0 pointer-events-none outline-none;
 	}
+	/* The row action carries `outline-none` but nothing replaced the ring, and it is hidden until the
+	   row is hovered, so keyboard focus landed on an invisible, indicator-free control. Measured on
+	   the served build, "Show workflows" was one of four ringless tab stops on /chat (10 of 14 had
+	   one). Focus reveals the action and draws the same 2px ring the rows use. */
+	.sidebar-row-action:focus-visible {
+		opacity: 1;
+		pointer-events: auto;
+		box-shadow: 0 0 0 2px var(--ring);
+		border-radius: 9999px;
+	}
 	@media (pointer: coarse) {
 		/* Chat and project rows reserve touch padding (#7276); other rows stay hover-revealed. */
 		.sidebar-row-action.sidebar-touch-reveal {
@@ -3644,7 +3654,27 @@ html[data-chat-font] .aui-root {
 		box-shadow: none;
 	}
 
-	/* Clickable controls never show a browser outline; focus-visible keeps custom rings for keyboard. */
+	/* Nav rows are the most-tabbed controls in the shell and were the one set with no keyboard
+	   ring of their own: the generic rule below only *removes* the browser outline, it never adds
+	   one, and these rows carry no focus-visible ring utility. Measured before this rule: every
+	   sidebar stop reported `outline: none` and no visible shadow, so tabbing the sidebar was
+	   invisible. 2px in --ring is what the sibling nav submenu rows already draw
+	   (app-sidebar.tsx `focus-visible:ring-2 focus-visible:ring-ring`), so the whole sidebar has
+	   one keyboard ring rather than two looks. */
+	.sidebar-nav-btn:focus-visible {
+		outline: none;
+		box-shadow: 0 0 0 2px var(--ring);
+	}
+	/* Pointer focus (a click, or a menu handing focus back) is not keyboard focus. */
+	html[data-input-modality="pointer"] .sidebar-nav-btn:focus-visible {
+		box-shadow: none;
+	}
+
+	/* Clickable controls never show the browser's blue outline (Radix re-focuses
+	   triggers on menu close, which lights them up). Mouse focus also drops the
+	   Tailwind ring; keyboard focus (:focus-visible) keeps custom rings so the
+	   focused control stays visible. Inputs keep their own focus styles. Zeroing
+	   the ring vars leaves decorative shadow-* utilities intact. */
 	button:focus,
 	a:focus,
 	summary:focus,

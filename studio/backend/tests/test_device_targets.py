@@ -139,6 +139,29 @@ def test_an_integrated_intel_part_is_xpu_and_has_no_four_bit():
     assert target.recommended["dtype"] == "bfloat16"
 
 
+def test_an_igpu_plans_against_free_ram_not_the_installed_total():
+    probe = _probe(
+        system_memory_bytes = 64 * GB,
+        system_memory_available_bytes = 32 * GB,
+        gpus = [
+            _gpu(
+                name = "Intel(R) Arc(TM) Graphics",
+                vendor = "intel",
+                integrated = True,
+                memory_bytes = int(0.5 * GB),
+                unified = True,
+            )
+        ],
+    )
+
+    target = resolve_training_target("igpu", probe)
+
+    # 60% of the 32 GB that is free, not of the 64 GB installed: a budget planned against memory
+    # the OS already holds is how an iGPU run passes the fit check and then fails to allocate.
+    from utils.hardware.accelerator_budget import SHARED_MEMORY_FRACTION
+
+    assert target.memory_bytes == int(32 * GB * SHARED_MEMORY_FRACTION)
+
 def test_an_amd_apu_gets_the_shared_memory_budget_not_the_carveout():
     probe = _probe(
         torch_device = "hip",

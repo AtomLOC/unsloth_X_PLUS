@@ -9,6 +9,7 @@ import {
 import { mlxRuntimeStateFrom } from "../lib/mlx-runtime-state";
 import { shouldRestorePreviousModel } from "../lib/restore-previous-model";
 import { llamaServerLoadFields } from "../lib/load-request";
+import { serverModelPollDelayMs } from "../lib/server-model-poll-backoff";
 import {
   type ServerTuningValues,
   clearedServerTuningState,
@@ -372,13 +373,11 @@ const LORA_SUFFIX_RE = /_(\d{9,})$/;
 
 const CLI_LOAD_POLL_IDLE_MS = 60_000;
 const CLI_LOAD_POLL_MAX_MS = 600_000;
-const CLI_LOAD_POLL_FAST_MS = 5_000;
-const CLI_LOAD_POLL_FAST_INTERVAL_MS = 500;
-const CLI_LOAD_POLL_IDLE_INTERVAL_MS = 2_000;
 
 async function waitForServerModel(signal?: AbortSignal): Promise<void> {
   const started = Date.now();
   let sawLoad = false;
+  let pollsTaken = 0;
 
   while (
     !signal?.aborted &&
@@ -415,14 +414,9 @@ async function waitForServerModel(signal?: AbortSignal): Promise<void> {
     const elapsed = Date.now() - started;
     if (!sawLoad && elapsed >= CLI_LOAD_POLL_IDLE_MS) return;
     if (elapsed >= CLI_LOAD_POLL_MAX_MS) return;
-    // Runs for a minute per chat open with nothing loaded: fast first, then slow for an idle page.
+    pollsTaken += 1;
     await new Promise((resolve) =>
-      setTimeout(
-        resolve,
-        sawLoad || elapsed < CLI_LOAD_POLL_FAST_MS
-          ? CLI_LOAD_POLL_FAST_INTERVAL_MS
-          : CLI_LOAD_POLL_IDLE_INTERVAL_MS,
-      ),
+      setTimeout(resolve, serverModelPollDelayMs(pollsTaken - 1, sawLoad)),
     );
   }
 }

@@ -1368,7 +1368,7 @@ class UnslothTrainer:
         accepts_attn_implementation = False
         attn_kwargs = {}
         try:
-            from core.training.cpu_tuning import plan_cpu_training
+            from core.training.cpu_tuning import measured_physical_cpus, plan_cpu_training
             from utils.cpu_threads import _usable_cpus
 
             # attn_implementation rides from_pretrained's **kwargs on every build that has SDPA;
@@ -1389,6 +1389,9 @@ class UnslothTrainer:
             fast_bf16 = supports_fast_bf16(host_flags, platform = sys.platform)
             plan = plan_cpu_training(
                 usable_cpus = _usable_cpus(),
+                # The physical count decides how many threads a GEMM gets; without it the planner
+                # halves the usable count and a CPU without SMT trains on half its cores.
+                physical_cpus = measured_physical_cpus(),
                 available_memory_bytes = available,
                 fp32_weight_bytes = fp32_bytes,
                 platform = sys.platform,
@@ -1448,15 +1451,18 @@ class UnslothTrainer:
         if tokenizer.pad_token is None:
             tokenizer.pad_token = tokenizer.eos_token
 
-        low_cpu_mem_usage = True
-        load_kwargs = {
-            "dtype": dtype,
-            "token": hf_token,
-            "trust_remote_code": trust_remote_code,
-            "revision": revision,
-            "local_files_only": local_files_only,
-            "low_cpu_mem_usage": low_cpu_mem_usage,
-        }
+        # The dtype is asked for with the spelling the installed transformers reads: 4.52-4.55
+        # take torch_dtype and drop the newer dtype= on the config, which would silently load the
+        # checkpoint's own width instead of the one the plan chose.
+        from core.training.cpu_tuning import cpu_base_load_kwargs
+
+        load_kwargs = cpu_base_load_kwargs(
+            dtype,
+            token = hf_token,
+            trust_remote_code = trust_remote_code,
+            revision = revision,
+            local_files_only = local_files_only,
+        )
         try:
             model = AutoModelForCausalLM.from_pretrained(lookup_name, **attn_kwargs, **load_kwargs)
         except (ValueError, RuntimeError) as load_error:
@@ -5512,7 +5518,17 @@ class UnslothTrainer:
             if getattr(self, "_cpu_training", False):
                 # Stock transformers on a CPU: no fp16/bf16 autocast (unsloth's bf16 probe reads
                 # False here, which would otherwise pick fp16), no bitsandbytes optimizer, no
-                # packing kernels, and no DataLoader worker processes.
+                # packing kernels. The two memory-shaped decisions do not belong to this pin:
+                # the plan turned checkpointing on because the measured weights and activations
+                # do not fit side by side, and it returns workers only on the fork platform
+                # (always 0 on the spawn platforms). Flattening them here would train an untuned
+                # run while the setup line still reported the tuned one.
+                cpu_plan = getattr(self, "_cpu_plan", None)
+                planned_workers = (
+                    int(cpu_plan.dataloader_workers)
+                    if cpu_plan is not None and sys.platform.startswith("linux")
+                    else 0
+                )
                 config_args.update(
                     {
                         "fp16": False,
@@ -5520,11 +5536,19 @@ class UnslothTrainer:
                         "use_cpu": True,
                         "optim": "adamw_torch",
                         "packing": False,
-                        "gradient_checkpointing": False,
-                        "dataloader_num_workers": 0,
+                        "gradient_checkpointing": bool(
+                            cpu_plan.gradient_checkpointing if cpu_plan is not None else False
+                        ),
+                        "dataloader_num_workers": planned_workers,
                         "dataset_num_proc": 1,
                     }
                 )
+                if planned_workers <= 0:
+                    # torch rejects persistent workers without a worker pool, and the online
+                    # tokenizer sets that key unconditionally. Its prefetch factor is meaningless
+                    # here too, so neither survives the worker count.
+                    config_args["dataloader_persistent_workers"] = False
+                    config_args.pop("dataloader_prefetch_factor", None)
                 # Unpatched TRL names the context field max_length; Unsloth's patched config adds
                 # max_seq_length. Rename rather than pass a kwarg the dataclass does not declare.
                 try:

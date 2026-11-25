@@ -11,11 +11,14 @@ frozen shape of the plan, and the sentence quality of the recorded reasons.
 
 from __future__ import annotations
 
+import sys
+import types
 from dataclasses import FrozenInstanceError
+from pathlib import Path
 
 import pytest
 
-from core.training.cpu_tuning import plan_cpu_training
+from core.training.cpu_tuning import cpu_base_load_kwargs, measured_physical_cpus, plan_cpu_training
 from utils.cpu_features import bf16_summary, cpu_flags, supports_fast_bf16
 
 GB = 1024**3
@@ -62,6 +65,94 @@ def test_thread_count_is_clamped_to_at_least_one_and_never_more_than_the_cpus():
     assert plan(usable_cpus = 17).torch_threads == 8
     assert plan(usable_cpus = -4).torch_threads == 1
 
+
+def test_a_measured_physical_count_replaces_the_halving_estimate():
+    # A 6C/6T host: the halving heuristic would train on three cores, the measurement keeps six.
+    assert plan(usable_cpus = 6, physical_cpus = 6).torch_threads == 6
+    # 16 logical / 8 physical agrees with the old estimate, so SMT hosts are unchanged.
+    assert plan(usable_cpus = 16, physical_cpus = 8).torch_threads == 8
+    # An affinity mask narrows what this process may use, and the mask wins over the package.
+    assert plan(usable_cpus = 4, physical_cpus = 12).torch_threads == 2
+    # Nonsense measurements are ignored rather than trusted.
+    assert plan(usable_cpus = 8, physical_cpus = 0).torch_threads == 4
+    assert plan(usable_cpus = 8, physical_cpus = -2).torch_threads == 4
+
+
+def test_an_unmeasured_physical_count_keeps_the_smt_estimate():
+    estimate = plan(usable_cpus = 6)
+    assert estimate.torch_threads == 3
+    assert any("could not be measured" in reason for reason in estimate.reasons)
+
+
+def test_amx_class_hosts_keep_the_usable_count_capped_at_32():
+    # AMX bf16 matmuls scale with SMT siblings, so halving them is the wrong trade there too.
+    assert plan(usable_cpus = 16, fast_bf16 = True).torch_threads == 16
+    assert plan(usable_cpus = 64, fast_bf16 = True).torch_threads == 32
+
+
+def test_the_loader_measures_the_physical_count_and_passes_it_in():
+    # Source-level because trainer imports torch at module scope and this host has none; a rule
+    # this easy to drop back to the heuristic must be pinned where it is wired.
+    trainer = (Path(__file__).resolve().parents[1] / "core" / "training" / "trainer.py")
+    source = trainer.read_text(encoding = "utf-8")
+    assert "physical_cpus = measured_physical_cpus()" in source
+
+
+def test_measured_physical_cpus_answers_a_positive_count_or_nothing():
+    measured = measured_physical_cpus()
+    assert measured is None or measured >= 1
+
+
+def _stub_transformers(monkeypatch, version: str) -> None:
+    stub = types.ModuleType("transformers")
+    stub.__version__ = version
+    monkeypatch.setitem(sys.modules, "transformers", stub)
+
+
+@pytest.fixture
+def _dtype_cache():
+    from utils.transformers_dtype import _has_torch_dtype_kwarg
+
+    _has_torch_dtype_kwarg.cache_clear()
+    yield
+    _has_torch_dtype_kwarg.cache_clear()
+
+
+# transformers renamed the load dtype in 4.56; the floor here is 4.52, where the new name is
+# dropped instead of raising, so a bf16 choice would silently load the checkpoint's own width.
+def test_cpu_base_load_kwargs_speaks_the_installed_transformers_dialect(monkeypatch, _dtype_cache):
+    _stub_transformers(monkeypatch, "4.52.4")
+    old = cpu_base_load_kwargs("bfloat16", token = "tok", revision = "rev")
+    assert old["torch_dtype"] == "bfloat16" and "dtype" not in old
+
+    _stub_transformers(monkeypatch, "5.1.0")
+    # The version is read once per process in production; the test changes it mid-run.
+    from utils.transformers_dtype import _has_torch_dtype_kwarg
+
+    _has_torch_dtype_kwarg.cache_clear()
+    new = cpu_base_load_kwargs("bfloat16", token = "tok", revision = "rev")
+    assert new["dtype"] == "bfloat16" and "torch_dtype" not in new
+
+    # Both dialects carry the rest of the CPU load: streamed shards and the HF plumbing.
+    for kwargs in (old, new):
+        assert kwargs["low_cpu_mem_usage"] is True
+        assert kwargs["token"] == "tok"
+        assert kwargs["revision"] == "rev"
+        assert kwargs["trust_remote_code"] is False
+        assert kwargs["local_files_only"] is False
+
+
+# The loader and the exporter must share the rule: the old TypeError retry never fired, because
+# the wrong name is accepted and ignored.
+def test_the_cpu_loader_and_the_exporter_share_the_dtype_rule():
+    backend = Path(__file__).resolve().parents[1]
+    trainer = (backend / "core" / "training" / "trainer.py").read_text(encoding = "utf-8")
+    export = (backend / "core" / "export" / "cpu_export.py").read_text(encoding = "utf-8")
+
+    assert "load_kwargs = cpu_base_load_kwargs(" in trainer
+    assert '"dtype": dtype,' not in trainer
+    assert "**dtype_kwargs(dtype)" in export
+    assert "torch_dtype=dtype" not in export
 
 def test_memory_pressure_halves_the_thread_count_and_adds_a_reason():
     # 7 GB of fp32 weights in 10 GB of RAM is over 60%: per-thread buffers decide the run's fate.

@@ -70,6 +70,9 @@ export function ParamsSliderRow({
       <div className="flex items-center gap-3">
         <Slider
           value={[value]}
+          // The thumb carries role="slider"; a visible row label beside it is not an accessible
+          // name, so the control was unnamed to a screen reader and in the tab order.
+          aria-label={label}
           onValueChange={([nextValue]) => onChange(nextValue)}
           min={min}
           max={max}

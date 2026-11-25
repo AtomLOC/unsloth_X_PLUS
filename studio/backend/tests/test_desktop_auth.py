@@ -848,6 +848,10 @@ def test_health_response_reports_desktop_capability_fields(monkeypatch):
     browser_module.BROWSER_FRAME_PATH = "/api/browser/frame"
     browser_module.BROWSER_PRINT_PATH = "/api/browser/print"
     browser_module.EXPOSED_HEADERS = ()
+    # The opt-in telemetry collector's routes, imported by name (not via `routes.__all__`), so the
+    # guard below needs this stub the same way it needs `browser`: without it the real module loads.
+    telemetry_module = ModuleType("routes.telemetry")
+    telemetry_module.router = APIRouter()
 
     # Derived from main.py's import block: hand-listed stubs went stale and broke this file.
     for name in _routers_main_imports():
@@ -879,6 +883,7 @@ def test_health_response_reports_desktop_capability_fields(monkeypatch):
     monkeypatch.setitem(sys.modules, "routes.sandbox_capability", sandbox_capability_module)
     monkeypatch.setitem(sys.modules, "routes.systemone", systemone_module)
     monkeypatch.setitem(sys.modules, "routes.browser", browser_module)
+    monkeypatch.setitem(sys.modules, "routes.telemetry", telemetry_module)
 
     import studio.backend.main as backend_main
 

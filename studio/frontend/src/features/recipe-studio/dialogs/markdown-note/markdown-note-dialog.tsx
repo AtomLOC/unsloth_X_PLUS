@@ -50,6 +50,9 @@ export function MarkdownNoteDialog({
               min={5}
               max={100}
               step={1}
+              // The thumb is the role="slider" element; the "Opacity" span above it is only
+              // adjacent text, so without this the control had no accessible name.
+              aria-label="Opacity"
               value={[opacity]}
               onValueChange={([value]) =>
                 onUpdate({ note_opacity: String(Math.round(value)) })

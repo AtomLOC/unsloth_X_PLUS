@@ -260,6 +260,13 @@ export function ParamsSection({
                 </div>
               </div>
               <Slider
+                // Same reason as the other sliders: the visible row label is not the thumb's
+                // accessible name, and this one is the only control on its row.
+                aria-label={
+                  useEpochs
+                    ? t("studio.params.useEpochs")
+                    : t("studio.params.useMaxSteps")
+                }
                 value={[
                   useEpochs
                     ? Math.min(epochsSliderMax, Math.max(1, store.epochs))

@@ -1737,6 +1737,35 @@ def revoke_user_refresh_tokens(username: str, *, account_id: Optional[str] = Non
         conn.close()
 
 
+# A validated desktop secret is memoised by a salted HMAC of the presented value, mapped to the stored
+# hash it was checked against -- the same shape as ``_api_key_hash_cache``, and for the same reason: the
+# secret is 48 bytes of ``secrets.token_urlsafe``, so the 100k-round PBKDF2 in front of it protects a
+# dumped ``app_secrets`` row, not a guessable password. Paying it per request is waste, and the shipped
+# desktop shell sends this header on every ``/api/health`` poll (~14 ms per poll on the dev host).
+#
+# Bound to the stored hash rather than a timer: rotation or a cleared row makes every entry unmatchable,
+# so a stale memo can never accept a secret the row no longer holds, and no invalidation hook can be
+# forgotten. Rejected secrets are never memoised; a guesser keeps paying the KDF.
+_desktop_secret_hash_cache: dict[str, str] = {}
+_desktop_secret_hash_cache_lock = threading.Lock()
+_DESKTOP_SECRET_HASH_CACHE_MAX = 8
+
+
+def _desktop_secret_matches(raw_secret: str, cache_id: str, stored_hash: str) -> bool:
+    """Whether *raw_secret* is the one *stored_hash* was derived from, skipping the KDF when this exact
+    secret has already been validated against this exact hash."""
+    with _desktop_secret_hash_cache_lock:
+        if _desktop_secret_hash_cache.get(cache_id) == stored_hash:
+            return True
+    if not secrets.compare_digest(stored_hash, _pbkdf2_desktop_secret(raw_secret)):
+        return False
+    with _desktop_secret_hash_cache_lock:
+        if len(_desktop_secret_hash_cache) >= _DESKTOP_SECRET_HASH_CACHE_MAX:
+            _desktop_secret_hash_cache.clear()
+        _desktop_secret_hash_cache[cache_id] = stored_hash
+    return True
+
+
 def create_desktop_secret() -> str:
     """Create/rotate the local desktop credential and return it once."""
     ensure_default_admin()
@@ -1765,7 +1794,9 @@ def validate_desktop_secret_with_credential(raw_secret: str) -> Optional[Tuple[s
     if not desktop_secret_is_well_formed(raw_secret):
         return None
 
-    secret_hash = _pbkdf2_desktop_secret(raw_secret)
+    # Computed before the transaction opens: the cache id reads the PBKDF2 salt, which touches SQLite on
+    # first use, and a nested write there would commit the BEGIN below out from under the reads.
+    candidate_id = _api_key_cache_id(raw_secret)
     conn = get_connection()
     try:
         conn.execute("BEGIN")
@@ -1773,7 +1804,7 @@ def validate_desktop_secret_with_credential(raw_secret: str) -> Optional[Tuple[s
             "SELECT value FROM app_secrets WHERE key = ?",
             (_DESKTOP_SECRET_HASH_KEY,),
         ).fetchone()
-        if row is None or not secrets.compare_digest(row["value"], secret_hash):
+        if row is None or not _desktop_secret_matches(raw_secret, candidate_id, row["value"]):
             return None
         jwt_secret = _current_secret(conn, DEFAULT_ADMIN_USERNAME)
         if jwt_secret is None:
